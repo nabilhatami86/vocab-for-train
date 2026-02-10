@@ -1,0 +1,71 @@
+import { Metadata } from 'next';
+import Link from 'next/link';
+import { GraduationCap, Brain, PenLine, RotateCcw } from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'Practice',
+  description: 'Practice your English vocabulary with quizzes, fill-in-the-blanks, and review modes.',
+};
+
+const modes = [
+  {
+    href: '/practice/quiz',
+    title: 'Multiple Choice Quiz',
+    description: 'Test your vocabulary knowledge with multiple choice questions. Choose the correct meaning for each word.',
+    icon: Brain,
+    color: 'bg-primary/10 text-primary',
+  },
+  {
+    href: '/practice/fill-blanks',
+    title: 'Fill in the Blanks',
+    description: 'Complete sentences by typing the missing word. Great for spelling and context practice.',
+    icon: PenLine,
+    color: 'bg-accent/10 text-accent',
+  },
+  {
+    href: '/practice/review',
+    title: 'Vocabulary Review',
+    description: 'Flip through vocabulary cards to review words you have learned or need to practice.',
+    icon: RotateCcw,
+    color: 'bg-success/10 text-success',
+  },
+];
+
+export default function PracticePage() {
+  return (
+    <div className="p-4 lg:p-6 space-y-6 animate-fade-in">
+      <div>
+        <h1 className="text-2xl font-bold text-(--text) flex items-center gap-2">
+          <GraduationCap className="w-6 h-6 text-primary" />
+          Practice
+        </h1>
+        <p className="text-sm text-(--text-secondary) mt-1">
+          Choose a practice mode to strengthen your vocabulary skills
+        </p>
+      </div>
+
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {modes.map((mode) => {
+          const Icon = mode.icon;
+          return (
+            <Link
+              key={mode.href}
+              href={mode.href}
+              className="bg-(--bg-card) border border-(--border) rounded-xl p-6 hover:shadow-lg hover:border-primary/30 transition-all group"
+            >
+              <div className={`w-12 h-12 rounded-xl ${mode.color} flex items-center justify-center mb-4`}>
+                <Icon className="w-6 h-6" />
+              </div>
+              <h2 className="text-lg font-semibold text-(--text) group-hover:text-primary transition-colors mb-2">
+                {mode.title}
+              </h2>
+              <p className="text-sm text-(--text-secondary) leading-relaxed">
+                {mode.description}
+              </p>
+            </Link>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
