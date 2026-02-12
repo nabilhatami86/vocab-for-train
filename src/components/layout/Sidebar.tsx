@@ -8,6 +8,7 @@ import {
   Layers,
   Heart,
   GraduationCap,
+  BookText,
   Zap,
   Palette,
   Wind,
@@ -36,6 +37,7 @@ const navItems = [
   { href: '/vocab', label: 'All Vocabulary', icon: BookOpen },
   { href: '/favorites', label: 'Favorites', icon: Heart },
   { href: '/practice', label: 'Practice', icon: GraduationCap },
+  { href: '/tn-basic-cource', label: 'TN Basic Cource', icon: BookText },
 ];
 
 export function Sidebar() {
