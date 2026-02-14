@@ -1,11 +1,11 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { BookOpenText, Mic2, ArrowRight, FileText } from 'lucide-react';
+import { BookOpenText, Mic2, PenLine, Headphones, ArrowRight, FileText } from 'lucide-react';
 import { getLessonsByTrack, moduleTracks } from '@/data/modules';
 
 export const metadata: Metadata = {
   title: 'TN Basic Cource',
-  description: 'Module belajar Reading dan Speaking Basic Week 1-2.',
+  description: 'Module belajar Reading, Speaking, Grammar, dan Listening Basic Week 1-2.',
 };
 
 export default function ModuleLearningPage() {
@@ -14,15 +14,15 @@ export default function ModuleLearningPage() {
       <div>
         <h1 className="text-2xl font-bold text-(--text)">TN Basic Cource</h1>
         <p className="text-sm text-(--text-secondary) mt-1">
-          Materi Reading dan Speaking Week 1-2 lengkap dengan latihan.
+          Materi Reading, Speaking, Grammar, dan Listening Week 1-2 lengkap dengan latihan.
         </p>
       </div>
 
       <div className="grid lg:grid-cols-2 gap-5">
         {moduleTracks.map((track) => {
           const lessons = getLessonsByTrack(track.track);
-          const isReading = track.track === 'reading';
-          const Icon = isReading ? BookOpenText : Mic2;
+          const trackIcons = { reading: BookOpenText, speaking: Mic2, grammar: PenLine, listening: Headphones };
+          const Icon = trackIcons[track.track];
 
           return (
             <section key={track.track} className="bg-(--bg-card) border border-(--border) rounded-2xl p-5 space-y-4">
@@ -34,14 +34,16 @@ export default function ModuleLearningPage() {
                   </h2>
                   <p className="text-sm text-(--text-secondary) mt-1">{track.description}</p>
                 </div>
-                <a
-                  href={track.pdfPath}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-xs px-2.5 py-1.5 rounded-lg border border-(--border) text-(--text-secondary) hover:bg-(--hover)"
-                >
-                  <FileText className="w-3.5 h-3.5" /> PDF
-                </a>
+                {track.pdfPath && (
+                  <a
+                    href={track.pdfPath}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-xs px-2.5 py-1.5 rounded-lg border border-(--border) text-(--text-secondary) hover:bg-(--hover)"
+                  >
+                    <FileText className="w-3.5 h-3.5" /> PDF
+                  </a>
+                )}
               </div>
 
               <div className="grid sm:grid-cols-2 gap-2">

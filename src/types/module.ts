@@ -1,4 +1,4 @@
-export type ModuleTrack = 'reading' | 'speaking';
+export type ModuleTrack = 'reading' | 'speaking' | 'grammar' | 'listening';
 
 export type ModuleExerciseType = 'multiple-choice' | 'short-answer' | 'task';
 
@@ -23,6 +23,7 @@ export interface ModuleLesson {
   subtitle: string;
   overview: string;
   passage?: string[];
+  audioUrl?: string;
   materialSections: ModuleMaterialSection[];
   exercises: ModuleExercise[];
 }

@@ -2,7 +2,7 @@
 
 import { useCallback, useMemo, useState } from 'react';
 import Link from 'next/link';
-import { ArrowLeft, CheckCircle2, Circle, BookText, Languages, X } from 'lucide-react';
+import { ArrowLeft, CheckCircle2, Circle, BookText, Languages, X, Headphones } from 'lucide-react';
 import type { ModuleLesson } from '@/types/module';
 import { cn } from '@/lib/utils';
 
@@ -146,10 +146,23 @@ export default function ModuleLessonClient({ lesson }: Props) {
         </div>
       </section>
 
+      {lesson.audioUrl && (
+        <section className="space-y-4">
+          <h2 className="text-lg font-semibold text-(--text) flex items-center gap-2">
+            <Headphones className="w-5 h-5 text-primary" /> Audio
+          </h2>
+          <div className="bg-(--bg-card) border border-(--border) rounded-xl p-5">
+            <audio controls className="w-full" src={lesson.audioUrl}>
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+        </section>
+      )}
+
       {lesson.passage && lesson.passage.length > 0 && (
         <section className="space-y-4">
           <h2 className="text-lg font-semibold text-(--text)">
-            {lesson.track === 'reading' ? 'Full Reading Passage' : 'Sample Script'}
+            {{ reading: 'Full Reading Passage', speaking: 'Sample Script', grammar: 'Grammar Examples', listening: 'Listening Script' }[lesson.track]}
           </h2>
           <div className="bg-(--bg-card) border border-(--border) rounded-xl p-5 space-y-4">
             {lesson.passage.map((paragraph, idx) => (

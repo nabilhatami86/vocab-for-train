@@ -8,7 +8,8 @@ interface PageProps {
   params: Promise<{ track: string; day: string }>;
 }
 
-const isTrack = (value: string): value is ModuleTrack => value === 'reading' || value === 'speaking';
+const isTrack = (value: string): value is ModuleTrack =>
+  ['reading', 'speaking', 'grammar', 'listening'].includes(value);
 
 export async function generateStaticParams() {
   return moduleLessons.map((lesson) => ({
