@@ -2,9 +2,10 @@
 
 import { useCallback, useMemo, useState } from 'react';
 import Link from 'next/link';
-import { ArrowLeft, CheckCircle2, Circle, BookText, Languages, X, Headphones } from 'lucide-react';
+import { ArrowLeft, CheckCircle2, Circle, BookText, Languages, X, XCircle, Lightbulb } from 'lucide-react';
 import type { ModuleLesson } from '@/types/module';
 import { cn } from '@/lib/utils';
+import TTSPlayer from '@/components/tts/TTSPlayer';
 
 interface Props {
   lesson: ModuleLesson;
@@ -146,17 +147,11 @@ export default function ModuleLessonClient({ lesson }: Props) {
         </div>
       </section>
 
-      {lesson.audioUrl && (
-        <section className="space-y-4">
-          <h2 className="text-lg font-semibold text-(--text) flex items-center gap-2">
-            <Headphones className="w-5 h-5 text-primary" /> Audio
-          </h2>
-          <div className="bg-(--bg-card) border border-(--border) rounded-xl p-5">
-            <audio controls className="w-full" src={lesson.audioUrl}>
-              Your browser does not support the audio element.
-            </audio>
-          </div>
-        </section>
+      {lesson.track === 'listening' && lesson.passage && lesson.passage.length > 0 && (
+        <TTSPlayer
+          text={lesson.passage.join('\n')}
+          label="Listen to Audio"
+        />
       )}
 
       {lesson.passage && lesson.passage.length > 0 && (
@@ -196,27 +191,75 @@ export default function ModuleLessonClient({ lesson }: Props) {
                   )}
                 </div>
 
-                {exercise.type === 'multiple-choice' && exercise.options && (
-                  <div className="grid sm:grid-cols-2 gap-2">
-                    {exercise.options.map((option) => {
-                      const isSelected = selectedOptions[exercise.id] === option;
-                      return (
-                        <button
-                          key={option}
-                          onClick={() => setSelectedOptions((prev) => ({ ...prev, [exercise.id]: option }))}
-                          className={cn(
-                            'text-left text-sm px-3 py-2 rounded-lg border transition-colors',
-                            isSelected
-                              ? 'border-primary bg-primary/10 text-primary'
-                              : 'border-(--border) hover:border-primary/50 text-(--text-secondary)'
+                {exercise.type === 'multiple-choice' && exercise.options && (() => {
+                  const selected = selectedOptions[exercise.id];
+                  const hasAnswered = Boolean(selected);
+                  const isCorrect = hasAnswered && selected === exercise.correctAnswer;
+
+                  return (
+                    <div className="space-y-3">
+                      <div className="grid sm:grid-cols-2 gap-2">
+                        {exercise.options.map((option) => {
+                          const isSelected = selected === option;
+                          const isAnswer = option === exercise.correctAnswer;
+                          const showResult = hasAnswered && exercise.correctAnswer;
+
+                          return (
+                            <button
+                              key={option}
+                              onClick={() => setSelectedOptions((prev) => ({ ...prev, [exercise.id]: option }))}
+                              className={cn(
+                                'text-left text-sm px-3 py-2 rounded-lg border transition-colors',
+                                showResult
+                                  ? isAnswer
+                                    ? 'border-green-500 bg-green-500/10 text-green-700 dark:text-green-400 font-medium'
+                                    : isSelected
+                                      ? 'border-red-500 bg-red-500/10 text-red-700 dark:text-red-400'
+                                      : 'border-(--border) text-(--text-muted)'
+                                  : isSelected
+                                    ? 'border-primary bg-primary/10 text-primary'
+                                    : 'border-(--border) hover:border-primary/50 text-(--text-secondary)'
+                              )}
+                            >
+                              <span className="flex items-center gap-2">
+                                {showResult && isAnswer && <CheckCircle2 className="w-4 h-4 shrink-0 text-green-500" />}
+                                {showResult && isSelected && !isAnswer && <XCircle className="w-4 h-4 shrink-0 text-red-500" />}
+                                {option}
+                              </span>
+                            </button>
+                          );
+                        })}
+                      </div>
+
+                      {hasAnswered && exercise.correctAnswer && (
+                        <div className={cn(
+                          'rounded-lg px-4 py-3 text-sm flex items-start gap-2',
+                          isCorrect
+                            ? 'bg-green-500/10 border border-green-500/30'
+                            : 'bg-red-500/10 border border-red-500/30'
+                        )}>
+                          {isCorrect ? (
+                            <CheckCircle2 className="w-4 h-4 mt-0.5 shrink-0 text-green-500" />
+                          ) : (
+                            <XCircle className="w-4 h-4 mt-0.5 shrink-0 text-red-500" />
                           )}
-                        >
-                          {option}
-                        </button>
-                      );
-                    })}
-                  </div>
-                )}
+                          <div>
+                            <p className={cn('font-medium', isCorrect ? 'text-green-700 dark:text-green-400' : 'text-red-700 dark:text-red-400')}>
+                              {isCorrect ? 'Benar!' : 'Salah!'}
+                              {!isCorrect && <span className="font-normal text-(--text-secondary)"> Jawaban yang benar: <span className="font-semibold text-green-700 dark:text-green-400">{exercise.correctAnswer}</span></span>}
+                            </p>
+                            {exercise.reason && (
+                              <p className="mt-1 text-(--text-secondary) flex items-start gap-1.5">
+                                <Lightbulb className="w-3.5 h-3.5 mt-0.5 shrink-0 text-amber-500" />
+                                {exercise.reason}
+                              </p>
+                            )}
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  );
+                })()}
 
                 {exercise.type !== 'multiple-choice' && (
                   <textarea

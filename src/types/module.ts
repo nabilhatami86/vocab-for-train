@@ -7,6 +7,8 @@ export interface ModuleExercise {
   type: ModuleExerciseType;
   question: string;
   options?: string[];
+  correctAnswer?: string;
+  reason?: string;
   sampleAnswer?: string;
 }
 
