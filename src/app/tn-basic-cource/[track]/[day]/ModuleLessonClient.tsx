@@ -220,21 +220,252 @@ export default function ModuleLessonClient({ lesson }: Props) {
         <h2 className="text-lg font-semibold text-(--text) flex items-center gap-2">
           <BookText className="w-5 h-5 text-primary" /> Material
         </h2>
-        <div className="grid md:grid-cols-2 gap-4">
-          {lesson.materialSections.map((section) => (
-            <div key={section.title} className="bg-(--bg-card) border border-(--border) rounded-xl p-5">
-              <h3 className="font-semibold text-(--text) mb-3">{section.title}</h3>
-              <ul className="space-y-2 text-sm text-(--text-secondary)">
-                {section.points.map((point, pIdx) => (
-                  <li key={`${section.title}-${pIdx}`} className="flex gap-2">
-                    <span className="text-primary">•</span>
-                    <span>{renderClickableText(point)}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
+        {lesson.track === 'grammar' ? (
+          <div className="space-y-5">
+            {lesson.materialSections.map((section) => (
+              <div key={section.title} className="bg-(--bg-card) border border-(--border) rounded-xl overflow-hidden">
+                {/* Section header */}
+                <div className="px-5 py-3 bg-primary/5 border-b border-(--border)">
+                  <h3 className="font-semibold text-(--text) flex items-center gap-2">
+                    {section.title}
+                  </h3>
+                </div>
+                {/* Section content */}
+                <div className="p-5 space-y-1">
+                  {section.points.map((point, pIdx) => {
+                    // Empty string = spacer between groups
+                    if (!point.trim()) return <div key={`${section.title}-${pIdx}`} className="h-3" />;
+
+                    // Suffix header: starts with - and ends with :
+                    const suffixHeaderMatch = point.match(/^(-\w+(?:\s*\/\s*-\w+)*)\s+\(([^)]+)\)\s*:?\s*$/);
+                    if (suffixHeaderMatch) {
+                      return (
+                        <div key={`${section.title}-${pIdx}`} className="pt-2 pb-1">
+                          <div className="flex items-center gap-2 flex-wrap">
+                            <span className="inline-flex items-center px-2.5 py-1 rounded-lg bg-primary/15 text-primary font-bold text-sm tracking-wide">
+                              {suffixHeaderMatch[1]}
+                            </span>
+                            <span className="text-sm text-(--text-secondary) italic">{suffixHeaderMatch[2]}</span>
+                          </div>
+                        </div>
+                      );
+                    }
+
+                    // Indented suffix examples: starts with spaces and contains →
+                    if (point.startsWith('  ') && point.includes('→')) {
+                      const pairs = point.trim().split(',').map(p => p.trim()).filter(Boolean);
+                      return (
+                        <div key={`${section.title}-${pIdx}`} className="pl-4 pb-2">
+                          <div className="flex flex-wrap gap-1.5">
+                            {pairs.map((pair, i) => {
+                              const parts = pair.split('→').map(s => s.trim());
+                              if (parts.length === 2) {
+                                return (
+                                  <span key={i} className="inline-flex items-center gap-1 text-xs px-2 py-1 rounded-lg bg-(--bg-secondary) border border-(--border)">
+                                    <span className="text-(--text-secondary)">{parts[0]}</span>
+                                    <span className="text-primary">→</span>
+                                    <span className="font-semibold text-(--text)">{parts[1]}</span>
+                                  </span>
+                                );
+                              }
+                              return <span key={i} className="text-sm text-(--text-secondary)">{pair}</span>;
+                            })}
+                          </div>
+                        </div>
+                      );
+                    }
+
+                    // Suffix explanation line (not indented, has →)
+                    if (point.includes('→') && !point.startsWith('Wrong') && !point.startsWith('Correct')) {
+                      const colonIdx = point.indexOf(':');
+                      // Has a rule label before colon
+                      if (colonIdx > 0 && colonIdx < 80) {
+                        const label = point.slice(0, colonIdx).trim();
+                        const rest = point.slice(colonIdx + 1).trim();
+
+                        // Check if it contains transformation pairs
+                        const transformParts = rest.split(',').map(s => s.trim()).filter(s => s.includes('→'));
+                        if (transformParts.length > 0) {
+                          const nonTransformParts = rest.split(',').map(s => s.trim()).filter(s => !s.includes('→'));
+                          return (
+                            <div key={`${section.title}-${pIdx}`} className="py-1.5">
+                              <p className="text-sm font-medium text-(--text) mb-1.5">{renderClickableText(label)}</p>
+                              {nonTransformParts.length > 0 && nonTransformParts[0] && (
+                                <p className="text-xs text-(--text-muted) mb-1.5 pl-3">{renderClickableText(nonTransformParts.join(', '))}</p>
+                              )}
+                              <div className="flex flex-wrap gap-1.5 pl-3">
+                                {transformParts.map((pair, i) => {
+                                  const parts = pair.split('→').map(s => s.trim());
+                                  if (parts.length === 2) {
+                                    return (
+                                      <span key={i} className="inline-flex items-center gap-1 text-xs px-2 py-1 rounded-lg bg-(--bg-secondary) border border-(--border)">
+                                        <span className="text-(--text-secondary)">{parts[0]}</span>
+                                        <span className="text-primary">→</span>
+                                        <span className="font-semibold text-(--text)">{parts[1]}</span>
+                                      </span>
+                                    );
+                                  }
+                                  return <span key={i} className="text-sm text-(--text-secondary)">{pair}</span>;
+                                })}
+                              </div>
+                            </div>
+                          );
+                        }
+                      }
+
+                      // Simple arrow line (like irregular verb tables)
+                      const items = point.split('|').map(s => s.trim()).filter(Boolean);
+                      if (items.length > 1) {
+                        return (
+                          <div key={`${section.title}-${pIdx}`} className="py-1">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+                              {items.map((item, i) => {
+                                const parts = item.split('→').map(s => s.trim());
+                                return (
+                                  <div key={i} className="flex items-center gap-1.5 text-xs px-2.5 py-1.5 rounded-lg bg-(--bg-secondary) border border-(--border)">
+                                    {parts.map((p, j) => (
+                                      <span key={j} className={cn(j === 0 ? 'text-(--text-secondary)' : 'font-semibold text-(--text)')}>
+                                        {j > 0 && <span className="text-primary mr-1.5">→</span>}
+                                        {p}
+                                      </span>
+                                    ))}
+                                  </div>
+                                );
+                              })}
+                            </div>
+                          </div>
+                        );
+                      }
+                    }
+
+                    // Wrong/Correct pattern
+                    if (point.startsWith('Wrong:') || point.startsWith('Wrong ')) {
+                      const correctMatch = point.match(/Correct:\s*(.+)/);
+                      const wrongMatch = point.match(/Wrong:\s*"([^"]+)"/);
+                      return (
+                        <div key={`${section.title}-${pIdx}`} className="py-1 flex flex-col sm:flex-row gap-1.5">
+                          {wrongMatch && (
+                            <span className="inline-flex items-center gap-1.5 text-xs px-2.5 py-1.5 rounded-lg bg-red-500/10 border border-red-500/20 text-red-700 dark:text-red-400">
+                              <XCircle className="w-3.5 h-3.5 shrink-0" />
+                              <span className="line-through">{wrongMatch[1]}</span>
+                            </span>
+                          )}
+                          {correctMatch && (
+                            <span className="inline-flex items-center gap-1.5 text-xs px-2.5 py-1.5 rounded-lg bg-green-500/10 border border-green-500/20 text-green-700 dark:text-green-400">
+                              <CheckCircle2 className="w-3.5 h-3.5 shrink-0" />
+                              <span>{correctMatch[1]}</span>
+                            </span>
+                          )}
+                        </div>
+                      );
+                    }
+
+                    // Example sentences: starts with "Example" or contains quoted text
+                    if (point.match(/^(Examples?|Practical):/) || point.match(/^"[^"]+"/)) {
+                      const label = point.match(/^(Examples?|Practical):\s*/)?.[0] || '';
+                      const exampleText = point.slice(label.length);
+                      return (
+                        <div key={`${section.title}-${pIdx}`} className="py-1.5 pl-3 border-l-2 border-primary/30 ml-1">
+                          {label && <span className="text-xs text-primary font-semibold uppercase tracking-wider">{label.replace(':', '').trim()}</span>}
+                          <p className="text-sm text-(--text-secondary) italic">{renderClickableText(exampleText)}</p>
+                        </div>
+                      );
+                    }
+
+                    // Numbered items (OSASCOMP-style)
+                    const numberedMatch = point.match(/^(\d+)\.\s+(\w+):\s*(.+)$/);
+                    if (numberedMatch) {
+                      return (
+                        <div key={`${section.title}-${pIdx}`} className="flex items-start gap-2.5 py-1">
+                          <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-primary/15 text-primary text-xs font-bold shrink-0 mt-0.5">
+                            {numberedMatch[1]}
+                          </span>
+                          <div className="text-sm">
+                            <span className="font-semibold text-(--text)">{numberedMatch[2]}: </span>
+                            <span className="text-(--text-secondary)">{renderClickableText(numberedMatch[3])}</span>
+                          </div>
+                        </div>
+                      );
+                    }
+
+                    // Rule with description: "Label: description — examples" or "Label: description"
+                    const ruleMatch = point.match(/^([^:]{3,60}):\s+(.+)$/);
+                    if (ruleMatch && !point.startsWith('http') && !point.startsWith('Position')) {
+                      const ruleLabel = ruleMatch[1];
+                      const ruleDesc = ruleMatch[2];
+                      // Check if description has "—" separating rule from examples
+                      const dashIdx = ruleDesc.indexOf(' — ');
+                      if (dashIdx > 0) {
+                        const desc = ruleDesc.slice(0, dashIdx);
+                        const examples = ruleDesc.slice(dashIdx + 3);
+                        return (
+                          <div key={`${section.title}-${pIdx}`} className="py-1.5">
+                            <div className="flex items-start gap-2">
+                              <span className="text-primary mt-1 shrink-0">▸</span>
+                              <div>
+                                <span className="text-sm font-semibold text-(--text)">{renderClickableText(ruleLabel)}: </span>
+                                <span className="text-sm text-(--text-secondary)">{renderClickableText(desc)}</span>
+                                <p className="text-xs text-(--text-muted) mt-1 pl-2 italic">{renderClickableText(examples)}</p>
+                              </div>
+                            </div>
+                          </div>
+                        );
+                      }
+                      return (
+                        <div key={`${section.title}-${pIdx}`} className="py-1 flex items-start gap-2">
+                          <span className="text-primary mt-1 shrink-0">▸</span>
+                          <div className="text-sm">
+                            <span className="font-semibold text-(--text)">{renderClickableText(ruleLabel)}: </span>
+                            <span className="text-(--text-secondary)">{renderClickableText(ruleDesc)}</span>
+                          </div>
+                        </div>
+                      );
+                    }
+
+                    // Position rules
+                    if (point.startsWith('Position:')) {
+                      return (
+                        <div key={`${section.title}-${pIdx}`} className="py-1.5 pl-3 border-l-2 border-amber-500/40 ml-1">
+                          <p className="text-xs text-amber-600 dark:text-amber-400 font-semibold uppercase tracking-wider mb-0.5">Position</p>
+                          <p className="text-sm text-(--text-secondary)">{renderClickableText(point.replace('Position: ', '').replace('Position:', ''))}</p>
+                        </div>
+                      );
+                    }
+
+                    // Possessive highlighting: detect 's and s' patterns
+                    const hasPossessive = /\w+'s\b|s'\s/.test(point);
+
+                    // Default: regular bullet point with possessive highlighting
+                    return (
+                      <div key={`${section.title}-${pIdx}`} className="flex items-start gap-2 py-0.5">
+                        <span className="text-primary mt-1.5 shrink-0 text-xs">●</span>
+                        <span className={cn("text-sm text-(--text-secondary) leading-relaxed", hasPossessive && "")}>
+                          {renderClickableText(point)}
+                        </span>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="grid md:grid-cols-2 gap-4">
+            {lesson.materialSections.map((section) => (
+              <div key={section.title} className="bg-(--bg-card) border border-(--border) rounded-xl p-5">
+                <h3 className="font-semibold text-(--text) mb-3">{section.title}</h3>
+                <ul className="space-y-2 text-sm text-(--text-secondary)">
+                  {section.points.map((point, pIdx) => (
+                    <li key={`${section.title}-${pIdx}`} className="flex gap-2">
+                      <span className="text-primary">•</span>
+                      <span>{renderClickableText(point)}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        )}
       </section>
 
       {lesson.track === 'listening' && lesson.passage && lesson.passage.length > 0 && (
@@ -259,111 +490,158 @@ export default function ModuleLessonClient({ lesson }: Props) {
         </section>
       )}
 
-      <section className="space-y-4">
-        <h2 className="text-lg font-semibold text-(--text)">Exercises</h2>
-        <div className="space-y-4">
-          {lesson.exercises.map((exercise, index) => {
-            const isDone =
-              exercise.type === 'multiple-choice'
-                ? Boolean(selectedOptions[exercise.id])
-                : Boolean(notes[exercise.id]?.trim());
+      {(() => {
+        const middleExercises = lesson.exercises.filter((e) => e.section === 'middle');
+        const finalExercises = lesson.exercises.filter((e) => e.section === 'final');
+        const regularExercises = lesson.exercises.filter((e) => !e.section);
+        const hasTestSections = middleExercises.length > 0 || finalExercises.length > 0;
 
-            return (
-              <div key={exercise.id} className="bg-(--bg-card) border border-(--border) rounded-xl p-5 space-y-3">
-                <div className="flex items-start justify-between gap-3">
-                  <p className="text-sm text-(--text) font-medium">
-                    {index + 1}. {renderClickableText(exercise.question)}
-                  </p>
-                  {isDone ? (
-                    <CheckCircle2 className="w-4 h-4 text-success mt-0.5 shrink-0" />
-                  ) : (
-                    <Circle className="w-4 h-4 text-(--text-muted) mt-0.5 shrink-0" />
+        const renderExerciseList = (exercises: typeof lesson.exercises, startNum: number) => (
+          <div className="space-y-4">
+            {exercises.map((exercise, index) => {
+              const isDone =
+                exercise.type === 'multiple-choice'
+                  ? Boolean(selectedOptions[exercise.id])
+                  : Boolean(notes[exercise.id]?.trim());
+
+              return (
+                <div key={exercise.id} className="bg-(--bg-card) border border-(--border) rounded-xl p-5 space-y-3">
+                  <div className="flex items-start justify-between gap-3">
+                    <p className="text-sm text-(--text) font-medium">
+                      {startNum + index}. {renderClickableText(exercise.question)}
+                    </p>
+                    {isDone ? (
+                      <CheckCircle2 className="w-4 h-4 text-success mt-0.5 shrink-0" />
+                    ) : (
+                      <Circle className="w-4 h-4 text-(--text-muted) mt-0.5 shrink-0" />
+                    )}
+                  </div>
+
+                  {exercise.type === 'multiple-choice' && exercise.options && (() => {
+                    const selected = selectedOptions[exercise.id];
+                    const hasAnswered = Boolean(selected);
+                    const isCorrect = hasAnswered && selected === exercise.correctAnswer;
+
+                    return (
+                      <div className="space-y-3">
+                        <div className="grid sm:grid-cols-2 gap-2">
+                          {exercise.options.map((option) => {
+                            const isSelected = selected === option;
+                            const isAnswer = option === exercise.correctAnswer;
+                            const showResult = hasAnswered && exercise.correctAnswer;
+
+                            return (
+                              <button
+                                key={option}
+                                onClick={() => setSelectedOptions((prev) => ({ ...prev, [exercise.id]: option }))}
+                                className={cn(
+                                  'text-left text-sm px-3 py-2 rounded-lg border transition-colors',
+                                  showResult
+                                    ? isAnswer
+                                      ? 'border-green-500 bg-green-500/10 text-green-700 dark:text-green-400 font-medium'
+                                      : isSelected
+                                        ? 'border-red-500 bg-red-500/10 text-red-700 dark:text-red-400'
+                                        : 'border-(--border) text-(--text-muted)'
+                                    : isSelected
+                                      ? 'border-primary bg-primary/10 text-primary'
+                                      : 'border-(--border) hover:border-primary/50 text-(--text-secondary)'
+                                )}
+                              >
+                                <span className="flex items-center gap-2">
+                                  {showResult && isAnswer && <CheckCircle2 className="w-4 h-4 shrink-0 text-green-500" />}
+                                  {showResult && isSelected && !isAnswer && <XCircle className="w-4 h-4 shrink-0 text-red-500" />}
+                                  {option}
+                                </span>
+                              </button>
+                            );
+                          })}
+                        </div>
+
+                        {hasAnswered && exercise.correctAnswer && (
+                          <div className={cn(
+                            'rounded-lg px-4 py-3 text-sm flex items-start gap-2',
+                            isCorrect
+                              ? 'bg-green-500/10 border border-green-500/30'
+                              : 'bg-red-500/10 border border-red-500/30'
+                          )}>
+                            {isCorrect ? (
+                              <CheckCircle2 className="w-4 h-4 mt-0.5 shrink-0 text-green-500" />
+                            ) : (
+                              <XCircle className="w-4 h-4 mt-0.5 shrink-0 text-red-500" />
+                            )}
+                            <div>
+                              <p className={cn('font-medium', isCorrect ? 'text-green-700 dark:text-green-400' : 'text-red-700 dark:text-red-400')}>
+                                {isCorrect ? 'Benar!' : 'Salah!'}
+                                {!isCorrect && <span className="font-normal text-(--text-secondary)"> Jawaban yang benar: <span className="font-semibold text-green-700 dark:text-green-400">{exercise.correctAnswer}</span></span>}
+                              </p>
+                              {exercise.reason && (
+                                <p className="mt-1 text-(--text-secondary) flex items-start gap-1.5">
+                                  <Lightbulb className="w-3.5 h-3.5 mt-0.5 shrink-0 text-amber-500" />
+                                  {exercise.reason}
+                                </p>
+                              )}
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })()}
+
+                  {exercise.type !== 'multiple-choice' && (
+                    <textarea
+                      value={notes[exercise.id] ?? ''}
+                      onChange={(e) => setNotes((prev) => ({ ...prev, [exercise.id]: e.target.value }))}
+                      placeholder="Write your answer here..."
+                      className="w-full min-h-[90px] rounded-lg border border-(--border) bg-(--bg-secondary) px-3 py-2 text-sm text-(--text) focus:outline-none focus:ring-2 focus:ring-primary/40"
+                    />
                   )}
                 </div>
+              );
+            })}
+          </div>
+        );
 
-                {exercise.type === 'multiple-choice' && exercise.options && (() => {
-                  const selected = selectedOptions[exercise.id];
-                  const hasAnswered = Boolean(selected);
-                  const isCorrect = hasAnswered && selected === exercise.correctAnswer;
+        if (!hasTestSections) {
+          return (
+            <section className="space-y-4">
+              <h2 className="text-lg font-semibold text-(--text)">Exercises</h2>
+              {renderExerciseList(regularExercises, 1)}
+            </section>
+          );
+        }
 
-                  return (
-                    <div className="space-y-3">
-                      <div className="grid sm:grid-cols-2 gap-2">
-                        {exercise.options.map((option) => {
-                          const isSelected = selected === option;
-                          const isAnswer = option === exercise.correctAnswer;
-                          const showResult = hasAnswered && exercise.correctAnswer;
+        return (
+          <>
+            {middleExercises.length > 0 && (
+              <section className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <div className="h-px flex-1 bg-amber-500/30" />
+                  <h2 className="text-lg font-semibold text-amber-600 dark:text-amber-400 flex items-center gap-2 whitespace-nowrap">
+                    <BookText className="w-5 h-5" /> Middle Test
+                  </h2>
+                  <div className="h-px flex-1 bg-amber-500/30" />
+                </div>
+                <p className="text-xs text-(--text-muted) text-center">Tes tengah materi — cek pemahaman kamu sejauh ini!</p>
+                {renderExerciseList(middleExercises, 1)}
+              </section>
+            )}
 
-                          return (
-                            <button
-                              key={option}
-                              onClick={() => setSelectedOptions((prev) => ({ ...prev, [exercise.id]: option }))}
-                              className={cn(
-                                'text-left text-sm px-3 py-2 rounded-lg border transition-colors',
-                                showResult
-                                  ? isAnswer
-                                    ? 'border-green-500 bg-green-500/10 text-green-700 dark:text-green-400 font-medium'
-                                    : isSelected
-                                      ? 'border-red-500 bg-red-500/10 text-red-700 dark:text-red-400'
-                                      : 'border-(--border) text-(--text-muted)'
-                                  : isSelected
-                                    ? 'border-primary bg-primary/10 text-primary'
-                                    : 'border-(--border) hover:border-primary/50 text-(--text-secondary)'
-                              )}
-                            >
-                              <span className="flex items-center gap-2">
-                                {showResult && isAnswer && <CheckCircle2 className="w-4 h-4 shrink-0 text-green-500" />}
-                                {showResult && isSelected && !isAnswer && <XCircle className="w-4 h-4 shrink-0 text-red-500" />}
-                                {option}
-                              </span>
-                            </button>
-                          );
-                        })}
-                      </div>
-
-                      {hasAnswered && exercise.correctAnswer && (
-                        <div className={cn(
-                          'rounded-lg px-4 py-3 text-sm flex items-start gap-2',
-                          isCorrect
-                            ? 'bg-green-500/10 border border-green-500/30'
-                            : 'bg-red-500/10 border border-red-500/30'
-                        )}>
-                          {isCorrect ? (
-                            <CheckCircle2 className="w-4 h-4 mt-0.5 shrink-0 text-green-500" />
-                          ) : (
-                            <XCircle className="w-4 h-4 mt-0.5 shrink-0 text-red-500" />
-                          )}
-                          <div>
-                            <p className={cn('font-medium', isCorrect ? 'text-green-700 dark:text-green-400' : 'text-red-700 dark:text-red-400')}>
-                              {isCorrect ? 'Benar!' : 'Salah!'}
-                              {!isCorrect && <span className="font-normal text-(--text-secondary)"> Jawaban yang benar: <span className="font-semibold text-green-700 dark:text-green-400">{exercise.correctAnswer}</span></span>}
-                            </p>
-                            {exercise.reason && (
-                              <p className="mt-1 text-(--text-secondary) flex items-start gap-1.5">
-                                <Lightbulb className="w-3.5 h-3.5 mt-0.5 shrink-0 text-amber-500" />
-                                {exercise.reason}
-                              </p>
-                            )}
-                          </div>
-                        </div>
-                      )}
-                    </div>
-                  );
-                })()}
-
-                {exercise.type !== 'multiple-choice' && (
-                  <textarea
-                    value={notes[exercise.id] ?? ''}
-                    onChange={(e) => setNotes((prev) => ({ ...prev, [exercise.id]: e.target.value }))}
-                    placeholder="Write your answer here..."
-                    className="w-full min-h-[90px] rounded-lg border border-(--border) bg-(--bg-secondary) px-3 py-2 text-sm text-(--text) focus:outline-none focus:ring-2 focus:ring-primary/40"
-                  />
-                )}
-              </div>
-            );
-          })}
-        </div>
-      </section>
+            {finalExercises.length > 0 && (
+              <section className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <div className="h-px flex-1 bg-primary/30" />
+                  <h2 className="text-lg font-semibold text-primary flex items-center gap-2 whitespace-nowrap">
+                    <CheckCircle2 className="w-5 h-5" /> Final Test
+                  </h2>
+                  <div className="h-px flex-1 bg-primary/30" />
+                </div>
+                <p className="text-xs text-(--text-muted) text-center">Tes akhir — uji semua materi yang sudah dipelajari!</p>
+                {renderExerciseList(finalExercises, middleExercises.length + 1)}
+              </section>
+            )}
+          </>
+        );
+      })()}
 
       {selectedWord && (
         <div className="fixed right-4 bottom-4 z-40 w-[min(92vw,380px)] bg-(--bg-card) border border-(--border) rounded-xl shadow-2xl overflow-hidden">
