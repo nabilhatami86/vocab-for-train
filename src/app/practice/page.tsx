@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { GraduationCap, Brain, PenLine, RotateCcw } from 'lucide-react';
+import { GraduationCap, Brain, PenLine, RotateCcw, BookCheck } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Practice',
@@ -14,6 +14,13 @@ const modes = [
     description: 'Test your vocabulary knowledge with multiple choice questions. Choose the correct meaning for each word.',
     icon: Brain,
     color: 'bg-primary/10 text-primary',
+  },
+  {
+    href: '/practice/grammar-quiz',
+    title: 'Grammar Quiz',
+    description: '25 soal pilihan ganda (ABCD) dari semua part of speech: Nouns, Verbs, Adjectives, Adverbs, Pronouns, Prepositions, Conjunctions, Articles. Lihat skor & penjelasan di akhir!',
+    icon: BookCheck,
+    color: 'bg-amber-500/10 text-amber-600',
   },
   {
     href: '/practice/fill-blanks',

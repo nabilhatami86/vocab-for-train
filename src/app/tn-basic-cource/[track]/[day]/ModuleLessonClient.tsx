@@ -11,6 +11,10 @@ interface TranslationResult {
   translated: string;
   alternatives?: string[];
   context?: string;
+  partOfSpeech?: string;
+  ipa?: string;
+  definition?: string;
+  example?: string;
 }
 
 interface Props {
@@ -121,7 +125,7 @@ export default function ModuleLessonClient({ lesson }: Props) {
     window.speechSynthesis.speak(u);
   }, []);
 
-  const translateWord = useCallback(async (word: string, context?: string) => {
+  const translateWord = useCallback(async (word: string) => {
     const cleaned = word.toLowerCase().replace(/^'+|'+$/g, '');
     if (!cleaned) return;
 
@@ -143,83 +147,19 @@ export default function ModuleLessonClient({ lesson }: Props) {
     setTranslation(null);
 
     try {
-      // If we have context, translate the full sentence for better accuracy
-      const query = context ? context : cleaned;
-      const googleRes = await fetch(
-        `https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=id&dt=t&dt=at&q=${encodeURIComponent(query)}`
-      );
-      if (googleRes.ok) {
-        const data = await googleRes.json();
+      const res = await fetch(`/api/translate?word=${encodeURIComponent(cleaned)}`);
+      if (!res.ok) throw new Error('translate api failed');
+      const data = await res.json();
+      if (data.error) throw new Error(data.error);
 
-        if (context) {
-          // We translated a sentence — find the word's meaning from context
-          const sentenceTranslation = data?.[0]?.map((seg: unknown[]) => seg?.[0]).filter(Boolean).join('') || '';
-
-          // Also get the single-word translation for comparison
-          const singleRes = await fetch(
-            `https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=id&dt=t&dt=at&q=${encodeURIComponent(cleaned)}`
-          );
-          if (singleRes.ok) {
-            const singleData = await singleRes.json();
-            const mainTranslation = singleData?.[0]?.[0]?.[0];
-            const altData = singleData?.[5]?.[0]?.[2];
-            const alternatives: string[] = [];
-            if (Array.isArray(altData)) {
-              for (const alt of altData) {
-                if (alt?.[0] && typeof alt[0] === 'string' && alt[0].toLowerCase() !== mainTranslation?.toLowerCase()) {
-                  alternatives.push(alt[0]);
-                }
-              }
-            }
-
-            if (mainTranslation && typeof mainTranslation === 'string' && mainTranslation.trim()) {
-              const result: TranslationResult = {
-                translated: mainTranslation,
-                alternatives: alternatives.slice(0, 4),
-                context: sentenceTranslation,
-              };
-              setTranslation(result);
-              setTranslationCache((prev) => ({ ...prev, [cleaned]: result }));
-              setIsTranslating(false);
-              return;
-            }
-          }
-        }
-
-        const mainTranslation = data?.[0]?.[0]?.[0];
-        const altData = data?.[5]?.[0]?.[2];
-        const alternatives: string[] = [];
-        if (Array.isArray(altData)) {
-          for (const alt of altData) {
-            if (alt?.[0] && typeof alt[0] === 'string' && alt[0].toLowerCase() !== mainTranslation?.toLowerCase()) {
-              alternatives.push(alt[0]);
-            }
-          }
-        }
-
-        if (mainTranslation && typeof mainTranslation === 'string' && mainTranslation.trim()) {
-          const result: TranslationResult = {
-            translated: mainTranslation,
-            alternatives: alternatives.slice(0, 4),
-          };
-          setTranslation(result);
-          setTranslationCache((prev) => ({ ...prev, [cleaned]: result }));
-          setIsTranslating(false);
-          return;
-        }
-      }
-
-      // Fallback: MyMemory API
-      const memoryRes = await fetch(
-        `https://api.mymemory.translated.net/get?q=${encodeURIComponent(cleaned)}&langpair=en|id`
-      );
-      if (!memoryRes.ok) throw new Error('translator unavailable');
-      const memoryData = await memoryRes.json();
-      const translated = memoryData?.responseData?.translatedText;
-
-      if (!translated || typeof translated !== 'string' || !translated.trim()) throw new Error('empty translation');
-
-      const result: TranslationResult = { translated };
+      const result: TranslationResult = {
+        translated: data.translated,
+        partOfSpeech: data.partOfSpeech || '',
+        ipa: data.ipa || '',
+        definition: data.definition || '',
+        example: data.example || '',
+        alternatives: data.alternatives || [],
+      };
       setTranslation(result);
       setTranslationCache((prev) => ({ ...prev, [cleaned]: result }));
     } catch {
@@ -242,7 +182,7 @@ export default function ModuleLessonClient({ lesson }: Props) {
         <button
           key={`w-${idx}`}
           type="button"
-          onClick={() => translateWord(part, text)}
+          onClick={() => translateWord(part)}
           className={cn(
             'rounded px-0.5 transition-colors',
             isActive
@@ -466,14 +406,46 @@ export default function ModuleLessonClient({ lesson }: Props) {
 
             {!isTranslating && translation && (
               <>
-                <p className="text-sm">
-                  <span className="text-(--text-muted) text-xs uppercase tracking-wider">Terjemahan</span>
-                </p>
-                <p className="text-sm font-semibold text-primary">{translation.translated}</p>
+                {/* Part of speech & IPA */}
+                {(translation.partOfSpeech || translation.ipa) && (
+                  <div className="flex items-center gap-2 flex-wrap">
+                    {translation.partOfSpeech && (
+                      <span className="text-xs px-2 py-0.5 rounded-full bg-primary/10 text-primary font-medium italic">
+                        {translation.partOfSpeech}
+                      </span>
+                    )}
+                    {translation.ipa && (
+                      <span className="text-xs text-(--text-muted) font-mono">{translation.ipa}</span>
+                    )}
+                  </div>
+                )}
 
+                {/* English definition */}
+                {translation.definition && (
+                  <div>
+                    <p className="text-xs text-(--text-muted) uppercase tracking-wider">Definition</p>
+                    <p className="text-sm text-(--text-secondary) mt-0.5 leading-relaxed">{translation.definition}</p>
+                  </div>
+                )}
+
+                {/* Indonesian translation */}
+                <div>
+                  <p className="text-xs text-(--text-muted) uppercase tracking-wider">Terjemahan</p>
+                  <p className="text-sm font-semibold text-primary mt-0.5">{translation.translated}</p>
+                </div>
+
+                {/* Example sentence */}
+                {translation.example && (
+                  <div>
+                    <p className="text-xs text-(--text-muted) uppercase tracking-wider">Example</p>
+                    <p className="text-xs text-(--text-secondary) mt-0.5 italic leading-relaxed">&quot;{translation.example}&quot;</p>
+                  </div>
+                )}
+
+                {/* Alternative translations */}
                 {translation.alternatives && translation.alternatives.length > 0 && (
                   <div>
-                    <p className="text-xs text-(--text-muted) uppercase tracking-wider mt-2">Arti lain</p>
+                    <p className="text-xs text-(--text-muted) uppercase tracking-wider">Arti lain</p>
                     <div className="flex flex-wrap gap-1.5 mt-1">
                       {translation.alternatives.map((alt) => (
                         <span key={alt} className="text-xs px-2 py-0.5 rounded-full bg-(--bg-secondary) text-(--text-secondary) border border-(--border)">
@@ -481,13 +453,6 @@ export default function ModuleLessonClient({ lesson }: Props) {
                         </span>
                       ))}
                     </div>
-                  </div>
-                )}
-
-                {translation.context && (
-                  <div>
-                    <p className="text-xs text-(--text-muted) uppercase tracking-wider mt-2">Dalam kalimat</p>
-                    <p className="text-xs text-(--text-secondary) mt-1 italic leading-relaxed">{translation.context}</p>
                   </div>
                 )}
               </>

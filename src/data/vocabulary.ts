@@ -664,7 +664,7 @@ export const vocabulary: VocabWord[] = [
     difficulty: "intermediate",
   },
   {
-    id: "n11",
+    id: "n31",
     word: "Insight",
     slug: "insight",
     partOfSpeech: "noun",
@@ -683,7 +683,7 @@ export const vocabulary: VocabWord[] = [
     difficulty: "intermediate",
   },
   {
-    id: "n12",
+    id: "n32",
     word: "Outlier",
     slug: "outlier",
     partOfSpeech: "noun",
