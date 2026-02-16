@@ -502,6 +502,11 @@ export default function ModuleLessonClient({ lesson }: Props) {
                     );
                   })}
                 </div>
+                {section.imageUrl && (
+                  <div className="px-5 pb-5">
+                    <img src={section.imageUrl} alt={section.title} className="w-full rounded-lg border border-(--border)" />
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -518,6 +523,11 @@ export default function ModuleLessonClient({ lesson }: Props) {
                     </li>
                   ))}
                 </ul>
+                {section.imageUrl && (
+                  <div className="mt-3">
+                    <img src={section.imageUrl} alt={section.title} className="w-full rounded-lg border border-(--border)" />
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -537,11 +547,48 @@ export default function ModuleLessonClient({ lesson }: Props) {
             {{ reading: 'Full Reading Passage', speaking: 'Sample Script', grammar: 'Grammar Examples', listening: 'Listening Script' }[lesson.track]}
           </h2>
           <div className="bg-(--bg-card) border border-(--border) rounded-xl p-5 space-y-4">
-            {lesson.passage.map((paragraph, idx) => (
-              <p key={`${lesson.id}-p-${idx}`} className="text-sm leading-7 text-(--text-secondary)">
-                {renderClickableText(paragraph)}
-              </p>
-            ))}
+            {lesson.passage.map((paragraph, idx) => {
+              // Section headers (--- Title ---)
+              if (paragraph.startsWith('---') && paragraph.endsWith('---')) {
+                return (
+                  <div key={`${lesson.id}-p-${idx}`} className="pt-3 pb-1 border-b border-(--border)">
+                    <p className="text-xs font-bold text-primary uppercase tracking-wider">{paragraph.replace(/^-+\s*/, '').replace(/\s*-+$/, '')}</p>
+                  </div>
+                );
+              }
+              // Indonesian translation lines (starts with parenthesis)
+              if (paragraph.startsWith('(') && paragraph.endsWith(')')) {
+                return (
+                  <p key={`${lesson.id}-p-${idx}`} className="text-xs italic text-(--text-muted) -mt-3 ml-4">
+                    {paragraph}
+                  </p>
+                );
+              }
+              // Empty spacer
+              if (!paragraph.trim()) return <div key={`${lesson.id}-p-${idx}`} className="h-2" />;
+              // Lines with blanks (_____): render blanks as styled underlines
+              if (paragraph.includes('_____')) {
+                const parts = paragraph.split('_____');
+                return (
+                  <p key={`${lesson.id}-p-${idx}`} className="text-sm leading-7 text-(--text-secondary)">
+                    {parts.map((part, i) => (
+                      <span key={i}>
+                        {renderClickableText(part)}
+                        {i < parts.length - 1 && (
+                          <span className="inline-block min-w-20 border-b-2 border-dashed border-primary/50 mx-1 text-center text-primary/30 text-xs">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        )}
+                      </span>
+                    ))}
+                  </p>
+                );
+              }
+              // Regular paragraph
+              return (
+                <p key={`${lesson.id}-p-${idx}`} className="text-sm leading-7 text-(--text-secondary)">
+                  {renderClickableText(paragraph)}
+                </p>
+              );
+            })}
           </div>
         </section>
       )}

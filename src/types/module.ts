@@ -16,6 +16,7 @@ export interface ModuleExercise {
 export interface ModuleMaterialSection {
   title: string;
   points: string[];
+  imageUrl?: string;
 }
 
 export interface ModuleLesson {
