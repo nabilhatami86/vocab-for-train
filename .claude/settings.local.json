@@ -1,7 +1,10 @@
 {
   "permissions": {
     "allow": [
-      "Bash(dir:*)"
+      "Bash(dir:*)",
+      "Bash(export PATH=\"/Users/mm/.nvm/versions/node/v24.12.0/bin:$PATH\")",
+      "Bash(npx next build:*)",
+      "Bash(brew list:*)"
     ]
   }
 }

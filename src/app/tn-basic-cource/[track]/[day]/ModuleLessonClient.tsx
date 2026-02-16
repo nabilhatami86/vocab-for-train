@@ -196,6 +196,53 @@ export default function ModuleLessonClient({ lesson }: Props) {
     });
   }, [selectedWord, tokenize, translateWord]);
 
+  // Render text with {{annotation:word|label}} markers showing label underneath
+  const renderAnnotatedText = useCallback((text: string) => {
+    const annotationRegex = /\{\{annotation:([^|]+)\|([^}]+)\}\}/g;
+    const segments: Array<{ type: 'text'; value: string } | { type: 'annotation'; word: string; label: string }> = [];
+    let lastIndex = 0;
+    let match;
+
+    while ((match = annotationRegex.exec(text)) !== null) {
+      if (match.index > lastIndex) {
+        segments.push({ type: 'text', value: text.slice(lastIndex, match.index) });
+      }
+      segments.push({ type: 'annotation', word: match[1], label: match[2] });
+      lastIndex = match.index + match[0].length;
+    }
+    if (lastIndex < text.length) {
+      segments.push({ type: 'text', value: text.slice(lastIndex) });
+    }
+
+    // If no annotations found, fall back to renderClickableText
+    if (segments.length === 1 && segments[0].type === 'text') {
+      return renderClickableText(text);
+    }
+
+    return segments.map((seg, idx) => {
+      if (seg.type === 'text') {
+        return <span key={`seg-${idx}`}>{renderClickableText(seg.value)}</span>;
+      }
+      // Determine color based on label
+      const isModifier = seg.label.includes('M');
+      const colorClass = isModifier
+        ? 'text-blue-600 dark:text-blue-400 border-blue-400/50 bg-blue-500/5'
+        : 'text-amber-600 dark:text-amber-400 border-amber-400/50 bg-amber-500/5';
+      const labelBgClass = isModifier
+        ? 'bg-blue-500/15 text-blue-600 dark:text-blue-400'
+        : 'bg-amber-500/15 text-amber-600 dark:text-amber-400';
+
+      return (
+        <span key={`ann-${idx}`} className={cn('inline-flex flex-col items-center mx-0.5 px-1.5 py-0.5 rounded-lg border', colorClass)}>
+          <span className="text-sm font-semibold leading-tight">{renderClickableText(seg.word)}</span>
+          <span className={cn('text-[10px] font-bold uppercase tracking-wider px-1.5 py-0 rounded-full mt-0.5 leading-tight', labelBgClass)}>
+            {seg.label}
+          </span>
+        </span>
+      );
+    });
+  }, [renderClickableText]);
+
   return (
     <div className="p-4 lg:p-6 max-w-4xl mx-auto space-y-6 animate-fade-in">
       <div className="flex items-center justify-between">
@@ -235,6 +282,18 @@ export default function ModuleLessonClient({ lesson }: Props) {
                   {section.points.map((point, pIdx) => {
                     // Empty string = spacer between groups
                     if (!point.trim()) return <div key={`${section.title}-${pIdx}`} className="h-3" />;
+
+                    // Annotation lines: render with M/H labels underneath words
+                    if (point.includes('{{annotation:')) {
+                      return (
+                        <div key={`${section.title}-${pIdx}`} className="flex items-start gap-2 py-1.5 flex-wrap">
+                          <span className="text-primary mt-1.5 shrink-0 text-xs">●</span>
+                          <span className="text-sm text-(--text-secondary) leading-relaxed flex flex-wrap items-end gap-1">
+                            {renderAnnotatedText(point)}
+                          </span>
+                        </div>
+                      );
+                    }
 
                     // Suffix header: starts with - and ends with :
                     const suffixHeaderMatch = point.match(/^(-\w+(?:\s*\/\s*-\w+)*)\s+\(([^)]+)\)\s*:?\s*$/);
@@ -432,14 +491,11 @@ export default function ModuleLessonClient({ lesson }: Props) {
                       );
                     }
 
-                    // Possessive highlighting: detect 's and s' patterns
-                    const hasPossessive = /\w+'s\b|s'\s/.test(point);
-
-                    // Default: regular bullet point with possessive highlighting
+                    // Default: regular bullet point
                     return (
                       <div key={`${section.title}-${pIdx}`} className="flex items-start gap-2 py-0.5">
                         <span className="text-primary mt-1.5 shrink-0 text-xs">●</span>
-                        <span className={cn("text-sm text-(--text-secondary) leading-relaxed", hasPossessive && "")}>
+                        <span className="text-sm text-(--text-secondary) leading-relaxed">
                           {renderClickableText(point)}
                         </span>
                       </div>
