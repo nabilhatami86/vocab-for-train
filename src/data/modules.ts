@@ -599,6 +599,51 @@ const readingLessons: ModuleLesson[] = [
       { id: 'r9-q7', type: 'task', question: 'Summarize this passage using a mind map!' },
     ],
   },
+  {
+    id: 'reading-10',
+    track: 'reading',
+    day: 10,
+    title: 'Middle Test — Reading',
+    subtitle: 'Ujian Tengah: Comprehension dari semua passage Day 2-9',
+    overview:
+      'Ujian ini menguji pemahaman reading dari semua passage yang sudah dipelajari (Day 2-9). Jawab semua pertanyaan berdasarkan isi bacaan. Selamat mengerjakan!',
+    materialSections: [
+      {
+        title: 'Petunjuk Ujian',
+        points: [
+          'Jawab semua soal berdasarkan passage yang sudah dipelajari dari Day 2-9.',
+          'Multiple choice: pilih jawaban yang paling tepat.',
+          'Short answer: tulis jawaban dengan kalimat lengkap.',
+          'Passage yang diujikan: My Self, My Family, Mathematics, Daily Activity, My Pet, Animals, Describing People & Things, Culture.',
+        ],
+      },
+    ],
+    exercises: [
+      // My Self (Day 2)
+      { id: 'rmt-q1', type: 'multiple-choice', question: 'Where does Sara live?', options: ['Peninsular Malaysia', 'Sabah, Borneo', 'Jakarta', 'Singapore'], correctAnswer: 'Sabah, Borneo', reason: 'Sara berkata "I live in Sabah, which is located in Borneo."' },
+      { id: 'rmt-q2', type: 'multiple-choice', question: 'What is Sara\'s job?', options: ['Teacher', 'Counsellor', 'Doctor', 'Nurse'], correctAnswer: 'Counsellor', reason: 'Sara berkata "I have been working as a Counsellor in Juvenile Centre."' },
+      // My Family (Day 3)
+      { id: 'rmt-q3', type: 'multiple-choice', question: 'Who is the head of the family in the "My Family" passage?', options: ['Father', 'Mother', 'Grandfather', 'Grandmother'], correctAnswer: 'Grandfather', reason: '"Every member of my family follows the orders of my grandfather because he is the head of the family."' },
+      { id: 'rmt-q4', type: 'multiple-choice', question: 'What are grandfather\'s keys to success?', options: ['Money and power', 'Discipline, punctuality, cleanliness, morality, hardwork, continuity', 'Education and technology', 'Health and wealth'], correctAnswer: 'Discipline, punctuality, cleanliness, morality, hardwork, continuity', reason: 'Di passage disebutkan 6 kunci sukses dari kakek.' },
+      // Mathematics (Day 4)
+      { id: 'rmt-q5', type: 'multiple-choice', question: 'In the Mathematics passage, what did the mother use to teach counting?', options: ['Books', 'Computers', 'Different things like spoons, oranges, soft toys', 'Flashcards'], correctAnswer: 'Different things like spoons, oranges, soft toys', reason: '"My mother used different things such as spoons, oranges, and soft toys."' },
+      // Daily Activity (Day 5)
+      { id: 'rmt-q6', type: 'short-answer', question: 'Berdasarkan passage Day 5, jelaskan daily routine yang diceritakan! Sebutkan minimal 5 kegiatan.' },
+      // My Pet / Animals (Day 6-7)
+      { id: 'rmt-q7', type: 'multiple-choice', question: 'Which statement is TRUE about pets from the Day 6 passage?', options: ['All pets are expensive', 'Pets need care and responsibility', 'Pets don\'t need food', 'Cats are the only good pets'], correctAnswer: 'Pets need care and responsibility', reason: 'Passage menekankan tanggung jawab merawat hewan peliharaan.' },
+      // Describing People & Things (Day 8)
+      { id: 'rmt-q8', type: 'short-answer', question: 'Berdasarkan passage Day 8, deskripsikan salah satu orang/benda yang diceritakan dalam passage menggunakan minimal 3 kalimat bahasa Inggris!' },
+      // Culture (Day 9)
+      { id: 'rmt-q9', type: 'short-answer', question: 'Berdasarkan passage Day 9, apa pesan moral yang bisa diambil tentang budaya? Tulis dalam bahasa Inggris!' },
+      // Vocabulary
+      { id: 'rmt-q10', type: 'multiple-choice', question: '"She always strives for having a better life." What does "strive" mean?', options: ['Give up', 'Try very hard', 'Relax', 'Complain'], correctAnswer: 'Try very hard', reason: '"Strive" = berusaha keras / berjuang untuk mencapai sesuatu.' },
+      { id: 'rmt-q11', type: 'multiple-choice', question: '"I am fortunate to be born into a nice family." What does "fortunate" mean?', options: ['Unlucky', 'Sad', 'Lucky', 'Rich'], correctAnswer: 'Lucky', reason: '"Fortunate" = beruntung (lucky).' },
+      { id: 'rmt-q12', type: 'multiple-choice', question: '"The family helps in nourishing a better character." What does "nourishing" mean?', options: ['Destroying', 'Building/developing', 'Ignoring', 'Hiding'], correctAnswer: 'Building/developing', reason: '"Nourishing" = memelihara/mengembangkan.' },
+      // Comprehension tasks
+      { id: 'rmt-q13', type: 'task', question: 'Pilih 1 passage favorit dari Day 2-9, lalu tulis ringkasan (summary) dalam 5-8 kalimat bahasa Inggris. Jelaskan mengapa kamu memilih passage tersebut.' },
+      { id: 'rmt-q14', type: 'task', question: 'Tulis paragraf pendek (5-7 kalimat) tentang diri kamu sendiri menggunakan vocabulary yang sudah dipelajari dari semua passage!' },
+    ],
+  },
 ];
 
 const speakingLessons: ModuleLesson[] = [
@@ -1301,6 +1346,50 @@ const speakingLessons: ModuleLesson[] = [
       { id: 's9-q1', type: 'task', question: 'Tell about your favorite book! (title, genre, author, why you love it, how you know it, main story)' },
       { id: 's9-q2', type: 'task', question: 'Answer 5 partner questions about your book preference using the expressions above.' },
       { id: 's9-q3', type: 'task', question: 'Write 15-20 vocabulary words related to books (words + adjectives) and memorize them.' },
+    ],
+  },
+  {
+    id: 'speaking-10',
+    track: 'speaking',
+    day: 10,
+    title: 'Middle Test — Speaking',
+    subtitle: 'Ujian Tengah: Self-introduction, Daily Activities, Describing, Opinions',
+    overview:
+      'Ujian ini menguji kemampuan speaking dari semua materi Day 2-9. Jawab pertanyaan dan lakukan speaking tasks dengan percaya diri. Selamat mengerjakan!',
+    materialSections: [
+      {
+        title: 'Petunjuk Ujian',
+        points: [
+          'Jawab semua soal di bawah ini.',
+          'Multiple choice: pilih jawaban/ekspresi yang paling tepat.',
+          'Task: lakukan speaking practice sesuai instruksi.',
+          'Materi: Personal Identity, Daily Activity, Hobbies, Family, Describing People/Places, Opinions, Favorites.',
+        ],
+      },
+    ],
+    exercises: [
+      // Greetings & Introduction (Day 2)
+      { id: 'smt-q1', type: 'multiple-choice', question: 'Which is the CORRECT self-introduction format?', options: ['I graduated English from Brawijaya.', 'I am graduated English Education student from Brawijaya University.', 'I am graduate from university.', 'I graduated am from Brawijaya.'], correctAnswer: 'I am graduated English Education student from Brawijaya University.', reason: 'Pakai "am" → HARUS spesifik (jurusan + universitas).' },
+      { id: 'smt-q2', type: 'multiple-choice', question: 'Which is a FORMAL greeting?', options: ['Hey!', 'What\'s up?', 'Good morning, everyone!', 'Hi there!'], correctAnswer: 'Good morning, everyone!', reason: '"Good morning, everyone!" adalah greeting formal untuk presentasi atau situasi resmi.' },
+      // Daily Activity (Day 3)
+      { id: 'smt-q3', type: 'multiple-choice', question: '"What time do you ___?" — asking about routine.', options: ['wake up', 'waking up', 'woke up', 'waken up'], correctAnswer: 'wake up', reason: 'Setelah "do you" gunakan base form (V1): wake up.' },
+      // Hobbies (Day 4)
+      { id: 'smt-q4', type: 'multiple-choice', question: 'Which expression is correct for talking about hobbies?', options: ['I am hobby swimming.', 'My hobby is swimming.', 'I hobby to swim.', 'Swimming is my hobby to.'], correctAnswer: 'My hobby is swimming.', reason: 'Pola yang benar: "My hobby is + V-ing" atau "I like + V-ing."' },
+      // Family (Day 5)
+      { id: 'smt-q5', type: 'multiple-choice', question: '"How many siblings do you have?" — Best response:', options: ['I have siblings two.', 'I have two siblings.', 'Two siblings I have.', 'My siblings is two.'], correctAnswer: 'I have two siblings.', reason: 'Pola kalimat yang benar: Subject + have + number + noun.' },
+      // Describing (Day 6)
+      { id: 'smt-q6', type: 'multiple-choice', question: 'Which is the best way to describe someone\'s appearance?', options: ['She is tall, slim, with long black hair.', 'She tall and slim long hair.', 'Her is tall slim long hair.', 'She are tall and slim.'], correctAnswer: 'She is tall, slim, with long black hair.', reason: 'Gunakan "She is + adjective" dan "with + physical feature".' },
+      // Opinions (Day 7-8)
+      { id: 'smt-q7', type: 'multiple-choice', question: 'Which expression is for GIVING an opinion?', options: ['What do you think?', 'In my opinion, ...', 'Do you agree?', 'How about you?'], correctAnswer: 'In my opinion, ...', reason: '"In my opinion" = ekspresi untuk memberikan pendapat. Yang lain untuk bertanya.' },
+      { id: 'smt-q8', type: 'multiple-choice', question: 'Which is a polite way to DISAGREE?', options: ['You\'re wrong!', 'That\'s stupid.', 'I see your point, but I think differently.', 'No way!'], correctAnswer: 'I see your point, but I think differently.', reason: 'Cara sopan: acknowledge dulu pendapat orang lain, lalu sampaikan pendapatmu.' },
+      // Favorites (Day 9)
+      { id: 'smt-q9', type: 'multiple-choice', question: '"What genre do you like?" — Best response about books:', options: ['I like genre fantasy.', 'I prefer reading fantasy novels.', 'Fantasy is genre me.', 'I genre fantasy like.'], correctAnswer: 'I prefer reading fantasy novels.', reason: '"I prefer + V-ing + noun" adalah pola yang benar.' },
+      // Speaking tasks
+      { id: 'smt-q10', type: 'task', question: 'Lakukan self-introduction lengkap: Greeting → Name & Origin → Education → Status/Job → Hobbies → Favorite subject & why → Closing. Minimal 10 kalimat!' },
+      { id: 'smt-q11', type: 'task', question: 'Ceritakan daily routine kamu dari bangun tidur sampai tidur lagi. Gunakan time expressions (at, in the morning, after that, then). Minimal 8 kalimat!' },
+      { id: 'smt-q12', type: 'task', question: 'Deskripsikan anggota keluargamu (minimal 3 orang): nama, hubungan, pekerjaan, sifat, dan penampilan fisik. Minimal 10 kalimat!' },
+      { id: 'smt-q13', type: 'task', question: 'Berikan pendapatmu tentang topik: "Social media is good for students." Agree or disagree? Berikan minimal 3 alasan dalam bahasa Inggris!' },
+      { id: 'smt-q14', type: 'task', question: 'Ceritakan tentang buku/film/lagu favoritmu: judul, genre, alasan suka, dan cerita singkatnya. Minimal 8 kalimat!' },
     ],
   },
 ];
@@ -3192,6 +3281,59 @@ const grammarLessons: ModuleLesson[] = [  {
       },
     ],
   },
+  {
+    id: 'grammar-10',
+    track: 'grammar',
+    day: 10,
+    title: 'Middle Test — Grammar',
+    subtitle: 'Ujian Tengah: Nouns, Pronouns, Adjectives, Adverbs, Verbs, Prepositions, Conjunctions, Articles',
+    overview:
+      'Ujian ini mencakup semua materi grammar dari Day 2 (Nouns) sampai Day 9 (Articles & Determiners). Kerjakan semua soal dengan teliti. Selamat mengerjakan!',
+    materialSections: [
+      {
+        title: 'Petunjuk Ujian',
+        points: [
+          'Jawab semua soal di bawah ini.',
+          'Multiple choice: pilih jawaban yang paling tepat.',
+          'Short answer: tulis jawaban dengan lengkap.',
+          'Materi yang diujikan: Nouns, Pronouns, Adjectives, Adverbs, Verbs, Prepositions, Conjunctions, Articles & Determiners.',
+        ],
+      },
+    ],
+    exercises: [
+      // Nouns (Day 2)
+      { id: 'gmt-q1', type: 'multiple-choice', question: 'Which of the following is an ABSTRACT noun?', options: ['Table', 'Happiness', 'Dog', 'Jakarta'], correctAnswer: 'Happiness', reason: 'Abstract noun = kata benda yang tidak berwujud (perasaan, ide). Happiness = kebahagiaan. Table, Dog = concrete noun, Jakarta = proper noun.' },
+      { id: 'gmt-q2', type: 'multiple-choice', question: 'What is the correct plural of "knife"?', options: ['Knifes', 'Knifees', 'Knives', 'Knivs'], correctAnswer: 'Knives', reason: 'Kata berakhiran -fe, ganti fe → ves: knife → knives.' },
+      { id: 'gmt-q3', type: 'multiple-choice', question: '"The ___ is winning the match." Choose the correct collective noun.', options: ['team', 'teams', 'player', 'peoples'], correctAnswer: 'team', reason: 'Collective noun (kelompok) dianggap tunggal: "The team is winning." Bukan "teams" karena merujuk 1 kelompok.' },
+      // Pronouns (Day 3)
+      { id: 'gmt-q4', type: 'multiple-choice', question: '"This book is ___." Choose the correct possessive pronoun.', options: ['my', 'me', 'mine', 'I'], correctAnswer: 'mine', reason: '"Mine" = possessive pronoun yang berdiri sendiri. "My" butuh noun setelahnya.' },
+      { id: 'gmt-q5', type: 'multiple-choice', question: '"She taught ___ how to swim." Choose the correct reflexive pronoun.', options: ['her', 'herself', 'hers', 'she'], correctAnswer: 'herself', reason: 'Subject (she) dan object adalah orang yang sama → gunakan reflexive "herself".' },
+      // Adjectives (Day 4)
+      { id: 'gmt-q6', type: 'multiple-choice', question: 'Which is the correct order? "She has a ___ dress."', options: ['red beautiful long', 'beautiful long red', 'long beautiful red', 'beautiful red long'], correctAnswer: 'beautiful long red', reason: 'OSASCOMP order: Opinion (beautiful) → Size (long) → Color (red).' },
+      { id: 'gmt-q7', type: 'multiple-choice', question: '"Mount Everest is ___ mountain in the world."', options: ['the highest', 'higher', 'highest', 'the higher'], correctAnswer: 'the highest', reason: 'Superlative (3+ benda) selalu pakai "the" + -est: the highest.' },
+      // Adverbs (Day 5)
+      { id: 'gmt-q8', type: 'multiple-choice', question: '"She sings ___." Choose the correct adverb.', options: ['beautiful', 'beautifully', 'beauty', 'beautifull'], correctAnswer: 'beautifully', reason: 'Setelah verb "sings" butuh adverb. beautiful (adj) + -ly = beautifully (adv).' },
+      { id: 'gmt-q9', type: 'multiple-choice', question: '"I ___ go to school by bus." (setiap hari)', options: ['always', 'never', 'rarely', 'sometimes'], correctAnswer: 'always', reason: '"Setiap hari" = always (100% frequency). Always diletakkan sebelum main verb.' },
+      // Verbs (Day 6)
+      { id: 'gmt-q10', type: 'multiple-choice', question: '"She ___ a teacher." Choose the correct linking verb.', options: ['is', 'does', 'has', 'makes'], correctAnswer: 'is', reason: '"Is" = linking verb yang menghubungkan subject dengan complement. She = a teacher.' },
+      { id: 'gmt-q11', type: 'multiple-choice', question: '"I ___ swim when I was 5." Choose the correct modal.', options: ['can', 'could', 'will', 'must'], correctAnswer: 'could', reason: '"Could" = kemampuan di masa lalu (past ability). "Can" = kemampuan sekarang.' },
+      // Prepositions (Day 7)
+      { id: 'gmt-q12', type: 'multiple-choice', question: '"The meeting is ___ Monday ___ 3 PM."', options: ['in / at', 'on / at', 'at / on', 'on / in'], correctAnswer: 'on / at', reason: '"On" untuk hari (Monday), "at" untuk waktu spesifik (3 PM).' },
+      { id: 'gmt-q13', type: 'multiple-choice', question: '"She is afraid ___ spiders."', options: ['from', 'of', 'with', 'about'], correctAnswer: 'of', reason: 'Kolokasi tetap: "afraid of" = takut akan sesuatu.' },
+      // Conjunctions (Day 8)
+      { id: 'gmt-q14', type: 'multiple-choice', question: '"I wanted to go out, ___ it was raining."', options: ['so', 'but', 'and', 'or'], correctAnswer: 'but', reason: '"But" menunjukkan kontras. Ingin keluar TAPI hujan.' },
+      { id: 'gmt-q15', type: 'multiple-choice', question: '"___ you study harder, you will fail."', options: ['If', 'Unless', 'Although', 'Because'], correctAnswer: 'Unless', reason: '"Unless" = jika tidak. Kalau kamu tidak belajar lebih giat, kamu akan gagal.' },
+      // Articles (Day 9)
+      { id: 'gmt-q16', type: 'multiple-choice', question: '"She is ___ honest person."', options: ['a', 'an', 'the', 'no article'], correctAnswer: 'an', reason: '"Honest" dimulai dengan H silent, bunyinya vokal. Gunakan "an".' },
+      { id: 'gmt-q17', type: 'multiple-choice', question: '"I like ___ music."', options: ['a', 'an', 'the', 'no article'], correctAnswer: 'no article', reason: 'Musik secara umum (general) tidak perlu article.' },
+      // Short answer
+      { id: 'gmt-q18', type: 'short-answer', question: 'Ubah ke plural: 1) child  2) tooth  3) party  4) fish  5) knife  6) box  7) woman  8) potato' },
+      { id: 'gmt-q19', type: 'short-answer', question: 'Isi preposition yang benar: 1) I was born ___ 1998.  2) She is good ___ math.  3) He lives ___ Jakarta.  4) We walked ___ the tunnel.  5) I have been here ___ 2020.' },
+      { id: 'gmt-q20', type: 'short-answer', question: 'Isi article (a/an/the/—): 1) ___ sun rises in ___ east.  2) She is ___ engineer.  3) I play ___ guitar.  4) ___ dogs are loyal.  5) I had ___ breakfast.' },
+      { id: 'gmt-q21', type: 'short-answer', question: 'Isi conjunction yang benar: 1) She is smart ___ kind. (both...and)  2) ___ it rained, we went out. (although)  3) Study hard, ___ you will fail. (or)  4) I will wait ___ you come back. (until)' },
+      { id: 'gmt-q22', type: 'short-answer', question: 'Pilih adjective atau adverb: 1) She dances ___ (beautiful/beautifully).  2) The food smells ___ (good/well).  3) He runs ___ (fast/fastly).  4) She is ___ (real/really) smart.  5) The turtle walks ___ (slow/slowly).' },
+    ],
+  },
 ];
 
 const listeningLessons: ModuleLesson[] = [
@@ -3961,6 +4103,54 @@ const listeningLessons: ModuleLesson[] = [
       { id: 'l9-q2', type: 'multiple-choice', question: 'Makanan apa yang ingin dimakan Jane?', options: ['McDonald\'s', 'Pizza', 'Laksa', 'Street food'], correctAnswer: 'Laksa', reason: 'Jane berkata "I want to eat Laksa!"' },
       { id: 'l9-q3', type: 'short-answer', question: 'Di bagian The Weather, tuliskan kalimat bahasa Inggris lengkap untuk setiap bagian kosong!' },
       { id: 'l9-q4', type: 'task', question: 'Dengarkan lagi dan isi semua bagian kosong. Lalu tulis percakapan tentang rencana liburanmu.' },
+    ],
+  },
+  {
+    id: 'listening-10',
+    track: 'listening',
+    day: 10,
+    title: 'Middle Test — Listening',
+    subtitle: 'Ujian Tengah: Comprehension dari semua dialogue Day 2-9',
+    overview:
+      'Ujian ini menguji pemahaman listening dari semua percakapan Day 2-9. Jawab pertanyaan berdasarkan apa yang kamu ingat dari percakapan Sam dan Jane. Selamat mengerjakan!',
+    materialSections: [
+      {
+        title: 'Petunjuk Ujian',
+        points: [
+          'Jawab semua soal berdasarkan percakapan yang sudah kamu dengarkan dari Day 2-9.',
+          'Multiple choice: pilih jawaban yang paling tepat.',
+          'Short answer: tulis jawaban dengan lengkap.',
+          'Topik: Introduction & Family, Hobbies & Music, Weekend Plans & Jobs, School & Friends, Homework & Education, Travel & Tickets, Airport & Directions, Weather & Food.',
+        ],
+      },
+    ],
+    exercises: [
+      // Day 2: Family & Hobbies
+      { id: 'lmt-q1', type: 'multiple-choice', question: 'Hobi apa yang disebutkan Jane di Day 2?', options: ['Swimming and cooking', 'Reading books and playing badminton', 'Playing guitar and singing', 'Watching TV and sleeping'], correctAnswer: 'Reading books and playing badminton', reason: 'Jane berkata "I like to read books and play badminton."' },
+      { id: 'lmt-q2', type: 'multiple-choice', question: 'Sam suka pergi ke mana untuk berenang?', options: ['Swimming pool', 'River', 'Beach', 'Lake'], correctAnswer: 'Beach', reason: 'Sam berkata "I like to go swimming at the beach."' },
+      // Day 3: Music & Games
+      { id: 'lmt-q3', type: 'multiple-choice', question: 'Alat musik apa yang dimainkan Sam?', options: ['Piano', 'Drum', 'Guitar', 'Violin'], correctAnswer: 'Guitar', reason: 'Sam berkata "I like to play the guitar."' },
+      { id: 'lmt-q4', type: 'multiple-choice', question: 'Board game apa yang mereka setuju untuk mainkan?', options: ['Chess', 'Monopoly', 'Scrabble', 'Uno'], correctAnswer: 'Scrabble', reason: 'Mereka setuju bermain Scrabble: "how about Scrabble?" "Yes, let\'s play."' },
+      // Day 4: Weekend & Jobs
+      { id: 'lmt-q5', type: 'multiple-choice', question: 'Apa pekerjaan Sam?', options: ['Teacher', 'Sales person', 'Doctor', 'Engineer'], correctAnswer: 'Sales person', reason: 'Sam berkata "I am a sales person, I sell cars."' },
+      { id: 'lmt-q6', type: 'multiple-choice', question: 'Apa pekerjaan Jane?', options: ['Nurse', 'Manager', 'Teacher', 'Student'], correctAnswer: 'Teacher', reason: 'Jane berkata "I teach students in elementary school."' },
+      // Day 5: School & Friends
+      { id: 'lmt-q7', type: 'multiple-choice', question: 'Sahabat Jane bernama...', options: ['Matt', 'Jessica', 'Sara', 'Adam'], correctAnswer: 'Jessica', reason: 'Jane menyebut "my best friend, Jessica."' },
+      { id: 'lmt-q8', type: 'multiple-choice', question: 'Mata pelajaran favorit Jane adalah...', options: ['Math and History', 'English and Literature', 'Biology and Chemistry', 'Art and Music'], correctAnswer: 'English and Literature', reason: 'Jane berkata "English and literature are my favorite subjects."' },
+      // Day 6: Homework & Education
+      { id: 'lmt-q9', type: 'multiple-choice', question: 'Jane harus menulis apa untuk pelajaran English?', options: ['A poem', 'An essay', 'A letter', 'A story'], correctAnswer: 'An essay', reason: 'Jane berkata "I need to somehow write an essay for English."' },
+      { id: 'lmt-q10', type: 'multiple-choice', question: 'Sam ingin belajar tentang apa di Jepang?', options: ['Art', 'Technology', 'Business', 'Language'], correctAnswer: 'Business', reason: 'Sam berkata "I can get a master\'s degree in business."' },
+      // Day 7: Travel & Tickets
+      { id: 'lmt-q11', type: 'multiple-choice', question: 'Ke mana Sam berencana pergi?', options: ['Japan', 'Thailand', 'Malaysia', 'Singapore'], correctAnswer: 'Malaysia', reason: 'Sam berkata "We are planning a trip to Malaysia."' },
+      { id: 'lmt-q12', type: 'multiple-choice', question: 'Saran Jane untuk mendapatkan tiket murah?', options: ['Book online', 'Go to a travel agent', 'Wait for a sale', 'Ask a friend'], correctAnswer: 'Go to a travel agent', reason: 'Jane berkata "Go to a travel agent, they can get you good deals."' },
+      // Day 8-9: Airport, Places, Weather, Food
+      { id: 'lmt-q13', type: 'multiple-choice', question: 'Di bandara, apa yang diminta Sam untuk Jane lakukan?', options: ['Buy food', 'Check in at the counter', 'Find the gate', 'Call a taxi'], correctAnswer: 'Check in at the counter', reason: 'Sam berkata "Can you go to the counter and check in for us?"' },
+      { id: 'lmt-q14', type: 'multiple-choice', question: 'Mengapa Sam dan Jane tidak bermain sepak bola?', options: ['They were tired', 'It was raining', 'The field was closed', 'They had homework'], correctAnswer: 'It was raining', reason: 'Sam berkata "the weather looks bad, it\'s raining."' },
+      // Short answer & tasks
+      { id: 'lmt-q15', type: 'short-answer', question: 'Sebutkan 5 hobi yang disebutkan dalam percakapan Day 2-3! (dalam bahasa Inggris)' },
+      { id: 'lmt-q16', type: 'short-answer', question: 'Apa saja langkah yang perlu dilakukan Sam untuk mendapatkan beasiswa ke Jepang? Sebutkan minimal 3 langkah!' },
+      { id: 'lmt-q17', type: 'short-answer', question: 'Tuliskan 5 kosakata baru yang kamu pelajari dari percakapan listening Day 2-9 beserta artinya!' },
+      { id: 'lmt-q18', type: 'task', question: 'Buat percakapan singkat (8-10 kalimat) antara 2 orang tentang rencana liburan. Gunakan vocabulary dari listening Day 7-9!' },
     ],
   },
 ];

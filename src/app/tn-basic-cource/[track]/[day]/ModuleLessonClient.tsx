@@ -2,7 +2,7 @@
 
 import { useCallback, useMemo, useState } from 'react';
 import Link from 'next/link';
-import { ArrowLeft, CheckCircle2, Circle, BookText, Languages, X, XCircle, Lightbulb, Volume2 } from 'lucide-react';
+import { ArrowLeft, CheckCircle2, Circle, BookText, Languages, X, XCircle, Lightbulb, Volume2, MessageCircle } from 'lucide-react';
 import type { ModuleLesson } from '@/types/module';
 import { cn } from '@/lib/utils';
 import TTSPlayer from '@/components/tts/TTSPlayer';
@@ -283,9 +283,14 @@ export default function ModuleLessonClient({ lesson }: Props) {
         </p>
       </div>
 
-      <div className="bg-(--bg-card) border border-(--border) rounded-2xl p-6">
+      <div className={cn(
+        'border rounded-2xl p-6',
+        lesson.day === 10
+          ? 'bg-primary/5 border-primary/30'
+          : 'bg-(--bg-card) border-(--border)'
+      )}>
         <p className="text-xs uppercase tracking-wider text-primary font-semibold mb-2">
-          {lesson.track.toUpperCase()} • Day {lesson.day}
+          {lesson.day === 10 ? 'MIDDLE TEST' : `${lesson.track.toUpperCase()} • Day ${lesson.day}`}
         </p>
         <h1 className="text-2xl font-bold text-(--text)">{lesson.title}</h1>
         <p className="text-sm text-(--text-secondary) mt-1">{renderClickableText(lesson.subtitle)}</p>
@@ -691,30 +696,177 @@ export default function ModuleLessonClient({ lesson }: Props) {
 
       {lesson.passage && lesson.passage.length > 0 && (
         <section className="space-y-4">
-          <h2 className="text-lg font-semibold text-(--text)">
+          <h2 className="text-lg font-semibold text-(--text) flex items-center gap-2">
+            {lesson.track === 'reading' && <BookText className="w-5 h-5 text-blue-500" />}
+            {lesson.track === 'listening' && <Volume2 className="w-5 h-5 text-primary" />}
+            {lesson.track === 'speaking' && <MessageCircle className="w-5 h-5 text-green-500" />}
             {{ reading: 'Full Reading Passage', speaking: 'Sample Script', grammar: 'Grammar Examples', listening: 'Listening Script' }[lesson.track]}
           </h2>
-          <div className="bg-(--bg-card) border border-(--border) rounded-xl p-5 space-y-4">
+          <div className={cn(
+            'bg-(--bg-card) border border-(--border) rounded-xl p-5',
+            lesson.track === 'reading' ? 'space-y-5' : 'space-y-4'
+          )}>
             {lesson.passage.map((paragraph, idx) => {
               // Section headers (--- Title ---)
               if (paragraph.startsWith('---') && paragraph.endsWith('---')) {
+                const headerText = paragraph.replace(/^-+\s*/, '').replace(/\s*-+$/, '');
+                const sectionNum = headerText.match(/^(\d+)\.\s*/)?.[1];
                 return (
-                  <div key={`${lesson.id}-p-${idx}`} className="pt-3 pb-1 border-b border-(--border)">
-                    <p className="text-xs font-bold text-primary uppercase tracking-wider">{paragraph.replace(/^-+\s*/, '').replace(/\s*-+$/, '')}</p>
+                  <div key={`${lesson.id}-p-${idx}`} className="pt-4 pb-2 border-b border-(--border) first:pt-0">
+                    <div className="flex items-center gap-2">
+                      {sectionNum && (
+                        <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-primary text-white text-xs font-bold shrink-0">
+                          {sectionNum}
+                        </span>
+                      )}
+                      <p className="text-sm font-bold text-primary uppercase tracking-wider">{sectionNum ? headerText.replace(/^\d+\.\s*/, '') : headerText}</p>
+                    </div>
                   </div>
                 );
               }
               // Indonesian translation lines (starts with parenthesis)
               if (paragraph.startsWith('(') && paragraph.endsWith(')')) {
                 return (
-                  <p key={`${lesson.id}-p-${idx}`} className="text-xs italic text-(--text-muted) -mt-3 ml-4">
+                  <p key={`${lesson.id}-p-${idx}`} className="text-xs italic text-(--text-muted) -mt-3 ml-4 pl-1 border-l-2 border-(--border)">
                     {paragraph}
                   </p>
                 );
               }
               // Empty spacer
               if (!paragraph.trim()) return <div key={`${lesson.id}-p-${idx}`} className="h-2" />;
-              // Lines with interactive blanks {{blank:answer}}
+
+              // Listening: speaker lines (Sam: / Jane:)
+              if (lesson.track === 'listening' && !paragraph.includes('{{blank:')) {
+                const speakerMatch = paragraph.match(/^(Sam|Jane):\s*(.*)/);
+                if (speakerMatch) {
+                  const speaker = speakerMatch[1];
+                  const text = speakerMatch[2];
+                  const isSam = speaker === 'Sam';
+                  return (
+                    <div key={`${lesson.id}-p-${idx}`} className="flex items-start gap-2 py-0.5">
+                      <span className={cn(
+                        'inline-flex items-center justify-center w-7 h-7 rounded-full text-[10px] font-bold shrink-0 mt-0.5',
+                        isSam ? 'bg-blue-500/15 text-blue-600 dark:text-blue-400' : 'bg-pink-500/15 text-pink-600 dark:text-pink-400'
+                      )}>
+                        {speaker[0]}
+                      </span>
+                      <div className="text-sm leading-7 text-(--text-secondary)">
+                        <span className={cn('font-semibold', isSam ? 'text-blue-600 dark:text-blue-400' : 'text-pink-600 dark:text-pink-400')}>{speaker}: </span>
+                        {renderClickableText(text)}
+                      </div>
+                    </div>
+                  );
+                }
+              }
+
+              // Listening: speaker lines with blanks
+              if (lesson.track === 'listening' && paragraph.includes('{{blank:')) {
+                const speakerMatch = paragraph.match(/^(Sam|Jane):\s*/);
+                const speaker = speakerMatch?.[1];
+                const isSam = speaker === 'Sam';
+
+                const blankRegex = /\{\{blank:([^}]+)\}\}/g;
+                const segments: Array<{ type: 'text'; value: string } | { type: 'blank'; answer: string; id: string }> = [];
+                let lastIndex = 0;
+                let blankCount = 0;
+                let match;
+                while ((match = blankRegex.exec(paragraph)) !== null) {
+                  if (match.index > lastIndex) {
+                    segments.push({ type: 'text', value: paragraph.slice(lastIndex, match.index) });
+                  }
+                  const blankId = `${idx}-${blankCount}`;
+                  segments.push({ type: 'blank', answer: match[1], id: blankId });
+                  blankCount++;
+                  lastIndex = match.index + match[0].length;
+                }
+                if (lastIndex < paragraph.length) {
+                  segments.push({ type: 'text', value: paragraph.slice(lastIndex) });
+                }
+                const isFullBlank = segments.filter(s => s.type === 'blank').length === 1 &&
+                  segments.filter(s => s.type === 'text').every(s => /^[A-Za-z]+:\s*$/.test(s.value) || !s.value.trim());
+                return (
+                  <div key={`${lesson.id}-p-${idx}`} className="flex items-start gap-2 py-0.5">
+                    {speaker && (
+                      <span className={cn(
+                        'inline-flex items-center justify-center w-7 h-7 rounded-full text-[10px] font-bold shrink-0 mt-0.5',
+                        isSam ? 'bg-blue-500/15 text-blue-600 dark:text-blue-400' : 'bg-pink-500/15 text-pink-600 dark:text-pink-400'
+                      )}>
+                        {speaker[0]}
+                      </span>
+                    )}
+                    <div className="flex flex-wrap items-end gap-x-1 gap-y-2 text-sm leading-7 text-(--text-secondary) flex-1">
+                      {segments.map((seg, sIdx) => {
+                        if (seg.type === 'text') {
+                          // Color the speaker name in text
+                          if (speaker && sIdx === 0 && seg.value.startsWith(speaker)) {
+                            const rest = seg.value.slice(speaker.length + 2);
+                            return (
+                              <span key={sIdx}>
+                                <span className={cn('font-semibold', isSam ? 'text-blue-600 dark:text-blue-400' : 'text-pink-600 dark:text-pink-400')}>{speaker}: </span>
+                                {renderClickableText(rest)}
+                              </span>
+                            );
+                          }
+                          return <span key={sIdx}>{renderClickableText(seg.value)}</span>;
+                        }
+                        const bId = seg.id;
+                        const userAnswer = blankAnswers[bId] || '';
+                        const isChecked = blankChecked[bId] === true;
+                        const correctAnswer = seg.answer;
+                        const isCorrect = isChecked && userAnswer.trim().toLowerCase() === correctAnswer.toLowerCase();
+                        const isWrong = isChecked && !isCorrect;
+                        return (
+                          <span key={sIdx} className="inline-flex flex-col items-center">
+                            <input
+                              type="text"
+                              value={userAnswer}
+                              onChange={(e) => {
+                                setBlankAnswers(prev => ({ ...prev, [bId]: e.target.value }));
+                                if (blankChecked[bId]) setBlankChecked(prev => ({ ...prev, [bId]: false }));
+                              }}
+                              onKeyDown={(e) => {
+                                if (e.key === 'Enter') setBlankChecked(prev => ({ ...prev, [bId]: true }));
+                              }}
+                              placeholder={isFullBlank ? 'Tulis kalimat lengkap...' : '...'}
+                              className={cn(
+                                'border-b-2 bg-transparent outline-none text-center text-sm px-1 py-0.5 transition-colors',
+                                isFullBlank ? 'min-w-48 w-full' : 'min-w-16',
+                                !isChecked && 'border-primary/40 focus:border-primary',
+                                isCorrect && 'border-green-500 text-green-600',
+                                isWrong && 'border-red-500 text-red-600',
+                              )}
+                              style={isFullBlank ? {} : { width: `${Math.max(correctAnswer.length * 9, 60)}px` }}
+                            />
+                            {isCorrect && (
+                              <span className="text-[10px] text-green-600 font-medium mt-0.5">Benar!</span>
+                            )}
+                            {isWrong && (
+                              <span className="text-[10px] text-red-500 mt-0.5">{correctAnswer}</span>
+                            )}
+                          </span>
+                        );
+                      })}
+                      {segments.some(s => s.type === 'blank') && (
+                        <button
+                          onClick={() => {
+                            const blankIds = segments.filter(s => s.type === 'blank').map(s => (s as { id: string }).id);
+                            setBlankChecked(prev => {
+                              const next = { ...prev };
+                              blankIds.forEach(id => { next[id] = true; });
+                              return next;
+                            });
+                          }}
+                          className="ml-1 text-xs px-2 py-0.5 rounded bg-primary/10 text-primary hover:bg-primary/20 transition-colors shrink-0"
+                        >
+                          Cek
+                        </button>
+                      )}
+                    </div>
+                  </div>
+                );
+              }
+
+              // Non-listening blanks (grammar/speaking/reading if any)
               if (paragraph.includes('{{blank:')) {
                 const blankRegex = /\{\{blank:([^}]+)\}\}/g;
                 const segments: Array<{ type: 'text'; value: string } | { type: 'blank'; answer: string; id: string }> = [];
@@ -733,7 +885,6 @@ export default function ModuleLessonClient({ lesson }: Props) {
                 if (lastIndex < paragraph.length) {
                   segments.push({ type: 'text', value: paragraph.slice(lastIndex) });
                 }
-                // Check if entire line is one blank (type 3 - full sentence)
                 const isFullBlank = segments.filter(s => s.type === 'blank').length === 1 &&
                   segments.filter(s => s.type === 'text').every(s => /^[A-Za-z]+:\s*$/.test(s.value) || !s.value.trim());
                 return (
@@ -797,7 +948,67 @@ export default function ModuleLessonClient({ lesson }: Props) {
                   </div>
                 );
               }
-              // Regular paragraph
+
+              // Reading: paragraph with number indicator
+              if (lesson.track === 'reading') {
+                // Count actual paragraphs (non-empty, non-header, non-translation)
+                const readingParaIdx = lesson.passage!.slice(0, idx).filter(p =>
+                  p.trim() && !p.startsWith('---') && !p.startsWith('(') && !p.includes('{{blank:')
+                ).length + 1;
+                return (
+                  <div key={`${lesson.id}-p-${idx}`} className="flex gap-3">
+                    <span className="text-xs text-primary/40 font-mono mt-1.5 shrink-0 select-none w-4 text-right">{readingParaIdx}</span>
+                    <p className="text-sm leading-7 text-(--text-secondary) text-justify first-letter:text-lg first-letter:font-semibold first-letter:text-(--text)">
+                      {renderClickableText(paragraph)}
+                    </p>
+                  </div>
+                );
+              }
+
+              // Speaking: structured lines
+              if (lesson.track === 'speaking') {
+                // Numbered steps
+                const stepMatch = paragraph.match(/^(\d+)\.\s+(.+)/);
+                if (stepMatch) {
+                  return (
+                    <div key={`${lesson.id}-p-${idx}`} className="flex items-start gap-2.5 py-1">
+                      <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-green-500/15 text-green-600 dark:text-green-400 text-xs font-bold shrink-0 mt-0.5">
+                        {stepMatch[1]}
+                      </span>
+                      <p className="text-sm leading-7 text-(--text-secondary) font-medium">{renderClickableText(stepMatch[2])}</p>
+                    </div>
+                  );
+                }
+                // Bullet sub-items
+                if (paragraph.startsWith('   ')) {
+                  return (
+                    <div key={`${lesson.id}-p-${idx}`} className="pl-8 py-0.5">
+                      <div className="flex items-start gap-2">
+                        <span className="text-(--text-muted) mt-1 shrink-0 text-[10px]">○</span>
+                        <p className="text-sm leading-7 text-(--text-secondary)">{renderClickableText(paragraph.trim())}</p>
+                      </div>
+                    </div>
+                  );
+                }
+                // Quoted example
+                if (paragraph.startsWith('"') && paragraph.endsWith('"')) {
+                  return (
+                    <div key={`${lesson.id}-p-${idx}`} className="py-1.5 pl-3 border-l-2 border-green-500/30 ml-1 bg-green-500/5 rounded-r-lg pr-3">
+                      <p className="text-sm leading-7 text-(--text-secondary) italic">{renderClickableText(paragraph)}</p>
+                    </div>
+                  );
+                }
+                // Label lines (like "Structure of Self-Introduction:" or "Example Self-Introduction:")
+                if (paragraph.endsWith(':')) {
+                  return (
+                    <div key={`${lesson.id}-p-${idx}`} className="pt-2 pb-1">
+                      <p className="text-sm font-semibold text-(--text)">{renderClickableText(paragraph)}</p>
+                    </div>
+                  );
+                }
+              }
+
+              // Regular paragraph (fallback)
               return (
                 <p key={`${lesson.id}-p-${idx}`} className="text-sm leading-7 text-(--text-secondary)">
                   {renderClickableText(paragraph)}
