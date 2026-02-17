@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import {
   BookOpen,
   Home,
@@ -16,11 +16,12 @@ import {
   Calendar,
   Briefcase,
   X,
-} from 'lucide-react';
-import { cn } from '@/lib/utils';
-import { useVocabStore } from '@/store/useVocabStore';
-import { categories } from '@/data/vocabulary';
-import type { Category } from '@/types/vocab';
+} from "lucide-react";
+import { cn } from "@/lib/utils";
+import { useVocabStore } from "@/store/useVocabStore";
+import { categories } from "@/data/vocabulary";
+import type { Category } from "@/types/vocab";
+import Image from "next/image";
 
 const iconMap: Record<string, React.ElementType> = {
   BookOpen,
@@ -33,11 +34,11 @@ const iconMap: Record<string, React.ElementType> = {
 };
 
 const navItems = [
-  { href: '/', label: 'Dashboard', icon: Home },
-  { href: '/vocab', label: 'All Vocabulary', icon: BookOpen },
-  { href: '/favorites', label: 'Favorites', icon: Heart },
-  { href: '/practice', label: 'Practice', icon: GraduationCap },
-  { href: '/tn-basic-cource', label: 'TN Basic Cource', icon: BookText },
+  { href: "/", label: "Dashboard", icon: Home },
+  { href: "/vocab", label: "All Vocabulary", icon: BookOpen },
+  { href: "/favorites", label: "Favorites", icon: Heart },
+  { href: "/practice", label: "Practice", icon: GraduationCap },
+  { href: "/tn-basic-cource", label: "TN Basic Cource", icon: BookText },
 ];
 
 export function Sidebar() {
@@ -46,7 +47,7 @@ export function Sidebar() {
   const setSidebarOpen = useVocabStore((s) => s.setSidebarOpen);
 
   const isActive = (href: string) => {
-    if (href === '/') return pathname === '/';
+    if (href === "/") return pathname === "/";
     return pathname.startsWith(href);
   };
 
@@ -62,17 +63,23 @@ export function Sidebar() {
 
       <aside
         className={cn(
-          'fixed top-0 left-0 z-50 h-full w-64 bg-(--sidebar-bg) border-r border-(--border) transition-transform duration-300 lg:translate-x-0 lg:static lg:z-auto flex flex-col',
-          sidebarOpen ? 'translate-x-0' : '-translate-x-full'
+          "fixed top-0 left-0 z-50 h-full w-64 bg-(--sidebar-bg) border-r border-(--border) transition-transform duration-300 lg:translate-x-0 lg:static lg:z-auto flex flex-col",
+          sidebarOpen ? "translate-x-0" : "-translate-x-full",
         )}
       >
         {/* Logo */}
         <div className="flex items-center justify-between p-4 border-b border-(--border)">
-          <Link href="/" className="flex items-center gap-2" onClick={() => setSidebarOpen(false)}>
-            <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-              <Layers className="w-5 h-5 text-white" />
+          <Link
+            href="/"
+            className="flex items-center gap-2"
+            onClick={() => setSidebarOpen(false)}
+          >
+            <div className="w-8 h-8 rounded-lg overflow-hidden">
+              <Image src="/download.jpg" alt="Logo" width={32} height={32} className="w-8 h-8 object-cover" />
             </div>
-            <span className="font-bold text-lg text-(--text)">VocabMaster</span>
+            <span className="font-bold text-lg text-(--text)">
+              TitikNolJourney{" "}
+            </span>
           </Link>
           <button
             onClick={() => setSidebarOpen(false)}
@@ -93,10 +100,10 @@ export function Sidebar() {
                   href={item.href}
                   onClick={() => setSidebarOpen(false)}
                   className={cn(
-                    'flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors',
+                    "flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors",
                     isActive(item.href)
-                      ? 'bg-primary text-white'
-                      : 'text-(--text-secondary) hover:bg-(--hover) hover:text-(--text)'
+                      ? "bg-primary text-white"
+                      : "text-(--text-secondary) hover:bg-(--hover) hover:text-(--text)",
                   )}
                 >
                   <Icon className="w-5 h-5 shrink-0" />
@@ -121,10 +128,10 @@ export function Sidebar() {
                     href={href}
                     onClick={() => setSidebarOpen(false)}
                     className={cn(
-                      'flex items-center justify-between gap-3 px-3 py-2 rounded-lg text-sm transition-colors',
+                      "flex items-center justify-between gap-3 px-3 py-2 rounded-lg text-sm transition-colors",
                       isActive(href)
-                        ? 'bg-primary/10 text-primary'
-                        : 'text-(--text-secondary) hover:bg-(--hover) hover:text-(--text)'
+                        ? "bg-primary/10 text-primary"
+                        : "text-(--text-secondary) hover:bg-(--hover) hover:text-(--text)",
                     )}
                   >
                     <div className="flex items-center gap-3">

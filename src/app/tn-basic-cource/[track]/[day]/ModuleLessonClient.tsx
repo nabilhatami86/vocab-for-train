@@ -29,6 +29,8 @@ export default function ModuleLessonClient({ lesson }: Props) {
   const [isTranslating, setIsTranslating] = useState(false);
   const [translationError, setTranslationError] = useState<string>('');
   const [translationCache, setTranslationCache] = useState<Record<string, TranslationResult>>({});
+  const [blankAnswers, setBlankAnswers] = useState<Record<string, string>>({});
+  const [blankChecked, setBlankChecked] = useState<Record<string, boolean>>({});
 
   const completedCount = useMemo(
     () =>
@@ -224,13 +226,40 @@ export default function ModuleLessonClient({ lesson }: Props) {
         return <span key={`seg-${idx}`}>{renderClickableText(seg.value)}</span>;
       }
       // Determine color based on label
-      const isModifier = seg.label.includes('M');
-      const colorClass = isModifier
-        ? 'text-blue-600 dark:text-blue-400 border-blue-400/50 bg-blue-500/5'
-        : 'text-amber-600 dark:text-amber-400 border-amber-400/50 bg-amber-500/5';
-      const labelBgClass = isModifier
-        ? 'bg-blue-500/15 text-blue-600 dark:text-blue-400'
-        : 'bg-amber-500/15 text-amber-600 dark:text-amber-400';
+      const lbl = seg.label.toLowerCase();
+      let colorClass: string;
+      let labelBgClass: string;
+      if (lbl === 'wrong') {
+        colorClass = 'text-red-600 dark:text-red-400 border-red-400/50 bg-red-500/5';
+        labelBgClass = 'bg-red-500/15 text-red-600 dark:text-red-400';
+      } else if (lbl.includes('noun') || lbl.includes('n/h')) {
+        colorClass = 'text-amber-600 dark:text-amber-400 border-amber-400/50 bg-amber-500/5';
+        labelBgClass = 'bg-amber-500/15 text-amber-600 dark:text-amber-400';
+      } else if (lbl.includes('verb') || lbl.includes('modal')) {
+        colorClass = 'text-green-600 dark:text-green-400 border-green-400/50 bg-green-500/5';
+        labelBgClass = 'bg-green-500/15 text-green-600 dark:text-green-400';
+      } else if (lbl.includes('adj') || lbl.includes('/m')) {
+        colorClass = 'text-blue-600 dark:text-blue-400 border-blue-400/50 bg-blue-500/5';
+        labelBgClass = 'bg-blue-500/15 text-blue-600 dark:text-blue-400';
+      } else if (lbl.includes('adv')) {
+        colorClass = 'text-purple-600 dark:text-purple-400 border-purple-400/50 bg-purple-500/5';
+        labelBgClass = 'bg-purple-500/15 text-purple-600 dark:text-purple-400';
+      } else if (lbl.includes('prep')) {
+        colorClass = 'text-teal-600 dark:text-teal-400 border-teal-400/50 bg-teal-500/5';
+        labelBgClass = 'bg-teal-500/15 text-teal-600 dark:text-teal-400';
+      } else if (lbl.includes('conj')) {
+        colorClass = 'text-orange-600 dark:text-orange-400 border-orange-400/50 bg-orange-500/5';
+        labelBgClass = 'bg-orange-500/15 text-orange-600 dark:text-orange-400';
+      } else if (lbl.includes('article') || lbl.includes('det')) {
+        colorClass = 'text-pink-600 dark:text-pink-400 border-pink-400/50 bg-pink-500/5';
+        labelBgClass = 'bg-pink-500/15 text-pink-600 dark:text-pink-400';
+      } else if (lbl.includes('pron') || lbl.includes('reflexive') || lbl.includes('demonstrative') || lbl.includes('relative') || lbl.includes('indefinite') || lbl.includes('reciprocal') || lbl.includes('poss')) {
+        colorClass = 'text-indigo-600 dark:text-indigo-400 border-indigo-400/50 bg-indigo-500/5';
+        labelBgClass = 'bg-indigo-500/15 text-indigo-600 dark:text-indigo-400';
+      } else {
+        colorClass = 'text-gray-600 dark:text-gray-400 border-gray-400/50 bg-gray-500/5';
+        labelBgClass = 'bg-gray-500/15 text-gray-600 dark:text-gray-400';
+      }
 
       return (
         <span key={`ann-${idx}`} className={cn('inline-flex flex-col items-center mx-0.5 px-1.5 py-0.5 rounded-lg border', colorClass)}>
@@ -511,20 +540,139 @@ export default function ModuleLessonClient({ lesson }: Props) {
             ))}
           </div>
         ) : (
-          <div className="grid md:grid-cols-2 gap-4">
+          <div className={cn(
+            lesson.track === 'listening' ? 'grid md:grid-cols-2 gap-4' : 'space-y-5'
+          )}>
             {lesson.materialSections.map((section) => (
-              <div key={section.title} className="bg-(--bg-card) border border-(--border) rounded-xl p-5">
-                <h3 className="font-semibold text-(--text) mb-3">{section.title}</h3>
-                <ul className="space-y-2 text-sm text-(--text-secondary)">
-                  {section.points.map((point, pIdx) => (
-                    <li key={`${section.title}-${pIdx}`} className="flex gap-2">
-                      <span className="text-primary">•</span>
-                      <span>{renderClickableText(point)}</span>
-                    </li>
-                  ))}
-                </ul>
+              <div key={section.title} className="bg-(--bg-card) border border-(--border) rounded-xl overflow-hidden">
+                <div className={cn(
+                  'px-5 py-3 border-b border-(--border)',
+                  lesson.track === 'reading' ? 'bg-blue-500/5' : lesson.track === 'speaking' ? 'bg-green-500/5' : 'bg-primary/5'
+                )}>
+                  <h3 className="font-semibold text-(--text)">{section.title}</h3>
+                </div>
+                <div className="p-5 space-y-1">
+                  {section.points.map((point, pIdx) => {
+                    if (!point.trim()) return <div key={`${section.title}-${pIdx}`} className="h-3" />;
+
+                    // Annotation lines
+                    if (point.includes('{{annotation:')) {
+                      return (
+                        <div key={`${section.title}-${pIdx}`} className="flex items-start gap-2 py-1.5 flex-wrap">
+                          <span className="text-primary mt-1.5 shrink-0 text-xs">●</span>
+                          <span className="text-sm text-(--text-secondary) leading-relaxed flex flex-wrap items-end gap-1">
+                            {renderAnnotatedText(point)}
+                          </span>
+                        </div>
+                      );
+                    }
+
+                    // Wrong/Correct pattern (speaking common mistakes)
+                    if (point.startsWith('Wrong:') || point.startsWith('❌')) {
+                      return (
+                        <div key={`${section.title}-${pIdx}`} className="py-1">
+                          <span className="inline-flex items-center gap-1.5 text-xs px-2.5 py-1.5 rounded-lg bg-red-500/10 border border-red-500/20 text-red-700 dark:text-red-400">
+                            <XCircle className="w-3.5 h-3.5 shrink-0" />
+                            <span>{point.replace(/^(Wrong:\s*|❌\s*)/, '')}</span>
+                          </span>
+                        </div>
+                      );
+                    }
+
+                    // Correct pattern
+                    if (point.startsWith('✅')) {
+                      return (
+                        <div key={`${section.title}-${pIdx}`} className="py-1">
+                          <span className="inline-flex items-center gap-1.5 text-xs px-2.5 py-1.5 rounded-lg bg-green-500/10 border border-green-500/20 text-green-700 dark:text-green-400">
+                            <CheckCircle2 className="w-3.5 h-3.5 shrink-0" />
+                            <span>{renderClickableText(point.replace(/^✅\s*/, ''))}</span>
+                          </span>
+                        </div>
+                      );
+                    }
+
+                    // Warning/Important rule
+                    if (point.startsWith('⚠️')) {
+                      return (
+                        <div key={`${section.title}-${pIdx}`} className="py-1.5 px-3 rounded-lg bg-amber-500/10 border border-amber-500/20">
+                          <p className="text-sm font-semibold text-amber-700 dark:text-amber-400">{renderClickableText(point)}</p>
+                        </div>
+                      );
+                    }
+
+                    // Template patterns (contains "→" with Q&A)
+                    if (point.includes('→') && !point.startsWith('  ')) {
+                      const arrowIdx = point.indexOf('→');
+                      const question = point.slice(0, arrowIdx).trim();
+                      const answer = point.slice(arrowIdx + 1).trim();
+                      return (
+                        <div key={`${section.title}-${pIdx}`} className="py-1.5">
+                          <div className="flex items-start gap-2">
+                            <span className="text-primary mt-1 shrink-0">▸</span>
+                            <div className="text-sm">
+                              <span className="font-medium text-(--text)">{renderClickableText(question)}</span>
+                              <span className="text-primary mx-1">→</span>
+                              <span className="text-(--text-secondary) italic">{renderClickableText(answer)}</span>
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    }
+
+                    // Indented content (sub-items)
+                    if (point.startsWith('   ') || point.startsWith('  ')) {
+                      // Check for quoted example patterns
+                      if (point.trim().startsWith('"') || point.trim().startsWith('\'')) {
+                        return (
+                          <div key={`${section.title}-${pIdx}`} className="pl-6 py-0.5">
+                            <p className="text-sm text-(--text-secondary) italic border-l-2 border-primary/20 pl-3">{renderClickableText(point.trim())}</p>
+                          </div>
+                        );
+                      }
+                      return (
+                        <div key={`${section.title}-${pIdx}`} className="pl-6 py-0.5">
+                          <div className="flex items-start gap-2">
+                            <span className="text-(--text-muted) mt-1 shrink-0 text-[10px]">○</span>
+                            <span className="text-sm text-(--text-secondary)">{renderClickableText(point.trim())}</span>
+                          </div>
+                        </div>
+                      );
+                    }
+
+                    // Rule with description: "Label: description"
+                    const ruleMatch = point.match(/^([^:]{3,60}):\s+(.+)$/);
+                    if (ruleMatch && !point.startsWith('http') && !point.startsWith('Ex:')) {
+                      return (
+                        <div key={`${section.title}-${pIdx}`} className="py-1 flex items-start gap-2">
+                          <span className="text-primary mt-1 shrink-0">▸</span>
+                          <div className="text-sm">
+                            <span className="font-semibold text-(--text)">{renderClickableText(ruleMatch[1])}: </span>
+                            <span className="text-(--text-secondary)">{renderClickableText(ruleMatch[2])}</span>
+                          </div>
+                        </div>
+                      );
+                    }
+
+                    // Example sentences with "Ex:"
+                    if (point.startsWith('Ex:')) {
+                      return (
+                        <div key={`${section.title}-${pIdx}`} className="py-1 pl-3 border-l-2 border-primary/30 ml-1">
+                          <p className="text-sm text-(--text-secondary) italic">{renderClickableText(point.replace('Ex: ', ''))}</p>
+                        </div>
+                      );
+                    }
+
+                    // Default bullet
+                    return (
+                      <div key={`${section.title}-${pIdx}`} className="flex items-start gap-2 py-0.5">
+                        <span className="text-primary mt-1.5 shrink-0 text-xs">●</span>
+                        <span className="text-sm text-(--text-secondary) leading-relaxed">{renderClickableText(point)}</span>
+                      </div>
+                    );
+                  })}
+                </div>
                 {section.imageUrl && (
-                  <div className="mt-3">
+                  <div className="px-5 pb-5">
                     <img src={section.imageUrl} alt={section.title} className="w-full rounded-lg border border-(--border)" />
                   </div>
                 )}
@@ -566,20 +714,87 @@ export default function ModuleLessonClient({ lesson }: Props) {
               }
               // Empty spacer
               if (!paragraph.trim()) return <div key={`${lesson.id}-p-${idx}`} className="h-2" />;
-              // Lines with blanks (_____): render blanks as styled underlines
-              if (paragraph.includes('_____')) {
-                const parts = paragraph.split('_____');
+              // Lines with interactive blanks {{blank:answer}}
+              if (paragraph.includes('{{blank:')) {
+                const blankRegex = /\{\{blank:([^}]+)\}\}/g;
+                const segments: Array<{ type: 'text'; value: string } | { type: 'blank'; answer: string; id: string }> = [];
+                let lastIndex = 0;
+                let blankCount = 0;
+                let match;
+                while ((match = blankRegex.exec(paragraph)) !== null) {
+                  if (match.index > lastIndex) {
+                    segments.push({ type: 'text', value: paragraph.slice(lastIndex, match.index) });
+                  }
+                  const blankId = `${idx}-${blankCount}`;
+                  segments.push({ type: 'blank', answer: match[1], id: blankId });
+                  blankCount++;
+                  lastIndex = match.index + match[0].length;
+                }
+                if (lastIndex < paragraph.length) {
+                  segments.push({ type: 'text', value: paragraph.slice(lastIndex) });
+                }
+                // Check if entire line is one blank (type 3 - full sentence)
+                const isFullBlank = segments.filter(s => s.type === 'blank').length === 1 &&
+                  segments.filter(s => s.type === 'text').every(s => /^[A-Za-z]+:\s*$/.test(s.value) || !s.value.trim());
                 return (
-                  <p key={`${lesson.id}-p-${idx}`} className="text-sm leading-7 text-(--text-secondary)">
-                    {parts.map((part, i) => (
-                      <span key={i}>
-                        {renderClickableText(part)}
-                        {i < parts.length - 1 && (
-                          <span className="inline-block min-w-20 border-b-2 border-dashed border-primary/50 mx-1 text-center text-primary/30 text-xs">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                        )}
-                      </span>
-                    ))}
-                  </p>
+                  <div key={`${lesson.id}-p-${idx}`} className="flex flex-wrap items-end gap-x-1 gap-y-2 text-sm leading-7 text-(--text-secondary) py-0.5">
+                    {segments.map((seg, sIdx) => {
+                      if (seg.type === 'text') {
+                        return <span key={sIdx}>{renderClickableText(seg.value)}</span>;
+                      }
+                      const bId = seg.id;
+                      const userAnswer = blankAnswers[bId] || '';
+                      const isChecked = blankChecked[bId] === true;
+                      const correctAnswer = seg.answer;
+                      const isCorrect = isChecked && userAnswer.trim().toLowerCase() === correctAnswer.toLowerCase();
+                      const isWrong = isChecked && !isCorrect;
+                      return (
+                        <span key={sIdx} className="inline-flex flex-col items-center">
+                          <input
+                            type="text"
+                            value={userAnswer}
+                            onChange={(e) => {
+                              setBlankAnswers(prev => ({ ...prev, [bId]: e.target.value }));
+                              if (blankChecked[bId]) setBlankChecked(prev => ({ ...prev, [bId]: false }));
+                            }}
+                            onKeyDown={(e) => {
+                              if (e.key === 'Enter') setBlankChecked(prev => ({ ...prev, [bId]: true }));
+                            }}
+                            placeholder={isFullBlank ? 'Tulis kalimat lengkap...' : '...'}
+                            className={cn(
+                              'border-b-2 bg-transparent outline-none text-center text-sm px-1 py-0.5 transition-colors',
+                              isFullBlank ? 'min-w-48 w-full' : 'min-w-16',
+                              !isChecked && 'border-primary/40 focus:border-primary',
+                              isCorrect && 'border-green-500 text-green-600',
+                              isWrong && 'border-red-500 text-red-600',
+                            )}
+                            style={isFullBlank ? {} : { width: `${Math.max(correctAnswer.length * 9, 60)}px` }}
+                          />
+                          {isCorrect && (
+                            <span className="text-[10px] text-green-600 font-medium mt-0.5">Benar!</span>
+                          )}
+                          {isWrong && (
+                            <span className="text-[10px] text-red-500 mt-0.5">{correctAnswer}</span>
+                          )}
+                        </span>
+                      );
+                    })}
+                    {segments.some(s => s.type === 'blank') && (
+                      <button
+                        onClick={() => {
+                          const blankIds = segments.filter(s => s.type === 'blank').map(s => (s as { id: string }).id);
+                          setBlankChecked(prev => {
+                            const next = { ...prev };
+                            blankIds.forEach(id => { next[id] = true; });
+                            return next;
+                          });
+                        }}
+                        className="ml-1 text-xs px-2 py-0.5 rounded bg-primary/10 text-primary hover:bg-primary/20 transition-colors shrink-0"
+                      >
+                        Cek
+                      </button>
+                    )}
+                  </div>
                 );
               }
               // Regular paragraph
