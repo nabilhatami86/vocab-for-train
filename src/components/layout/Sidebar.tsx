@@ -38,6 +38,7 @@ const navItems = [
   { href: "/vocab", label: "All Vocabulary", icon: BookOpen },
   { href: "/favorites", label: "Favorites", icon: Heart },
   { href: "/practice", label: "Practice", icon: GraduationCap },
+  { href: "/verb", label: "Verb Library", icon: Layers },
   { href: "/tn-basic-cource", label: "TN Basic Cource", icon: BookText },
 ];
 
@@ -75,7 +76,13 @@ export function Sidebar() {
             onClick={() => setSidebarOpen(false)}
           >
             <div className="w-8 h-8 rounded-lg overflow-hidden">
-              <Image src="/download.jpg" alt="Logo" width={32} height={32} className="w-8 h-8 object-cover" />
+              <Image
+                src="/download.jpg"
+                alt="Logo"
+                width={32}
+                height={32}
+                className="w-8 h-8 object-cover"
+              />
             </div>
             <span className="font-bold text-lg text-(--text)">
               TitikNolJourney{" "}
