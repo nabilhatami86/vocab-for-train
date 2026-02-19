@@ -51,6 +51,13 @@ const modes = [
     color: 'bg-cyan-500/10 text-cyan-700',
   },
   {
+    href: '/practice/modules/speaking/10',
+    title: 'Kisi-Kisi Speaking Middle Test',
+    description: 'Practice speaking: greeting, personal identity, education, family, hobby, angka dan waktu.',
+    icon: ClipboardList,
+    color: 'bg-rose-500/10 text-rose-700',
+  },
+  {
     href: '/practice/fill-blanks',
     title: 'Fill in the Blanks',
     description: 'Complete sentences by typing the missing word. Great for spelling and context practice.',

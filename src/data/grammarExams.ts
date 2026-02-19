@@ -13,6 +13,7 @@ export type GrammarExam = {
   duration: string;
   sourcePdf: string;
   passage?: string;
+  vocabList?: { term: string; meaning: string }[];
   questions: ExamQuestion[];
 };
 
@@ -100,10 +101,27 @@ export const grammarExams: GrammarExam[] = [
   {
     slug: "kisi-kisi-reading-middle-test",
     title: "Kisi-Kisi Reading Middle Test",
-    description: "Latihan reading comprehension berdasarkan topik Hobby and Interest untuk persiapan middle test.",
+    description: "Study Guide Mid Test Reading: Part 1 T/F/NG, Part 2 multiple choice detail, Part 3 useful vocabularies.",
     duration: "15 soal",
     sourcePdf: "/modules/reading-week1-2.pdf",
     passage: readingPassageHobbyInterest,
+    vocabList: [
+      { term: "Dedication", meaning: "strong commitment" },
+      { term: "Appeal", meaning: "attract interest" },
+      { term: "Background", meaning: "personal history or experience" },
+      { term: "Tricky", meaning: "difficult" },
+      { term: "Offshore", meaning: "away from the land, in the sea" },
+      { term: "Associated", meaning: "connected" },
+      { term: "Mandatory", meaning: "something that must be done" },
+      { term: "Crossword", meaning: "a word puzzle" },
+      { term: "Comprehensive", meaning: "complete and covering everything" },
+      { term: "Thought-based", meaning: "based on thinking" },
+      { term: "Direct", meaning: "straight, clear, without doubt" },
+      { term: "Enhance", meaning: "to improve" },
+      { term: "Crucial", meaning: "very important" },
+      { term: "Hiring manager", meaning: "person who chooses workers" },
+      { term: "Spawn", meaning: "to cause or create" },
+    ],
     questions: [
       { id: "rm1", question: "A person can have an interest in something without practicing it regularly.", options: ["TRUE", "FALSE", "NOT GIVEN"], correctIndex: 0, reason: "Teks menyatakan interest tidak selalu berarti dipraktikkan sebagai hobby." },
       { id: "rm2", question: "The passage says that all interests are more useful than hobbies.", options: ["TRUE", "FALSE", "NOT GIVEN"], correctIndex: 1, reason: "Teks tidak menyatakan interests lebih berguna; keduanya dianggap valuable." },
@@ -115,11 +133,11 @@ export const grammarExams: GrammarExam[] = [
       { id: "rm8", question: "The passage says candidates from creative backgrounds are hired faster.", options: ["TRUE", "FALSE", "NOT GIVEN"], correctIndex: 2, reason: "Tidak ada pernyataan tentang creative background dan kecepatan diterima kerja." },
       { id: "rm9", question: "Pretending to have a hobby may reduce a candidate's credibility.", options: ["TRUE", "FALSE", "NOT GIVEN"], correctIndex: 0, reason: "Paragraf terakhir menyebut fake hobby dapat merusak trust dan credibility." },
       { id: "rm10", question: "Interviewers should spend at least ten minutes discussing hobbies.", options: ["TRUE", "FALSE", "NOT GIVEN"], correctIndex: 2, reason: "Tidak ada durasi waktu diskusi hobby di teks." },
-      { id: "rm11", question: "In paragraph 1, the word 'appeal' is closest in meaning to...", options: ["confusion", "attraction", "pressure", "criticism"], correctIndex: 1, reason: "Dalam konteks, appeal berarti daya tarik/attraction." },
-      { id: "rm12", question: "In paragraph 4, the word 'alignment' is closest in meaning to...", options: ["conflict", "separation", "match", "delay"], correctIndex: 2, reason: "Alignment dalam konteks pekerjaan berarti kecocokan/match." },
-      { id: "rm13", question: "In paragraph 4, the word 'spawn' is closest in meaning to...", options: ["create", "hide", "complete", "reduce"], correctIndex: 0, reason: "Spawn berarti menghasilkan/create." },
-      { id: "rm14", question: "Why might a hiring manager ask about hobbies?", options: ["To test grammar accuracy", "To fill extra interview time", "To reveal motivation and work style", "To check if hobbies are mandatory"], correctIndex: 2, reason: "Paragraf 5 menjelaskan pertanyaan hobby dipakai untuk membaca karakter dan gaya kerja." },
-      { id: "rm15", question: "What is one negative effect of pretending to have a hobby?", options: ["It guarantees rejection immediately", "It can damage trust during the interview", "It improves professional alignment", "It makes candidates appear more adaptable"], correctIndex: 1, reason: "Paragraf 6 menegaskan fake hobby bisa merusak trust dan credibility." },
+      { id: "rm11", question: "Which item below is NOT required when a hiring manager asks about hobbies?", options: ["Perfect image", "Honest explanation", "Consistent details", "Clear motivation"], correctIndex: 0, reason: "Teks menekankan authenticity, bukan membangun citra sempurna." },
+      { id: "rm12", question: "The word 'appeal' is closest in meaning to...", options: ["attraction", "obligation", "difficulty", "rejection"], correctIndex: 0, reason: "Appeal dalam konteks paragraf pertama berarti daya tarik (attraction)." },
+      { id: "rm13", question: "The word 'mandatory' is closest in meaning to...", options: ["optional", "required", "creative", "temporary"], correctIndex: 1, reason: "Mandatory berarti sesuatu yang wajib/required." },
+      { id: "rm14", question: "Why might a hiring manager ask about hobbies?", options: ["To reveal motivation and work style", "To test grammar accuracy", "To force mandatory hobbies", "To avoid technical questions"], correctIndex: 0, reason: "Paragraf 5 menyebut jawaban hobby bisa mengungkap motivasi, teamwork, dan problem-solving style." },
+      { id: "rm15", question: "What is one negative effect of pretending to have a hobby?", options: ["It builds stronger trust", "It can damage trust and credibility", "It guarantees a promotion", "It improves alignment automatically"], correctIndex: 1, reason: "Paragraf terakhir menyebut fake hobby bisa merusak trust dan menurunkan credibility." },
     ],
   },
 ];

@@ -90,6 +90,22 @@ export default function GrammarExamPage() {
           </div>
         )}
 
+        {exam.vocabList && exam.vocabList.length > 0 && (
+          <div className="mt-4 rounded-xl border border-(--border) bg-(--bg-secondary) p-4">
+            <p className="text-xs font-semibold tracking-wide text-(--text-secondary) mb-2">
+              Useful Vocabularies
+            </p>
+            <ul className="space-y-1 text-sm text-(--text)">
+              {exam.vocabList.map((item) => (
+                <li key={item.term}>
+                  <span className="font-medium">{item.term}</span>
+                  <span className="text-(--text-secondary)"> = {item.meaning}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
         {submitted && (
           <div className="mt-5 rounded-xl border border-(--border) bg-(--bg-secondary) p-4">
             <div className="flex items-center gap-2 text-(--text)">
