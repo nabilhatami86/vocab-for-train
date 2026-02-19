@@ -141,11 +141,11 @@ export function Sidebar() {
                         : "text-(--text-secondary) hover:bg-(--hover) hover:text-(--text)",
                     )}
                   >
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-3 min-w-0">
                       <Icon className="w-4 h-4 shrink-0" />
-                      {cat.name}
+                      <span className="truncate">{cat.name}</span>
                     </div>
-                    <span className="text-xs bg-(--bg-secondary) px-1.5 py-0.5 rounded-full">
+                    <span className="text-xs bg-(--bg-secondary) px-1.5 py-0.5 rounded-full shrink-0">
                       {cat.count}
                     </span>
                   </Link>

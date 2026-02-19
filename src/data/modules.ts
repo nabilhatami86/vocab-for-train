@@ -1871,10 +1871,10 @@ const speakingLessons: ModuleLesson[] = [
       {
         title: "Full Example (with numbers and time)",
         points: [
-          "Good morning, Sir.",
+          "Good morning, Sir. Let me introduce myself.",
           "My name is Sokolil Hatami. I am 22 years old. I was born in 2003. I come from Gresik, East Java. Now, I live with my family and work as a remote programmer.",
-          "I graduated from Informatics Engineering at Jakarta University. I started my study in 2021. I study programming for 3 to 5 hours every day. I usually study at 8 p.m.",
-          "There are five people in my family: my mother, my sisters, my brother, and me. We have dinner together at 7 p.m. every day.",
+          "I graduated from Informatics Engineering at Nahdlatul Ulama Indonesia University. I started my study in 2021 and have finished my study. I usually wake up at 5:30 a.m. and work on programming projects for 3 to 5 hours every day. I often continue coding at 8 p.m.",
+          "There are five people in my family: my mother, my two sisters, my brother, and me. We have dinner together at 7 p.m. every day.",
           "My hobby is coding. In my free time, I build small projects and learn new technology. I code for 2 to 3 hours at night. I also read tech articles and exercise twice a week.",
           "Thank you for your attention.",
         ],
