@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { GraduationCap, Brain, PenLine, RotateCcw, BookCheck } from 'lucide-react';
+import { GraduationCap, Brain, PenLine, RotateCcw, BookCheck, FileText, ClipboardList } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Practice',
@@ -21,6 +21,27 @@ const modes = [
     description: '25 soal pilihan ganda (ABCD) dari semua part of speech: Nouns, Verbs, Adjectives, Adverbs, Pronouns, Prepositions, Conjunctions, Articles. Lihat skor & penjelasan di akhir!',
     icon: BookCheck,
     color: 'bg-amber-500/10 text-amber-600',
+  },
+  {
+    href: '/practice/grammar-evaluator',
+    title: 'Grammar Evaluator (30Q)',
+    description: 'Tes grammar 30 soal (A-D) dengan koreksi detail per nomor: rule, error type, corrected sentence, dan extra practice.',
+    icon: FileText,
+    color: 'bg-fuchsia-500/10 text-fuchsia-600',
+  },
+  {
+    href: '/practice/exams/review-basic-grammar-1-2',
+    title: 'Tugas Review Basic Grammar',
+    description: 'Paket tugas/latihan 30 soal dari file REVIEW BASIC GRAMMAR 1 2 (persiapan ujian).',
+    icon: FileText,
+    color: 'bg-blue-500/10 text-blue-600',
+  },
+  {
+    href: '/practice/exams/kisi-kisi-having',
+    title: 'Kisi-Kisi Ujian Having',
+    description: 'Paket kisi-kisi 20 soal dari file d. having (untuk persiapan ujian).',
+    icon: ClipboardList,
+    color: 'bg-emerald-500/10 text-emerald-600',
   },
   {
     href: '/practice/fill-blanks',

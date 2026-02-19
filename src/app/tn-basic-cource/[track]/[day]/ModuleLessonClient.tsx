@@ -2,7 +2,7 @@
 
 import { useCallback, useMemo, useState } from 'react';
 import Link from 'next/link';
-import { ArrowLeft, CheckCircle2, Circle, BookText, Languages, X, XCircle, Lightbulb, Volume2, MessageCircle } from 'lucide-react';
+import { ArrowLeft, CheckCircle2, Circle, BookText, Languages, X, XCircle, Lightbulb, Volume2, MessageCircle, Headphones } from 'lucide-react';
 import type { ModuleLesson } from '@/types/module';
 import { cn } from '@/lib/utils';
 import TTSPlayer from '@/components/tts/TTSPlayer';
@@ -711,8 +711,19 @@ export default function ModuleLessonClient({ lesson }: Props) {
               if (paragraph.startsWith('---') && paragraph.endsWith('---')) {
                 const headerText = paragraph.replace(/^-+\s*/, '').replace(/\s*-+$/, '');
                 const sectionNum = headerText.match(/^(\d+)\.\s*/)?.[1];
+                const normalizedHeader = headerText.toLowerCase();
+                const matchedAudioTrack =
+                  lesson.track === 'listening' && lesson.audioTracks?.length
+                    ? lesson.audioTracks.find((track) => {
+                        const title = track.title.toLowerCase();
+                        if (normalizedHeader.includes('recreation') && title.includes('recreation')) return true;
+                        if (normalizedHeader.includes('looking for a place to eat') && title.includes('looking for place to eat')) return true;
+                        if (normalizedHeader.includes('the weather') && title.includes('weather')) return true;
+                        return false;
+                      })
+                    : null;
                 return (
-                  <div key={`${lesson.id}-p-${idx}`} className="pt-4 pb-2 border-b border-(--border) first:pt-0">
+                  <div key={`${lesson.id}-p-${idx}`} className="pt-4 pb-2 border-b border-(--border) first:pt-0 space-y-3">
                     <div className="flex items-center gap-2">
                       {sectionNum && (
                         <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-primary text-white text-xs font-bold shrink-0">
@@ -721,6 +732,14 @@ export default function ModuleLessonClient({ lesson }: Props) {
                       )}
                       <p className="text-sm font-bold text-primary uppercase tracking-wider">{sectionNum ? headerText.replace(/^\d+\.\s*/, '') : headerText}</p>
                     </div>
+                    {matchedAudioTrack && (
+                      <div className="bg-(--bg-secondary) border border-(--border) rounded-lg p-3">
+                        <audio controls preload="none" className="w-full">
+                          <source src={matchedAudioTrack.url} type="audio/mpeg" />
+                          Browser kamu tidak mendukung pemutar audio.
+                        </audio>
+                      </div>
+                    )}
                   </div>
                 );
               }
@@ -1016,6 +1035,23 @@ export default function ModuleLessonClient({ lesson }: Props) {
               );
             })}
           </div>
+        </section>
+      )}
+
+      {lesson.track === 'listening' && (!lesson.audioTracks || lesson.audioTracks.length === 0) && (
+        <section className="space-y-4">
+          <h2 className="text-lg font-semibold text-(--text) flex items-center gap-2">
+            <Headphones className="w-5 h-5 text-primary" /> Audio Lesson
+          </h2>
+
+          {lesson.audioUrl ? (
+            <div className="bg-(--bg-card) border border-(--border) rounded-xl p-4">
+              <audio controls preload="none" className="w-full">
+                <source src={lesson.audioUrl} type="audio/mpeg" />
+                Browser kamu tidak mendukung pemutar audio.
+              </audio>
+            </div>
+          ) : null}
         </section>
       )}
 

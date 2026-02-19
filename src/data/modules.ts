@@ -4017,6 +4017,11 @@ const listeningLessons: ModuleLesson[] = [
     overview:
       'Latihan mendengarkan percakapan wisata: rekreasi, mencari tempat makan, dan cuaca. Dengarkan audio lalu isi bagian yang kosong.',
     audioUrl: '/modules/audio/listening-day-9.mp3',
+    audioTracks: [
+      { title: 'Recreations', url: '/audio/Day%209%20Recreations.MP3' },
+      { title: 'Looking for place to eat', url: '/audio/Day%209%20Looking%20for%20place%20to%20eat.MP3' },
+      { title: 'The weather', url: '/audio/Day%209%20The%20weather.MP3' },
+    ],
     passage: [
       '--- 6. Recreation (Rekreasi) ---',
       'Sam: What would you like to do while we are here?',

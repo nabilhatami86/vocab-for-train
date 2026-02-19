@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { Search } from "lucide-react";
+import { ExternalLink, Search } from "lucide-react";
 import VerbTable from "@/components/verb/VerbTable";
 import { irregularVerbs, regularVerbs } from "@/data/verbs";
 
@@ -86,6 +86,35 @@ export default function VerbPage() {
                 Example: I am walking. / Swimming is fun.
               </p>
             </div>
+          </div>
+        </section>
+
+        {/* VERB MATERIAL FILES */}
+        <section className="mb-12">
+          <h2 className="text-base font-semibold text-[#B73A44] mb-4">
+            Verb Materials
+          </h2>
+          <div className="grid sm:grid-cols-2 gap-4 text-sm">
+            <a
+              href="/modules/verb-form-exercise.pdf"
+              target="_blank"
+              rel="noreferrer"
+              className="border rounded-md p-4 flex items-center justify-between hover:border-[#F2C572] transition"
+            >
+              <span className="font-medium text-gray-700">
+                VERB FORM EXERCISE
+              </span>
+              <ExternalLink size={16} className="text-[#B73A44]" />
+            </a>
+            <a
+              href="/modules/verb.pdf"
+              target="_blank"
+              rel="noreferrer"
+              className="border rounded-md p-4 flex items-center justify-between hover:border-[#F2C572] transition"
+            >
+              <span className="font-medium text-gray-700">verb.pdf</span>
+              <ExternalLink size={16} className="text-[#B73A44]" />
+            </a>
           </div>
         </section>
 

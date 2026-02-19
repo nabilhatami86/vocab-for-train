@@ -28,6 +28,10 @@ export interface ModuleLesson {
   overview: string;
   passage?: string[];
   audioUrl?: string;
+  audioTracks?: {
+    title: string;
+    url: string;
+  }[];
   materialSections: ModuleMaterialSection[];
   exercises: ModuleExercise[];
 }
