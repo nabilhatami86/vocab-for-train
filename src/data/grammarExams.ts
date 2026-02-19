@@ -12,8 +12,21 @@ export type GrammarExam = {
   description: string;
   duration: string;
   sourcePdf: string;
+  passage?: string;
   questions: ExamQuestion[];
 };
+
+const readingPassageHobbyInterest = `People often use the words hobby and interest as if they are the same, but they are not. A hobby is usually a regular activity that you do, while an interest is a subject that attracts your attention. A person may have an interest in photography because of family background or social media appeal, but that does not always mean they practice it as a hobby.
+
+In simple terms, a hobby is action-based, while an interest is thought-based. Hobbies often involve doing something in a direct way: playing guitar, gardening, or joining a cycling club. Interests are often quieter and more reflective, such as reading about climate policy or following architecture trends. Both are valuable, but they require different levels of commitment.
+
+A serious hobby needs dedication. It is not just a one-time activity; it is a long-term pursuit. For example, someone who runs every weekend may slowly build discipline, time management, and confidence. These habits can enhance personal growth. In many cases, progress in a hobby is associated with consistent effort rather than talent.
+
+Hobbies can also connect to career development. Some hobbies have clear professional alignment: blogging can support marketing skills, and coding projects can support software jobs. Other hobbies may seem unrelated, but they still broaden soft skills and may spawn new opportunities. Employers often value this because modern roles usually require adaptability and initiative.
+
+During interviews, a hiring manager may ask about hobbies not because they are mandatory, but because they can reveal character. A comprehensive answer about a hobby can elicit useful signals about motivation, teamwork, and problem-solving style. This is crucial when two candidates have similar technical qualifications.
+
+However, pretending to have a hobby can create risks. If a candidate gives inconsistent details, the interviewer may doubt other claims too. A fake hobby can damage trust and reduce credibility. In the long term, authenticity matters more than trying to impress with a perfect image.`;
 
 export const grammarExams: GrammarExam[] = [
   {
@@ -82,6 +95,31 @@ export const grammarExams: GrammarExam[] = [
       { id: "h18", question: "If you do not study (hard / hardly), you will fail the test.", options: ["hard", "hardly"], correctIndex: 0, reason: "'Study hard' = belajar giat. 'Hardly' artinya hampir tidak." },
       { id: "h19", question: "Our team (was / were) very tired after the match.", options: ["was", "were"], correctIndex: 0, reason: "Team biasanya diperlakukan singular -> was." },
       { id: "h20", question: "An architect needs a great amount of (equipment / equipments) for this project.", options: ["equipment", "equipments"], correctIndex: 0, reason: "Equipment adalah uncountable noun." },
+    ],
+  },
+  {
+    slug: "kisi-kisi-reading-middle-test",
+    title: "Kisi-Kisi Reading Middle Test",
+    description: "Latihan reading comprehension berdasarkan topik Hobby and Interest untuk persiapan middle test.",
+    duration: "15 soal",
+    sourcePdf: "/modules/reading-week1-2.pdf",
+    passage: readingPassageHobbyInterest,
+    questions: [
+      { id: "rm1", question: "A person can have an interest in something without practicing it regularly.", options: ["TRUE", "FALSE", "NOT GIVEN"], correctIndex: 0, reason: "Teks menyatakan interest tidak selalu berarti dipraktikkan sebagai hobby." },
+      { id: "rm2", question: "The passage says that all interests are more useful than hobbies.", options: ["TRUE", "FALSE", "NOT GIVEN"], correctIndex: 1, reason: "Teks tidak menyatakan interests lebih berguna; keduanya dianggap valuable." },
+      { id: "rm3", question: "Hobbies are described as activities that usually require direct participation.", options: ["TRUE", "FALSE", "NOT GIVEN"], correctIndex: 0, reason: "Paragraf 2 menyebut hobby sebagai action-based dan direct activity." },
+      { id: "rm4", question: "The writer states that talent is more important than consistency in hobby progress.", options: ["TRUE", "FALSE", "NOT GIVEN"], correctIndex: 1, reason: "Teks menyebut progress associated with consistent effort rather than talent." },
+      { id: "rm5", question: "Some hobbies can support professional skills even when they look unrelated to a job.", options: ["TRUE", "FALSE", "NOT GIVEN"], correctIndex: 0, reason: "Paragraf 4 menyebut hobi yang terlihat tidak terkait tetap bisa broaden soft skills." },
+      { id: "rm6", question: "Hiring managers always ask hobby questions in every interview.", options: ["TRUE", "FALSE", "NOT GIVEN"], correctIndex: 2, reason: "Teks hanya menyebut 'may ask', bukan selalu, dan tidak memberi klaim universal." },
+      { id: "rm7", question: "A comprehensive explanation of a hobby may help interviewers assess personal qualities.", options: ["TRUE", "FALSE", "NOT GIVEN"], correctIndex: 0, reason: "Paragraf 5 menyatakan jawaban hobby bisa elicit sinyal tentang motivasi, teamwork, dan problem-solving." },
+      { id: "rm8", question: "The passage says candidates from creative backgrounds are hired faster.", options: ["TRUE", "FALSE", "NOT GIVEN"], correctIndex: 2, reason: "Tidak ada pernyataan tentang creative background dan kecepatan diterima kerja." },
+      { id: "rm9", question: "Pretending to have a hobby may reduce a candidate's credibility.", options: ["TRUE", "FALSE", "NOT GIVEN"], correctIndex: 0, reason: "Paragraf terakhir menyebut fake hobby dapat merusak trust dan credibility." },
+      { id: "rm10", question: "Interviewers should spend at least ten minutes discussing hobbies.", options: ["TRUE", "FALSE", "NOT GIVEN"], correctIndex: 2, reason: "Tidak ada durasi waktu diskusi hobby di teks." },
+      { id: "rm11", question: "In paragraph 1, the word 'appeal' is closest in meaning to...", options: ["confusion", "attraction", "pressure", "criticism"], correctIndex: 1, reason: "Dalam konteks, appeal berarti daya tarik/attraction." },
+      { id: "rm12", question: "In paragraph 4, the word 'alignment' is closest in meaning to...", options: ["conflict", "separation", "match", "delay"], correctIndex: 2, reason: "Alignment dalam konteks pekerjaan berarti kecocokan/match." },
+      { id: "rm13", question: "In paragraph 4, the word 'spawn' is closest in meaning to...", options: ["create", "hide", "complete", "reduce"], correctIndex: 0, reason: "Spawn berarti menghasilkan/create." },
+      { id: "rm14", question: "Why might a hiring manager ask about hobbies?", options: ["To test grammar accuracy", "To fill extra interview time", "To reveal motivation and work style", "To check if hobbies are mandatory"], correctIndex: 2, reason: "Paragraf 5 menjelaskan pertanyaan hobby dipakai untuk membaca karakter dan gaya kerja." },
+      { id: "rm15", question: "What is one negative effect of pretending to have a hobby?", options: ["It guarantees rejection immediately", "It can damage trust during the interview", "It improves professional alignment", "It makes candidates appear more adaptable"], correctIndex: 1, reason: "Paragraf 6 menegaskan fake hobby bisa merusak trust dan credibility." },
     ],
   },
 ];

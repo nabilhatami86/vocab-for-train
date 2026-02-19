@@ -79,6 +79,17 @@ export default function GrammarExamPage() {
           Lihat PDF sumber
         </a>
 
+        {exam.passage && (
+          <div className="mt-4 rounded-xl border border-(--border) bg-(--bg-secondary) p-4">
+            <p className="text-xs font-semibold tracking-wide text-(--text-secondary) mb-2">
+              Reading Text
+            </p>
+            <div className="space-y-3 text-sm leading-relaxed text-(--text) whitespace-pre-line">
+              {exam.passage}
+            </div>
+          </div>
+        )}
+
         {submitted && (
           <div className="mt-5 rounded-xl border border-(--border) bg-(--bg-secondary) p-4">
             <div className="flex items-center gap-2 text-(--text)">
@@ -141,15 +152,20 @@ export default function GrammarExamPage() {
                       <p className="text-(--text-secondary)">
                         Jawaban benar: <span className="font-medium text-(--text)">{q.options[q.correctIndex]}</span>
                       </p>
+                      <p className="text-(--text-secondary)">
+                        Alasan salah: {q.reason}
+                      </p>
                     </>
                   ) : (
-                    <p className="text-green-600 dark:text-green-400">
-                      Jawaban kamu benar.
-                    </p>
+                    <>
+                      <p className="text-green-600 dark:text-green-400">
+                        Jawaban kamu benar.
+                      </p>
+                      <p className="text-(--text-secondary)">
+                        Alasan benar: {q.reason}
+                      </p>
+                    </>
                   )}
-                  <p className="text-(--text-secondary)">
-                    Penjelasan: {q.reason}
-                  </p>
                 </div>
               )}
             </section>

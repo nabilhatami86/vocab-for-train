@@ -44,6 +44,13 @@ const modes = [
     color: 'bg-emerald-500/10 text-emerald-600',
   },
   {
+    href: '/practice/exams/kisi-kisi-reading-middle-test',
+    title: 'Kisi-Kisi Reading Middle Test',
+    description: 'Latihan reading comprehension topik Hobby and Interest (T/F/NG + vocabulary + detail).',
+    icon: ClipboardList,
+    color: 'bg-cyan-500/10 text-cyan-700',
+  },
+  {
     href: '/practice/fill-blanks',
     title: 'Fill in the Blanks',
     description: 'Complete sentences by typing the missing word. Great for spelling and context practice.',
