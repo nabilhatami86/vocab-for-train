@@ -1,192 +1,195 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { ExternalLink, Search } from "lucide-react";
+import { Search, BookOpen, Languages } from "lucide-react";
 import VerbTable from "@/components/verb/VerbTable";
 import { irregularVerbs, regularVerbs } from "@/data/verbs";
 
+const VERB_FORMS = [
+  {
+    label: "V1",
+    subtitle: "Base Form",
+    desc: "Present simple & setelah modal verb",
+    example: "I walk every day.",
+    badge: "bg-blue-100 text-blue-700",
+  },
+  {
+    label: "Vs/es",
+    subtitle: "Third Person Singular",
+    desc: "He / She / It — present simple",
+    example: "She walks to school.",
+    badge: "bg-violet-100 text-violet-700",
+  },
+  {
+    label: "V2",
+    subtitle: "Past Form",
+    desc: "Simple past — aksi yang sudah selesai",
+    example: "I walked yesterday.",
+    badge: "bg-amber-100 text-amber-700",
+  },
+  {
+    label: "V3",
+    subtitle: "Past Participle",
+    desc: "Perfect tense & passive voice",
+    example: "She has gone home.",
+    badge: "bg-emerald-100 text-emerald-700",
+  },
+  {
+    label: "V-ing",
+    subtitle: "Present Participle",
+    desc: "Continuous tense & gerund",
+    example: "I am walking. / Swimming is fun.",
+    badge: "bg-rose-100 text-rose-700",
+  },
+];
+
 export default function VerbPage() {
   const [search, setSearch] = useState("");
+  const [showMeaning, setShowMeaning] = useState(false);
 
-  const filteredIrregular = useMemo(() => {
-    return irregularVerbs.filter((verb) =>
-      verb.base.toLowerCase().includes(search.toLowerCase()),
-    );
-  }, [search]);
+  const filteredIrregular = useMemo(
+    () =>
+      irregularVerbs.filter(
+        (v) =>
+          v.base.toLowerCase().includes(search.toLowerCase()) ||
+          v.meaning.toLowerCase().includes(search.toLowerCase()),
+      ),
+    [search],
+  );
 
-  const filteredRegular = useMemo(() => {
-    return regularVerbs.filter((verb) =>
-      verb.base.toLowerCase().includes(search.toLowerCase()),
-    );
-  }, [search]);
+  const filteredRegular = useMemo(
+    () =>
+      regularVerbs.filter(
+        (v) =>
+          v.base.toLowerCase().includes(search.toLowerCase()) ||
+          v.meaning.toLowerCase().includes(search.toLowerCase()),
+      ),
+    [search],
+  );
 
   return (
-    <div className="min-h-screen bg-[#B73A44] px-6 py-14">
-      <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg p-10">
-        {/* HEADER */}
-        <header className="mb-10 text-center">
-          <h1 className="text-3xl font-semibold text-[#B73A44]">
-            Verb Learning Module
-          </h1>
-          <p className="mt-3 text-gray-500 text-sm max-w-xl mx-auto">
-            Understand how English verbs change form in different tenses. Study
-            regular and irregular verbs in a structured way.
-          </p>
-        </header>
+    <div className="p-4 lg:p-6 space-y-6 animate-fade-in">
+      {/* Header */}
+      <div>
+        <h1 className="text-2xl font-bold text-(--text) flex items-center gap-2">
+          <BookOpen className="w-6 h-6 text-primary" />
+          Verb Learning Module
+        </h1>
+        <p className="text-sm text-(--text-secondary) mt-1">
+          Pelajari bentuk-bentuk verb bahasa Inggris — Regular dan Irregular —
+          beserta penggunaannya dalam kalimat.
+        </p>
+      </div>
 
-        {/* VERB FORM EXPLANATION */}
-        <section className="mb-12">
-          <h2 className="text-base font-semibold text-[#B73A44] mb-4">
-            Verb Forms & Their Functions
-          </h2>
-
-          <div className="grid sm:grid-cols-2 gap-4 text-xs text-gray-600 leading-relaxed">
-            <div className="border rounded-md p-4">
-              <strong className="text-gray-800">V1 (Base Form)</strong>
-              <p className="mt-1">
-                Used for present simple (I/You/They/We), after modal verbs, and
-                commands.
-                <br />
-                Example: I walk every day.
-              </p>
-            </div>
-
-            <div className="border rounded-md p-4">
-              <strong className="text-gray-800">V-s / es</strong>
-              <p className="mt-1">
-                Used in present simple for he, she, it.
-                <br />
-                Example: She walks to school.
-              </p>
-            </div>
-
-            <div className="border rounded-md p-4">
-              <strong className="text-gray-800">V2 (Past Form)</strong>
-              <p className="mt-1">
-                Used for past simple (completed actions).
-                <br />
-                Example: I walked yesterday.
-              </p>
-            </div>
-
-            <div className="border rounded-md p-4">
-              <strong className="text-gray-800">V3 (Past Participle)</strong>
-              <p className="mt-1">
-                Used with have/has/had (perfect tense) and passive voice.
-                <br />
-                Example: She has gone home.
-              </p>
-            </div>
-
-            <div className="border rounded-md p-4 sm:col-span-2">
-              <strong className="text-gray-800">V-ing</strong>
-              <p className="mt-1">
-                Used for continuous tense and gerund (verb as noun).
-                <br />
-                Example: I am walking. / Swimming is fun.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* VERB MATERIAL FILES */}
-        <section className="mb-12">
-          <h2 className="text-base font-semibold text-[#B73A44] mb-4">
-            Verb Materials
-          </h2>
-          <div className="grid sm:grid-cols-2 gap-4 text-sm">
-            <a
-              href="/modules/verb-form-exercise.pdf"
-              target="_blank"
-              rel="noreferrer"
-              className="border rounded-md p-4 flex items-center justify-between hover:border-[#F2C572] transition"
+      {/* Verb Forms Cards */}
+      <div className="bg-(--bg-card) border border-(--border) rounded-2xl p-5">
+        <h2 className="text-sm font-semibold text-(--text) mb-4">
+          Bentuk Verb &amp; Fungsinya
+        </h2>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+          {VERB_FORMS.map((f) => (
+            <div
+              key={f.label}
+              className="border border-(--border) rounded-xl p-3 bg-(--bg-secondary) space-y-1.5"
             >
-              <span className="font-medium text-gray-700">
-                VERB FORM EXERCISE
+              <span
+                className={`inline-block text-xs font-bold px-2 py-0.5 rounded-md ${f.badge}`}
+              >
+                {f.label}
               </span>
-              <ExternalLink size={16} className="text-[#B73A44]" />
-            </a>
-            <a
-              href="/modules/verb.pdf"
-              target="_blank"
-              rel="noreferrer"
-              className="border rounded-md p-4 flex items-center justify-between hover:border-[#F2C572] transition"
-            >
-              <span className="font-medium text-gray-700">verb.pdf</span>
-              <ExternalLink size={16} className="text-[#B73A44]" />
-            </a>
-          </div>
-        </section>
+              <p className="text-xs font-semibold text-(--text)">{f.subtitle}</p>
+              <p className="text-xs text-(--text-secondary)">{f.desc}</p>
+              <p className="text-xs text-(--text-muted) italic">
+                &ldquo;{f.example}&rdquo;
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
 
-        {/* SLIM SEARCH */}
-        <div className="flex justify-end mb-8">
-          <div className="relative w-56">
+      {/* Search + Controls Row */}
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+        <div className="flex items-center gap-4 text-xs text-(--text-secondary)">
+          <span className="flex items-center gap-1.5">
+            <span className="w-2 h-2 rounded-full bg-amber-500 shrink-0" />
+            {filteredIrregular.length} irregular verbs
+          </span>
+          <span className="flex items-center gap-1.5">
+            <span className="w-2 h-2 rounded-full bg-emerald-500 shrink-0" />
+            {filteredRegular.length} regular verbs
+          </span>
+        </div>
+        <div className="flex items-center gap-2">
+          {/* Translation Toggle */}
+          <button
+            onClick={() => setShowMeaning((v) => !v)}
+            className={`flex items-center gap-1.5 text-xs px-3 py-2 rounded-lg border transition-colors ${
+              showMeaning
+                ? "bg-primary text-white border-primary"
+                : "border-(--border) text-(--text-secondary) hover:bg-(--hover)"
+            }`}
+          >
+            <Languages size={13} />
+            {showMeaning ? "Sembunyikan Arti" : "Tampilkan Arti"}
+          </button>
+          {/* Search */}
+          <div className="relative">
             <Search
               size={14}
-              className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
+              className="absolute left-3 top-1/2 -translate-y-1/2 text-(--text-muted)"
             />
             <input
               type="text"
-              placeholder="Search..."
+              placeholder="Cari verb atau arti..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="
-                w-full
-                border border-gray-300
-                rounded-md
-                pl-8 pr-3 py-1.5
-                text-xs
-                focus:outline-none
-                focus:ring-1 focus:ring-[#F2C572]
-                focus:border-[#F2C572]
-                transition
-              "
+              className="w-52 border border-(--border) rounded-lg pl-8 pr-3 py-2 text-xs bg-(--bg-card) text-(--text) placeholder:text-(--text-muted) focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/50 transition"
             />
           </div>
         </div>
+      </div>
 
-        {/* IRREGULAR SECTION */}
-        <section className="mb-14">
-          <div className="mb-5">
-            <h2 className="text-lg font-semibold text-[#B73A44]">
+      {/* Irregular Verbs Section */}
+      <section className="bg-(--bg-card) border border-(--border) rounded-2xl overflow-hidden">
+        <div className="px-5 py-4 border-b border-(--border) flex items-center justify-between gap-3">
+          <div>
+            <h2 className="text-base font-semibold text-(--text)">
               Irregular Verbs
             </h2>
-            <p className="text-xs text-gray-500 mt-1 leading-relaxed">
-              Irregular verbs do not follow the standard -ed rule. Example: go →
-              went → gone.
+            <p className="text-xs text-(--text-secondary) mt-0.5">
+              V2 dan V3 tidak mengikuti aturan -ed. Harus dihafal!
+              <span className="ml-2 font-medium text-(--text)">
+                ex: sing → sang → sung
+              </span>
             </p>
-            <div className="h-px bg-gray-200 mt-3" />
           </div>
+          <span className="shrink-0 text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-700 font-semibold">
+            {filteredIrregular.length} verbs
+          </span>
+        </div>
+        <VerbTable verbs={filteredIrregular} type="irregular" showMeaning={showMeaning} />
+      </section>
 
-          <VerbTable
-            title=""
-            description=""
-            verbs={filteredIrregular}
-            accentColor="#F2C572"
-          />
-        </section>
-
-        {/* REGULAR SECTION */}
-        <section>
-          <div className="mb-5">
-            <h2 className="text-lg font-semibold text-[#B73A44]">
+      {/* Regular Verbs Section */}
+      <section className="bg-(--bg-card) border border-(--border) rounded-2xl overflow-hidden">
+        <div className="px-5 py-4 border-b border-(--border) flex items-center justify-between gap-3">
+          <div>
+            <h2 className="text-base font-semibold text-(--text)">
               Regular Verbs
             </h2>
-            <p className="text-xs text-gray-500 mt-1 leading-relaxed">
-              Regular verbs add -ed to form V2 and V3. Example: walk → walked →
-              walked.
+            <p className="text-xs text-(--text-secondary) mt-0.5">
+              V2 dan V3 dibentuk dengan menambahkan -ed. V2 = V3.
+              <span className="ml-2 font-medium text-(--text)">
+                ex: work → worked → worked
+              </span>
             </p>
-            <div className="h-px bg-gray-200 mt-3" />
           </div>
-
-          <VerbTable
-            title=""
-            description=""
-            verbs={filteredRegular}
-            accentColor="#F2C572"
-          />
-        </section>
-      </div>
+          <span className="shrink-0 text-xs px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-700 font-semibold">
+            {filteredRegular.length} verbs
+          </span>
+        </div>
+        <VerbTable verbs={filteredRegular} type="regular" showMeaning={showMeaning} />
+      </section>
     </div>
   );
 }

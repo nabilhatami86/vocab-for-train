@@ -1871,12 +1871,11 @@ const speakingLessons: ModuleLesson[] = [
       {
         title: "Full Example (with numbers and time)",
         points: [
-          "Good morning, Sir. Let me introduce myself.",
-          "My name is Sokolil Hatami. I am 22 years old. I was born in 2003. I come from Gresik, East Java. Now, I live with my family and work as a remote programmer.",
-          "I graduated from Informatics Engineering at Nahdlatul Ulama Indonesia University. I started my study in 2021 and have finished my study. I usually wake up at 5:30 a.m. and work on programming projects for 3 to 5 hours every day. I often continue coding at 8 p.m.",
-          "There are five people in my family: my mother, my two sisters, my brother, and me. We have dinner together at 7 p.m. every day.",
-          "My hobby is coding. In my free time, I build small projects and learn new technology. I code for 2 to 3 hours at night. I also read tech articles and exercise twice a week.",
-          "Thank you for your attention.",
+          "Good morning, Sir. It is a great pleasure to introduce myself.",
+          "My name is Sokolil Hatami. I am 22 years old and was born in 2003. I come from Gresik, East Java, and currently live with my family. I graduated with a degree in Informatics Engineering. I am a disciplined, responsible, and highly motivated person who always strives to improve my knowledge and develop my abilities. I enjoy learning new things and challenging myself to grow both personally and professionally.",
+          "There are five members in my family: my mother, my two sisters, my brother, and me. We have a close relationship and always support each other in every situation.",
+          "My hobby is playing volleyball. I truly enjoy this sport because it helps me build teamwork, confidence, and a strong mentality. My role model in volleyball is Rivan Nurmulki. I admire his powerful playing style, dedication to training, and consistency as a professional athlete. His hard work and determination inspire me to stay focused, work harder, and never give up when facing challenges.",
+          "Thank you very much for your kind attention.",
         ],
       },
       {
@@ -2594,9 +2593,9 @@ const grammarLessons: ModuleLesson[] = [
     day: 4,
     title: "Adjectives (Kata Sifat)",
     subtitle:
-      "Jenis-jenis adjective, urutan, comparative/superlative, dan suffix pembentuk",
+      "Konsep Modifier-Head, Limiting adjective (a/an/the), Demonstrative, dan Possessive adjective",
     overview:
-      "Pelajari Adjective (kata sifat) secara lengkap: jenis-jenis adjective (Descriptive, Quantitative, Demonstrative, Possessive), aturan urutan adjective (OSASCOMP), bentuk comparative & superlative, irregular forms, suffix pembentuk adjective (-ful, -less, -ous, -ive, -able, -al, -ic, -y, -ish, -ly), dan posisi adjective dalam kalimat.",
+      "Pelajari Adjective (kata sifat) hari pertama: konsep Modifier (M) dan Head (H), Limiting adjective (a/an/the), Demonstrative adjective (this/that/these/those), dan Possessive adjective & Possessive Genitive ('s / s').",
     passage: [
       "An adjective is a word that describes or modifies a noun or pronoun. Adjectives tell us what something is like — its size, color, shape, quality, quantity, or origin. They make our sentences more interesting and detailed.",
       'Adjectives usually come BEFORE the noun: "a beautiful flower", "a tall building", "a red car". They can also come AFTER a linking verb: "She is beautiful", "The building is tall", "The car is red".',
@@ -2651,6 +2650,128 @@ const grammarLessons: ModuleLesson[] = [
           "{{annotation:Lisa's|adj/M}} {{annotation:house|n/H}}, {{annotation:Ms. Jein's|adj/M}} {{annotation:hair|n/H}}",
         ],
       },
+    ],
+    exercises: [
+      {
+        id: "g4-q1",
+        section: "middle",
+        type: "multiple-choice",
+        question: '"___ apple a day keeps the doctor away." Pilih article yang tepat:',
+        options: ["A", "An", "The", "—"],
+        correctAnswer: "An",
+        reason: '"Apple" dimulai dengan bunyi vokal /æ/ → pakai "an". Bukan huruf pertama yang menentukan, tapi BUNYI pertama.',
+      },
+      {
+        id: "g4-q2",
+        section: "middle",
+        type: "multiple-choice",
+        question: '"___ university near my house is very old." Pilih article yang tepat:',
+        options: ["An", "A", "The", "—"],
+        correctAnswer: "The",
+        reason: '"The" digunakan untuk benda yang sudah spesifik/diketahui ("the university near my house"). Meskipun "university" dimulai huruf vokal, bunyinya /juː/ = konsonan → a university. Tapi di sini sudah spesifik jadi pakai "the".',
+      },
+      {
+        id: "g4-q3",
+        section: "middle",
+        type: "multiple-choice",
+        question: '"___ book on the table is mine." (buku yang spesifik — sudah diketahui)',
+        options: ["A", "An", "The", "—"],
+        correctAnswer: "The",
+        reason: '"The" digunakan ketika benda sudah spesifik atau diketahui sebelumnya. "The book on the table" merujuk ke buku tertentu.',
+      },
+      {
+        id: "g4-q4",
+        section: "middle",
+        type: "multiple-choice",
+        question: '"___ book is yours and ___ is mine." (menunjuk benda dekat dan jauh)',
+        options: [
+          "This / that",
+          "These / those",
+          "That / this",
+          "Those / these",
+        ],
+        correctAnswer: "This / that",
+        reason: '"This" = singular + dekat. "That" = singular + jauh. Karena "book" adalah singular, pakai this/that.',
+      },
+      {
+        id: "g4-q5",
+        section: "middle",
+        type: "multiple-choice",
+        question: '"___ are my favorite shoes." (plural + dekat)',
+        options: ["This", "That", "These", "Those"],
+        correctAnswer: "These",
+        reason: '"These" = plural + dekat. "Shoes" adalah plural dan dekat. "Those" = plural + jauh.',
+      },
+      {
+        id: "g4-q6",
+        section: "middle",
+        type: "multiple-choice",
+        question: 'Pilih Possessive Adjective yang tepat: "She left ___ phone at home."',
+        options: ["his", "her", "their", "its"],
+        correctAnswer: "her",
+        reason: '"She" → possessive adjective = "her". His = he/him, Their = they/them, Its = it.',
+      },
+      {
+        id: "g4-q7",
+        section: "middle",
+        type: "multiple-choice",
+        question: '"The ___ room is on the third floor." (ruang guru — possessive genitive)',
+        options: [
+          "teacher's",
+          "teachers'",
+          "teacher of the",
+          "of teacher",
+        ],
+        correctAnswer: "teacher's",
+        reason: '"Teacher" tidak berakhiran S (singular) → tambah \'s. Teacher\'s room = ruang guru. Teachers\' room = ruang para guru (plural).',
+      },
+      {
+        id: "g4-q8",
+        section: "middle",
+        type: "multiple-choice",
+        question: 'Mana yang merupakan MODIFIER dalam frasa "a beautiful flower"?',
+        options: ["flower", "a beautiful", "beautiful", "a"],
+        correctAnswer: "beautiful",
+        reason: '"Beautiful" adalah Modifier (M) — kata yang menjelaskan. "Flower" adalah Head (H) — kata yang dijelaskan. "A" adalah article/determiner.',
+      },
+      {
+        id: "g4-q9",
+        section: "final",
+        type: "short-answer",
+        question: 'Isi article (a/an/the/—) yang tepat:\n1. She is ___ engineer.\n2. I saw ___ movie last night. ___ movie was amazing.\n3. He plays ___ guitar every day.\n4. ___ sun rises in the east.\n5. She has ___ umbrella.\n6. I need ___ hour to finish this.',
+        correctAnswer: "1. an  2. a / The  3. the  4. The  5. an  6. an",
+        reason: "1. bunyi /e/ = vokal → an  2. pertama kali disebut = a, sudah diketahui = the  3. instrumen musik = the  4. satu-satunya = the  5. bunyi /ʌ/ = vokal → an  6. bunyi /aʊ/ = vokal → an",
+      },
+      {
+        id: "g4-q10",
+        section: "final",
+        type: "short-answer",
+        question: "Ubah ke Possessive Genitive yang benar:\n1. the bag of Lisa\n2. the room of the teachers (plural)\n3. the company of Haris\n4. the door of the car (benda mati)\n5. the books of the students (plural)\n6. the hair of Ms. Jein",
+        correctAnswer: "1. Lisa's bag  2. the teachers' room  3. Haris' company  4. the car door (N+N)  5. the students' books  6. Ms. Jein's hair",
+      },
+      {
+        id: "g4-q11",
+        section: "final",
+        type: "task",
+        question: 'Tulis 8 kalimat menggunakan:\n• 2 kalimat dengan article (a/an/the)\n• 2 kalimat dengan Demonstrative adjective (this/that/these/those)\n• 2 kalimat dengan Possessive adjective (my/your/his/her/our/their)\n• 2 kalimat dengan Possessive Genitive (\'s / s\')\nBeri label M (Modifier) dan H (Head) pada setiap adjective yang digunakan.',
+      },
+    ],
+  },
+  {
+    id: "grammar-4b",
+    track: "grammar",
+    day: 5,
+    title: "Adjectives — Lanjutan (Hari 2)",
+    subtitle:
+      "Indefinite Quantity, Numeral, Descriptive Adjective, Urutan OSASCOMP, Comparative & Superlative, dan Suffix pembentuk adjective",
+    overview:
+      "Lanjutan materi Adjective hari ke-2: 4) Indefinite Quantity (a number of vs the number of), 5) Numeral (cardinal & ordinal), 6) Descriptive Adjective (karakter, usia, ukuran, warna, dst), B) Urutan OSASCOMP, C) Comparative (lebih dari), Superlative (paling), Irregular forms, D) Suffix pembentuk adjective (-ful/-less/-ous/-ive/-able/-al/-ic/-y/-ish/-ly), E) Common mistakes.",
+    passage: [
+      "Today is Adjective Day 2. We continue from where we left off — moving from basic adjective types to more advanced topics: how to quantify nouns, describe them precisely, compare them, and build new adjectives using suffixes.",
+      "Pay special attention to the difference between 'a number of' and 'the number of' — this is a common exam question! Also study the OSASCOMP word order carefully when using multiple adjectives before a noun.",
+      "By the end of today, you will be able to form adjectives from nouns and verbs using suffixes, and correctly compare things using comparative and superlative forms.",
+    ],
+    materialSections: [
       {
         title: "4) Indefinite Quantity (Jumlah Tidak Pasti)",
         points: [
@@ -2765,7 +2886,7 @@ const grammarLessons: ModuleLesson[] = [
           "  beautiful → the most beautiful, expensive → the most expensive, interesting → the most interesting",
           "",
           'Example: "She is THE tallest in the class." "This is THE most beautiful place I have ever seen."',
-          'Wrong: "He is the most fastest." → Correct: "He is the fastest." (jangan pakai most + -est!)',
+          'Wrong: "He is the most fastest." → Correct: "He is the fastest." (jangan pakai most + -est bersamaan!)',
         ],
       },
       {
@@ -2824,24 +2945,6 @@ const grammarLessons: ModuleLesson[] = [
           "-ish (agak / mirip):",
           "  child → childish, fool → foolish, self → selfish, red → reddish, blue → bluish, green → greenish, yellow → yellowish, old → oldish, young → youngish",
           "",
-          "-ant / -ent (bersifat):",
-          "  independent, different, important, significant, confident, intelligent, pleasant, elegant, patient, sufficient",
-          "",
-          "-ate (bersifat):",
-          "  moderate, passionate, fortunate, accurate, desperate, private",
-          "",
-          "-ial (berhubungan dengan):",
-          "  remedial, imperial, initial, financial, social, commercial",
-          "",
-          "-ical (berhubungan dengan):",
-          "  radical, critical, practical, political, historical, classical",
-          "",
-          "-ary (berhubungan dengan):",
-          "  imaginary, voluntary, temporary, ordinary, necessary, secondary",
-          "",
-          "-en (terbuat dari):",
-          "  golden, wooden, broken, frozen, chosen, woven",
-          "",
           "-ly (noun + ly) → ⚠️ HATI-HATI ini ADJECTIVE bukan adverb!:",
           "  friend → friendly, love → lovely, lone → lonely, like → likely, cost → costly, time → timely, live → lively, dead → deadly, order → orderly, day → daily",
           '  Bukti: "She is friendly." (adjective setelah linking verb). BUKAN "She speaks friendly." → harus "She speaks in a friendly way."',
@@ -2862,7 +2965,7 @@ const grammarLessons: ModuleLesson[] = [
     ],
     exercises: [
       {
-        id: "g4-q1",
+        id: "g4b-q1",
         section: "middle",
         type: "multiple-choice",
         question: 'Which is the correct order? "She has a ___ bag."',
@@ -2877,7 +2980,7 @@ const grammarLessons: ModuleLesson[] = [
           "Urutan OSASCOMP: Size (big) → Color (black) → Origin (Italian) → Material (leather).",
       },
       {
-        id: "g4-q2",
+        id: "g4b-q2",
         section: "middle",
         type: "multiple-choice",
         question: '"Mount Everest is ___ mountain in the world."',
@@ -2887,7 +2990,7 @@ const grammarLessons: ModuleLesson[] = [
           'Superlative 1 suku kata: the + adj-est. "High" → "the highest". Bukan "the most high".',
       },
       {
-        id: "g4-q3",
+        id: "g4b-q3",
         section: "middle",
         type: "multiple-choice",
         question: 'Which is the comparative form of "good"?',
@@ -2897,7 +3000,7 @@ const grammarLessons: ModuleLesson[] = [
           '"Good" irregular: good → better → best. Bukan "gooder" atau "more good".',
       },
       {
-        id: "g4-q4",
+        id: "g4b-q4",
         section: "middle",
         type: "multiple-choice",
         question: '"The soup tastes ___." Choose the correct answer:',
@@ -2912,7 +3015,7 @@ const grammarLessons: ModuleLesson[] = [
           'Setelah linking verb "tastes", pakai adjective (delicious), bukan adverb (deliciously).',
       },
       {
-        id: "g4-q5",
+        id: "g4b-q5",
         section: "middle",
         type: "multiple-choice",
         question: 'Which suffix means "without" or "tanpa"?',
@@ -2922,7 +3025,7 @@ const grammarLessons: ModuleLesson[] = [
           '"-less" = tanpa. hopeless (tanpa harapan), careless (tidak hati-hati), homeless (tidak punya rumah). Kebalikan "-ful".',
       },
       {
-        id: "g4-q6",
+        id: "g4b-q6",
         section: "middle",
         type: "multiple-choice",
         question: '"The view from the mountain is ___." (beauty → adjective)',
@@ -2932,7 +3035,7 @@ const grammarLessons: ModuleLesson[] = [
           'beauty + "-ful" = beautiful. Huruf "y" berubah jadi "i": beauti + ful = beautiful.',
       },
       {
-        id: "g4-q7",
+        id: "g4b-q7",
         section: "middle",
         type: "multiple-choice",
         question: '"She is very ___." (create → adjective)',
@@ -2942,7 +3045,7 @@ const grammarLessons: ModuleLesson[] = [
           'create + suffix "-ive" = creative. Suffix "-ive" = cenderung/bersifat.',
       },
       {
-        id: "g4-q8",
+        id: "g4b-q8",
         section: "middle",
         type: "multiple-choice",
         question: '"She is ___ than her sister." (beautiful)',
@@ -2957,7 +3060,7 @@ const grammarLessons: ModuleLesson[] = [
           '"Beautiful" = 4 suku kata (panjang). Adjective panjang pakai "more" untuk comparative. Selalu diikuti "than".',
       },
       {
-        id: "g4-q9",
+        id: "g4b-q9",
         section: "final",
         type: "short-answer",
         question:
@@ -2966,21 +3069,21 @@ const grammarLessons: ModuleLesson[] = [
           "1) dangerous 2) comfortable 3) hopeless 4) active 5) national 6) rainy 7) childish 8) friendly 9) scientific 10) enjoyable",
       },
       {
-        id: "g4-q10",
+        id: "g4b-q10",
         section: "final",
         type: "short-answer",
         question:
           "Write the comparative and superlative forms: 1) happy 2) beautiful 3) big 4) bad 5) far 6) expensive 7) thin 8) good 9) little 10) much",
       },
       {
-        id: "g4-q11",
+        id: "g4b-q11",
         section: "final",
         type: "short-answer",
         question:
           "Put the adjectives in correct OSASCOMP order: 1) a (old/wooden/small) table 2) a (blue/beautiful/silk) dress 3) a (Japanese/new/amazing) car 4) a (cotton/white/large) shirt",
       },
       {
-        id: "g4-q12",
+        id: "g4b-q12",
         section: "final",
         type: "task",
         question:
@@ -2990,180 +3093,99 @@ const grammarLessons: ModuleLesson[] = [
   },
   {
     id: "grammar-5",
+
     track: "grammar",
-    day: 6,
+    day: 7,
     title: "Verbs (Kata Kerja)",
     subtitle:
-      "Jenis-jenis verb, aturan V1/V2/V3, regular & irregular, dan subject-verb agreement",
+      "Berdasarkan Makna (Dynamic/Stative), Berdasarkan Bentuk (V1/V2/V3/Ving), Berdasarkan Fungsi (Ordinary, Transitive, Intransitive)",
     overview:
-      "Pelajari Verb (kata kerja) secara lengkap: jenis verb berdasarkan aksi (Action, Linking, Helping/Modal), Transitive vs Intransitive, Regular vs Irregular verbs, bentuk V1/V2/V3/V-ing, aturan penambahan -s/-es/-ing/-ed, dan Subject-Verb Agreement.",
+      "Pelajari Verb (kata kerja) dalam tiga kategori: 1) Berdasarkan Makna — Dynamic verb (melakukan aktivitas) dan Stative verb (perasaan/emosi). 2) Berdasarkan Bentuk — tabel V1/V2/V3/Ving/Vs-es, Regular verb (V2=V3, +ed), Irregular verb (V1≠V2≠V3). 3) Berdasarkan Fungsi — Ordinary verb, Transitive (Monotransitive & Ditransitive dengan formula S+V+IO+DO), dan Intransitive (Complete & Incomplete/Linking verb).",
     passage: [
-      "A verb is a word that shows an action, a state of being, or an occurrence. Every complete sentence must have at least one verb. Verbs tell us what the subject does, what happens to it, or what it is.",
-      "There are three main types of verbs: Action Verbs (what someone does), Linking Verbs (what someone is), and Helping Verbs or Modal Verbs (words that help the main verb). Understanding verb forms (V1, V2, V3, V-ing) is essential for using tenses correctly.",
-      "Verbs change form depending on the tense, the subject, and whether they are regular or irregular. Let us explore all of these in detail.",
+      "Verb atau kata kerja adalah inti dari setiap kalimat dalam bahasa Inggris. Verb dibagi menjadi tiga kategori besar berdasarkan makna, bentuk, dan fungsinya.",
+      "Berdasarkan makna: Dynamic verb menunjukkan aktivitas (work, study, cry, cook), sedangkan Stative verb menunjukkan perasaan atau emosi (love, like, hate, believe, need).",
+      "Berdasarkan bentuk: setiap verb memiliki lima bentuk — V1 (base form), V2 (+ed atau irregular), V3 (past participle +aux), V-ing (+be), dan Vs/es (untuk He/She/It). Regular verb mengikuti aturan +ed (V2=V3), sedangkan Irregular verb tidak beraturan (V1≠V2≠V3).",
     ],
     materialSections: [
       {
-        title: "A) Jenis Verb — Action Verbs (Kata Kerja Aksi)",
+        title: "1) Berdasarkan Makna",
         points: [
-          "Action verb menunjukkan APA yang dilakukan oleh subject.",
+          "a. Dynamic Verb — Melakukan Aktivitas",
+          "   Verb yang menunjukkan aksi/kegiatan yang dilakukan subject.",
+          "   ex: work, study, cry, cook",
           "",
-          "Physical actions (aksi fisik):",
-          "  run, jump, swim, walk, dance, kick, throw, climb, push, pull, eat, write, cook, drive",
-          "",
-          "Mental actions (aksi mental):",
-          "  think, believe, remember, forget, understand, imagine, consider, decide, hope, wish",
-          "",
-          "Transitive Verb (butuh objek):",
-          'She {{annotation:reads|verb/action}} {{annotation:a book|object}} — "book" = objek. Tanpa objek tidak lengkap.',
-          "I {{annotation:eat|verb/action}} {{annotation:rice|object}}. He {{annotation:bought|verb/action}} {{annotation:a car|object}}.",
-          "",
-          "Intransitive Verb (TIDAK butuh objek):",
-          "She {{annotation:runs|verb/action}}. He {{annotation:sleeps|verb/action}}. They {{annotation:laughed|verb/action}}. — Sudah lengkap tanpa objek.",
+          "b. Stative Verb — Perasaan, Emosi",
+          "   Verb yang menunjukkan keadaan, perasaan, atau emosi (bukan aksi fisik).",
+          "   ex: love, like, hate, believe, need",
         ],
       },
       {
-        title: "A) Jenis Verb — Linking Verbs (Kata Kerja Penghubung)",
+        title: "2) Berdasarkan Bentuk",
         points: [
-          "Linking verb MENGHUBUNGKAN subject dengan deskripsi/keterangan. BUKAN menunjukkan aksi.",
+          "Tabel bentuk verb berdasarkan Subject Pronoun:",
           "",
-          "BE verbs (paling umum):",
-          "  am, is, are, was, were, been, being",
-          "She {{annotation:is|verb/linking}} {{annotation:a teacher|description}}. They {{annotation:are|verb/linking}} {{annotation:happy|adj}}.",
+          "  Subject / Pronoun    | V1    | V2 (+ed) | V3 (Past Participle +aux) | V-ing (+be) | Vs/es   |",
+          "  I / You / We / They  | study | studied  | studied                   | studying    | —       |",
+          "  He / She / It        | —     | —        | —                         | —           | studies |",
           "",
-          "Sense verbs (panca indera):",
-          "  look, sound, smell, taste, feel",
-          "The food {{annotation:smells|verb/linking}} {{annotation:delicious|adj}}. She {{annotation:looks|verb/linking}} {{annotation:tired|adj}}.",
+          "a. Regular Verb (Beraturan): V2 = V3",
+          "   Bentuk V2 dan V3 sama. Dibentuk dengan menambah -ed:",
+          "   work = worked | play = played | want = wanted",
           "",
-          "State verbs (keadaan):",
-          "  become, seem, appear, remain, stay, turn, grow",
-          "He {{annotation:became|verb/linking}} {{annotation:a doctor|description}}. The leaves {{annotation:turn|verb/linking}} {{annotation:yellow|adj}}.",
-          "",
-          "PENTING: Setelah linking verb, pakai ADJECTIVE bukan ADVERB!",
-          'Wrong: "She feels badly." → Correct: "She feels bad."',
-          'Wrong: "The food tastes deliciously." → Correct: "The food tastes delicious."',
+          "b. Irregular Verb (Tidak Beraturan): V1 ≠ V2 ≠ V3",
+          "   Bentuk V2 dan V3 tidak mengikuti aturan -ed. Harus dihafal!",
+          "   sing → sang → sung | see → saw → seen | read → read → read",
         ],
       },
       {
-        title: "A) Jenis Verb — Helping & Modal Verbs",
+        title: "3) Berdasarkan Fungsi — a. Ordinary Verb (Kata Kerja Utama)",
         points: [
-          "Helping verb MEMBANTU main verb. Tidak bisa berdiri sendiri.",
-          "  do, does, did, have, has, had, am, is, are, was, were",
-          "She {{annotation:does not|helping}} {{annotation:like|verb/main}} coffee. I {{annotation:have|helping}} {{annotation:finished|verb/main}}.",
+          "Ordinary verb adalah kata kerja utama dalam kalimat, letaknya setelah subject.",
           "",
-          "Modal verbs menunjukkan kemampuan, izin, kemungkinan, atau kewajiban:",
+          "Jumlah verb tergantung jumlah conjunction (conj):",
+          "   1 kalimat  →  1 verb ordinary",
+          "   1 conj     →  2 verb ordinary",
+          "   2 conj     →  3 verb ordinary, dst.",
           "",
-          "Can/Could (kemampuan):",
-          "I {{annotation:can|modal}} {{annotation:swim|V1}}. She {{annotation:could|modal}} {{annotation:read|V1}} at age 4.",
+          "ex: I and Ms. Lisa {{annotation:study|V1}} together.",
+          "    (1 kalimat → 1 verb ordinary)",
           "",
-          "Will/Would (masa depan/sopan):",
-          "I {{annotation:will|modal}} {{annotation:help|V1}} you. She {{annotation:will|modal}} {{annotation:come|V1}} tomorrow.",
-          "",
-          "Should (saran/nasihat):",
-          "You {{annotation:should|modal}} {{annotation:study|V1}} harder.",
-          "",
-          "May/Might (kemungkinan/izin):",
-          "It {{annotation:may|modal}} {{annotation:rain|V1}} today. She {{annotation:might|modal}} {{annotation:be|V1}} late.",
-          "",
-          "Must (kewajiban/keharusan):",
-          "You {{annotation:must|modal}} {{annotation:wear|V1}} a seatbelt. Students {{annotation:must|modal}} {{annotation:be|V1}} on time.",
-          "",
-          "⚠️ PENTING: Setelah modal, pakai V1 (tanpa to, tanpa -s):",
-          'Wrong: "She can swims." → Correct: "She can swim."',
-          'Wrong: "He must to go." → Correct: "He must go."',
+          "ex: I always {{annotation:watch|V}} and {{annotation:listen|V}} movie.",
+          '    (1 conj "and" → 2 verb ordinary)',
         ],
       },
       {
-        title: "B) Regular Verbs — Aturan Penambahan -ed (V2/V3)",
+        title: "3) Berdasarkan Fungsi — A. Transitive Verb (Butuh Objek)",
         points: [
-          "Regular verb: V2 dan V3 sama, dibentuk dengan menambah -ed",
+          "Transitive verb MEMBUTUHKAN objek. Tidak lengkap tanpa objek.",
           "",
-          "Aturan dasar: tambah -ed",
-          "  play → played → played, work → worked → worked, talk → talked → talked, walk → walked → walked, clean → cleaned → cleaned",
+          "1) Monotransitive (1 objek / Direct Object):",
+          "   I {{annotation:eat|V}} {{annotation:pecel|O}} at Mbk Lala.",
+          "   I {{annotation:buy|V}} {{annotation:a car|O}}.",
           "",
-          "Berakhiran -e: tambah -d saja",
-          "  live → lived → lived, like → liked → liked, dance → danced → danced, hope → hoped → hoped",
+          "2) Ditransitive (2 objek):",
+          "   ├ Direct Object (DO)   → langsung dari verb",
+          "   └ Indirect Object (IO) → tidak langsung dari verb",
           "",
-          "Berakhiran konsonan + y: ganti y → ied",
-          "  study → studied → studied, carry → carried → carried, try → tried → tried, worry → worried → worried",
+          "   Form 1: S + V + IO + DO",
+          "   She {{annotation:buys|V}} {{annotation:her friend|IO}} {{annotation:a present|DO}}.",
           "",
-          "Berakhiran vokal + y: langsung tambah -ed",
-          "  play → played → played, enjoy → enjoyed → enjoyed, stay → stayed → stayed",
-          "",
-          "Pola CVC (konsonan-vokal-konsonan pendek): double konsonan + -ed",
-          "  stop → stopped → stopped, plan → planned → planned, drop → dropped → dropped, beg → begged → begged",
+          "   Form 2: S + V + DO + to/for + IO",
+          "   He {{annotation:cooks|V}} {{annotation:noodle|DO}} to {{annotation:his family|IO}}.",
         ],
       },
       {
-        title: "B) Irregular Verbs — Harus Dihafal!",
+        title:
+          "3) Berdasarkan Fungsi — B. Intransitive Verb (Tidak Butuh Objek)",
         points: [
-          "Irregular verb: V2 dan V3 TIDAK mengikuti pola -ed. Harus dihafal!",
+          "Intransitive verb TIDAK membutuhkan objek.",
           "",
-          "Pola V1 ≠ V2 ≠ V3 (semuanya beda):",
-          "go → went → gone | come → came → come | do → did → done",
-          "eat → ate → eaten | drink → drank → drunk | take → took → taken",
-          "write → wrote → written | speak → spoke → spoken | break → broke → broken",
-          "see → saw → seen | give → gave → given | know → knew → known",
+          "1) Complete → Tidak perlu CS (penjelas Subjek), kalimat sudah lengkap:",
+          "   I {{annotation:sleep|V}}. I {{annotation:run|V}}. He {{annotation:falls|V}}. She {{annotation:cries|V}}.",
           "",
-          "Pola V2 = V3 (V2 dan V3 sama):",
-          "buy → bought → bought | bring → brought → brought | think → thought → thought",
-          "make → made → made | say → said → said | tell → told → told",
-          "teach → taught → taught | catch → caught → caught | feel → felt → felt",
-          "have → had → had | find → found → found | get → got → got/gotten",
-          "",
-          "Pola V1 = V2 = V3 (semuanya sama!):",
-          "read → read → read | put → put → put | cut → cut → cut",
-          "let → let → let | set → set → set | shut → shut → shut | hit → hit → hit",
-          "",
-          "Pola V1 = V3 (V1 dan V3 sama):",
-          "run → ran → run | swim → swam → swum | begin → began → begun | come → came → come",
-        ],
-      },
-      {
-        title: "C) Verb Forms — V1, V2, V3, V-ing",
-        points: [
-          "V1 (Base form): bentuk dasar, untuk Simple Present",
-          'Example: "I eat rice every day." "They play football." "She reads books."',
-          "",
-          "V2 (Past Simple): untuk Simple Past",
-          'Example: "I ate rice yesterday." "They played football." "She read a book last night."',
-          "",
-          "V3 (Past Participle): untuk Perfect tenses & Passive",
-          'Example: "I have eaten." "The cake was eaten." "She has written a letter."',
-          "",
-          "V-ing (Present Participle): untuk Continuous tenses",
-          'Example: "I am eating now." "She was playing." "They have been studying."',
-          "",
-          "Aturan V-ing:",
-          "  Aturan dasar: tambah -ing → play → playing, eat → eating, read → reading",
-          "  Berakhiran -e: buang e, tambah -ing → write → writing, dance → dancing, make → making",
-          "  Pola CVC pendek: double konsonan → run → running, swim → swimming, sit → sitting, stop → stopping",
-          "  Berakhiran -ie: ganti ie → ying → die → dying, lie → lying, tie → tying",
-        ],
-      },
-      {
-        title: "D) Subject-Verb Agreement & Penambahan -s/-es",
-        points: [
-          "Dalam Simple Present, He/She/It + V1 + s/es",
-          "",
-          "Aturan dasar: tambah -s",
-          'Example: "She eats." "He reads." "It works." "The dog barks."',
-          "",
-          "Berakhiran -s, -sh, -ch, -x, -z, -o: tambah -es",
-          "  go → goes, do → does, wash → washes, watch → watches, fix → fixes, buzz → buzzes, miss → misses",
-          "",
-          "Berakhiran konsonan + y: ganti y → ies",
-          "  study → studies, carry → carries, try → tries, fly → flies, worry → worries",
-          "",
-          "Berakhiran vokal + y: langsung tambah -s",
-          "  play → plays, enjoy → enjoys, stay → stays, say → says, buy → buys",
-          "",
-          "PENGECUALIAN: I/You/We/They → V1 tanpa -s",
-          'Example: "I eat." "You study." "We play." "They work."',
-          "",
-          "BE verb agreement:",
-          "  I am / You are / He-She-It is / We-They are",
-          "  I was / You were / He-She-It was / We-They were",
+          "2) Incomplete → Perlu CS (Subject Complement), menggunakan Linking Verb:",
+          "   Mr. Panji {{annotation:becomes|V}} {{annotation:a batman|CS}}.",
+          "   This food {{annotation:smells|V}} {{annotation:so good|CS}}.",
         ],
       },
     ],
@@ -3274,12 +3296,458 @@ const grammarLessons: ModuleLesson[] = [
         question:
           "Write 12 sentences about your daily activities. Use at least: 3 action verbs, 2 linking verbs, 2 helping verbs, and 2 modal verbs. Label each verb type and write the V1/V2/V3 form of each verb used.",
       },
+      {
+        id: "g5-vf01",
+        type: "short-answer",
+        question:
+          "Fill in the correct form of the verb.\nShe ___ (go) to school every day.",
+        correctAnswer: "goes",
+        reason:
+          'Subject "She" = orang ketiga tunggal. Simple Present: go + es = goes.',
+      },
+      {
+        id: "g5-vf02",
+        type: "short-answer",
+        question:
+          "Fill in the correct form of the verb.\nHe ___ (study) English every morning.",
+        correctAnswer: "studies",
+        reason: 'Subject "He" = orang ketiga tunggal. study → y+ies = studies.',
+      },
+      {
+        id: "g5-vf03",
+        type: "short-answer",
+        question:
+          "Fill in the correct form of the verb.\nThe teacher ___ (teach) us grammar.",
+        correctAnswer: "teaches",
+        reason:
+          'Subject "The teacher" = orang ketiga tunggal. teach → teach+es = teaches.',
+      },
+      {
+        id: "g5-vf04",
+        type: "short-answer",
+        question:
+          "Fill in the correct form of the verb.\nMy father ___ (work) in an office.",
+        correctAnswer: "works",
+        reason: 'Subject "My father" = orang ketiga tunggal. work + s = works.',
+      },
+      {
+        id: "g5-vf05",
+        type: "short-answer",
+        question:
+          "Fill in the correct form of the verb.\nShe ___ (wash) the dishes after dinner.",
+        correctAnswer: "washes",
+        reason:
+          'Subject "She" = orang ketiga tunggal. wash → wash+es = washes.',
+      },
+      {
+        id: "g5-vf06",
+        type: "short-answer",
+        question:
+          "Fill in the correct form of the verb.\nHe ___ (try) his best every day.",
+        correctAnswer: "tries",
+        reason: 'Subject "He" = orang ketiga tunggal. try → y+ies = tries.',
+      },
+      {
+        id: "g5-vf07",
+        type: "short-answer",
+        question:
+          "Fill in the correct form of the verb.\nThe bird ___ (fly) high in the sky.",
+        correctAnswer: "flies",
+        reason:
+          'Subject "The bird" = orang ketiga tunggal. fly → y+ies = flies.',
+      },
+      {
+        id: "g5-vf08",
+        type: "short-answer",
+        question:
+          "Fill in the correct form of the verb.\nMy mother ___ (cook) delicious food.",
+        correctAnswer: "cooks",
+        reason: 'Subject "My mother" = orang ketiga tunggal. cook + s = cooks.',
+      },
+      {
+        id: "g5-vf09",
+        type: "short-answer",
+        question:
+          "Fill in the correct form of the verb.\nThe dog ___ (run) very fast.",
+        correctAnswer: "runs",
+        reason: 'Subject "The dog" = orang ketiga tunggal. run + s = runs.',
+      },
+      {
+        id: "g5-vf10",
+        type: "short-answer",
+        question:
+          "Fill in the correct form of the verb.\nShe ___ (enjoy) reading books.",
+        correctAnswer: "enjoys",
+        reason:
+          'Subject "She" = orang ketiga tunggal. enjoy + s = enjoys (vokal+y, tambah -s saja).',
+      },
+      {
+        id: "g5-vf11",
+        type: "short-answer",
+        question:
+          "Fill in the correct form of the verb.\nWe ___ (visit) the museum last week.",
+        correctAnswer: "visited",
+        reason: "Simple Past. visit adalah regular verb: visit + ed = visited.",
+      },
+      {
+        id: "g5-vf12",
+        type: "short-answer",
+        question:
+          "Fill in the correct form of the verb.\nShe ___ (write) a letter yesterday.",
+        correctAnswer: "wrote",
+        reason:
+          "Simple Past. write adalah irregular verb: write → wrote → written.",
+      },
+      {
+        id: "g5-vf13",
+        type: "short-answer",
+        question:
+          "Fill in the correct form of the verb.\nHe ___ (come) to the party last night.",
+        correctAnswer: "came",
+        reason: "Simple Past. come adalah irregular verb: come → came → come.",
+      },
+      {
+        id: "g5-vf14",
+        type: "short-answer",
+        question:
+          "Fill in the correct form of the verb.\nThey ___ (buy) a new car last year.",
+        correctAnswer: "bought",
+        reason:
+          "Simple Past. buy adalah irregular verb: buy → bought → bought.",
+      },
+      {
+        id: "g5-vf15",
+        type: "short-answer",
+        question:
+          "Fill in the correct form of the verb.\nI ___ (see) that movie last weekend.",
+        correctAnswer: "saw",
+        reason: "Simple Past. see adalah irregular verb: see → saw → seen.",
+      },
+      {
+        id: "g5-vf16",
+        type: "short-answer",
+        question:
+          "Fill in the correct form of the verb.\nShe ___ (study) all night for the exam.",
+        correctAnswer: "studied",
+        reason:
+          "Simple Past. study adalah regular verb: study → y+ied = studied.",
+      },
+      {
+        id: "g5-vf17",
+        type: "short-answer",
+        question:
+          "Fill in the correct form of the verb.\nHe ___ (run) 5 km this morning.",
+        correctAnswer: "ran",
+        reason: "Simple Past. run adalah irregular verb: run → ran → run.",
+      },
+      {
+        id: "g5-vf18",
+        type: "short-answer",
+        question:
+          "Fill in the correct form of the verb.\nThey ___ (eat) at a restaurant yesterday.",
+        correctAnswer: "ate",
+        reason: "Simple Past. eat adalah irregular verb: eat → ate → eaten.",
+      },
+      {
+        id: "g5-vf19",
+        type: "short-answer",
+        question:
+          "Fill in the correct form of the verb.\nShe ___ (drink) coffee this morning.",
+        correctAnswer: "drank",
+        reason:
+          "Simple Past. drink adalah irregular verb: drink → drank → drunk.",
+      },
+      {
+        id: "g5-vf20",
+        type: "short-answer",
+        question:
+          "Fill in the correct form of the verb.\nHe ___ (give) me a gift on my birthday.",
+        correctAnswer: "gave",
+        reason: "Simple Past. give adalah irregular verb: give → gave → given.",
+      },
+      {
+        id: "g5-vf21",
+        type: "short-answer",
+        question:
+          "Fill in the correct form of the verb.\nShe is ___ (read) a book right now.",
+        correctAnswer: "reading",
+        reason: "Present Continuous: is/am/are + V-ing. read → reading.",
+      },
+      {
+        id: "g5-vf22",
+        type: "short-answer",
+        question:
+          "Fill in the correct form of the verb.\nThey are ___ (swim) in the pool.",
+        correctAnswer: "swimming",
+        reason:
+          "Present Continuous: are + V-ing. swim → swimming (CVC: double m).",
+      },
+      {
+        id: "g5-vf23",
+        type: "short-answer",
+        question:
+          "Fill in the correct form of the verb.\nHe is ___ (write) a report.",
+        correctAnswer: "writing",
+        reason:
+          "Present Continuous: is + V-ing. write → drop e, tambah ing = writing.",
+      },
+      {
+        id: "g5-vf24",
+        type: "short-answer",
+        question:
+          "Fill in the correct form of the verb.\nI am ___ (study) for my exam.",
+        correctAnswer: "studying",
+        reason:
+          "Present Continuous: am + V-ing. study → studying (vokal+y, langsung +ing).",
+      },
+      {
+        id: "g5-vf25",
+        type: "short-answer",
+        question:
+          "Fill in the correct form of the verb.\nThe children are ___ (run) in the park.",
+        correctAnswer: "running",
+        reason:
+          "Present Continuous: are + V-ing. run → running (CVC pendek: double n).",
+      },
+      {
+        id: "g5-vf26",
+        type: "short-answer",
+        question:
+          "Fill in the correct form of the verb.\nShe was ___ (cook) dinner when I arrived.",
+        correctAnswer: "cooking",
+        reason: "Past Continuous: was + V-ing. cook → cooking.",
+      },
+      {
+        id: "g5-vf27",
+        type: "short-answer",
+        question:
+          "Fill in the correct form of the verb.\nHe is ___ (sit) on the chair.",
+        correctAnswer: "sitting",
+        reason:
+          "Present Continuous: is + V-ing. sit → sitting (CVC pendek: double t).",
+      },
+      {
+        id: "g5-vf28",
+        type: "short-answer",
+        question:
+          "Fill in the correct form of the verb.\nThey are ___ (dance) at the party.",
+        correctAnswer: "dancing",
+        reason:
+          "Present Continuous: are + V-ing. dance → drop e, tambah ing = dancing.",
+      },
+      {
+        id: "g5-vf29",
+        type: "short-answer",
+        question:
+          "Fill in the correct form of the verb.\nShe was ___ (drive) to work this morning.",
+        correctAnswer: "driving",
+        reason:
+          "Past Continuous: was + V-ing. drive → drop e, tambah ing = driving.",
+      },
+      {
+        id: "g5-vf30",
+        type: "short-answer",
+        question:
+          "Fill in the correct form of the verb.\nI am ___ (make) a cake right now.",
+        correctAnswer: "making",
+        reason:
+          "Present Continuous: am + V-ing. make → drop e, tambah ing = making.",
+      },
+      {
+        id: "g5-vf31",
+        type: "short-answer",
+        question:
+          "Fill in the correct form of the verb.\nI have ___ (eat) breakfast already.",
+        correctAnswer: "eaten",
+        reason: "Present Perfect: have + V3. eat → ate → eaten. V3 = eaten.",
+      },
+      {
+        id: "g5-vf32",
+        type: "short-answer",
+        question:
+          "Fill in the correct form of the verb.\nShe has ___ (go) to Japan before.",
+        correctAnswer: "gone",
+        reason: "Present Perfect: has + V3. go → went → gone. V3 = gone.",
+      },
+      {
+        id: "g5-vf33",
+        type: "short-answer",
+        question:
+          "Fill in the correct form of the verb.\nThey have ___ (finish) their homework.",
+        correctAnswer: "finished",
+        reason:
+          "Present Perfect: have + V3. finish adalah regular verb: finish + ed = finished.",
+      },
+      {
+        id: "g5-vf34",
+        type: "short-answer",
+        question:
+          "Fill in the correct form of the verb.\nHe has ___ (buy) a new phone.",
+        correctAnswer: "bought",
+        reason:
+          "Present Perfect: has + V3. buy → bought → bought. V3 = bought.",
+      },
+      {
+        id: "g5-vf35",
+        type: "short-answer",
+        question:
+          "Fill in the correct form of the verb.\nWe have ___ (see) this film before.",
+        correctAnswer: "seen",
+        reason: "Present Perfect: have + V3. see → saw → seen. V3 = seen.",
+      },
+      {
+        id: "g5-vf36",
+        type: "short-answer",
+        question:
+          "Fill in the correct form of the verb.\nThe book was ___ (write) by Tolkien.",
+        correctAnswer: "written",
+        reason:
+          "Passive Voice: was + V3. write → wrote → written. V3 = written.",
+      },
+      {
+        id: "g5-vf37",
+        type: "short-answer",
+        question:
+          "Fill in the correct form of the verb.\nThe cake was ___ (eat) by the children.",
+        correctAnswer: "eaten",
+        reason: "Passive Voice: was + V3. eat → ate → eaten. V3 = eaten.",
+      },
+      {
+        id: "g5-vf38",
+        type: "short-answer",
+        question:
+          "Fill in the correct form of the verb.\nEnglish is ___ (speak) in many countries.",
+        correctAnswer: "spoken",
+        reason: "Passive Voice: is + V3. speak → spoke → spoken. V3 = spoken.",
+      },
+      {
+        id: "g5-vf39",
+        type: "short-answer",
+        question:
+          "Fill in the correct form of the verb.\nThe window was ___ (break) by the ball.",
+        correctAnswer: "broken",
+        reason: "Passive Voice: was + V3. break → broke → broken. V3 = broken.",
+      },
+      {
+        id: "g5-vf40",
+        type: "short-answer",
+        question:
+          "Fill in the correct form of the verb.\nThe letter has been ___ (send).",
+        correctAnswer: "sent",
+        reason:
+          "Present Perfect Passive: has been + V3. send → sent → sent. V3 = sent.",
+      },
+      {
+        id: "g5-vf41",
+        type: "short-answer",
+        question:
+          "Fill in the correct form of the verb.\nShe can ___ (swim) very fast.",
+        correctAnswer: "swim",
+        reason:
+          "Setelah modal (can) selalu pakai V1 tanpa -s dan tanpa to. swim (V1).",
+      },
+      {
+        id: "g5-vf42",
+        type: "short-answer",
+        question:
+          "Fill in the correct form of the verb.\nYou should ___ (study) harder.",
+        correctAnswer: "study",
+        reason: "Setelah modal (should) selalu pakai V1. study (V1).",
+      },
+      {
+        id: "g5-vf43",
+        type: "short-answer",
+        question:
+          "Fill in the correct form of the verb.\nHe must ___ (finish) his work today.",
+        correctAnswer: "finish",
+        reason: "Setelah modal (must) selalu pakai V1. finish (V1).",
+      },
+      {
+        id: "g5-vf44",
+        type: "short-answer",
+        question:
+          "Fill in the correct form of the verb.\nThey might ___ (come) tomorrow.",
+        correctAnswer: "come",
+        reason: "Setelah modal (might) selalu pakai V1. come (V1).",
+      },
+      {
+        id: "g5-vf45",
+        type: "short-answer",
+        question:
+          "Fill in the correct form of the verb.\nI would ___ (like) some water, please.",
+        correctAnswer: "like",
+        reason: "Setelah modal (would) selalu pakai V1. like (V1).",
+      },
+      {
+        id: "g5-vf46",
+        type: "short-answer",
+        question:
+          "Fill in the correct form of the verb.\nShe will ___ (help) you tomorrow.",
+        correctAnswer: "help",
+        reason: "Setelah modal (will) selalu pakai V1. help (V1).",
+      },
+      {
+        id: "g5-vf47",
+        type: "short-answer",
+        question:
+          "Fill in the correct form of the verb.\nHe ___ (take) a shower before he left.",
+        correctAnswer: "took",
+        reason:
+          "Simple Past. take adalah irregular verb: take → took → taken. V2 = took.",
+      },
+      {
+        id: "g5-vf48",
+        type: "short-answer",
+        question:
+          "Fill in the correct form of the verb.\nThey ___ (know) each other for years.",
+        correctAnswer: "have known",
+        reason:
+          'Present Perfect dengan "for years": have + V3. know → knew → known. = have known.',
+      },
+      {
+        id: "g5-vf49",
+        type: "short-answer",
+        question:
+          "Fill in the correct form of the verb.\nShe had already ___ (leave) when I called.",
+        correctAnswer: "left",
+        reason:
+          "Past Perfect: had + V3. leave adalah irregular verb: leave → left → left. V3 = left.",
+      },
+      {
+        id: "g5-vf50",
+        type: "short-answer",
+        question:
+          "Fill in the correct form of the verb.\nThe students are ___ (stop) talking now.",
+        correctAnswer: "stopping",
+        reason:
+          "Present Continuous: are + V-ing. stop → stopping (CVC pendek: double p).",
+      },
+      {
+        id: "g5-irr",
+        section: "final",
+        type: "short-answer",
+        question:
+          "Irregular Verb Table — tulis V2 dan V3 yang benar:\n1. be → ___ → ___\n2. begin → ___ → ___\n3. break → ___ → ___\n4. bring → ___ → ___\n5. buy → ___ → ___\n6. catch → ___ → ___\n7. come → ___ → ___\n8. cut → ___ → ___\n9. do → ___ → ___\n10. drink → ___ → ___\n11. drive → ___ → ___\n12. eat → ___ → ___\n13. fall → ___ → ___\n14. feel → ___ → ___\n15. find → ___ → ___\n16. fly → ___ → ___\n17. get → ___ → ___\n18. give → ___ → ___\n19. go → ___ → ___\n20. grow → ___ → ___\n21. have → ___ → ___\n22. know → ___ → ___\n23. leave → ___ → ___\n24. make → ___ → ___\n25. read → ___ → ___\n26. run → ___ → ___\n27. see → ___ → ___\n28. sing → ___ → ___\n29. speak → ___ → ___\n30. take → ___ → ___",
+        correctAnswer:
+          "1. was/were-been  2. began-begun  3. broke-broken  4. brought-brought  5. bought-bought  6. caught-caught  7. came-come  8. cut-cut  9. did-done  10. drank-drunk  11. drove-driven  12. ate-eaten  13. fell-fallen  14. felt-felt  15. found-found  16. flew-flown  17. got-gotten  18. gave-given  19. went-gone  20. grew-grown  21. had-had  22. knew-known  23. left-left  24. made-made  25. read-read  26. ran-run  27. saw-seen  28. sang-sung  29. spoke-spoken  30. took-taken",
+      },
+      {
+        id: "g5-reg",
+        section: "final",
+        type: "short-answer",
+        question:
+          "Regular Verb Table — tulis V2 dan V3 dengan aturan -ed yang benar:\n1. work → ___ → ___\n2. play → ___ → ___\n3. study → ___ → ___\n4. stop → ___ → ___\n5. dance → ___ → ___\n6. clean → ___ → ___\n7. open → ___ → ___\n8. close → ___ → ___\n9. visit → ___ → ___\n10. watch → ___ → ___\n11. wash → ___ → ___\n12. start → ___ → ___\n13. finish → ___ → ___\n14. listen → ___ → ___\n15. talk → ___ → ___",
+        correctAnswer:
+          "1. worked-worked  2. played-played  3. studied-studied  4. stopped-stopped  5. danced-danced  6. cleaned-cleaned  7. opened-opened  8. closed-closed  9. visited-visited  10. watched-watched  11. washed-washed  12. started-started  13. finished-finished  14. listened-listened  15. talked-talked",
+        reason:
+          "Regular verbs: V2=V3. Aturan: +ed (work→worked), +d jika berakhiran -e (dance→danced), y→ied jika konsonan+y (study→studied), double konsonan+ed jika CVC pendek (stop→stopped).",
+      },
     ],
   },
   {
     id: "grammar-6",
     track: "grammar",
-    day: 5,
+    day: 6,
     title: "Adverbs (Kata Keterangan)",
     subtitle:
       "Jenis-jenis adverb, pembentukan -ly, posisi, dan perbedaan adjective vs adverb",
@@ -3579,457 +4047,316 @@ const grammarLessons: ModuleLesson[] = [
       },
     ],
   },
+
   {
-    id: "grammar-7",
-    track: "grammar",
-    day: 7,
-    title: "Prepositions (Kata Depan)",
-    subtitle: "Preposition of time, place, direction, dan common collocations",
-    overview:
-      "Pelajari Preposition (kata depan) secara lengkap: prepositions of time (at, on, in), place (at, on, in, under, between, next to), direction (to, into, through), dan prepositions yang sering salah digunakan.",
-    passage: [
-      "A preposition is a word placed before a noun or pronoun to show its relationship to another word in the sentence. Prepositions show time (when), place (where), direction (where to), and other relationships.",
-      'Prepositions are small words but very important. Using the wrong preposition can change the meaning completely. For example: "on the table" (di atas meja) vs "under the table" (di bawah meja) vs "at the table" (di meja).',
-      "English prepositions can be tricky because they often don't translate directly from Indonesian. You need to learn common preposition combinations by practice.",
-    ],
-    materialSections: [
-      {
-        title: "A) Prepositions of Time (Waktu)",
-        points: [
-          "AT: specific time — {{annotation:at|prep}} 5 o'clock, {{annotation:at|prep}} noon, {{annotation:at|prep}} midnight, {{annotation:at|prep}} night, {{annotation:at|prep}} sunrise",
-          "ON: days and dates — {{annotation:on|prep}} Monday, {{annotation:on|prep}} January 5th, {{annotation:on|prep}} my birthday, {{annotation:on|prep}} weekends",
-          "IN: longer periods — {{annotation:in|prep}} the morning, {{annotation:in|prep}} January, {{annotation:in|prep}} 2024, {{annotation:in|prep}} summer, {{annotation:in|prep}} the future",
-          "FOR: duration — {{annotation:for|prep}} two hours, {{annotation:for|prep}} a week, {{annotation:for|prep}} a long time",
-          "SINCE: starting point — {{annotation:since|prep}} 2020, {{annotation:since|prep}} Monday, {{annotation:since|prep}} I was young",
-          "DURING: within a period — {{annotation:during|prep}} the class, {{annotation:during|prep}} the holiday, {{annotation:during|prep}} breakfast",
-          "BY: deadline — {{annotation:by|prep}} tomorrow, {{annotation:by|prep}} 5 PM, {{annotation:by|prep}} next week",
-          "UNTIL/TILL: up to a time — {{annotation:until|prep}} midnight, {{annotation:until|prep}} next Friday, {{annotation:till|prep}} the end",
-        ],
-      },
-      {
-        title: "B) Prepositions of Place (Tempat)",
-        points: [
-          "AT: specific point — {{annotation:at|prep}} school, {{annotation:at|prep}} home, {{annotation:at|prep}} work, {{annotation:at|prep}} the bus stop",
-          "ON: surface/line — {{annotation:on|prep}} the table, {{annotation:on|prep}} the wall, {{annotation:on|prep}} the floor, {{annotation:on|prep}} TV",
-          "IN: enclosed space — {{annotation:in|prep}} the room, {{annotation:in|prep}} the box, {{annotation:in|prep}} Jakarta, {{annotation:in|prep}} the car",
-          "UNDER/BELOW: lower position — {{annotation:under|prep}} the table, {{annotation:under|prep}} the bridge, {{annotation:below|prep}} the surface",
-          "ABOVE/OVER: higher position — {{annotation:above|prep}} the clouds, {{annotation:over|prep}} the bridge, {{annotation:above|prep}} average",
-          "BETWEEN: two things — {{annotation:between|prep}} the books, {{annotation:between|prep}} Monday and Friday, {{annotation:between|prep}} you and me",
-          "AMONG: three or more — {{annotation:among|prep}} the students, {{annotation:among|prep}} friends, {{annotation:among|prep}} the trees",
-          "NEXT TO / BESIDE / NEAR: proximity — {{annotation:next to|prep}} the bank, {{annotation:beside|prep}} the school, {{annotation:near|prep}} my house",
-          "IN FRONT OF / BEHIND: position — {{annotation:in front of|prep}} the building, {{annotation:behind|prep}} the school",
-          "OPPOSITE: facing — {{annotation:opposite|prep}} the hospital, {{annotation:opposite|prep}} each other",
-        ],
-      },
-      {
-        title: "C) Prepositions of Direction/Movement (Arah)",
-        points: [
-          "TO: toward a destination — go {{annotation:to|prep}} school, fly {{annotation:to|prep}} Japan, walk {{annotation:to|prep}} the park",
-          "FROM: starting point — come {{annotation:from|prep}} Indonesia, walk {{annotation:from|prep}} home {{annotation:to|prep}} school",
-          "INTO: entering enclosed space — walk {{annotation:into|prep}} the room, jump {{annotation:into|prep}} the water, get {{annotation:into|prep}} the car",
-          "OUT OF: leaving enclosed space — get {{annotation:out of|prep}} the car, walk {{annotation:out of|prep}} the room",
-          "THROUGH: passing inside — walk {{annotation:through|prep}} the forest, drive {{annotation:through|prep}} the tunnel",
-          "ACROSS: from one side to the other — walk {{annotation:across|prep}} the street, swim {{annotation:across|prep}} the river",
-          "ALONG: following a line — walk {{annotation:along|prep}} the beach, drive {{annotation:along|prep}} the road",
-          "TOWARD(S): in the direction of — walk {{annotation:towards|prep}} the station, move {{annotation:towards|prep}} the exit",
-        ],
-      },
-      {
-        title: "D) Common Preposition Combinations (Kolokasi)",
-        points: [
-          "Verb + Preposition: listen {{annotation:TO|prep}}, look {{annotation:AT|prep}}, wait {{annotation:FOR|prep}}, depend {{annotation:ON|prep}}, think {{annotation:ABOUT|prep}}, agree {{annotation:WITH|prep}}, apologize {{annotation:FOR|prep}}, belong {{annotation:TO|prep}}",
-          "Adjective + Preposition: good {{annotation:AT|prep}}, interested {{annotation:IN|prep}}, afraid {{annotation:OF|prep}}, tired {{annotation:OF|prep}}, proud {{annotation:OF|prep}}, responsible {{annotation:FOR|prep}}, different {{annotation:FROM|prep}}, similar {{annotation:TO|prep}}",
-          "Noun + Preposition: reason {{annotation:FOR|prep}}, answer {{annotation:TO|prep}}, effect {{annotation:ON|prep}}, increase {{annotation:IN|prep}}, lack {{annotation:OF|prep}}, need {{annotation:FOR|prep}}, solution {{annotation:TO|prep}}",
-          "Common expressions: on time (tepat waktu), in time (tidak terlambat), on purpose, by accident, by mistake, in common, on fire",
-        ],
-      },
-      {
-        title: "E) Common Preposition Mistakes",
-        points: [
-          'Wrong: "I arrived {{annotation:to|wrong}} school." → Correct: "I arrived {{annotation:at|prep}} school."',
-          'Wrong: "She is married {{annotation:with|wrong}} him." → Correct: "She is married {{annotation:to|prep}} him."',
-          'Wrong: "I am interested {{annotation:for|wrong}} English." → Correct: "I am interested {{annotation:in|prep}} English."',
-          'Wrong: "It depends {{annotation:of|wrong}} the weather." → Correct: "It depends {{annotation:on|prep}} the weather."',
-          'Wrong: "I am good {{annotation:in|wrong}} math." → Correct: "I am good {{annotation:at|prep}} math."',
-          'Wrong: "She is afraid {{annotation:from|wrong}} dogs." → Correct: "She is afraid {{annotation:of|prep}} dogs."',
-          'Wrong: "I go to home." → Correct: "I go home." (no preposition before "home" with "go")',
-          'Wrong: "I discussed about the problem." → Correct: "I discussed the problem." (no preposition after "discuss")',
-        ],
-      },
-    ],
-    exercises: [
-      {
-        id: "g7-q1",
-        section: "middle",
-        type: "multiple-choice",
-        question:
-          '"The meeting is ___ Monday ___ 3 PM." Choose the correct prepositions:',
-        options: ["in / at", "on / at", "at / on", "on / in"],
-        correctAnswer: "on / at",
-        reason:
-          'Gunakan "on" untuk hari (Monday) dan "at" untuk waktu spesifik (3 PM).',
-      },
-      {
-        id: "g7-q2",
-        section: "middle",
-        type: "multiple-choice",
-        question: '"She is afraid ___ spiders."',
-        options: ["from", "of", "with", "about"],
-        correctAnswer: "of",
-        reason:
-          'Kolokasi tetap: "afraid of" = takut akan sesuatu. Bukan "afraid from" atau "afraid with".',
-      },
-      {
-        id: "g7-q3",
-        section: "middle",
-        type: "multiple-choice",
-        question: '"We walked ___ the tunnel to reach the other side."',
-        options: ["across", "along", "through", "over"],
-        correctAnswer: "through",
-        reason:
-          '"Through" = melewati bagian dalam sesuatu. Kita berjalan MELALUI (through) tunnel, bukan across (menyeberang) atau along (sepanjang).',
-      },
-      {
-        id: "g7-q4",
-        section: "middle",
-        type: "multiple-choice",
-        question: '"I have been living here ___ 2018."',
-        options: ["for", "since", "during", "by"],
-        correctAnswer: "since",
-        reason:
-          '"Since" digunakan untuk titik awal waktu yang spesifik (2018). "For" untuk durasi (for 6 years).',
-      },
-      {
-        id: "g7-q5",
-        section: "final",
-        type: "short-answer",
-        question:
-          "Fill in with the correct preposition (at/on/in): 1) I was born ___ 1998. 2) The class starts ___ 8 AM. 3) We have a holiday ___ Friday. 4) She lives ___ Jakarta. 5) The book is ___ the table. 6) I wake up ___ the morning.",
-      },
-      {
-        id: "g7-q6",
-        section: "final",
-        type: "short-answer",
-        question:
-          "Fill in with the correct preposition: 1) She is good ___ math. 2) I am interested ___ music. 3) This depends ___ the weather. 4) I apologize ___ being late. 5) He is different ___ his brother.",
-      },
-      {
-        id: "g7-q7",
-        section: "final",
-        type: "task",
-        question:
-          "Write 12 sentences: 4 using prepositions of time, 4 using prepositions of place, and 4 using prepositions of direction. Also write 3 sentences using verb+preposition collocations.",
-      },
-    ],
-  },
-  {
-    id: "grammar-8",
+    id: "grammar-5b",
     track: "grammar",
     day: 8,
-    title: "Conjunctions (Kata Hubung)",
+    title: "Verbs — Auxiliary & Modal (Hari 2)",
     subtitle:
-      "FANBOYS, subordinating, correlative conjunctions, dan conjunctive adverbs",
+      "Kata kerja bantu (be/have/do), modal verbs dan maknanya, semi-modal expressions",
     overview:
-      "Pelajari Conjunction (kata hubung) secara lengkap: Coordinating Conjunctions (FANBOYS), Subordinating Conjunctions, dan Correlative Conjunctions untuk menghubungkan kata, frasa, dan kalimat.",
+      "Lanjutan materi Verb hari ke-2: B. Auxiliary Verb (kata kerja bantu) — be, have, do, dan modal. Tabel penggunaan per subject pronoun. b) Modal verbs dan maknanya: will/shall (akan), would/should (seharusnya), must (harus), may/might (mungkin), can/could (bisa). C. Semi-modal — similar expressions of modal seperti be going to, used to, be supposed to, be able to, have to.",
     passage: [
-      "A conjunction is a word that connects words, phrases, or clauses in a sentence. Conjunctions help us combine ideas and show relationships between them — addition, contrast, cause, time, condition, and choice.",
-      "There are three main types: Coordinating Conjunctions join equal parts, Subordinating Conjunctions join a dependent clause to an independent clause, and Correlative Conjunctions work in pairs.",
-      "Using conjunctions correctly makes your writing more fluent and your ideas more connected.",
+      "Auxiliary verbs (kata kerja bantu) adalah verb yang mendampingi main verb untuk membentuk tense, passive, atau pertanyaan. Ada tiga kelompok: be, have, dan do — ditambah modal verbs.",
+      "Modal verbs memberikan informasi tentang kemungkinan, kemampuan, kewajiban, atau izin. Setelah modal selalu diikuti V1 (base form). Setiap modal punya makna khusus yang perlu dipahami.",
+      "Semi-modal adalah ekspresi yang memiliki makna serupa dengan modal tetapi menggunakan frasa lebih panjang. Contoh: 'can' bisa digantikan dengan 'be able to', 'must' dengan 'have to'.",
     ],
     materialSections: [
       {
-        title: "A) Coordinating Conjunctions (FANBOYS)",
+        title: "B. Auxiliary Verb (Kata Kerja Bantu)",
         points: [
-          "FANBOYS: For, And, Nor, But, Or, Yet, So — these join equal/independent parts",
-          'For: reason/because — "She was tired, {{annotation:for|conj}} she had worked all day."',
-          'And: addition — "I like tea {{annotation:and|conj}} coffee." "She is smart {{annotation:and|conj}} hardworking."',
-          'Nor: negative addition — "He doesn\'t like fish, {{annotation:nor|conj}} does he like meat." (note inverted word order after nor)',
-          'But: contrast — "She is small {{annotation:but|conj}} strong." "I wanted to go, {{annotation:but|conj}} it was raining."',
-          'Or: choice/alternative — "Do you want tea {{annotation:or|conj}} coffee?" "Study hard, {{annotation:or|conj}} you will fail."',
-          'Yet: contrast (stronger than but) — "He is rich, {{annotation:yet|conj}} he is unhappy." "She\'s young, {{annotation:yet|conj}} very talented."',
-          'So: result/consequence — "It was raining, {{annotation:so|conj}} we stayed home." "She was hungry, {{annotation:so|conj}} she ate."',
-          'Rule: Use a COMMA before FANBOYS when joining two independent clauses: "I like tea, but she likes coffee."',
+          "Auxiliary verb mendampingi main verb (Vord). Posisi: Subject + Vaux + Vord.",
+          "",
+          "Contoh:",
+          "  She {{annotation:is|Vaux}} {{annotation:studying|Vord}} right now.",
+          "  He {{annotation:is|Vaux}} a soldier. (be sebagai main verb)",
+          "  She {{annotation:is|Vaux}} {{annotation:bought|Vord}} a gift by her father. (passive)",
+          "",
+          "Kelompok Auxiliary:",
+          "  → be    : is, am, are, was, were  (untuk passive & continuous/ving)",
+          "  → have  : has, have, had           (untuk perfect tense, +V3)",
+          "  → do    : do, does, did            (untuk pertanyaan & negasi)",
+          "  → modal : can, could, should, would, will, shall  (+V1)",
         ],
       },
       {
-        title: "B) Subordinating Conjunctions — Cause & Reason",
+        title: "B. Auxiliary — Tabel per Subject Pronoun",
         points: [
-          'Because: "I stayed home {{annotation:because|conj}} I was sick." "{{annotation:Because|conj}} it rained, the match was cancelled."',
-          'Since: "{{annotation:Since|conj}} you\'re here, let\'s start." "I\'ve been tired {{annotation:since|conj}} I woke up."',
-          'As: "{{annotation:As|conj}} she was tired, she went to bed early."',
-          'So that / In order that: purpose — "I study hard {{annotation:so that|conj}} I can pass the exam."',
-          'Rule: When dependent clause comes FIRST → use comma: "Because I was sick, I stayed home."',
-          'When independent clause comes FIRST → no comma needed: "I stayed home because I was sick."',
+          "  Subject/Pronoun  | be (pasif/ving)  | have (+V3)  | modal (+V1)",
+          "  I                | am / was         | have / had  | —",
+          "  You              | —                | have / had  | —",
+          "  They / We        | are / were       | have / had  | —",
+          "  She / He / It    | is / was         | has / had   | —",
+          "",
+          "  ⚠️ Modal tidak berubah bentuk untuk semua subject (no -s):",
+          "  I can, You can, She can, They can — semua sama.",
         ],
       },
       {
-        title: "C) Subordinating Conjunctions — Time",
+        title: "b) Modal Verbs & Maknanya",
         points: [
-          'When: "{{annotation:When|conj}} I arrived, she was sleeping." "I was happy {{annotation:when|conj}} I heard the news."',
-          'While: "{{annotation:While|conj}} I was cooking, the phone rang." (two simultaneous actions)',
-          'Before: "I brush my teeth {{annotation:before|conj}} I go to bed." "{{annotation:Before|conj}} leaving, check your bag."',
-          'After: "{{annotation:After|conj}} I finished dinner, I watched TV." "She left {{annotation:after|conj}} the meeting ended."',
-          'Until / Till: "Wait here {{annotation:until|conj}} I come back." "I studied {{annotation:until|conj}} midnight."',
-          'As soon as: "{{annotation:As soon as|conj}} I arrive, I will call you."',
-          'Whenever: "{{annotation:Whenever|conj}} I see her, I smile." (= every time)',
+          "Setelah modal selalu pakai V1 (base form). Tidak ada -s/-ing/-ed.",
+          "",
+          "will / shall   → akan (if we)",
+          "  ex: She {{annotation:will|Vaux}} {{annotation:begin|Voud}} the competition.",
+          "",
+          "would          → seharusnya (past, sopan)",
+          "should         → seharusnya",
+          "ought to       → seharusnya (kode keras / lebih tegas)",
+          "  ex: You {{annotation:should|Vaux}} {{annotation:drive|Voud}} the car.",
+          "",
+          "must           → harusnya (kewajiban kuat)",
+          "",
+          "may            → mungkin / boleh",
+          "might          → mungkin (~40% kemungkinan)",
+          "",
+          "can            → bisa / dapat",
+          "could          → bisa (past, atau sopan)",
         ],
       },
       {
-        title: "D) Subordinating Conjunctions — Contrast & Condition",
+        title: "C. Semi-modal (Similar Expression of Modal)",
         points: [
-          'Although / Even though / Though: contrast — "{{annotation:Although|conj}} it rained, we went out." "{{annotation:Even though|conj}} he was tired, he kept working."',
-          'While / Whereas: contrast — "She likes coffee, {{annotation:while|conj}} I prefer tea."',
-          'If: condition — "{{annotation:If|conj}} it rains, I will stay home." "I would help you {{annotation:if|conj}} I could."',
-          'Unless: "unless" = "if not" — "{{annotation:Unless|conj}} you study, you will fail." = "{{annotation:If|conj}} you don\'t study, you will fail."',
-          'As long as / Provided that: condition — "You can go {{annotation:as long as|conj}} you finish your homework first."',
-          'Even if: "{{annotation:Even if|conj}} it rains, I will go." (= the rain doesn\'t change my decision)',
-        ],
-      },
-      {
-        title: "E) Correlative Conjunctions (Berpasangan)",
-        points: [
-          'Both...and: addition — "{{annotation:Both|conj}} Sara {{annotation:and|conj}} Rina are smart." "She is {{annotation:both|conj}} beautiful {{annotation:and|conj}} kind."',
-          'Either...or: choice — "{{annotation:Either|conj}} you come with me, {{annotation:or|conj}} you stay here."',
-          'Neither...nor: negative — "{{annotation:Neither|conj}} Sara {{annotation:nor|conj}} Rina was absent." "He {{annotation:neither|conj}} smokes {{annotation:nor|conj}} drinks."',
-          'Not only...but also: emphasis — "She is {{annotation:not only|conj}} smart {{annotation:but also|conj}} hardworking."',
-          'Whether...or: alternatives — "I don\'t know {{annotation:whether|conj}} to go {{annotation:or|conj}} stay." "{{annotation:Whether|conj}} you like it {{annotation:or|conj}} not, you must do it."',
-          'Rule for subject-verb agreement: with either/or and neither/nor, the verb agrees with the NEAREST subject: "Neither the teacher nor the students were ready."',
-        ],
-      },
-      {
-        title: "F) Conjunctive Adverbs (Penghubung Kalimat)",
-        points: [
-          'However: contrast — "I was tired. {{annotation:However|conj. adv}}, I kept working." (use period or semicolon, NOT comma)',
-          'Therefore / Thus: result — "She studied hard. {{annotation:Therefore|conj. adv}}, she passed the exam."',
-          'Moreover / Furthermore: addition — "The hotel is cheap. {{annotation:Moreover|conj. adv}}, it\'s near the beach."',
-          'Meanwhile: simultaneous — "I cooked dinner. {{annotation:Meanwhile|conj. adv}}, she cleaned the house."',
-          'Nevertheless: contrast — "It was raining. {{annotation:Nevertheless|conj. adv}}, they went out."',
-          'Instead: alternative — "I didn\'t go to the party. {{annotation:Instead|conj. adv}}, I stayed home and studied."',
-          'Rule: These are NOT true conjunctions. Use semicolon or period before them, and comma after: "I was tired; however, I kept working."',
+          "Semi-modal adalah frasa yang maknanya mirip dengan modal:",
+          "",
+          "  will    → be going to        (akan)",
+          "  would   → used to            (dulu terbiasa)",
+          "  should  → be supposed to     (seharusnya)",
+          "  may     → be allowed to      (mungkin / boleh)",
+          "  can     → be able to         (bisa / dapat)",
+          "  must    → have to / have got to  (harus)",
+          "              ↑ has to / has got to (untuk She/He/It)",
+          "",
+          "Contoh penggunaan & perubahan bentuk:",
+          '  "I should can get the scholarship" ← SALAH',
+          '  "I should be able to get the scholarship" ← BENAR',
+          '  "I am not supposed to be able to get the scholarship" ← negasi',
         ],
       },
     ],
     exercises: [
       {
-        id: "g8-q1",
+        id: "g5b-q1",
         section: "middle",
         type: "multiple-choice",
         question:
-          '"I wanted to go out, ___ it was raining." Choose the conjunction:',
-        options: ["so", "but", "and", "or"],
-        correctAnswer: "but",
+          '"She ___ studying right now." Pilih auxiliary verb yang tepat:',
+        options: ["do", "is", "has", "was"],
+        correctAnswer: "is",
         reason:
-          '"But" menunjukkan kontras. Ingin keluar TAPI hujan — dua ide yang bertentangan.',
+          'Kalimat present continuous: Subject + be + Ving. "She is studying" karena She = He/She/It → pakai "is".',
       },
       {
-        id: "g8-q2",
+        id: "g5b-q2",
         section: "middle",
         type: "multiple-choice",
-        question: '"___ she was tired, she finished her homework."',
-        options: ["Because", "Although", "So", "And"],
-        correctAnswer: "Although",
+        question:
+          'Apa makna modal "might" dalam kalimat "It might rain today"?',
+        options: ["Harus", "Pasti", "Mungkin (~40%)", "Boleh"],
+        correctAnswer: "Mungkin (~40%)",
         reason:
-          '"Although" = meskipun. Meskipun lelah, dia tetap menyelesaikan PR — menunjukkan kontras antara kondisi dan aksi.',
+          '"Might" menyatakan kemungkinan yang tidak terlalu besar, sekitar 40%. "May" juga bermakna mungkin tapi sedikit lebih tinggi kemungkinannya.',
       },
       {
-        id: "g8-q3",
+        id: "g5b-q3",
         section: "middle",
         type: "multiple-choice",
-        question: '"She is ___ smart ___ hardworking."',
+        question: 'Semi-modal yang tepat untuk menggantikan "can" adalah:',
+        options: ["be going to", "used to", "be able to", "have to"],
+        correctAnswer: "be able to",
+        reason:
+          '"Can" (bisa/dapat) digantikan dengan "be able to". Contoh: "I can swim" = "I am able to swim".',
+      },
+      {
+        id: "g5b-q4",
+        section: "middle",
+        type: "multiple-choice",
+        question:
+          '"You ___ drive carefully on this road." Pilih modal yang paling tepat (saran/nasihat):',
+        options: ["will", "must", "should", "might"],
+        correctAnswer: "should",
+        reason:
+          '"Should" digunakan untuk saran atau nasihat. "You should drive carefully" = kamu sebaiknya mengemudi hati-hati.',
+      },
+      {
+        id: "g5b-q5",
+        section: "middle",
+        type: "multiple-choice",
+        question: "Pilih kalimat yang BENAR:",
         options: [
-          "either / or",
-          "neither / nor",
-          "both / and",
-          "not only / and",
+          "She should can do it.",
+          "She should be able to do it.",
+          "She should to do it.",
+          "She should does it.",
         ],
-        correctAnswer: "both / and",
+        correctAnswer: "She should be able to do it.",
         reason:
-          '"Both...and" menggabungkan dua sifat positif: dia smart DAN hardworking. Keduanya benar.',
+          'Setelah modal (should), pakai V1. "Can" tidak bisa langsung setelah modal lain. Gunakan semi-modal "be able to" sebagai gantinya.',
       },
       {
-        id: "g8-q4",
+        id: "g5b-q6",
         section: "middle",
         type: "multiple-choice",
-        question: '"___ you study harder, you will fail the exam."',
-        options: ["If", "Unless", "Although", "Because"],
-        correctAnswer: "Unless",
+        question:
+          '"I ___ go to the market every weekend when I was a child." (dulu terbiasa)',
+        options: ["will", "would", "used to", "should"],
+        correctAnswer: "used to",
         reason:
-          '"Unless" = jika tidak. "Unless you study harder" = kalau kamu tidak belajar lebih giat, kamu akan gagal.',
+          '"Used to" menyatakan kebiasaan di masa lalu yang sudah tidak dilakukan lagi. Ini semi-modal pengganti "would" untuk makna "dulu terbiasa".',
       },
       {
-        id: "g8-q5",
+        id: "g5b-q7",
         section: "final",
         type: "short-answer",
         question:
-          "Join these sentences using the conjunction in brackets: 1) She is smart. She is kind. (both...and) 2) It rained. We went out. (although) 3) You study. You will pass. (if) 4) I like tea. She likes coffee. (but) 5) He was late. He didn't apologize. (yet)",
+          "Ubah kalimat modal berikut menjadi semi-modal yang setara:\n1. She can speak English.\n2. You must finish your homework.\n3. I will travel abroad.\n4. He should apologize.\n5. May I use your phone?",
+        correctAnswer:
+          "1. She is able to speak English.  2. You have to finish your homework.  3. I am going to travel abroad.  4. He is supposed to apologize.  5. Am I allowed to use your phone?",
       },
       {
-        id: "g8-q6",
+        id: "g5b-q8",
         section: "final",
         type: "short-answer",
         question:
-          "Fill in with the correct conjunction: 1) I will wait ___ you come back. (until/unless) 2) ___ it was expensive, I bought it. (Although/Because) 3) She sings ___ dances well. (and/but) 4) Study hard, ___ you will fail. (or/and) 5) ___ Sara ___ Rina was absent — they were both in class. (Neither...nor / Either...or)",
+          "Isi auxiliary verb yang tepat (be/have/do/modal):\n1. She ___ bought a present by her friend. (passive)\n2. I ___ studying for 3 hours. (present perfect continuous)\n3. ___ you speak French? (kemampuan)\n4. He ___ finish his work by tomorrow. (kewajiban kuat)\n5. They ___ sleeping when I arrived. (past continuous)",
+        correctAnswer: "1. was  2. have been  3. Can  4. must  5. were",
       },
       {
-        id: "g8-q7",
+        id: "g5b-q9",
         section: "final",
         type: "task",
         question:
-          "Write 15 sentences: 5 using FANBOYS (one for each), 5 using subordinating conjunctions (because, although, if, when, before), and 5 using correlative conjunctions (both...and, either...or, neither...nor, not only...but also, whether...or).",
+          "Buat 8 kalimat menggunakan modal/semi-modal yang berbeda. Tandai Vaux dan Vord dalam setiap kalimat, dan tuliskan maknanya dalam bahasa Indonesia.",
       },
     ],
   },
   {
-    id: "grammar-9",
+    id: "grammar-review",
     track: "grammar",
     day: 9,
-    title: "Articles & Determiners",
+    title: "Verb — Review & Practice Games",
     subtitle:
-      "Aturan a/an/the, zero article, dan determiners (some/any/much/many)",
+      "Review menyeluruh materi verb Day 7-8: latihan interaktif dan games",
     overview:
-      "Pelajari Articles (a, an, the) dan Determiners secara lengkap: kapan menggunakan a/an (indefinite), the (definite), dan kapan TIDAK menggunakan article. Plus determiners lainnya: some, any, much, many, few, little, dll.",
+      "Hari review khusus Verb! Tidak ada materi baru. Saatnya bermain dan berlatih: isi latihan verb form, identifikasi jenis verb, dan koreksi kalimat yang salah. Tujuan: memastikan pemahaman verb Day 7-8 sebelum lanjut ke Middle Test.",
     passage: [
-      "Articles are small words (a, an, the) that come before nouns. Even though they are small, they are used in almost every English sentence. Using articles correctly is one of the most common challenges for Indonesian learners because Indonesian does not have articles.",
-      "There are two types: indefinite articles (a, an) for general/non-specific things, and the definite article (the) for specific things. Sometimes, no article is needed at all (zero article).",
-      "Determiners are a broader category of words that come before nouns to specify quantity, possession, or definiteness.",
+      "Welcome to Verb Review Day! Today is all about practice and games — no new theory.",
+      "Let's reinforce what you have learned over the past two days: verb types (dynamic, stative, ordinary, transitive, intransitive), verb forms (V1/V2/V3/V-ing/Vs-es), auxiliary verbs, modal verbs, and semi-modals.",
+      "Complete all the exercises below. Check your answers, understand your mistakes, and feel confident before the Middle Test!",
     ],
-    materialSections: [
-      {
-        title: "A) Indefinite Articles: A dan AN",
-        points: [
-          'A: before consonant SOUNDS — {{annotation:a|article}} book, {{annotation:a|article}} cat, {{annotation:a|article}} university (starts with "yoo" sound), {{annotation:a|article}} European country',
-          "AN: before vowel SOUNDS — {{annotation:an|article}} apple, {{annotation:an|article}} egg, {{annotation:an|article}} umbrella, {{annotation:an|article}} hour (silent h), {{annotation:an|article}} honest person",
-          'Use a/an for: first mention of something — "I saw {{annotation:a|article}} dog in the park." "She ate {{annotation:an|article}} apple."',
-          'Use a/an for: one of many — "She is {{annotation:a|article}} teacher." (one of many teachers) "He bought {{annotation:a|article}} car."',
-          'Use a/an for: jobs — "She is {{annotation:a|article}} doctor." "He wants to be {{annotation:an|article}} engineer."',
-          'Use a/an with: "what a...!" — "What {{annotation:a|article}} beautiful day!" "What {{annotation:an|article}} interesting story!"',
-          'ONLY with singular countable nouns: "a book" ✓ / "a books" ✗ / "a water" ✗ / "a rice" ✗',
-        ],
-      },
-      {
-        title: "B) Definite Article: THE",
-        points: [
-          'THE: when both speaker and listener know which specific thing — "Please open {{annotation:the|article}} door." (we both know which door)',
-          'Second mention: "I saw {{annotation:a|article}} dog. {{annotation:The|article}} dog was brown." (first mention = a, second mention = the)',
-          'Only one of something: "{{annotation:the|article}} sun, {{annotation:the|article}} moon, {{annotation:the|article}} earth, {{annotation:the|article}} sky, {{annotation:the|article}} internet"',
-          'Superlatives: "{{annotation:the|article}} tallest building, {{annotation:the|article}} best student, {{annotation:the|article}} most beautiful place"',
-          'Ordinals: "{{annotation:the|article}} first time, {{annotation:the|article}} second floor, {{annotation:the|article}} last page"',
-          'With of-phrases: "{{annotation:the|article}} capital of Indonesia, {{annotation:the|article}} color of the sky"',
-          'Musical instruments: "play {{annotation:the|article}} piano, play {{annotation:the|article}} guitar, play {{annotation:the|article}} violin"',
-          'Countries with plural/united/republic: "{{annotation:the|article}} United States, {{annotation:the|article}} Philippines, {{annotation:the|article}} Netherlands"',
-        ],
-      },
-      {
-        title: "C) Zero Article (Tanpa Article)",
-        points: [
-          'General plural nouns: "Dogs are loyal." "Books are expensive." (dogs/books in general, not specific)',
-          'Uncountable nouns in general: "Water is important." "Music makes me happy." "Rice is the main food."',
-          'Meals: "I had breakfast." "Let\'s have lunch." "Dinner is ready."',
-          'Languages: "She speaks English." "I am learning Japanese."',
-          'Sports and games: "I play football." "She plays chess."',
-          'Most countries/cities: "Indonesia is beautiful." "I live in Jakarta." "She went to Paris."',
-          'Academic subjects: "I study mathematics." "She teaches history."',
-          'Home/school/work/bed/church (as concept): "go home", "go to school", "at work", "in bed", "at church"',
-        ],
-      },
-      {
-        title: "D) Determiners: Some, Any, Much, Many",
-        points: [
-          'SOME: positive sentences + offers — "I have {{annotation:some|det}} money." "Would you like {{annotation:some|det}} coffee?"',
-          'ANY: negative + questions — "I don\'t have {{annotation:any|det}} money." "Do you have {{annotation:any|det}} questions?"',
-          'MUCH: uncountable + negative/questions — "I don\'t have {{annotation:much|det}} time." "How {{annotation:much|det}} water do you need?"',
-          'MANY: countable + negative/questions — "There aren\'t {{annotation:many|det}} students." "How {{annotation:many|det}} books do you have?"',
-          'A LOT OF: both countable and uncountable, positive — "I have {{annotation:a lot of|det}} friends." "There is {{annotation:a lot of|det}} rice."',
-          'FEW (almost none) vs A FEW (some): "Few people came." (negative) vs "A few people came." (positive)',
-          'LITTLE (almost none) vs A LITTLE (some): "There is little hope." (negative) vs "There is a little hope." (positive)',
-        ],
-      },
-      {
-        title: "E) Determiners: Each, Every, All, Both, Either, Neither",
-        points: [
-          'EACH: individual items (singular verb) — "{{annotation:Each|det}} student has a book." "{{annotation:Each|det}} of them is responsible."',
-          'EVERY: all items as a group (singular verb) — "{{annotation:Every|det}} student is present." "I go there {{annotation:every|det}} day."',
-          'ALL: the whole amount — "{{annotation:All|det}} students are present." "{{annotation:All|det}} the water is gone."',
-          'BOTH: two things together — "{{annotation:Both|det}} answers are correct." "I like {{annotation:both|det}} tea and coffee."',
-          'EITHER: one of two — "You can take {{annotation:either|det}} road." "{{annotation:Either|det}} option is fine."',
-          'NEITHER: not one, not the other — "{{annotation:Neither|det}} answer is correct." "{{annotation:Neither|det}} of them came."',
-        ],
-      },
-      {
-        title: "F) Common Article Mistakes",
-        points: [
-          'Wrong: "I go to {{annotation:the|wrong}} school every day." → Correct: "I go to school every day." (concept, not building)',
-          'Wrong: "She plays {{annotation:the|wrong}} football." → Correct: "She plays football." (no article with sports)',
-          'Wrong: "I like {{annotation:the|wrong}} music." → Correct: "I like music." (music in general)',
-          'Wrong: "She is teacher." → Correct: "She is {{annotation:a|article}} teacher." (job needs a/an)',
-          'Wrong: "I saw {{annotation:the|wrong}} dog in park." → Correct: "I saw {{annotation:a|article}} dog in {{annotation:a|article}}/{{annotation:the|article}} park."',
-          'Wrong: "{{annotation:The|wrong}} Indonesia is beautiful." → Correct: "Indonesia is beautiful." (no article with most countries)',
-          'Wrong: "I had {{annotation:the|wrong}} breakfast." → Correct: "I had breakfast." (no article with meals)',
-          'Wrong: "He plays piano." → Correct: "He plays {{annotation:the|article}} piano." (article with instruments)',
-        ],
-      },
-    ],
+    materialSections: [],
     exercises: [
       {
-        id: "g9-q1",
+        id: "grev-q1",
         section: "middle",
         type: "multiple-choice",
-        question: '"She is ___ honest person."',
-        options: ["a", "an", "the", "no article"],
-        correctAnswer: "an",
+        question:
+          '🎯 GAME: Pilih jenis verb yang tepat untuk kata "love" dalam kalimat "I love chocolate":',
+        options: [
+          "Dynamic verb",
+          "Stative verb",
+          "Auxiliary verb",
+          "Modal verb",
+        ],
+        correctAnswer: "Stative verb",
         reason:
-          '"Honest" dimulai dengan huruf H yang tidak diucapkan (silent h), bunyinya vokal /ɒ/. Gunakan "an" untuk bunyi vokal.',
+          '"Love" adalah stative verb — menunjukkan perasaan/emosi, bukan aksi fisik. Stative verbs tidak digunakan dalam continuous tense.',
       },
       {
-        id: "g9-q2",
+        id: "grev-q2",
         section: "middle",
         type: "multiple-choice",
-        question: '"I like ___ music."',
-        options: ["a", "an", "the", "no article"],
-        correctAnswer: "no article",
+        question:
+          '🎯 GAME: "She ___ a letter to her mom." Jenis verb apa yang cocok (transitive)?',
+        options: ["sleep", "run", "wrote", "arrived"],
+        correctAnswer: "wrote",
         reason:
-          'Untuk noun bersifat umum/general (musik secara umum), tidak perlu article. "I like music" = saya suka musik secara umum.',
+          '"Wrote" adalah transitive verb karena membutuhkan objek ("a letter"). Sleep, run, arrived adalah intransitive — tidak butuh objek.',
       },
       {
-        id: "g9-q3",
+        id: "grev-q3",
         section: "middle",
         type: "multiple-choice",
-        question: '"She is ___ tallest girl in the class."',
-        options: ["a", "an", "the", "no article"],
-        correctAnswer: "the",
+        question: "🎯 GAME: Mana yang SALAH?",
+        options: [
+          "She is studying English now.",
+          "They have finished the project.",
+          "He must to go home.",
+          "You should be more careful.",
+        ],
+        correctAnswer: "He must to go home.",
         reason:
-          'Superlative selalu menggunakan "the": the tallest, the best, the most beautiful.',
+          'Setelah modal verb TIDAK boleh ada "to". Benar: "He must go home."',
       },
       {
-        id: "g9-q4",
+        id: "grev-q4",
         section: "middle",
         type: "multiple-choice",
-        question: '"I don\'t have ___ money."',
-        options: ["some", "any", "many", "few"],
-        correctAnswer: "any",
+        question: '🎯 GAME: V3 dari "speak" adalah:',
+        options: ["speaked", "spoke", "spoken", "speaking"],
+        correctAnswer: "spoken",
         reason:
-          '"Any" digunakan dalam kalimat negatif (don\'t have any). "Some" untuk kalimat positif.',
+          '"Speak" adalah irregular verb: speak → spoke → spoken. V3 = spoken (digunakan untuk perfect tense & passive).',
       },
       {
-        id: "g9-q5",
+        id: "grev-q5",
+        section: "middle",
+        type: "multiple-choice",
+        question:
+          '🎯 GAME: "She ___ a book to her sister." Identifikasi IO dan DO!',
+        options: [
+          "gave — IO: a book, DO: her sister",
+          "gave — IO: her sister, DO: a book",
+          "gave — hanya 1 objek (monotransitive)",
+          "gave — tidak butuh objek (intransitive)",
+        ],
+        correctAnswer: "gave — IO: her sister, DO: a book",
+        reason:
+          'Formula ditransitive: S + V + IO + DO. "Her sister" = IO (indirect, penerima), "a book" = DO (direct, benda yang diberikan).',
+      },
+      {
+        id: "grev-q6",
+        section: "middle",
+        type: "multiple-choice",
+        question:
+          '🎯 GAME: Semi-modal yang tepat untuk "I must see a doctor" adalah:',
+        options: [
+          "I be going to see a doctor.",
+          "I used to see a doctor.",
+          "I have to see a doctor.",
+          "I am supposed to see a doctor.",
+        ],
+        correctAnswer: "I have to see a doctor.",
+        reason:
+          '"Must" → semi-modal pengganti: "have to" (atau "have got to"). Keduanya bermakna harus.',
+      },
+      {
+        id: "grev-q7",
         section: "final",
         type: "short-answer",
         question:
-          "Fill in with a, an, the, or — (no article): 1) ___ sun rises in ___ east. 2) She is ___ engineer. 3) I play ___ guitar. 4) ___ dogs are loyal animals. 5) I had ___ lunch at noon. 6) ___ United States is a big country. 7) He goes to ___ school by bus. 8) What ___ beautiful day!",
+          "🎮 VERB CHALLENGE — Isi bentuk verb yang tepat:\n1. She ___ (go) to school every day. [V+s/es]\n2. He ___ (study) last night. [V2]\n3. I have ___ (eat) my lunch. [V3]\n4. They are ___ (swim) now. [Ving]\n5. She ___ (not/can) drive. [modal + negasi]\n6. We ___ (finish) before Monday. [modal: harus]\n7. I ___ (cook) dinner when you called. [past continuous]\n8. The report ___ (write) by her yesterday. [passive V2]",
+        correctAnswer:
+          "1. goes  2. studied  3. eaten  4. swimming  5. cannot/can't drive  6. must finish  7. was cooking  8. was written",
       },
       {
-        id: "g9-q6",
+        id: "grev-q8",
         section: "final",
         type: "short-answer",
         question:
-          "Fill in with some/any/much/many/a few/a little: 1) I don't have ___ time. 2) There are ___ students in the class. 3) Would you like ___ coffee? 4) I have ___ friends here (positive, small number). 5) There is ___ milk left (positive, small amount).",
+          "🎮 SENTENCE DOCTOR — Koreksi kalimat yang salah:\n1. She can swims very fast.\n2. He must to finish his homework.\n3. I am loving this movie.\n4. She buyed a new dress yesterday.\n5. They should can help us.\n6. I will going to travel next week.",
+        correctAnswer:
+          "1. She can swim very fast.  2. He must finish his homework.  3. I love this movie. (stative verb)  4. She bought a new dress yesterday.  5. They should be able to help us.  6. I will travel next week. / I am going to travel next week.",
+        reason:
+          "1. Modal+V1 (no -s)  2. Modal+V1 (no 'to')  3. Stative verb tidak pakai -ing  4. buy→bought (irregular)  5. Modal tidak boleh + modal, ganti dengan semi-modal  6. will dan be going to tidak digunakan bersamaan",
       },
       {
-        id: "g9-q7",
+        id: "grev-q9",
         section: "final",
         type: "task",
         question:
-          'Write 15 sentences: 5 using a/an, 5 using "the", and 5 using NO article (zero article). For each sentence, explain WHY you used or didn\'t use the article.',
+          "🎮 STORY TIME — Tulis cerita pendek (8-10 kalimat) tentang hari-harimu. Gunakan minimal:\n• 2 dynamic verb dan 1 stative verb\n• 1 transitive (monotransitive) dan 1 ditransitive (IO+DO)\n• 1 auxiliary (be/have/do)\n• 2 modal verbs berbeda\n• 1 semi-modal\nGaris bawahi setiap verb dan tulis jenisnya di bawah kalimat.",
       },
     ],
   },
@@ -4038,215 +4365,273 @@ const grammarLessons: ModuleLesson[] = [
     track: "grammar",
     day: 10,
     title: "Middle Test — Grammar",
-    subtitle:
-      "Ujian Tengah: Nouns, Pronouns, Adjectives, Adverbs, Verbs, Prepositions, Conjunctions, Articles",
+    subtitle: "Mid-Test Basic Grammar — Titik Nol English Course",
     overview:
-      "Ujian ini mencakup semua materi grammar dari Day 2 (Nouns) sampai Day 9 (Articles & Determiners). Kerjakan semua soal dengan teliti. Selamat mengerjakan!",
+      "Ujian tengah grammar mencakup materi Nouns, Pronouns, Adjectives, Adverbs, dan Verbs. Terdiri dari 2 bagian: A) Choose the correct one (pilihan ganda) dan B) Choose the correct answer (pilih kata yang benar).",
     materialSections: [
       {
         title: "Petunjuk Ujian",
         points: [
-          "Jawab semua soal di bawah ini.",
-          "Multiple choice: pilih jawaban yang paling tepat.",
-          "Short answer: tulis jawaban dengan lengkap.",
-          "Materi yang diujikan: Nouns, Pronouns, Adjectives, Adverbs, Verbs, Prepositions, Conjunctions, Articles & Determiners.",
+          "Bagian A — Choose the correct one: Pilih jawaban a/b/c/d yang paling tepat.",
+          "Bagian B — Choose the correct answer: Pilih satu kata yang benar dari dua pilihan dalam kurung.",
+          "Setiap soal disertai penjelasan jawaban benar dan salah.",
+          "Materi: Adjectives, Adverbs, Nouns (plural/countable), Verbs (auxiliary/linking/ordinary).",
         ],
       },
     ],
     exercises: [
-      // Nouns (Day 2)
+      // ── BAGIAN A: Choose the correct one ──
       {
         id: "gmt-q1",
         type: "multiple-choice",
-        question: "Which of the following is an ABSTRACT noun?",
-        options: ["Table", "Happiness", "Dog", "Jakarta"],
-        correctAnswer: "Happiness",
+        question:
+          'My friends look so gorgeous!\n(Identifikasi jenis kata yang digarisbawahi: "My" dan "gorgeous")',
+        options: [
+          "a. Adverb, noun",
+          "b. Pronoun, adverb",
+          "c. Pronoun, adjective",
+          "d. Adjective, adjective",
+        ],
+        correctAnswer: "d. Adjective, adjective",
         reason:
-          "Abstract noun = kata benda yang tidak berwujud (perasaan, ide). Happiness = kebahagiaan. Table, Dog = concrete noun, Jakarta = proper noun.",
+          '"My" = possessive adjective (limiting adjective) yang menerangkan "friends". "gorgeous" = descriptive adjective yang menerangkan keadaan friends. Keduanya adjective.',
       },
       {
         id: "gmt-q2",
         type: "multiple-choice",
-        question: 'What is the correct plural of "knife"?',
-        options: ["Knifes", "Knifees", "Knives", "Knivs"],
-        correctAnswer: "Knives",
-        reason: "Kata berakhiran -fe, ganti fe → ves: knife → knives.",
+        question:
+          'She drives very carefully because she has had a traumatic car accident.\n(Identifikasi jenis kata: "carefully" dan "traumatic")',
+        options: [
+          "a. Adjective, adjective",
+          "b. Verb, noun",
+          "c. Adjective, adverb",
+          "d. Adverb, adjective",
+        ],
+        correctAnswer: "d. Adverb, adjective",
+        reason:
+          '"carefully" = adverb karena memodifikasi verb "drives" (cara mengemudi). "traumatic" = adjective karena menerangkan noun "car accident".',
       },
       {
         id: "gmt-q3",
         type: "multiple-choice",
         question:
-          '"The ___ is winning the match." Choose the correct collective noun.',
-        options: ["team", "teams", "player", "peoples"],
-        correctAnswer: "team",
+          "Ani has many cakes. She gives ________ cakes to Lely and ________ are given to Sammy.",
+        options: [
+          "a. The other, other",
+          "b. Others, others",
+          "c. Another, other",
+          "d. Other, others",
+        ],
+        correctAnswer: "d. Other, others",
         reason:
-          'Collective noun (kelompok) dianggap tunggal: "The team is winning." Bukan "teams" karena merujuk 1 kelompok.',
+          '"other" + noun (other cakes) = berfungsi sebagai adjective. "others" berdiri sendiri sebagai pronoun/subject pengganti noun. Pola: other + noun vs others (sendirian).',
       },
-      // Pronouns (Day 3)
       {
         id: "gmt-q4",
         type: "multiple-choice",
-        question: '"This book is ___." Choose the correct possessive pronoun.',
-        options: ["my", "me", "mine", "I"],
-        correctAnswer: "mine",
+        question:
+          "She speaks ________ every day so nobody can ________",
+        options: [
+          "a. Fast, understands",
+          "b. Fastly, understand",
+          "c. Quick, understand",
+          "d. Fast, understand",
+        ],
+        correctAnswer: "d. Fast, understand",
         reason:
-          '"Mine" = possessive pronoun yang berdiri sendiri. "My" butuh noun setelahnya.',
+          '"Fast" digunakan langsung sebagai adverb (tidak ada kata "fastly" dalam bahasa Inggris). Setelah modal "can", selalu gunakan base form "understand" tanpa -s.',
       },
       {
         id: "gmt-q5",
         type: "multiple-choice",
         question:
-          '"She taught ___ how to swim." Choose the correct reflexive pronoun.',
-        options: ["her", "herself", "hers", "she"],
-        correctAnswer: "herself",
+          "They are smart ________ so they can ________ high score on IELTS.",
+        options: [
+          "a. Woman, get",
+          "b. Women, gets",
+          "c. Men, get",
+          "d. Man, get",
+        ],
+        correctAnswer: "b. Women, gets",
         reason:
-          'Subject (she) dan object adalah orang yang sama → gunakan reflexive "herself".',
+          '"They" merujuk pada subjek plural → gunakan "women" (plural dari woman). Setelah modal "can", bentuk yang benar adalah base form "get" (bukan "gets"). Namun dalam konteks soal ini, "Women" adalah pilihan noun yang paling tepat untuk "They".',
       },
-      // Adjectives (Day 4)
       {
         id: "gmt-q6",
         type: "multiple-choice",
-        question: 'Which is the correct order? "She has a ___ dress."',
+        question:
+          "Silvia ________ a diligent girl, and she always studies ________ every night.",
         options: [
-          "red beautiful long",
-          "beautiful long red",
-          "long beautiful red",
-          "beautiful red long",
+          "a. Has, quickly",
+          "b. Is, hard",
+          "c. Has, fast",
+          "d. Is, hardly",
         ],
-        correctAnswer: "beautiful long red",
+        correctAnswer: "b. Is, hard",
         reason:
-          "OSASCOMP order: Opinion (beautiful) → Size (long) → Color (red).",
+          '"Silvia IS a diligent girl" → linking verb "is" menghubungkan Silvia dengan complement. "studies HARD" → "hard" sebagai adverb (rajin). BUKAN "hardly" yang artinya "hampir tidak" (negatif).',
       },
       {
         id: "gmt-q7",
         type: "multiple-choice",
-        question: '"Mount Everest is ___ mountain in the world."',
-        options: ["the highest", "higher", "highest", "the higher"],
-        correctAnswer: "the highest",
+        question:
+          "The most common phenomenon in many countries ________ debating about Flat Earth.",
+        options: ["a. Are", "b. Is", "c. Have", "d. Has"],
+        correctAnswer: "b. Is",
         reason:
-          'Superlative (3+ benda) selalu pakai "the" + -est: the highest.',
+          '"Phenomenon" = singular noun (bentuk plural = phenomena). Subject tunggal → verb tunggal "is". Jangan tertipu oleh "many countries" di tengah kalimat.',
       },
-      // Adverbs (Day 5)
       {
         id: "gmt-q8",
         type: "multiple-choice",
-        question: '"She sings ___." Choose the correct adverb.',
-        options: ["beautiful", "beautifully", "beauty", "beautifull"],
-        correctAnswer: "beautifully",
+        question:
+          "The two ________ in the zoo ________ able to communicate their feelings to people.",
+        options: [
+          "a. Deers, are",
+          "b. Deer, are",
+          "c. Deer, is",
+          "d. Deers, be",
+        ],
+        correctAnswer: "b. Deer, are",
         reason:
-          'Setelah verb "sings" butuh adverb. beautiful (adj) + -ly = beautifully (adv).',
+          '"Deer" = irregular noun, bentuk plural SAMA dengan singular (tidak ada "deers"). "The two deer" = plural subject → verb plural "are". "Deers" tidak ada dalam bahasa Inggris.',
       },
       {
         id: "gmt-q9",
         type: "multiple-choice",
-        question: '"I ___ go to school by bus." (setiap hari)',
-        options: ["always", "never", "rarely", "sometimes"],
-        correctAnswer: "always",
+        question:
+          'Jane is pretty beautiful, so she is loved by many boys.\n(Identifikasi jenis kata: "pretty" dan "is")',
+        options: [
+          "a. Adjective, ordinary verb",
+          "b. Adverb, ordinary verb",
+          "c. Adverb, auxiliary verb",
+          "d. Adjective, auxiliary verb",
+        ],
+        correctAnswer: "c. Adverb, auxiliary verb",
         reason:
-          '"Setiap hari" = always (100% frequency). Always diletakkan sebelum main verb.',
+          '"pretty" di sini bukan adjective, melainkan ADVERB yang memodifikasi adjective "beautiful" (artinya: sangat/lumayan cantik). "is" dalam "is loved" = auxiliary verb (passive voice = aux + past participle).',
       },
-      // Verbs (Day 6)
       {
         id: "gmt-q10",
         type: "multiple-choice",
-        question: '"She ___ a teacher." Choose the correct linking verb.',
-        options: ["is", "does", "has", "makes"],
-        correctAnswer: "is",
+        question:
+          "I have ________ information for you, so you must ________ attention.",
+        options: [
+          "a. Much, pay",
+          "b. Many, paid",
+          "c. Much, paid",
+          "d. Many, pay",
+        ],
+        correctAnswer: "a. Much, pay",
         reason:
-          '"Is" = linking verb yang menghubungkan subject dengan complement. She = a teacher.',
+          '"Information" = uncountable noun → gunakan "much" (bukan "many" untuk countable). Setelah modal "must" → base form "pay" (bukan "paid" = past tense).',
       },
+
+      // ── BAGIAN B: Choose the correct answer ──
       {
         id: "gmt-q11",
         type: "multiple-choice",
-        question: '"I ___ swim when I was 5." Choose the correct modal.',
-        options: ["can", "could", "will", "must"],
-        correctAnswer: "could",
+        question:
+          "You drive so ________ that I am afraid someone will hit the car from behind.\n(slow / slowly)",
+        options: ["a. Slow", "b. Slowly"],
+        correctAnswer: "b. Slowly",
         reason:
-          '"Could" = kemampuan di masa lalu (past ability). "Can" = kemampuan sekarang.',
+          '"Drive" = verb → modifier harus berupa adverb. "slow" = adjective, "slowly" = adverb. Pilih slowly.',
       },
-      // Prepositions (Day 7)
       {
         id: "gmt-q12",
         type: "multiple-choice",
-        question: '"The meeting is ___ Monday ___ 3 PM."',
-        options: ["in / at", "on / at", "at / on", "on / in"],
-        correctAnswer: "on / at",
-        reason: '"On" untuk hari (Monday), "at" untuk waktu spesifik (3 PM).',
+        question:
+          "You did that somersault so ________.\n(good / well)",
+        options: ["a. Good", "b. Well"],
+        correctAnswer: "b. Well",
+        reason:
+          '"Did" = verb → butuh adverb. "good" = adjective, "well" = adverb. Pilih well.',
       },
       {
         id: "gmt-q13",
         type: "multiple-choice",
-        question: '"She is afraid ___ spiders."',
-        options: ["from", "of", "with", "about"],
-        correctAnswer: "of",
-        reason: 'Kolokasi tetap: "afraid of" = takut akan sesuatu.',
+        question:
+          "If you do not speak ________, the audience will not understand you.\n(clear / clearly)",
+        options: ["a. Clear", "b. Clearly"],
+        correctAnswer: "b. Clearly",
+        reason:
+          '"Speak" = verb → modifier harus adverb. "clear" = adjective, "clearly" = adverb. Pilih clearly.',
       },
-      // Conjunctions (Day 8)
       {
         id: "gmt-q14",
         type: "multiple-choice",
-        question: '"I wanted to go out, ___ it was raining."',
-        options: ["so", "but", "and", "or"],
-        correctAnswer: "but",
-        reason: '"But" menunjukkan kontras. Ingin keluar TAPI hujan.',
+        question:
+          "Our student ________ sent to Japan for Mathematics Olympiad.\n(was / were)",
+        options: ["a. Was", "b. Were"],
+        correctAnswer: "a. Was",
+        reason:
+          '"Our student" = singular subject → singular past verb "was". "Were" digunakan untuk plural (students) atau I were dalam conditional.',
       },
       {
         id: "gmt-q15",
         type: "multiple-choice",
-        question: '"___ you study harder, you will fail."',
-        options: ["If", "Unless", "Although", "Because"],
-        correctAnswer: "Unless",
+        question:
+          "There ________ much water in the pool.\n(is / are)",
+        options: ["a. Is", "b. Are"],
+        correctAnswer: "a. Is",
         reason:
-          '"Unless" = jika tidak. Kalau kamu tidak belajar lebih giat, kamu akan gagal.',
+          '"Water" = uncountable noun → dianggap singular → gunakan "is". Kata "much" juga mengonfirmasi bahwa water di sini uncountable.',
       },
-      // Articles (Day 9)
       {
         id: "gmt-q16",
         type: "multiple-choice",
-        question: '"She is ___ honest person."',
-        options: ["a", "an", "the", "no article"],
-        correctAnswer: "an",
+        question:
+          "This lesson was less ________, so ________ students took it.\n(interested/interesting) — (few/little)",
+        options: [
+          "a. Interested, few",
+          "b. Interesting, few",
+          "c. Interested, little",
+          "d. Interesting, little",
+        ],
+        correctAnswer: "b. Interesting, few",
         reason:
-          '"Honest" dimulai dengan H silent, bunyinya vokal. Gunakan "an".',
+          'Pelajaran (benda) bisa "interesting" (menarik) bukan "interested" (merasa tertarik, untuk orang). "students" = countable noun → "few" (sedikit). "little" hanya untuk uncountable noun.',
       },
       {
         id: "gmt-q17",
         type: "multiple-choice",
-        question: '"I like ___ music."',
-        options: ["a", "an", "the", "no article"],
-        correctAnswer: "no article",
-        reason: "Musik secara umum (general) tidak perlu article.",
+        question:
+          "They always wear their ________ eyeglasses when they go to the beach.\n(every day / everyday)",
+        options: ["a. Every day", "b. Everyday"],
+        correctAnswer: "b. Everyday",
+        reason:
+          'Sebelum noun "eyeglasses" butuh adjective → "everyday" (satu kata = adjective, artinya sehari-hari). "Every day" = dua kata, berfungsi sebagai adverb of frequency (digunakan di akhir kalimat).',
       },
-      // Short answer
       {
         id: "gmt-q18",
-        type: "short-answer",
+        type: "multiple-choice",
         question:
-          "Ubah ke plural: 1) child  2) tooth  3) party  4) fish  5) knife  6) box  7) woman  8) potato",
+          "A number of students usually ________ a thesis in the eighth semester.\n(takes / take)",
+        options: ["a. Takes", "b. Take"],
+        correctAnswer: "b. Take",
+        reason:
+          '"A number of" = berarti "sejumlah/beberapa" → bermakna plural → verb plural "take". Berbeda dengan "The number of students IS..." (the number = singular).',
       },
       {
         id: "gmt-q19",
-        type: "short-answer",
+        type: "multiple-choice",
         question:
-          "Isi preposition yang benar: 1) I was born ___ 1998.  2) She is good ___ math.  3) He lives ___ Jakarta.  4) We walked ___ the tunnel.  5) I have been here ___ 2020.",
+          "My brother is the ________ of Bristol University.\n(alumni / alumnus)",
+        options: ["a. Alumni", "b. Alumnus"],
+        correctAnswer: "b. Alumnus",
+        reason:
+          '"My brother" = singular → "alumnus" (singular Latin). "Alumni" = plural (bentuk jamak). Contoh: She is an alumna. They are alumni.',
       },
       {
         id: "gmt-q20",
-        type: "short-answer",
+        type: "multiple-choice",
         question:
-          "Isi article (a/an/the/—): 1) ___ sun rises in ___ east.  2) She is ___ engineer.  3) I play ___ guitar.  4) ___ dogs are loyal.  5) I had ___ breakfast.",
-      },
-      {
-        id: "gmt-q21",
-        type: "short-answer",
-        question:
-          "Isi conjunction yang benar: 1) She is smart ___ kind. (both...and)  2) ___ it rained, we went out. (although)  3) Study hard, ___ you will fail. (or)  4) I will wait ___ you come back. (until)",
-      },
-      {
-        id: "gmt-q22",
-        type: "short-answer",
-        question:
-          "Pilih adjective atau adverb: 1) She dances ___ (beautiful/beautifully).  2) The food smells ___ (good/well).  3) He runs ___ (fast/fastly).  4) She is ___ (real/really) smart.  5) The turtle walks ___ (slow/slowly).",
+          "An architect needs a great amount of ________ for this building.\n(equipment / equipments)",
+        options: ["a. Equipment", "b. Equipments"],
+        correctAnswer: "a. Equipment",
+        reason:
+          '"Equipment" = uncountable noun → tidak punya bentuk plural. "Equipments" tidak ada dalam bahasa Inggris. Contoh lain: furniture, information, advice, luggage.',
       },
     ],
   },
@@ -5148,7 +5533,7 @@ const listeningLessons: ModuleLesson[] = [
   {
     id: "listening-9",
     track: "listening",
-    day: 9,
+    day: 10,
     title: "C. For Tourists: Rekreasi, Makan, Cuaca",
     subtitle:
       "Percakapan Sam & Jane: Recreation, Looking for a Place to Eat, The Weather",
@@ -5283,19 +5668,20 @@ const listeningLessons: ModuleLesson[] = [
   {
     id: "listening-10",
     track: "listening",
-    day: 10,
+    day: 9,
     title: "Middle Test — Listening",
-    subtitle: "Ujian Tengah: Comprehension dari semua dialogue Day 2-9",
+    subtitle: "Ujian Tengah Listening — Dengarkan audio lalu jawab soal",
     overview:
-      "Ujian ini menguji pemahaman listening dari semua percakapan Day 2-9. Jawab pertanyaan berdasarkan apa yang kamu ingat dari percakapan Sam dan Jane. Selamat mengerjakan!",
+      "Ujian tengah listening. Dengarkan audio yang disediakan kemudian jawab pertanyaan di bawah ini. Setiap soal disertai jawaban dan alasan.",
+    audioUrl: "",
     materialSections: [
       {
         title: "Petunjuk Ujian",
         points: [
-          "Jawab semua soal berdasarkan percakapan yang sudah kamu dengarkan dari Day 2-9.",
+          "Dengarkan audio middle test dengan seksama.",
+          "Jawab semua soal berdasarkan audio yang diputar.",
           "Multiple choice: pilih jawaban yang paling tepat.",
-          "Short answer: tulis jawaban dengan lengkap.",
-          "Topik: Introduction & Family, Hobbies & Music, Weekend Plans & Jobs, School & Friends, Homework & Education, Travel & Tickets, Airport & Directions, Weather & Food.",
+          "Short answer / task: tulis jawaban dengan lengkap.",
         ],
       },
     ],

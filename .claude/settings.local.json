@@ -9,7 +9,15 @@
       "Bash(export PATH:*)",
       "Bash(python3:*)",
       "Bash(node:*)",
-      "Bash(npm run build:*)"
+      "Bash(npm run build:*)",
+      "Bash(/Users/mm/.nvm/versions/node/v24.12.0/bin/node /Users/mm/.nvm/versions/node/v24.12.0/lib/node_modules/npm/bin/npm-cli.js run build)",
+      "Bash(source:*)",
+      "Bash(/Users/mm/.nvm/versions/node/v24.12.0/bin/npm run build)",
+      "Bash(/Users/mm/.nvm/versions/node/v24.12.0/bin/node --version)",
+      "Bash(npm:*)",
+      "Bash(node_modules/.bin/next build:*)",
+      "Bash(/Users/mm/.nvm/versions/node/v24.12.0/bin/node:*)",
+      "Bash(PATH=\"/Users/mm/.nvm/versions/node/v24.12.0/bin:$PATH\" /Users/mm/.nvm/versions/node/v24.12.0/bin/node:*)"
     ]
   }
 }
