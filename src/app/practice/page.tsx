@@ -38,8 +38,8 @@ const modes = [
   },
   {
     href: '/practice/exams/kisi-kisi-having',
-    title: 'Kisi-Kisi Ujian Having',
-    description: 'Paket kisi-kisi 20 soal dari file d. having (untuk persiapan ujian).',
+    title: 'Kisi-Kisi Mid Test Basic Grammar',
+    description: 'Kisi-kisi persiapan ujian Mid Test Basic Grammar — Adjective, Adverb, Noun, Pronoun, dan Verb.',
     icon: ClipboardList,
     color: 'bg-emerald-500/10 text-emerald-600',
   },
