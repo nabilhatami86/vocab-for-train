@@ -438,6 +438,655 @@ export const grammarExams: GrammarExam[] = [
     ],
   },
   {
+    slug: "tugas-grammar-a1",
+    title: "Tugas Grammar — Articles, Nouns & Pronouns (20 Soal)",
+    description:
+      "Latihan pilihan ganda 20 soal: Articles (a/an/the), Demonstratives, Possessives, Quantifiers, Ordinal/Cardinal Numbers, dan Plural Nouns.",
+    duration: "20 soal",
+    sourcePdf: "",
+    questions: [
+      {
+        id: "ga1_1",
+        question: "She found ___ old coin in the garden.",
+        options: ["a", "an", "the", "some"],
+        correctIndex: 1,
+        reason:
+          "'Old' dimulai dengan bunyi vokal /oʊ/ → pakai article 'an'.",
+      },
+      {
+        id: "ga1_2",
+        question: "___ apples in this basket are fresh.",
+        options: ["This", "That", "These", "A"],
+        correctIndex: 2,
+        reason:
+          "'Apples' adalah plural noun dan ada di dekat pembicara → demonstrative plural 'These'.",
+      },
+      {
+        id: "ga1_3",
+        question: "That bicycle is ___, not mine.",
+        options: ["her", "hers", "she", "herself"],
+        correctIndex: 1,
+        reason:
+          "Possessive pronoun yang berdiri sendiri (tanpa noun sesudahnya) → 'hers'.",
+      },
+      {
+        id: "ga1_4",
+        question: "The room for teachers is called the ___.",
+        options: [
+          "teachers room",
+          "teacher room",
+          "teachers' room",
+          "room teachers",
+        ],
+        correctIndex: 2,
+        reason:
+          "Possessive noun untuk lebih dari satu guru → 'teachers' room' (apostrof setelah -s).",
+      },
+      {
+        id: "ga1_5",
+        question: "___ bag was left in the classroom.",
+        options: ["Sinta", "Sinta bag", "Sinta's", "Sinta's bag"],
+        correctIndex: 3,
+        reason:
+          "Possessive noun + benda yang dimiliki → 'Sinta's bag'.",
+      },
+      {
+        id: "ga1_6",
+        question:
+          "I have ___ time to finish this task, so I must hurry.",
+        options: ["few", "a few", "little", "many"],
+        correctIndex: 2,
+        reason:
+          "'Time' adalah uncountable noun → pakai 'little' (sedikit, tidak cukup).",
+      },
+      {
+        id: "ga1_7",
+        question:
+          "There are ___ chairs in the hall for the guests.",
+        options: ["much", "several", "little", "an amount of"],
+        correctIndex: 1,
+        reason:
+          "'Chairs' adalah countable plural → pakai 'several' (beberapa).",
+      },
+      {
+        id: "ga1_8",
+        question: "We need ___ water to make the soup.",
+        options: ["many", "several", "much", "a few"],
+        correctIndex: 2,
+        reason:
+          "'Water' adalah uncountable noun → pakai 'much'.",
+      },
+      {
+        id: "ga1_9",
+        question: "___ students passed the exam successfully.",
+        options: [
+          "A number of",
+          "The number of",
+          "Much",
+          "An amount of",
+        ],
+        correctIndex: 0,
+        reason:
+          "'A number of' = sejumlah (banyak) → digunakan dengan countable plural noun; verb menyesuaikan plural.",
+      },
+      {
+        id: "ga1_10",
+        question: "___ books on this shelf is fifty.",
+        options: [
+          "A number of",
+          "Several",
+          "The number of",
+          "Many",
+        ],
+        correctIndex: 2,
+        reason:
+          "'The number of' = jumlahnya adalah... → subjek singular, cocok dengan verb 'is'.",
+      },
+      {
+        id: "ga1_11",
+        question: "She bought ___ sugar for the cake.",
+        options: ["many", "several", "a great amount of", "a few"],
+        correctIndex: 2,
+        reason:
+          "'Sugar' adalah uncountable noun → pakai 'a great amount of'.",
+      },
+      {
+        id: "ga1_12",
+        question: "My classroom is on the ___ floor.",
+        options: ["three", "third", "thirtieth", "thirty"],
+        correctIndex: 1,
+        reason:
+          "Lantai dinyatakan dengan ordinal number → 'third' (ketiga).",
+      },
+      {
+        id: "ga1_13",
+        question: "He has ___ brothers and one sister.",
+        options: ["second", "two", "twice", "secondly"],
+        correctIndex: 1,
+        reason:
+          "Jumlah saudara → cardinal number 'two'.",
+      },
+      {
+        id: "ga1_14",
+        question:
+          "___ money in the drawer belongs to my father.",
+        options: ["These", "This", "Those", "A"],
+        correctIndex: 1,
+        reason:
+          "'Money' adalah uncountable noun (diperlakukan singular) → demonstrative singular 'This'.",
+      },
+      {
+        id: "ga1_15",
+        question:
+          "Which sentence shows possessive adjective + noun correctly?",
+        options: [
+          "This is my book.",
+          "This book is my.",
+          "This is book my.",
+          "Book is my this.",
+        ],
+        correctIndex: 0,
+        reason:
+          "Possessive adjective 'my' harus diletakkan sebelum noun: 'my book'. Pilihan B salah karena 'my' tidak boleh di akhir tanpa noun.",
+      },
+      {
+        id: "ga1_16",
+        question:
+          "Rina found three small animals in her garden. The animals have long tails and like bananas. What is the correct sentence?",
+        options: [
+          "Rina found three monkey.",
+          "Rina found three monkeys.",
+          "Rina found three monkies.",
+          "Rina found monkey three.",
+        ],
+        correctIndex: 1,
+        reason:
+          "Plural dari 'monkey' adalah 'monkeys' (tambah -s biasa, bukan -ies).",
+      },
+      {
+        id: "ga1_17",
+        question:
+          "There is only a little sugar left, but there are many cups on the table. Which sentence is correct?",
+        options: [
+          "There is much cups on the table.",
+          "There are much cups on the table.",
+          "There are many cups on the table.",
+          "There is many cup on the table.",
+        ],
+        correctIndex: 2,
+        reason:
+          "'Cups' adalah countable plural → 'many' + 'there are'. 'Much' digunakan untuk uncountable.",
+      },
+      {
+        id: "ga1_18",
+        question:
+          "A student says: \"I have five ___ in my pencil case. They are red and blue.\" What word completes the sentence correctly?",
+        options: ["pencil", "pencils", "penciles", "pencil's"],
+        correctIndex: 1,
+        reason:
+          "Setelah angka 'five' → plural noun 'pencils' (tambah -s).",
+      },
+      {
+        id: "ga1_19",
+        question: "Which sentence is correct?",
+        options: [
+          "She gave the books to they.",
+          "She gave the books to them.",
+          "She gave the books to their.",
+          "She gave the books to theirs.",
+        ],
+        correctIndex: 1,
+        reason:
+          "Setelah preposisi 'to' → object pronoun 'them'.",
+      },
+      {
+        id: "ga1_20",
+        question: "Choose the correct sentence:",
+        options: [
+          "He has two tooth.",
+          "He has two teeth.",
+          "He has two tooths.",
+          "He has two teethe.",
+        ],
+        correctIndex: 1,
+        reason:
+          "Plural irregular dari 'tooth' adalah 'teeth' (bukan 'tooths').",
+      },
+    ],
+  },
+  {
+    slug: "tugas-grammar-a2",
+    title: "Tugas Grammar — Articles, Nouns & Pronouns (15 Soal)",
+    description:
+      "Latihan pilihan ganda 15 soal: Articles (a/an), Demonstratives, Possessives, Quantifiers, Ordinal/Cardinal Numbers.",
+    duration: "15 soal",
+    sourcePdf: "",
+    questions: [
+      {
+        id: "ga2_1",
+        question: "I bought ___ umbrella because it was raining.",
+        options: ["a", "an", "the", "some"],
+        correctIndex: 1,
+        reason:
+          "'Umbrella' dimulai dengan bunyi vokal /ʌ/ → pakai article 'an'.",
+      },
+      {
+        id: "ga2_2",
+        question:
+          "___ books on the table belong to me, not yours.",
+        options: ["This", "That", "These", "Those"],
+        correctIndex: 3,
+        reason:
+          "'Books' adalah plural, dan buku-buku di atas meja (jauh dari pembicara) → demonstrative plural 'Those'.",
+      },
+      {
+        id: "ga2_3",
+        question: "That is ___ house. They live there.",
+        options: ["they", "them", "their", "theirs"],
+        correctIndex: 2,
+        reason:
+          "Possessive adjective sebelum noun 'house' → 'their house'.",
+      },
+      {
+        id: "ga2_4",
+        question: "The waiting room of the train is called a ___.",
+        options: [
+          "station of train",
+          "train's station",
+          "train station",
+          "station train",
+        ],
+        correctIndex: 2,
+        reason:
+          "Compound noun dalam bahasa Inggris → 'train station' (noun pertama sebagai modifier, tanpa apostrof).",
+      },
+      {
+        id: "ga2_5",
+        question: "___ money was lost yesterday.",
+        options: ["Rani", "Rani money", "Rani's", "Rani's money"],
+        correctIndex: 3,
+        reason:
+          "Possessive noun + benda yang dimiliki → 'Rani's money'.",
+      },
+      {
+        id: "ga2_6",
+        question:
+          "I have ___ friends in this city, so I don't feel lonely.",
+        options: ["few", "a few", "little", "much"],
+        correctIndex: 1,
+        reason:
+          "'Friends' adalah countable plural, dan 'a few' = beberapa (cukup, tidak merasa kesepian).",
+      },
+      {
+        id: "ga2_7",
+        question: "There isn't ___ sugar left in the jar.",
+        options: ["many", "a few", "much", "several"],
+        correctIndex: 2,
+        reason:
+          "'Sugar' adalah uncountable noun → pakai 'much' dalam kalimat negatif.",
+      },
+      {
+        id: "ga2_8",
+        question:
+          "___ students are waiting outside the classroom.",
+        options: ["A little", "Much", "Several", "An amount of"],
+        correctIndex: 2,
+        reason:
+          "'Students' adalah countable plural → pakai 'several'.",
+      },
+      {
+        id: "ga2_9",
+        question:
+          "I don't have ___ information about the event.",
+        options: ["many", "a number of", "much", "several"],
+        correctIndex: 2,
+        reason:
+          "'Information' adalah uncountable noun → pakai 'much'.",
+      },
+      {
+        id: "ga2_10",
+        question:
+          "___ people in this room are wearing glasses.",
+        options: [
+          "The number of",
+          "A number of",
+          "An amount of",
+          "Much",
+        ],
+        correctIndex: 1,
+        reason:
+          "'A number of' = sejumlah (banyak) → digunakan dengan countable plural 'people', verb plural.",
+      },
+      {
+        id: "ga2_11",
+        question:
+          "___ students in this class is increasing every year.",
+        options: [
+          "A number of",
+          "Several",
+          "Many",
+          "The number of",
+        ],
+        correctIndex: 3,
+        reason:
+          "'The number of' = jumlahnya → subjek dianggap singular, cocok dengan verb 'is increasing'.",
+      },
+      {
+        id: "ga2_12",
+        question:
+          "She spent ___ money on unnecessary things.",
+        options: ["many", "several", "a great amount of", "a few"],
+        correctIndex: 2,
+        reason:
+          "'Money' adalah uncountable noun → pakai 'a great amount of'.",
+      },
+      {
+        id: "ga2_13",
+        question: "My birthday is on the ___ of July.",
+        options: ["five", "fifth", "fifty", "fifteen"],
+        correctIndex: 1,
+        reason:
+          "Tanggal menggunakan ordinal number → 'fifth' (kelima).",
+      },
+      {
+        id: "ga2_14",
+        question: "She bought ___ chairs for the meeting.",
+        options: ["third", "three", "thirtieth", "thirdly"],
+        correctIndex: 1,
+        reason:
+          "Jumlah kursi → cardinal number 'three'.",
+      },
+      {
+        id: "ga2_15",
+        question:
+          "Which sentence shows numeral adjective + noun correctly?",
+        options: [
+          "One chair is broken.",
+          "Chair one is broken.",
+          "One is chair broken.",
+          "Chair is one broken.",
+        ],
+        correctIndex: 0,
+        reason:
+          "Numeral adjective 'one' diletakkan sebelum noun: 'one chair is broken'.",
+      },
+    ],
+  },
+  {
+    slug: "tugas-pronoun-1",
+    title: "Tugas Pronoun — Pilih Kata yang Tepat (Set 1, 15 Soal)",
+    description:
+      "Pilih pronoun yang benar dari dua pilihan dalam tanda kurung: subject/object pronouns, possessives, reflexive pronouns, dan demonstratives.",
+    duration: "15 soal",
+    sourcePdf: "",
+    questions: [
+      {
+        id: "pp1_1",
+        question: "(She / Her) is my best friend.",
+        options: ["She", "Her"],
+        correctIndex: 0,
+        reason:
+          "Posisi subjek kalimat → subject pronoun 'She'.",
+      },
+      {
+        id: "pp1_2",
+        question: "Please give the book to (I / me).",
+        options: ["I", "me"],
+        correctIndex: 1,
+        reason:
+          "Setelah preposisi 'to' → object pronoun 'me'.",
+      },
+      {
+        id: "pp1_3",
+        question: "(We / Us) are going to the market now.",
+        options: ["We", "Us"],
+        correctIndex: 0,
+        reason:
+          "Posisi subjek kalimat → subject pronoun 'We'.",
+      },
+      {
+        id: "pp1_4",
+        question: "That car is (their / theirs).",
+        options: ["their", "theirs"],
+        correctIndex: 1,
+        reason:
+          "Setelah 'is' tanpa noun setelahnya → possessive pronoun 'theirs' (berdiri sendiri).",
+      },
+      {
+        id: "pp1_5",
+        question: "The teacher called (he / him) yesterday.",
+        options: ["he", "him"],
+        correctIndex: 1,
+        reason:
+          "Posisi objek verb 'called' → object pronoun 'him'.",
+      },
+      {
+        id: "pp1_6",
+        question: "This is (my / mine) pen.",
+        options: ["my", "mine"],
+        correctIndex: 0,
+        reason:
+          "Sebelum noun 'pen' → possessive adjective 'my'.",
+      },
+      {
+        id: "pp1_7",
+        question: "(Those / That) are beautiful flowers.",
+        options: ["Those", "That"],
+        correctIndex: 0,
+        reason:
+          "'Flowers' adalah plural → demonstrative plural 'Those'.",
+      },
+      {
+        id: "pp1_8",
+        question: "My parents love (I / me) very much.",
+        options: ["I", "me"],
+        correctIndex: 1,
+        reason:
+          "Posisi objek verb 'love' → object pronoun 'me'.",
+      },
+      {
+        id: "pp1_9",
+        question:
+          "The students finished the homework by (themselves / their).",
+        options: ["themselves", "their"],
+        correctIndex: 0,
+        reason:
+          "'By themselves' = sendirian/tanpa bantuan → reflexive pronoun 'themselves'.",
+      },
+      {
+        id: "pp1_10",
+        question: "Is this notebook (your / yours)?",
+        options: ["your", "yours"],
+        correctIndex: 1,
+        reason:
+          "Setelah 'is' tanpa noun setelahnya → possessive pronoun 'yours' (berdiri sendiri).",
+      },
+      {
+        id: "pp1_11",
+        question: "(They / Them) live near my house.",
+        options: ["They", "Them"],
+        correctIndex: 0,
+        reason:
+          "Posisi subjek kalimat → subject pronoun 'They'.",
+      },
+      {
+        id: "pp1_12",
+        question:
+          "The manager spoke to (she / her) about the problem.",
+        options: ["she", "her"],
+        correctIndex: 1,
+        reason:
+          "Setelah preposisi 'to' → object pronoun 'her'.",
+      },
+      {
+        id: "pp1_13",
+        question:
+          "Rudi hurt (himself / hisself) while playing football.",
+        options: ["himself", "hisself"],
+        correctIndex: 0,
+        reason:
+          "Reflexive pronoun yang benar adalah 'himself' — 'hisself' bukan kata dalam bahasa Inggris baku.",
+      },
+      {
+        id: "pp1_14",
+        question: "The cat is cleaning (it / itself).",
+        options: ["it", "itself"],
+        correctIndex: 1,
+        reason:
+          "Subjek dan objek sama (the cat membersihkan dirinya sendiri) → reflexive pronoun 'itself'.",
+      },
+      {
+        id: "pp1_15",
+        question:
+          "Sinta and I prepared the food by (ourselves / ourself).",
+        options: ["ourselves", "ourself"],
+        correctIndex: 0,
+        reason:
+          "Reflexive pronoun untuk 'we' (plural) adalah 'ourselves' — 'ourself' tidak digunakan dalam bahasa Inggris baku.",
+      },
+    ],
+  },
+  {
+    slug: "tugas-pronoun-2",
+    title: "Tugas Pronoun — Pilih Kata yang Tepat (Set 2, 15 Soal)",
+    description:
+      "Pilih pronoun yang benar dari pilihan dalam tanda kurung: subject/object pronouns, possessives, reflexive, reciprocal pronouns, dan demonstratives.",
+    duration: "15 soal",
+    sourcePdf: "",
+    questions: [
+      {
+        id: "pp2_1",
+        question: "I come to Pare by (myself / alone).",
+        options: ["myself", "alone"],
+        correctIndex: 0,
+        reason:
+          "'By myself' adalah ekspresi reflexive pronoun yang berarti sendirian/tanpa bantuan orang lain.",
+      },
+      {
+        id: "pp2_2",
+        question: "Dinda asks (I / me) to attend the party.",
+        options: ["I", "me"],
+        correctIndex: 1,
+        reason:
+          "Posisi objek verb 'asks' → object pronoun 'me'.",
+      },
+      {
+        id: "pp2_3",
+        question: "People tell (we / us) about the rules.",
+        options: ["we", "us"],
+        correctIndex: 1,
+        reason:
+          "Posisi objek verb 'tell' → object pronoun 'us'.",
+      },
+      {
+        id: "pp2_4",
+        question:
+          "(They / Them) will not understand the instructions.",
+        options: ["They", "Them"],
+        correctIndex: 0,
+        reason:
+          "Posisi subjek kalimat → subject pronoun 'They'.",
+      },
+      {
+        id: "pp2_5",
+        question: "I do not talk to (he / him).",
+        options: ["he", "him"],
+        correctIndex: 1,
+        reason:
+          "Setelah preposisi 'to' → object pronoun 'him'.",
+      },
+      {
+        id: "pp2_6",
+        question: "Yaya and Yuyu help (each other / one another).",
+        options: ["each other", "one another"],
+        correctIndex: 0,
+        reason:
+          "'Each other' digunakan untuk dua orang yang saling membantu. 'One another' untuk tiga orang atau lebih. Yaya dan Yuyu = dua orang.",
+      },
+      {
+        id: "pp2_7",
+        question: "(This / These) are my books.",
+        options: ["This", "These"],
+        correctIndex: 1,
+        reason:
+          "'Books' adalah plural → demonstrative plural 'These'.",
+      },
+      {
+        id: "pp2_8",
+        question: "That bottle is (your / yours).",
+        options: ["your", "yours"],
+        correctIndex: 1,
+        reason:
+          "Setelah 'is' tanpa noun setelahnya → possessive pronoun 'yours' (berdiri sendiri).",
+      },
+      {
+        id: "pp2_9",
+        question: "I love (she / her) so much.",
+        options: ["she", "her"],
+        correctIndex: 1,
+        reason:
+          "Posisi objek verb 'love' → object pronoun 'her'.",
+      },
+      {
+        id: "pp2_10",
+        question:
+          "Dudung invited ___ and ___ to ___ birthday party. (I/me) and (you/your) to (he/his)",
+        options: [
+          "I, you, his",
+          "me, you, his",
+          "me, your, his",
+          "I, your, he",
+        ],
+        correctIndex: 1,
+        reason:
+          "'Invited me' → object pronoun 'me'; 'invited you' → object pronoun 'you'; 'his birthday party' → possessive adjective 'his' sebelum noun.",
+      },
+      {
+        id: "pp2_11",
+        question: "My sister told (I / me) to clean the room.",
+        options: ["I", "me"],
+        correctIndex: 1,
+        reason:
+          "Posisi objek verb 'told' → object pronoun 'me'.",
+      },
+      {
+        id: "pp2_12",
+        question: "This bag is (my / mine), not yours.",
+        options: ["my", "mine"],
+        correctIndex: 1,
+        reason:
+          "Setelah 'is' tanpa noun setelahnya → possessive pronoun 'mine' (berdiri sendiri).",
+      },
+      {
+        id: "pp2_13",
+        question:
+          "The teacher asked (we / us) to submit the assignment today.",
+        options: ["we", "us"],
+        correctIndex: 1,
+        reason:
+          "Posisi objek verb 'asked' → object pronoun 'us'.",
+      },
+      {
+        id: "pp2_14",
+        question:
+          "Rina does not like (they / them) because they are noisy.",
+        options: ["they", "them"],
+        correctIndex: 1,
+        reason:
+          "Posisi objek verb 'like' → object pronoun 'them'.",
+      },
+      {
+        id: "pp2_15",
+        question:
+          "Andi and Bima always help (each other / themselves) when studying.",
+        options: ["each other", "themselves"],
+        correctIndex: 0,
+        reason:
+          "Andi dan Bima saling membantu satu sama lain (dua orang) → reciprocal pronoun 'each other'. 'Themselves' berarti mereka membantu diri sendiri masing-masing.",
+      },
+    ],
+  },
+  {
     slug: "kisi-kisi-reading-middle-test",
     title: "Kisi-Kisi Reading Middle Test",
     description:

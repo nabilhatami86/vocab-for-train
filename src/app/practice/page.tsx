@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { GraduationCap, Brain, PenLine, RotateCcw, BookCheck, FileText, ClipboardList } from 'lucide-react';
+import { GraduationCap, Brain, PenLine, RotateCcw, BookCheck, FileText, ClipboardList, BookOpen } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Practice',
@@ -14,13 +14,15 @@ const modes = [
     description: 'Test your vocabulary knowledge with multiple choice questions. Choose the correct meaning for each word.',
     icon: Brain,
     color: 'bg-primary/10 text-primary',
+    badge: null,
   },
   {
     href: '/practice/grammar-quiz',
     title: 'Grammar Quiz',
-    description: '25 soal pilihan ganda (ABCD) dari semua part of speech: Nouns, Verbs, Adjectives, Adverbs, Pronouns, Prepositions, Conjunctions, Articles. Lihat skor & penjelasan di akhir!',
+    description: '25 soal pilihan ganda (ABCD) dari semua part of speech: Nouns, Verbs, Adjectives, Adverbs, Pronouns, Prepositions, Conjunctions, Articles.',
     icon: BookCheck,
     color: 'bg-amber-500/10 text-amber-600',
+    badge: null,
   },
   {
     href: '/practice/grammar-evaluator',
@@ -28,34 +30,23 @@ const modes = [
     description: 'Tes grammar 30 soal (A-D) dengan koreksi detail per nomor: rule, error type, corrected sentence, dan extra practice.',
     icon: FileText,
     color: 'bg-fuchsia-500/10 text-fuchsia-600',
+    badge: null,
   },
   {
-    href: '/practice/exams/review-basic-grammar-1-2',
-    title: 'Tugas Review Basic Grammar',
-    description: 'Paket tugas/latihan 30 soal dari file REVIEW BASIC GRAMMAR 1 2 (persiapan ujian).',
-    icon: FileText,
-    color: 'bg-blue-500/10 text-blue-600',
-  },
-  {
-    href: '/practice/exams/kisi-kisi-having',
-    title: 'Kisi-Kisi Mid Test Basic Grammar',
-    description: 'Kisi-kisi persiapan ujian Mid Test Basic Grammar — Adjective, Adverb, Noun, Pronoun, dan Verb.',
+    href: '/practice/tugas-grammar',
+    title: 'Tugas Grammar',
+    description: 'Kumpulan tugas dan kisi-kisi grammar dari tutor: Articles, Nouns, Pronouns, Review Basic Grammar, Mid Test, Reading, dan Speaking.',
     icon: ClipboardList,
-    color: 'bg-emerald-500/10 text-emerald-600',
+    color: 'bg-violet-500/10 text-violet-600',
+    badge: '6 paket',
   },
   {
-    href: '/practice/exams/kisi-kisi-reading-middle-test',
-    title: 'Kisi-Kisi Reading Middle Test',
-    description: 'Latihan reading comprehension topik Hobby and Interest (T/F/NG + vocabulary + detail).',
-    icon: ClipboardList,
+    href: '/practice/kisi-kisi',
+    title: 'Kisi-Kisi Reading & Speaking',
+    description: 'Persiapan Mid Test untuk Reading (comprehension Hobby & Interest) dan Speaking (greeting, identity, family, hobby, dll).',
+    icon: BookOpen,
     color: 'bg-cyan-500/10 text-cyan-700',
-  },
-  {
-    href: '/practice/modules/speaking/10',
-    title: 'Kisi-Kisi Speaking Middle Test',
-    description: 'Practice speaking: greeting, personal identity, education, family, hobby, angka dan waktu.',
-    icon: ClipboardList,
-    color: 'bg-rose-500/10 text-rose-700',
+    badge: '2 paket',
   },
   {
     href: '/practice/fill-blanks',
@@ -63,6 +54,7 @@ const modes = [
     description: 'Complete sentences by typing the missing word. Great for spelling and context practice.',
     icon: PenLine,
     color: 'bg-accent/10 text-accent',
+    badge: null,
   },
   {
     href: '/practice/review',
@@ -70,6 +62,7 @@ const modes = [
     description: 'Flip through vocabulary cards to review words you have learned or need to practice.',
     icon: RotateCcw,
     color: 'bg-success/10 text-success',
+    badge: null,
   },
 ];
 
@@ -95,8 +88,15 @@ export default function PracticePage() {
               href={mode.href}
               className="bg-(--bg-card) border border-(--border) rounded-xl p-6 hover:shadow-lg hover:border-primary/30 transition-all group"
             >
-              <div className={`w-12 h-12 rounded-xl ${mode.color} flex items-center justify-center mb-4`}>
-                <Icon className="w-6 h-6" />
+              <div className="flex items-start justify-between mb-4">
+                <div className={`w-12 h-12 rounded-xl ${mode.color} flex items-center justify-center`}>
+                  <Icon className="w-6 h-6" />
+                </div>
+                {mode.badge && (
+                  <span className="text-xs font-medium px-2 py-0.5 rounded-full bg-(--bg-secondary) text-(--text-secondary) border border-(--border)">
+                    {mode.badge}
+                  </span>
+                )}
               </div>
               <h2 className="text-lg font-semibold text-(--text) group-hover:text-primary transition-colors mb-2">
                 {mode.title}

@@ -3,9 +3,19 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import { ArrowLeft, CheckCircle2, RotateCcw, Trophy, XCircle } from "lucide-react";
+import {
+  ArrowLeft,
+  CheckCircle2,
+  RotateCcw,
+  Trophy,
+  XCircle,
+  BookOpen,
+  AlertCircle,
+} from "lucide-react";
 import { cn } from "@/lib/utils";
 import { grammarExams } from "@/data/grammarExams";
+
+const LABELS = ["A", "B", "C", "D"];
 
 export default function GrammarExamPage() {
   const params = useParams<{ slug: string }>();
@@ -23,8 +33,11 @@ export default function GrammarExamPage() {
   if (!exam) {
     return (
       <div className="p-4 lg:p-6 max-w-3xl mx-auto space-y-4">
-        <Link href="/practice" className="inline-flex items-center gap-1 text-sm text-primary hover:underline">
-          <ArrowLeft className="w-4 h-4" /> Back
+        <Link
+          href="/practice"
+          className="inline-flex items-center gap-1 text-sm text-primary hover:underline"
+        >
+          <ArrowLeft className="w-4 h-4" /> Kembali
         </Link>
         <div className="bg-(--bg-card) border border-(--border) rounded-xl p-6">
           <h1 className="text-xl font-bold text-(--text)">Paket ujian tidak ditemukan</h1>
@@ -35,6 +48,9 @@ export default function GrammarExamPage() {
 
   const total = shuffledQuestions.length;
   const answered = Object.keys(answers).length;
+  const remaining = total - answered;
+  const progress = Math.round((answered / total) * 100);
+
   const score = submitted
     ? shuffledQuestions.filter((q) => answers[q.id] === q.correctIndex).length
     : 0;
@@ -55,81 +71,176 @@ export default function GrammarExamPage() {
     window.location.reload();
   };
 
+  const scoreColor =
+    percent >= 80
+      ? "text-green-600"
+      : percent >= 60
+      ? "text-amber-500"
+      : "text-red-500";
+
+  const scoreBarColor =
+    percent >= 80
+      ? "bg-green-500"
+      : percent >= 60
+      ? "bg-amber-500"
+      : "bg-red-500";
+
   return (
-    <div className="p-4 lg:p-6 max-w-4xl mx-auto space-y-6 animate-fade-in">
-      <div className="flex items-center justify-between">
-        <Link href="/practice" className="inline-flex items-center gap-1 text-sm text-primary hover:underline">
-          <ArrowLeft className="w-4 h-4" /> Back
+    <div className="p-4 lg:p-6 max-w-3xl mx-auto space-y-5 animate-fade-in">
+
+      {/* Top nav */}
+      <div className="flex items-center justify-between gap-4">
+        <Link
+          href="/practice"
+          className="inline-flex items-center gap-1.5 text-sm text-(--text-secondary) hover:text-primary transition-colors"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          Kembali
         </Link>
-        <span className="text-sm text-(--text-secondary)">
+        <span className="text-xs font-medium text-(--text-muted)">
           {answered}/{total} dijawab
         </span>
       </div>
 
-      <div className="bg-(--bg-card) border border-(--border) rounded-2xl p-6">
-        <h1 className="text-2xl font-bold text-(--text)">{exam.title}</h1>
-        <p className="text-sm text-(--text-secondary) mt-1">{exam.description}</p>
-        <p className="text-xs text-(--text-muted) mt-2">Durasi referensi: {exam.duration}</p>
-        <a
-          href={exam.sourcePdf}
-          target="_blank"
-          rel="noreferrer"
-          className="inline-block mt-2 text-xs text-primary hover:underline"
-        >
-          Lihat PDF sumber
-        </a>
+      {/* Progress bar */}
+      {!submitted && (
+        <div className="w-full h-1.5 bg-(--bg-secondary) rounded-full overflow-hidden">
+          <div
+            className="h-full bg-primary rounded-full transition-all duration-300"
+            style={{ width: `${progress}%` }}
+          />
+        </div>
+      )}
 
+      {/* Header card */}
+      <div className="bg-(--bg-card) border border-(--border) rounded-2xl p-5 space-y-3">
+        <div className="flex items-start gap-3">
+          <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+            <BookOpen className="w-5 h-5 text-primary" />
+          </div>
+          <div className="flex-1 min-w-0">
+            <h1 className="text-lg font-bold text-(--text) leading-snug">{exam.title}</h1>
+            <p className="text-xs text-(--text-secondary) mt-0.5">{exam.description}</p>
+          </div>
+        </div>
+
+        <div className="flex flex-wrap gap-2 text-xs">
+          <span className="px-2.5 py-1 rounded-full bg-(--bg-secondary) text-(--text-muted) border border-(--border)">
+            {total} soal
+          </span>
+          {exam.duration && (
+            <span className="px-2.5 py-1 rounded-full bg-(--bg-secondary) text-(--text-muted) border border-(--border)">
+              ± {exam.duration}
+            </span>
+          )}
+          {exam.sourcePdf && (
+            <a
+              href={exam.sourcePdf}
+              target="_blank"
+              rel="noreferrer"
+              className="px-2.5 py-1 rounded-full bg-primary/10 text-primary border border-primary/20 hover:bg-primary/20 transition-colors"
+            >
+              Lihat PDF sumber ↗
+            </a>
+          )}
+        </div>
+
+        {/* Reading passage */}
         {exam.passage && (
-          <div className="mt-4 rounded-xl border border-(--border) bg-(--bg-secondary) p-4">
-            <p className="text-xs font-semibold tracking-wide text-(--text-secondary) mb-2">
+          <div className="rounded-xl border border-(--border) bg-(--bg-secondary) p-4">
+            <p className="text-xs font-bold uppercase tracking-widest text-(--text-muted) mb-3">
               Reading Text
             </p>
-            <div className="space-y-3 text-sm leading-relaxed text-(--text) whitespace-pre-line">
+            <div className="text-sm leading-relaxed text-(--text) whitespace-pre-line">
               {exam.passage}
             </div>
           </div>
         )}
 
+        {/* Vocab list */}
         {exam.vocabList && exam.vocabList.length > 0 && (
-          <div className="mt-4 rounded-xl border border-(--border) bg-(--bg-secondary) p-4">
-            <p className="text-xs font-semibold tracking-wide text-(--text-secondary) mb-2">
+          <div className="rounded-xl border border-(--border) bg-(--bg-secondary) p-4">
+            <p className="text-xs font-bold uppercase tracking-widest text-(--text-muted) mb-3">
               Useful Vocabularies
             </p>
-            <ul className="space-y-1 text-sm text-(--text)">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
               {exam.vocabList.map((item) => (
-                <li key={item.term}>
-                  <span className="font-medium">{item.term}</span>
-                  <span className="text-(--text-secondary)"> = {item.meaning}</span>
-                </li>
+                <div key={item.term} className="flex gap-1.5 text-sm">
+                  <span className="font-semibold text-(--text) shrink-0">{item.term}</span>
+                  <span className="text-(--text-secondary)">= {item.meaning}</span>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
         )}
 
+        {/* Score result */}
         {submitted && (
-          <div className="mt-5 rounded-xl border border-(--border) bg-(--bg-secondary) p-4">
-            <div className="flex items-center gap-2 text-(--text)">
-              <Trophy className="w-5 h-5 text-amber-500" />
-              <span className="font-semibold">
-                Skor: {score}/{total} ({percent}%)
+          <div className="rounded-xl border border-(--border) bg-(--bg-secondary) p-4 space-y-3">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <Trophy className="w-5 h-5 text-amber-500" />
+                <span className="font-bold text-(--text)">Hasil Ujian</span>
+              </div>
+              <span className={cn("text-2xl font-bold", scoreColor)}>
+                {percent}%
               </span>
+            </div>
+            <div className="w-full h-2 bg-(--border) rounded-full overflow-hidden">
+              <div
+                className={cn("h-full rounded-full transition-all duration-500", scoreBarColor)}
+                style={{ width: `${percent}%` }}
+              />
+            </div>
+            <div className="flex justify-between text-xs text-(--text-secondary)">
+              <span>Benar: <span className="font-semibold text-green-600">{score}</span></span>
+              <span>Salah: <span className="font-semibold text-red-500">{total - score}</span></span>
+              <span>Total: <span className="font-semibold text-(--text)">{total}</span></span>
             </div>
           </div>
         )}
       </div>
 
+      {/* Questions */}
       <div className="space-y-4">
         {shuffledQuestions.map((q, idx) => {
           const selected = answers[q.id];
-          return (
-            <section key={q.id} className="bg-(--bg-card) border border-(--border) rounded-xl p-5">
-              <p className="text-sm text-(--text-secondary) mb-2">Soal {idx + 1}</p>
-              <h2 className="font-medium text-(--text) mb-4">{q.question}</h2>
+          const isAnswered = selected !== undefined;
+          const isWrong = submitted && isAnswered && selected !== q.correctIndex;
+          const isRight = submitted && isAnswered && selected === q.correctIndex;
 
-              <div className="space-y-2">
+          return (
+            <section
+              key={q.id}
+              className={cn(
+                "bg-(--bg-card) border rounded-2xl overflow-hidden transition-all",
+                submitted && isWrong && "border-red-300 dark:border-red-800",
+                submitted && isRight && "border-green-300 dark:border-green-800",
+                (!submitted || !isAnswered) && "border-(--border)",
+              )}
+            >
+              {/* Question header */}
+              <div className="px-5 pt-4 pb-3 flex items-start gap-3">
+                <span
+                  className={cn(
+                    "shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold",
+                    submitted && isRight && "bg-green-500 text-white",
+                    submitted && isWrong && "bg-red-500 text-white",
+                    !submitted && "bg-primary/10 text-primary",
+                  )}
+                >
+                  {idx + 1}
+                </span>
+                <p className="font-medium text-(--text) text-sm leading-relaxed pt-0.5">
+                  {q.question}
+                </p>
+              </div>
+
+              {/* Options */}
+              <div className="px-5 pb-4 space-y-2">
                 {q.options.map((opt, i) => {
                   const isSelected = selected === i;
-                  const isCorrect = i === q.correctIndex;
+                  const isCorrectOpt = i === q.correctIndex;
                   return (
                     <button
                       key={`${q.id}-${i}`}
@@ -137,51 +248,75 @@ export default function GrammarExamPage() {
                       onClick={() => handleSelect(q.id, i)}
                       disabled={submitted}
                       className={cn(
-                        "w-full text-left rounded-lg border p-3 text-sm transition-all",
-                        !submitted && "border-(--border) hover:border-primary/40",
-                        !submitted && isSelected && "border-primary bg-primary/10",
-                        submitted && isCorrect && "border-green-500 bg-green-50 dark:bg-green-950/40",
-                        submitted && isSelected && !isCorrect && "border-red-500 bg-red-50 dark:bg-red-950/40",
-                        submitted && !isSelected && !isCorrect && "border-(--border) opacity-70",
+                        "w-full text-left rounded-xl border p-3 text-sm transition-all flex items-center gap-3",
+                        // pre-submit states
+                        !submitted && !isSelected && "border-(--border) hover:border-primary/40 hover:bg-primary/5",
+                        !submitted && isSelected && "border-primary bg-primary/10 text-(--text)",
+                        // post-submit states
+                        submitted && isCorrectOpt && "border-green-500 bg-green-50 dark:bg-green-950/30",
+                        submitted && isSelected && !isCorrectOpt && "border-red-400 bg-red-50 dark:bg-red-950/30",
+                        submitted && !isSelected && !isCorrectOpt && "border-(--border) opacity-50",
                       )}
                     >
-                      <div className="flex items-center justify-between gap-3">
-                        <span>{opt}</span>
-                        {!submitted && isSelected && (
-                          <span className="text-xs font-medium text-primary">Dipilih</span>
+                      {/* Letter label */}
+                      <span
+                        className={cn(
+                          "shrink-0 w-6 h-6 rounded-lg flex items-center justify-center text-xs font-bold",
+                          !submitted && !isSelected && "bg-(--bg-secondary) text-(--text-muted)",
+                          !submitted && isSelected && "bg-primary text-white",
+                          submitted && isCorrectOpt && "bg-green-500 text-white",
+                          submitted && isSelected && !isCorrectOpt && "bg-red-400 text-white",
+                          submitted && !isSelected && !isCorrectOpt && "bg-(--bg-secondary) text-(--text-muted)",
                         )}
-                        {submitted && isCorrect && <CheckCircle2 className="w-4 h-4 text-green-600" />}
-                        {submitted && isSelected && !isCorrect && <XCircle className="w-4 h-4 text-red-600" />}
-                      </div>
+                      >
+                        {LABELS[i]}
+                      </span>
+
+                      <span className="flex-1">{opt}</span>
+
+                      {/* Status icon */}
+                      {submitted && isCorrectOpt && (
+                        <CheckCircle2 className="shrink-0 w-4 h-4 text-green-600" />
+                      )}
+                      {submitted && isSelected && !isCorrectOpt && (
+                        <XCircle className="shrink-0 w-4 h-4 text-red-500" />
+                      )}
                     </button>
                   );
                 })}
               </div>
 
+              {/* Explanation after submit */}
               {submitted && (
-                <div className="mt-3 space-y-1 text-xs">
-                  {selected !== q.correctIndex ? (
-                    <>
-                      <p className="text-red-600 dark:text-red-400">
-                        Koreksi: jawaban kamu salah.
-                      </p>
-                      <p className="text-(--text-secondary)">
-                        Jawaban benar: <span className="font-medium text-(--text)">{q.options[q.correctIndex]}</span>
-                      </p>
-                      <p className="text-(--text-secondary)">
-                        Alasan salah: {q.reason}
-                      </p>
-                    </>
-                  ) : (
-                    <>
-                      <p className="text-green-600 dark:text-green-400">
-                        Jawaban kamu benar.
-                      </p>
-                      <p className="text-(--text-secondary)">
-                        Alasan benar: {q.reason}
-                      </p>
-                    </>
+                <div
+                  className={cn(
+                    "mx-5 mb-4 rounded-xl p-3 text-xs space-y-1.5",
+                    isRight
+                      ? "bg-green-50 dark:bg-green-950/30 border border-green-200 dark:border-green-800"
+                      : "bg-red-50 dark:bg-red-950/30 border border-red-200 dark:border-red-800",
                   )}
+                >
+                  <div className="flex items-center gap-1.5">
+                    {isRight ? (
+                      <>
+                        <CheckCircle2 className="w-3.5 h-3.5 text-green-600 shrink-0" />
+                        <span className="font-semibold text-green-700 dark:text-green-400">
+                          Jawaban benar!
+                        </span>
+                      </>
+                    ) : (
+                      <>
+                        <AlertCircle className="w-3.5 h-3.5 text-red-500 shrink-0" />
+                        <span className="font-semibold text-red-600 dark:text-red-400">
+                          Jawaban salah — yang benar:{" "}
+                          <span className="underline">{q.options[q.correctIndex]}</span>
+                        </span>
+                      </>
+                    )}
+                  </div>
+                  <p className="text-(--text-secondary) leading-relaxed pl-5">
+                    {q.reason}
+                  </p>
                 </div>
               )}
             </section>
@@ -189,27 +324,55 @@ export default function GrammarExamPage() {
         })}
       </div>
 
-      <div className="flex flex-wrap gap-3">
+      {/* Bottom action */}
+      <div className="sticky bottom-4">
         {!submitted ? (
-          <button
-            onClick={handleSubmit}
-            disabled={answered < total}
-            className={cn(
-              "px-4 py-2 rounded-lg text-sm font-medium",
-              answered < total
-                ? "bg-(--bg-secondary) text-(--text-muted) cursor-not-allowed"
-                : "bg-primary text-white hover:bg-primary-dark",
-            )}
-          >
-            Submit Ujian
-          </button>
+          <div className="flex items-center gap-3 bg-(--bg-card) border border-(--border) rounded-2xl p-3 shadow-lg">
+            <div className="flex-1">
+              {remaining > 0 ? (
+                <p className="text-xs text-(--text-secondary)">
+                  Masih <span className="font-semibold text-(--text)">{remaining} soal</span> belum dijawab
+                </p>
+              ) : (
+                <p className="text-xs text-green-600 font-medium">Semua soal sudah dijawab!</p>
+              )}
+              <div className="w-full h-1 bg-(--bg-secondary) rounded-full mt-1 overflow-hidden">
+                <div
+                  className="h-full bg-primary rounded-full transition-all duration-300"
+                  style={{ width: `${progress}%` }}
+                />
+              </div>
+            </div>
+            <button
+              onClick={handleSubmit}
+              disabled={remaining > 0}
+              className={cn(
+                "shrink-0 px-5 py-2 rounded-xl text-sm font-semibold transition-all",
+                remaining > 0
+                  ? "bg-(--bg-secondary) text-(--text-muted) cursor-not-allowed"
+                  : "bg-primary text-white hover:bg-primary-dark shadow-sm",
+              )}
+            >
+              Submit
+            </button>
+          </div>
         ) : (
-          <button
-            onClick={resetQuiz}
-            className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-lg text-sm font-medium hover:bg-primary-dark"
-          >
-            <RotateCcw className="w-4 h-4" /> Ulangi
-          </button>
+          <div className="flex gap-3">
+            <button
+              onClick={resetQuiz}
+              className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 bg-primary text-white rounded-2xl text-sm font-semibold hover:bg-primary-dark transition-colors shadow-sm"
+            >
+              <RotateCcw className="w-4 h-4" />
+              Ulangi
+            </button>
+            <Link
+              href="/practice"
+              className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 bg-(--bg-card) border border-(--border) text-(--text) rounded-2xl text-sm font-semibold hover:bg-(--bg-secondary) transition-colors"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              Kembali
+            </Link>
+          </div>
         )}
       </div>
     </div>
