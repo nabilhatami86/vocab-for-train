@@ -13,6 +13,8 @@ import {
   Palette,
   Wind,
   MessageSquare,
+  MessageCircle,
+  BookMarked,
   Calendar,
   Briefcase,
   X,
@@ -38,6 +40,8 @@ const navItems = [
   { href: "/vocab", label: "All Vocabulary", icon: BookOpen },
   { href: "/favorites", label: "Favorites", icon: Heart },
   { href: "/practice", label: "Practice", icon: GraduationCap },
+  { href: "/practice/conversations", label: "Daily Conversations", icon: MessageCircle },
+  { href: "/grammar-guide", label: "Grammar Guide", icon: BookMarked },
   { href: "/verb", label: "Verb Library", icon: Layers },
   { href: "/tn-basic-cource", label: "TN Basic Cource", icon: BookText },
 ];

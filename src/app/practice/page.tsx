@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { GraduationCap, Brain, PenLine, RotateCcw, BookCheck, FileText, ClipboardList, BookOpen } from 'lucide-react';
+import { GraduationCap, Brain, PenLine, RotateCcw, BookCheck, FileText, ClipboardList, BookOpen, Shuffle, MessageCircle } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Practice',
@@ -15,6 +15,14 @@ const modes = [
     icon: Brain,
     color: 'bg-primary/10 text-primary',
     badge: null,
+  },
+  {
+    href: '/practice/latihan-acak',
+    title: 'Latihan Acak Grammar',
+    description: '20 soal dipilih acak dari 65 bank soal setiap sesi — tidak bisa dihapal! Cakupan: Noun, Pronoun, Adjective, Adverb, dan Verb. Tebak sendiri masuknya kategori mana.',
+    icon: Shuffle,
+    color: 'bg-primary/10 text-primary',
+    badge: '65 bank soal',
   },
   {
     href: '/practice/grammar-quiz',
@@ -47,6 +55,14 @@ const modes = [
     icon: BookOpen,
     color: 'bg-cyan-500/10 text-cyan-700',
     badge: '2 paket',
+  },
+  {
+    href: '/practice/conversations',
+    title: 'Daily Conversations',
+    description: 'Pelajari percakapan sehari-hari di berbagai situasi: restoran, sekolah, belanja, dan rumah sakit. Dilengkapi terjemahan & key expressions.',
+    icon: MessageCircle,
+    color: 'bg-teal-500/10 text-teal-600',
+    badge: '12 dialog',
   },
   {
     href: '/practice/fill-blanks',
