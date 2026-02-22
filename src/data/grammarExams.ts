@@ -1257,4 +1257,239 @@ export const grammarExams: GrammarExam[] = [
       },
     ],
   },
+  {
+    slug: "tugas-grammar-b1",
+    title: "Tugas Grammar — Pilihan Ganda (10 Soal)",
+    description:
+      "Latihan pilihan ganda 10 soal: Adjective, Adverb, Noun, Pronoun, Verb Agreement, dan Quantifier.",
+    duration: "10 soal",
+    sourcePdf: "",
+    questions: [
+      {
+        id: "gb1_1",
+        question:
+          "Her hair looks so smooth. (Identify the part of speech of 'her' and 'smooth')",
+        options: [
+          "Pronoun, adjective",
+          "Adverb, noun",
+          "Adjective, adjective",
+          "Adverb, adverb",
+        ],
+        correctIndex: 0,
+        reason:
+          "'Her' adalah possessive pronoun (kata ganti kepemilikan). 'Smooth' adalah adjective yang mengikuti linking verb 'looks'.",
+      },
+      {
+        id: "gb1_2",
+        question:
+          "She answered the question very quickly because she was nervous. (Identify the part of speech of 'quickly' and 'was')",
+        options: [
+          "Adjective, verb auxiliary",
+          "Verb, noun",
+          "Adverb, verb ordinary",
+          "Adverb, verb auxiliary",
+        ],
+        correctIndex: 3,
+        reason:
+          "'Quickly' adalah adverb yang menerangkan verb 'answered'. 'Was' adalah verb auxiliary (to be) dalam kalimat 'she was nervous'.",
+      },
+      {
+        id: "gb1_3",
+        question:
+          "Rina has two pens. She gives ____ pen to Maya and ____ are for herself.",
+        options: [
+          "other, others",
+          "another, others",
+          "the other, another",
+          "others, other",
+        ],
+        correctIndex: 1,
+        reason:
+          "'Another' digunakan untuk menyebut satu lagi (one more) dari suatu kelompok. 'Others' digunakan untuk merujuk yang tersisa dalam bentuk jamak.",
+      },
+      {
+        id: "gb1_4",
+        question:
+          "He speaks ____ so everyone can ____ him clearly.",
+        options: [
+          "loud, hear",
+          "loudly, hear",
+          "loud, hears",
+          "loudly, hears",
+        ],
+        correctIndex: 1,
+        reason:
+          "'Speaks' adalah action verb, jadi butuh adverb: 'loudly'. Setelah modal 'can' pakai base form verb: 'hear'.",
+      },
+      {
+        id: "gb1_5",
+        question:
+          "They is dilligent ____ so they can ____ very clearly in the class.",
+        options: [
+          "woman, explains",
+          "women, explain",
+          "man, explain",
+          "men, explains",
+        ],
+        correctIndex: 2,
+        reason:
+          "Jawaban yang benar adalah 'man, explain'. Setelah modal 'can' pakai base form verb tanpa -s: 'explain'.",
+      },
+      {
+        id: "gb1_6",
+        question:
+          "Andi ____ a good student, and he studies very ____.",
+        options: [
+          "is, hard",
+          "are, hard",
+          "is, hardly",
+          "are, hardly",
+        ],
+        correctIndex: 0,
+        reason:
+          "Subjek 'Andi' singular → pakai 'is'. 'Hard' di sini adalah adverb (belajar dengan keras). 'Hardly' berarti 'hampir tidak', artinya berbeda.",
+      },
+      {
+        id: "gb1_7",
+        question:
+          "The news about the accident ____ very shocking.",
+        options: ["are", "were", "is", "be"],
+        correctIndex: 2,
+        reason:
+          "'News' adalah uncountable noun yang selalu dianggap singular, jadi pakai 'is'.",
+      },
+      {
+        id: "gb1_8",
+        question:
+          "The sheep in the field ____ eating grass now.",
+        options: ["is", "are", "was", "be"],
+        correctIndex: 1,
+        reason:
+          "'Sheep' bisa singular atau plural. 'The sheep in the field' mengacu pada kawanan (plural) → pakai 'are'.",
+      },
+      {
+        id: "gb1_9",
+        question:
+          "Jessica is a pretty girl, no wonder every man likes her. (Identify the part of speech of 'pretty' and 'likes')",
+        options: [
+          "Adjective, verb auxiliary",
+          "Adverb, verb auxiliary",
+          "Adjective, verb ordinary",
+          "Adverb, verb ordinary",
+        ],
+        correctIndex: 2,
+        reason:
+          "'Pretty' adalah adjective yang menerangkan noun 'girl'. 'Likes' adalah verb ordinary (action/state verb, bukan to be atau modal).",
+      },
+      {
+        id: "gb1_10",
+        question:
+          "I don't have ____ money, so I cannot buy the bag.",
+        options: ["many", "much", "a few", "a little"],
+        correctIndex: 1,
+        reason:
+          "'Money' adalah uncountable noun. Dalam kalimat negatif dengan uncountable noun → pakai 'much'. 'Many' untuk countable, 'a few' untuk countable, 'a little' untuk positive uncountable.",
+      },
+    ],
+  },
+  {
+    slug: "tugas-grammar-b2",
+    title: "Tugas Grammar — Isian Singkat (10 Soal)",
+    description:
+      "Latihan isian singkat 10 soal: Adverb vs Adjective, Subject-Verb Agreement, Countable/Uncountable Noun, dan Word Choice.",
+    duration: "10 soal",
+    sourcePdf: "",
+    questions: [
+      {
+        id: "gb2_1",
+        question:
+          "He runs so ____ that he missed the bus. (slow / slowly)",
+        options: ["slow", "slowly"],
+        correctIndex: 1,
+        reason:
+          "'Runs' adalah action verb → butuh adverb. Jawaban: 'slowly'.",
+      },
+      {
+        id: "gb2_2",
+        question:
+          "She sings very ____. (beautiful / beautifully)",
+        options: ["beautiful", "beautifully"],
+        correctIndex: 1,
+        reason:
+          "'Sings' adalah action verb → butuh adverb. Jawaban: 'beautifully'.",
+      },
+      {
+        id: "gb2_3",
+        question:
+          "The teacher's room ____ near my classroom. (is / are)",
+        options: ["is", "are"],
+        correctIndex: 0,
+        reason:
+          "Subjek 'The teacher's room' adalah singular (satu ruangan) → pakai 'is'.",
+      },
+      {
+        id: "gb2_4",
+        question:
+          "There ____ some milk in the fridge. (is / are)",
+        options: ["is", "are"],
+        correctIndex: 0,
+        reason:
+          "'Milk' adalah uncountable noun → dianggap singular → pakai 'is'.",
+      },
+      {
+        id: "gb2_5",
+        question:
+          "The movie is very ____. (boring / bored)",
+        options: ["boring", "bored"],
+        correctIndex: 0,
+        reason:
+          "Subjek 'the movie' adalah benda/hal yang menyebabkan perasaan → pakai '-ing' adjective: 'boring'. 'Bored' dipakai untuk orang yang merasakan kebosanan.",
+      },
+      {
+        id: "gb2_6",
+        question:
+          "They go jogging ____. (every day / everyday)",
+        options: ["every day", "everyday"],
+        correctIndex: 0,
+        reason:
+          "'Every day' (dua kata) adalah adverb of frequency yang berarti 'setiap hari'. 'Everyday' (satu kata) adalah adjective yang berarti 'biasa/sehari-hari' (everyday life).",
+      },
+      {
+        id: "gb2_7",
+        question:
+          "The number of students ____ absent today. (is / are)",
+        options: ["is", "are"],
+        correctIndex: 0,
+        reason:
+          "'The number of ...' → subjek utamanya adalah 'The number' yang singular → pakai 'is'. Beda dengan 'A number of ...' yang pakai 'are'.",
+      },
+      {
+        id: "gb2_8",
+        question:
+          "We need a lot of ____. (information / informations)",
+        options: ["information", "informations"],
+        correctIndex: 0,
+        reason:
+          "'Information' adalah uncountable noun → tidak ada bentuk plural 'informations'. Selalu pakai 'information'.",
+      },
+      {
+        id: "gb2_9",
+        question:
+          "My boss has a lot of ____ for this company. (data / datum)",
+        options: ["data", "datum"],
+        correctIndex: 0,
+        reason:
+          "'Data' adalah bentuk plural dari 'datum', dan dalam penggunaan modern 'data' adalah bentuk standar yang dipakai sebagai uncountable/plural. 'Datum' sangat jarang dipakai.",
+      },
+      {
+        id: "gb2_10",
+        question:
+          "Her students ____ to the museum in Malang. (visit / visits)",
+        options: ["visit", "visits"],
+        correctIndex: 0,
+        reason:
+          "Subjek 'Her students' adalah plural → pakai base form tanpa -s: 'visit'. 'Visits' hanya untuk singular (he/she/it).",
+      },
+    ],
+  },
 ];

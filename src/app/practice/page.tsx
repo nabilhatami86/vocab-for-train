@@ -19,10 +19,10 @@ const modes = [
   {
     href: '/practice/latihan-acak',
     title: 'Latihan Acak Grammar',
-    description: '20 soal dipilih acak dari 65 bank soal setiap sesi — tidak bisa dihapal! Cakupan: Noun, Pronoun, Adjective, Adverb, dan Verb. Tebak sendiri masuknya kategori mana.',
+    description: '20 soal dipilih acak dari 88 bank soal setiap sesi — tidak bisa dihapal! Cakupan: Parts of Speech, Verb Agreement, Adj vs Adv, Another/Other, Quantifier, Pronoun.',
     icon: Shuffle,
     color: 'bg-primary/10 text-primary',
-    badge: '65 bank soal',
+    badge: '88 bank soal',
   },
   {
     href: '/practice/grammar-quiz',

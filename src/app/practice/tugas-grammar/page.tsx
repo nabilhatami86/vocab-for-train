@@ -78,6 +78,28 @@ const groups: { group: string; labelColor: string; items: TaskItem[] }[] = [
         badge: '30 soal',
         tags: ['Adjective', 'Adverb', 'Noun', 'Verb', 'Mixed'],
       },
+      {
+        href: '/practice/exams/tugas-grammar-b1',
+        title: 'Tugas Grammar — Pilihan Ganda (10 Soal)',
+        description:
+          'Latihan pilihan ganda 10 soal: Adjective, Adverb, Noun, Pronoun, Verb Agreement, dan Quantifier.',
+        icon: ClipboardList,
+        accentColor: 'bg-orange-500',
+        iconBg: 'bg-orange-500/10 text-orange-600',
+        badge: '10 soal',
+        tags: ['Adjective', 'Adverb', 'Verb Agreement', 'Quantifier'],
+      },
+      {
+        href: '/practice/exams/tugas-grammar-b2',
+        title: 'Tugas Grammar — Isian Singkat (10 Soal)',
+        description:
+          'Pilih kata yang tepat dalam kurung: Adverb vs Adjective, Subject-Verb Agreement, Countable/Uncountable Noun.',
+        icon: ClipboardList,
+        accentColor: 'bg-orange-600',
+        iconBg: 'bg-orange-600/10 text-orange-700',
+        badge: '10 soal',
+        tags: ['Adverb vs Adjective', 'Verb Agreement', 'Uncountable Noun'],
+      },
     ],
   },
   {
