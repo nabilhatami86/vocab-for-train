@@ -10,6 +10,7 @@ import {
   Zap,
   Calendar,
   Target,
+  AlertTriangle,
 } from 'lucide-react';
 import { vocabulary, categories } from '@/data/vocabulary';
 import { useVocabStore } from '@/store/useVocabStore';
@@ -22,10 +23,29 @@ export default function Dashboard() {
   const learnedWords = useVocabStore((s) => s.learnedWords);
   const favorites = useVocabStore((s) => s.favorites);
   const quizScores = useVocabStore((s) => s.quizScores);
+  const grammarScores = useVocabStore((s) => s.grammarScores);
 
   const dailyWord = getDailyWord(vocabulary);
   const recentWords = vocabulary.slice(0, 4);
   const lastQuiz = quizScores[quizScores.length - 1];
+
+  // Hitung akurasi per topik dari riwayat grammarScores
+  const topicAccuracy = grammarScores.reduce<Record<string, { correct: number; total: number }>>(
+    (acc, s) => {
+      if (!acc[s.topic]) acc[s.topic] = { correct: 0, total: 0 };
+      acc[s.topic].correct += s.score;
+      acc[s.topic].total += s.total;
+      return acc;
+    },
+    {}
+  );
+
+  // Topik lemah: sudah dikerjakan >= 3 soal dan akurasi < 60%, max 3 terlemah
+  const grammarQuizTopics = new Set(['Nouns', 'Verbs', 'Adjectives', 'Adverbs', 'Pronouns', 'Prepositions', 'Conjunctions', 'Articles', 'Mixed']);
+  const weakTopics = Object.entries(topicAccuracy)
+    .filter(([, v]) => v.total >= 3 && v.correct / v.total < 0.6)
+    .sort((a, b) => a[1].correct / a[1].total - b[1].correct / b[1].total)
+    .slice(0, 3);
 
   const stats = [
     {
@@ -162,6 +182,51 @@ export default function Dashboard() {
           </div>
         </div>
       </div>
+
+      {/* Rekomendasi Topik Lemah */}
+      {weakTopics.length > 0 && (
+        <div className="bg-(--bg-card) border border-amber-300 dark:border-amber-700 rounded-xl p-5">
+          <h2 className="text-lg font-semibold text-(--text) mb-1 flex items-center gap-2">
+            <AlertTriangle className="w-5 h-5 text-amber-500" />
+            Perlu Ditingkatkan
+          </h2>
+          <p className="text-sm text-(--text-secondary) mb-4">
+            Berdasarkan riwayat quiz kamu, topik-topik ini masih kurang — yuk latihan lagi!
+          </p>
+          <div className="space-y-3">
+            {weakTopics.map(([topic, { correct, total }]) => {
+              const acc = Math.round((correct / total) * 100);
+              const href = grammarQuizTopics.has(topic)
+                ? '/practice/grammar-quiz'
+                : '/practice/latihan-acak';
+              return (
+                <div key={topic} className="flex items-center gap-3">
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center justify-between mb-1">
+                      <span className="text-sm font-medium text-(--text)">{topic}</span>
+                      <span className={`text-xs font-semibold ${acc < 40 ? 'text-red-500' : 'text-amber-500'}`}>
+                        {acc}%
+                      </span>
+                    </div>
+                    <div className="h-1.5 bg-(--bg-secondary) rounded-full overflow-hidden">
+                      <div
+                        className={`h-full rounded-full ${acc < 40 ? 'bg-red-500' : 'bg-amber-500'}`}
+                        style={{ width: `${acc}%` }}
+                      />
+                    </div>
+                  </div>
+                  <Link
+                    href={href}
+                    className="shrink-0 px-3 py-1.5 text-xs font-semibold bg-primary/10 text-primary rounded-lg hover:bg-primary/20 transition-colors"
+                  >
+                    Latihan →
+                  </Link>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
 
       {/* Categories */}
       <div>

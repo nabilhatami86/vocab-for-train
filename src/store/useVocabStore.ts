@@ -18,6 +18,10 @@ interface VocabState {
   quizScores: { date: string; score: number; total: number }[];
   addQuizScore: (score: number, total: number) => void;
 
+  // Grammar scores per topic (persisted)
+  grammarScores: { date: string; topic: string; score: number; total: number }[];
+  addGrammarScore: (topic: string, score: number, total: number) => void;
+
   // Filters
   selectedCategory: Category | null;
   selectedDifficulty: Difficulty | null;
@@ -72,6 +76,16 @@ export const useVocabStore = create<VocabState>()(
           ],
         })),
 
+      // Grammar scores per topic
+      grammarScores: [],
+      addGrammarScore: (topic, score, total) =>
+        set((state) => ({
+          grammarScores: [
+            ...state.grammarScores,
+            { date: new Date().toISOString(), topic, score, total },
+          ],
+        })),
+
       // Filters
       selectedCategory: null,
       selectedDifficulty: null,
@@ -97,6 +111,7 @@ export const useVocabStore = create<VocabState>()(
         favorites: state.favorites,
         learnedWords: state.learnedWords,
         quizScores: state.quizScores,
+        grammarScores: state.grammarScores,
         theme: state.theme,
       }),
     }

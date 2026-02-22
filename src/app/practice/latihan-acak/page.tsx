@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { grammarQuestionPool } from "@/data/randomGrammarQuiz";
+import { useVocabStore } from "@/store/useVocabStore";
 
 const LABELS = ["A", "B", "C", "D"];
 const SESSION_SIZE = 20;
@@ -27,6 +28,7 @@ export default function LatihanAcakPage() {
   const [sessionKey, setSessionKey] = useState(0);
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [submitted, setSubmitted] = useState(false);
+  const addGrammarScore = useVocabStore((s) => s.addGrammarScore);
 
   // Re-pick random questions every time sessionKey changes
   const questions = useMemo(() => pickRandom(), [sessionKey]);
@@ -49,6 +51,16 @@ export default function LatihanAcakPage() {
   const handleSubmit = () => {
     if (remaining > 0) return;
     setSubmitted(true);
+    // Save per-topic scores to store
+    const topicMap: Record<string, { score: number; total: number }> = {};
+    questions.forEach((q) => {
+      if (!topicMap[q.topic]) topicMap[q.topic] = { score: 0, total: 0 };
+      topicMap[q.topic].total++;
+      if (answers[q.id] === q.correctIndex) topicMap[q.topic].score++;
+    });
+    Object.entries(topicMap).forEach(([topic, { score, total }]) => {
+      addGrammarScore(topic, score, total);
+    });
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 

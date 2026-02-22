@@ -4,6 +4,7 @@ import { useState, useMemo } from 'react';
 import Link from 'next/link';
 import { ArrowLeft, Trophy, RotateCcw, CheckCircle2, XCircle, Lightbulb, ChevronDown, ChevronUp } from 'lucide-react';
 import { shuffleArray, cn } from '@/lib/utils';
+import { useVocabStore } from '@/store/useVocabStore';
 
 // ════════════════════════════════════════════════════════════════
 //  25 Grammar Quiz Questions — All 8 Parts of Speech + Mixed
@@ -211,6 +212,7 @@ export default function GrammarQuizPage() {
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [showDetails, setShowDetails] = useState(false);
+  const addGrammarScore = useVocabStore((s) => s.addGrammarScore);
 
   const startQuiz = (topicKey: string) => {
     const filtered = topicKey === 'all'
@@ -233,6 +235,16 @@ export default function GrammarQuizPage() {
 
   const handleSubmit = () => {
     if (answeredCount < totalQuestions) return;
+    // Save per-topic scores to store
+    const topicMap: Record<string, { score: number; total: number }> = {};
+    questions.forEach((q) => {
+      if (!topicMap[q.topic]) topicMap[q.topic] = { score: 0, total: 0 };
+      topicMap[q.topic].total++;
+      if (answers[q.id] === q.correctIndex) topicMap[q.topic].score++;
+    });
+    Object.entries(topicMap).forEach(([topic, { score, total }]) => {
+      addGrammarScore(topic, score, total);
+    });
     setIsSubmitted(true);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
