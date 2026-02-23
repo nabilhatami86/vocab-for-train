@@ -29,6 +29,7 @@ export default function ModuleLessonClient({ lesson }: Props) {
   const [isTranslating, setIsTranslating] = useState(false);
   const [translationError, setTranslationError] = useState<string>('');
   const [translationCache, setTranslationCache] = useState<Record<string, TranslationResult>>({});
+  const [blockText, setBlockText] = useState<string>('');
   const [blankAnswers, setBlankAnswers] = useState<Record<string, string>>({});
   const [blankChecked, setBlankChecked] = useState<Record<string, boolean>>({});
 
@@ -56,10 +57,43 @@ export default function ModuleLessonClient({ lesson }: Props) {
     window.speechSynthesis.speak(u);
   }, []);
 
+  const handlePassageMouseUp = useCallback(async () => {
+    const sel = window.getSelection();
+    const text = sel?.toString().trim().replace(/\s+/g, ' ');
+    if (!text || text.split(/\s+/).length < 2) return;
+
+    const displayText = text.length > 50 ? text.slice(0, 50) + '…' : text;
+    setSelectedWord(displayText);
+    setBlockText(text);
+    setTranslationError('');
+
+    if (translationCache[text]) {
+      setTranslation(translationCache[text]);
+      return;
+    }
+
+    setIsTranslating(true);
+    setTranslation(null);
+
+    try {
+      const res = await fetch(`/api/translate?text=${encodeURIComponent(text)}`);
+      const data = await res.json();
+      if (!data.translated) throw new Error('no translation');
+      const result: TranslationResult = { translated: data.translated };
+      setTranslation(result);
+      setTranslationCache((prev) => ({ ...prev, [text]: result }));
+    } catch {
+      setTranslationError('Terjemahan gagal dimuat.');
+    } finally {
+      setIsTranslating(false);
+    }
+  }, [translationCache]);
+
   const translateWord = useCallback(async (word: string) => {
     const cleaned = word.toLowerCase().replace(/^'+|'+$/g, '');
     if (!cleaned) return;
 
+    setBlockText('');
     setSelectedWord(cleaned);
     setTranslationError('');
 
@@ -203,7 +237,7 @@ export default function ModuleLessonClient({ lesson }: Props) {
   }, [renderClickableText]);
 
   return (
-    <div className="p-4 lg:p-6 max-w-4xl mx-auto space-y-6 animate-fade-in">
+    <div className="p-4 lg:p-6 max-w-4xl mx-auto space-y-6 animate-fade-in" onMouseUp={handlePassageMouseUp} onTouchEnd={handlePassageMouseUp}>
       <div className="flex items-center justify-between">
         <Link href="/tn-basic-cource" className="inline-flex items-center gap-1 text-sm text-primary hover:underline">
           <ArrowLeft className="w-4 h-4" /> Back to TN Basic Cource
@@ -1145,14 +1179,16 @@ export default function ModuleLessonClient({ lesson }: Props) {
             <div className="flex items-center gap-2 min-w-0">
               <Languages className="w-4 h-4 text-primary shrink-0" />
               <p className="text-base font-bold text-(--text) truncate">{selectedWord}</p>
-              <button
-                type="button"
-                onClick={() => speakWord(selectedWord)}
-                className="p-1 rounded-full hover:bg-primary/10 transition-colors shrink-0"
-                aria-label="Pronounce word"
-              >
-                <Volume2 className="w-4 h-4 text-primary" />
-              </button>
+              {!blockText && (
+                <button
+                  type="button"
+                  onClick={() => speakWord(selectedWord)}
+                  className="p-1 rounded-full hover:bg-primary/10 transition-colors shrink-0"
+                  aria-label="Pronounce word"
+                >
+                  <Volume2 className="w-4 h-4 text-primary" />
+                </button>
+              )}
             </div>
             <button
               type="button"
@@ -1160,6 +1196,7 @@ export default function ModuleLessonClient({ lesson }: Props) {
                 setSelectedWord(null);
                 setTranslation(null);
                 setTranslationError('');
+                setBlockText('');
               }}
               className="p-1 rounded hover:bg-(--hover) shrink-0"
               aria-label="Close translation"
