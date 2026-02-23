@@ -19,7 +19,10 @@
       "Bash(/Users/mm/.nvm/versions/node/v24.12.0/bin/node:*)",
       "Bash(PATH=\"/Users/mm/.nvm/versions/node/v24.12.0/bin:$PATH\" /Users/mm/.nvm/versions/node/v24.12.0/bin/node:*)",
       "Bash(npx tsc:*)",
-      "Bash(wc:*)"
+      "Bash(wc:*)",
+      "Bash(/Users/mm/Desktop/vocab/node_modules/.bin/tsc:*)",
+      "Bash(node_modules/.bin/tsc:*)",
+      "Bash(/usr/local/bin/node node_modules/.bin/tsc:*)"
     ]
   }
 }

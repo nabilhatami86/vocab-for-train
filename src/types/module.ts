@@ -26,6 +26,7 @@ export interface ModuleLesson {
   title: string;
   subtitle: string;
   overview: string;
+  tutor?: string;
   passage?: string[];
   audioUrl?: string;
   audioTracks?: {

@@ -18,11 +18,12 @@ import {
   Calendar,
   Briefcase,
   X,
+  ScrollText,
+  Languages,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useVocabStore } from "@/store/useVocabStore";
 import { categories } from "@/data/vocabulary";
-import type { Category } from "@/types/vocab";
 import Image from "next/image";
 
 const iconMap: Record<string, React.ElementType> = {
@@ -35,15 +36,39 @@ const iconMap: Record<string, React.ElementType> = {
   Briefcase,
 };
 
-const navItems = [
-  { href: "/", label: "Dashboard", icon: Home },
-  { href: "/vocab", label: "All Vocabulary", icon: BookOpen },
-  { href: "/favorites", label: "Favorites", icon: Heart },
-  { href: "/practice", label: "Practice", icon: GraduationCap },
-  { href: "/practice/conversations", label: "Daily Conversations", icon: MessageCircle },
-  { href: "/grammar-guide", label: "Grammar Guide", icon: BookMarked },
-  { href: "/verb", label: "Verb Library", icon: Layers },
-  { href: "/tn-basic-cource", label: "TN Basic Cource", icon: BookText },
+type NavItem = { href: string; label: string; icon: React.ElementType };
+
+const navSections: { title: string; items: NavItem[] }[] = [
+  {
+    title: "",
+    items: [
+      { href: "/", label: "Dashboard", icon: Home },
+    ],
+  },
+  {
+    title: "Learning",
+    items: [
+      { href: "/vocab", label: "All Vocabulary", icon: BookOpen },
+      { href: "/verb", label: "Verb Library", icon: Layers },
+      { href: "/grammar-guide", label: "Grammar Guide", icon: BookMarked },
+      { href: "/story", label: "Stories & Readings", icon: ScrollText },
+    ],
+  },
+  {
+    title: "Practice",
+    items: [
+      { href: "/practice", label: "Practice", icon: GraduationCap },
+      { href: "/practice/conversations", label: "Daily Conversations", icon: MessageCircle },
+      { href: "/tn-basic-cource", label: "TN Basic Course", icon: BookText },
+    ],
+  },
+  {
+    title: "Tools",
+    items: [
+      { href: "/translate", label: "Translate", icon: Languages },
+      { href: "/favorites", label: "Favorites", icon: Heart },
+    ],
+  },
 ];
 
 export function Sidebar() {
@@ -89,7 +114,7 @@ export function Sidebar() {
               />
             </div>
             <span className="font-bold text-lg text-(--text)">
-              TitikNolJourney{" "}
+              TitikNolJourney
             </span>
           </Link>
           <button
@@ -102,34 +127,43 @@ export function Sidebar() {
 
         {/* Navigation */}
         <nav className="flex-1 overflow-y-auto p-3">
-          <div className="space-y-1">
-            {navItems.map((item) => {
-              const Icon = item.icon;
-              return (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  onClick={() => setSidebarOpen(false)}
-                  className={cn(
-                    "flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors",
-                    isActive(item.href)
-                      ? "bg-primary text-white"
-                      : "text-(--text-secondary) hover:bg-(--hover) hover:text-(--text)",
-                  )}
-                >
-                  <Icon className="w-5 h-5 shrink-0" />
-                  {item.label}
-                </Link>
-              );
-            })}
-          </div>
+          {navSections.map((section) => (
+            <div key={section.title} className={section.title ? "mt-5" : ""}>
+              {section.title && (
+                <p className="px-3 text-xs font-semibold text-(--text-muted) uppercase tracking-wider mb-1.5">
+                  {section.title}
+                </p>
+              )}
+              <div className="space-y-0.5">
+                {section.items.map((item) => {
+                  const Icon = item.icon;
+                  return (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      onClick={() => setSidebarOpen(false)}
+                      className={cn(
+                        "flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors",
+                        isActive(item.href)
+                          ? "bg-primary text-white"
+                          : "text-(--text-secondary) hover:bg-(--hover) hover:text-(--text)",
+                      )}
+                    >
+                      <Icon className="w-5 h-5 shrink-0" />
+                      {item.label}
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
+          ))}
 
           {/* Categories */}
-          <div className="mt-6">
-            <p className="px-3 text-xs font-semibold text-(--text-muted) uppercase tracking-wider mb-2">
+          <div className="mt-5">
+            <p className="px-3 text-xs font-semibold text-(--text-muted) uppercase tracking-wider mb-1.5">
               Categories
             </p>
-            <div className="space-y-1">
+            <div className="space-y-0.5">
               {categories.map((cat) => {
                 const Icon = iconMap[cat.icon] || BookOpen;
                 const href = `/vocab/${cat.slug}`;

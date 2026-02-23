@@ -290,7 +290,7 @@ export default function ModuleLessonClient({ lesson }: Props) {
           : 'bg-(--bg-card) border-(--border)'
       )}>
         <p className="text-xs uppercase tracking-wider text-primary font-semibold mb-2">
-          {lesson.day === 10 ? 'MIDDLE TEST' : `${lesson.track.toUpperCase()} • Day ${lesson.day}`}
+          {lesson.day === 10 ? 'MIDDLE TEST' : `${lesson.track.toUpperCase()} • Day ${lesson.day}`}{lesson.tutor ? ` • ${lesson.tutor}` : ""}
         </p>
         <h1 className="text-2xl font-bold text-(--text)">{lesson.title}</h1>
         <p className="text-sm text-(--text-secondary) mt-1">{renderClickableText(lesson.subtitle)}</p>

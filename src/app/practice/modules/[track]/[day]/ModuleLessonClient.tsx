@@ -36,7 +36,7 @@ export default function ModuleLessonClient({ lesson }: Props) {
 
       <div className="bg-(--bg-card) border border-(--border) rounded-2xl p-6">
         <p className="text-xs uppercase tracking-wider text-primary font-semibold mb-2">
-          {lesson.track.toUpperCase()} • Day {lesson.day}
+          {lesson.track.toUpperCase()} • Day {lesson.day}{lesson.tutor ? ` • ${lesson.tutor}` : ""}
         </p>
         <h1 className="text-2xl font-bold text-(--text)">{lesson.title}</h1>
         <p className="text-sm text-(--text-secondary) mt-1">{lesson.subtitle}</p>
