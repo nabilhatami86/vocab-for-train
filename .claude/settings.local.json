@@ -22,7 +22,8 @@
       "Bash(wc:*)",
       "Bash(/Users/mm/Desktop/vocab/node_modules/.bin/tsc:*)",
       "Bash(node_modules/.bin/tsc:*)",
-      "Bash(/usr/local/bin/node node_modules/.bin/tsc:*)"
+      "Bash(/usr/local/bin/node node_modules/.bin/tsc:*)",
+      "Bash(grep:*)"
     ]
   }
 }

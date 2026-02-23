@@ -161,8 +161,22 @@ export async function GET(req: NextRequest) {
     }
 
     if (entries.length === 0 || entries.every(e => e.senses.length === 0)) {
+      // Fallback: Google Translate untuk proper noun / kata tidak ada di Cambridge
+      try {
+        const gRes = await fetch(
+          `https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=id&dt=t&q=${encodeURIComponent(word)}`
+        );
+        if (gRes.ok) {
+          const gData = await gRes.json();
+          const chunks: string[] = (gData?.[0] ?? []).map((c: unknown[]) => (c as unknown[])?.[0] ?? '');
+          const gTranslated = chunks.join('').trim();
+          if (gTranslated) {
+            return NextResponse.json({ word, translated: gTranslated, source: 'google' });
+          }
+        }
+      } catch { /* ignore */ }
       return NextResponse.json(
-        { error: 'not_found', message: `"${word}" not found in Cambridge Dictionary.` },
+        { error: 'not_found', message: `"${word}" tidak ditemukan.` },
         { status: 404 }
       );
     }
@@ -190,6 +204,20 @@ export async function GET(req: NextRequest) {
       source: 'cambridge',
     });
   } catch (err) {
+    // Fallback: Google Translate kalau Cambridge error (timeout, block, dll)
+    try {
+      const gRes = await fetch(
+        `https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=id&dt=t&q=${encodeURIComponent(word)}`
+      );
+      if (gRes.ok) {
+        const gData = await gRes.json();
+        const chunks: string[] = (gData?.[0] ?? []).map((c: unknown[]) => (c as unknown[])?.[0] ?? '');
+        const gTranslated = chunks.join('').trim();
+        if (gTranslated) {
+          return NextResponse.json({ word, translated: gTranslated, source: 'google' });
+        }
+      }
+    } catch { /* ignore */ }
     const msg = err instanceof Error ? err.message : String(err);
     return NextResponse.json({ error: 'cambridge_error', message: msg }, { status: 500 });
   }

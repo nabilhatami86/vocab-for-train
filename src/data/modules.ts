@@ -5,6 +5,7 @@ const readingLessons: ModuleLesson[] = [
     id: "reading-2",
     track: "reading",
     day: 2,
+    tutor: "Ms. Lidya",
     title: "My Self",
     subtitle: "Describing personal identity and background",
     overview:
@@ -85,6 +86,7 @@ const readingLessons: ModuleLesson[] = [
     id: "reading-3",
     track: "reading",
     day: 3,
+    tutor: "Ms. Lidya",
     title: "My Family",
     subtitle: "Family roles, values, and character traits",
     overview:
@@ -160,6 +162,7 @@ const readingLessons: ModuleLesson[] = [
     id: "reading-4",
     track: "reading",
     day: 4,
+    tutor: "Ms. Lidya",
     title: "My Favourite Subject",
     subtitle: "Learning interests and school subjects",
     overview:
@@ -261,6 +264,7 @@ const readingLessons: ModuleLesson[] = [
     id: "reading-5",
     track: "reading",
     day: 5,
+    tutor: "Ms. Lidya",
     title: "My Role Model",
     subtitle: "Admiration, values, and work-life balance",
     overview:
@@ -394,6 +398,7 @@ const readingLessons: ModuleLesson[] = [
     id: "reading-6",
     track: "reading",
     day: 6,
+    tutor: "Ms. Lidya",
     title:
       "Are You Naughty Or Nice? Personality Traits Linked To Genetics, Social Environment",
     subtitle: "Personality traits: genetics vs social environment",
@@ -476,6 +481,7 @@ const readingLessons: ModuleLesson[] = [
     id: "reading-7",
     track: "reading",
     day: 7,
+    tutor: "Ms. Lidya",
     title: "Why Hobbies Are Important",
     subtitle: "Benefits of hobbies for life and learning",
     overview:
@@ -598,6 +604,7 @@ const readingLessons: ModuleLesson[] = [
     id: "reading-8",
     track: "reading",
     day: 8,
+    tutor: "Ms. Lidya",
     title: "Tourism Place",
     subtitle: "Travel description and destination review",
     overview:
@@ -713,6 +720,7 @@ const readingLessons: ModuleLesson[] = [
     id: "reading-9",
     track: "reading",
     day: 9,
+    tutor: "Ms. Lidya",
     title: "How To Navigate Transport in Indonesia",
     subtitle: "Public transport choices and travel planning",
     overview:
@@ -810,6 +818,7 @@ const readingLessons: ModuleLesson[] = [
     id: "reading-10",
     track: "reading",
     day: 10,
+    tutor: "Ms. Lidya",
     title: "Middle Test — Reading",
     subtitle: "Ujian Tengah: Comprehension dari semua passage Day 2-9",
     overview:
@@ -964,6 +973,753 @@ const readingLessons: ModuleLesson[] = [
         type: "task",
         question:
           "Tulis paragraf pendek (5-7 kalimat) tentang diri kamu sendiri menggunakan vocabulary yang sudah dipelajari dari semua passage!",
+      },
+    ],
+  },
+  // ─── WEEK 3-4 — Ms. Lidya ─────────────────────────────────────────────────
+  {
+    id: "reading-11",
+    track: "reading",
+    day: 11,
+    tutor: "Ms. Lidya",
+    title: "Traditional Food in Indonesia",
+    subtitle: "Mengenal berbagai makanan tradisional khas Indonesia",
+    overview:
+      "Indonesia memiliki kekayaan kuliner yang luar biasa. Dari Gudeg Yogyakarta hingga Rendang Sumatera, setiap daerah memiliki makanan khas yang unik. Baca dan pahami deskripsi 8 makanan tradisional Indonesia berikut.",
+    passage: [
+      "Traditional food is a food that has been passed down from generations. Indonesia is a country with rich cultural heritage, and with that comes an equally rich culinary tradition. Each region has its own unique local food that reflects the culture, geography, and lifestyle of its people.",
+      "1. GUDEG — Gudeg is a traditional food from Yogyakarta made from young unripe jack fruit boiled for several hours with palm sugar and coconut milk. Various spices used to make this dish include garlic, shallot, candlenut, coriander seed, galangal, bay leaves, and teak leaves. The teak leaves give gudeg its distinctive brown color. Gudeg is usually served with white rice, chicken, egg, tofu, and tempeh, and krecek (crispy buffalo skin crackers cooked in spicy coconut milk sauce).",
+      "2. BABI GULING — Babi Guling, which literally means rolling pig, is a Balinese dish of spit-roasted pig stuffed with rich mixture of spices and slow-cooked over an open fire. The meat is traditionally made from suckling pig. Babi Guling was originally prepared for Hindu religious ceremonies in Bali, but has now become popular as everyday food and in restaurants, especially in Bali.",
+      "3. NASI GORENG — Nasi Goreng is essentially fried rice served either alone or with other dishes. In Indonesian, nasi means rice, and goreng means fried. Nasi goreng is often described as a national dish of Indonesia. This dish is often sold as street food, and it is usually cooked in a small wok over very high heat. It is served with an egg (fried, scrambled, or as an omelette) and with some other side dishes such as crackers, vegetables, or meat.",
+      "4. SATAY — Satay is skewered meat, usually served with a sauce. It is a dish of seasoned, skewered and grilled meat, served with a sauce. Satay is known by different names in different regions. In Indonesia, Sate is known as Sate Ayam (chicken satay) from Madura, Sate Lilit from Bali, and Sate Padang from Padang. Satay can be made from various meats including chicken, goat, mutton, beef, pork, fish, tofu, or tempeh.",
+      "5. SIOMAY — Siomay is an Indonesian steamed fish dumpling with vegetables served in peanut sauce. It originates from Chinese dim sum dumplings. In Indonesia, siomay is sold as street food by vendors on mobile carts or bicycles. Siomay is usually served with cabbage, potatoes, bitter melon, and tofu, all steamed and then served with peanut sauce, sweet soy sauce, chili sauce, and a squeeze of lime juice.",
+      "6. BEEF RENDANG — Rendang is a spicy meat dish which originated from the Minangkabau ethnic group of West Sumatra, Indonesia. It is made from beef slowly cooked in coconut milk and a mixture of lemongrass, galangal, garlic, turmeric, ginger, and chilies. The cooking process can take up to 4 hours. This dish is considered by some to be the most delicious food in the world. Rendang has received international recognition as one of the world's best foods.",
+      "7. PEMPEK — Pempek or Empek-empek is a savory Indonesian fishcake delicacy made from fish and tapioca. It originates from Palembang, South Sumatra. Pempek is often served with a dark, rich sweet and sour sauce called kuah cuko. The most common varieties are kapal selam (torpedo-shaped, filled with egg), lenjer (long cylinder), keriting (curly), and adaan (round ball).",
+      "8. KERAK TELOR — Kerak Telor is a traditional Betawi dish (Betawi is the native people of Jakarta). It is an Indonesian spicy omelette made with glutinous rice cooked with egg and served with serundeng (fried shredded coconut), dried shrimp, and fried shallots. Kerak telor is usually sold at traditional markets and local events in Jakarta. It is cooked using a traditional wok placed over hot charcoal.",
+    ],
+    materialSections: [
+      {
+        title: "Key Vocabulary",
+        points: [
+          "heritage — warisan budaya",
+          "culinary — kuliner/masakan",
+          "unripe — belum matang/mentah",
+          "spices — rempah-rempah",
+          "distinctive — khas/berbeda",
+          "spit-roasted — dipanggang di tusukan besi",
+          "suckling pig — anak babi",
+          "ceremony — upacara",
+          "skewered — ditusuk/dipanggang di tusukan",
+          "seasoned — dibumbui",
+          "dumpling — pangsit/bakpao",
+          "originated — berasal dari",
+          "recognition — pengakuan",
+          "savory — gurih/enak",
+          "tapioca — tepung singkong",
+          "varieties — berbagai macam",
+          "glutinous rice — beras ketan",
+          "shredded — diparut/disuwir",
+        ],
+      },
+    ],
+    exercises: [
+      {
+        id: "r11-q1",
+        type: "multiple-choice",
+        question: "What kind of traditional food comes from Yogyakarta?",
+        options: ["Rendang", "Pempek", "Gudeg", "Babi Guling"],
+        correctAnswer: "Gudeg",
+        reason:
+          'Teks menyebutkan "Gudeg is a traditional food from Yogyakarta."',
+      },
+      {
+        id: "r11-q2",
+        type: "multiple-choice",
+        question: "Where is Babi Guling popularized?",
+        options: ["Jakarta", "Yogyakarta", "Bali", "Sumatera"],
+        correctAnswer: "Bali",
+        reason:
+          '"Babi Guling was originally prepared for Hindu religious ceremonies in Bali, but has now become popular... especially in Bali."',
+      },
+      {
+        id: "r11-q3",
+        type: "multiple-choice",
+        question: "What kind of traditional food can be found in Jakarta?",
+        options: ["Pempek", "Siomay", "Kerak Telor", "Gudeg"],
+        correctAnswer: "Kerak Telor",
+        reason:
+          '"Kerak Telor is a traditional Betawi dish (Betawi is the native people of Jakarta)."',
+      },
+      {
+        id: "r11-q4",
+        type: "short-answer",
+        question:
+          'What is the meaning of "skewered meat"? (Apa arti dari "skewered meat"?)',
+      },
+      {
+        id: "r11-q5",
+        type: "task",
+        question:
+          "Please describe your favorite traditional food in Indonesia! (Deskripsikan makanan tradisional favoritmu dalam 5-7 kalimat bahasa Inggris!)",
+      },
+      {
+        id: "r11-q6",
+        type: "task",
+        question:
+          "Please mention 20 or more vocabulary that you don't know from this passage and memorize those as an entrance ticket for tomorrow!",
+      },
+      {
+        id: "r11-q7",
+        type: "task",
+        question: "Summarize this passage using a mind map!",
+      },
+    ],
+  },
+  {
+    id: "reading-12",
+    track: "reading",
+    day: 12,
+    tutor: "Ms. Lidya",
+    title: "Cultural Diversity in Indonesia",
+    subtitle: "Keberagaman budaya Indonesia: tari, musik, pakaian, dan seni",
+    overview:
+      "Indonesia adalah negara dengan keberagaman budaya yang luar biasa. Lebih dari 300 suku bangsa hidup bersama dengan tradisi, bahasa, seni, dan adat istiadat yang berbeda-beda. Baca dan pahami 10 aspek kebudayaan Indonesia berikut.",
+    passage: [
+      "Indonesia is a country with cultural diversity and it has many unique things that make it different from other countries. Indonesia has more than 300 ethnic groups, each with their own unique culture and traditions. This diversity makes Indonesia one of the most culturally rich countries in the world.",
+      "1. VARIETY OF FOOD — Indonesia is known for its variety of food. Each region has its own unique dishes. Some well-known Indonesian foods include Rendang from West Sumatra, Gudeg from Yogyakarta, Soto Betawi from Jakarta, and Nasi Goreng which is eaten all over Indonesia. Indonesian cuisine is known for its complex flavors from the use of various spices.",
+      "2. TRADITIONAL DANCE — Indonesia has a rich tradition of dance. Each region has its own dance with unique movements and costumes. Some famous traditional dances include Saman Dance from Aceh, Kecak Dance from Bali, Reog Ponorogo from East Java, and Tor-Tor Dance from North Sumatra. These dances are performed at cultural events, religious ceremonies, and national celebrations.",
+      "3. TRADITIONAL MUSIC — Traditional music in Indonesia varies widely from region to region. Gamelan is perhaps the most well-known form of traditional Indonesian music, originating from Java and Bali. It is an orchestra made up mainly of percussive instruments. Other traditional music includes Angklung from West Java, Sasando from East Nusa Tenggara, and Kolintang from North Sulawesi.",
+      "4. TRADITIONAL CLOTHES — Indonesia's traditional clothing is as diverse as its people. Batik is perhaps the most internationally recognized Indonesian textile, declared a UNESCO Intangible Cultural Heritage. Other traditional clothes include Kebaya (a traditional blouse), Songket (a hand-woven fabric with gold or silver threads), and Ulos from Batak (North Sumatra).",
+      "5. ARCHITECTURE — Traditional Indonesian architecture varies widely across the archipelago. Each ethnic group has its own architectural style for their traditional houses. Some famous traditional houses include Rumah Gadang from Minangkabau (West Sumatra), Joglo house from Java, Tongkonan from Toraja (South Sulawesi), and Uma Mbatangu from Sumba (East Nusa Tenggara).",
+      "6. SCULPTURE — Indonesia has a rich sculptural tradition. Stone carvings and sculptures can be found in temples and historical sites throughout Indonesia. Bali is particularly famous for its wood and stone carvings. Traditional sculptures often depict religious figures, mythological creatures, and scenes from epic stories like the Ramayana and Mahabharata.",
+      "7. LANGUAGES — Indonesia has the second highest number of living languages in the world, with over 700 regional languages. However, Bahasa Indonesia (Indonesian) is the national language and serves as the lingua franca. Some major regional languages include Javanese, Sundanese, Balinese, Batak, and Minangkabau. This linguistic diversity reflects the rich cultural heritage of the archipelago.",
+      "8. ART PERFORMANCE — Indonesian performing arts encompass a wide variety of forms. Wayang (shadow puppet theater) is one of the most distinctive art forms in Indonesia, originating from Java. It is used to tell stories from the Hindu epics Ramayana and Mahabharata. Lenong from Betawi and Ludruk from East Java are forms of popular folk theater. Pencak Silat is a traditional martial art that has become a cultural art performance.",
+      "9. ETHNIC RITUALS — Indonesia has hundreds of unique ethnic rituals and ceremonies. These include Ngaben (the Balinese cremation ceremony), Kasada (the annual ceremony of the Tengger people at Mount Bromo), Rambu Solo (the elaborate funeral ceremony of the Toraja people), and Sekaten (the Javanese celebration of the Prophet Muhammad's birthday). These rituals are important for preserving cultural identity.",
+      "10. CRAFTS — Indonesian traditional crafts are famous worldwide. Batik cloth from Java, silver and gold jewelry from Bali and Yogyakarta, traditional weaving from various regions (such as ikat from Nusa Tenggara and songket from Sumatra), woodcarving from Jepara, and pottery from Lombok are just some examples of the rich craft tradition in Indonesia.",
+    ],
+    materialSections: [
+      {
+        title: "Key Vocabulary",
+        points: [
+          "diversity — keberagaman",
+          "ethnic groups — kelompok etnis/suku bangsa",
+          "cuisine — masakan/kuliner",
+          "percussion — perkusi/alat musik pukul",
+          "textile — kain/tekstil",
+          "intangible — tidak berwujud",
+          "archipelago — kepulauan",
+          "architectural — arsitektural",
+          "mythological — mitologi",
+          "depict — menggambarkan",
+          "lingua franca — bahasa penghubung",
+          "linguistic — linguistik/kebahasaan",
+          "shadow puppet — wayang",
+          "martial art — seni bela diri",
+          "ritual — ritual/upacara adat",
+          "cremation — kremasi/pembakaran jenazah",
+          "elaborate — rumit/mendetail",
+          "preserve — melestarikan",
+        ],
+      },
+    ],
+    exercises: [
+      {
+        id: "r12-q1",
+        type: "short-answer",
+        question:
+          "What kind of food and art performance are from Indonesia? (Mention at least 4 examples each!)",
+      },
+      {
+        id: "r12-q2",
+        type: "multiple-choice",
+        question: "What is the most internationally recognized Indonesian textile?",
+        options: ["Songket", "Batik", "Ulos", "Kebaya"],
+        correctAnswer: "Batik",
+        reason:
+          '"Batik is perhaps the most internationally recognized Indonesian textile, declared a UNESCO Intangible Cultural Heritage."',
+      },
+      {
+        id: "r12-q3",
+        type: "short-answer",
+        question:
+          "What is the main topic of the first paragraph of the passage?",
+      },
+      {
+        id: "r12-q4",
+        type: "short-answer",
+        question:
+          "What is the main topic of the last paragraph (paragraph 10) of the passage?",
+      },
+      {
+        id: "r12-q5",
+        type: "task",
+        question:
+          "Please describe your culture in your hometown! (Ceritakan budaya di daerahmu dalam 5-7 kalimat bahasa Inggris!)",
+      },
+      {
+        id: "r12-q6",
+        type: "task",
+        question:
+          "Please mention 20 or more vocabulary that you don't know from this passage and memorize those as an entrance ticket for tomorrow!",
+      },
+      {
+        id: "r12-q7",
+        type: "task",
+        question: "Summarize this passage using a mind map!",
+      },
+    ],
+  },
+  {
+    id: "reading-13",
+    track: "reading",
+    day: 13,
+    tutor: "Ms. Lidya",
+    title: "Village Life vs City Life",
+    subtitle: "Membandingkan kehidupan desa dan kota",
+    overview:
+      "Kehidupan di desa dan kota memiliki perbedaan yang signifikan. Keduanya memiliki kelebihan dan kekurangan masing-masing. Baca dan pahami perbedaan antara Village Life dan City Life berikut ini.",
+    passage: [
+      "People often wonder which is better: living in a village or living in a city. Both have their own advantages and disadvantages. The choice of where to live depends on a person's lifestyle, needs, and preferences.",
+      "WHAT IS VILLAGE LIFE? — Village life refers to the way of life of people who live in rural areas, away from cities and towns. Village life is known for its slow pace, fresh air, and close-knit communities. People in villages often know each other well and help one another in times of need. The surroundings are natural, with trees, fields, rivers, and open spaces.",
+      "In village life, the people have a simple life and they use traditional methods for farming and other work. The cost of living is low compared to cities. Food is often fresh and grown locally. The community is peaceful and there is less crime. However, villages often lack good roads, hospitals, schools, electricity, and other modern facilities. Employment opportunities are limited, and many young people leave for the city in search of better jobs.",
+      "WHAT IS CITY LIFE? — City life refers to the way of life of people who live in urban areas. Cities are centers of commerce, industry, education, and entertainment. City life is known for its fast pace, many opportunities, and access to modern amenities. Cities have better infrastructure including roads, hospitals, schools, and public transportation.",
+      "In city life, there are more employment opportunities and higher salaries. There is access to quality education, healthcare, shopping, and entertainment. However, city life also comes with problems. Cities are crowded and noisy. The cost of living is high. There is more pollution — air, water, and noise pollution are common problems. People in cities are often busy and may not know their neighbors well. The lifestyle is more stressful and health problems related to pollution and stress are more common.",
+      "COMPARISON — Village life and city life are very different. Village life is simpler, more peaceful, and more connected to nature. City life is faster, more convenient, and offers more opportunities. Both have their advantages and disadvantages. Village life offers clean air, fresh food, tight-knit community, and low cost of living. City life offers better jobs, better education, better healthcare, and more entertainment options. The pollution level in cities is significantly higher than in villages, which affects both the environment and people's health.",
+    ],
+    materialSections: [
+      {
+        title: "Key Vocabulary",
+        points: [
+          "rural — pedesaan/pedalaman",
+          "urban — perkotaan",
+          "close-knit — erat/akrab",
+          "community — masyarakat/komunitas",
+          "surroundings — lingkungan sekitar",
+          "traditional — tradisional",
+          "employment — pekerjaan/lapangan kerja",
+          "opportunities — kesempatan",
+          "commerce — perdagangan",
+          "amenities — fasilitas/kenyamanan",
+          "infrastructure — infrastruktur",
+          "crowded — ramai/padat",
+          "stressful — penuh tekanan",
+          "pollution — polusi/pencemaran",
+          "convenient — nyaman/mudah",
+          "comparison — perbandingan",
+          "significantly — secara signifikan",
+        ],
+      },
+    ],
+    exercises: [
+      {
+        id: "r13-q1",
+        type: "task",
+        question:
+          "Please give your opinion about the differences between Village Life and City Life! Discuss the following aspects: (a) Definitions, (b) Facilities, (c) Education, (d) Medical Facilities, (e) Employment, (f) People, (g) Helpful Nature, (h) Pollution.",
+      },
+      {
+        id: "r13-q2",
+        type: "task",
+        question:
+          "Which one do you choose, live in the village or the city? Why? (Pilih mana yang kamu inginkan dan jelaskan alasannya dalam 5-7 kalimat bahasa Inggris!)",
+      },
+      {
+        id: "r13-q3",
+        type: "task",
+        question:
+          "Please mention 20 or more vocabulary that you don't know from this passage and memorize those as an entrance ticket for tomorrow!",
+      },
+      {
+        id: "r13-q4",
+        type: "task",
+        question: "Summarize this passage using a mind map!",
+      },
+    ],
+  },
+  {
+    id: "reading-14",
+    track: "reading",
+    day: 14,
+    tutor: "Ms. Lidya",
+    title: "Natural Disaster in Indonesia",
+    subtitle: "Bencana alam di Indonesia: gunung berapi, tsunami, dan banjir",
+    overview:
+      "Indonesia terletak di Cincin Api Pasifik sehingga rawan bencana alam. Baca dan pahami 5 bencana alam besar yang pernah terjadi di Indonesia dan dampaknya.",
+    passage: [
+      "Indonesia is a country that is prone to natural disasters due to its geographical location. It lies on the Ring of Fire, a zone of frequent earthquakes and volcanic eruptions surrounding the Pacific Ocean. Indonesia has experienced many devastating natural disasters throughout its history.",
+      "1. KELUD MOUNT ERUPTION (FEBRUARY 13, 2014) — Mount Kelud in East Java erupted in February 2014. The eruption spewed out volcanic ash as far as Yogyakarta and Solo, which are approximately 200 kilometers away. The eruption forced the evacuation of more than 100,000 people from the surrounding areas. Airports in several cities had to be temporarily closed due to the thick volcanic ash. Although the eruption was powerful, there were relatively few casualties compared to previous eruptions because of early warning systems and quick evacuation.",
+      "2. MERAPI MOUNT ERUPTION (2010) — Mount Merapi in Central Java erupted in October and November 2010. It was the most powerful eruption of Merapi in decades. The eruption killed more than 300 people and displaced hundreds of thousands. The eruption produced pyroclastic flows and volcanic ash that covered a large area. The famous spiritual guardian of Mount Merapi, Mbah Maridjan, was among those who died in the eruption. The disaster caused significant damage to homes, farmland, and infrastructure.",
+      "3. INDIAN OCEAN EARTHQUAKE AND TSUNAMI (DECEMBER 26, 2004) — On December 26, 2004, a massive undersea earthquake with a magnitude of 9.1–9.3 occurred off the west coast of Sumatra, Indonesia. The earthquake triggered a devastating tsunami that struck the coasts of fourteen countries. Indonesia, particularly Aceh province, was the worst affected. The tsunami killed approximately 230,000 people in total, making it one of the deadliest natural disasters in recorded history. The disaster led to major international relief efforts.",
+      "4. SIDOARJO MUD FLOW / LAPINDO MUD (2007) — The Sidoarjo mud flow, also known as Lapindo mud, began erupting in May 2006 in the Sidoarjo regency of East Java. Hot mud began erupting from the ground, believed to be caused by drilling activities by the Lapindo Brantas oil company. The mud buried entire villages and industrial areas. The mud flow has been flowing continuously for years, displacing more than 40,000 people. It is considered one of the world's worst industrial disasters.",
+      "5. WEST PAPUA FLOODS (2010) — In 2010, serious floods occurred in the Wasior district of West Papua. The floods were caused by heavy rainfall that caused rivers to overflow. The floods and subsequent landslides destroyed the town of Wasior and killed more than 150 people. The disaster was worsened by the destruction of local forests, which reduced the land's ability to absorb rainwater. The floods highlighted the relationship between deforestation and the increased risk of floods and landslides.",
+    ],
+    materialSections: [
+      {
+        title: "Key Vocabulary",
+        points: [
+          "prone — rentan/mudah terkena",
+          "eruption — letusan/erupsi",
+          "spewed out — menyemburkan/memuntahkan",
+          "evacuation — evakuasi/pengungsian",
+          "casualties — korban jiwa",
+          "pyroclastic flow — awan panas/aliran piroklastik",
+          "displaced — mengungsi/terpindah",
+          "undersea — di bawah laut",
+          "magnitude — besaran/kekuatan (gempa)",
+          "triggered — memicu/menyebabkan",
+          "devastating — menghancurkan/merusak parah",
+          "drilling — pengeboran",
+          "regency — kabupaten",
+          "subsequent — berikutnya/setelahnya",
+          "deforestation — penggundulan hutan",
+          "absorb — menyerap",
+          "relief efforts — upaya bantuan bencana",
+        ],
+      },
+    ],
+    exercises: [
+      {
+        id: "r14-q1",
+        type: "multiple-choice",
+        question:
+          "From this passage, which of the following types of natural disasters is NOT mentioned?",
+        options: ["Flood", "Tsunami", "Eruption", "Forest fire"],
+        correctAnswer: "Forest fire",
+        reason:
+          "Passage menyebutkan flood (banjir), tsunami, eruption (gunung berapi), tapi tidak menyebutkan forest fire (kebakaran hutan).",
+      },
+      {
+        id: "r14-q2",
+        type: "multiple-choice",
+        question:
+          '"The eruption spewed out volcanic ash." The word "spewed out" can also be called...',
+        options: ["Vomit", "Issue", "Released", "Absorbed"],
+        correctAnswer: "Released",
+        reason:
+          '"Spewed out" = melepaskan/menyemburkan, paling dekat maknanya dengan "released".',
+      },
+      {
+        id: "r14-q3",
+        type: "multiple-choice",
+        question: "When did the Lapindo Mud (Sidoarjo mud flow) start erupting?",
+        options: ["2004", "May 2006", "2007", "2010"],
+        correctAnswer: "May 2006",
+        reason:
+          '"The Sidoarjo mud flow... began erupting in May 2006 in the Sidoarjo regency of East Java."',
+      },
+      {
+        id: "r14-q4",
+        type: "short-answer",
+        question:
+          "Why did the West Papua flood happen? What made it worse? (Mengapa banjir West Papua terjadi dan apa yang memperparahnya?)",
+      },
+      {
+        id: "r14-q5",
+        type: "task",
+        question:
+          "What natural disaster has happened in your hometown or region? Please describe briefly! (Bencana alam apa yang pernah terjadi di daerahmu? Ceritakan dalam 5-7 kalimat!)",
+      },
+      {
+        id: "r14-q6",
+        type: "task",
+        question:
+          "Please mention 20 or more vocabulary that you don't know from this passage and memorize those as an entrance ticket for tomorrow!",
+      },
+      {
+        id: "r14-q7",
+        type: "task",
+        question: "Summarize this passage using a mind map!",
+      },
+    ],
+  },
+  {
+    id: "reading-16",
+    track: "reading",
+    day: 16,
+    tutor: "Ms. Lidya",
+    title: "The Beautiful Public Places in Indonesia",
+    subtitle: "Tempat-tempat bersejarah dan indah di Indonesia",
+    overview:
+      "Indonesia memiliki banyak tempat umum yang indah dan bersejarah. Dari Lawang Sewu di Semarang hingga Taman Sari di Yogyakarta, setiap tempat menyimpan cerita sejarah yang menarik. Baca dan pahami 6 tempat bersejarah berikut.",
+    passage: [
+      "Indonesia is home to many beautiful and historically significant public places. These places not only offer scenic beauty but also reflect the rich history and culture of Indonesia. From colonial-era buildings to ancient temples, these places attract millions of visitors every year.",
+      "1. LAWANG SEWU — SEMARANG — Lawang Sewu, which means 'a thousand doors' in Javanese, is a landmark building located in Semarang, Central Java. It was built by the Dutch in 1904 as the headquarters of the Netherlands Indies Railway Company (NIS). The building is famous for its impressive Dutch colonial architecture, featuring many large windows and doors. During World War II, the building was used as a prison by the Japanese military. Today, it serves as a tourist attraction and is considered one of the most iconic buildings in Semarang.",
+      "2. KOTA TUA (OLD TOWN) — JAKARTA — Kota Tua, also known as Old Batavia, is a historical area in North Jakarta. It was the center of the colonial city of Batavia during the Dutch East Indies period. The area features well-preserved Dutch colonial architecture, including the Jakarta History Museum (formerly the City Hall of Batavia), the Wayang Museum, and the Fine Arts and Ceramics Museum. Kota Tua is a popular destination for tourists and history enthusiasts who want to learn about Indonesia's colonial past.",
+      "3. BOROBUDUR TEMPLE — MAGELANG — Borobudur is a 9th-century Mahayana Buddhist temple in Magelang, Central Java. It is the world's largest Buddhist temple and is listed as a UNESCO World Heritage Site. The temple was built during the Sailendra dynasty and consists of nine stacked platforms, six square and three circular, topped by a central dome. The walls and balustrades are decorated with 2,672 relief panels and 504 Buddha statues. Borobudur is one of Indonesia's most visited tourist attractions.",
+      "4. BAITTURAHMAN GREAT MOSQUE — ACEH — The Baiturrahman Grand Mosque is a large mosque located in the center of Banda Aceh, Aceh province. It was built by the Dutch in 1879, replacing an older mosque that was burned down during the Dutch invasion. The mosque features a striking black dome with white walls and is surrounded by a beautiful courtyard with reflecting pools. The mosque survived the 2004 Indian Ocean Tsunami relatively intact and became a symbol of hope and resilience for the Acehnese people.",
+      "5. FORT ROTTERDAM — MAKASSAR — Fort Rotterdam is a 17th-century Portuguese and Dutch colonial fort located in Makassar, South Sulawesi. It was originally built by the Gowa Kingdom in 1545 and later taken over and renovated by the Dutch in 1667. The fort is one of the best-preserved examples of Dutch colonial architecture in Indonesia. Today, it houses two museums: La Galigo Museum (displaying South Sulawesi artifacts) and a museum dedicated to Prince Diponegoro, who was imprisoned here. The fort is a popular tourist destination in Makassar.",
+      "6. TAMAN SARI — YOGYAKARTA — Taman Sari, which means 'fragrant garden' in Javanese, is a former royal garden of the Sultanate of Yogyakarta. It was built in the mid-18th century during the reign of Sultan Hamengkubuwono I. The complex consists of a series of bathing pools, underground passages, and a mosque, all surrounded by a wall. The most iconic part of Taman Sari is its bathing pools (Umbul Binangun), which were used by the sultan and his family. The complex has three main areas: the main bathing complex, the Pulo Kenanga (a small island with buildings), and the Sumur Gumuling (an underground mosque).",
+    ],
+    materialSections: [
+      {
+        title: "Key Vocabulary",
+        points: [
+          "landmark — ikon/ciri khas suatu tempat",
+          "colonial — kolonial/penjajahan",
+          "headquarters — kantor pusat/markas",
+          "architecture — arsitektur",
+          "well-preserved — terawat dengan baik",
+          "enthusiasts — penggemar/pecinta",
+          "temple — kuil/candi",
+          "dynasty — dinasti/wangsa",
+          "stacked — bertingkat/disusun",
+          "balustrade — pagar/langkan",
+          "mosque — masjid",
+          "courtyard — halaman/taman dalam",
+          "reflecting pool — kolam cermin",
+          "resilience — ketangguhan/ketahanan",
+          "renovated — direnovasi/dipugar",
+          "artifacts — artefak/benda bersejarah",
+          "reign — masa pemerintahan",
+          "passage — lorong/jalur",
+          "fragrant — harum/wangi",
+        ],
+      },
+    ],
+    exercises: [
+      {
+        id: "r16-q1",
+        type: "multiple-choice",
+        question: "When was Lawang Sewu built?",
+        options: ["1879", "1904", "1545", "1667"],
+        correctAnswer: "1904",
+        reason:
+          '"It was built by the Dutch in 1904 as the headquarters of the Netherlands Indies Railway Company."',
+      },
+      {
+        id: "r16-q2",
+        type: "multiple-choice",
+        question: "Who built the Baiturrahman Grand Mosque (in its current form)?",
+        options: [
+          "The Acehnese people",
+          "Sultan Hamengkubuwono I",
+          "The Dutch",
+          "The Portuguese",
+        ],
+        correctAnswer: "The Dutch",
+        reason: '"It was built by the Dutch in 1879, replacing an older mosque."',
+      },
+      {
+        id: "r16-q3",
+        type: "short-answer",
+        question:
+          "How many main areas does Taman Sari have? What are they? (Ada berapa area utama di Taman Sari? Sebutkan!)",
+      },
+      {
+        id: "r16-q4",
+        type: "task",
+        question:
+          "Please give your opinion about Borobudur Temple! (Tulis pendapatmu tentang Candi Borobudur dalam 5-7 kalimat bahasa Inggris!)",
+      },
+      {
+        id: "r16-q5",
+        type: "task",
+        question:
+          "What is your favorite public place in Indonesia? Please describe briefly! (Tempat favoritmu di Indonesia apa? Deskripsikan dalam 5-7 kalimat!)",
+      },
+      {
+        id: "r16-q6",
+        type: "task",
+        question:
+          "Please mention 20 or more vocabulary that you don't know from this passage and memorize those as an entrance ticket for tomorrow!",
+      },
+      {
+        id: "r16-q7",
+        type: "task",
+        question: "Summarize this passage using a mind map!",
+      },
+    ],
+  },
+  {
+    id: "reading-17",
+    track: "reading",
+    day: 17,
+    tutor: "Ms. Lidya",
+    title: "Environmental Issues in Indonesia (Pollution)",
+    subtitle: "Masalah lingkungan di Indonesia: polusi udara, air, dan tanah",
+    overview:
+      "Polusi adalah salah satu masalah lingkungan terbesar yang dihadapi Indonesia dan dunia saat ini. Baca dan pahami penyebab, dampak, dan solusi dari polusi udara, air, dan tanah.",
+    passage: [
+      "Pollution is one of the most serious environmental problems facing Indonesia and the world today. Air, soil, and water are essential components of life on Earth. When they are contaminated by pollutants, the health of humans, animals, and plants is put at risk.",
+      "Air, soil, and water really have a big role in humans' lives. Without clean air, clean water, and healthy soil, life as we know it would be impossible. Plants need healthy soil to grow, animals need clean water to drink, and all living beings need clean air to breathe. When pollution damages these vital resources, it creates a chain reaction that affects all life on Earth.",
+      "The root causes of air, water, and soil pollution are our carelessness and the rapid growth of industry and technology. Factories release toxic chemicals and smoke into the air. Vehicles emit exhaust fumes that contain harmful gases like carbon monoxide and nitrogen oxide. Agricultural activities use pesticides and chemical fertilizers that seep into the soil and groundwater. Industrial and household waste is often dumped into rivers and oceans, polluting the water supply.",
+      "Some equipment and technology can be a pollutant that is hazardous for us and our Earth. Electronic waste (e-waste), including discarded computers, phones, and batteries, contains toxic materials like lead, mercury, and cadmium. When not properly disposed of, these materials leach into the soil and water. Plastic waste is another major pollutant that takes hundreds of years to decompose and is now found in every ocean on Earth.",
+      "There are many ways that we can do to heal our Earth from pollution. Reducing the use of plastic and switching to reusable items is a good start. Using public transportation or cycling instead of driving personal vehicles reduces air pollution. Proper waste management and recycling can reduce soil and water pollution. Planting trees helps clean the air and prevent soil erosion. Education and awareness are also crucial — when people understand the dangers of pollution, they are more likely to take action to prevent it.",
+    ],
+    materialSections: [
+      {
+        title: "Choose the Correct Heading for Each Paragraph",
+        points: [
+          "Available headings:",
+          "i. Some equipment can be a pollutant that is hazardous for us and our earth.",
+          "ii. There are many ways that we can do to heal our earth from pollution.",
+          "iii. Air, soil, and water really have a big role in humans' lives.",
+          "iv. The root causes of air, water, and soil pollution are our carelessness.",
+          "",
+          "Answers:",
+          "Paragraph 1 (intro) → no heading",
+          "Paragraph 2 → iii. Air, soil, and water really have a big role in humans' lives.",
+          "Paragraph 3 → iv. The root causes of air, water, and soil pollution are our carelessness.",
+          "Paragraph 4 → i. Some equipment can be a pollutant that is hazardous for us and our earth.",
+          "Paragraph 5 → ii. There are many ways that we can do to heal our earth from pollution.",
+        ],
+      },
+      {
+        title: "Key Vocabulary",
+        points: [
+          "pollution — polusi/pencemaran",
+          "contaminated — tercemar/terkontaminasi",
+          "pollutant — zat pencemar",
+          "toxic — beracun",
+          "exhaust fumes — asap knalpot",
+          "pesticides — pestisida",
+          "fertilizers — pupuk",
+          "seep — meresap/menyerap",
+          "groundwater — air tanah",
+          "hazardous — berbahaya",
+          "e-waste — limbah elektronik",
+          "discarded — dibuang/tidak terpakai",
+          "cadmium — kadmium (logam berat)",
+          "leach — merembes/meresap",
+          "decompose — terurai/membusuk",
+          "reusable — dapat digunakan kembali",
+          "erosion — erosi/pengikisan tanah",
+          "awareness — kesadaran",
+        ],
+      },
+    ],
+    exercises: [
+      {
+        id: "r17-q1",
+        type: "short-answer",
+        question:
+          "Match each paragraph with the correct heading:\n(i) Some equipment can be a pollutant that is hazardous for us and our earth.\n(ii) There are many ways that we can do to heal our earth from pollution.\n(iii) Air, soil, and water really have a big role in humans' lives.\n(iv) The root causes of air, water, and soil pollution are our carelessness.\n\nParagraph 2 = ? | Paragraph 3 = ? | Paragraph 4 = ? | Paragraph 5 = ?",
+      },
+      {
+        id: "r17-q2",
+        type: "short-answer",
+        question:
+          "What are 3 causes of pollution mentioned in the passage? (Sebutkan 3 penyebab polusi yang disebutkan dalam teks!)",
+      },
+      {
+        id: "r17-q3",
+        type: "multiple-choice",
+        question:
+          "TRUE or FALSE: All new technologies humans made are dangerous to nature.",
+        options: [
+          "True — all technologies are dangerous",
+          "False — only some equipment/technology can be a pollutant",
+          "Not Given — the passage doesn't discuss this",
+          "True — technology always causes pollution",
+        ],
+        correctAnswer: "False — only some equipment/technology can be a pollutant",
+        reason:
+          'Teks menyebutkan "Some equipment and technology can be a pollutant" — bukan semua teknologi berbahaya.',
+      },
+      {
+        id: "r17-q4",
+        type: "task",
+        question:
+          "What kind of pollution is in your hometown? Please describe briefly! (Polusi apa yang ada di daerahmu? Ceritakan dalam 5-7 kalimat bahasa Inggris!)",
+      },
+      {
+        id: "r17-q5",
+        type: "task",
+        question:
+          "Please mention 20 or more vocabulary that you don't know from this passage and memorize those as an entrance ticket for tomorrow!",
+      },
+      {
+        id: "r17-q6",
+        type: "task",
+        question: "Summarize this passage using a mind map!",
+      },
+    ],
+  },
+  {
+    id: "reading-18",
+    track: "reading",
+    day: 18,
+    tutor: "Ms. Lidya",
+    title: "Health Benefits of Physical Activity",
+    subtitle: "Manfaat aktivitas fisik bagi kesehatan",
+    overview:
+      "Aktivitas fisik secara teratur sangat penting untuk kesehatan. Baca dan pahami manfaat, rekomendasi, dan tips untuk memulai dan menjaga rutinitas olahraga.",
+    passage: [
+      "Physical activity refers to any movement of the body that uses energy. It includes not just sports and exercise, but also everyday activities like walking, cycling, gardening, and even household chores. Being physically active is one of the most important things you can do for your health.",
+      "The benefits of physical activity are numerous. Regular exercise helps control weight by burning calories and boosting metabolism. It strengthens muscles and bones, reducing the risk of osteoporosis and injury. Exercise improves cardiovascular health, reducing the risk of heart disease, stroke, and high blood pressure. It also boosts the immune system, helping the body fight off illness. People who exercise regularly tend to live longer and have a better quality of life.",
+      "Physical activity is also important for mental health. Exercise releases endorphins, chemicals in the brain that act as natural mood elevators. Regular exercise can reduce symptoms of depression and anxiety, improve sleep quality, and boost self-esteem. Studies show that people who exercise regularly have better concentration, memory, and cognitive function.",
+      "Health experts recommend that adults get at least 150 minutes of moderate-intensity physical activity per week. This can include activities like brisk walking, swimming, cycling, or dancing. Alternatively, 75 minutes of vigorous-intensity activity per week, such as running, aerobics, or fast cycling, provides similar health benefits. It is also recommended to do muscle-strengthening activities, such as weightlifting or yoga, at least two days per week.",
+      "Getting started with exercise doesn't have to be difficult. The key is to choose activities that you enjoy, because you are more likely to stick with activities that are fun. Starting slowly and gradually increasing the intensity and duration of exercise is important to avoid injury. Finding a friend or partner to exercise with can help you stay motivated. Listening to music or podcasts while exercising can make it more enjoyable. Setting realistic goals and tracking progress can also help maintain motivation.",
+      "Walking is one of the simplest and most accessible forms of physical activity. It requires no special equipment, can be done anywhere, and is suitable for people of all ages and fitness levels. Even a 30-minute walk each day can provide significant health benefits. Walking regularly can help control weight, improve mood, strengthen the heart, and reduce the risk of chronic diseases.",
+    ],
+    materialSections: [
+      {
+        title: "True / False / Not Given — Answer Key",
+        points: [
+          "1. Only vigorous activities are counted as exercise. → FALSE (any movement counts)",
+          "2. The aim of exercising is to keep the body active. → TRUE",
+          "3. Walking is recommended as a workout because it is cheap. → NOT GIVEN (passage says accessible, not specifically because it's cheap)",
+          "4. Adults need 150 minutes of sports activity per month. → FALSE (per week, not per month)",
+          "5. Selecting physical activities that are affordable will make people more likely to keep up. → NOT GIVEN",
+          "6. Having a friend to work out together can help maintain the routine. → TRUE",
+          "7. Listening to music while exercising will make it less boring. → TRUE",
+          "8. Depending on the person, the exercise schedule can be fixed or varied. → TRUE",
+        ],
+      },
+      {
+        title: "Key Vocabulary",
+        points: [
+          "physical activity — aktivitas fisik",
+          "metabolism — metabolisme",
+          "cardiovascular — kardiovaskular/jantung",
+          "osteoporosis — osteoporosis/pengeroposan tulang",
+          "immune system — sistem imun/kekebalan tubuh",
+          "endorphins — endorfin",
+          "depression — depresi",
+          "anxiety — kecemasan",
+          "cognitive — kognitif",
+          "moderate-intensity — intensitas sedang",
+          "vigorous — kuat/bersemangat",
+          "brisk walking — jalan cepat",
+          "muscle-strengthening — penguatan otot",
+          "gradually — secara bertahap",
+          "motivated — termotivasi",
+          "accessible — mudah dijangkau",
+          "chronic diseases — penyakit kronis",
+          "realistic — realistis",
+        ],
+      },
+    ],
+    exercises: [
+      {
+        id: "r18-q1",
+        type: "short-answer",
+        question:
+          "True, False, or Not Given?\n1. Only vigorous activities are counted as exercise.\n2. The aim of exercising is to keep the body active.\n3. Walking is recommended as a workout because it is cheap.\n4. Adults need 150 minutes of sports activity per month.\n5. Having a friend to work out together can help maintain the routine.",
+      },
+      {
+        id: "r18-q2",
+        type: "short-answer",
+        question: "What is physical activity? (Apa itu aktivitas fisik? Jelaskan berdasarkan teks!)",
+      },
+      {
+        id: "r18-q3",
+        type: "short-answer",
+        question:
+          "What are the benefits of physical activity? (Sebutkan minimal 5 manfaat aktivitas fisik dari teks!)",
+      },
+      {
+        id: "r18-q4",
+        type: "task",
+        question:
+          "What kind of physical activity do you usually do? Please describe briefly! (Aktivitas fisik apa yang biasa kamu lakukan? Ceritakan dalam 5-7 kalimat bahasa Inggris!)",
+      },
+      {
+        id: "r18-q5",
+        type: "task",
+        question:
+          "Please mention 20 or more vocabulary that you don't know from this passage and memorize those as an entrance ticket for tomorrow!",
+      },
+      {
+        id: "r18-q6",
+        type: "task",
+        question: "Summarize this passage using a mind map!",
+      },
+    ],
+  },
+  {
+    id: "reading-19",
+    track: "reading",
+    day: 19,
+    tutor: "Ms. Lidya",
+    title: "Modern Lifestyle",
+    subtitle: "Dampak gaya hidup modern terhadap kesehatan fisik, mental, dan sosial",
+    overview:
+      "Gaya hidup modern membawa banyak perubahan dalam kehidupan manusia. Teknologi, makanan cepat saji, dan media sosial mengubah cara hidup kita secara drastis. Baca dan pahami dampak positif dan negatif dari gaya hidup modern.",
+    passage: [
+      "Lifestyle refers to the way a person lives, including their daily habits, behaviors, and choices. In the modern era, the lifestyle of people has changed dramatically compared to previous generations. Modern lifestyle is characterized by the use of technology, fast food, sedentary behavior, and social media.",
+      "Modern lifestyle affects people's health in many ways — physically, psychologically, and socially. Physically, modern lifestyle is often associated with health problems such as obesity, diabetes, heart disease, and back pain. These problems are largely caused by unhealthy eating habits, lack of physical activity, and prolonged sitting. The availability of processed and fast food has made it easy for people to consume foods that are high in sugar, salt, and unhealthy fats.",
+      "The different modern lifestyle patterns affect our health physically, psychologically, and socially. The advancement in technology has changed how people travel, communicate, work, and entertain themselves. While technology has made life more convenient, it has also led to a more sedentary lifestyle. People now drive cars instead of walking, watch television and use smartphones instead of engaging in physical activities, and order food online instead of cooking at home.",
+      "Psychologically, modern lifestyle can have both positive and negative effects. On the positive side, access to information and entertainment has expanded greatly. On the negative side, excessive use of social media and technology can lead to increased stress, anxiety, and depression. The constant pressure to be connected and to present a perfect image on social media can negatively affect mental health. Sleep deprivation due to late-night screen use is also a growing concern.",
+      "Socially, modern lifestyle has changed how people interact with each other. While social media allows people to connect with others around the world, it has also reduced face-to-face interaction. Many people now spend more time communicating online than in person. This can lead to feelings of loneliness and social isolation, despite being digitally connected. Family relationships may also suffer when family members spend more time on their devices than with each other.",
+      "Despite its disadvantages, modern lifestyle also has many advantages. Medical advances have increased life expectancy and reduced the impact of many diseases. Technology has made education more accessible through online learning. Modern transportation allows people to travel quickly and easily. Modern appliances have reduced the time and effort needed for household tasks. The key is to find a balance — to enjoy the benefits of modern life while being mindful of its potential negative effects on health and relationships.",
+    ],
+    materialSections: [
+      {
+        title: "True / False / Not Given — Answer Key",
+        points: [
+          "1. A modern lifestyle can cause several serious health problems. → TRUE",
+          "2. The upgrades in cooking and food processing have changed people's eating habits. → TRUE (availability of processed/fast food)",
+          "3. New gadgets invented every day bring more challenges to human lives. → NOT GIVEN (passage discusses effects, not specifically new daily gadgets)",
+          "4. The education field incorporates modern technologies into its methods. → TRUE (online learning)",
+        ],
+      },
+      {
+        title: "Choose the Correct Paragraph",
+        points: [
+          "1. 'The different modern lifestyle patterns affect our health physically, psychologically, and socially.' → Paragraph 3",
+          "2. 'People use animals to help them travel from one place to another.' → NOT in the passage",
+          "3. 'The modern lifestyle has many advantages and disadvantages on health physically, psychologically, and socially.' → Paragraph 2 (closest match)",
+          "4. 'The modern lifestyle affects social relationships very strongly.' → Paragraph 5",
+        ],
+      },
+      {
+        title: "Key Vocabulary",
+        points: [
+          "lifestyle — gaya hidup",
+          "characterized — dicirikan/ditandai",
+          "sedentary — kurang gerak/duduk terus",
+          "obesity — kegemukan/obesitas",
+          "prolonged — berkepanjangan/lama",
+          "processed food — makanan olahan",
+          "advancement — kemajuan/perkembangan",
+          "convenient — nyaman/mudah",
+          "excessive — berlebihan",
+          "deprivation — kekurangan/kurang",
+          "isolation — isolasi/kesendirian",
+          "digitally — secara digital",
+          "appliances — peralatan rumah tangga",
+          "life expectancy — harapan hidup",
+          "mindful — sadar/peduli",
+          "potential — potensi/kemungkinan",
+        ],
+      },
+    ],
+    exercises: [
+      {
+        id: "r19-q1",
+        type: "short-answer",
+        question:
+          "True, False, or Not Given?\n1. A modern lifestyle can cause several serious health problems.\n2. The upgrades in cooking and food processing have changed people's eating habits.\n3. New gadgets that are invented every day bring more challenges to human lives.\n4. The education field incorporates modern technologies into its methods.",
+      },
+      {
+        id: "r19-q2",
+        type: "short-answer",
+        question:
+          "In your own words, what is lifestyle? (Jelaskan apa itu lifestyle dengan kata-katamu sendiri!)",
+      },
+      {
+        id: "r19-q3",
+        type: "short-answer",
+        question:
+          "Mention 2 advantages AND 2 disadvantages of modern lifestyle from the passage!",
+      },
+      {
+        id: "r19-q4",
+        type: "task",
+        question:
+          "What is your lifestyle in daily activity? Please describe briefly! (Bagaimana gaya hidup harianmu? Ceritakan dalam 5-7 kalimat bahasa Inggris!)",
+      },
+      {
+        id: "r19-q5",
+        type: "task",
+        question:
+          "Please mention 20 or more vocabulary that you don't know from this passage and memorize those as an entrance ticket for tomorrow!",
+      },
+      {
+        id: "r19-q6",
+        type: "task",
+        question: "Summarize this passage using a mind map!",
       },
     ],
   },

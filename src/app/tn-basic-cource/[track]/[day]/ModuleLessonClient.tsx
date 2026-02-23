@@ -44,77 +44,6 @@ export default function ModuleLessonClient({ lesson }: Props) {
   const tokenize = useCallback((text: string) => text.split(/(\s+|[^A-Za-z'-]+)/g).filter((p) => p !== ''), []);
 
   // Contextual glossary for education/lesson terms that get mistranslated without context
-  const contextGlossary: Record<string, TranslationResult> = useMemo(() => ({
-    major: { translated: 'jurusan', alternatives: ['bidang studi', 'program studi'] },
-    subject: { translated: 'mata pelajaran', alternatives: ['subjek', 'mata kuliah'] },
-    degree: { translated: 'gelar', alternatives: ['sarjana', 'derajat'] },
-    course: { translated: 'kursus', alternatives: ['mata kuliah', 'pelajaran'] },
-    grade: { translated: 'nilai', alternatives: ['kelas', 'tingkat'] },
-    semester: { translated: 'semester', alternatives: [] },
-    faculty: { translated: 'fakultas', alternatives: ['dosen', 'pengajar'] },
-    lecture: { translated: 'kuliah', alternatives: ['ceramah', 'perkuliahan'] },
-    lecturer: { translated: 'dosen', alternatives: ['pengajar'] },
-    assignment: { translated: 'tugas', alternatives: ['penugasan'] },
-    thesis: { translated: 'skripsi', alternatives: ['tesis'] },
-    scholarship: { translated: 'beasiswa', alternatives: [] },
-    graduate: { translated: 'lulus', alternatives: ['lulusan', 'sarjana'] },
-    graduated: { translated: 'lulus', alternatives: ['telah lulus'] },
-    undergraduate: { translated: 'sarjana (S1)', alternatives: ['mahasiswa'] },
-    diploma: { translated: 'diploma', alternatives: ['ijazah'] },
-    campus: { translated: 'kampus', alternatives: [] },
-    curriculum: { translated: 'kurikulum', alternatives: [] },
-    tuition: { translated: 'uang kuliah', alternatives: ['biaya pendidikan'] },
-    enrollment: { translated: 'pendaftaran', alternatives: [] },
-    freshman: { translated: 'mahasiswa baru', alternatives: [] },
-    sophomore: { translated: 'mahasiswa tahun kedua', alternatives: [] },
-    junior: { translated: 'mahasiswa tahun ketiga', alternatives: ['yunior'] },
-    senior: { translated: 'mahasiswa tahun akhir', alternatives: ['senior'] },
-    dean: { translated: 'dekan', alternatives: [] },
-    rector: { translated: 'rektor', alternatives: [] },
-    dormitory: { translated: 'asrama', alternatives: [] },
-    syllabus: { translated: 'silabus', alternatives: [] },
-    transcript: { translated: 'transkrip nilai', alternatives: [] },
-    midterm: { translated: 'ujian tengah semester', alternatives: ['UTS'] },
-    final: { translated: 'ujian akhir', alternatives: ['final'] },
-    practice: { translated: 'latihan', alternatives: ['praktik'] },
-    exercise: { translated: 'latihan', alternatives: ['soal'] },
-    vocabulary: { translated: 'kosa kata', alternatives: [] },
-    pronunciation: { translated: 'pengucapan', alternatives: [] },
-    fluent: { translated: 'fasih', alternatives: ['lancar'] },
-    fluency: { translated: 'kefasihan', alternatives: ['kelancaran'] },
-    grammar: { translated: 'tata bahasa', alternatives: [] },
-    passage: { translated: 'teks bacaan', alternatives: ['paragraf'] },
-    comprehension: { translated: 'pemahaman', alternatives: [] },
-    greeting: { translated: 'salam', alternatives: ['sapaan'] },
-    introduction: { translated: 'perkenalan', alternatives: ['pendahuluan'] },
-    origin: { translated: 'asal', alternatives: ['asal-usul'] },
-    occupation: { translated: 'pekerjaan', alternatives: ['profesi'] },
-    profession: { translated: 'profesi', alternatives: ['pekerjaan'] },
-    background: { translated: 'latar belakang', alternatives: [] },
-    identity: { translated: 'identitas', alternatives: ['jati diri'] },
-    status: { translated: 'status', alternatives: ['keadaan'] },
-    track: { translated: 'jalur', alternatives: ['trek', 'lintasan'] },
-    material: { translated: 'materi', alternatives: ['bahan'] },
-    overview: { translated: 'gambaran umum', alternatives: ['ringkasan'] },
-    section: { translated: 'bagian', alternatives: ['seksi'] },
-    closing: { translated: 'penutup', alternatives: ['penutupan'] },
-    tense: { translated: 'bentuk waktu (tense)', alternatives: [] },
-    clause: { translated: 'klausa', alternatives: ['anak kalimat'] },
-    phrase: { translated: 'frasa', alternatives: ['ungkapan'] },
-    noun: { translated: 'kata benda', alternatives: [] },
-    verb: { translated: 'kata kerja', alternatives: [] },
-    adjective: { translated: 'kata sifat', alternatives: [] },
-    adverb: { translated: 'kata keterangan', alternatives: [] },
-    pronoun: { translated: 'kata ganti', alternatives: [] },
-    preposition: { translated: 'kata depan', alternatives: [] },
-    conjunction: { translated: 'kata hubung', alternatives: [] },
-    article: { translated: 'kata sandang', alternatives: ['artikel'] },
-    determiner: { translated: 'kata penentu', alternatives: [] },
-    singular: { translated: 'tunggal', alternatives: [] },
-    plural: { translated: 'jamak', alternatives: [] },
-    countable: { translated: 'dapat dihitung', alternatives: [] },
-    uncountable: { translated: 'tidak dapat dihitung', alternatives: [] },
-  }), []);
 
   const speakWord = useCallback((word: string) => {
     window.speechSynthesis.cancel();
@@ -134,12 +63,6 @@ export default function ModuleLessonClient({ lesson }: Props) {
     setSelectedWord(cleaned);
     setTranslationError('');
 
-    // Check contextual glossary first
-    if (contextGlossary[cleaned]) {
-      setTranslation(contextGlossary[cleaned]);
-      return;
-    }
-
     if (translationCache[cleaned]) {
       setTranslation(translationCache[cleaned]);
       return;
@@ -150,9 +73,16 @@ export default function ModuleLessonClient({ lesson }: Props) {
 
     try {
       const res = await fetch(`/api/translate?word=${encodeURIComponent(cleaned)}`);
-      if (!res.ok) throw new Error('translate api failed');
       const data = await res.json();
-      if (data.error) throw new Error(data.error);
+
+      if (res.status === 404 || data.error === 'not_found') {
+        const result: TranslationResult = { translated: 'Tidak ditemukan' };
+        setTranslation(result);
+        setTranslationCache((prev) => ({ ...prev, [cleaned]: result }));
+        return;
+      }
+
+      if (!res.ok || data.error) throw new Error(data.message || 'translate api failed');
 
       const result: TranslationResult = {
         translated: data.translated,
@@ -169,7 +99,7 @@ export default function ModuleLessonClient({ lesson }: Props) {
     } finally {
       setIsTranslating(false);
     }
-  }, [translationCache, contextGlossary]);
+  }, [translationCache]);
 
   const renderClickableText = useCallback((text: string) => {
     const parts = tokenize(text);
