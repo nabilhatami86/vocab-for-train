@@ -2,7 +2,7 @@
 
 import { useCallback, useMemo, useState } from 'react';
 import Link from 'next/link';
-import { ArrowLeft, CheckCircle2, Circle, BookText, Languages, X, XCircle, Lightbulb, Volume2, MessageCircle, Headphones } from 'lucide-react';
+import { ArrowLeft, CheckCircle2, Circle, BookText, Languages, X, XCircle, Lightbulb, Volume2, MessageCircle, Headphones, Eye, EyeOff } from 'lucide-react';
 import type { ModuleLesson } from '@/types/module';
 import { cn } from '@/lib/utils';
 import TTSPlayer from '@/components/tts/TTSPlayer';
@@ -32,6 +32,7 @@ export default function ModuleLessonClient({ lesson }: Props) {
   const [blockText, setBlockText] = useState<string>('');
   const [blankAnswers, setBlankAnswers] = useState<Record<string, string>>({});
   const [blankChecked, setBlankChecked] = useState<Record<string, boolean>>({});
+  const [showTranslation, setShowTranslation] = useState(false);
 
   const completedCount = useMemo(
     () =>
@@ -660,12 +661,29 @@ export default function ModuleLessonClient({ lesson }: Props) {
 
       {lesson.passage && lesson.passage.length > 0 && (
         <section className="space-y-4">
-          <h2 className="text-lg font-semibold text-(--text) flex items-center gap-2">
-            {lesson.track === 'reading' && <BookText className="w-5 h-5 text-blue-500" />}
-            {lesson.track === 'listening' && <Volume2 className="w-5 h-5 text-primary" />}
-            {lesson.track === 'speaking' && <MessageCircle className="w-5 h-5 text-green-500" />}
-            {{ reading: 'Full Reading Passage', speaking: 'Sample Script', grammar: 'Grammar Examples', listening: 'Listening Script' }[lesson.track]}
-          </h2>
+          <div className="flex items-center justify-between gap-2">
+            <h2 className="text-lg font-semibold text-(--text) flex items-center gap-2">
+              {lesson.track === 'reading' && <BookText className="w-5 h-5 text-blue-500" />}
+              {lesson.track === 'listening' && <Volume2 className="w-5 h-5 text-primary" />}
+              {lesson.track === 'speaking' && <MessageCircle className="w-5 h-5 text-green-500" />}
+              {{ reading: 'Full Reading Passage', speaking: 'Sample Script', grammar: 'Grammar Examples', listening: 'Listening Script' }[lesson.track]}
+            </h2>
+            {lesson.track === 'reading' && lesson.passage.some(p => p.startsWith('(') && p.endsWith(')')) && (
+              <button
+                type="button"
+                onClick={() => setShowTranslation(v => !v)}
+                className={cn(
+                  'flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium border transition-colors',
+                  showTranslation
+                    ? 'bg-blue-500/10 border-blue-500/30 text-blue-600 dark:text-blue-400'
+                    : 'bg-(--bg-secondary) border-(--border) text-(--text-muted) hover:text-(--text-secondary)'
+                )}
+              >
+                {showTranslation ? <Eye className="w-3.5 h-3.5" /> : <EyeOff className="w-3.5 h-3.5" />}
+                {showTranslation ? 'Sembunyikan terjemahan' : 'Tampilkan terjemahan'}
+              </button>
+            )}
+          </div>
           <div className={cn(
             'bg-(--bg-card) border border-(--border) rounded-xl p-5',
             lesson.track === 'reading' ? 'space-y-5' : 'space-y-4'
@@ -707,13 +725,9 @@ export default function ModuleLessonClient({ lesson }: Props) {
                   </div>
                 );
               }
-              // Indonesian translation lines (starts with parenthesis)
+              // Indonesian translation lines — always null, handled inside the English paragraph below
               if (paragraph.startsWith('(') && paragraph.endsWith(')')) {
-                return (
-                  <p key={`${lesson.id}-p-${idx}`} className="text-xs italic text-(--text-muted) -mt-3 ml-4 pl-1 border-l-2 border-(--border)">
-                    {paragraph}
-                  </p>
-                );
+                return null;
               }
               // Empty spacer
               if (!paragraph.trim()) return <div key={`${lesson.id}-p-${idx}`} className="h-2" />;
@@ -934,10 +948,41 @@ export default function ModuleLessonClient({ lesson }: Props) {
 
               // Reading: paragraph with number indicator
               if (lesson.track === 'reading') {
-                // Count actual paragraphs (non-empty, non-header, non-translation)
                 const readingParaIdx = lesson.passage!.slice(0, idx).filter(p =>
                   p.trim() && !p.startsWith('---') && !p.startsWith('(') && !p.includes('{{blank:')
                 ).length + 1;
+
+                const nextParagraph = lesson.passage?.[idx + 1];
+                const hasTranslation = nextParagraph?.startsWith('(') && nextParagraph?.endsWith(')');
+
+                if (showTranslation && hasTranslation) {
+                  const translationText = nextParagraph!.slice(1, -1);
+                  const splitSentences = (text: string) =>
+                    text.match(/[^.!?]*[.!?]+(?=\s|$)/g)?.map(s => s.trim()).filter(Boolean) ?? [text];
+                  const engSentences = splitSentences(paragraph);
+                  const idSentences = splitSentences(translationText);
+
+                  return (
+                    <div key={`${lesson.id}-p-${idx}`} className="flex gap-3">
+                      <span className="text-xs text-primary/40 font-mono mt-1.5 shrink-0 select-none w-4 text-right">{readingParaIdx}</span>
+                      <div className="space-y-0">
+                        {engSentences.map((sentence, sIdx) => (
+                          <div key={sIdx}>
+                            <p className="text-sm leading-7 text-(--text-secondary) text-justify">
+                              {renderClickableText(sentence)}
+                            </p>
+                            {idSentences[sIdx] && (
+                              <p className="text-xs leading-5 italic text-blue-500/70 dark:text-blue-400/60 pl-2 border-l-2 border-blue-400/30 mb-2">
+                                {idSentences[sIdx]}
+                              </p>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                }
+
                 return (
                   <div key={`${lesson.id}-p-${idx}`} className="flex gap-3">
                     <span className="text-xs text-primary/40 font-mono mt-1.5 shrink-0 select-none w-4 text-right">{readingParaIdx}</span>
