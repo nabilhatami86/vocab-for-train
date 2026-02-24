@@ -20,6 +20,7 @@ import {
   X,
   ScrollText,
   Languages,
+  Volume2,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useVocabStore } from "@/store/useVocabStore";
@@ -51,6 +52,7 @@ const navSections: { title: string; items: NavItem[] }[] = [
       { href: "/vocab", label: "All Vocabulary", icon: BookOpen },
       { href: "/verb", label: "Verb Library", icon: Layers },
       { href: "/grammar-guide", label: "Grammar Guide", icon: BookMarked },
+      { href: "/pronunciation-guide", label: "Pronunciation Guide", icon: Volume2 },
       { href: "/story", label: "Stories & Readings", icon: ScrollText },
     ],
   },
