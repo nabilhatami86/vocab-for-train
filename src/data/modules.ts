@@ -6192,6 +6192,709 @@ const grammarLessons: ModuleLesson[] = [
       },
     ],
   },
+  // ─────────────────────────────────────────────────────────
+  // WEEK 3–4
+  // ─────────────────────────────────────────────────────────
+  {
+    id: "grammar-11",
+    track: "grammar",
+    day: 11,
+    title: "Conjunction",
+    subtitle: "Coordinating & Correlative Conjunctions",
+    overview:
+      "Materi grammar tentang conjunction (kata penghubung): Coordinating Conjunctions (FANBOYS) dan Correlative Conjunctions. Dilengkapi latihan multiple choice (20 soal), translate to English (10 soal), dan fill in the blank (10 soal).",
+    materialSections: [
+      {
+        title: "Coordinating Conjunctions — FANBOYS",
+        points: [
+          "F — FOR: menjelaskan alasan/sebab (karena). Contoh: I stayed home, for it was raining.",
+          "A — AND: menambahkan informasi (dan). Contoh: She sings and dances.",
+          "N — NOR: melanjutkan kalimat negatif (juga tidak). Contoh: He doesn't eat meat, nor does he eat fish. (Perhatikan inversion setelah 'nor'.)",
+          "B — BUT: menunjukkan kontras (tetapi). Contoh: I wanted to go, but it rained.",
+          "O — OR: menunjukkan pilihan (atau). Contoh: Do you want tea or coffee?",
+          "Y — YET: menunjukkan kontras yang mengejutkan (namun/meskipun demikian). Contoh: She was tired, yet she finished the work.",
+          "S — SO: menunjukkan hasil/akibat (jadi/sehingga). Contoh: It was hot, so we opened the window.",
+        ],
+      },
+      {
+        title: "Correlative Conjunctions",
+        points: [
+          "BOTH ... AND: kedua hal sama-sama benar/berlaku. Contoh: Both Ani and Budi like classical music.",
+          "EITHER ... OR: salah satu dari dua pilihan. Contoh: You can either study now or fail later.",
+          "NEITHER ... NOR: keduanya tidak (negatif ganda). Contoh: Neither the teacher nor the students knew.",
+          "NOT ONLY ... BUT ALSO: bukan hanya ... tetapi juga (menekankan tambahan). Contoh: She is not only smart but also very humble.",
+          "Correlative conjunctions selalu digunakan berpasangan — tidak bisa dipisah.",
+          "Subject–verb agreement dengan either/or dan neither/nor: kata kerja mengikuti subject yang paling dekat dengan kata kerja.",
+          "Inversion: setelah 'nor' dan 'not only' di awal kalimat, posisi subjek dan kata kerja bantu terbalik. Contoh: Not only did she win the race, but she also broke the record.",
+        ],
+      },
+    ],
+    exercises: [
+      // ── PART 1: Multiple Choice (20 Soal) ──
+      {
+        id: "gcj-q1",
+        type: "multiple-choice",
+        question:
+          "I wanted to go to the beach, ________ it started to rain heavily.",
+        options: ["a. and", "b. but", "c. or", "d. so"],
+        correctAnswer: "b. but",
+        reason:
+          '"But" digunakan untuk menunjukkan kontras antara dua klausa yang berlawanan. Ingin pergi ke pantai namun hujan deras adalah kontras.',
+      },
+      {
+        id: "gcj-q2",
+        type: "multiple-choice",
+        question:
+          "You can have ________ the chocolate cake ________ the vanilla pudding, but not both.",
+        options: [
+          "a. both / and",
+          "b. neither / nor",
+          "c. either / or",
+          "d. not only / but also",
+        ],
+        correctAnswer: "c. either / or",
+        reason:
+          '"Either...or" digunakan untuk memberikan dua pilihan di mana hanya satu yang bisa dipilih. "But not both" menegaskan bahwa hanya satu pilihan tersedia.',
+      },
+      {
+        id: "gcj-q3",
+        type: "multiple-choice",
+        question:
+          "She is ________ a talented singer ________ a professional dancer.",
+        options: [
+          "a. both / and",
+          "b. either / nor",
+          "c. neither / or",
+          "d. but / so",
+        ],
+        correctAnswer: "a. both / and",
+        reason:
+          '"Both...and" digunakan ketika dua hal sama-sama benar dan berlaku untuk satu subjek. Dia adalah penyanyi berbakat DAN penari profesional — keduanya benar.',
+      },
+      {
+        id: "gcj-q4",
+        type: "multiple-choice",
+        question:
+          "My brother doesn't like spinach, ________ does he like broccoli.",
+        options: ["a. or", "b. for", "c. nor", "d. yet"],
+        correctAnswer: "c. nor",
+        reason:
+          '"Nor" digunakan untuk melanjutkan kalimat negatif. Setelah "nor", terjadi inversion (subjek dan auxiliary terbalik): "nor does he". Artinya: dia tidak suka bayam, dan juga tidak suka brokoli.',
+      },
+      {
+        id: "gcj-q5",
+        type: "multiple-choice",
+        question:
+          "He was very tired, ________ he decided to finish his homework anyway.",
+        options: ["a. so", "b. yet", "c. for", "d. and"],
+        correctAnswer: "b. yet",
+        reason:
+          '"Yet" menunjukkan kontras yang mengejutkan — meskipun sangat lelah, dia tetap menyelesaikan PR-nya. Kata "anyway" memperkuat kontras ini.',
+      },
+      {
+        id: "gcj-q6",
+        type: "multiple-choice",
+        question:
+          "________ Sarah ________ her sister are coming to the party tonight.",
+        options: [
+          "a. Both / and",
+          "b. Either / and",
+          "c. Neither / or",
+          "d. Not only / and",
+        ],
+        correctAnswer: "a. Both / and",
+        reason:
+          '"Both...and" adalah satu-satunya pasangan konjungsi korelatif yang valid di sini. "Either/and", "Neither/or", dan "Not only/and" bukan pasangan yang benar secara tata bahasa.',
+      },
+      {
+        id: "gcj-q7",
+        type: "multiple-choice",
+        question:
+          "We should study hard, ________ we might fail the final exam.",
+        options: ["a. but", "b. or", "c. for", "d. yet"],
+        correctAnswer: "b. or",
+        reason:
+          '"Or" digunakan untuk menunjukkan konsekuensi jika suatu kondisi tidak dipenuhi: belajar keras ATAU (jika tidak) mungkin gagal ujian.',
+      },
+      {
+        id: "gcj-q8",
+        type: "multiple-choice",
+        question: "The movie was ________ long ________ extremely boring.",
+        options: [
+          "a. neither / or",
+          "b. not only / but also",
+          "c. either / and",
+          "d. both / or",
+        ],
+        correctAnswer: "b. not only / but also",
+        reason:
+          '"Not only...but also" digunakan untuk menekankan dua sifat yang dimiliki sesuatu. Film itu tidak hanya panjang, tetapi juga sangat membosankan.',
+      },
+      {
+        id: "gcj-q9",
+        type: "multiple-choice",
+        question:
+          "I have a lot of work to do, ________ I cannot go out tonight.",
+        options: ["a. for", "b. so", "c. but", "d. nor"],
+        correctAnswer: "b. so",
+        reason:
+          '"So" digunakan untuk menunjukkan hasil atau akibat. Karena banyak pekerjaan → hasilnya tidak bisa keluar malam ini.',
+      },
+      {
+        id: "gcj-q10",
+        type: "multiple-choice",
+        question:
+          "________ the teacher ________ the students were surprised by the announcement.",
+        options: [
+          "a. Neither / nor",
+          "b. Either / nor",
+          "c. Both / or",
+          "d. Not only / and",
+        ],
+        correctAnswer: "a. Neither / nor",
+        reason:
+          '"Neither...nor" adalah satu-satunya pasangan konjungsi korelatif yang valid di antara pilihan yang ada. "Either/nor", "Both/or", dan "Not only/and" bukan pasangan yang benar.',
+      },
+      {
+        id: "gcj-q11",
+        type: "multiple-choice",
+        question:
+          "She bought a new dress, ________ she didn't have any shoes to match.",
+        options: ["a. and", "b. yet", "c. so", "d. or"],
+        correctAnswer: "b. yet",
+        reason:
+          '"Yet" digunakan untuk kontras yang tidak terduga atau ironis. Membeli gaun baru namun tidak punya sepatu yang cocok adalah situasi yang ironis.',
+      },
+      {
+        id: "gcj-q12",
+        type: "multiple-choice",
+        question:
+          "You must ________ finish your vegetables ________ go to bed without dessert.",
+        options: [
+          "a. both / and",
+          "b. either / or",
+          "c. neither / nor",
+          "d. not only / but also",
+        ],
+        correctAnswer: "b. either / or",
+        reason:
+          '"Either...or" digunakan untuk menyajikan dua pilihan sebagai ultimatum. Harus memilih salah satu: habiskan sayuran ATAU tidur tanpa dessert.',
+      },
+      {
+        id: "gcj-q13",
+        type: "multiple-choice",
+        question: "I don't have much money, ________ I am very happy with my life.",
+        options: ["a. and", "b. so", "c. yet", "d. for"],
+        correctAnswer: "c. yet",
+        reason:
+          '"Yet" menunjukkan kontras yang mengejutkan. Tidak punya banyak uang namun tetap sangat bahagia adalah hal yang tidak terduga.',
+      },
+      {
+        id: "gcj-q14",
+        type: "multiple-choice",
+        question:
+          "It was raining, ________ we stayed indoors and played board games.",
+        options: ["a. but", "b. or", "c. so", "d. yet"],
+        correctAnswer: "c. so",
+        reason:
+          '"So" menunjukkan akibat/hasil. Karena hujan → hasilnya kami tinggal di dalam dan bermain board game.',
+      },
+      {
+        id: "gcj-q15",
+        type: "multiple-choice",
+        question:
+          "________ did he lose his keys, ________ he also forgot his wallet.",
+        options: [
+          "a. Both / and",
+          "b. Not only / but",
+          "c. Either / or",
+          "d. Neither / nor",
+        ],
+        correctAnswer: "b. Not only / but",
+        reason:
+          '"Not only...but (also)" digunakan untuk menekankan bahwa lebih dari satu hal buruk terjadi. Setelah "Not only" di awal kalimat, terjadi inversion: "Not only did he lose..." (bukan "Not only he lost...").',
+      },
+      {
+        id: "gcj-q16",
+        type: "multiple-choice",
+        question:
+          "I can't decide if I want to eat pizza ________ pasta for dinner.",
+        options: ["a. or", "b. nor", "c. but", "d. yet"],
+        correctAnswer: "a. or",
+        reason:
+          '"Or" digunakan untuk menunjukkan pilihan sederhana antara dua hal. Memilih antara pizza atau pasta.',
+      },
+      {
+        id: "gcj-q17",
+        type: "multiple-choice",
+        question:
+          "Neither the manager ________ the employees knew about the power outage.",
+        options: ["a. or", "b. and", "c. nor", "d. but"],
+        correctAnswer: "c. nor",
+        reason:
+          '"Neither...nor" adalah pasangan konjungsi korelatif yang benar. Setelah "Neither", selalu diikuti "nor" (bukan or, and, atau but).',
+      },
+      {
+        id: "gcj-q18",
+        type: "multiple-choice",
+        question:
+          "He is very rich, ________ he lives in a very small and simple house.",
+        options: ["a. for", "b. so", "c. and", "d. yet"],
+        correctAnswer: "d. yet",
+        reason:
+          '"Yet" menunjukkan kontras yang mengejutkan. Sangat kaya namun tinggal di rumah kecil dan sederhana adalah kontras yang tidak terduga.',
+      },
+      {
+        id: "gcj-q19",
+        type: "multiple-choice",
+        question: "Both my mother ________ my father enjoy gardening on weekends.",
+        options: ["a. or", "b. and", "c. nor", "d. but also"],
+        correctAnswer: "b. and",
+        reason:
+          '"Both...and" adalah pasangan konjungsi korelatif yang benar. Setelah "Both", selalu diikuti "and".',
+      },
+      {
+        id: "gcj-q20",
+        type: "multiple-choice",
+        question: "I didn't go to the gym, ________ I was feeling a bit sick.",
+        options: ["a. for", "b. so", "c. yet", "d. or"],
+        correctAnswer: "a. for",
+        reason:
+          '"For" digunakan untuk menjelaskan alasan/sebab (mirip "because", namun lebih formal). Tidak pergi ke gym FOR (karena) merasa sedikit sakit. Berbeda dengan "so" yang menunjukkan akibat.',
+      },
+      // ── PART 2: Translate to English (10 Soal) ──
+      {
+        id: "gcj-q21",
+        type: "short-answer",
+        question: "[TRANSLATE] Saya suka kopi, tetapi saya tidak suka teh.",
+        sampleAnswer: "I like coffee, but I don't like tea.",
+      },
+      {
+        id: "gcj-q22",
+        type: "short-answer",
+        question:
+          "[TRANSLATE] Dia tidak hanya pintar, tetapi juga sangat rendah hati.",
+        sampleAnswer: "He/She is not only smart, but also very humble.",
+      },
+      {
+        id: "gcj-q23",
+        type: "short-answer",
+        question:
+          "[TRANSLATE] Kamu bisa memilih antara belajar sekarang atau gagal dalam tes besok.",
+        sampleAnswer: "You can either study now or fail the test tomorrow.",
+      },
+      {
+        id: "gcj-q24",
+        type: "short-answer",
+        question:
+          "[TRANSLATE] Baik Ayah maupun Ibu tidak setuju dengan rencana itu. (Gunakan: Neither...nor)",
+        sampleAnswer: "Neither Father nor Mother agreed with the plan.",
+      },
+      {
+        id: "gcj-q25",
+        type: "short-answer",
+        question:
+          "[TRANSLATE] Dia sedang sakit, jadi dia tidak pergi ke kantor.",
+        sampleAnswer: "He/She was sick, so he/she didn't go to the office.",
+      },
+      {
+        id: "gcj-q26",
+        type: "short-answer",
+        question:
+          "[TRANSLATE] Baik Ani maupun Budi menyukai musik klasik. (Gunakan: Both...and)",
+        sampleAnswer: "Both Ani and Budi like classical music.",
+      },
+      {
+        id: "gcj-q27",
+        type: "short-answer",
+        question:
+          "[TRANSLATE] Aku ingin membeli mobil baru, namun aku tidak punya cukup uang.",
+        sampleAnswer: "I want to buy a new car, yet I don't have enough money.",
+      },
+      {
+        id: "gcj-q28",
+        type: "short-answer",
+        question:
+          "[TRANSLATE] Dia tidak makan daging, dan dia juga tidak makan ikan. (Gunakan: nor)",
+        sampleAnswer: "He/She doesn't eat meat, nor does he/she eat fish.",
+      },
+      {
+        id: "gcj-q29",
+        type: "short-answer",
+        question:
+          "[TRANSLATE] Kita bisa pergi ke Bali atau ke Lombok untuk liburan nanti.",
+        sampleAnswer: "We can go to Bali or Lombok for our next holiday.",
+      },
+      {
+        id: "gcj-q30",
+        type: "short-answer",
+        question:
+          "[TRANSLATE] Masakan ini tidak hanya enak, tetapi juga sehat.",
+        sampleAnswer: "This food is not only delicious, but also healthy.",
+      },
+      // ── PART 3: Fill in the Blank (10 Soal) ──
+      {
+        id: "gcj-q31",
+        type: "short-answer",
+        question: "I will buy either a new laptop ________ a new smartphone.",
+        correctAnswer: "or",
+        reason:
+          '"Either...or" adalah pasangan konjungsi korelatif. Setelah "either", selalu gunakan "or".',
+      },
+      {
+        id: "gcj-q32",
+        type: "short-answer",
+        question: "He was hungry, ________ he made himself a large sandwich.",
+        correctAnswer: "so",
+        reason:
+          '"So" menunjukkan akibat/hasil. Karena lapar → hasilnya dia membuat sandwich besar.',
+      },
+      {
+        id: "gcj-q33",
+        type: "short-answer",
+        question:
+          "Neither the blue shirt ________ the red one fits me properly.",
+        correctAnswer: "nor",
+        reason:
+          '"Neither...nor" adalah pasangan yang benar. Setelah "neither", selalu gunakan "nor".',
+      },
+      {
+        id: "gcj-q34",
+        type: "short-answer",
+        question:
+          "She didn't study for the test, ________ she managed to get an A.",
+        correctAnswer: "yet",
+        reason:
+          '"Yet" menunjukkan kontras yang mengejutkan. Tidak belajar namun berhasil mendapat nilai A adalah hal yang tidak terduga.',
+      },
+      {
+        id: "gcj-q35",
+        type: "short-answer",
+        question:
+          "Not only did she win the race, ________ she also broke the world record.",
+        correctAnswer: "but",
+        reason:
+          '"Not only...but (also)" adalah pasangan konjungsi korelatif. Setelah "not only", gunakan "but" (bisa ditambah "also").',
+      },
+      {
+        id: "gcj-q36",
+        type: "short-answer",
+        question:
+          "You can stay here with me, ________ you can go home with your brother.",
+        correctAnswer: "or",
+        reason:
+          '"Or" digunakan untuk memberikan dua pilihan yang setara.',
+      },
+      {
+        id: "gcj-q37",
+        type: "short-answer",
+        question: "Both the cat ________ the dog are sleeping on the sofa.",
+        correctAnswer: "and",
+        reason:
+          '"Both...and" adalah pasangan konjungsi korelatif. Setelah "both", selalu gunakan "and".',
+      },
+      {
+        id: "gcj-q38",
+        type: "short-answer",
+        question:
+          "I don't like horror movies, ________ do I like action movies.",
+        correctAnswer: "nor",
+        reason:
+          '"Nor" digunakan untuk melanjutkan kalimat negatif. Setelah "nor", terjadi inversion: "nor do I" (bukan "nor I do").',
+      },
+      {
+        id: "gcj-q39",
+        type: "short-answer",
+        question:
+          "It was a very long journey, ________ it was worth every minute.",
+        correctAnswer: "yet",
+        reason:
+          '"Yet" menunjukkan kontras yang mengejutkan. Perjalanan panjang namun tetap berharga setiap menitnya.',
+      },
+      {
+        id: "gcj-q40",
+        type: "short-answer",
+        question:
+          "He is neither rich ________ famous, but he is very content.",
+        correctAnswer: "nor",
+        reason:
+          '"Neither...nor" adalah pasangan yang benar. Setelah "neither", selalu gunakan "nor".',
+      },
+    ],
+  },
+  {
+    id: "grammar-12",
+    track: "grammar",
+    day: 12,
+    title: "Preposition",
+    subtitle: "Prepositions of Time & Place — In, On, At",
+    overview:
+      "Materi grammar tentang preposisi: penggunaan in, on, dan at untuk waktu (15 soal) dan tempat (15 soal). Dilengkapi penjelasan lengkap dan latihan fill in the blank.",
+    materialSections: [
+      {
+        title: "Prepositions of Time — In / On / At",
+        points: [
+          "IN — digunakan untuk: bulan (in June), tahun (in 2010), musim (in summer/spring), abad/dekade (in the 1940s), bagian hari (in the morning / afternoon / evening), periode durasi (in ten minutes).",
+          "ON — digunakan untuk: hari dalam seminggu (on Monday, on Saturdays), tanggal tertentu (on June 15th), hari spesial (on Christmas Day, on New Year's Eve, on my birthday).",
+          "AT — digunakan untuk: waktu jam yang spesifik (at 9:00 AM), titik waktu (at noon, at midnight), ungkapan tetap: at night, at the weekend (British English).",
+          "Aturan umum: IN (periode panjang) > ON (hari/tanggal) > AT (titik waktu spesifik).",
+          "Zero preposition: tidak pakai preposisi sebelum next/last/this/every. Contoh: I'll see you next Tuesday (bukan 'on next Tuesday').",
+        ],
+      },
+      {
+        title: "Prepositions of Place — In / On / At",
+        points: [
+          "IN — digunakan untuk: ruang tertutup/enclosed space (in the car, in the fridge, in the room), kota/negara/pulau/wilayah (in Bali, in France, in a village), pohon (in the tree — hewan bertengger di antara cabang).",
+          "ON — digunakan untuk: permukaan (on the table, on the wall, on the ceiling, on the floor), kendaraan umum (on the bus/train/plane), media/jaringan (on TV, on the internet).",
+          "AT — digunakan untuk: titik/lokasi spesifik sebagai referensi (at the bus stop, at the traffic light, at the top of the page), institusi/tempat kerja (at school, at the bank, at Oxford University), alamat (at 21 Baker Street).",
+          "Knock ON the door (permukaan pintu) — berbeda dengan standing AT the door (posisi di depan pintu).",
+        ],
+      },
+    ],
+    exercises: [
+      // ── PART 1: Prepositions of Time (15 Soal) ──
+      {
+        id: "gprep-q1",
+        type: "short-answer",
+        question: "My birthday is ________ June 15th.",
+        correctAnswer: "on",
+        reason:
+          '"On" digunakan untuk tanggal spesifik. June 15th adalah tanggal → gunakan ON.',
+      },
+      {
+        id: "gprep-q2",
+        type: "short-answer",
+        question: "We usually have lunch ________ noon.",
+        correctAnswer: "at",
+        reason:
+          '"At" digunakan untuk titik waktu spesifik. Noon (tengah hari) adalah titik waktu → gunakan AT.',
+      },
+      {
+        id: "gprep-q3",
+        type: "short-answer",
+        question: "I love going to the beach ________ the summer.",
+        correctAnswer: "in",
+        reason:
+          '"In" digunakan untuk musim. The summer adalah musim → gunakan IN.',
+      },
+      {
+        id: "gprep-q4",
+        type: "short-answer",
+        question: "The meeting starts exactly ________ 9:00 AM.",
+        correctAnswer: "at",
+        reason:
+          '"At" digunakan untuk waktu jam yang spesifik. 9:00 AM adalah jam → gunakan AT.',
+      },
+      {
+        id: "gprep-q5",
+        type: "short-answer",
+        question: "They moved to this city ________ 2010.",
+        correctAnswer: "in",
+        reason: '"In" digunakan untuk tahun. 2010 adalah tahun → gunakan IN.',
+      },
+      {
+        id: "gprep-q6",
+        type: "short-answer",
+        question: "I always feel sleepy ________ the afternoon.",
+        correctAnswer: "in",
+        reason:
+          '"In" digunakan untuk bagian hari: in the morning, in the afternoon, in the evening. Pengecualian: at night (bukan "in the night").',
+      },
+      {
+        id: "gprep-q7",
+        type: "short-answer",
+        question: "We don't have school ________ Saturdays.",
+        correctAnswer: "on",
+        reason:
+          '"On" digunakan untuk hari-hari dalam seminggu. Saturdays adalah hari → gunakan ON.',
+      },
+      {
+        id: "gprep-q8",
+        type: "short-answer",
+        question: "What do you usually do ________ Christmas Day?",
+        correctAnswer: "on",
+        reason:
+          '"On" digunakan untuk hari-hari spesial (on Christmas Day, on New Year\'s Day). Christmas Day adalah hari spesial → gunakan ON.',
+      },
+      {
+        id: "gprep-q9",
+        type: "short-answer",
+        question: "It gets very cold here ________ night.",
+        correctAnswer: "at",
+        reason:
+          '"At night" adalah ungkapan tetap dalam bahasa Inggris. Night menggunakan AT (bukan "in the night" untuk ungkapan umum).',
+      },
+      {
+        id: "gprep-q10",
+        type: "short-answer",
+        question: "The flowers bloom ________ spring.",
+        correctAnswer: "in",
+        reason:
+          '"In" digunakan untuk musim. Spring adalah musim → gunakan IN (in spring / in the spring).',
+      },
+      {
+        id: "gprep-q11",
+        type: "short-answer",
+        question: "I'll see you ________ next Tuesday.",
+        correctAnswer: "on",
+        reason:
+          '"On" digunakan untuk hari tertentu. Tuesday adalah hari → gunakan ON. Catatan: "I\'ll see you next Tuesday" (tanpa preposisi) juga diterima secara informal.',
+      },
+      {
+        id: "gprep-q12",
+        type: "short-answer",
+        question: "She finished her homework ________ ten minutes.",
+        correctAnswer: "in",
+        reason:
+          '"In" digunakan untuk periode/durasi waktu. In ten minutes = dalam waktu sepuluh menit.',
+      },
+      {
+        id: "gprep-q13",
+        type: "short-answer",
+        question: "We are going to have a party ________ New Year's Eve.",
+        correctAnswer: "on",
+        reason:
+          '"On" digunakan untuk hari atau tanggal spesial. New Year\'s Eve adalah hari spesial → gunakan ON.',
+      },
+      {
+        id: "gprep-q14",
+        type: "short-answer",
+        question: "My grandfather was born ________ the 1940s.",
+        correctAnswer: "in",
+        reason:
+          '"In" digunakan untuk dekade. The 1940s adalah dekade → gunakan IN.',
+      },
+      {
+        id: "gprep-q15",
+        type: "short-answer",
+        question: "I like to read a book ________ the weekend.",
+        correctAnswer: "at",
+        reason:
+          '"At the weekend" adalah ungkapan British English yang umum digunakan. American English menggunakan "on the weekend". Keduanya diterima; dalam konteks kursus ini gunakan AT.',
+      },
+      // ── PART 2: Prepositions of Place (15 Soal) ──
+      {
+        id: "gprep-q16",
+        type: "short-answer",
+        question: "My keys are ________ the table.",
+        correctAnswer: "on",
+        reason:
+          '"On" digunakan untuk permukaan. Kunci berada di atas permukaan meja → gunakan ON.',
+      },
+      {
+        id: "gprep-q17",
+        type: "short-answer",
+        question: "She is waiting for you ________ the bus stop.",
+        correctAnswer: "at",
+        reason:
+          '"At" digunakan untuk titik/lokasi spesifik. Bus stop adalah titik pertemuan yang spesifik → gunakan AT.',
+      },
+      {
+        id: "gprep-q18",
+        type: "short-answer",
+        question: "I left my phone ________ the car.",
+        correctAnswer: "in",
+        reason:
+          '"In" digunakan untuk ruang tertutup (enclosed space). Mobil adalah ruang tertutup → gunakan IN.',
+      },
+      {
+        id: "gprep-q19",
+        type: "short-answer",
+        question: "There is a beautiful painting ________ the wall.",
+        correctAnswer: "on",
+        reason:
+          '"On" digunakan untuk permukaan. Dinding adalah permukaan → lukisan yang terpasang di dinding menggunakan ON.',
+      },
+      {
+        id: "gprep-q20",
+        type: "short-answer",
+        question: "He lives ________ a small village in France.",
+        correctAnswer: "in",
+        reason:
+          '"In" digunakan untuk desa, kota, negara, wilayah. Village adalah suatu tempat berpenghuni → gunakan IN.',
+      },
+      {
+        id: "gprep-q21",
+        type: "short-answer",
+        question: "Turn left ________ the next traffic light.",
+        correctAnswer: "at",
+        reason:
+          '"At" digunakan untuk titik/lokasi spesifik sebagai referensi. Traffic light adalah titik referensi yang spesifik → gunakan AT.',
+      },
+      {
+        id: "gprep-q22",
+        type: "short-answer",
+        question: "I saw a fly ________ the ceiling.",
+        correctAnswer: "on",
+        reason:
+          '"On" digunakan untuk permukaan, termasuk langit-langit (ceiling). Lalat yang hinggap di langit-langit menggunakan ON karena langit-langit adalah permukaan.',
+      },
+      {
+        id: "gprep-q23",
+        type: "short-answer",
+        question: "We spent our holiday ________ Bali.",
+        correctAnswer: "in",
+        reason:
+          '"In" digunakan untuk pulau, daerah, atau wilayah geografis. Bali adalah pulau/daerah → gunakan IN.',
+      },
+      {
+        id: "gprep-q24",
+        type: "short-answer",
+        question: "Write your name ________ the top of the page.",
+        correctAnswer: "at",
+        reason:
+          '"At" digunakan untuk posisi/titik tertentu. "At the top" merujuk pada posisi tertentu di halaman → gunakan AT.',
+      },
+      {
+        id: "gprep-q25",
+        type: "short-answer",
+        question: "Is there any milk ________ the fridge?",
+        correctAnswer: "in",
+        reason:
+          '"In" digunakan untuk ruang tertutup. Kulkas adalah wadah tertutup → gunakan IN.',
+      },
+      {
+        id: "gprep-q26",
+        type: "short-answer",
+        question: "They are sitting ________ the floor.",
+        correctAnswer: "on",
+        reason:
+          '"On" digunakan untuk permukaan. Lantai adalah permukaan → duduk di lantai menggunakan ON.',
+      },
+      {
+        id: "gprep-q27",
+        type: "short-answer",
+        question: "My brother works ________ a bank.",
+        correctAnswer: "at",
+        reason:
+          '"At" digunakan untuk institusi atau tempat kerja spesifik. Bank adalah tempat kerja → gunakan AT.',
+      },
+      {
+        id: "gprep-q28",
+        type: "short-answer",
+        question: "Someone is knocking ________ the door.",
+        correctAnswer: "on",
+        reason:
+          '"Knock on the door" adalah ungkapan tetap — mengetuk berarti memukul permukaan pintu → gunakan ON.',
+      },
+      {
+        id: "gprep-q29",
+        type: "short-answer",
+        question: "I studied ________ Oxford University.",
+        correctAnswer: "at",
+        reason:
+          '"At" digunakan untuk universitas dan institusi pendidikan. Contoh: at school, at university, at college → gunakan AT.',
+      },
+      {
+        id: "gprep-q30",
+        type: "short-answer",
+        question: "Look at that bird ________ the tree!",
+        correctAnswer: "in",
+        reason:
+          '"In a tree" digunakan untuk hewan/burung yang bertengger di antara cabang-cabang pohon. Berbeda dengan "on a tree" yang tidak lazim untuk hewan hidup.',
+      },
+    ],
+  },
 ];
 
 const listeningLessons: ModuleLesson[] = [
