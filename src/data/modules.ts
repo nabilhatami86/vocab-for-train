@@ -6466,71 +6466,91 @@ const grammarLessons: ModuleLesson[] = [
       {
         id: "gcj-q21",
         type: "short-answer",
-        question: "[TRANSLATE] Saya suka kopi, tetapi saya tidak suka teh.",
-        sampleAnswer: "I like coffee, but I don't like tea.",
+        question: "Terjemahkan: Saya suka kopi, tetapi saya tidak suka teh.",
+        correctAnswer: "I like coffee, but I don't like tea.",
+        reason:
+          '"But" digunakan untuk kontras antara dua hal yang berlawanan: suka kopi TAPI tidak suka teh.',
       },
       {
         id: "gcj-q22",
         type: "short-answer",
         question:
-          "[TRANSLATE] Dia tidak hanya pintar, tetapi juga sangat rendah hati.",
-        sampleAnswer: "He/She is not only smart, but also very humble.",
+          "Terjemahkan: Dia tidak hanya pintar, tetapi juga sangat rendah hati.",
+        correctAnswer: "He is not only smart, but also very humble.",
+        reason:
+          '"Not only...but also" digunakan untuk menekankan dua kualitas positif sekaligus pada satu orang.',
       },
       {
         id: "gcj-q23",
         type: "short-answer",
         question:
-          "[TRANSLATE] Kamu bisa memilih antara belajar sekarang atau gagal dalam tes besok.",
-        sampleAnswer: "You can either study now or fail the test tomorrow.",
+          "Terjemahkan: Kamu bisa memilih antara belajar sekarang atau gagal dalam tes besok.",
+        correctAnswer: "You can either study now or fail the test tomorrow.",
+        reason:
+          '"Either...or" digunakan untuk menyajikan dua pilihan: belajar sekarang ATAU gagal dalam tes besok.',
       },
       {
         id: "gcj-q24",
         type: "short-answer",
         question:
-          "[TRANSLATE] Baik Ayah maupun Ibu tidak setuju dengan rencana itu. (Gunakan: Neither...nor)",
-        sampleAnswer: "Neither Father nor Mother agreed with the plan.",
+          "Terjemahkan: Baik Ayah maupun Ibu tidak setuju dengan rencana itu.",
+        correctAnswer: "Neither Father nor Mother agreed with the plan.",
+        reason:
+          '"Neither...nor" digunakan karena KEDUANYA tidak setuju — negatif untuk kedua subjek sekaligus.',
       },
       {
         id: "gcj-q25",
         type: "short-answer",
         question:
-          "[TRANSLATE] Dia sedang sakit, jadi dia tidak pergi ke kantor.",
-        sampleAnswer: "He/She was sick, so he/she didn't go to the office.",
+          "Terjemahkan: Dia sedang sakit, jadi dia tidak pergi ke kantor.",
+        correctAnswer: "He was sick, so he didn't go to the office.",
+        reason:
+          '"So" digunakan untuk akibat/hasil langsung: sakit → tidak pergi ke kantor. Bukan "but/yet" karena ini konsekuensi, bukan kontras.',
       },
       {
         id: "gcj-q26",
         type: "short-answer",
         question:
-          "[TRANSLATE] Baik Ani maupun Budi menyukai musik klasik. (Gunakan: Both...and)",
-        sampleAnswer: "Both Ani and Budi like classical music.",
+          "Terjemahkan: Baik Ani maupun Budi menyukai musik klasik.",
+        correctAnswer: "Both Ani and Budi like classical music.",
+        reason:
+          '"Both...and" digunakan karena KEDUANYA (Ani dan Budi) menyukai musik — positif untuk dua subjek sekaligus.',
       },
       {
         id: "gcj-q27",
         type: "short-answer",
         question:
-          "[TRANSLATE] Aku ingin membeli mobil baru, namun aku tidak punya cukup uang.",
-        sampleAnswer: "I want to buy a new car, yet I don't have enough money.",
+          "Terjemahkan: Aku ingin membeli mobil baru, namun aku tidak punya cukup uang.",
+        correctAnswer: "I want to buy a new car, yet I don't have enough money.",
+        reason:
+          '"Yet" digunakan untuk kontras mengejutkan: ingin membeli mobil NAMUN tidak punya uang cukup. "But" juga bisa, tapi "yet" lebih menekankan ironinya.',
       },
       {
         id: "gcj-q28",
         type: "short-answer",
         question:
-          "[TRANSLATE] Dia tidak makan daging, dan dia juga tidak makan ikan. (Gunakan: nor)",
-        sampleAnswer: "He/She doesn't eat meat, nor does he/she eat fish.",
+          "Terjemahkan: Dia tidak makan daging, dan dia juga tidak makan ikan.",
+        correctAnswer: "He doesn't eat meat, nor does he eat fish.",
+        reason:
+          '"Nor" melanjutkan kalimat negatif. Perhatikan inversion setelah "nor": "nor does he eat" — bukan "nor he eats".',
       },
       {
         id: "gcj-q29",
         type: "short-answer",
         question:
-          "[TRANSLATE] Kita bisa pergi ke Bali atau ke Lombok untuk liburan nanti.",
-        sampleAnswer: "We can go to Bali or Lombok for our next holiday.",
+          "Terjemahkan: Kita bisa pergi ke Bali atau ke Lombok untuk liburan nanti.",
+        correctAnswer: "We can go to Bali or Lombok for our next holiday.",
+        reason:
+          '"Or" digunakan untuk pilihan sederhana antara dua tujuan liburan.',
       },
       {
         id: "gcj-q30",
         type: "short-answer",
         question:
-          "[TRANSLATE] Masakan ini tidak hanya enak, tetapi juga sehat.",
-        sampleAnswer: "This food is not only delicious, but also healthy.",
+          "Terjemahkan: Masakan ini tidak hanya enak, tetapi juga sehat.",
+        correctAnswer: "This food is not only delicious, but also healthy.",
+        reason:
+          '"Not only...but also" digunakan untuk menekankan dua kualitas: TIDAK HANYA enak TETAPI JUGA sehat.',
       },
       // ── PART 3: Fill in the Blank (10 Soal) ──
       {

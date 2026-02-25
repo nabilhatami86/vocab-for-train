@@ -1083,7 +1083,15 @@ export default function ModuleLessonClient({ lesson }: Props) {
                 <div key={exercise.id} className="bg-(--bg-card) border border-(--border) rounded-xl p-5 space-y-3">
                   <div className="flex items-start justify-between gap-3">
                     <p className="text-sm text-(--text) font-medium">
-                      {startNum + index}. {renderClickableText(exercise.question)}
+                      {startNum + index}.{' '}
+                      {exercise.question.startsWith('Terjemahkan: ') ? (
+                        <>
+                          <span className="inline-flex items-center px-1.5 py-0.5 rounded text-xs font-semibold bg-blue-500/15 text-blue-600 dark:text-blue-400 border border-blue-500/20 mr-1.5 align-middle">
+                            Terjemahkan
+                          </span>
+                          {renderClickableText(exercise.question.replace('Terjemahkan: ', ''))}
+                        </>
+                      ) : renderClickableText(exercise.question)}
                     </p>
                     {isDone ? (
                       <CheckCircle2 className="w-4 h-4 text-success mt-0.5 shrink-0" />
@@ -1163,28 +1171,54 @@ export default function ModuleLessonClient({ lesson }: Props) {
                   })()}
 
                   {exercise.type !== 'multiple-choice' && (() => {
-                    // Fill-in-the-blank: short-answer with correctAnswer
+                    // Fill-in-the-blank / Translate: short-answer with correctAnswer
                     if (exercise.type === 'short-answer' && exercise.correctAnswer) {
+                      const isTranslate = exercise.question.startsWith('Terjemahkan: ');
                       const userInput = notes[exercise.id] ?? '';
                       const isSubmitted = submittedAnswers[exercise.id] === true;
-                      const isCorrect = isSubmitted && userInput.trim().toLowerCase() === exercise.correctAnswer.trim().toLowerCase();
+
+                      const normalize = (s: string) =>
+                        s.toLowerCase().trim().replace(/[^\w\s]/g, ' ').replace(/\s+/g, ' ').trim();
+                      const isCorrect = isSubmitted && (() => {
+                        const n = normalize(userInput);
+                        const base = exercise.correctAnswer ?? '';
+                        const variants = [
+                          base,
+                          base.replace(/\bhe\b/g, 'she').replace(/\bhim\b/g, 'her').replace(/\bhis\b/g, 'her'),
+                          base.replace(/\bshe\b/g, 'he').replace(/\bher\b/g, 'him'),
+                        ].map(normalize);
+                        return variants.some((v) => n === v);
+                      })();
 
                       return (
                         <div className="space-y-2">
-                          <div className="flex gap-2">
-                            <input
-                              type="text"
-                              value={userInput}
-                              onChange={(e) => {
-                                setNotes((prev) => ({ ...prev, [exercise.id]: e.target.value }));
-                                if (submittedAnswers[exercise.id]) setSubmittedAnswers((prev) => ({ ...prev, [exercise.id]: false }));
-                              }}
-                              onKeyDown={(e) => {
-                                if (e.key === 'Enter') setSubmittedAnswers((prev) => ({ ...prev, [exercise.id]: true }));
-                              }}
-                              placeholder="Tulis jawaban..."
-                              className="flex-1 rounded-lg border border-(--border) bg-(--bg-secondary) px-3 py-2 text-sm text-(--text) focus:outline-none focus:ring-2 focus:ring-primary/40"
-                            />
+                          <div className="flex gap-2 items-end">
+                            {isTranslate ? (
+                              <textarea
+                                value={userInput}
+                                onChange={(e) => {
+                                  setNotes((prev) => ({ ...prev, [exercise.id]: e.target.value }));
+                                  if (submittedAnswers[exercise.id]) setSubmittedAnswers((prev) => ({ ...prev, [exercise.id]: false }));
+                                }}
+                                placeholder="Tulis terjemahan kamu..."
+                                rows={2}
+                                className="flex-1 rounded-lg border border-(--border) bg-(--bg-secondary) px-3 py-2 text-sm text-(--text) focus:outline-none focus:ring-2 focus:ring-primary/40 resize-none"
+                              />
+                            ) : (
+                              <input
+                                type="text"
+                                value={userInput}
+                                onChange={(e) => {
+                                  setNotes((prev) => ({ ...prev, [exercise.id]: e.target.value }));
+                                  if (submittedAnswers[exercise.id]) setSubmittedAnswers((prev) => ({ ...prev, [exercise.id]: false }));
+                                }}
+                                onKeyDown={(e) => {
+                                  if (e.key === 'Enter') setSubmittedAnswers((prev) => ({ ...prev, [exercise.id]: true }));
+                                }}
+                                placeholder="Tulis jawaban..."
+                                className="flex-1 rounded-lg border border-(--border) bg-(--bg-secondary) px-3 py-2 text-sm text-(--text) focus:outline-none focus:ring-2 focus:ring-primary/40"
+                              />
+                            )}
                             <button
                               onClick={() => setSubmittedAnswers((prev) => ({ ...prev, [exercise.id]: true }))}
                               className="px-4 py-2 rounded-lg bg-primary text-white text-sm font-medium hover:bg-primary/90 transition-colors shrink-0"
