@@ -33,6 +33,7 @@ export default function ModuleLessonClient({ lesson }: Props) {
   const [blankAnswers, setBlankAnswers] = useState<Record<string, string>>({});
   const [blankChecked, setBlankChecked] = useState<Record<string, boolean>>({});
   const [showTranslation, setShowTranslation] = useState(false);
+  const [submittedAnswers, setSubmittedAnswers] = useState<Record<string, boolean>>({});
 
   const completedCount = useMemo(
     () =>
@@ -1161,14 +1162,106 @@ export default function ModuleLessonClient({ lesson }: Props) {
                     );
                   })()}
 
-                  {exercise.type !== 'multiple-choice' && (
-                    <textarea
-                      value={notes[exercise.id] ?? ''}
-                      onChange={(e) => setNotes((prev) => ({ ...prev, [exercise.id]: e.target.value }))}
-                      placeholder="Write your answer here..."
-                      className="w-full min-h-[90px] rounded-lg border border-(--border) bg-(--bg-secondary) px-3 py-2 text-sm text-(--text) focus:outline-none focus:ring-2 focus:ring-primary/40"
-                    />
-                  )}
+                  {exercise.type !== 'multiple-choice' && (() => {
+                    // Fill-in-the-blank: short-answer with correctAnswer
+                    if (exercise.type === 'short-answer' && exercise.correctAnswer) {
+                      const userInput = notes[exercise.id] ?? '';
+                      const isSubmitted = submittedAnswers[exercise.id] === true;
+                      const isCorrect = isSubmitted && userInput.trim().toLowerCase() === exercise.correctAnswer.trim().toLowerCase();
+
+                      return (
+                        <div className="space-y-2">
+                          <div className="flex gap-2">
+                            <input
+                              type="text"
+                              value={userInput}
+                              onChange={(e) => {
+                                setNotes((prev) => ({ ...prev, [exercise.id]: e.target.value }));
+                                if (submittedAnswers[exercise.id]) setSubmittedAnswers((prev) => ({ ...prev, [exercise.id]: false }));
+                              }}
+                              onKeyDown={(e) => {
+                                if (e.key === 'Enter') setSubmittedAnswers((prev) => ({ ...prev, [exercise.id]: true }));
+                              }}
+                              placeholder="Tulis jawaban..."
+                              className="flex-1 rounded-lg border border-(--border) bg-(--bg-secondary) px-3 py-2 text-sm text-(--text) focus:outline-none focus:ring-2 focus:ring-primary/40"
+                            />
+                            <button
+                              onClick={() => setSubmittedAnswers((prev) => ({ ...prev, [exercise.id]: true }))}
+                              className="px-4 py-2 rounded-lg bg-primary text-white text-sm font-medium hover:bg-primary/90 transition-colors shrink-0"
+                            >
+                              Cek
+                            </button>
+                          </div>
+                          {isSubmitted && (
+                            <div className={cn(
+                              'rounded-lg px-4 py-3 text-sm flex items-start gap-2',
+                              isCorrect ? 'bg-green-500/10 border border-green-500/30' : 'bg-red-500/10 border border-red-500/30'
+                            )}>
+                              {isCorrect ? (
+                                <CheckCircle2 className="w-4 h-4 mt-0.5 shrink-0 text-green-500" />
+                              ) : (
+                                <XCircle className="w-4 h-4 mt-0.5 shrink-0 text-red-500" />
+                              )}
+                              <div>
+                                <p className={cn('font-medium', isCorrect ? 'text-green-700 dark:text-green-400' : 'text-red-700 dark:text-red-400')}>
+                                  {isCorrect ? 'Benar!' : 'Salah!'}
+                                  {!isCorrect && (
+                                    <span className="font-normal text-(--text-secondary)"> Jawaban yang benar: <span className="font-semibold text-green-700 dark:text-green-400">{exercise.correctAnswer}</span></span>
+                                  )}
+                                </p>
+                                {exercise.reason && (
+                                  <p className="mt-1 text-(--text-secondary) flex items-start gap-1.5">
+                                    <Lightbulb className="w-3.5 h-3.5 mt-0.5 shrink-0 text-amber-500" />
+                                    {exercise.reason}
+                                  </p>
+                                )}
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      );
+                    }
+
+                    // Translate: short-answer with sampleAnswer
+                    if (exercise.type === 'short-answer' && exercise.sampleAnswer) {
+                      const isSubmitted = submittedAnswers[exercise.id] === true;
+                      return (
+                        <div className="space-y-2">
+                          <textarea
+                            value={notes[exercise.id] ?? ''}
+                            onChange={(e) => setNotes((prev) => ({ ...prev, [exercise.id]: e.target.value }))}
+                            placeholder="Tulis terjemahan kamu..."
+                            className="w-full min-h-[80px] rounded-lg border border-(--border) bg-(--bg-secondary) px-3 py-2 text-sm text-(--text) focus:outline-none focus:ring-2 focus:ring-primary/40"
+                          />
+                          <button
+                            onClick={() => setSubmittedAnswers((prev) => ({ ...prev, [exercise.id]: true }))}
+                            className="px-4 py-2 rounded-lg bg-primary/10 border border-primary/30 text-primary text-sm font-medium hover:bg-primary/20 transition-colors"
+                          >
+                            Lihat Contoh Jawaban
+                          </button>
+                          {isSubmitted && (
+                            <div className="rounded-lg px-4 py-3 text-sm bg-blue-500/10 border border-blue-500/30 flex items-start gap-2">
+                              <Lightbulb className="w-4 h-4 mt-0.5 shrink-0 text-blue-500" />
+                              <div>
+                                <p className="font-medium text-blue-700 dark:text-blue-400">Contoh jawaban:</p>
+                                <p className="mt-0.5 text-(--text-secondary)">{exercise.sampleAnswer}</p>
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      );
+                    }
+
+                    // Task / plain short-answer: just a textarea
+                    return (
+                      <textarea
+                        value={notes[exercise.id] ?? ''}
+                        onChange={(e) => setNotes((prev) => ({ ...prev, [exercise.id]: e.target.value }))}
+                        placeholder="Write your answer here..."
+                        className="w-full min-h-[90px] rounded-lg border border-(--border) bg-(--bg-secondary) px-3 py-2 text-sm text-(--text) focus:outline-none focus:ring-2 focus:ring-primary/40"
+                      />
+                    );
+                  })()}
                 </div>
               );
             })}

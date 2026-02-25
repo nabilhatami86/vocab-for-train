@@ -6539,7 +6539,7 @@ const grammarLessons: ModuleLesson[] = [
         question: "I will buy either a new laptop ________ a new smartphone.",
         correctAnswer: "or",
         reason:
-          '"Either...or" adalah pasangan konjungsi korelatif. Setelah "either", selalu gunakan "or".',
+          '"Either...or" adalah pasangan korelatif yang wajib. Setelah "either" selalu gunakan "or". "nor" salah karena pasangan neither; "and" salah karena "either...and" tidak ada; "but" salah karena kontras bukan pilihan.',
       },
       {
         id: "gcj-q32",
@@ -6547,7 +6547,7 @@ const grammarLessons: ModuleLesson[] = [
         question: "He was hungry, ________ he made himself a large sandwich.",
         correctAnswer: "so",
         reason:
-          '"So" menunjukkan akibat/hasil. Karena lapar → hasilnya dia membuat sandwich besar.',
+          '"So" menunjukkan akibat/hasil: lapar → membuat sandwich. "but/yet" salah karena lapar lalu makan bukan kontras. "for" salah karena klausa kedua adalah akibat, bukan alasan.',
       },
       {
         id: "gcj-q33",
@@ -6556,7 +6556,7 @@ const grammarLessons: ModuleLesson[] = [
           "Neither the blue shirt ________ the red one fits me properly.",
         correctAnswer: "nor",
         reason:
-          '"Neither...nor" adalah pasangan yang benar. Setelah "neither", selalu gunakan "nor".',
+          '"Neither...nor" adalah pasangan korelatif yang wajib. "or" salah karena pasangan either; "and" salah karena "neither...and" tidak ada; "but" salah karena bukan pasangan korelatif neither.',
       },
       {
         id: "gcj-q34",
@@ -6565,7 +6565,7 @@ const grammarLessons: ModuleLesson[] = [
           "She didn't study for the test, ________ she managed to get an A.",
         correctAnswer: "yet",
         reason:
-          '"Yet" menunjukkan kontras yang mengejutkan. Tidak belajar namun berhasil mendapat nilai A adalah hal yang tidak terduga.',
+          '"Yet" menunjukkan kontras mengejutkan: tidak belajar TAPI dapat nilai A. "so" salah karena akibat logis tidak belajar bukan dapat A. "and" salah karena hanya menambahkan tanpa kontras. "for" salah karena klausa kedua bukan alasan.',
       },
       {
         id: "gcj-q35",
@@ -6574,7 +6574,7 @@ const grammarLessons: ModuleLesson[] = [
           "Not only did she win the race, ________ she also broke the world record.",
         correctAnswer: "but",
         reason:
-          '"Not only...but (also)" adalah pasangan konjungsi korelatif. Setelah "not only", gunakan "but" (bisa ditambah "also").',
+          '"Not only...but (also)" adalah pasangan korelatif yang wajib. "and" salah karena "not only...and" tidak ada; "yet" salah karena untuk kontras bukan penambahan; "so" salah karena untuk akibat.',
       },
       {
         id: "gcj-q36",
@@ -6583,7 +6583,7 @@ const grammarLessons: ModuleLesson[] = [
           "You can stay here with me, ________ you can go home with your brother.",
         correctAnswer: "or",
         reason:
-          '"Or" digunakan untuk memberikan dua pilihan yang setara.',
+          '"Or" menunjukkan dua pilihan setara. "and" salah karena menggabungkan bukan memilih. "but" salah karena kontras. "so" salah karena akibat.',
       },
       {
         id: "gcj-q37",
@@ -6591,7 +6591,7 @@ const grammarLessons: ModuleLesson[] = [
         question: "Both the cat ________ the dog are sleeping on the sofa.",
         correctAnswer: "and",
         reason:
-          '"Both...and" adalah pasangan konjungsi korelatif. Setelah "both", selalu gunakan "and".',
+          '"Both...and" adalah pasangan korelatif yang wajib. "or" salah karena pasangan either; "nor" salah karena pasangan neither; "but" salah karena "both...but" bukan pasangan korelatif.',
       },
       {
         id: "gcj-q38",
@@ -6600,7 +6600,7 @@ const grammarLessons: ModuleLesson[] = [
           "I don't like horror movies, ________ do I like action movies.",
         correctAnswer: "nor",
         reason:
-          '"Nor" digunakan untuk melanjutkan kalimat negatif. Setelah "nor", terjadi inversion: "nor do I" (bukan "nor I do").',
+          '"Nor" melanjutkan kalimat negatif dengan inversion (nor do I). "or" salah karena tidak idiomatis untuk konteks negatif dengan inversion. "but" salah karena tidak membutuhkan inversion. "so" salah karena akibat.',
       },
       {
         id: "gcj-q39",
@@ -6609,7 +6609,7 @@ const grammarLessons: ModuleLesson[] = [
           "It was a very long journey, ________ it was worth every minute.",
         correctAnswer: "yet",
         reason:
-          '"Yet" menunjukkan kontras yang mengejutkan. Perjalanan panjang namun tetap berharga setiap menitnya.',
+          '"Yet" menunjukkan kontras mengejutkan: panjang NAMUN tetap berharga. "so" salah karena perjalanan panjang tidak secara logis menghasilkan "berharga". "but" juga bisa, tapi "yet" lebih kuat menekankan kejutan. "and" salah karena hanya menambahkan.',
       },
       {
         id: "gcj-q40",
@@ -6618,7 +6618,7 @@ const grammarLessons: ModuleLesson[] = [
           "He is neither rich ________ famous, but he is very content.",
         correctAnswer: "nor",
         reason:
-          '"Neither...nor" adalah pasangan yang benar. Setelah "neither", selalu gunakan "nor".',
+          '"Neither...nor" adalah pasangan korelatif yang wajib. "or" salah karena "neither...or" tidak gramatikal; "and" salah karena "neither...and" tidak ada; "but" sudah digunakan di klausa berikutnya dan bukan pasangan neither.',
       },
     ],
   },
