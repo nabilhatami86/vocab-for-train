@@ -1494,6 +1494,8 @@ const readingLessons: ModuleLesson[] = [
 
       "There are so many ways to decrease it, we can decrease the use of motor vehicles by taking a public vehicle or bicycle. The owner of industrial factories also can process their waste and make a waste disposal facility.",
       "(Ada banyak cara untuk menguranginya, kita bisa mengurangi penggunaan kendaraan bermotor dengan menggunakan transportasi umum atau sepeda. Pemilik pabrik industri juga dapat mengolah limbah mereka dan membuat fasilitas pembuangan limbah.)",
+      "We have to cultivate plants on our surrounding soil or just put it in a polybag and decrease the use of pesticides. And the easiest way that we can do to decrease pollution is to throw garbage into the dustbin. There must be so many other ways that we can do to heal our earth that can't be explained fully in this article. So, what are we waiting for? Let's heal our earth together to reach a healthy earth from now on!!",
+      "(Kita harus menanam tanaman di tanah sekitar kita atau menanamnya di polybag serta mengurangi penggunaan pestisida. Cara termudah yang bisa kita lakukan untuk mengurangi polusi adalah membuang sampah ke tempat sampah. Masih banyak cara lain yang bisa kita lakukan untuk menyembuhkan bumi kita yang tidak dapat dijelaskan sepenuhnya dalam artikel ini. Jadi, apa yang kita tunggu? Mari kita sembuhkan bumi kita bersama untuk mencapai bumi yang sehat mulai sekarang!!)",
     ],
     materialSections: [
       {
@@ -1594,32 +1596,56 @@ const readingLessons: ModuleLesson[] = [
     title: "Health Benefits of Physical Activity",
     subtitle: "Manfaat aktivitas fisik bagi kesehatan",
     overview:
-      "Teks ini membahas manfaat aktivitas fisik, rekomendasi waktu olahraga, serta tips agar tetap aktif secara fisik.",
+      "Teks ini membahas manfaat aktivitas fisik, rekomendasi waktu olahraga, dan tips agar tetap aktif sesuai dengan panduan kesehatan.",
 
     passage: [
       "Eating smaller and healthier portions is a great way to improve your health. However, exercise will also make your life healthier and even help you to maintain or lose weight more easily. You don't have to train for a marathon or a triathlon to get exercise; many daily activities count. Whether it's walking the dog, gardening, going for a family bike ride, or running on a treadmill at the gym. Staying active is the goal. It doesn't have to include putting on gym clothes or getting sweaty! Even low-impact exercise can have a big impact on your overall health.",
-      "(Makan dalam porsi yang lebih kecil dan lebih sehat adalah cara yang baik untuk meningkatkan kesehatanmu. Namun, olahraga juga akan membuat hidupmu lebih sehat dan bahkan membantu kamu menjaga atau menurunkan berat badan dengan lebih mudah. Kamu tidak perlu berlatih untuk maraton atau triatlon untuk berolahraga; banyak aktivitas sehari-hari juga dihitung sebagai olahraga. Baik itu berjalan-jalan dengan anjing, berkebun, bersepeda bersama keluarga, atau berlari di treadmill di gym. Tetap aktif adalah tujuannya. Tidak harus memakai pakaian olahraga atau sampai berkeringat! Bahkan olahraga ringan pun dapat memberikan dampak besar bagi kesehatanmu secara keseluruhan.)",
+      "(Makan dalam porsi yang lebih kecil dan lebih sehat adalah cara yang baik untuk meningkatkan kesehatan. Namun, olahraga juga akan membuat hidupmu lebih sehat dan bahkan membantu menjaga atau menurunkan berat badan dengan lebih mudah. Kamu tidak perlu berlatih untuk maraton atau triatlon untuk berolahraga; banyak aktivitas sehari-hari juga dihitung sebagai olahraga. Baik berjalan dengan anjing, berkebun, bersepeda bersama keluarga, atau berlari di treadmill di gym. Tetap aktif adalah tujuannya. Tidak harus memakai pakaian olahraga atau sampai berkeringat! Bahkan olahraga ringan pun dapat memberikan dampak besar bagi kesehatan secara keseluruhan.)",
 
       "Physical activities not only feel refreshing but also help to prevent chronic diseases, improve your mood, increase your energy level and improve your quality of sleep. Physical activities can also help you to manage and maintain your weight.",
-      "(Aktivitas fisik tidak hanya terasa menyegarkan tetapi juga membantu mencegah penyakit kronis, memperbaiki suasana hati, meningkatkan tingkat energi, dan memperbaiki kualitas tidur. Aktivitas fisik juga dapat membantu kamu mengatur dan menjaga berat badan.)",
+      "(Aktivitas fisik tidak hanya terasa menyegarkan tetapi juga membantu mencegah penyakit kronis, memperbaiki suasana hati, meningkatkan tingkat energi, dan memperbaiki kualitas tidur. Aktivitas fisik juga membantu mengatur dan mempertahankan berat badan.)",
 
       "Walking is a great low-intensity way to achieve the health benefits of physical activity because it is safe and pleasant. It is one of the simple habits that are easy to establish. Moreover, walking is an aerobic and weight-bearing activity that is good for your heart. It also helps you to prevent osteoporosis by strengthening your bones.",
-      "(Berjalan kaki adalah cara dengan intensitas rendah yang sangat baik untuk mendapatkan manfaat kesehatan dari aktivitas fisik karena aman dan menyenangkan. Ini adalah salah satu kebiasaan sederhana yang mudah dibentuk. Selain itu, berjalan kaki merupakan aktivitas aerobik dan penopang berat badan yang baik untuk jantungmu. Aktivitas ini juga membantu mencegah osteoporosis dengan memperkuat tulang.)",
+      "(Berjalan kaki adalah cara dengan intensitas rendah yang sangat baik untuk mendapatkan manfaat kesehatan karena aman dan menyenangkan. Ini adalah kebiasaan sederhana yang mudah dibentuk. Selain itu, berjalan kaki adalah aktivitas aerobik dan penopang berat badan yang baik untuk jantung. Aktivitas ini juga membantu mencegah osteoporosis dengan memperkuat tulang.)",
 
-      "Experts recommend 150 minutes of moderate physical activity every week for basic health benefits; if weight loss is your goal, you may need more. Your 150 minutes can be spread throughout the week as you please. You can spend 21 minutes exercising every day, or work out for almost an hour, three times per week.",
-      "(Para ahli merekomendasikan 150 menit aktivitas fisik intensitas sedang setiap minggu untuk mendapatkan manfaat kesehatan dasar; jika tujuanmu adalah menurunkan berat badan, kamu mungkin memerlukan lebih banyak waktu. 150 menit tersebut dapat dibagi sepanjang minggu sesuai keinginanmu. Kamu bisa berolahraga 21 menit setiap hari, atau hampir satu jam sebanyak tiga kali dalam seminggu.)",
+      "How much time is recommended for physical activity?",
+      "(Berapa lama waktu yang direkomendasikan untuk aktivitas fisik?)",
+
+      "Experts recommend 150 minutes of moderate physical activity every week for basic health benefits; if weight loss is your goal, you may need more. Your 150 minutes can be spread throughout the week as you please. You can spend 21 minutes exercising every day, or work out for almost an hour, three times per week. Use this guide from the Center for Disease Control on how much physical activity adults need.",
+      "(Para ahli merekomendasikan 150 menit aktivitas fisik intensitas sedang setiap minggu untuk manfaat kesehatan dasar; jika tujuanmu menurunkan berat badan, kamu mungkin membutuhkan lebih banyak. 150 menit tersebut dapat dibagi sepanjang minggu sesuai keinginan. Kamu bisa berolahraga 21 menit setiap hari atau hampir satu jam sebanyak tiga kali seminggu. Gunakan panduan dari Center for Disease Control tentang berapa banyak aktivitas fisik yang dibutuhkan orang dewasa.)",
 
       "Try to incorporate strength-strengthening exercises – like lifting weights, push-ups, or yoga – at least two times per week to build and maintain muscles.",
-      "(Cobalah untuk memasukkan latihan penguatan otot – seperti angkat beban, push-up, atau yoga – setidaknya dua kali seminggu untuk membangun dan mempertahankan otot.)",
+      "(Cobalah memasukkan latihan penguatan otot – seperti angkat beban, push-up, atau yoga – setidaknya dua kali seminggu untuk membangun dan mempertahankan otot.)",
 
       "Children should get 60 minutes of moderately intense physical activity every day to achieve maximum health benefits. Like adults, children can get the benefits by breaking up their 60 minutes, say 30 minutes during recess and 30 minutes after school.",
-      "(Anak-anak sebaiknya mendapatkan 60 menit aktivitas fisik dengan intensitas sedang setiap hari untuk memperoleh manfaat kesehatan maksimal. Seperti orang dewasa, anak-anak dapat membagi 60 menit tersebut, misalnya 30 menit saat istirahat sekolah dan 30 menit setelah pulang sekolah.)",
+      "(Anak-anak sebaiknya mendapatkan 60 menit aktivitas fisik intensitas sedang setiap hari untuk memperoleh manfaat kesehatan maksimal. Seperti orang dewasa, anak-anak dapat membaginya menjadi 30 menit saat istirahat dan 30 menit setelah sekolah.)",
 
-      "Any amount of physical activity has health benefits, so don't get discouraged if you aren't getting 150 minutes of weekly activity immediately.",
-      "(Berapa pun jumlah aktivitas fisik yang dilakukan tetap memiliki manfaat kesehatan, jadi jangan berkecil hati jika kamu belum mencapai 150 menit aktivitas per minggu secara langsung.)",
+      "Any amount of physical activity has health benefits, so don't get discouraged if you aren't getting 150 minutes of weekly activity immediately. Use our Physical Activity Journal to set a goal and track your progress.",
+      "(Berapa pun jumlah aktivitas fisik tetap memiliki manfaat kesehatan, jadi jangan berkecil hati jika belum mencapai 150 menit per minggu. Gunakan Jurnal Aktivitas Fisik untuk menetapkan tujuan dan melacak perkembanganmu.)",
 
-      "Tips for staying physically active: Choose activities you like to do. Find a partner. Congratulate yourself for all the good things you've done. Vary your routine. Commit to a realistic schedule.",
-      "(Tips untuk tetap aktif secara fisik: Pilih aktivitas yang kamu sukai. Cari teman untuk berolahraga bersama. Beri apresiasi pada diri sendiri atas hal-hal baik yang sudah kamu lakukan. Variasikan rutinitasmu. Berkomitmenlah pada jadwal yang realistis.)",
+      "Tips for staying physically active:",
+      "(Tips untuk tetap aktif secara fisik:)",
+
+      "Choose activities you like to do. You'll be more likely to stick with something you enjoy. Think about whether you like to be inside or outside, alone or with people, and what time of day is best for you.",
+      "(Pilih aktivitas yang kamu sukai. Kamu akan lebih mungkin melakukannya secara konsisten jika menikmatinya. Pikirkan apakah kamu suka di dalam atau luar ruangan, sendiri atau bersama orang lain, dan waktu terbaik dalam sehari untukmu.)",
+
+      "Find a partner -- you're more likely to keep up with your new routine.",
+      "(Cari teman untuk berolahraga — kamu akan lebih mungkin mempertahankan rutinitas barumu.)",
+
+      "Congratulate yourself for all the good things you've done for your body and get started again as soon as your schedule allows.",
+      "(Beri apresiasi pada dirimu atas hal-hal baik yang sudah kamu lakukan dan mulai lagi segera ketika jadwalmu memungkinkan.)",
+
+      "Vary your routine. You may be less likely to get bored if you try different activities. Walk one day; bicycle the next.",
+      "(Variasikan rutinitasmu. Kamu akan lebih kecil kemungkinannya merasa bosan jika mencoba aktivitas berbeda. Jalan kaki satu hari; bersepeda keesokan harinya.)",
+
+      "Commit to a realistic schedule. You might want to vary the times and locations of your activities, to keep things interesting - unless you're more comfortable with a set, predictable schedule, which is fine too!",
+      "(Buatlah jadwal yang realistis. Kamu mungkin ingin memvariasikan waktu dan lokasi aktivitas agar tetap menarik — kecuali kamu lebih nyaman dengan jadwal tetap dan teratur, itu juga tidak masalah!)",
+
+      "Sneak in a few minutes of physical activity whenever you can. Take a 10-minute walk after you eat lunch and before you start back to work.",
+      "(Sempatkan beberapa menit untuk aktivitas fisik kapan pun kamu bisa. Lakukan jalan kaki 10 menit setelah makan siang dan sebelum kembali bekerja.)",
+
+      "Don't commit to doing anything that you don't feel confident about. Start an exercise plan that you're interested in so you can stick to it, but don't feel guilty or disappointed if you don't reach some lofty goal that wasn't right for you. You can always add more activities or time to your exercise routine when you're ready.",
+      "(Jangan berkomitmen melakukan sesuatu yang kamu tidak yakin bisa melakukannya. Mulailah rencana olahraga yang kamu minati agar bisa konsisten, tetapi jangan merasa bersalah atau kecewa jika tidak mencapai target tinggi yang sebenarnya tidak cocok untukmu. Kamu selalu bisa menambah aktivitas atau waktu olahraga ketika sudah siap.)",
     ],
 
     materialSections: [
@@ -1729,6 +1755,8 @@ const readingLessons: ModuleLesson[] = [
 
       "Computers and the internet are being introduced into most houses. Although they have a lot of advantages, they have adverse effects on people's health. The internet has made the world smaller; it also provides services for people to use. Children also now use computers very widely. It is even being introduced in the teaching curriculum of the majority of schools. They also use it in playing video games for their entertainment and joy. Even a lot of adults enjoy video games as well.",
       "(Komputer dan internet kini telah diperkenalkan ke sebagian besar rumah. Meskipun memiliki banyak keuntungan, keduanya juga memiliki dampak buruk terhadap kesehatan manusia. Internet membuat dunia terasa lebih kecil dan menyediakan berbagai layanan bagi manusia. Anak-anak sekarang juga menggunakan komputer secara luas. Bahkan, komputer sudah diperkenalkan dalam kurikulum pembelajaran di sebagian besar sekolah. Mereka juga menggunakannya untuk bermain video game sebagai hiburan dan kesenangan. Bahkan banyak orang dewasa juga menikmati video game.)",
+      "Socially, the modern lifestyle affects social relationships very strongly. Especially with the use of the internet to chat with others. People use internet messenger widely in their communication with others. This will lead to social isolation as a result of spending a long time on the internet. As consequence, the person will isolate himself at home and deprive himself from family and friends' social gatherings. Using the internet may lead to decline in visiting with friends and family.",
+      "(Secara sosial, gaya hidup modern sangat memengaruhi hubungan sosial. Terutama dengan penggunaan internet untuk berkomunikasi dengan orang lain. Orang-orang menggunakan pesan internet secara luas dalam komunikasi mereka. Hal ini dapat menyebabkan isolasi sosial akibat menghabiskan waktu lama di internet. Akibatnya, seseorang akan mengisolasi dirinya di rumah dan menjauhkan diri dari pertemuan sosial bersama keluarga dan teman. Penggunaan internet dapat menyebabkan berkurangnya kunjungan dengan teman dan keluarga.)",
     ],
     materialSections: [
       {
@@ -7033,7 +7061,8 @@ const grammarLessons: ModuleLesson[] = [
         type: "short-answer",
         question: "The students eager to learn are ________ class. (in)",
         correctAnswer: "in",
-        reason: "Kata 'eager to learn' menerangkan students; kalimat lengkap: are in class.",
+        reason:
+          "Kata 'eager to learn' menerangkan students; kalimat lengkap: are in class.",
       },
       {
         id: "gadjp-q7",
@@ -7061,7 +7090,8 @@ const grammarLessons: ModuleLesson[] = [
         type: "short-answer",
         question: "She looks tired ________ the long trip. (after)",
         correctAnswer: "after",
-        reason: "Adjective phrase + keterangan sebab/waktu: tired after the long trip.",
+        reason:
+          "Adjective phrase + keterangan sebab/waktu: tired after the long trip.",
       },
     ],
   },
