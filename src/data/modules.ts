@@ -1148,8 +1148,7 @@ const readingLessons: ModuleLesson[] = [
       {
         id: "r12-q1",
         type: "short-answer",
-        question:
-          "What kind of food and art performance are from Indonesia?",
+        question: "What kind of food and art performance are from Indonesia?",
       },
       {
         id: "r12-q2",
@@ -1159,14 +1158,12 @@ const readingLessons: ModuleLesson[] = [
       {
         id: "r12-q3",
         type: "short-answer",
-        question:
-          "What is the main topic of the first paragraph?",
+        question: "What is the main topic of the first paragraph?",
       },
       {
         id: "r12-q4",
         type: "short-answer",
-        question:
-          "What is the main topic of the last paragraph?",
+        question: "What is the main topic of the last paragraph?",
       },
       {
         id: "r12-q5",
@@ -1335,7 +1332,8 @@ const readingLessons: ModuleLesson[] = [
       {
         id: "r14-q3",
         type: "multiple-choice",
-        question: "When did the Lapindo Mud (Sidoarjo mud flow) start erupting?",
+        question:
+          "When did the Lapindo Mud (Sidoarjo mud flow) start erupting?",
         options: ["2004", "May 2006", "2007", "2010"],
         correctAnswer: "May 2006",
         reason:
@@ -1428,7 +1426,8 @@ const readingLessons: ModuleLesson[] = [
       {
         id: "r16-q2",
         type: "multiple-choice",
-        question: "Who built the Baiturrahman Grand Mosque (in its current form)?",
+        question:
+          "Who built the Baiturrahman Grand Mosque (in its current form)?",
         options: [
           "The Acehnese people",
           "Sultan Hamengkubuwono I",
@@ -1436,7 +1435,8 @@ const readingLessons: ModuleLesson[] = [
           "The Portuguese",
         ],
         correctAnswer: "The Dutch",
-        reason: '"It was built by the Dutch in 1879, replacing an older mosque."',
+        reason:
+          '"It was built by the Dutch in 1879, replacing an older mosque."',
       },
       {
         id: "r16-q3",
@@ -1474,56 +1474,67 @@ const readingLessons: ModuleLesson[] = [
     track: "reading",
     day: 17,
     tutor: "Ms. Lidya",
-    title: "Environmental Issues in Indonesia (Pollution)",
+    title: "Environmental Issues In Indonesia, Pollution (Air, Water, Soil)",
     subtitle: "Masalah lingkungan di Indonesia: polusi udara, air, dan tanah",
     overview:
-      "Polusi adalah salah satu masalah lingkungan terbesar yang dihadapi Indonesia dan dunia saat ini. Baca dan pahami penyebab, dampak, dan solusi dari polusi udara, air, dan tanah.",
+      "Teks ini membahas pentingnya udara, air, dan tanah bagi kehidupan manusia, penyebab polusi, dampaknya, serta beberapa cara untuk menguranginya.",
+
     passage: [
-      "Pollution is one of the most serious environmental problems facing Indonesia and the world today. Air, soil, and water are essential components of life on Earth. When they are contaminated by pollutants, the health of humans, animals, and plants is put at risk.",
-      "Air, soil, and water really have a big role in humans' lives. Without clean air, clean water, and healthy soil, life as we know it would be impossible. Plants need healthy soil to grow, animals need clean water to drink, and all living beings need clean air to breathe. When pollution damages these vital resources, it creates a chain reaction that affects all life on Earth.",
-      "The root causes of air, water, and soil pollution are our carelessness and the rapid growth of industry and technology. Factories release toxic chemicals and smoke into the air. Vehicles emit exhaust fumes that contain harmful gases like carbon monoxide and nitrogen oxide. Agricultural activities use pesticides and chemical fertilizers that seep into the soil and groundwater. Industrial and household waste is often dumped into rivers and oceans, polluting the water supply.",
-      "Some equipment and technology can be a pollutant that is hazardous for us and our Earth. Electronic waste (e-waste), including discarded computers, phones, and batteries, contains toxic materials like lead, mercury, and cadmium. When not properly disposed of, these materials leach into the soil and water. Plastic waste is another major pollutant that takes hundreds of years to decompose and is now found in every ocean on Earth.",
-      "There are many ways that we can do to heal our Earth from pollution. Reducing the use of plastic and switching to reusable items is a good start. Using public transportation or cycling instead of driving personal vehicles reduces air pollution. Proper waste management and recycling can reduce soil and water pollution. Planting trees helps clean the air and prevent soil erosion. Education and awareness are also crucial — when people understand the dangers of pollution, they are more likely to take action to prevent it.",
+      "In the life where we live, we are provided with so many natural elements such as air, soil, and water which are very influential for our lives. We can't even live without them. Air helps us in breathing. Water can be used for drinking, washing, swimming, etc. Soil is a substance that we step on and we have them in a huge amount. So, we will never be lacking them, the three elements which really have a big role in human lives from our ancestors until our descendants.",
+      "(Dalam kehidupan yang kita jalani, kita disediakan begitu banyak unsur alam seperti udara, tanah, dan air yang sangat berpengaruh bagi kehidupan kita. Kita bahkan tidak bisa hidup tanpa mereka. Udara membantu kita bernapas. Air dapat digunakan untuk minum, mencuci, berenang, dan lain-lain. Tanah adalah permukaan yang kita pijak dan jumlahnya sangat melimpah. Jadi, kita tidak akan pernah kekurangan ketiganya, unsur-unsur yang memiliki peran besar dalam kehidupan manusia dari nenek moyang hingga generasi kita nanti.)",
+
+      "As time goes by, now we have already been in the globalization era where people think that living only with natural elements is not enough. People need some equipment that makes life become more simple. Many high-tech equipment and chemicals have been invented, created, distributed, and used. With it, life looks easy. We can reach many places and people simply. It makes us feel that everything is in humans' hands.",
+      "(Seiring berjalannya waktu, kini kita telah berada di era globalisasi di mana orang berpikir bahwa hidup hanya dengan unsur alam saja tidaklah cukup. Manusia membutuhkan berbagai peralatan yang membuat hidup menjadi lebih sederhana. Banyak peralatan berteknologi tinggi dan bahan kimia telah ditemukan, diciptakan, didistribusikan, dan digunakan. Dengan itu, kehidupan terlihat lebih mudah. Kita dapat menjangkau banyak tempat dan orang dengan mudah. Hal ini membuat kita merasa bahwa segalanya berada di tangan manusia.)",
+
+      'However, some of them can be a pollutant that can be harmful to us and our earth. A pollutant is a designation of causes of pollution, the introduction of contaminants into the natural elements. Pollutants can be formed as chemical substances, such as motor vehicles which produce carbon monoxide, AC (Air Conditioner), and spray room perfume which make the ozone layer, our skin protector from Ultraviolet gas, become thinner. Industrial factories release sulfur dioxide and also many industrial factories throw their waste into a stream, a lake, etc. We also throw garbage into the water often and irresponsibly. Besides that, many modern farmers use pesticides excessively in order to keep pests away from their crops without thinking about the effects on the soil and the crops. Eventually, the earth is in "WARNING!" condition because its contents have already been contaminated and damaged. So, equipment not only brings many advantages but also brings bad effects too.',
+      '(Namun, beberapa di antaranya dapat menjadi polutan yang berbahaya bagi kita dan bumi kita. Polutan adalah penyebab terjadinya pencemaran, yaitu masuknya zat-zat berbahaya ke dalam unsur-unsur alam. Polutan dapat berupa zat kimia seperti kendaraan bermotor yang menghasilkan karbon monoksida, AC (Air Conditioner), dan parfum ruangan semprot yang membuat lapisan ozon, pelindung kulit kita dari sinar ultraviolet, menjadi menipis. Pabrik industri melepaskan sulfur dioksida dan banyak pabrik juga membuang limbahnya ke sungai, danau, dan sebagainya. Kita juga sering membuang sampah ke air secara tidak bertanggung jawab. Selain itu, banyak petani modern menggunakan pestisida secara berlebihan untuk menjauhkan hama dari tanaman mereka tanpa memikirkan dampaknya terhadap tanah dan tanaman. Pada akhirnya, bumi berada dalam kondisi "WARNING!" karena isinya telah tercemar dan rusak. Jadi, peralatan tidak hanya membawa banyak keuntungan tetapi juga membawa dampak buruk.)',
+
+      "The dominant causes of air, water, and soil pollution are our irresponsibility. Humans don't want to think about the effects and the polluted earth which can be our future. The earth might be able to strike us back. We can be infected by respiratory diseases by breathing polluted air. We can also be infected by skin diseases because of the depletion of the ozone layer. Water creatures might be killed by water pollution. Polluted soil might be infertile, so it can not be planted. There will be so many worse effects that can strike us. However, like I've said, in this globalization era everything is in humans' hands. So, we decide whether we want to live on polluted earth or not.",
+      "(Penyebab utama polusi udara, air, dan tanah adalah ketidakbertanggungjawaban kita sendiri. Manusia tidak ingin memikirkan dampak dari bumi yang tercemar yang bisa menjadi masa depan kita. Bumi mungkin bisa membalas kita. Kita bisa terkena penyakit pernapasan karena menghirup udara yang tercemar. Kita juga bisa terkena penyakit kulit karena menipisnya lapisan ozon. Makhluk air bisa mati akibat pencemaran air. Tanah yang tercemar bisa menjadi tidak subur sehingga tidak dapat ditanami. Akan ada banyak dampak buruk lainnya yang dapat menimpa kita. Namun, seperti yang telah saya katakan, di era globalisasi ini segalanya berada di tangan manusia. Jadi, kita yang menentukan apakah ingin hidup di bumi yang tercemar atau tidak.)",
+
+      "There are so many ways to decrease it, we can decrease the use of motor vehicles by taking a public vehicle or bicycle. The owner of industrial factories also can process their waste and make a waste disposal facility.",
+      "(Ada banyak cara untuk menguranginya, kita bisa mengurangi penggunaan kendaraan bermotor dengan menggunakan transportasi umum atau sepeda. Pemilik pabrik industri juga dapat mengolah limbah mereka dan membuat fasilitas pembuangan limbah.)",
     ],
     materialSections: [
       {
-        title: "Choose the Correct Heading for Each Paragraph",
+        title: "Choose the Correct Heading for Each Section",
         points: [
-          "Available headings:",
+          "Choose the correct heading for each section from the list below:",
+          "",
           "i. Some equipment can be a pollutant that is hazardous for us and our earth.",
           "ii. There are many ways that we can do to heal our earth from pollution.",
           "iii. Air, soil, and water really have a big role in humans' lives.",
-          "iv. The root causes of air, water, and soil pollution are our carelessness.",
+          "iv. The root causes of air, water, and soil pollution are our irresponsibility.",
           "",
           "Answers:",
-          "Paragraph 1 (intro) → no heading",
-          "Paragraph 2 → iii. Air, soil, and water really have a big role in humans' lives.",
-          "Paragraph 3 → iv. The root causes of air, water, and soil pollution are our carelessness.",
-          "Paragraph 4 → i. Some equipment can be a pollutant that is hazardous for us and our earth.",
-          "Paragraph 5 → ii. There are many ways that we can do to heal our earth from pollution.",
+          "1st paragraph → iii. Air, soil, and water really have a big role in humans' lives.",
+          "3rd paragraph → i. Some equipment can be a pollutant that is hazardous for us and our earth.",
+          "4th paragraph → iv. The root causes of air, water, and soil pollution are our irresponsibility.",
+          "5th paragraph → ii. There are many ways that we can do to heal our earth from pollution.",
         ],
       },
       {
         title: "Key Vocabulary",
         points: [
-          "pollution — polusi/pencemaran",
-          "contaminated — tercemar/terkontaminasi",
+          "natural elements — unsur-unsur alam",
+          "globalization era — era globalisasi",
+          "high-tech equipment — peralatan berteknologi tinggi",
           "pollutant — zat pencemar",
-          "toxic — beracun",
-          "exhaust fumes — asap knalpot",
+          "contaminants — zat pencemar/kontaminan",
+          "carbon monoxide — karbon monoksida",
+          "sulfur dioxide — sulfur dioksida",
+          "ozone layer — lapisan ozon",
+          "ultraviolet — ultraviolet",
           "pesticides — pestisida",
-          "fertilizers — pupuk",
-          "seep — meresap/menyerap",
-          "groundwater — air tanah",
-          "hazardous — berbahaya",
-          "e-waste — limbah elektronik",
-          "discarded — dibuang/tidak terpakai",
-          "cadmium — kadmium (logam berat)",
-          "leach — merembes/meresap",
-          "decompose — terurai/membusuk",
-          "reusable — dapat digunakan kembali",
-          "erosion — erosi/pengikisan tanah",
-          "awareness — kesadaran",
+          "irresponsibly — secara tidak bertanggung jawab",
+          "contaminated — tercemar",
+          "respiratory diseases — penyakit pernapasan",
+          "depletion — penipisan",
+          "infertile — tidak subur",
+          "waste disposal facility — fasilitas pembuangan limbah",
+          "industrial factories — pabrik industri",
+          "descendants — keturunan",
+          "hereditary — keturunan",
         ],
       },
     ],
@@ -1551,7 +1562,8 @@ const readingLessons: ModuleLesson[] = [
           "Not Given — the passage doesn't discuss this",
           "True — technology always causes pollution",
         ],
-        correctAnswer: "False — only some equipment/technology can be a pollutant",
+        correctAnswer:
+          "False — only some equipment/technology can be a pollutant",
         reason:
           'Teks menyebutkan "Some equipment and technology can be a pollutant" — bukan semua teknologi berbahaya.',
       },
@@ -1582,87 +1594,106 @@ const readingLessons: ModuleLesson[] = [
     title: "Health Benefits of Physical Activity",
     subtitle: "Manfaat aktivitas fisik bagi kesehatan",
     overview:
-      "Aktivitas fisik secara teratur sangat penting untuk kesehatan. Baca dan pahami manfaat, rekomendasi, dan tips untuk memulai dan menjaga rutinitas olahraga.",
+      "Teks ini membahas manfaat aktivitas fisik, rekomendasi waktu olahraga, serta tips agar tetap aktif secara fisik.",
+
     passage: [
-      "Physical activity refers to any movement of the body that uses energy. It includes not just sports and exercise, but also everyday activities like walking, cycling, gardening, and even household chores. Being physically active is one of the most important things you can do for your health.",
-      "The benefits of physical activity are numerous. Regular exercise helps control weight by burning calories and boosting metabolism. It strengthens muscles and bones, reducing the risk of osteoporosis and injury. Exercise improves cardiovascular health, reducing the risk of heart disease, stroke, and high blood pressure. It also boosts the immune system, helping the body fight off illness. People who exercise regularly tend to live longer and have a better quality of life.",
-      "Physical activity is also important for mental health. Exercise releases endorphins, chemicals in the brain that act as natural mood elevators. Regular exercise can reduce symptoms of depression and anxiety, improve sleep quality, and boost self-esteem. Studies show that people who exercise regularly have better concentration, memory, and cognitive function.",
-      "Health experts recommend that adults get at least 150 minutes of moderate-intensity physical activity per week. This can include activities like brisk walking, swimming, cycling, or dancing. Alternatively, 75 minutes of vigorous-intensity activity per week, such as running, aerobics, or fast cycling, provides similar health benefits. It is also recommended to do muscle-strengthening activities, such as weightlifting or yoga, at least two days per week.",
-      "Getting started with exercise doesn't have to be difficult. The key is to choose activities that you enjoy, because you are more likely to stick with activities that are fun. Starting slowly and gradually increasing the intensity and duration of exercise is important to avoid injury. Finding a friend or partner to exercise with can help you stay motivated. Listening to music or podcasts while exercising can make it more enjoyable. Setting realistic goals and tracking progress can also help maintain motivation.",
-      "Walking is one of the simplest and most accessible forms of physical activity. It requires no special equipment, can be done anywhere, and is suitable for people of all ages and fitness levels. Even a 30-minute walk each day can provide significant health benefits. Walking regularly can help control weight, improve mood, strengthen the heart, and reduce the risk of chronic diseases.",
+      "Eating smaller and healthier portions is a great way to improve your health. However, exercise will also make your life healthier and even help you to maintain or lose weight more easily. You don't have to train for a marathon or a triathlon to get exercise; many daily activities count. Whether it's walking the dog, gardening, going for a family bike ride, or running on a treadmill at the gym. Staying active is the goal. It doesn't have to include putting on gym clothes or getting sweaty! Even low-impact exercise can have a big impact on your overall health.",
+      "(Makan dalam porsi yang lebih kecil dan lebih sehat adalah cara yang baik untuk meningkatkan kesehatanmu. Namun, olahraga juga akan membuat hidupmu lebih sehat dan bahkan membantu kamu menjaga atau menurunkan berat badan dengan lebih mudah. Kamu tidak perlu berlatih untuk maraton atau triatlon untuk berolahraga; banyak aktivitas sehari-hari juga dihitung sebagai olahraga. Baik itu berjalan-jalan dengan anjing, berkebun, bersepeda bersama keluarga, atau berlari di treadmill di gym. Tetap aktif adalah tujuannya. Tidak harus memakai pakaian olahraga atau sampai berkeringat! Bahkan olahraga ringan pun dapat memberikan dampak besar bagi kesehatanmu secara keseluruhan.)",
+
+      "Physical activities not only feel refreshing but also help to prevent chronic diseases, improve your mood, increase your energy level and improve your quality of sleep. Physical activities can also help you to manage and maintain your weight.",
+      "(Aktivitas fisik tidak hanya terasa menyegarkan tetapi juga membantu mencegah penyakit kronis, memperbaiki suasana hati, meningkatkan tingkat energi, dan memperbaiki kualitas tidur. Aktivitas fisik juga dapat membantu kamu mengatur dan menjaga berat badan.)",
+
+      "Walking is a great low-intensity way to achieve the health benefits of physical activity because it is safe and pleasant. It is one of the simple habits that are easy to establish. Moreover, walking is an aerobic and weight-bearing activity that is good for your heart. It also helps you to prevent osteoporosis by strengthening your bones.",
+      "(Berjalan kaki adalah cara dengan intensitas rendah yang sangat baik untuk mendapatkan manfaat kesehatan dari aktivitas fisik karena aman dan menyenangkan. Ini adalah salah satu kebiasaan sederhana yang mudah dibentuk. Selain itu, berjalan kaki merupakan aktivitas aerobik dan penopang berat badan yang baik untuk jantungmu. Aktivitas ini juga membantu mencegah osteoporosis dengan memperkuat tulang.)",
+
+      "Experts recommend 150 minutes of moderate physical activity every week for basic health benefits; if weight loss is your goal, you may need more. Your 150 minutes can be spread throughout the week as you please. You can spend 21 minutes exercising every day, or work out for almost an hour, three times per week.",
+      "(Para ahli merekomendasikan 150 menit aktivitas fisik intensitas sedang setiap minggu untuk mendapatkan manfaat kesehatan dasar; jika tujuanmu adalah menurunkan berat badan, kamu mungkin memerlukan lebih banyak waktu. 150 menit tersebut dapat dibagi sepanjang minggu sesuai keinginanmu. Kamu bisa berolahraga 21 menit setiap hari, atau hampir satu jam sebanyak tiga kali dalam seminggu.)",
+
+      "Try to incorporate strength-strengthening exercises – like lifting weights, push-ups, or yoga – at least two times per week to build and maintain muscles.",
+      "(Cobalah untuk memasukkan latihan penguatan otot – seperti angkat beban, push-up, atau yoga – setidaknya dua kali seminggu untuk membangun dan mempertahankan otot.)",
+
+      "Children should get 60 minutes of moderately intense physical activity every day to achieve maximum health benefits. Like adults, children can get the benefits by breaking up their 60 minutes, say 30 minutes during recess and 30 minutes after school.",
+      "(Anak-anak sebaiknya mendapatkan 60 menit aktivitas fisik dengan intensitas sedang setiap hari untuk memperoleh manfaat kesehatan maksimal. Seperti orang dewasa, anak-anak dapat membagi 60 menit tersebut, misalnya 30 menit saat istirahat sekolah dan 30 menit setelah pulang sekolah.)",
+
+      "Any amount of physical activity has health benefits, so don't get discouraged if you aren't getting 150 minutes of weekly activity immediately.",
+      "(Berapa pun jumlah aktivitas fisik yang dilakukan tetap memiliki manfaat kesehatan, jadi jangan berkecil hati jika kamu belum mencapai 150 menit aktivitas per minggu secara langsung.)",
+
+      "Tips for staying physically active: Choose activities you like to do. Find a partner. Congratulate yourself for all the good things you've done. Vary your routine. Commit to a realistic schedule.",
+      "(Tips untuk tetap aktif secara fisik: Pilih aktivitas yang kamu sukai. Cari teman untuk berolahraga bersama. Beri apresiasi pada diri sendiri atas hal-hal baik yang sudah kamu lakukan. Variasikan rutinitasmu. Berkomitmenlah pada jadwal yang realistis.)",
     ],
+
     materialSections: [
       {
-        title: "True / False / Not Given — Answer Key",
+        title: "True / False / Not Given",
         points: [
-          "1. Only vigorous activities are counted as exercise. → FALSE (any movement counts)",
-          "2. The aim of exercising is to keep the body active. → TRUE",
-          "3. Walking is recommended as a workout because it is cheap. → NOT GIVEN (passage says accessible, not specifically because it's cheap)",
-          "4. Adults need 150 minutes of sports activity per month. → FALSE (per week, not per month)",
-          "5. Selecting physical activities that are affordable will make people more likely to keep up. → NOT GIVEN",
-          "6. Having a friend to work out together can help maintain the routine. → TRUE",
-          "7. Listening to music while exercising will make it less boring. → TRUE",
-          "8. Depending on the person, the exercise schedule can be fixed or varied. → TRUE",
+          "1. Only vigorous activities are counted as exercise.",
+          "2. The aim of exercising is to keep the body active.",
+          "3. Walking is recommended as a workout because it is cheap.",
+          "4. Adults need 150 minutes of sports activity per month.",
+          "5. Selecting physical activities that are affordable will make people more likely to keep up with them.",
+          "6. Having a friend to work out together can help maintain the routine.",
+          "7. Listening to music while exercising will make it less boring.",
+          "8. Depending on the person, the exercise schedule can be fixed or varied.",
         ],
       },
       {
         title: "Key Vocabulary",
         points: [
-          "physical activity — aktivitas fisik",
-          "metabolism — metabolisme",
-          "cardiovascular — kardiovaskular/jantung",
-          "osteoporosis — osteoporosis/pengeroposan tulang",
-          "immune system — sistem imun/kekebalan tubuh",
-          "endorphins — endorfin",
-          "depression — depresi",
-          "anxiety — kecemasan",
-          "cognitive — kognitif",
-          "moderate-intensity — intensitas sedang",
-          "vigorous — kuat/bersemangat",
-          "brisk walking — jalan cepat",
-          "muscle-strengthening — penguatan otot",
-          "gradually — secara bertahap",
-          "motivated — termotivasi",
-          "accessible — mudah dijangkau",
+          "low-impact — berdampak ringan",
           "chronic diseases — penyakit kronis",
-          "realistic — realistis",
+          "energy level — tingkat energi",
+          "weight-bearing — menopang berat badan",
+          "osteoporosis — pengeroposan tulang",
+          "moderate physical activity — aktivitas fisik sedang",
+          "strength-strengthening — penguatan otot",
+          "maintain — mempertahankan",
+          "incorporate — memasukkan/menggabungkan",
+          "moderately intense — intensitas sedang",
+          "recess — waktu istirahat sekolah",
+          "discouraged — berkecil hati",
+          "routine — rutinitas",
+          "realistic schedule — jadwal yang realistis",
+          "spread throughout — dibagi sepanjang",
+          "treadmill — alat lari di tempat",
+          "aerobic — aerobik",
+          "pleasant — menyenangkan",
         ],
       },
     ],
+
     exercises: [
       {
         id: "r18-q1",
         type: "short-answer",
-        question:
-          "True, False, or Not Given?\n1. Only vigorous activities are counted as exercise.\n2. The aim of exercising is to keep the body active.\n3. Walking is recommended as a workout because it is cheap.\n4. Adults need 150 minutes of sports activity per month.\n5. Having a friend to work out together can help maintain the routine.",
+        question: "Choose True, False, or Not Given for statements 1–8 above.",
       },
       {
         id: "r18-q2",
-        type: "short-answer",
-        question: "What is physical activity? (Apa itu aktivitas fisik? Jelaskan berdasarkan teks!)",
+        type: "task",
+        question: "What is physical activity? Answer based on the passage.",
       },
       {
         id: "r18-q3",
-        type: "short-answer",
+        type: "task",
         question:
-          "What are the benefits of physical activity? (Sebutkan minimal 5 manfaat aktivitas fisik dari teks!)",
+          "What are the benefits of physical activity? Mention at least 5 benefits from the text.",
       },
       {
         id: "r18-q4",
         type: "task",
         question:
-          "What kind of physical activity do you usually do? Please describe briefly! (Aktivitas fisik apa yang biasa kamu lakukan? Ceritakan dalam 5-7 kalimat bahasa Inggris!)",
+          "What kind of physical activity do you usually do? Please describe briefly.",
       },
       {
         id: "r18-q5",
         type: "task",
         question:
-          "Please mention 20 or more vocabulary that you don't know from this passage and memorize those as an entrance ticket for tomorrow!",
+          "Please mention 20 or more vocabulary that you don't know and memorize those as an entrance ticket for tomorrow.",
       },
       {
         id: "r18-q6",
         type: "task",
-        question: "Summarize this passage using a mind map!",
+        question: "Summarize this passage using a mind map.",
       },
     ],
   },
@@ -1672,55 +1703,72 @@ const readingLessons: ModuleLesson[] = [
     day: 19,
     tutor: "Ms. Lidya",
     title: "Modern Lifestyle",
-    subtitle: "Dampak gaya hidup modern terhadap kesehatan fisik, mental, dan sosial",
+    subtitle:
+      "Dampak gaya hidup modern terhadap kesehatan fisik, psikologis, dan sosial",
     overview:
-      "Gaya hidup modern membawa banyak perubahan dalam kehidupan manusia. Teknologi, makanan cepat saji, dan media sosial mengubah cara hidup kita secara drastis. Baca dan pahami dampak positif dan negatif dari gaya hidup modern.",
+      "Teks ini membahas dampak gaya hidup modern terhadap kesehatan fisik, psikologis, dan sosial, termasuk kelebihan dan kekurangannya.",
+
     passage: [
-      "Lifestyle refers to the way a person lives, including their daily habits, behaviors, and choices. In the modern era, the lifestyle of people has changed dramatically compared to previous generations. Modern lifestyle is characterized by the use of technology, fast food, sedentary behavior, and social media.",
-      "Modern lifestyle affects people's health in many ways — physically, psychologically, and socially. Physically, modern lifestyle is often associated with health problems such as obesity, diabetes, heart disease, and back pain. These problems are largely caused by unhealthy eating habits, lack of physical activity, and prolonged sitting. The availability of processed and fast food has made it easy for people to consume foods that are high in sugar, salt, and unhealthy fats.",
-      "The different modern lifestyle patterns affect our health physically, psychologically, and socially. The advancement in technology has changed how people travel, communicate, work, and entertain themselves. While technology has made life more convenient, it has also led to a more sedentary lifestyle. People now drive cars instead of walking, watch television and use smartphones instead of engaging in physical activities, and order food online instead of cooking at home.",
-      "Psychologically, modern lifestyle can have both positive and negative effects. On the positive side, access to information and entertainment has expanded greatly. On the negative side, excessive use of social media and technology can lead to increased stress, anxiety, and depression. The constant pressure to be connected and to present a perfect image on social media can negatively affect mental health. Sleep deprivation due to late-night screen use is also a growing concern.",
-      "Socially, modern lifestyle has changed how people interact with each other. While social media allows people to connect with others around the world, it has also reduced face-to-face interaction. Many people now spend more time communicating online than in person. This can lead to feelings of loneliness and social isolation, despite being digitally connected. Family relationships may also suffer when family members spend more time on their devices than with each other.",
-      "Despite its disadvantages, modern lifestyle also has many advantages. Medical advances have increased life expectancy and reduced the impact of many diseases. Technology has made education more accessible through online learning. Modern transportation allows people to travel quickly and easily. Modern appliances have reduced the time and effort needed for household tasks. The key is to find a balance — to enjoy the benefits of modern life while being mindful of its potential negative effects on health and relationships.",
+      "The modern lifestyle has several advantages which include easing people's life and saving hundreds of people's lives with the new development of medicine and vaccines. On the other hand, different modern lifestyle patterns have negative effects on health physically, psychologically, and socially.",
+      "(Gaya hidup modern memiliki beberapa keuntungan, termasuk mempermudah kehidupan manusia dan menyelamatkan ratusan nyawa melalui perkembangan baru dalam bidang obat-obatan dan vaksin. Di sisi lain, berbagai pola gaya hidup modern memiliki dampak negatif terhadap kesehatan secara fisik, psikologis, dan sosial.)",
+
+      "Modern lifestyle increases the risk of obesity, consequently, leading to diabetes, heart disease, and cancers. Pollution caused by machines and advanced transportation causes different respiratory diseases. Furthermore, it leads to atopic diseases which are a group of hereditary diseases contributing to allergies and asthma. Psychologically, people are prone to increased stress levels and depression. Social isolation will occur due to spending a long time on the computer and the internet.",
+      "(Gaya hidup modern meningkatkan risiko obesitas yang kemudian menyebabkan diabetes, penyakit jantung, dan kanker. Polusi yang disebabkan oleh mesin dan transportasi modern menyebabkan berbagai penyakit pernapasan. Selain itu, hal ini juga dapat menyebabkan penyakit atopik yang merupakan kelompok penyakit keturunan yang berhubungan dengan alergi dan asma. Secara psikologis, orang cenderung mengalami peningkatan tingkat stres dan depresi. Isolasi sosial dapat terjadi karena terlalu lama menggunakan komputer dan internet.)",
+
+      "Nobody can ignore the usefulness of modernization in our daily life, especially in how much it makes the life of humans easier. This is particularly correct about the new evolution of the development of medicines and vaccines, that save people from fatal endemic diseases. On the other hand, modern lifestyle becomes more and more an important factor influencing the health state of most developed countries. Unhealthy behaviors are responsible for increasing the mortality of cardiovascular, cancers, diabetes, and respiratory diseases.",
+      "(Tidak ada yang bisa mengabaikan manfaat modernisasi dalam kehidupan sehari-hari kita, terutama dalam mempermudah kehidupan manusia. Hal ini sangat terlihat dalam perkembangan obat-obatan dan vaksin yang menyelamatkan manusia dari penyakit endemik yang mematikan. Namun, gaya hidup modern semakin menjadi faktor penting yang memengaruhi kondisi kesehatan di sebagian besar negara maju. Perilaku tidak sehat bertanggung jawab atas meningkatnya angka kematian akibat penyakit kardiovaskular, kanker, diabetes, dan penyakit pernapasan.)",
+
+      "There is increasing evidence that following a healthy lifestyle including an appropriate diet, satisfactory physical activity level, and a healthy weight can provide significant cardiovascular and metabolic benefits. From that, we come to the conclusion that different modern lifestyle patterns affect our health physically, psychologically, and socially.",
+      "(Semakin banyak bukti yang menunjukkan bahwa menjalani gaya hidup sehat termasuk pola makan yang tepat, tingkat aktivitas fisik yang cukup, dan berat badan yang sehat dapat memberikan manfaat besar bagi kesehatan jantung dan metabolisme. Dari hal tersebut, kita dapat menyimpulkan bahwa berbagai pola gaya hidup modern memengaruhi kesehatan kita secara fisik, psikologis, dan sosial.)",
+
+      "The way people eat today is far different than the way people ate before. Hundred years ago people used to include a lot of fruits and vegetables in their diet. This gives a lot of nutritional value to their meals and decreases the risk of getting cardiovascular diseases which is related to the less fat content of these foods. These days people have very bad nutritional habits, especially with the fast widespread fast food culture, particularly among young people who continue to carry on the same eating habits in their adulthood.",
+      "(Cara orang makan saat ini sangat berbeda dibandingkan dahulu. Seratus tahun yang lalu, orang terbiasa mengonsumsi banyak buah dan sayuran dalam pola makan mereka. Hal ini memberikan nilai gizi yang tinggi dan menurunkan risiko penyakit kardiovaskular karena kandungan lemaknya lebih rendah. Saat ini, orang memiliki kebiasaan makan yang buruk, terutama dengan pesatnya budaya makanan cepat saji, khususnya di kalangan anak muda yang terus membawa kebiasaan tersebut hingga dewasa.)",
+
+      "The use of modern technology makes living better and brings certain advantages to people. Such advantages include fast communication and improvement in traveling. Before, people used animals to help them travel from one place to another which might take days to travel. Now, we spend only a few hours using airplanes which makes the journey easier. The use of new technology machines is also now in our home. We do most of the house cleaning with machines, which actually makes life very easy. Every day new machines are invented for human use to ease their lives.",
+      "(Penggunaan teknologi modern membuat kehidupan menjadi lebih baik dan membawa keuntungan tertentu bagi manusia. Keuntungan tersebut termasuk komunikasi yang cepat dan kemajuan dalam transportasi. Dahulu, orang menggunakan hewan untuk bepergian dari satu tempat ke tempat lain yang bisa memakan waktu berhari-hari. Sekarang, kita hanya memerlukan beberapa jam dengan menggunakan pesawat terbang sehingga perjalanan menjadi lebih mudah. Penggunaan mesin teknologi baru juga sudah ada di rumah kita. Kita melakukan sebagian besar pekerjaan rumah dengan mesin, yang sebenarnya membuat hidup menjadi sangat mudah. Setiap hari mesin-mesin baru ditemukan untuk mempermudah kehidupan manusia.)",
+
+      "Computers and the internet are being introduced into most houses. Although they have a lot of advantages, they have adverse effects on people's health. The internet has made the world smaller; it also provides services for people to use. Children also now use computers very widely. It is even being introduced in the teaching curriculum of the majority of schools. They also use it in playing video games for their entertainment and joy. Even a lot of adults enjoy video games as well.",
+      "(Komputer dan internet kini telah diperkenalkan ke sebagian besar rumah. Meskipun memiliki banyak keuntungan, keduanya juga memiliki dampak buruk terhadap kesehatan manusia. Internet membuat dunia terasa lebih kecil dan menyediakan berbagai layanan bagi manusia. Anak-anak sekarang juga menggunakan komputer secara luas. Bahkan, komputer sudah diperkenalkan dalam kurikulum pembelajaran di sebagian besar sekolah. Mereka juga menggunakannya untuk bermain video game sebagai hiburan dan kesenangan. Bahkan banyak orang dewasa juga menikmati video game.)",
     ],
     materialSections: [
       {
-        title: "True / False / Not Given — Answer Key",
+        title: "True / False / Not Given",
         points: [
-          "1. A modern lifestyle can cause several serious health problems. → TRUE",
-          "2. The upgrades in cooking and food processing have changed people's eating habits. → TRUE (availability of processed/fast food)",
-          "3. New gadgets invented every day bring more challenges to human lives. → NOT GIVEN (passage discusses effects, not specifically new daily gadgets)",
-          "4. The education field incorporates modern technologies into its methods. → TRUE (online learning)",
+          "1. A modern lifestyle can cause several serious health problems.",
+          "2. The upgrades in cooking and food processing have changed people's eating habits.",
+          "3. New gadgets invented every day bring more challenges to human lives.",
+          "4. The education field incorporates modern technologies into its methods.",
         ],
       },
       {
         title: "Choose the Correct Paragraph",
         points: [
-          "1. 'The different modern lifestyle patterns affect our health physically, psychologically, and socially.' → Paragraph 3",
-          "2. 'People use animals to help them travel from one place to another.' → NOT in the passage",
-          "3. 'The modern lifestyle has many advantages and disadvantages on health physically, psychologically, and socially.' → Paragraph 2 (closest match)",
-          "4. 'The modern lifestyle affects social relationships very strongly.' → Paragraph 5",
+          "1. 'The different modern lifestyle patterns affect our health physically, psychologically, and socially.'",
+          "2. 'People used animals to help them travel from one place to another.'",
+          "3. 'Modern lifestyle has advantages and disadvantages on health.'",
+          "4. 'Computers and the internet have adverse effects on people's health.'",
         ],
       },
       {
         title: "Key Vocabulary",
         points: [
-          "lifestyle — gaya hidup",
-          "characterized — dicirikan/ditandai",
-          "sedentary — kurang gerak/duduk terus",
-          "obesity — kegemukan/obesitas",
-          "prolonged — berkepanjangan/lama",
-          "processed food — makanan olahan",
-          "advancement — kemajuan/perkembangan",
-          "convenient — nyaman/mudah",
-          "excessive — berlebihan",
-          "deprivation — kekurangan/kurang",
-          "isolation — isolasi/kesendirian",
-          "digitally — secara digital",
-          "appliances — peralatan rumah tangga",
-          "life expectancy — harapan hidup",
-          "mindful — sadar/peduli",
-          "potential — potensi/kemungkinan",
+          "modernization — modernisasi",
+          "vaccines — vaksin",
+          "obesity — obesitas",
+          "consequently — akibatnya",
+          "respiratory diseases — penyakit pernapasan",
+          "hereditary — keturunan",
+          "stress levels — tingkat stres",
+          "social isolation — isolasi sosial",
+          "mortality — angka kematian",
+          "cardiovascular — kardiovaskular/jantung",
+          "metabolic — metabolik",
+          "nutritional value — nilai gizi",
+          "widespread — tersebar luas",
+          "adulthood — masa dewasa",
+          "adverse effects — dampak buruk",
+          "curriculum — kurikulum",
+          "fatal endemic diseases — penyakit endemik mematikan",
         ],
       },
     ],
@@ -6383,7 +6431,8 @@ const grammarLessons: ModuleLesson[] = [
       {
         id: "gcj-q13",
         type: "multiple-choice",
-        question: "I don't have much money, ________ I am very happy with my life.",
+        question:
+          "I don't have much money, ________ I am very happy with my life.",
         options: ["a. and", "b. so", "c. yet", "d. for"],
         correctAnswer: "c. yet",
         reason:
@@ -6447,7 +6496,8 @@ const grammarLessons: ModuleLesson[] = [
       {
         id: "gcj-q19",
         type: "multiple-choice",
-        question: "Both my mother ________ my father enjoy gardening on weekends.",
+        question:
+          "Both my mother ________ my father enjoy gardening on weekends.",
         options: ["a. or", "b. and", "c. nor", "d. but also"],
         correctAnswer: "b. and",
         reason:
@@ -6510,8 +6560,7 @@ const grammarLessons: ModuleLesson[] = [
       {
         id: "gcj-q26",
         type: "short-answer",
-        question:
-          "Terjemahkan: Baik Ani maupun Budi menyukai musik klasik.",
+        question: "Terjemahkan: Baik Ani maupun Budi menyukai musik klasik.",
         correctAnswer: "Both Ani and Budi like classical music.",
         reason:
           '"Both...and" digunakan karena KEDUANYA (Ani dan Budi) menyukai musik — positif untuk dua subjek sekaligus.',
@@ -6521,7 +6570,8 @@ const grammarLessons: ModuleLesson[] = [
         type: "short-answer",
         question:
           "Terjemahkan: Aku ingin membeli mobil baru, namun aku tidak punya cukup uang.",
-        correctAnswer: "I want to buy a new car, yet I don't have enough money.",
+        correctAnswer:
+          "I want to buy a new car, yet I don't have enough money.",
         reason:
           '"Yet" digunakan untuk kontras mengejutkan: ingin membeli mobil NAMUN tidak punya uang cukup. "But" juga bisa, tapi "yet" lebih menekankan ironinya.',
       },
@@ -6634,8 +6684,7 @@ const grammarLessons: ModuleLesson[] = [
       {
         id: "gcj-q40",
         type: "short-answer",
-        question:
-          "He is neither rich ________ famous, but he is very content.",
+        question: "He is neither rich ________ famous, but he is very content.",
         correctAnswer: "nor",
         reason:
           '"Neither...nor" adalah pasangan korelatif yang wajib. "or" salah karena "neither...or" tidak gramatikal; "and" salah karena "neither...and" tidak ada; "but" sudah digunakan di klausa berikutnya dan bukan pasangan neither.',
