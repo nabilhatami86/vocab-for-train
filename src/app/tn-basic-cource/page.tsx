@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { BookOpenText, Mic2, PenLine, Headphones, ArrowRight, FileText, GraduationCap, ClipboardList } from 'lucide-react';
+import { BookOpenText, Mic2, PenLine, Headphones, ArrowRight, FileText, GraduationCap, ClipboardList, Shuffle } from 'lucide-react';
 import { getLessonsByTrack, moduleTracks } from '@/data/modules';
 
 export const metadata: Metadata = {
@@ -92,31 +92,57 @@ export default function ModuleLearningPage() {
                   );
                 })}
 
-                {/* Post Test — hanya untuk track grammar */}
+                {/* Latihan Acak Post Test + Post Test — hanya untuk track grammar */}
                 {track.track === 'grammar' && (
-                  <Link
-                    href="/practice/exams/kisi-kisi-grammar-post-test"
-                    className="group border border-blue-400/50 bg-blue-50/40 dark:bg-blue-950/20 hover:bg-blue-50 dark:hover:bg-blue-950/30 rounded-xl p-3 transition-colors sm:col-span-2"
-                  >
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full bg-blue-500/15 flex items-center justify-center shrink-0">
-                        <ClipboardList className="w-5 h-5 text-blue-600" />
-                      </div>
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2">
-                          <p className="text-xs font-bold text-blue-600 uppercase tracking-wider">Post Test</p>
-                          <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-blue-500/15 text-blue-600 font-semibold">30 Soal</span>
+                  <>
+                    <Link
+                      href="/tn-basic-cource/latihan-post-test"
+                      className="group border border-violet-400/50 bg-violet-50/40 dark:bg-violet-950/20 hover:bg-violet-50 dark:hover:bg-violet-950/30 rounded-xl p-3 transition-colors sm:col-span-2"
+                    >
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-full bg-violet-500/15 flex items-center justify-center shrink-0">
+                          <Shuffle className="w-5 h-5 text-violet-600" />
                         </div>
-                        <p className="text-sm font-medium text-(--text) group-hover:text-blue-600 transition-colors">
-                          Kisi-Kisi Grammar — Post Test
-                        </p>
-                        <p className="text-xs text-(--text-muted) mt-0.5">
-                          Part I: Correct Phrase · Part II: Conjunction & Preposition · Part III: Translate to English
-                        </p>
+                        <div className="flex-1">
+                          <div className="flex items-center gap-2">
+                            <p className="text-xs font-bold text-violet-600 uppercase tracking-wider">Latihan Acak</p>
+                            <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-violet-500/15 text-violet-600 font-semibold">45 bank soal</span>
+                          </div>
+                          <p className="text-sm font-medium text-(--text) group-hover:text-violet-600 transition-colors">
+                            Latihan Acak Post Test Grammar
+                          </p>
+                          <p className="text-xs text-(--text-muted) mt-0.5">
+                            20 soal acak tiap sesi · Langsung tau kenapa salah · Berbasis kisi-kisi post test
+                          </p>
+                        </div>
+                        <ArrowRight className="w-4 h-4 text-violet-500 shrink-0" />
                       </div>
-                      <ArrowRight className="w-4 h-4 text-blue-500 shrink-0" />
-                    </div>
-                  </Link>
+                    </Link>
+
+                    <Link
+                      href="/practice/exams/kisi-kisi-grammar-post-test"
+                      className="group border border-blue-400/50 bg-blue-50/40 dark:bg-blue-950/20 hover:bg-blue-50 dark:hover:bg-blue-950/30 rounded-xl p-3 transition-colors sm:col-span-2"
+                    >
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-full bg-blue-500/15 flex items-center justify-center shrink-0">
+                          <ClipboardList className="w-5 h-5 text-blue-600" />
+                        </div>
+                        <div className="flex-1">
+                          <div className="flex items-center gap-2">
+                            <p className="text-xs font-bold text-blue-600 uppercase tracking-wider">Post Test</p>
+                            <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-blue-500/15 text-blue-600 font-semibold">30 Soal</span>
+                          </div>
+                          <p className="text-sm font-medium text-(--text) group-hover:text-blue-600 transition-colors">
+                            Kisi-Kisi Grammar — Post Test
+                          </p>
+                          <p className="text-xs text-(--text-muted) mt-0.5">
+                            Part I: Correct Phrase · Part II: Conjunction & Preposition · Part III: Translate to English
+                          </p>
+                        </div>
+                        <ArrowRight className="w-4 h-4 text-blue-500 shrink-0" />
+                      </div>
+                    </Link>
+                  </>
                 )}
               </div>
             </section>
