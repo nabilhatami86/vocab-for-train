@@ -24,6 +24,7 @@ interface Props {
 export default function ModuleLessonClient({ lesson }: Props) {
   const [selectedOptions, setSelectedOptions] = useState<Record<string, string>>({});
   const [notes, setNotes] = useState<Record<string, string>>({});
+  const [revealedAnswers, setRevealedAnswers] = useState<Set<string>>(new Set());
   const [selectedWord, setSelectedWord] = useState<string | null>(null);
   const [translation, setTranslation] = useState<TranslationResult | null>(null);
   const [isTranslating, setIsTranslating] = useState(false);
@@ -571,21 +572,39 @@ export default function ModuleLessonClient({ lesson }: Props) {
                       );
                     }
 
-                    // Template patterns (contains "→" with Q&A)
+                    // Template patterns (contains "→" with Q&A) — click to reveal answer
                     if (point.includes('→') && !point.startsWith('  ')) {
                       const arrowIdx = point.indexOf('→');
                       const question = point.slice(0, arrowIdx).trim();
                       const answer = point.slice(arrowIdx + 1).trim();
+                      const revealKey = `${section.title}-${pIdx}`;
+                      const isRevealed = revealedAnswers.has(revealKey);
                       return (
-                        <div key={`${section.title}-${pIdx}`} className="py-1.5">
-                          <div className="flex items-start gap-2">
+                        <div key={revealKey} className="py-1.5">
+                          <button
+                            className="flex items-start gap-2 text-left w-full group"
+                            onClick={() =>
+                              setRevealedAnswers((prev) => {
+                                const next = new Set(prev);
+                                if (next.has(revealKey)) next.delete(revealKey);
+                                else next.add(revealKey);
+                                return next;
+                              })
+                            }
+                          >
                             <span className="text-primary mt-1 shrink-0">▸</span>
                             <div className="text-sm">
                               <span className="font-medium text-(--text)">{renderClickableText(question)}</span>
-                              <span className="text-primary mx-1">→</span>
-                              <span className="text-(--text-secondary) italic">{renderClickableText(answer)}</span>
+                              {isRevealed ? (
+                                <>
+                                  <span className="text-primary mx-1">→</span>
+                                  <span className="text-green-600 dark:text-green-400 italic font-medium">{renderClickableText(answer)}</span>
+                                </>
+                              ) : (
+                                <span className="ml-2 text-xs text-(--text-muted) group-hover:text-primary transition-colors">(klik untuk lihat jawaban)</span>
+                              )}
                             </div>
-                          </div>
+                          </button>
                         </div>
                       );
                     }

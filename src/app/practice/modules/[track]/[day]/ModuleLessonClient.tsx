@@ -52,12 +52,23 @@ export default function ModuleLessonClient({ lesson }: Props) {
             <div key={section.title} className="bg-(--bg-card) border border-(--border) rounded-xl p-5">
               <h3 className="font-semibold text-(--text) mb-3">{section.title}</h3>
               <ul className="space-y-2 text-sm text-(--text-secondary)">
-                {section.points.map((point) => (
-                  <li key={point} className="flex gap-2">
-                    <span className="text-primary">•</span>
-                    <span>{point}</span>
-                  </li>
-                ))}
+                {section.points.map((point) => {
+                  if (point.includes('→') && !point.startsWith('  ')) {
+                    const question = point.slice(0, point.indexOf('→')).trim();
+                    return (
+                      <li key={point} className="flex gap-2">
+                        <span className="text-primary">•</span>
+                        <span>{question}</span>
+                      </li>
+                    );
+                  }
+                  return (
+                    <li key={point} className="flex gap-2">
+                      <span className="text-primary">•</span>
+                      <span>{point}</span>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           ))}

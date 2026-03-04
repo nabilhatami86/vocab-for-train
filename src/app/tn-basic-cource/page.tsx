@@ -120,7 +120,7 @@ export default function ModuleLearningPage() {
                     </Link>
 
                     <Link
-                      href="/practice/exams/kisi-kisi-grammar-post-test"
+                      href="/tn-basic-cource/kisi-kisi-post-test"
                       className="group border border-blue-400/50 bg-blue-50/40 dark:bg-blue-950/20 hover:bg-blue-50 dark:hover:bg-blue-950/30 rounded-xl p-3 transition-colors sm:col-span-2"
                     >
                       <div className="flex items-center gap-3">

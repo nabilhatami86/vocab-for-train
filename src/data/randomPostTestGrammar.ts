@@ -638,3 +638,12 @@ export function pickPostTestSession(): PostTestQuestion[] {
   const partIII = shuffle(postTestGrammarPool.filter((q) => q.part === "III")).slice(0, 6);
   return [...partI, ...partII, ...partIII];
 }
+
+// Kisi-Kisi: 10 dari Part I + 10 dari Part II + 10 dari Part III = 30 soal
+export function pickKisiKisiSession(): PostTestQuestion[] {
+  const shuffle = <T,>(arr: T[]) => [...arr].sort(() => Math.random() - 0.5);
+  const partI = shuffle(postTestGrammarPool.filter((q) => q.part === "I")).slice(0, 10);
+  const partII = shuffle(postTestGrammarPool.filter((q) => q.part === "II")).slice(0, 10);
+  const partIII = shuffle(postTestGrammarPool.filter((q) => q.part === "III")).slice(0, 10);
+  return [...partI, ...partII, ...partIII];
+}

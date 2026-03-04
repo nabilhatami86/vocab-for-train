@@ -1,10 +1,10 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight, BookOpen, Mic } from 'lucide-react';
+import { ArrowLeft, ArrowRight, BookOpen, Mic, FileText } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Kisi-Kisi Reading & Speaking',
-  description: 'Kisi-kisi mid test untuk Reading dan Speaking.',
+  title: 'Kisi-Kisi Reading, Speaking & Grammar',
+  description: 'Kisi-kisi mid test untuk Reading, Speaking, dan Grammar.',
 };
 
 const tasks = [
@@ -32,6 +32,18 @@ const tasks = [
     badge: 'Speaking',
     tags: ['Greeting', 'Identity', 'Family', 'Hobby', 'Numbers'],
   },
+  {
+    href: '/practice/kisi-kisi/grammar-post-test',
+    title: 'Kisi-Kisi Grammar — Post Test',
+    subtitle: 'Grammar Practice',
+    description:
+      'Latihan 30 soal format post test: urutan adjective, correlative conjunctions & prepositions, terjemahan ke Inggris.',
+    icon: FileText,
+    accentColor: 'bg-violet-500',
+    iconBg: 'bg-violet-500/10 text-violet-600',
+    badge: '30 soal',
+    tags: ['Correct Phrase', 'Conjunction', 'Preposition', 'Translate'],
+  },
 ];
 
 export default function KisiKisiPage() {
@@ -50,7 +62,7 @@ export default function KisiKisiPage() {
         <div>
           <h1 className="text-2xl font-bold text-(--text) flex items-center gap-2">
             <BookOpen className="w-6 h-6 text-primary" />
-            Kisi-Kisi Reading & Speaking
+            Kisi-Kisi Mid Test
           </h1>
           <p className="text-sm text-(--text-secondary) mt-1">
             Persiapan Mid Test — pilih materi yang ingin dipelajari
@@ -59,10 +71,11 @@ export default function KisiKisiPage() {
       </div>
 
       {/* Stats */}
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-3 gap-3">
         {[
-          { label: 'Mata Pelajaran', value: '2' },
+          { label: 'Mata Pelajaran', value: '3' },
           { label: 'Soal Reading', value: '15' },
+          { label: 'Soal Grammar', value: '30' },
         ].map((stat) => (
           <div
             key={stat.label}
@@ -80,7 +93,7 @@ export default function KisiKisiPage() {
           Materi Mid Test
         </span>
         <div className="flex-1 h-px bg-(--border)" />
-        <span className="text-xs text-(--text-muted)">2 paket</span>
+        <span className="text-xs text-(--text-muted)">3 paket</span>
       </div>
 
       {/* Cards */}
