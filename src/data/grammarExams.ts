@@ -1884,7 +1884,7 @@ export const grammarExams: GrammarExam[] = [
     slug: "kisi-kisi-grammar-post-test",
     title: "Kisi-Kisi Grammar — Post Test",
     description:
-      "Latihan 30 soal mirip format post test: Part I Correct Phrase (urutan adjective dalam frasa), Part II Correlative Conjunctions & Prepositions, Part III Mixed Grammar.",
+      "Latihan 30 soal format post test: Part I Correct Phrase (urutan adjective), Part II Correlative Conjunctions & Prepositions (fill-in bracket), Part III Translate to English (terjemahkan kalimat Indonesia ke Inggris, fokus urutan adjective).",
     duration: "30 menit",
     sourcePdf: "",
     questions: [
@@ -2107,97 +2107,146 @@ export const grammarExams: GrammarExam[] = [
           "Collocation: 'good AT' + gerund. 'And' menghubungkan dua gerund sejajar: 'good at speaking...AND writing'. Jawaban: 'at, and'.",
       },
 
-      // ── PART III: MIXED GRAMMAR (10 soal) ─────────────────────────────────
+      // ── PART III: TRANSLATE TO ENGLISH — urutan adjective (10 soal) ──────
       {
         id: "pt21",
-        question: "The food at that restaurant tastes _____.",
-        options: ["wonderfully", "wonderful", "wondering", "wonders"],
+        question:
+          'Terjemahkan: "Banyak mobil mewah, cepat, dan mahal di kota metropolitan ini."',
+        options: [
+          "There are many fast, luxurious, and expensive cars in this metropolitan city.",
+          "There are many luxurious, fast, and expensive cars in this metropolitan city.",
+          "There are many expensive, fast, and luxurious cars in this metropolitan city.",
+          "There are many cars luxurious, fast, expensive in this metropolitan city.",
+        ],
         correctIndex: 1,
         reason:
-          "Setelah linking verb 'tastes' → adjective: 'wonderful'. Linking verbs (taste, smell, look, feel, sound) selalu diikuti adjective, bukan adverb (-ly).",
+          "Urutan adjective: Opinion (luxurious) → Age/Speed (fast) → Value (expensive). 'Luxurious, fast, and expensive' mengikuti urutan dari yang paling subjektif ke objektif. Adjective selalu sebelum noun.",
       },
       {
         id: "pt22",
-        question: "Which sentence uses the CORRECT plural form?",
+        question:
+          'Terjemahkan: "Itu adalah sebuah kemeja merah muda kecil yang mahal."',
         options: [
-          "She bought two loafs of bread.",
-          "There are three childrens at home.",
-          "He has two oxen in the farm.",
-          "We saw four deers near the river.",
+          "That is an expensive small pink shirt.",
+          "That is a small expensive pink shirt.",
+          "That is a pink small expensive shirt.",
+          "That is an expensive pink small shirt.",
         ],
-        correctIndex: 2,
+        correctIndex: 0,
         reason:
-          "'Oxen' adalah irregular plural dari 'ox' yang benar. 'Loafs' → loaves, 'childrens' → children (sudah plural, tidak ada -s), 'deers' → deer (tidak berubah).",
+          "Urutan adjective: Opinion (expensive) → Size (small) → Color (pink) → Noun (shirt). 'An expensive small pink shirt' mengikuti urutan baku. 'An' karena 'expensive' berbunyi vokal /ɛ/.",
       },
       {
         id: "pt23",
-        question: "She is _____ honest person who never lies.",
-        options: ["a", "an", "the", "—"],
+        question:
+          'Terjemahkan: "Lihat! Ada seekor kucing hitam berbulu tebal di depan pintu."',
+        options: [
+          "Look! There is a black thick-furred cat in front of the door.",
+          "Look! There is a thick-furred black cat in front of the door.",
+          "Look! There is a cat black thick-furred in front of the door.",
+          "Look! There is a thick black-furred cat in front of the door.",
+        ],
         correctIndex: 1,
         reason:
-          "'Honest' diawali bunyi vokal /ɒ/ (huruf 'h' tidak berbunyi) → pakai 'an'. Aturan: 'a/an' ditentukan oleh BUNYI pertama, bukan huruf pertama.",
+          "Urutan adjective: Size/Quality (thick-furred) → Color (black) → Noun (cat). 'A thick-furred black cat' benar. Compound adjective 'thick-furred' sebagai opinion/quality diletakkan sebelum color adjective.",
       },
       {
         id: "pt24",
         question:
-          "The number of students _____ increasing every year.",
-        options: ["are", "were", "is", "have"],
-        correctIndex: 2,
+          'Terjemahkan: "Ini adalah cincin emas tua kecil yang indah dari nenek moyang."',
+        options: [
+          "This is a beautiful small old golden ring from our ancestors.",
+          "This is a small beautiful old golden ring from our ancestors.",
+          "This is a beautiful old small golden ring from our ancestors.",
+          "This is an old beautiful small golden ring from our ancestors.",
+        ],
+        correctIndex: 0,
         reason:
-          "'The number of...' → subjek utama adalah 'The number' (singular) → pakai 'is'. Berbeda dengan 'A number of students ARE increasing'.",
+          "Urutan adjective: Opinion (beautiful) → Size (small) → Age (old) → Material (golden) → Noun (ring). 'A beautiful small old golden ring' mengikuti urutan baku: Opinion → Size → Age → Material.",
       },
       {
         id: "pt25",
         question:
-          "I don't have _____ experience in teaching.",
-        options: ["many", "several", "a few", "much"],
-        correctIndex: 3,
+          'Terjemahkan: "Saya memakai sepatu putih baru yang murah hari ini."',
+        options: [
+          "I am wearing cheap white new shoes today.",
+          "I am wearing new cheap white shoes today.",
+          "I am wearing cheap new white shoes today.",
+          "I am wearing white cheap new shoes today.",
+        ],
+        correctIndex: 2,
         reason:
-          "'Experience' (pengalaman) adalah uncountable noun → pakai 'much' di kalimat negatif. 'Many/several/a few' hanya untuk countable noun.",
+          "Urutan adjective: Opinion (cheap) → Age (new) → Color (white) → Noun (shoes). 'Cheap new white shoes' mengikuti: Opinion → Age → Color. 'Cheap' menilai secara keseluruhan (opinion), 'new' usia, 'white' warna.",
       },
       {
         id: "pt26",
-        question: "The scissors on the table _____ very sharp.",
-        options: ["is", "was", "are", "has"],
-        correctIndex: 2,
+        question:
+          'Terjemahkan: "Mereka menjual banyak buah tropis segar di pasar tradisional."',
+        options: [
+          "They sell many tropical fresh fruits at the traditional market.",
+          "They sell many fresh tropical fruits at the traditional market.",
+          "They sell many fruits fresh tropical at the traditional market.",
+          "They sell fresh many tropical fruits at the traditional market.",
+        ],
+        correctIndex: 1,
         reason:
-          "'Scissors' selalu plural (always-plural noun) → selalu pakai verb plural 'are'. Sama seperti trousers, glasses, pliers, pants.",
+          "Urutan adjective: Quantity (many) → Opinion/Quality (fresh) → Origin (tropical) → Noun (fruits). 'Many fresh tropical fruits' benar. 'Tropical' adalah adjective origin/type yang biasanya dekat dengan noun.",
       },
       {
         id: "pt27",
         question:
-          "He has three pens. He gave one to Rina, _____ to Dian, and kept one for himself.",
-        options: ["the other", "other", "another", "others"],
+          'Terjemahkan: "Dia memiliki sebuah mobil merah besar yang mahal."',
+        options: [
+          "She has an expensive red big car.",
+          "She has a big expensive red car.",
+          "She has an expensive big red car.",
+          "She has a red expensive big car.",
+        ],
         correctIndex: 2,
         reason:
-          "Ada 3 pena (lebih dari 2): beri 1 ke Rina, beri 1 LAGI (another) ke Dian, simpan 1. 'Another' = one more dari kelompok 3+. 'The other' untuk kelompok 2 saja.",
+          "Urutan adjective: Opinion (expensive) → Size (big) → Color (red) → Noun (car). 'An expensive big red car' benar. 'An' karena 'expensive' berbunyi vokal /ɛ/.",
       },
       {
         id: "pt28",
         question:
-          "She has been learning English _____ five years.",
-        options: ["since", "for", "during", "while"],
-        correctIndex: 1,
+          'Terjemahkan: "Mereka tinggal di sebuah rumah kayu putih tua yang indah."',
+        options: [
+          "They live in a beautiful old white wooden house.",
+          "They live in a white beautiful old wooden house.",
+          "They live in a beautiful white old wooden house.",
+          "They live in an old beautiful white wooden house.",
+        ],
+        correctIndex: 0,
         reason:
-          "'For' dipakai untuk durasi/rentang waktu: 'for five years'. 'Since' dipakai untuk titik waktu mulai: 'since 2019'. 'Five years' = durasi → 'for'.",
+          "Urutan adjective: Opinion (beautiful) → Age (old) → Color (white) → Material (wooden) → Noun (house). 'A beautiful old white wooden house' mengikuti urutan lengkap: Opinion → Age → Color → Material.",
       },
       {
         id: "pt29",
         question:
-          "My father and _____ will travel to Surabaya next week.",
-        options: ["me", "I", "my", "myself"],
+          'Terjemahkan: "Dia membeli dua tas kulit coklat kecil kemarin."',
+        options: [
+          "She bought two brown small leather bags yesterday.",
+          "She bought two small brown leather bags yesterday.",
+          "She bought two leather small brown bags yesterday.",
+          "She bought two small leather brown bags yesterday.",
+        ],
         correctIndex: 1,
         reason:
-          "Compound subject = posisi subjek → subject pronoun 'I'. 'My father and I' = subjek kalimat. Tips: coba hapus 'My father and' → 'I will travel' (bukan 'me will travel').",
+          "Urutan adjective: Quantity (two) → Size (small) → Color (brown) → Material (leather) → Noun (bags). 'Two small brown leather bags' benar: Size → Color → Material.",
       },
       {
         id: "pt30",
         question:
-          "The news about the flood _____ very shocking.",
-        options: ["are", "were", "is", "have"],
+          'Terjemahkan: "Ada banyak tempat bersejarah yang terkenal di Yogyakarta."',
+        options: [
+          "There are many historical famous places in Yogyakarta.",
+          "There are many places historical famous in Yogyakarta.",
+          "There are many famous historical places in Yogyakarta.",
+          "There are famous many historical places in Yogyakarta.",
+        ],
         correctIndex: 2,
         reason:
-          "'News' adalah uncountable noun yang selalu dianggap singular → pakai 'is'. Sama seperti mathematics, economics, physics, information.",
+          "Urutan adjective: Quantity (many) → Opinion (famous) → Age/Type (historical) → Noun (places). 'Many famous historical places' benar. 'Famous' (opinion) mendahului 'historical' (age/type), dan quantifier 'many' selalu paling depan.",
       },
     ],
   },
