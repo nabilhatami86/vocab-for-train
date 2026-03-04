@@ -1492,4 +1492,713 @@ export const grammarExams: GrammarExam[] = [
       },
     ],
   },
+
+  // ─────────────────────────────────────────────────────────────────────────
+  //  TUGAS CONJUNCTION & PREPOSITION
+  // ─────────────────────────────────────────────────────────────────────────
+  {
+    slug: "tugas-conjunction-preposition",
+    title: "Tugas Conjunction & Preposition (15 Soal)",
+    description:
+      "Latihan conjunction (and/but/yet, correlative conjunctions) dan preposisi waktu & tempat (in/on/at).",
+    duration: "15 menit",
+    sourcePdf: "",
+    questions: [
+      // ── CONJUNCTIONS ─────────────────────────────────────────────────────
+      {
+        id: "cp01",
+        question:
+          "I wanted to buy the dress, ______ I didn't have enough money.",
+        options: ["and", "but", "or", "so"],
+        correctIndex: 1,
+        reason:
+          "'But' dipakai untuk menunjukkan kontras/pertentangan. Ingin beli → TAPI tidak punya uang. 'So' = oleh karena itu (sebab-akibat, tidak cocok di sini).",
+      },
+      {
+        id: "cp02",
+        question:
+          "You can ______ stay here ______ come with us to the cinema.",
+        options: ["both / and", "neither / nor", "either / or", "not only / but also"],
+        correctIndex: 2,
+        reason:
+          "'Either...or' dipakai untuk memberikan dua pilihan (salah satu). Kamu bisa TINGGAL atau IKUT ke bioskop.",
+      },
+      {
+        id: "cp03",
+        question:
+          "______ my mother ______ my father likes to watch horror movies; they prefer comedies.",
+        options: ["Both / and", "Neither / nor", "Either / or", "Not only / but also"],
+        correctIndex: 1,
+        reason:
+          "'Neither...nor' dipakai ketika KEDUANYA tidak melakukan/menyukai sesuatu. Ibu TIDAK SUKA dan ayah TIDAK SUKA → neither...nor.",
+      },
+      {
+        id: "cp04",
+        question:
+          "He is very talented, ______ he plays the piano beautifully.",
+        options: ["and", "but", "yet", "for"],
+        correctIndex: 0,
+        reason:
+          "'And' menghubungkan dua fakta positif yang berkaitan. Dia berbakat DAN memainkan piano dengan indah — keduanya saling mendukung.",
+      },
+      {
+        id: "cp05",
+        question: "She is ______ smart ______ very hardworking.",
+        options: ["either / or", "neither / nor", "not only / but also", "whether / or"],
+        correctIndex: 2,
+        reason:
+          "'Not only...but also' dipakai untuk menambahkan dua kualitas positif. Dia TIDAK HANYA pintar, TAPI JUGA sangat pekerja keras.",
+      },
+      // ── PREPOSITIONS (IN / ON / AT) ───────────────────────────────────────
+      {
+        id: "cp06",
+        question: "Our final exam is scheduled to start ______ 08:30 AM.",
+        options: ["in", "on", "at"],
+        correctIndex: 2,
+        reason:
+          "'At' dipakai untuk waktu yang spesifik (jam/menit): at 8:30 AM, at noon, at midnight.",
+      },
+      {
+        id: "cp07",
+        question: "I usually go to the gym ______ Monday mornings.",
+        options: ["in", "on", "at"],
+        correctIndex: 1,
+        reason:
+          "'On' dipakai untuk hari dan tanggal: on Monday, on Friday, on Monday mornings, on 5th March.",
+      },
+      {
+        id: "cp08",
+        question:
+          "Many people like to visit Japan ______ spring to see the cherry blossoms.",
+        options: ["in", "on", "at"],
+        correctIndex: 0,
+        reason:
+          "'In' dipakai untuk periode waktu yang lebih panjang: in spring, in January, in 2025, in the morning.",
+      },
+      {
+        id: "cp09",
+        question:
+          "Don't leave your bag ______ the floor; someone might trip over it.",
+        options: ["in", "on", "at"],
+        correctIndex: 1,
+        reason:
+          "'On' dipakai untuk permukaan datar: on the floor, on the table, on the wall, on the shelf.",
+      },
+      {
+        id: "cp10",
+        question:
+          "My brother is currently studying ______ the library.",
+        options: ["in", "on", "at"],
+        correctIndex: 0,
+        reason:
+          "'In' dipakai untuk menunjukkan berada di dalam suatu ruangan/gedung: in the library, in the classroom, in the room.",
+      },
+      {
+        id: "cp11",
+        question: "My sister was born ______ 2005.",
+        options: ["in", "on", "at"],
+        correctIndex: 0,
+        reason:
+          "'In' dipakai untuk tahun: in 2005, in 1998. Juga untuk bulan (in March) dan musim (in summer).",
+      },
+      {
+        id: "cp12",
+        question: "I'll meet you ______ the entrance of the cinema.",
+        options: ["in", "on", "at"],
+        correctIndex: 2,
+        reason:
+          "'At' dipakai untuk titik/lokasi spesifik: at the entrance, at the bus stop, at the corner.",
+      },
+      {
+        id: "cp13",
+        question:
+          "We usually have a big family dinner ______ Christmas Day.",
+        options: ["in", "on", "at"],
+        correctIndex: 1,
+        reason:
+          "'On' dipakai untuk hari dan hari khusus: on Christmas Day, on my birthday, on New Year's Day.",
+      },
+      {
+        id: "cp14",
+        question: "Is there any milk left ______ the fridge?",
+        options: ["in", "on", "at"],
+        correctIndex: 0,
+        reason:
+          "'In' dipakai untuk di dalam suatu wadah/ruangan: in the fridge, in the box, in the drawer.",
+      },
+      {
+        id: "cp15",
+        question:
+          "Stop looking at your phone while walking ______ the street!",
+        options: ["in", "on", "at"],
+        correctIndex: 1,
+        reason:
+          "'On' dipakai untuk jalan/jalur: on the street, on the road, on the highway. Berbeda dengan 'in the street' (British English, sedikit berbeda nuansa).",
+      },
+    ],
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────
+  //  TUGAS PHRASE
+  // ─────────────────────────────────────────────────────────────────────────
+  {
+    slug: "tugas-phrase",
+    title: "Tugas Phrase — Jenis-Jenis Frasa (20 Soal)",
+    description:
+      "Latihan mengidentifikasi jenis frasa: Noun Phrase, Verb Phrase, Adjective Phrase, Adverbial Phrase, Gerund Phrase, Infinitive Phrase, dan Prepositional Phrase.",
+    duration: "20 menit",
+    sourcePdf: "",
+    questions: [
+      {
+        id: "ph01",
+        question:
+          "Manakah yang merupakan 'Noun Phrase' dalam kalimat: \"The friendly teacher gave us homework\"?",
+        options: ["The friendly teacher", "Gave us", "Homework", "Friendly"],
+        correctIndex: 0,
+        reason:
+          "Noun Phrase = noun + modifier(s). 'The friendly teacher' terdiri dari determiner 'the' + adjective 'friendly' + noun 'teacher' — berfungsi sebagai subjek kalimat.",
+      },
+      {
+        id: "ph02",
+        question:
+          "Dalam kalimat \"The soup is extremely hot\", frasa \"extremely hot\" adalah...",
+        options: ["Noun Phrase", "Verb Phrase", "Adjective Phrase", "Prepositional Phrase"],
+        correctIndex: 2,
+        reason:
+          "Adjective Phrase = adjective + modifier (adverb). 'Extremely hot' terdiri dari adverb 'extremely' yang memperkuat adjective 'hot' — menerangkan 'the soup'.",
+      },
+      {
+        id: "ph03",
+        question:
+          "Pilihlah 'Prepositional Phrase' dari kalimat: \"They are playing in the garden\".",
+        options: ["They are playing", "In the garden", "The garden", "Playing in"],
+        correctIndex: 1,
+        reason:
+          "Prepositional Phrase = preposition + noun phrase. 'In the garden' dimulai dengan preposisi 'in' — berfungsi sebagai keterangan tempat.",
+      },
+      {
+        id: "ph04",
+        question:
+          "Frasa \"will be going\" dalam \"I will be going to Japan\" disebut...",
+        options: ["Verb Phrase", "Gerund Phrase", "Infinitive Phrase", "Adverbial Phrase"],
+        correctIndex: 0,
+        reason:
+          "Verb Phrase = kata kerja bantu (auxiliary) + kata kerja utama. 'Will be going' menggunakan auxiliary 'will be' + main verb 'going' (future continuous).",
+      },
+      {
+        id: "ph05",
+        question:
+          "Manakah 'Infinitive Phrase' dalam kalimat: \"To learn English is my goal\"?",
+        options: ["To learn English", "English is", "My goal", "Learn English"],
+        correctIndex: 0,
+        reason:
+          "Infinitive Phrase = 'to' + verb + (objek/keterangan). 'To learn English' dimulai dengan 'to' + verb 'learn' + object 'English' — berfungsi sebagai subjek kalimat.",
+      },
+      {
+        id: "ph06",
+        question:
+          "Dalam \"Eating healthy food is important\", frasa \"Eating healthy food\" adalah...",
+        options: ["Verb Phrase", "Gerund Phrase", "Adjective Phrase", "Prepositional Phrase"],
+        correctIndex: 1,
+        reason:
+          "Gerund Phrase = gerund (-ing) + objek/keterangan. 'Eating healthy food' dimulai dengan gerund 'eating' — berfungsi sebagai subjek kalimat (benda).",
+      },
+      {
+        id: "ph07",
+        question:
+          "Tentukan 'Adverbial Phrase' dalam: \"She sang quite beautifully\".",
+        options: ["She sang", "Quite beautifully", "Beautifully", "Sang quite"],
+        correctIndex: 1,
+        reason:
+          "Adverbial Phrase = adverb + modifier. 'Quite beautifully' terdiri dari adverb modifier 'quite' + adverb utama 'beautifully' — menerangkan cara menyanyi.",
+      },
+      {
+        id: "ph08",
+        question:
+          "Dalam \"The man in the red shirt is my boss\", frasa \"in the red shirt\" berfungsi sebagai...",
+        options: [
+          "Adjective Phrase (menerangkan noun 'man')",
+          "Verb Phrase",
+          "Adverbial Phrase",
+          "Gerund Phrase",
+        ],
+        correctIndex: 0,
+        reason:
+          "'In the red shirt' adalah Prepositional Phrase yang berfungsi sebagai Adjective Phrase — menerangkan noun 'the man' (laki-laki yang mana?).",
+      },
+      {
+        id: "ph09",
+        question:
+          "Pilihlah kalimat yang memiliki 'Verb Phrase' dengan kata kerja bantu (auxiliary):",
+        options: [
+          "He plays football.",
+          "The cat is sleeping.",
+          "A beautiful day.",
+          "Very slowly.",
+        ],
+        correctIndex: 1,
+        reason:
+          "'The cat is sleeping' mengandung Verb Phrase 'is sleeping' = auxiliary 'is' + main verb 'sleeping' (present continuous). 'He plays' hanya satu kata kerja tunggal.",
+      },
+      {
+        id: "ph10",
+        question:
+          "Manakah 'Gerund Phrase' yang berfungsi sebagai objek dalam: \"I love watching old movies\"?",
+        options: ["I love", "Watching old movies", "Old movies", "Watching"],
+        correctIndex: 1,
+        reason:
+          "'Watching old movies' adalah Gerund Phrase yang berfungsi sebagai objek verb 'love'. Gerund phrase = gerund + object (old movies).",
+      },
+      {
+        id: "ph11",
+        question:
+          "Frasa \"to go home\" dalam \"It is time to go home\" adalah...",
+        options: [
+          "Prepositional Phrase",
+          "Infinitive Phrase",
+          "Noun Phrase",
+          "Adjective Phrase",
+        ],
+        correctIndex: 1,
+        reason:
+          "'To go home' adalah Infinitive Phrase = 'to' + verb 'go' + adverb 'home'. Berfungsi menerangkan 'time' (waktu untuk apa?).",
+      },
+      {
+        id: "ph12",
+        question:
+          "Dalam \"The book on the shelf is dusty\", frasa \"on the shelf\" adalah...",
+        options: [
+          "Prepositional Phrase",
+          "Verb Phrase",
+          "Infinitive Phrase",
+          "Adverbial Phrase",
+        ],
+        correctIndex: 0,
+        reason:
+          "'On the shelf' adalah Prepositional Phrase = preposition 'on' + noun phrase 'the shelf'. Berfungsi sebagai adjective — menerangkan 'the book'.",
+      },
+      {
+        id: "ph13",
+        question:
+          "Pilihlah 'Adverbial Phrase' yang menunjukkan waktu:",
+        options: ["In the park", "Very loud", "Early in the morning", "The tall man"],
+        correctIndex: 2,
+        reason:
+          "'Early in the morning' adalah Adverbial Phrase of Time (keterangan waktu). 'In the park' adalah keterangan tempat, 'very loud' adalah adjective phrase.",
+      },
+      {
+        id: "ph14",
+        question:
+          "Manakah yang merupakan 'Adjective Phrase' dalam: \"The woman, very tired from work, fell asleep\"?",
+        options: ["The woman", "Very tired from work", "Fell asleep", "From work"],
+        correctIndex: 1,
+        reason:
+          "'Very tired from work' adalah Adjective Phrase — menerangkan noun 'the woman'. Terdiri dari adverb 'very' + adjective 'tired' + prepositional phrase 'from work'.",
+      },
+      {
+        id: "ph15",
+        question:
+          "Frasa \"always has been raining\" dalam \"It always has been raining all night\" adalah...",
+        options: ["Verb Phrase", "Gerund Phrase", "Adverbial Phrase", "Noun Phrase"],
+        correctIndex: 0,
+        reason:
+          "'Always has been raining' adalah Verb Phrase yang kompleks — auxiliary 'has been' + main verb 'raining' (present perfect continuous) + adverb 'always'.",
+      },
+      {
+        id: "ph16",
+        question:
+          "Identifikasi 'Noun Phrase' yang menjadi objek: \"I bought a delicious chocolate cake\".",
+        options: [
+          "I bought",
+          "A delicious chocolate cake",
+          "Delicious chocolate",
+          "Bought a",
+        ],
+        correctIndex: 1,
+        reason:
+          "'A delicious chocolate cake' adalah Noun Phrase yang berfungsi sebagai objek verb 'bought'. Terdiri dari article + adjectives + noun.",
+      },
+      {
+        id: "ph17",
+        question:
+          "Dalam \"He wants to buy a car\", frasa \"to buy a car\" berfungsi sebagai...",
+        options: [
+          "Infinitive Phrase",
+          "Gerund Phrase",
+          "Prepositional Phrase",
+          "Adjective Phrase",
+        ],
+        correctIndex: 0,
+        reason:
+          "'To buy a car' adalah Infinitive Phrase = 'to' + verb 'buy' + object 'a car'. Berfungsi sebagai objek verb 'wants'.",
+      },
+      {
+        id: "ph18",
+        question:
+          "Kalimat mana yang mengandung 'Adverbial Phrase' yang menunjukkan cara (manner)?",
+        options: [
+          "She lives in London.",
+          "He speaks in a very polite way.",
+          "I will go tomorrow.",
+          "The blue bird sings.",
+        ],
+        correctIndex: 1,
+        reason:
+          "'In a very polite way' adalah Adverbial Phrase of Manner — menerangkan BAGAIMANA dia berbicara. 'In London' adalah keterangan tempat, bukan cara.",
+      },
+      {
+        id: "ph19",
+        question:
+          "Apa jenis frasa \"Smoking\" dalam kalimat \"Smoking is bad for health\"?",
+        options: [
+          "Gerund Phrase",
+          "Verb Phrase",
+          "Infinitive Phrase",
+          "Adjective Phrase",
+        ],
+        correctIndex: 0,
+        reason:
+          "'Smoking' di sini adalah Gerund — verb-ing yang berfungsi sebagai noun (subjek kalimat). Walau hanya satu kata, ia berfungsi sebagai Gerund Phrase.",
+      },
+      {
+        id: "ph20",
+        question:
+          "Manakah yang merupakan 'Prepositional Phrase' yang berfungsi sebagai keterangan waktu?",
+        options: [
+          "At the station",
+          "During the movie",
+          "With my friend",
+          "On the wall",
+        ],
+        correctIndex: 1,
+        reason:
+          "'During the movie' = selama film berlangsung → Prepositional Phrase of Time. 'At the station' = tempat, 'with my friend' = cara/keterangan, 'on the wall' = tempat.",
+      },
+    ],
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────
+  //  KISI-KISI GRAMMAR POST TEST
+  // ─────────────────────────────────────────────────────────────────────────
+  {
+    slug: "kisi-kisi-grammar-post-test",
+    title: "Kisi-Kisi Grammar — Post Test",
+    description:
+      "Latihan 30 soal mirip format post test: Part I Correct Phrase (urutan adjective dalam frasa), Part II Correlative Conjunctions & Prepositions, Part III Mixed Grammar.",
+    duration: "30 menit",
+    sourcePdf: "",
+    questions: [
+      // ── PART I: CORRECT PHRASE — urutan adjective & noun phrase (10 soal) ─
+      {
+        id: "pt01",
+        question: "I just finished _____ in Bali.",
+        options: [
+          "Winter of the trip amazing",
+          "The amazing winter trip",
+          "An amazing winter trip",
+          "Trip of winter the amazing",
+        ],
+        correctIndex: 2,
+        reason:
+          "Urutan noun phrase yang benar: article + adjective + noun. 'An amazing winter trip' = an (article) + amazing (opinion adj) + winter (noun modifier) + trip (main noun). 'The' tidak dipakai karena baru pertama disebut.",
+      },
+      {
+        id: "pt02",
+        question: "The scenery was _____.",
+        options: ["So beautiful", "Beautiful so", "So beautifully", "Beautifully so"],
+        correctIndex: 0,
+        reason:
+          "Setelah linking verb 'was' → adjective, bukan adverb. 'So beautiful' benar: 'so' adalah intensifier (adverb) + 'beautiful' (adjective). 'So beautifully' salah karena -ly adverb tidak cocok setelah linking verb.",
+      },
+      {
+        id: "pt03",
+        question: "We stayed in _____.",
+        options: [
+          "a hotel of room expensive",
+          "an expensive room hotel",
+          "a hotel expensive of room",
+          "an expensive hotel room",
+        ],
+        correctIndex: 3,
+        reason:
+          "Urutan noun phrase: article + adjective + noun modifier + main noun. 'An expensive hotel room' = an + expensive (adj) + hotel (noun modifier) + room (main noun). 'An' karena 'expensive' berbunyi vokal /ɛ/.",
+      },
+      {
+        id: "pt04",
+        question: "From the balcony, we had _____.",
+        options: [
+          "a view magnificent",
+          "magnificent of a view",
+          "a view of magnificent",
+          "a magnificent view",
+        ],
+        correctIndex: 3,
+        reason:
+          "Adjective diletakkan SEBELUM noun: 'a magnificent view'. Pola: article + adjective + noun. 'A view magnificent' salah karena adjective tidak boleh sesudah noun dalam noun phrase biasa.",
+      },
+      {
+        id: "pt05",
+        question: "There are _____ in Yogyakarta.",
+        options: [
+          "many historical famous places",
+          "many famous historical places",
+          "much famous historical places",
+          "famous many places historical",
+        ],
+        correctIndex: 1,
+        reason:
+          "Urutan adjective: quantifier (many) + opinion (famous) + age/type (historical) + noun (places). 'Many famous historical places' mengikuti urutan adjective yang benar. 'Much' salah karena 'places' countable.",
+      },
+      {
+        id: "pt06",
+        question: "Borobudur is _____.",
+        options: [
+          "a well-known temple",
+          "well known a temple",
+          "a temple well known",
+          "well a known temple",
+        ],
+        correctIndex: 0,
+        reason:
+          "'A well-known temple' = article + compound adjective (well-known) + noun (temple). Compound adjective (hyphenated) diletakkan sebelum noun. Pola ini sama dengan 'a good-looking person'.",
+      },
+      {
+        id: "pt07",
+        question: "It was _____ for the students.",
+        options: [
+          "a lesson special for us",
+          "a for us special lesson",
+          "a special lesson for us",
+          "a special for us lesson",
+        ],
+        correctIndex: 2,
+        reason:
+          "Noun phrase + prepositional phrase sebagai modifier: 'a special lesson' (article + adj + noun) lalu diikuti 'for us' (prepositional phrase). Urutan yang benar: 'a special lesson for us'.",
+      },
+      {
+        id: "pt08",
+        question: "We spent hours _____ the park.",
+        options: [
+          "walking the around park",
+          "around walking the park",
+          "around the walking the park",
+          "walking around the park",
+        ],
+        correctIndex: 3,
+        reason:
+          "'Walking around the park' = gerund phrase: gerund (walking) + preposisi (around) + noun phrase (the park). Gerund selalu diikuti objek/keterangan, bukan sebaliknya.",
+      },
+      {
+        id: "pt09",
+        question: "She is wearing _____ today.",
+        options: [
+          "a long red beautiful dress",
+          "a beautiful long red dress",
+          "a red beautiful long dress",
+          "long red a beautiful dress",
+        ],
+        correctIndex: 1,
+        reason:
+          "Urutan adjective: article + opinion + size + color + noun. 'A beautiful (opinion) long (size) red (color) dress' mengikuti urutan baku: Opinion → Size → Color → Noun.",
+      },
+      {
+        id: "pt10",
+        question: "My grandmother gave me _____ last year.",
+        options: [
+          "an old small golden ring",
+          "a golden small old ring",
+          "a small old golden ring",
+          "old a small golden ring",
+        ],
+        correctIndex: 2,
+        reason:
+          "Urutan adjective: article + size + age + material + noun. 'A small (size) old (age) golden (material) ring' mengikuti urutan: Size → Age → Material. 'An old small golden' salah karena Age seharusnya setelah Size.",
+      },
+
+      // ── PART II: CORRELATIVE CONJUNCTIONS & PREPOSITIONS (10 soal) ────────
+      {
+        id: "pt11",
+        question:
+          "Neither Sarah _____ her friends _____ coming to the party.",
+        options: ["and, is", "nor, are", "nor, is", "and, are"],
+        correctIndex: 1,
+        reason:
+          "'Neither...nor' = tidak...maupun. Verb agreement mengikuti subjek PALING DEKAT dengan verb: 'her friends' (plural) → 'are'. Jawaban: 'nor, are'.",
+      },
+      {
+        id: "pt12",
+        question:
+          "Not only the teacher but also the student _____ the answer.",
+        options: ["know", "knows", "are knowing", "have known"],
+        correctIndex: 1,
+        reason:
+          "'Not only...but also' → verb agreement mengikuti subjek PALING DEKAT: 'the student' (singular) → 'knows'. Jika 'the students' (plural), maka 'know'.",
+      },
+      {
+        id: "pt13",
+        question:
+          "Both the blue pen _____ the red pen _____ to me.",
+        options: ["and, belong", "or, belongs", "and, belongs", "or, belong"],
+        correctIndex: 0,
+        reason:
+          "'Both...and' selalu diikuti verb plural karena menggabungkan dua subjek. 'Both the blue pen and the red pen' = plural → 'belong' (tanpa -s).",
+      },
+      {
+        id: "pt14",
+        question:
+          "My sister is very interested _____ learning photography.",
+        options: ["to", "in", "with", "on"],
+        correctIndex: 1,
+        reason:
+          "Collocation tetap: 'interested IN'. Preposisi 'in' selalu mengikuti 'interested': interested in + noun/gerund.",
+      },
+      {
+        id: "pt15",
+        question:
+          "Your laptop is similar _____ mine, but the color is different.",
+        options: ["with", "at", "to", "from"],
+        correctIndex: 2,
+        reason:
+          "Collocation tetap: 'similar TO'. 'Similar to' = mirip dengan. Jangan tertukar dengan 'different from' (berbeda dari).",
+      },
+      {
+        id: "pt16",
+        question:
+          "The train will depart from Jakarta _____ Bandung _____ 07.00 a.m.",
+        options: ["until, in", "to, at", "until, at", "to, in"],
+        correctIndex: 1,
+        reason:
+          "'Depart to' = berangkat menuju (destination). 'At 07.00' = waktu spesifik (jam) → pakai 'at'. Jawaban: 'to, at'.",
+      },
+      {
+        id: "pt17",
+        question:
+          "Neither the students _____ the teacher _____ satisfied with the result.",
+        options: ["nor, was", "nor, were", "and, were", "and, was"],
+        correctIndex: 0,
+        reason:
+          "'Neither...nor' → verb agreement mengikuti subjek PALING DEKAT: 'the teacher' (singular) → 'was'. Jika 'the teachers' (plural), maka 'were'.",
+      },
+      {
+        id: "pt18",
+        question:
+          "Not only Rina but also her sisters _____ in the school choir.",
+        options: ["sings", "sing", "is singing", "has sung"],
+        correctIndex: 1,
+        reason:
+          "'Not only...but also' → subjek paling dekat: 'her sisters' (plural) → 'sing' (base form, tanpa -s). Jika 'her sister' (singular), maka 'sings'.",
+      },
+      {
+        id: "pt19",
+        question:
+          "Both the manager _____ the director _____ agreed to the new policy.",
+        options: ["and, have", "or, has", "and, has", "or, have"],
+        correctIndex: 0,
+        reason:
+          "'Both...and' menggabungkan dua subjek → selalu plural → 'have agreed'. Pola: Both A and B + plural verb.",
+      },
+      {
+        id: "pt20",
+        question:
+          "She is good _____ speaking English _____ writing formal letters.",
+        options: ["at, and", "in, but", "for, and", "at, or"],
+        correctIndex: 0,
+        reason:
+          "Collocation: 'good AT' + gerund. 'And' menghubungkan dua gerund sejajar: 'good at speaking...AND writing'. Jawaban: 'at, and'.",
+      },
+
+      // ── PART III: MIXED GRAMMAR (10 soal) ─────────────────────────────────
+      {
+        id: "pt21",
+        question: "The food at that restaurant tastes _____.",
+        options: ["wonderfully", "wonderful", "wondering", "wonders"],
+        correctIndex: 1,
+        reason:
+          "Setelah linking verb 'tastes' → adjective: 'wonderful'. Linking verbs (taste, smell, look, feel, sound) selalu diikuti adjective, bukan adverb (-ly).",
+      },
+      {
+        id: "pt22",
+        question: "Which sentence uses the CORRECT plural form?",
+        options: [
+          "She bought two loafs of bread.",
+          "There are three childrens at home.",
+          "He has two oxen in the farm.",
+          "We saw four deers near the river.",
+        ],
+        correctIndex: 2,
+        reason:
+          "'Oxen' adalah irregular plural dari 'ox' yang benar. 'Loafs' → loaves, 'childrens' → children (sudah plural, tidak ada -s), 'deers' → deer (tidak berubah).",
+      },
+      {
+        id: "pt23",
+        question: "She is _____ honest person who never lies.",
+        options: ["a", "an", "the", "—"],
+        correctIndex: 1,
+        reason:
+          "'Honest' diawali bunyi vokal /ɒ/ (huruf 'h' tidak berbunyi) → pakai 'an'. Aturan: 'a/an' ditentukan oleh BUNYI pertama, bukan huruf pertama.",
+      },
+      {
+        id: "pt24",
+        question:
+          "The number of students _____ increasing every year.",
+        options: ["are", "were", "is", "have"],
+        correctIndex: 2,
+        reason:
+          "'The number of...' → subjek utama adalah 'The number' (singular) → pakai 'is'. Berbeda dengan 'A number of students ARE increasing'.",
+      },
+      {
+        id: "pt25",
+        question:
+          "I don't have _____ experience in teaching.",
+        options: ["many", "several", "a few", "much"],
+        correctIndex: 3,
+        reason:
+          "'Experience' (pengalaman) adalah uncountable noun → pakai 'much' di kalimat negatif. 'Many/several/a few' hanya untuk countable noun.",
+      },
+      {
+        id: "pt26",
+        question: "The scissors on the table _____ very sharp.",
+        options: ["is", "was", "are", "has"],
+        correctIndex: 2,
+        reason:
+          "'Scissors' selalu plural (always-plural noun) → selalu pakai verb plural 'are'. Sama seperti trousers, glasses, pliers, pants.",
+      },
+      {
+        id: "pt27",
+        question:
+          "He has three pens. He gave one to Rina, _____ to Dian, and kept one for himself.",
+        options: ["the other", "other", "another", "others"],
+        correctIndex: 2,
+        reason:
+          "Ada 3 pena (lebih dari 2): beri 1 ke Rina, beri 1 LAGI (another) ke Dian, simpan 1. 'Another' = one more dari kelompok 3+. 'The other' untuk kelompok 2 saja.",
+      },
+      {
+        id: "pt28",
+        question:
+          "She has been learning English _____ five years.",
+        options: ["since", "for", "during", "while"],
+        correctIndex: 1,
+        reason:
+          "'For' dipakai untuk durasi/rentang waktu: 'for five years'. 'Since' dipakai untuk titik waktu mulai: 'since 2019'. 'Five years' = durasi → 'for'.",
+      },
+      {
+        id: "pt29",
+        question:
+          "My father and _____ will travel to Surabaya next week.",
+        options: ["me", "I", "my", "myself"],
+        correctIndex: 1,
+        reason:
+          "Compound subject = posisi subjek → subject pronoun 'I'. 'My father and I' = subjek kalimat. Tips: coba hapus 'My father and' → 'I will travel' (bukan 'me will travel').",
+      },
+      {
+        id: "pt30",
+        question:
+          "The news about the flood _____ very shocking.",
+        options: ["are", "were", "is", "have"],
+        correctIndex: 2,
+        reason:
+          "'News' adalah uncountable noun yang selalu dianggap singular → pakai 'is'. Sama seperti mathematics, economics, physics, information.",
+      },
+    ],
+  },
 ];

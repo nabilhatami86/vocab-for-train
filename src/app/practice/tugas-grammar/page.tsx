@@ -24,6 +24,28 @@ const groups: { group: string; labelColor: string; items: TaskItem[] }[] = [
     labelColor: 'text-red-700',
     items: [
       {
+        href: '/practice/exams/tugas-conjunction-preposition',
+        title: 'Tugas Conjunction & Preposition (15 Soal)',
+        description:
+          'Latihan conjunction koordinatif & korelatif (and/but/yet, either/or, neither/nor, not only/but also) dan preposisi waktu & tempat (in/on/at).',
+        icon: ClipboardList,
+        accentColor: 'bg-indigo-500',
+        iconBg: 'bg-indigo-500/10 text-indigo-600',
+        badge: '15 soal',
+        tags: ['Conjunction', 'Preposition', 'in/on/at', 'Correlative'],
+      },
+      {
+        href: '/practice/exams/tugas-phrase',
+        title: 'Tugas Phrase — Jenis-Jenis Frasa (20 Soal)',
+        description:
+          'Identifikasi jenis frasa: Noun Phrase, Verb Phrase, Adjective Phrase, Adverbial Phrase, Gerund Phrase, Infinitive Phrase, dan Prepositional Phrase.',
+        icon: FileText,
+        accentColor: 'bg-teal-500',
+        iconBg: 'bg-teal-500/10 text-teal-600',
+        badge: '20 soal',
+        tags: ['Noun Phrase', 'Verb Phrase', 'Gerund', 'Infinitive', 'Prepositional'],
+      },
+      {
         href: '/practice/exams/tugas-grammar-a1',
         title: 'Tugas Grammar — Articles & Nouns (20 Soal)',
         description:
@@ -119,6 +141,23 @@ const groups: { group: string; labelColor: string; items: TaskItem[] }[] = [
       },
     ],
   },
+  {
+    group: 'Kisi-Kisi Post Test Grammar',
+    labelColor: 'text-blue-800',
+    items: [
+      {
+        href: '/practice/exams/kisi-kisi-grammar-post-test',
+        title: 'Kisi-Kisi Post Test Basic Grammar',
+        description:
+          'Persiapan ujian Post Test — 30 soal mencakup seluruh materi: Parts of Speech, Nouns, Articles, Pronouns, Quantifiers, Adj vs Adv, Verb Agreement, Another/Other, Prepositions, Conjunctions.',
+        icon: ClipboardList,
+        accentColor: 'bg-blue-600',
+        iconBg: 'bg-blue-600/10 text-blue-700',
+        badge: '30 soal',
+        tags: ['Parts of Speech', 'Articles', 'Pronouns', 'Verb Agreement', 'Prepositions'],
+      },
+    ],
+  },
 ];
 
 const totalSoal = groups
@@ -159,7 +198,7 @@ export default function TugasGrammarPage() {
         {[
           { label: 'Total Paket', value: totalPaket },
           { label: 'Total Soal', value: `${totalSoal}+` },
-          { label: 'Topik', value: '8' },
+          { label: 'Topik', value: '10' },
         ].map((stat) => (
           <div
             key={stat.label}
