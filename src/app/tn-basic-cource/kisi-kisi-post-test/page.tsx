@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import {
   ArrowLeft,
@@ -14,7 +14,7 @@ import {
   BookOpen,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { pickKisiKisiSession, postTestGrammarPool } from '@/data/randomPostTestGrammar';
+import { kisiKisiPDFQuestions } from '@/data/randomPostTestGrammar';
 
 const LABELS = ['A', 'B', 'C', 'D'];
 
@@ -33,13 +33,11 @@ function normalize(s: string) {
   return s.toLowerCase().trim().replace(/\.+$/, '').replace(/\s+/g, ' ');
 }
 
+const questions = kisiKisiPDFQuestions;
+
 export default function KisiKisiPostTestPage() {
-  const [sessionKey, setSessionKey] = useState(0);
   const [results, setResults] = useState<Record<string, QuestionResult>>({});
   const [textInputs, setTextInputs] = useState<Record<string, string>>({});
-
-  const [questions, setQuestions] = useState<ReturnType<typeof pickKisiKisiSession>>([]);
-  useEffect(() => { setQuestions(pickKisiKisiSession()); }, [sessionKey]);
 
   const total = questions.length;
   const answeredCount = Object.keys(results).length;
@@ -75,7 +73,6 @@ export default function KisiKisiPostTestPage() {
   const newSession = () => {
     setResults({});
     setTextInputs({});
-    setSessionKey((k) => k + 1);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -113,7 +110,7 @@ export default function KisiKisiPostTestPage() {
           <div className="flex-1">
             <h1 className="text-lg font-bold text-(--text)">Kisi-Kisi Grammar — Post Test</h1>
             <p className="text-xs text-(--text-secondary) mt-0.5">
-              30 soal acak dari {postTestGrammarPool.length} bank soal · Jawab langsung lihat hasilnya
+              20 soal sesuai kisi-kisi PDF · Part I, II, III · Jawab langsung lihat hasilnya
             </p>
           </div>
         </div>
@@ -156,7 +153,7 @@ export default function KisiKisiPostTestPage() {
                 className="w-full mt-1 inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary text-white rounded-xl text-sm font-semibold hover:bg-primary-dark transition-colors"
               >
                 <Shuffle className="w-4 h-4" />
-                Soal Baru
+                Ulangi
               </button>
             )}
           </div>
@@ -175,7 +172,7 @@ export default function KisiKisiPostTestPage() {
 
           return (
             <section
-              key={`${sessionKey}-${q.id}`}
+              key={q.id}
               className={cn(
                 'bg-(--bg-card) border rounded-2xl overflow-hidden transition-all duration-200',
                 isRight && 'border-green-300 dark:border-green-800',
@@ -211,7 +208,7 @@ export default function KisiKisiPostTestPage() {
                     const isCorrectOpt = i === q.correctIndex;
                     return (
                       <button
-                        key={`${sessionKey}-${q.id}-${i}`}
+                        key={`${q.id}-${i}`}
                         type="button"
                         onClick={() => handleSelectMCQ(q.id, i, q.correctIndex)}
                         disabled={isAnswered}

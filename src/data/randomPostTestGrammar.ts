@@ -639,7 +639,7 @@ export function pickPostTestSession(): PostTestQuestion[] {
   return [...partI, ...partII, ...partIII];
 }
 
-// Kisi-Kisi: 10 dari Part I + 10 dari Part II + 10 dari Part III = 30 soal
+// Kisi-Kisi: 10 dari Part I + 10 dari Part II + 10 dari Part III = 30 soal (latihan acak)
 export function pickKisiKisiSession(): PostTestQuestion[] {
   const shuffle = <T,>(arr: T[]) => [...arr].sort(() => Math.random() - 0.5);
   const partI = shuffle(postTestGrammarPool.filter((q) => q.part === "I")).slice(0, 10);
@@ -647,3 +647,283 @@ export function pickKisiKisiSession(): PostTestQuestion[] {
   const partIII = shuffle(postTestGrammarPool.filter((q) => q.part === "III")).slice(0, 10);
   return [...partI, ...partII, ...partIII];
 }
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// SOAL KISI-KISI PDF — FIXED (8 Part I + 6 Part II + 6 Part III = 20 soal)
+// ═══════════════════════════════════════════════════════════════════════════════
+export const kisiKisiPDFQuestions: PostTestQuestion[] = [
+
+  // ── PART I: CORRECT PHRASE ──────────────────────────────────────────────────
+  {
+    id: "kk1",
+    part: "I",
+    partLabel: "Correct Phrase",
+    question: "I just finished (1) ______ in Bali.",
+    options: [
+      "Winter of the trip amazing",
+      "The amazing winter trip",
+      "An amazing winter trip",
+      "Trip of winter the amazing",
+    ],
+    correctIndex: 2,
+    reason: "Urutan adjective: Opinion (amazing) → Season/Type (winter) → Noun (trip). Artikel 'an' dipakai karena 'amazing' dimulai huruf vokal (a). Jawaban benar: 'An amazing winter trip'.",
+  },
+  {
+    id: "kk2",
+    part: "I",
+    partLabel: "Correct Phrase",
+    question: "The scenery was (2) ______.",
+    options: [
+      "So beautiful",
+      "Beautiful so",
+      "So beautifully",
+      "Beautifully so",
+    ],
+    correctIndex: 0,
+    reason: "Setelah linking verb 'was', pakai adjective (kata sifat), bukan adverb. 'So beautiful' = intensifier (so) + adjective (beautiful) → benar. 'Beautifully' adalah adverb, salah dipakai setelah 'was'.",
+  },
+  {
+    id: "kk3",
+    part: "I",
+    partLabel: "Correct Phrase",
+    question: "We stayed in (3) ______.",
+    options: [
+      "a hotel of room expensive",
+      "an expensive room hotel",
+      "a hotel expensive of room",
+      "an expensive hotel room",
+    ],
+    correctIndex: 3,
+    reason: "Urutan noun phrase: adjective (expensive) → noun modifier (hotel) → main noun (room). 'An expensive hotel room' = adjective + noun modifier + main noun → urutan benar. 'Hotel' di sini berfungsi sebagai modifier untuk 'room'.",
+  },
+  {
+    id: "kk4",
+    part: "I",
+    partLabel: "Correct Phrase",
+    question: "From the balcony, we had (4) ______.",
+    options: [
+      "a view magnificent",
+      "magnificent of a view",
+      "a view of magnificent",
+      "a magnificent view",
+    ],
+    correctIndex: 3,
+    reason: "Adjective harus diletakkan SEBELUM noun (attributive position). 'A magnificent view' = article + adjective + noun → benar. 'A view magnificent' salah karena adjective tidak boleh sesudah noun dalam posisi ini.",
+  },
+  {
+    id: "kk5",
+    part: "I",
+    partLabel: "Correct Phrase",
+    question: "There are (5) ______ in Yogyakarta.",
+    options: [
+      "many historical famous places",
+      "many famous historical places",
+      "much famous historical places",
+      "famous many places historical",
+    ],
+    correctIndex: 1,
+    reason: "Urutan adjective: Quantity (many) → Opinion (famous) → Age/Type (historical) → Noun (places). 'Many famous historical places' → benar. 'Much' salah karena 'places' adalah countable noun, pakai 'many' bukan 'much'.",
+  },
+  {
+    id: "kk6",
+    part: "I",
+    partLabel: "Correct Phrase",
+    question: "Borobudur is (6) ______.",
+    options: [
+      "a well-known temple",
+      "well known a temple",
+      "a temple well known",
+      "well a known temple",
+    ],
+    correctIndex: 0,
+    reason: "Compound adjective 'well-known' ditulis dengan tanda hubung saat sebelum noun. Urutan: article (a) + compound adjective (well-known) + noun (temple). 'A well-known temple' → benar.",
+  },
+  {
+    id: "kk7",
+    part: "I",
+    partLabel: "Correct Phrase",
+    question: "It was (7) ______ for the students.",
+    options: [
+      "a lesson special for us",
+      "a for us special lesson",
+      "a special lesson for us",
+      "a special for us lesson",
+    ],
+    correctIndex: 2,
+    reason: "Urutan: article (a) + adjective (special) + noun (lesson) + prepositional phrase (for the students). Prepositional phrase diletakkan SETELAH noun phrase, bukan di tengahnya. 'A special lesson for the students' → benar.",
+  },
+  {
+    id: "kk8",
+    part: "I",
+    partLabel: "Correct Phrase",
+    question: "We spent hours (8) ______ the park.",
+    options: [
+      "walking the around park",
+      "around walking the park",
+      "around the walking park",
+      "walking around the park",
+    ],
+    correctIndex: 3,
+    reason: "Frasa 'walking around the park' = gerund (walking) + preposition (around) + noun phrase (the park). Preposition 'around' mengikuti gerund 'walking', bukan mendahuluinya. 'Walking around the park' → urutan benar.",
+  },
+
+  // ── PART II: CORRELATIVE CONJUNCTIONS & PREPOSITIONS ────────────────────────
+  {
+    id: "kk9",
+    part: "II",
+    partLabel: "Conjunction & Preposition",
+    question: "Neither Sarah ______ her friends ______ coming to the party.",
+    options: [
+      "nor, are",
+      "and, are",
+      "nor, is",
+      "or, are",
+    ],
+    correctIndex: 0,
+    reason: "'Neither...nor' selalu berpasangan — bukan 'neither...and/or'. Verb agreement: subject terdekat ke verb adalah 'her friends' (plural) → pakai 'are'. Jawaban: 'nor, are'.",
+  },
+  {
+    id: "kk10",
+    part: "II",
+    partLabel: "Conjunction & Preposition",
+    question: "Not only the teacher but also the student ______ the answer.",
+    options: [
+      "know",
+      "knows",
+      "known",
+      "knowing",
+    ],
+    correctIndex: 1,
+    reason: "'Not only...but also' → verb agreement mengikuti subject TERDEKAT dengan verb, yaitu 'the student' (singular) → pakai 'knows' (+ s untuk he/she/it). Bukan 'know' yang untuk plural.",
+  },
+  {
+    id: "kk11",
+    part: "II",
+    partLabel: "Conjunction & Preposition",
+    question: "Both the blue pen ______ the red pen ______ to me.",
+    options: [
+      "and, belong",
+      "or, belong",
+      "and, belongs",
+      "or, belongs",
+    ],
+    correctIndex: 0,
+    reason: "'Both...and' selalu berpasangan — bukan 'both...or'. Verb agreement: 'both...and' selalu dianggap plural → pakai 'belong' (tanpa -s). Jawaban: 'and, belong'.",
+  },
+  {
+    id: "kk12",
+    part: "II",
+    partLabel: "Conjunction & Preposition",
+    question: "My sister is very interested ______ learning photography.",
+    options: [
+      "to",
+      "in",
+      "at",
+      "with",
+    ],
+    correctIndex: 1,
+    reason: "Fixed expression: 'interested in' + gerund/noun. 'Interested in learning' → benar. Preposisi 'in' selalu mengikuti 'interested' ketika bicara tentang hobi, topik, atau kegiatan.",
+  },
+  {
+    id: "kk13",
+    part: "II",
+    partLabel: "Conjunction & Preposition",
+    question: "Your laptop is similar ______ mine, but the color is different.",
+    options: [
+      "with",
+      "to",
+      "as",
+      "from",
+    ],
+    correctIndex: 1,
+    reason: "Fixed expression: 'similar to' = mirip dengan. Bukan 'similar with'. Contoh: 'This phone is similar to yours.' Preposisi 'to' selalu berpasangan dengan 'similar'.",
+  },
+  {
+    id: "kk14",
+    part: "II",
+    partLabel: "Conjunction & Preposition",
+    question: "The train will depart from Jakarta ______ Bandung ______ 07.00 a.m.",
+    options: [
+      "to, in",
+      "until, at",
+      "to, at",
+      "for, on",
+    ],
+    correctIndex: 2,
+    reason: "'Depart from...to' = berangkat dari...menuju (preposition arah). 'At 07.00 a.m.' = pakai 'at' untuk waktu spesifik (jam). Bukan 'in' (bulan/tahun) atau 'on' (hari/tanggal). Jawaban: 'to, at'.",
+  },
+
+  // ── PART III: TRANSLATE TO ENGLISH ──────────────────────────────────────────
+  {
+    id: "kk15",
+    part: "III",
+    partLabel: "Translate to English",
+    question: "Terjemahkan: Banyak mobil mewah, cepat, dan mahal di kota metropolitan ini.",
+    options: [
+      "There are many luxurious, fast, and expensive cars in this metropolitan city.",
+      "—", "—", "—",
+    ],
+    correctIndex: 0,
+    reason: "Urutan adjective: Quantity (many) → Opinion (luxurious, fast, expensive) → Noun (cars). 'Metropolitan' adalah noun modifier sebelum 'city'. Kalimat dimulai 'There are' untuk menyatakan keberadaan.",
+  },
+  {
+    id: "kk16",
+    part: "III",
+    partLabel: "Translate to English",
+    question: "Terjemahkan: Mendengar suara yang sangat merdu, tenang, dan mendamaikan.",
+    options: [
+      "Hearing a very melodious, calm, and soothing sound.",
+      "—", "—", "—",
+    ],
+    correctIndex: 0,
+    reason: "Gerund phrase: 'Hearing' = mendengar. Urutan adjective: Intensifier (very) → Opinion/Quality (melodious, calm, soothing) → Noun (sound). Beberapa adjective dipisahkan koma dan 'and' sebelum terakhir.",
+  },
+  {
+    id: "kk17",
+    part: "III",
+    partLabel: "Translate to English",
+    question: "Terjemahkan: Pembangunan jembatan gantung yang panjang oleh para pekerja profesional.",
+    options: [
+      "The construction of a long suspension bridge by professional workers.",
+      "—", "—", "—",
+    ],
+    correctIndex: 0,
+    reason: "Urutan adjective: Quality (long) → Type/Purpose (suspension) → Noun (bridge). 'Suspension bridge' = compound noun (jembatan gantung). 'By professional workers' = prepositional phrase pelaku.",
+  },
+  {
+    id: "kk18",
+    part: "III",
+    partLabel: "Translate to English",
+    question: "Terjemahkan: Membawa payung plastik berwarna biru di cuaca yang sangat terik.",
+    options: [
+      "Carrying a blue plastic umbrella in very hot weather.",
+      "—", "—", "—",
+    ],
+    correctIndex: 0,
+    reason: "Urutan adjective sebelum 'umbrella': Color (blue) → Material (plastic) → Noun (umbrella). 'In very hot weather' = preposition 'in' + intensifier 'very' + adjective 'hot' + noun 'weather'.",
+  },
+  {
+    id: "kk19",
+    part: "III",
+    partLabel: "Translate to English",
+    question: "Terjemahkan: Beberapa lukisan kuno, unik, dan berharga di galeri seni itu.",
+    options: [
+      "Several ancient, unique, and valuable paintings in that art gallery.",
+      "—", "—", "—",
+    ],
+    correctIndex: 0,
+    reason: "Urutan adjective: Quantity (several) → Age (ancient) → Opinion (unique, valuable) → Noun (paintings). 'Art gallery' = compound noun. 'That' = demonstrative adjective untuk galeri yang dimaksud.",
+  },
+  {
+    id: "kk20",
+    part: "III",
+    partLabel: "Translate to English",
+    question: "Terjemahkan: Memakai sepatu lari berwarna putih di lapangan yang sangat luas.",
+    options: [
+      "Wearing white running shoes in a very large field.",
+      "—", "—", "—",
+    ],
+    correctIndex: 0,
+    reason: "Urutan adjective sebelum 'shoes': Color (white) → Purpose/Type (running) → Noun (shoes). 'In a very large field' = preposition 'in' + article 'a' + intensifier 'very' + adjective 'large' + noun 'field'.",
+  },
+];
