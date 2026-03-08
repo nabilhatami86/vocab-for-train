@@ -62,7 +62,9 @@ export default function GrammarGuidePage() {
             className="bg-(--bg-card) border border-(--border) rounded-xl p-5 hover:shadow-lg hover:border-primary/30 transition-all group flex flex-col gap-3"
           >
             <div className="flex items-center gap-3">
-              <span className="text-3xl">{topic.emoji}</span>
+              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                <topic.icon className="w-5 h-5 text-primary" />
+              </div>
               <div>
                 <h2 className="text-base font-semibold text-(--text) group-hover:text-primary transition-colors leading-tight">
                   {topic.title}

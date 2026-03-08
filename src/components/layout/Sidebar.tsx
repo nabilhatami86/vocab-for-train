@@ -62,6 +62,7 @@ const navSections: { title: string; items: NavItem[] }[] = [
       { href: "/practice", label: "Practice", icon: GraduationCap },
       { href: "/practice/conversations", label: "Daily Conversations", icon: MessageCircle },
       { href: "/tn-basic-cource", label: "TN Basic Course", icon: BookText },
+      { href: "/tn-intermediate", label: "TN Intermediate", icon: GraduationCap },
     ],
   },
   {

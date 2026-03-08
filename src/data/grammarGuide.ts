@@ -1,5 +1,10 @@
 // Grammar Guide — Reference guide lengkap per Part of Speech
 
+import {
+  Package, Bookmark, Hash, Scale, User, Zap,
+  Target, Palette, GitCompare, MapPin, BarChart2, Key,
+} from 'lucide-react';
+
 // ── POS type (untuk annotated sentences) ─────────────────────
 export type POS =
   | "noun" | "verb" | "modal" | "adjective" | "adverb"
@@ -26,7 +31,7 @@ export type GrammarSection = {
 export type GrammarTopic = {
   id: string;
   title: string;
-  emoji: string;
+  icon: React.ElementType;
   shortDefinition: string;
   sections: GrammarSection[];
   sentences: AnnotatedSentence[];   // tetap ada untuk latihan interaktif
@@ -49,7 +54,7 @@ export const grammarTopics: GrammarTopic[] = [
   {
     id: "nouns",
     title: "Nouns — Kata Benda",
-    emoji: "📦",
+    icon: Package,
     shortDefinition: "Kata yang berfungsi sebagai subject, object, atau pelengkap dalam kalimat.",
     sections: [
       {
@@ -250,7 +255,7 @@ export const grammarTopics: GrammarTopic[] = [
   {
     id: "articles",
     title: "Articles — A, An, The",
-    emoji: "📌",
+    icon: Bookmark,
     shortDefinition: "Kata sandang sebelum noun: A, An (tidak spesifik) atau The (spesifik).",
     sections: [
       {
@@ -368,7 +373,7 @@ export const grammarTopics: GrammarTopic[] = [
   {
     id: "plural-nouns",
     title: "Plural Nouns — Kata Benda Jamak",
-    emoji: "🔢",
+    icon: Hash,
     shortDefinition: "Aturan membentuk kata benda jamak — regular, irregular, dan always plural.",
     sections: [
       {
@@ -471,7 +476,7 @@ export const grammarTopics: GrammarTopic[] = [
   {
     id: "quantifiers",
     title: "Quantifiers — Much, Many, A Few, dll.",
-    emoji: "⚖️",
+    icon: Scale,
     shortDefinition: "Kata jumlah yang berbeda tergantung jenis noun (countable vs uncountable).",
     sections: [
       {
@@ -582,7 +587,7 @@ export const grammarTopics: GrammarTopic[] = [
   {
     id: "pronouns",
     title: "Pronouns — Kata Ganti",
-    emoji: "👤",
+    icon: User,
     shortDefinition: "Kata yang menggantikan noun agar tidak diulang-ulang.",
     sections: [
       {
@@ -728,7 +733,7 @@ export const grammarTopics: GrammarTopic[] = [
   {
     id: "verb-forms",
     title: "Verb Forms — Bentuk Kata Kerja",
-    emoji: "⚡",
+    icon: Zap,
     shortDefinition: "Jenis verb, bentuk V1/V2/V3, regular vs irregular.",
     sections: [
       {
@@ -859,7 +864,7 @@ export const grammarTopics: GrammarTopic[] = [
   {
     id: "modal-verbs",
     title: "Modal Verbs — Can, Should, Must, dll.",
-    emoji: "🎯",
+    icon: Target,
     shortDefinition: "Kata kerja bantu untuk kemampuan, saran, kewajiban, dan kemungkinan.",
     sections: [
       {
@@ -966,7 +971,7 @@ export const grammarTopics: GrammarTopic[] = [
   {
     id: "adjectives",
     title: "Adjectives — Kata Sifat",
-    emoji: "🎨",
+    icon: Palette,
     shortDefinition: "Kata yang mendeskripsikan atau memodifikasi noun.",
     sections: [
       {
@@ -1063,7 +1068,7 @@ export const grammarTopics: GrammarTopic[] = [
   {
     id: "adj-vs-adv",
     title: "Adjective vs Adverb",
-    emoji: "⚔️",
+    icon: GitCompare,
     shortDefinition: "Kapan pakai adjective dan kapan pakai adverb.",
     sections: [
       {
@@ -1202,7 +1207,7 @@ export const grammarTopics: GrammarTopic[] = [
   {
     id: "adverb-position",
     title: "Adverb Position — Posisi Kata Keterangan",
-    emoji: "📍",
+    icon: MapPin,
     shortDefinition: "Jenis adverb dan aturan posisi adverb frekuensi.",
     sections: [
       {
@@ -1308,7 +1313,7 @@ export const grammarTopics: GrammarTopic[] = [
   {
     id: "comparative-superlative",
     title: "Comparative & Superlative",
-    emoji: "📊",
+    icon: BarChart2,
     shortDefinition: "Perbandingan dua hal (comparative) atau yang paling ekstrem (superlative).",
     sections: [
       {
@@ -1412,7 +1417,7 @@ export const grammarTopics: GrammarTopic[] = [
   {
     id: "possessive-nouns",
     title: "Possessive Nouns — Kepemilikan",
-    emoji: "🔑",
+    icon: Key,
     shortDefinition: "Menunjukkan kepemilikan dengan apostrof: 's atau s'.",
     sections: [
       {

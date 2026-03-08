@@ -185,7 +185,9 @@ export default function GrammarTopicPage() {
           <ArrowLeft className="w-5 h-5" />
         </Link>
         <div className="flex items-center gap-3">
-          <span className="text-3xl">{topic.emoji}</span>
+          <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+            <topic.icon className="w-6 h-6 text-primary" />
+          </div>
           <div>
             <h1 className="text-2xl font-bold text-(--text)">{topic.title}</h1>
             <p className="text-sm text-(--text-secondary)">{topic.shortDefinition}</p>
@@ -327,7 +329,7 @@ export default function GrammarTopicPage() {
                 href={`/grammar-guide/${t.id}`}
                 className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-(--bg-card) border border-(--border) text-sm text-(--text-secondary) hover:border-primary/40 hover:text-(--text) transition-all"
               >
-                <span>{t.emoji}</span>
+                <t.icon className="w-3.5 h-3.5" />
                 {t.title.split(" ")[0]}
               </Link>
             ))}

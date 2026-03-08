@@ -1,3 +1,5 @@
+import { UtensilsCrossed, GraduationCap, ShoppingBag, Stethoscope } from 'lucide-react';
+
 export type DialogueLine = {
   speaker: string;
   role: string;
@@ -880,29 +882,29 @@ export const conversations: Conversation[] = [
 
 export const situationMeta: Record<
   ConversationSituation,
-  { label: string; emoji: string; color: string; description: string }
+  { label: string; icon: React.ElementType; color: string; description: string }
 > = {
   restaurant: {
     label: "Restaurant & Cafe",
-    emoji: "🍽️",
+    icon: UtensilsCrossed,
     color: "bg-orange-500",
     description: "Order makanan, bayar tagihan, komplain",
   },
   school: {
     label: "School & Campus",
-    emoji: "🏫",
+    icon: GraduationCap,
     color: "bg-blue-500",
     description: "Izin ke guru, diskusi tugas, tanya dosen",
   },
   shopping: {
     label: "Shopping & Store",
-    emoji: "🛍️",
+    icon: ShoppingBag,
     color: "bg-pink-500",
     description: "Tanya harga, coba baju, retur barang",
   },
   hospital: {
     label: "Doctor & Hospital",
-    emoji: "🏥",
+    icon: Stethoscope,
     color: "bg-green-500",
     description: "Daftar, cerita gejala, ambil obat",
   },

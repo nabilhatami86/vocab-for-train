@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { ArrowLeft, ChevronDown, ChevronUp, MessageCircle, BookOpen } from "lucide-react";
+import { ArrowLeft, ChevronDown, ChevronUp, MessageCircle, BookOpen, UtensilsCrossed, GraduationCap, ShoppingBag, Stethoscope } from "lucide-react";
 import { cn } from "@/lib/utils";
 import {
   conversations,
@@ -12,12 +12,12 @@ import {
 
 type Filter = "all" | ConversationSituation;
 
-const filters: { value: Filter; label: string; emoji: string }[] = [
-  { value: "all", label: "Semua", emoji: "💬" },
-  { value: "restaurant", label: "Restaurant", emoji: "🍽️" },
-  { value: "school", label: "School", emoji: "🏫" },
-  { value: "shopping", label: "Shopping", emoji: "🛍️" },
-  { value: "hospital", label: "Hospital", emoji: "🏥" },
+const filters: { value: Filter; label: string; icon: React.ElementType }[] = [
+  { value: "all", label: "Semua", icon: MessageCircle },
+  { value: "restaurant", label: "Restaurant", icon: UtensilsCrossed },
+  { value: "school", label: "School", icon: GraduationCap },
+  { value: "shopping", label: "Shopping", icon: ShoppingBag },
+  { value: "hospital", label: "Hospital", icon: Stethoscope },
 ];
 
 const difficultyLabel: Record<string, string> = {
@@ -87,7 +87,7 @@ export default function ConversationsPage() {
               key={key}
               className="flex items-center gap-2 bg-(--bg-card) border border-(--border) rounded-lg px-3 py-2 text-sm"
             >
-              <span>{meta.emoji}</span>
+              <meta.icon className="w-4 h-4 text-(--text-secondary)" />
               <span className="text-(--text-secondary)">{meta.label}</span>
               <span className="font-semibold text-(--text)">{count} dialog</span>
             </div>
@@ -108,7 +108,7 @@ export default function ConversationsPage() {
                 : "bg-(--bg-card) text-(--text-secondary) border-(--border) hover:border-primary/40 hover:text-(--text)"
             )}
           >
-            <span>{f.emoji}</span>
+            <f.icon className="w-4 h-4" />
             {f.label}
           </button>
         ))}
@@ -132,14 +132,14 @@ export default function ConversationsPage() {
                 onClick={() => toggleExpand(conv.id)}
               >
                 <div className="flex items-start gap-4 min-w-0">
-                  {/* Situation emoji badge */}
+                  {/* Situation icon badge */}
                   <div
                     className={cn(
-                      "w-11 h-11 rounded-xl flex items-center justify-center text-xl shrink-0",
+                      "w-11 h-11 rounded-xl flex items-center justify-center shrink-0",
                       meta.color.replace("bg-", "bg-") + "/15"
                     )}
                   >
-                    {meta.emoji}
+                    <meta.icon className="w-5 h-5 text-(--text-secondary)" />
                   </div>
                   <div className="min-w-0">
                     <div className="flex items-center gap-2 flex-wrap">

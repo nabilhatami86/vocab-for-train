@@ -20,9 +20,11 @@ export interface CommonMistake {
   tip: string;
 }
 
+import { Type, VolumeX, Volume2 as Vol2, Mic, Music, Gauge, BookOpen } from 'lucide-react';
+
 export interface PronunciationTopic {
   id: string;
-  emoji: string;
+  icon: React.ElementType;
   title: string;
   subtitle: string;
   shortDescription: string;
@@ -35,7 +37,7 @@ export interface PronunciationTopic {
 export const pronunciationTopics: PronunciationTopic[] = [
   {
     id: "ed-endings",
-    emoji: "🔤",
+    icon: Type,
     title: "-ED Endings",
     subtitle: "Cara membaca akhiran -ED",
     shortDescription:
@@ -131,7 +133,7 @@ export const pronunciationTopics: PronunciationTopic[] = [
 
   {
     id: "silent-letters",
-    emoji: "🤫",
+    icon: VolumeX,
     title: "Silent Letters",
     subtitle: "Huruf yang tidak dibaca",
     shortDescription:
@@ -299,7 +301,7 @@ export const pronunciationTopics: PronunciationTopic[] = [
 
   {
     id: "s-es-endings",
-    emoji: "🔊",
+    icon: Vol2,
     title: "-S / -ES Endings",
     subtitle: "Cara membaca akhiran -S dan -ES",
     shortDescription:
@@ -377,7 +379,7 @@ export const pronunciationTopics: PronunciationTopic[] = [
 
   {
     id: "th-sounds",
-    emoji: "👅",
+    icon: Mic,
     title: "TH Sounds",
     subtitle: "Dua bunyi TH yang berbeda",
     shortDescription:
@@ -447,7 +449,7 @@ export const pronunciationTopics: PronunciationTopic[] = [
 
   {
     id: "vowel-sounds",
-    emoji: "🎵",
+    icon: Music,
     title: "Vowel Sounds",
     subtitle: "Bunyi vokal dan kombinasinya",
     shortDescription:
@@ -530,7 +532,7 @@ export const pronunciationTopics: PronunciationTopic[] = [
 
   {
     id: "word-stress",
-    emoji: "🎯",
+    icon: Gauge,
     title: "Word Stress",
     subtitle: "Penekanan suku kata",
     shortDescription:
@@ -595,7 +597,7 @@ export const pronunciationTopics: PronunciationTopic[] = [
 
   {
     id: "c-and-g-rules",
-    emoji: "📖",
+    icon: BookOpen,
     title: "C dan G Rules",
     subtitle: "Kapan C dan G berbunyi keras atau lunak",
     shortDescription:
