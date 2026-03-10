@@ -1,55 +1,90 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { ArrowLeft, CheckCircle, XCircle, Lightbulb } from 'lucide-react';
-import { tensesTopics } from '@/data/tnIntermediateGrammar';
+import { ArrowLeft, CheckCircle, XCircle, Lightbulb, Table2 } from 'lucide-react';
+import { allGrammarTopics, type TenseTopic, type GrammarTopic, type WrongRight } from '@/data/tnIntermediateGrammar';
+import ExerciseSection from '@/components/grammar/ExerciseSection';
 
 type Props = { params: Promise<{ topic: string }> };
 
 export async function generateStaticParams() {
-  return tensesTopics.map((t) => ({ topic: t.id }));
+  return allGrammarTopics.map((t) => ({ topic: t.id }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { topic } = await params;
-  const tense = tensesTopics.find((t) => t.id === topic);
-  if (!tense) return { title: 'Not Found' };
-  return {
-    title: `${tense.title} — TN Intermediate`,
-    description: tense.shortDefinition,
-  };
+  const t = allGrammarTopics.find((x) => x.id === topic);
+  if (!t) return { title: 'Not Found' };
+  return { title: `${t.title} — TN Intermediate`, description: t.shortDefinition };
 }
 
-export default async function TenseDetailPage({ params }: Props) {
-  const { topic } = await params;
-  const tense = tensesTopics.find((t) => t.id === topic);
-  if (!tense) notFound();
+// ─── Shared sub-components ───────────────────────────────────────────────────
 
-  const currentIndex = tensesTopics.findIndex((t) => t.id === topic);
-  const prev = tensesTopics[currentIndex - 1] ?? null;
-  const next = tensesTopics[currentIndex + 1] ?? null;
-
+function WrongRightList({ items }: { items: WrongRight[] }) {
   return (
-    <div className="p-4 lg:p-6 space-y-6 animate-fade-in max-w-3xl mx-auto">
-      {/* Back */}
-      <Link
-        href="/tn-intermediate"
-        className="inline-flex items-center gap-1.5 text-sm text-(--text-secondary) hover:text-primary transition-colors"
-      >
-        <ArrowLeft className="w-4 h-4" /> Semua Tenses
-      </Link>
-
-      {/* Title */}
-      <div className="flex items-start gap-3">
-        <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
-          <tense.icon className="w-6 h-6 text-primary" />
+    <div className="space-y-3">
+      {items.map((wr, i) => (
+        <div key={i} className="bg-(--bg-card) border border-(--border) rounded-xl p-4 space-y-2">
+          <div className="flex items-start gap-2">
+            <XCircle className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
+            <div>
+              <p className="text-xs text-red-500 font-semibold uppercase mb-0.5">Salah</p>
+              <p className="text-sm font-mono text-(--text) line-through decoration-red-400">{wr.wrong}</p>
+            </div>
+          </div>
+          <div className="flex items-start gap-2">
+            <CheckCircle className="w-4 h-4 text-green-500 shrink-0 mt-0.5" />
+            <div>
+              <p className="text-xs text-green-600 font-semibold uppercase mb-0.5">Benar</p>
+              <p className="text-sm font-mono text-(--text)">{wr.right}</p>
+            </div>
+          </div>
+          <p className="text-xs text-(--text-muted) pl-6">{wr.note}</p>
         </div>
-        <div>
-          <h1 className="text-2xl font-bold text-(--text)">{tense.title}</h1>
-          <p className="text-sm text-(--text-secondary) mt-1">{tense.shortDefinition}</p>
-        </div>
-      </div>
+      ))}
+    </div>
+  );
+}
 
+function DataTable({ headers, rows, caption }: { headers: string[]; rows: string[][]; caption?: string }) {
+  return (
+    <div className="overflow-x-auto rounded-xl border border-(--border)">
+      {caption && (
+        <p className="text-xs text-(--text-muted) px-4 pt-3 pb-1 font-semibold uppercase tracking-wider">
+          {caption}
+        </p>
+      )}
+      <table className="w-full text-sm border-collapse">
+        <thead>
+          <tr className="bg-(--bg-secondary)">
+            {headers.map((h) => (
+              <th key={h} className="text-left text-xs font-bold text-(--text-secondary) uppercase tracking-wide px-4 py-2.5 border-b border-(--border)">
+                {h}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((row, ri) => (
+            <tr key={ri} className="border-b border-(--border) last:border-0 hover:bg-(--hover) transition-colors">
+              {row.map((cell, ci) => (
+                <td key={ci} className={`px-4 py-2.5 text-(--text-secondary) leading-relaxed align-top ${ci === 0 ? 'font-semibold text-primary font-mono text-xs' : 'text-xs'}`}>
+                  {cell}
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+// ─── Tense Detail ─────────────────────────────────────────────────────────────
+
+function TenseDetail({ tense }: { tense: TenseTopic }) {
+  return (
+    <div className="space-y-6">
       {/* Formula */}
       <section className="bg-(--bg-card) border border-(--border) rounded-xl p-5 space-y-3">
         <h2 className="text-sm font-bold text-(--text) uppercase tracking-wider">Rumus</h2>
@@ -74,16 +109,14 @@ export default async function TenseDetailPage({ params }: Props) {
         <h2 className="text-sm font-bold text-(--text) uppercase tracking-wider flex items-center gap-2">
           <Lightbulb className="w-4 h-4 text-yellow-500" /> Kapan Dipakai?
         </h2>
-        <ul className="space-y-2">
+        <div className="space-y-2">
           {tense.usage.map((u, i) => (
-            <li key={i} className="flex items-start gap-2.5 text-sm text-(--text-secondary)">
-              <span className="w-5 h-5 rounded-full bg-primary/10 text-primary text-[10px] font-bold flex items-center justify-center shrink-0 mt-0.5">
-                {i + 1}
-              </span>
-              {u}
-            </li>
+            <div key={i} className="bg-(--bg-card) border border-(--border) rounded-xl px-4 py-3">
+              <p className="text-sm font-semibold text-(--text)">{u.title}</p>
+              <p className="text-xs text-primary font-mono mt-1">{u.example}</p>
+            </div>
           ))}
-        </ul>
+        </div>
       </section>
 
       {/* Signal Words */}
@@ -91,10 +124,7 @@ export default async function TenseDetailPage({ params }: Props) {
         <h2 className="text-sm font-bold text-(--text) uppercase tracking-wider">Kata Kunci (Signal Words)</h2>
         <div className="flex flex-wrap gap-2">
           {tense.signalWords.map((w) => (
-            <span
-              key={w}
-              className="text-xs font-mono px-2.5 py-1 rounded-lg bg-(--bg-secondary) border border-(--border) text-(--text-secondary)"
-            >
+            <span key={w} className="text-xs font-mono px-2.5 py-1 rounded-lg bg-(--bg-secondary) border border-(--border) text-(--text-secondary)">
               {w}
             </span>
           ))}
@@ -106,10 +136,7 @@ export default async function TenseDetailPage({ params }: Props) {
         <h2 className="text-sm font-bold text-(--text) uppercase tracking-wider">Contoh Kalimat</h2>
         <div className="space-y-3">
           {tense.examples.map((ex, i) => (
-            <div
-              key={i}
-              className="bg-(--bg-card) border border-(--border) rounded-xl px-4 py-3 space-y-1"
-            >
+            <div key={i} className="bg-(--bg-card) border border-(--border) rounded-xl px-4 py-3 space-y-1">
               <p className="text-base font-semibold text-(--text)">{ex.sentence}</p>
               <p className="text-sm text-(--text-secondary)">{ex.translation}</p>
               {ex.note && (
@@ -123,32 +150,179 @@ export default async function TenseDetailPage({ params }: Props) {
       </section>
 
       {/* Wrong vs Right */}
-      {tense.wrongRight && tense.wrongRight.length > 0 && (
+      {tense.wrongRight.length > 0 && (
         <section className="space-y-3">
           <h2 className="text-sm font-bold text-(--text) uppercase tracking-wider">Kesalahan Umum</h2>
-          <div className="space-y-3">
-            {tense.wrongRight.map((wr, i) => (
-              <div key={i} className="bg-(--bg-card) border border-(--border) rounded-xl p-4 space-y-2">
-                <div className="flex items-start gap-2">
-                  <XCircle className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
-                  <div>
-                    <p className="text-xs text-red-500 font-semibold uppercase mb-0.5">Salah</p>
-                    <p className="text-sm font-mono text-(--text) line-through decoration-red-400">{wr.wrong}</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-500 shrink-0 mt-0.5" />
-                  <div>
-                    <p className="text-xs text-green-600 font-semibold uppercase mb-0.5">Benar</p>
-                    <p className="text-sm font-mono text-(--text)">{wr.right}</p>
-                  </div>
-                </div>
-                <p className="text-xs text-(--text-muted) pl-6">{wr.note}</p>
-              </div>
-            ))}
-          </div>
+          <WrongRightList items={tense.wrongRight} />
         </section>
       )}
+    </div>
+  );
+}
+
+// ─── Grammar Detail (Adjective Clause / Gerund) ───────────────────────────────
+
+function GrammarDetail({ topic }: { topic: GrammarTopic }) {
+  return (
+    <div className="space-y-8">
+      {topic.sections.map((sec, si) => (
+        <section key={si} className="space-y-4">
+          <h2 className="text-base font-bold text-(--text) border-b border-(--border) pb-2">
+            {sec.title}
+          </h2>
+
+          {sec.explanation && (
+            <p className="text-sm text-(--text-secondary) leading-relaxed">{sec.explanation}</p>
+          )}
+
+          {sec.bullets && (
+            <ul className="space-y-1.5">
+              {sec.bullets.map((b, bi) => (
+                <li key={bi} className="flex items-start gap-2 text-sm text-(--text-secondary)">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
+                  {b}
+                </li>
+              ))}
+            </ul>
+          )}
+
+          {sec.table && (
+            <div className="flex items-start gap-2">
+              <Table2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+              <div className="flex-1 min-w-0">
+                <DataTable headers={sec.table.headers} rows={sec.table.rows} caption={sec.table.caption} />
+              </div>
+            </div>
+          )}
+
+          {sec.examples && sec.examples.length > 0 && (
+            <div className="space-y-2">
+              {sec.examples.map((ex, ei) => (
+                <div key={ei} className="bg-(--bg-card) border border-(--border) rounded-xl px-4 py-3 space-y-1">
+                  <p className="text-sm font-semibold text-(--text)">{ex.sentence}</p>
+                  <p className="text-xs text-(--text-secondary)">{ex.translation}</p>
+                  {ex.note && (
+                    <p className="text-xs text-primary/80 bg-primary/5 rounded-md px-2 py-1 mt-1 inline-block">
+                      💡 {ex.note}
+                    </p>
+                  )}
+                </div>
+              ))}
+            </div>
+          )}
+
+          {sec.tip && (
+            <div className="flex items-start gap-2.5 bg-yellow-50 dark:bg-yellow-950/20 border border-yellow-300/50 rounded-xl px-4 py-3">
+              <Lightbulb className="w-4 h-4 text-yellow-500 shrink-0 mt-0.5" />
+              <p className="text-xs text-yellow-800 dark:text-yellow-200 leading-relaxed">{sec.tip}</p>
+            </div>
+          )}
+
+          {sec.wrongRight && sec.wrongRight.length > 0 && (
+            <WrongRightList items={sec.wrongRight} />
+          )}
+
+          {/* Subsections */}
+          {sec.subsections && (
+            <div className="space-y-5 pl-0 sm:pl-2">
+              {sec.subsections.map((sub, subi) => (
+                <div key={subi} className="space-y-3">
+                  <h3 className="text-sm font-bold text-primary">{sub.subtitle}</h3>
+
+                  {sub.explanation && (
+                    <p className="text-sm text-(--text-secondary) leading-relaxed">{sub.explanation}</p>
+                  )}
+
+                  {sub.bullets && (
+                    <ul className="space-y-1.5">
+                      {sub.bullets.map((b, bi) => (
+                        <li key={bi} className="flex items-start gap-2 text-sm text-(--text-secondary)">
+                          <span className="w-1.5 h-1.5 rounded-full bg-primary/60 mt-2 shrink-0" />
+                          {b}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+
+                  {sub.table && (
+                    <DataTable headers={sub.table.headers} rows={sub.table.rows} caption={sub.table.caption} />
+                  )}
+
+                  {sub.examples && sub.examples.length > 0 && (
+                    <div className="space-y-2">
+                      {sub.examples.map((ex, ei) => (
+                        <div key={ei} className="bg-(--bg-card) border border-(--border) rounded-xl px-4 py-3 space-y-1">
+                          <p className="text-sm font-semibold text-(--text)">{ex.sentence}</p>
+                          <p className="text-xs text-(--text-secondary)">{ex.translation}</p>
+                          {ex.note && (
+                            <p className="text-xs text-primary/80 bg-primary/5 rounded-md px-2 py-1 mt-1 inline-block">
+                              💡 {ex.note}
+                            </p>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  {sub.tip && (
+                    <div className="flex items-start gap-2.5 bg-yellow-50 dark:bg-yellow-950/20 border border-yellow-300/50 rounded-xl px-4 py-3">
+                      <Lightbulb className="w-4 h-4 text-yellow-500 shrink-0 mt-0.5" />
+                      <p className="text-xs text-yellow-800 dark:text-yellow-200 leading-relaxed">{sub.tip}</p>
+                    </div>
+                  )}
+
+                  {sub.wrongRight && sub.wrongRight.length > 0 && (
+                    <WrongRightList items={sub.wrongRight} />
+                  )}
+                </div>
+              ))}
+            </div>
+          )}
+        </section>
+      ))}
+    </div>
+  );
+}
+
+// ─── Page ─────────────────────────────────────────────────────────────────────
+
+export default async function TopicDetailPage({ params }: Props) {
+  const { topic } = await params;
+  const t = allGrammarTopics.find((x) => x.id === topic);
+  if (!t) notFound();
+
+  const currentIndex = allGrammarTopics.findIndex((x) => x.id === topic);
+  const prev = allGrammarTopics[currentIndex - 1] ?? null;
+  const next = allGrammarTopics[currentIndex + 1] ?? null;
+
+  return (
+    <div className="p-4 lg:p-6 space-y-6 animate-fade-in max-w-3xl mx-auto">
+      {/* Back */}
+      <Link
+        href="/tn-intermediate"
+        className="inline-flex items-center gap-1.5 text-sm text-(--text-secondary) hover:text-primary transition-colors"
+      >
+        <ArrowLeft className="w-4 h-4" /> Semua Materi
+      </Link>
+
+      {/* Title */}
+      <div className="flex items-start gap-3">
+        <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+          <t.icon className="w-6 h-6 text-primary" />
+        </div>
+        <div>
+          <h1 className="text-2xl font-bold text-(--text)">{t.title}</h1>
+          <p className="text-sm text-(--text-secondary) mt-1">{t.shortDefinition}</p>
+        </div>
+      </div>
+
+      {/* Content */}
+      {t.kind === 'tense' ? <TenseDetail tense={t} /> : <GrammarDetail topic={t} />}
+
+      {/* Exercises */}
+      <div className="border-t border-(--border) pt-6">
+        <ExerciseSection exercises={t.exercises} />
+      </div>
 
       {/* Prev / Next Navigation */}
       <div className="flex gap-3 pt-2">

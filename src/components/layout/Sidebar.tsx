@@ -21,6 +21,7 @@ import {
   ScrollText,
   Languages,
   Volume2,
+  Mic,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useVocabStore } from "@/store/useVocabStore";
@@ -61,6 +62,7 @@ const navSections: { title: string; items: NavItem[] }[] = [
     items: [
       { href: "/practice", label: "Practice", icon: GraduationCap },
       { href: "/practice/conversations", label: "Daily Conversations", icon: MessageCircle },
+      { href: "/practice/speaking", label: "Speaking Test", icon: Mic },
       { href: "/tn-basic-cource", label: "TN Basic Course", icon: BookText },
       { href: "/tn-intermediate", label: "TN Intermediate", icon: GraduationCap },
     ],
