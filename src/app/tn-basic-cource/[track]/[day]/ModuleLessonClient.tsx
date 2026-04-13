@@ -19,9 +19,11 @@ interface TranslationResult {
 
 interface Props {
   lesson: ModuleLesson;
+  backHref?: string;
+  backLabel?: string;
 }
 
-export default function ModuleLessonClient({ lesson }: Props) {
+export default function ModuleLessonClient({ lesson, backHref = '/tn-basic-cource', backLabel = 'Back to TN Basic Cource' }: Props) {
   const [selectedOptions, setSelectedOptions] = useState<Record<string, string>>({});
   const [notes, setNotes] = useState<Record<string, string>>({});
   const [revealedAnswers, setRevealedAnswers] = useState<Set<string>>(new Set());
@@ -242,8 +244,8 @@ export default function ModuleLessonClient({ lesson }: Props) {
   return (
     <div className="p-4 lg:p-6 max-w-4xl mx-auto space-y-6 animate-fade-in" onMouseUp={handlePassageMouseUp} onTouchEnd={handlePassageMouseUp}>
       <div className="flex items-center justify-between">
-        <Link href="/tn-basic-cource" className="inline-flex items-center gap-1 text-sm text-primary hover:underline">
-          <ArrowLeft className="w-4 h-4" /> Back to TN Basic Cource
+        <Link href={backHref} className="inline-flex items-center gap-1 text-sm text-primary hover:underline">
+          <ArrowLeft className="w-4 h-4" /> {backLabel}
         </Link>
         <p className="text-sm text-(--text-secondary)">
           Progress: <span className="font-semibold text-(--text)">{completedCount}/{lesson.exercises.length}</span>
