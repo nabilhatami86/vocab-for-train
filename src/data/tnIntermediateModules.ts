@@ -198,280 +198,74 @@ const readingLessons: ModuleLesson[] = [
       },
     ],
   },
-  {
-    id: 'int-reading-3',
-    track: 'reading',
-    day: 3,
-    tutor: 'Ms. Lidya',
-    title: 'Climate Change and Our Future',
-    subtitle: 'Understanding the causes and consequences of global warming',
-    overview:
-      'Materi reading tentang perubahan iklim: penyebab, dampak global, dan langkah yang bisa diambil.',
-    passage: [
-      'Climate change refers to long-term shifts in temperatures and weather patterns on Earth. While some of these changes occur naturally, the overwhelming scientific consensus is that human activity has been the dominant driver of climate change since the mid-20th century. The burning of fossil fuels such as coal, oil, and natural gas releases large amounts of carbon dioxide and other greenhouse gases into the atmosphere, trapping heat and causing global temperatures to rise.',
-      'The consequences of climate change are already being felt around the world. Glaciers and ice sheets are melting at an unprecedented rate, causing sea levels to rise and threatening low-lying coastal communities. Extreme weather events — including more intense hurricanes, prolonged droughts, and devastating floods — have become more frequent and severe. In many parts of the world, these events are displacing communities, destroying livelihoods, and straining emergency response systems.',
-      'Biodiversity is another area of grave concern. As temperatures rise and habitats change rapidly, many plant and animal species are struggling to adapt. Scientists estimate that the current rate of extinction is between 100 and 1,000 times higher than natural background rates — a situation sometimes called the "sixth mass extinction." The loss of biodiversity not only threatens ecosystems but also jeopardizes the services that healthy ecosystems provide to humans, such as clean water, pollination, and natural pest control.',
-      'Agriculture and food security are also at risk. Changing rainfall patterns, more frequent droughts, and rising temperatures are making it increasingly difficult to grow crops in regions that have historically been fertile. This threatens the food supply for billions of people, particularly in developing nations that are least equipped to adapt to these changes. Paradoxically, the countries that contribute the least to greenhouse gas emissions are often the ones most severely affected by climate change.',
-      'Despite the challenges, there is reason for cautious optimism. Renewable energy technologies such as solar and wind power have advanced dramatically and are now often cheaper than fossil fuels. Many countries are setting ambitious targets to reduce their carbon emissions and transition to cleaner energy sources. International agreements such as the Paris Agreement have established frameworks for global cooperation. Individual actions — from reducing meat consumption to choosing sustainable transport — also contribute to the overall effort.',
-      'Addressing climate change requires systemic change at every level of society: individual, corporate, and governmental. The decisions made in the coming decade will determine the severity of climate impacts for generations to come. As one leading climate scientist put it: "We have the tools to solve this problem. What we need now is the political will and social commitment to use them."',
-    ],
-    materialSections: [
-      {
-        title: 'Main Passage Focus',
-        points: [
-          'Climate change is driven mainly by human fossil fuel use since the mid-20th century.',
-          'Effects: melting glaciers, rising seas, extreme weather displacing communities.',
-          'Biodiversity crisis: extinction rates 100–1,000× higher than natural rates.',
-          'Food security threatened, especially in developing countries that contribute least to emissions.',
-          'Renewable energy is advancing and becoming cheaper; international agreements exist.',
-          'Systemic change at all levels is needed; next decade is critical.',
-        ],
-      },
-      {
-        title: 'Key Vocabulary Themes',
-        points: [
-          'fossil fuels, greenhouse gases, carbon dioxide, atmosphere, global warming',
-          'glacier, sea level, drought, biodiversity, extinction, habitat',
-          'pollination, livelihoods, unprecedented, displacing',
-          'renewable energy, solar, wind power, carbon emissions, Paris Agreement',
-          'systemic, paradoxically, optimism, livelihoods, jeopardizes',
-        ],
-      },
-    ],
-    exercises: [
-      {
-        id: 'int-r3-q1',
-        type: 'multiple-choice',
-        question: 'What does the author say is the main cause of climate change?',
-        options: [
-          'Natural volcanic activity',
-          'Changes in the Earth\'s orbit',
-          'Human burning of fossil fuels',
-          'Deforestation alone',
-          'Changes in ocean currents',
-        ],
-        correctAnswer: 'Human burning of fossil fuels',
-        reason:
-          'Paragraf 1 menyatakan bahwa aktivitas manusia, khususnya pembakaran bahan bakar fosil, adalah penyebab utama perubahan iklim.',
-      },
-      {
-        id: 'int-r3-q2',
-        type: 'multiple-choice',
-        question: 'In paragraph 3, "jeopardizes" most nearly means...',
-        options: ['strengthens', 'protects', 'endangers', 'improves', 'supports'],
-        correctAnswer: 'endangers',
-        reason: '"Jeopardizes" berarti membahayakan atau mengancam. "Endangers" adalah kata yang paling tepat.',
-      },
-      {
-        id: 'int-r3-q3',
-        type: 'multiple-choice',
-        question: 'Which of the following best describes the "paradox" mentioned in paragraph 4?',
-        options: [
-          'Developing countries produce the most emissions but are the least affected.',
-          'Rich countries suffer more from climate change than poor ones.',
-          'Countries that contribute least to emissions often suffer most from its effects.',
-          'Renewable energy is more expensive than fossil fuels.',
-          'Agriculture is improving despite climate change.',
-        ],
-        correctAnswer:
-          'Countries that contribute least to emissions often suffer most from its effects.',
-        reason:
-          'Paradoks yang disebutkan adalah bahwa negara-negara yang paling sedikit berkontribusi pada emisi sering paling parah terdampak.',
-      },
-      {
-        id: 'int-r3-q4',
-        type: 'multiple-choice',
-        question: 'What is the main idea of paragraph 5?',
-        options: [
-          'Climate change cannot be stopped anymore.',
-          'Renewable energy is still very expensive.',
-          'There are positive developments and reasons for hope in addressing climate change.',
-          'Only governments can solve climate change.',
-          'The Paris Agreement has already solved the problem.',
-        ],
-        correctAnswer: 'There are positive developments and reasons for hope in addressing climate change.',
-        reason:
-          'Paragraf 5 membahas perkembangan positif: energi terbarukan lebih murah, target emisi ambisius, dan perjanjian internasional.',
-      },
-      {
-        id: 'int-r3-q5',
-        type: 'short-answer',
-        question: 'What does the scientist quoted at the end suggest is needed to solve climate change?',
-      },
-      {
-        id: 'int-r3-q6',
-        type: 'task',
-        question:
-          'Write a short paragraph about one thing you personally could do to help reduce your carbon footprint.',
-      },
-      {
-        id: 'int-r3-q7',
-        type: 'task',
-        question:
-          'Find 20 or more vocabulary words from this passage that you do not know and write their meanings.',
-      },
-      {
-        id: 'int-r3-q8',
-        type: 'task',
-        question: 'Summarize this passage using a mind map!',
-      },
-    ],
-  },
-  {
-    id: 'int-reading-4',
-    track: 'reading',
-    day: 4,
-    tutor: 'Ms. Lidya',
-    title: 'The Gig Economy',
-    subtitle: 'Opportunities and challenges of modern freelance work',
-    overview:
-      'Materi reading tentang gig economy: peluang, tantangan, dan dampaknya bagi pekerja modern.',
-    passage: [
-      'The gig economy refers to a labour market characterised by short-term contracts or freelance work as opposed to permanent jobs. Enabled by digital technology and platforms such as Uber, Airbnb, Fiverr, and Upwork, the gig economy has grown significantly over the past decade and is now a major feature of economic life in many countries.',
-      'For many workers, the appeal of gig work lies in its flexibility. Unlike traditional nine-to-five employment, gig workers can often choose when, where, and how much they work. This autonomy is particularly attractive to parents who need to balance childcare responsibilities, students who work between classes, or individuals who wish to pursue multiple income streams simultaneously. In some countries, as many as one in three workers participates in some form of freelance or gig work.',
-      'However, this flexibility often comes at a significant cost. Gig workers typically lack the employment protections enjoyed by traditional employees, such as paid sick leave, health insurance, retirement benefits, and job security. Because they are classified as independent contractors rather than employees, they are also responsible for paying their own taxes, which can be complex and costly. For many workers, particularly those in lower-income brackets, the unpredictability of gig income can lead to financial instability.',
-      'The platforms themselves have also attracted scrutiny. Critics argue that companies such as Uber and Deliveroo profit enormously from the labour of gig workers while avoiding the responsibilities of traditional employers. Legal battles have been fought in courts across Europe, Australia, and the United States over whether gig workers should be reclassified as employees with full rights. In some jurisdictions, notably the United Kingdom, courts have ruled in favour of drivers, granting them minimum wage guarantees and holiday pay.',
-      'Proponents of the gig economy counter that it democratises access to work by lowering barriers to entry. A graphic designer in a developing country can now find clients anywhere in the world through platforms like Fiverr or Freelancer. This global connectivity has enabled many skilled workers in lower-income countries to earn far more than they could in their local job markets. From this perspective, the gig economy can be a powerful tool for economic inclusion.',
-      'The future of gig work will likely depend on how governments, platforms, and workers negotiate the balance between flexibility and security. Some countries are experimenting with new legal frameworks — such as a "worker" category between employee and independent contractor — that aim to provide gig workers with certain protections without eliminating the flexibility that makes gig work appealing. The challenge for societies is to adapt their labour laws to a world where the nature of work itself is rapidly changing.',
-    ],
-    materialSections: [
-      {
-        title: 'Main Passage Focus',
-        points: [
-          'Gig economy = short-term/freelance work enabled by digital platforms.',
-          'Appeal: flexibility, autonomy — attractive to parents, students, multi-income workers.',
-          'Challenges: no sick leave, health insurance, retirement; tax responsibility; financial instability.',
-          'Platform scrutiny: companies profit but avoid employer responsibilities; court battles ongoing.',
-          'Positive side: democratises work, enables workers in developing countries to find global clients.',
-          'Future depends on negotiating flexibility vs. security through new legal frameworks.',
-        ],
-      },
-      {
-        title: 'Key Vocabulary Themes',
-        points: [
-          'gig economy, freelance, contractor, autonomy, income streams',
-          'employment protections, sick leave, retirement benefits, financial instability',
-          'scrutiny, reclassified, jurisdictions, minimum wage, holiday pay',
-          'proponents, democratises, barriers to entry, economic inclusion',
-          'legal frameworks, labour laws, negotiate, rapidly changing',
-        ],
-      },
-    ],
-    exercises: [
-      {
-        id: 'int-r4-q1',
-        type: 'multiple-choice',
-        question: 'What is the main appeal of gig work mentioned in paragraph 2?',
-        options: [
-          'Higher salaries than traditional jobs',
-          'Job security and retirement benefits',
-          'Flexibility to choose when and how much to work',
-          'Access to health insurance',
-          'Guaranteed minimum wage',
-        ],
-        correctAnswer: 'Flexibility to choose when and how much to work',
-        reason:
-          'Paragraf 2 menyebutkan fleksibilitas sebagai daya tarik utama gig work — bisa memilih kapan, di mana, dan berapa banyak bekerja.',
-      },
-      {
-        id: 'int-r4-q2',
-        type: 'multiple-choice',
-        question: 'In paragraph 4, "scrutiny" most nearly means...',
-        options: ['support', 'close examination', 'praise', 'funding', 'protection'],
-        correctAnswer: 'close examination',
-        reason: '"Scrutiny" berarti pemeriksaan atau pengawasan yang ketat. "Close examination" adalah arti yang paling tepat.',
-      },
-      {
-        id: 'int-r4-q3',
-        type: 'multiple-choice',
-        question: 'Which country is mentioned as having courts rule in favour of gig workers?',
-        options: ['United States', 'Australia', 'United Kingdom', 'Germany', 'France'],
-        correctAnswer: 'United Kingdom',
-        reason:
-          'Paragraf 4 menyebutkan bahwa pengadilan di Inggris (United Kingdom) telah memutuskan mendukung pengemudi, memberikan upah minimum dan tunjangan liburan.',
-      },
-      {
-        id: 'int-r4-q4',
-        type: 'multiple-choice',
-        question: 'What is the main idea of paragraph 5?',
-        options: [
-          'Gig economy only benefits wealthy workers.',
-          'Fiverr and Freelancer are the best platforms for designers.',
-          'The gig economy can provide economic opportunities for workers in developing countries.',
-          'Graphic designers earn less through gig platforms.',
-          'Developing countries oppose the gig economy.',
-        ],
-        correctAnswer:
-          'The gig economy can provide economic opportunities for workers in developing countries.',
-        reason:
-          'Paragraf 5 membahas sisi positif gig economy — memungkinkan pekerja di negara berkembang mengakses klien global dan mendapatkan penghasilan lebih baik.',
-      },
-      {
-        id: 'int-r4-q5',
-        type: 'short-answer',
-        question: 'What solution does the author suggest for balancing flexibility and security in gig work?',
-      },
-      {
-        id: 'int-r4-q6',
-        type: 'task',
-        question:
-          'Have you ever done any kind of gig or freelance work (e.g. selling things online, tutoring, etc.)? Write 5–7 sentences about your experience or opinion on gig work.',
-      },
-      {
-        id: 'int-r4-q7',
-        type: 'task',
-        question: 'Find 20 or more vocabulary words from this passage that you do not know and write their meanings.',
-      },
-      {
-        id: 'int-r4-q8',
-        type: 'task',
-        question: 'Summarize this passage using a mind map!',
-      },
-    ],
-  },
 ];
 
 // ── Speaking Lessons ──────────────────────────────────────────────────────────
 
 const speakingLessons: ModuleLesson[] = [
+  // ── Day 2: Pronunciation ─────────────────────────────────────────────────────
   {
     id: 'int-speaking-2',
     track: 'speaking',
     day: 2,
-    tutor: 'Ms. Lidya',
-    title: 'Expressing Opinions',
-    subtitle: 'How to agree, disagree, and give your point of view',
+    tutor: 'Ms. Aul',
+    title: 'Pronunciation',
+    subtitle: 'Silent Letters, Syllables, Stress & the Schwa Sound',
     overview:
-      'Materi speaking tentang cara mengungkapkan pendapat, setuju, dan tidak setuju dalam percakapan sehari-hari.',
+      'Materi pronunciation: mengenal silent letters dalam bahasa Inggris, latihan membaca "A Plastic Ocean", pengenalan suku kata (syllable), pola tekanan kata (stress), dan bunyi schwa.',
     materialSections: [
       {
-        title: 'Key Expressions',
+        title: 'Silent Letters',
         points: [
-          'In my opinion, … / I think … / I believe …',
-          'From my point of view, …',
-          'I agree with you because …',
-          'I disagree because …',
-          'That\'s a good point, however …',
-          'I see what you mean, but …',
-          'I\'m not sure I agree. My view is that …',
+          'B — silent setelah "m": lamb, bomb, thumb, climb, comb, debt, subtle',
+          'C — silent sebelum "k": knock, knife, know, kneel, knight',
+          'G — silent sebelum "n": gnome, gnat, gnaw, sign, foreign',
+          'H — silent di awal kata: hour, honest, heir, honor, vehicle',
+          'K — silent sebelum "n": knee, knit, knock, know, knife',
+          'L — silent: calm, palm, walk, talk, half, could, would, should, folk',
+          'P — silent di awal kata: pneumonia, psychology, pterodactyl',
+          'T — silent: listen, castle, fasten, whistle, often, mortgage',
+          'W — silent sebelum "r": write, wrong, wrap, wrist, wrestle',
         ],
       },
       {
-        title: 'Useful Connectors',
+        title: 'Reading Practice — "A Plastic Ocean"',
         points: [
-          'Furthermore / Moreover / In addition — menambahkan informasi',
-          'However / Nevertheless / On the other hand — kontras/pertentangan',
-          'Therefore / As a result / Consequently — menyatakan akibat',
-          'For example / For instance / Such as — memberikan contoh',
+          'Bacaan bertema lingkungan tentang polusi plastik di lautan.',
+          'Fokus: membaca keras dengan pelafalan yang benar, perhatikan silent letters.',
+          'Latihan: baca per paragraf, tutor koreksi pelafalan kata-kata kunci.',
+          'Kata-kata perhatian: pollution, ocean, microplastics, environment, creatures.',
         ],
       },
       {
-        title: 'Speaking Tips',
+        title: 'Syllables (Suku Kata)',
         points: [
-          'Pause briefly before giving your opinion — it shows you are thinking, not rushing.',
-          'Use hedging language: "I think", "It seems to me", "Perhaps" — sounds more natural.',
-          'Ask for the other person\'s opinion: "What do you think?" / "Do you agree?"',
-          'Use real examples from your life to support your point.',
+          'Syllable = unit bunyi yang mengandung satu vokal/bunyi vokal.',
+          '1 syllable: cat, dog, school, speak',
+          '2 syllables: stu-dent, teach-er, com-plex, sim-ple',
+          '3 syllables: com-pu-ter, un-der-stand, re-mem-ber',
+          '4 syllables: com-mu-ni-cate, un-be-liev-able',
+          'Cara menghitung: tempelkan tangan di dagu — tiap vokal yang terasa = 1 syllable.',
+        ],
+      },
+      {
+        title: 'Word Stress & Sentence Stress',
+        points: [
+          'Word stress: setiap kata >1 syllable punya satu suku kata yang ditekan lebih keras.',
+          "pho-TO-graph (noun) vs. pho-to-GRAPH-ic (adjective)",
+          'RE-cord (noun) vs. re-CORD (verb)',
+          'Sentence stress: kata konten (nouns, verbs, adjectives, adverbs) biasanya ditekan; kata fungsi (the, a, is, at) biasanya lemah.',
+          "Contoh: \"She's GOING to the STORE to BUY some MILK.\"",
+        ],
+      },
+      {
+        title: 'The Schwa Sound /ə/',
+        points: [
+          "Schwa = bunyi vokal paling umum dalam bahasa Inggris — berbunyi seperti \"uh\" yang singkat dan lemah.",
+          'Terjadi pada suku kata yang tidak ditekan.',
+          "about /ə-BOUT/, today /tə-DAY/, banana /bə-NA-nə/",
+          "teacher /TEE-chər/, problem /PROB-ləm/, family /FAM-ə-lee/",
+          'Latihan: ucapkan kata-kata di atas dan rasakan di mana bunyi schwa muncul.',
         ],
       },
     ],
@@ -480,19 +274,603 @@ const speakingLessons: ModuleLesson[] = [
         id: 'int-sp2-q1',
         type: 'task',
         question:
-          'Practice expressing your opinion: "Do you think social media has more benefits or drawbacks?" Speak for at least 1 minute.',
+          'Baca daftar silent letter words berikut keras-keras dan tandai huruf yang diam: lamb, knock, gnome, honest, calm, listen, write, psychology. Lalu tulis 2 kata baru dengan silent letter masing-masing.',
       },
       {
         id: 'int-sp2-q2',
         type: 'task',
         question:
-          'Role-play with a partner: one person argues FOR homework, the other argues AGAINST. Use the expressions from this lesson.',
+          'Hitung jumlah syllable kata-kata berikut dan tandai suku kata yang ditekan: photograph, comfortable, university, international, pronunciation, communication.',
       },
       {
         id: 'int-sp2-q3',
         type: 'task',
         question:
-          'Record yourself giving your opinion on: "Should students be allowed to use their phones in class?" Use at least 3 expressions from the Key Expressions list.',
+          "Ucapkan kalimat berikut dan identifikasi kata mana yang mengandung schwa sound /ə/: \"The teacher asked the student to open the textbook to chapter seven.\"",
+      },
+    ],
+  },
+
+  // ── Day 3: Describe Past Event ───────────────────────────────────────────────
+  {
+    id: 'int-speaking-3',
+    track: 'speaking',
+    day: 3,
+    tutor: 'Ms. Aul',
+    title: 'Describe Past Event',
+    subtitle: 'Using prepositions of time & place to talk about events',
+    overview:
+      'Materi speaking tentang cara mendeskripsikan kejadian di masa lalu: preposisi waktu & tempat, kosakata untuk event, hubungan/profesi, dan adjektiva untuk menggambarkan suasana acara.',
+    materialSections: [
+      {
+        title: 'Prepositions of Time',
+        points: [
+          'AT — waktu spesifik: at 7 o\'clock, at noon, at midnight, at the weekend',
+          'ON — hari & tanggal: on Monday, on 15 March, on my birthday, on New Year\'s Day',
+          'IN — periode: in the morning, in 2023, in January, in the 20th century',
+          'FOR — durasi: for two hours, for a week, for a long time',
+          'DURING — dalam rentang: during the concert, during the holiday',
+          'AGO — waktu lalu: three days ago, a year ago, long ago',
+          'BEFORE / AFTER — urutan: before dinner, after the show',
+        ],
+      },
+      {
+        title: 'Prepositions of Location',
+        points: [
+          'AT — lokasi spesifik: at school, at home, at the airport, at the corner',
+          'IN — dalam suatu ruang/area: in the classroom, in Jakarta, in the box',
+          'ON — permukaan: on the table, on the street, on the wall',
+          'NEXT TO / BESIDE — di samping: next to the door',
+          'IN FRONT OF / BEHIND — di depan/belakang',
+          'BETWEEN — di antara: between the library and the cafeteria',
+          'NEAR — dekat: near the park',
+        ],
+      },
+      {
+        title: 'Words & Phrases for Describing Events',
+        points: [
+          'Organized / held — "The event was organized by the school committee."',
+          'Took place / was held at — "It took place at the sports hall."',
+          'Attended by — "It was attended by over 200 students."',
+          'Opened / started — "The ceremony opened with a speech."',
+          'Ended / concluded — "The event concluded with a group photo."',
+          'Memorable / unforgettable / special — kata sifat untuk suasana',
+          'Crowded / lively / cheerful / solemn — menggambarkan suasana acara',
+        ],
+      },
+      {
+        title: 'Relationship & Occupation Words',
+        points: [
+          'Relatives: grandmother, grandfather, aunt, uncle, cousin, nephew, niece',
+          'Occupations: teacher, principal, committee member, volunteer, organizer',
+          'Group words: audience, participants, guests, performers, attendees',
+        ],
+      },
+      {
+        title: 'Adjectives for Events',
+        points: [
+          'Exciting / thrilling / entertaining — menyenangkan/mengasyikkan',
+          'Boring / dull / monotonous — membosankan',
+          'Inspiring / motivating — menginspirasi',
+          'Touching / emotional / moving — mengharukan',
+          'Crowded / packed — penuh sesak',
+          'Well-organized / chaotic — terorganisir/kacau',
+        ],
+      },
+    ],
+    exercises: [
+      {
+        id: 'int-sp3-q1',
+        type: 'task',
+        question:
+          'Ceritakan satu event yang pernah kamu hadiri (ulang tahun, pernikahan, pertandingan, konser, dll). Gunakan minimal 5 preposisi waktu dan 3 preposisi lokasi dalam ceritamu.',
+      },
+      {
+        id: 'int-sp3-q2',
+        type: 'task',
+        question:
+          'Lengkapi kalimat: "Last _____, I attended a _____ at _____. It was organized by _____. The event took place _____ and was attended by _____. The atmosphere was _____ because _____."',
+      },
+      {
+        id: 'int-sp3-q3',
+        type: 'task',
+        question:
+          'Dengan pasangan: satu orang cerita tentang past event, yang lain bertanya minimal 3 pertanyaan (When? Where? Who was there? What happened? How was it?) lalu bergantian.',
+      },
+    ],
+  },
+
+  // ── Day 4: Describe Past Events — Unusual Experience ─────────────────────────
+  {
+    id: 'int-speaking-4',
+    track: 'speaking',
+    day: 4,
+    tutor: 'Ms. Aul',
+    title: 'Describe Past Events — Unusual Experience',
+    subtitle: 'Talking about bizarre, quirky, or unexpected experiences',
+    overview:
+      'Materi speaking tentang cara mendeskripsikan pengalaman unik atau tidak biasa di masa lalu menggunakan kosakata khusus dan ekspresi naratif.',
+    materialSections: [
+      {
+        title: 'Vocabulary — Unusual / Strange',
+        points: [
+          'Peculiar — aneh/tidak biasa (milder): "It was a peculiar experience."',
+          'Quirky — unik/eksentrik: "She has a quirky sense of humor."',
+          'Bizarre — sangat aneh/ganjil: "The whole situation was bizarre."',
+          'Odd — agak aneh: "That\'s an odd thing to say."',
+          'Weird — aneh (informal): "It was a really weird day."',
+          'Unexpected — tidak terduga: "The result was completely unexpected."',
+          'Coincidence — kebetulan: "What a strange coincidence!"',
+          'Unbelievable / Incredible — tidak terpercaya/luar biasa',
+        ],
+      },
+      {
+        title: 'Example Story — "A Bad Shopping Experience"',
+        points: [
+          '"Last Saturday, I went to the supermarket to buy some groceries."',
+          '"It was a peculiar experience from the start — the power went out just as I entered."',
+          '"I wandered around in the dark, which was quite bizarre."',
+          '"Then, unexpectedly, I bumped into my old teacher from primary school."',
+          '"What a coincidence! We hadn\'t seen each other for over ten years."',
+          '"By the time the lights came back on, I had forgotten everything I needed to buy."',
+          '"It was weird, funny, and unforgettable all at once!"',
+        ],
+      },
+      {
+        title: 'Useful Narrative Phrases',
+        points: [
+          'It all started when … — cerita dimulai ketika…',
+          'All of a sudden / Suddenly — tiba-tiba',
+          'Out of nowhere — muncul tiba-tiba',
+          'Before I knew it — sebelum aku sadar',
+          'To make matters worse — memperparah situasi',
+          'Fortunately / Luckily — untungnya',
+          'In the end / Eventually — pada akhirnya',
+          'Looking back, … — melihat ke belakang…',
+        ],
+      },
+      {
+        title: 'Grammar Reminder — Simple Past',
+        points: [
+          'Regular: walk → walked, talk → talked, decide → decided',
+          'Irregular: go → went, buy → bought, see → saw, meet → met, forget → forgot',
+          'Negative: did not (didn\'t) + V1: "I didn\'t see him."',
+          'Question: Did + S + V1? "Did you enjoy it?"',
+        ],
+      },
+    ],
+    exercises: [
+      {
+        id: 'int-sp4-q1',
+        type: 'task',
+        question:
+          'Ceritakan satu pengalaman tidak biasa/unik yang pernah kamu alami. Gunakan minimal 4 vocabulary dari daftar (peculiar, quirky, bizarre, dll) dan 3 narrative phrases (suddenly, out of nowhere, dll). Bicara minimal 1,5 menit.',
+      },
+      {
+        id: 'int-sp4-q2',
+        type: 'task',
+        question:
+          'Tulis kemudian ceritakan "A Bad _____ Experience" (ganti dengan topik pilihanmu: trip, cooking, exam, date, etc.) menggunakan pola dari contoh cerita "Bad Shopping Experience".',
+      },
+      {
+        id: 'int-sp4-q3',
+        type: 'task',
+        question:
+          'Two truths and a lie: ceritakan 3 pengalaman unik (2 nyata, 1 rekayasa). Teman menebak mana yang bohong. Gunakan past tense dan kosakata unusual experience.',
+      },
+    ],
+  },
+
+  // ── Day 5: Describe Future Plans ─────────────────────────────────────────────
+  {
+    id: 'int-speaking-5',
+    track: 'speaking',
+    day: 5,
+    tutor: 'Ms. Aul',
+    title: 'Describe Future Plans',
+    subtitle: 'Using will, be going to, and simple present to talk about the future',
+    overview:
+      'Materi speaking tentang cara menyatakan rencana, tujuan, dan ambisi masa depan menggunakan berbagai ekspresi future tense.',
+    materialSections: [
+      {
+        title: 'Future Tense Forms',
+        points: [
+          'WILL — spontaneous decision, prediction, offer/promise:',
+          '  "I think it will rain tomorrow."',
+          '  "I\'ll help you with that."',
+          'BE GOING TO — planned intention, evidence-based prediction:',
+          '  "I\'m going to study abroad next year."',
+          '  "Look at those clouds — it\'s going to rain."',
+          'SIMPLE PRESENT — scheduled/timetabled events:',
+          '  "The flight leaves at 8 a.m."',
+          '  "The semester starts in September."',
+          'PRESENT CONTINUOUS — arranged personal plans:',
+          '  "I\'m meeting my advisor tomorrow."',
+          '  "We\'re visiting my grandparents this weekend."',
+        ],
+      },
+      {
+        title: 'Vocabulary — Goals & Ambitions',
+        points: [
+          'Goal — tujuan yang ingin dicapai: "My goal is to graduate with honors."',
+          'Ambition — ambisi/cita-cita: "My ambition is to become a doctor."',
+          'Dream — impian: "I have a dream of traveling to Europe."',
+          'Plan — rencana konkret: "My plan is to save money every month."',
+          'Aim — sasaran: "I aim to improve my English to C1 level."',
+          'Aspire — bercita-cita: "I aspire to be a successful entrepreneur."',
+          'Intend — bermaksud: "I intend to apply for a scholarship."',
+          'Hope — berharap: "I hope to get a promotion this year."',
+        ],
+      },
+      {
+        title: 'Short-term vs. Long-term Goals',
+        points: [
+          'Short-term (within 1 year): finish this course, get a new job, save IDR 10 million',
+          'Long-term (more than 1 year): buy a house, start a business, move abroad, get a masters degree',
+          'Template short-term: "In the next ___ months, I plan to ___."',
+          'Template long-term: "In the next ___ years, I hope to ___."',
+          'Linking goals: "First I will ___, then I\'m going to ___, and eventually I hope to ___."',
+        ],
+      },
+      {
+        title: 'Useful Expressions for Future Plans',
+        points: [
+          'I\'m planning to … / I plan to …',
+          'I\'m thinking about …-ing',
+          'I\'m looking forward to …-ing',
+          'I\'ve decided to …',
+          'If everything goes well, I will …',
+          'My ultimate goal is to …',
+          'I really want to … someday',
+          'Eventually, I hope to …',
+        ],
+      },
+    ],
+    exercises: [
+      {
+        id: 'int-sp5-q1',
+        type: 'task',
+        question:
+          'Ceritakan rencana masa depanmu dalam 2 menit: satu short-term goal (dalam 6–12 bulan) dan satu long-term goal (5 tahun ke depan). Gunakan minimal 3 future forms berbeda (will, be going to, present continuous/simple).',
+      },
+      {
+        id: 'int-sp5-q2',
+        type: 'task',
+        question:
+          'Partner activity: interview temanmu tentang rencana mereka dengan pertanyaan: "What are you planning to do after this course?" / "Where do you see yourself in 5 years?" / "What is your biggest ambition?" Lalu laporkan ke kelas.',
+      },
+      {
+        id: 'int-sp5-q3',
+        type: 'task',
+        question:
+          'Buat "Dream Board" lisan: sebutkan 5 impian/tujuanmu (karier, keluarga, pendidikan, kesehatan, travel) dan jelaskan mengapa itu penting bagimu. Gunakan kosakata goal, ambition, dream, aim, aspire.',
+      },
+    ],
+  },
+
+  // ── Day 6: Describing Future Events — Technology ─────────────────────────────
+  {
+    id: 'int-speaking-6',
+    track: 'speaking',
+    day: 6,
+    tutor: 'Ms. Aul',
+    title: 'Describing Future Events — Technology',
+    subtitle: 'Talking about AI, future tech trends, and related phrasal verbs',
+    overview:
+      'Materi speaking tentang teknologi masa depan: AI, Biotechnology, Quantum Computing, IoT, 5G, Robotics — plus phrasal verbs penting di bidang teknologi.',
+    materialSections: [
+      {
+        title: 'Future Technology Themes',
+        points: [
+          'Artificial Intelligence (AI) — machine learning, chatbots, autonomous systems',
+          'Biotechnology — gene editing (CRISPR), personalized medicine, lab-grown food',
+          'Quantum Computing — faster computation, cryptography, drug discovery',
+          'Internet of Things (IoT) — smart homes, wearables, connected devices',
+          '5G & Connectivity — ultra-fast internet, autonomous vehicles, remote surgery',
+          'Robotics — industrial robots, delivery drones, humanoid assistants',
+        ],
+      },
+      {
+        title: 'Example — AI in the Future',
+        points: [
+          '"In the near future, AI will transform the way we work and live."',
+          '"AI-powered tools are going to replace repetitive tasks in many industries."',
+          '"Self-driving cars will soon be a common sight on our roads."',
+          '"AI is expected to revolutionize healthcare by detecting diseases early."',
+          '"However, many experts worry that AI could lead to widespread job losses."',
+          '"It is crucial that governments set up regulations to ensure AI is used ethically."',
+        ],
+      },
+      {
+        title: 'Phrasal Verbs for Technology',
+        points: [
+          'Set up — to establish or install: "We set up a new server."',
+          'Log in / Log out — access/leave a system: "Log in with your username."',
+          'Back up — save a copy: "Always back up your files."',
+          'Shut down / Power up — turn off/on: "Shut down the computer before leaving."',
+          'Roll out — release gradually: "The company will roll out the new app next month."',
+          'Phase out — discontinue gradually: "CDs are being phased out by streaming."',
+          'Keep up with — stay current: "It\'s hard to keep up with technology."',
+          'Come up with — invent/devise: "Engineers came up with a new solution."',
+          'Break down — stop functioning: "The system broke down during the demo."',
+          'Catch up — reach the same level: "Developing countries are catching up in tech."',
+        ],
+      },
+      {
+        title: 'Useful Language for Discussing Future Tech',
+        points: [
+          'It is predicted that … / Experts predict that …',
+          '… is expected to … / … is likely to …',
+          'In the near/distant future, …',
+          'By 2030 / By the end of this decade, …',
+          'This will lead to … / This could result in …',
+          'On the one hand, … On the other hand, …',
+          'The main advantage is … / The main concern is …',
+        ],
+      },
+    ],
+    exercises: [
+      {
+        id: 'int-sp6-q1',
+        type: 'task',
+        question:
+          'Pilih SATU teknologi masa depan (AI, Biotech, Quantum Computing, IoT, 5G, atau Robotics) dan presentasikan dalam 2 menit: apa itu, bagaimana cara kerjanya, manfaatnya, dan potensi risikonya. Gunakan minimal 3 phrasal verbs dari daftar.',
+      },
+      {
+        id: 'int-sp6-q2',
+        type: 'task',
+        question:
+          'Debat mini: "Will AI be more beneficial or more harmful to society?" Satu tim pro, satu tim kontra. Gunakan ekspresi: "It is predicted that…", "On the one hand…", "The main concern is…"',
+      },
+      {
+        id: 'int-sp6-q3',
+        type: 'task',
+        question:
+          'Gambarkan hidupmu pada tahun 2040: bagaimana teknologi mengubah rumah, pekerjaan, transportasi, dan kesehatan kamu? Bicara 1,5–2 menit menggunakan future tenses dan phrasal verbs teknologi.',
+      },
+    ],
+  },
+
+  // ── Day 7: Describe Place ─────────────────────────────────────────────────────
+  {
+    id: 'int-speaking-7',
+    track: 'speaking',
+    day: 7,
+    tutor: 'Ms. Aul',
+    title: 'Describe Place',
+    subtitle: 'Vocabulary, prepositions of location, and expressing feelings about places',
+    overview:
+      'Materi speaking tentang cara mendeskripsikan suatu tempat: kosakata lokasi, preposisi, adjektiva penampilan dan kualitas, serta ekspresi perasaan.',
+    materialSections: [
+      {
+        title: 'Place Vocabulary',
+        points: [
+          'Natural: mountain, valley, river, waterfall, forest, jungle, beach, cliff, plain, volcano',
+          'Urban: skyscraper, alley, intersection, boulevard, square, district, suburb, outskirts',
+          'Buildings: cathedral, temple, mosque, museum, gallery, stadium, fortress, monument',
+          'Features: fountain, bridge, pathway, courtyard, terrace, rooftop, balcony, harbor',
+        ],
+      },
+      {
+        title: 'Prepositions of Location',
+        points: [
+          'IN — enclosed/large areas: in the valley, in the city center, in the forest',
+          'ON — surfaces/edges: on the hill, on the coast, on the riverbank',
+          'AT — specific point: at the top, at the entrance, at the crossroads',
+          'BETWEEN — in the middle of two: between the mountains',
+          'SURROUNDED BY — dikelilingi: "The village is surrounded by rice fields."',
+          'OVERLOOKING — menghadap/melihat ke: "The hotel overlooks the bay."',
+          'NESTLED IN — terletak di: "The town is nestled in a quiet valley."',
+          'STRETCHING FROM … TO … — membentang dari: "The beach stretches from north to south."',
+        ],
+      },
+      {
+        title: 'Adjectives of Appearance',
+        points: [
+          'Vast / Enormous / Sprawling — sangat luas',
+          'Tiny / Compact / Cozy — kecil/nyaman',
+          'Vibrant / Bustling / Lively — ramai/hidup',
+          'Peaceful / Serene / Tranquil — tenang/damai',
+          'Ancient / Historic / Well-preserved — kuno/bersejarah/terawat',
+          'Modern / Contemporary / Sleek — modern/elegan',
+          'Picturesque / Scenic / Breathtaking — indah/memukau',
+          'Deserted / Abandoned / Remote — sepi/terpencil',
+        ],
+      },
+      {
+        title: 'Expressing Feelings About Places',
+        points: [
+          'The place made me feel … (calm / excited / nostalgic / overwhelmed)',
+          'I was struck by … / I was amazed by … / I was moved by …',
+          'There was something magical about …',
+          'I couldn\'t help but feel … when I saw …',
+          'It took my breath away.',
+          'I\'ve never seen anything like it.',
+          'It felt like stepping into another world.',
+          'The atmosphere was electric / soothing / mysterious.',
+        ],
+      },
+    ],
+    exercises: [
+      {
+        id: 'int-sp7-q1',
+        type: 'task',
+        question:
+          'Deskripsikan tempat favoritmu (kota, pantai, pegunungan, rumah nenek, dll) selama 2 menit. Gunakan: minimal 5 place vocabulary, 4 preposisi lokasi, dan 3 ekspresi perasaan.',
+      },
+      {
+        id: 'int-sp7-q2',
+        type: 'task',
+        question:
+          'Tanpa menyebut nama tempatnya, deskripsikan suatu tempat menggunakan clues (penampilan, lokasi, suasana). Teman menebak tempat apa yang kamu maksud.',
+      },
+      {
+        id: 'int-sp7-q3',
+        type: 'task',
+        question:
+          'Bayangkan kamu adalah tour guide. Deskripsikan Indonesia (atau kota asalmu) kepada turis asing. Jelaskan lokasinya, penampilan, hal-hal menarik, dan suasananya. Bicara 2 menit.',
+      },
+    ],
+  },
+
+  // ── Day 8: Describe Object ────────────────────────────────────────────────────
+  {
+    id: 'int-speaking-8',
+    track: 'speaking',
+    day: 8,
+    tutor: 'Ms. Aul',
+    title: 'Describe Object',
+    subtitle: 'What it is, what it is used for, what it is made of, and what it looks like',
+    overview:
+      'Materi speaking tentang cara mendeskripsikan benda: fungsi, bahan, penampilan, menggunakan passive voice dan adjektiva evaluatif.',
+    materialSections: [
+      {
+        title: 'Framework for Describing an Object',
+        points: [
+          '1. WHAT IT IS — "It is a ___. / This is a kind of ___."',
+          '2. WHAT IT IS USED FOR — "It is used for …-ing / It is used to + V1."',
+          '3. WHAT IT IS MADE OF — "It is made of ___ (material)."',
+          '4. WHAT IT LOOKS LIKE — shape, size, color, texture, features',
+          '5. EVALUATION — "I think it is … because …"',
+        ],
+      },
+      {
+        title: 'Passive Voice for Description',
+        points: [
+          'Structure: is/are + past participle',
+          '"It is made of stainless steel."',
+          '"It is used to measure temperature."',
+          '"It is found in most kitchens."',
+          '"It is known as one of the most useful tools."',
+          '"It is designed to be lightweight and portable."',
+          '"It was invented in the early 19th century."',
+        ],
+      },
+      {
+        title: 'Shape, Size & Texture Vocabulary',
+        points: [
+          'Shape: rectangular, circular, oval, triangular, cylindrical, flat, curved, pointed',
+          'Size: tiny, small, medium-sized, large, enormous, compact, slim, thick',
+          'Texture: smooth, rough, soft, hard, flexible, rigid, bumpy, glossy, matte',
+          'Color: transparent, opaque, shiny, dull, multicolored, solid',
+          'Weight: lightweight, heavy, sturdy, fragile, durable',
+        ],
+      },
+      {
+        title: 'Adjectives for Evaluation',
+        points: [
+          'Useful / Practical / Handy — berguna/praktis',
+          'Innovative / Revolutionary / Cutting-edge — inovatif/mutakhir',
+          'Efficient / Effective / Reliable — efisien/andal',
+          'Outdated / Obsolete / Old-fashioned — ketinggalan zaman',
+          'Affordable / Cost-effective / Overpriced — terjangkau/mahal',
+          'Eco-friendly / Sustainable — ramah lingkungan',
+          'Fragile / Durable / Long-lasting — rapuh/tahan lama',
+        ],
+      },
+    ],
+    exercises: [
+      {
+        id: 'int-sp8-q1',
+        type: 'task',
+        question:
+          'Pilih satu benda yang ada di sekitarmu sekarang dan deskripsikan selama 1,5 menit menggunakan framework 5 poin (what it is, used for, made of, looks like, evaluation). Jangan sebutkan namanya dulu — biarkan teman menebak!',
+      },
+      {
+        id: 'int-sp8-q2',
+        type: 'task',
+        question:
+          'Deskripsikan sebuah alat/gadget teknologi (smartphone, laptop, smartwatch, dll) menggunakan passive voice minimal 5 kali. Contoh: "It is made of aluminum. It is used to…"',
+      },
+      {
+        id: 'int-sp8-q3',
+        type: 'task',
+        question:
+          'Kamu adalah seorang penjual. Promosikan satu produk kepada "pelanggan" (teman sekelas) dengan mendeskripsikannya secara lengkap dan meyakinkan. Gunakan adjektiva evaluatif (useful, innovative, durable, dll).',
+      },
+    ],
+  },
+
+  // ── Day 9: Describe Person ────────────────────────────────────────────────────
+  {
+    id: 'int-speaking-9',
+    track: 'speaking',
+    day: 9,
+    tutor: 'Ms. Aul',
+    title: 'Describe Person',
+    subtitle: 'Relatives, occupations, personality adjectives, and expressions of admiration',
+    overview:
+      'Materi speaking tentang cara mendeskripsikan seseorang: hubungan keluarga, pekerjaan, adjektiva kepribadian, dan ekspresi kekaguman.',
+    materialSections: [
+      {
+        title: 'Relatives & Relationships',
+        points: [
+          'Nuclear family: parents, mother/mom, father/dad, siblings, brother, sister',
+          'Extended family: grandparents, grandmother/grandma, grandfather/grandpa',
+          'Aunt, uncle, cousin, nephew (keponakan laki), niece (keponakan perempuan)',
+          'In-laws: mother-in-law, father-in-law, brother-in-law, sister-in-law',
+          'Other: best friend, mentor, colleague, neighbor, classmate',
+        ],
+      },
+      {
+        title: 'Occupations & Roles',
+        points: [
+          'Professional: doctor, lawyer, engineer, architect, accountant, entrepreneur',
+          'Education: teacher, lecturer, professor, tutor, researcher',
+          'Creative: artist, designer, writer, musician, photographer',
+          'Public service: police officer, firefighter, nurse, soldier, civil servant',
+          'Phrases: "She works as a ___." / "He is employed by ___." / "She runs her own business."',
+        ],
+      },
+      {
+        title: 'Personality Adjectives',
+        points: [
+          'Positive: kind, generous, patient, hardworking, dedicated, reliable, humble, cheerful',
+          'Negative: stubborn, arrogant, impatient, careless, dishonest, selfish',
+          'Balanced: reserved, independent, perfectionist, ambitious, straightforward',
+          'Tip: use examples — "She is very patient. For instance, she always waits for me even when I\'m late."',
+        ],
+      },
+      {
+        title: 'Physical Appearance',
+        points: [
+          'Build: slim, athletic, medium build, stocky, tall, short',
+          'Hair: straight, curly, wavy; short, long, medium-length; blonde, brunette, dark',
+          'Face: round, oval, square-shaped; freckles, dimples, beard, glasses',
+          'Style: casual, formal, stylish, simple, elegant',
+        ],
+      },
+      {
+        title: 'Expressions of Admiration & Imitation',
+        points: [
+          'I really look up to … because …',
+          'I admire … for their ability to …',
+          'What I find inspiring about … is that …',
+          'They have taught me that …',
+          'I hope to be like them someday.',
+          'They are the kind of person who …',
+          'If I could be like anyone, it would be …',
+        ],
+      },
+    ],
+    exercises: [
+      {
+        id: 'int-sp9-q1',
+        type: 'task',
+        question:
+          'Deskripsikan seseorang yang paling berpengaruh dalam hidupmu (orang tua, guru, tokoh publik, teman). Ceritakan: hubungan kalian, pekerjaannya, penampilan fisiknya, kepribadiannya, dan mengapa kamu mengaguminya. Bicara 2 menit.',
+      },
+      {
+        id: 'int-sp9-q2',
+        type: 'task',
+        question:
+          'Tanpa menyebut nama, deskripsikan seseorang yang dikenal bersama (teman sekelas, artis terkenal, tokoh sejarah). Gunakan personality adjectives dan physical appearance. Teman menebak siapa orangnya.',
+      },
+      {
+        id: 'int-sp9-q3',
+        type: 'task',
+        question:
+          'Pilih satu tokoh inspiratif (lokal atau internasional) dan berikan speech singkat 2 menit tentang mengapa mereka menginspirasimu. Gunakan minimal 4 expressions of admiration dari daftar.',
       },
     ],
   },
