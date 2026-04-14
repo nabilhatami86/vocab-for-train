@@ -1096,16 +1096,37 @@ export default function ModuleLessonClient({ lesson, backHref = '/tn-basic-courc
           <div className="space-y-4">
             {exercises.map((exercise, index) => {
               const isDone =
-                exercise.type === 'multiple-choice'
+                exercise.type === 'multiple-choice' || exercise.type === 'fill-the-gap' || exercise.type === 'true-false-not-given'
                   ? Boolean(selectedOptions[exercise.id])
                   : Boolean(notes[exercise.id]?.trim());
 
               return (
-                <div key={exercise.id} className="bg-(--bg-card) border border-(--border) rounded-xl p-5 space-y-3">
+                <div key={exercise.id} className={cn(
+                  'border rounded-xl p-5 space-y-3',
+                  exercise.type === 'fill-the-gap'
+                    ? 'bg-violet-500/5 border-violet-500/20'
+                    : exercise.type === 'true-false-not-given'
+                      ? 'bg-amber-500/5 border-amber-500/20'
+                      : 'bg-(--bg-card) border-(--border)'
+                )}>
                   <div className="flex items-start justify-between gap-3">
                     <p className="text-sm text-(--text) font-medium">
                       {startNum + index}.{' '}
-                      {exercise.question.startsWith('Terjemahkan: ') ? (
+                      {exercise.type === 'fill-the-gap' ? (
+                        <>
+                          <span className="inline-flex items-center px-1.5 py-0.5 rounded text-xs font-semibold bg-violet-500/15 text-violet-600 dark:text-violet-400 border border-violet-500/20 mr-1.5 align-middle">
+                            Fill the Gap
+                          </span>
+                          {renderClickableText(exercise.question.replace('Fill the gap — ', ''))}
+                        </>
+                      ) : exercise.type === 'true-false-not-given' ? (
+                        <>
+                          <span className="inline-flex items-center px-1.5 py-0.5 rounded text-xs font-semibold bg-amber-500/15 text-amber-600 dark:text-amber-400 border border-amber-500/20 mr-1.5 align-middle">
+                            T / F / NG
+                          </span>
+                          {renderClickableText(exercise.question)}
+                        </>
+                      ) : exercise.question.startsWith('Terjemahkan: ') ? (
                         <>
                           <span className="inline-flex items-center px-1.5 py-0.5 rounded text-xs font-semibold bg-blue-500/15 text-blue-600 dark:text-blue-400 border border-blue-500/20 mr-1.5 align-middle">
                             Terjemahkan
@@ -1191,7 +1212,190 @@ export default function ModuleLessonClient({ lesson, backHref = '/tn-basic-courc
                     );
                   })()}
 
-                  {exercise.type !== 'multiple-choice' && (() => {
+                  {exercise.type === 'fill-the-gap' && exercise.options && (() => {
+                    // ── Shared word bank: union of ALL fill-the-gap options in this list ──
+                    const ftgAll = exercises.filter(e => e.type === 'fill-the-gap');
+                    const allWords = [...new Set(ftgAll.flatMap(e => e.options ?? []))].sort();
+                    // Words locked by OTHER blanks
+                    const usedElsewhere = new Set(
+                      ftgAll
+                        .filter(e => e.id !== exercise.id)
+                        .map(e => selectedOptions[e.id])
+                        .filter((w): w is string => Boolean(w))
+                    );
+
+                    const selected = selectedOptions[exercise.id];
+                    const hasAnswered = Boolean(selected);
+                    const isCorrect = hasAnswered && selected === exercise.correctAnswer;
+
+                    // Before answering: show shared pool minus words used by other blanks
+                    // After answering: show original options (to display correct/wrong clearly)
+                    const displayOptions = hasAnswered
+                      ? exercise.options
+                      : allWords.filter(w => !usedElsewhere.has(w));
+
+                    // Split question into parts around ______
+                    const parts = exercise.question.replace('Fill the gap — ', '').split('______');
+                    const before = parts[0] ?? '';
+                    const after = parts[1] ?? '';
+
+                    return (
+                      <div className="space-y-3">
+                        {/* Sentence with blank */}
+                        <div className="bg-(--bg) border border-(--border) rounded-lg px-4 py-3 text-sm text-(--text) leading-relaxed">
+                          <span>{before}</span>
+                          <span className={cn(
+                            'inline-block min-w-[80px] mx-1 px-2 py-0.5 rounded border-b-2 text-center font-semibold transition-colors',
+                            hasAnswered
+                              ? isCorrect
+                                ? 'border-green-500 text-green-700 dark:text-green-400 bg-green-500/10'
+                                : 'border-red-500 text-red-700 dark:text-red-400 bg-red-500/10'
+                              : selected
+                                ? 'border-primary text-primary bg-primary/10'
+                                : 'border-dashed border-(--text-muted) text-(--text-muted)'
+                          )}>
+                            {selected ?? '______'}
+                          </span>
+                          <span>{after}</span>
+                        </div>
+
+                        {/* Word bank chips — shared pool */}
+                        <div className="flex flex-wrap gap-2">
+                          {displayOptions.map((option) => {
+                            const isSelected = selected === option;
+                            const isAnswer = option === exercise.correctAnswer;
+                            const showResult = hasAnswered && exercise.correctAnswer;
+
+                            return (
+                              <button
+                                key={option}
+                                disabled={hasAnswered}
+                                onClick={() => { if (!hasAnswered) setSelectedOptions((prev) => ({ ...prev, [exercise.id]: option })); }}
+                                className={cn(
+                                  'px-3 py-1.5 rounded-full text-sm font-medium border transition-all',
+                                  showResult
+                                    ? isAnswer
+                                      ? 'border-green-500 bg-green-500/15 text-green-700 dark:text-green-400'
+                                      : isSelected
+                                        ? 'border-red-500 bg-red-500/15 text-red-700 dark:text-red-400 line-through opacity-70'
+                                        : 'border-(--border) text-(--text-muted) opacity-40'
+                                    : isSelected
+                                      ? 'border-primary bg-primary/15 text-primary scale-105'
+                                      : 'border-(--border) hover:border-primary/60 hover:bg-primary/5 text-(--text-secondary) cursor-pointer'
+                                )}
+                              >
+                                {showResult && isAnswer && <CheckCircle2 className="w-3.5 h-3.5 inline mr-1 text-green-500" />}
+                                {showResult && isSelected && !isAnswer && <XCircle className="w-3.5 h-3.5 inline mr-1 text-red-500" />}
+                                {option}
+                              </button>
+                            );
+                          })}
+                        </div>
+
+                        {hasAnswered && exercise.correctAnswer && (
+                          <div className={cn(
+                            'rounded-lg px-4 py-3 text-sm flex items-start gap-2',
+                            isCorrect
+                              ? 'bg-green-500/10 border border-green-500/30'
+                              : 'bg-red-500/10 border border-red-500/30'
+                          )}>
+                            {isCorrect ? (
+                              <CheckCircle2 className="w-4 h-4 mt-0.5 shrink-0 text-green-500" />
+                            ) : (
+                              <XCircle className="w-4 h-4 mt-0.5 shrink-0 text-red-500" />
+                            )}
+                            <div>
+                              <p className={cn('font-medium', isCorrect ? 'text-green-700 dark:text-green-400' : 'text-red-700 dark:text-red-400')}>
+                                {isCorrect ? 'Benar!' : 'Salah!'}
+                                {!isCorrect && <span className="font-normal text-(--text-secondary)"> Jawaban yang benar: <span className="font-semibold text-green-700 dark:text-green-400">{exercise.correctAnswer}</span></span>}
+                              </p>
+                              {exercise.reason && (
+                                <p className="mt-1 text-(--text-secondary) flex items-start gap-1.5">
+                                  <Lightbulb className="w-3.5 h-3.5 mt-0.5 shrink-0 text-amber-500" />
+                                  {exercise.reason}
+                                </p>
+                              )}
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })()}
+
+                  {exercise.type === 'true-false-not-given' && exercise.options && (() => {
+                    const selected = selectedOptions[exercise.id];
+                    const hasAnswered = Boolean(selected);
+                    const isCorrect = hasAnswered && selected === exercise.correctAnswer;
+
+                    const btnStyle = (option: string) => {
+                      const isSelected = selected === option;
+                      const isAnswer = option === exercise.correctAnswer;
+                      const showResult = hasAnswered && exercise.correctAnswer;
+                      if (showResult) {
+                        if (isAnswer) return 'border-2 font-semibold ' + (
+                          option === 'True' ? 'border-green-500 bg-green-500/15 text-green-700 dark:text-green-400' :
+                          option === 'False' ? 'border-red-500 bg-red-500/15 text-red-700 dark:text-red-400' :
+                          'border-amber-500 bg-amber-500/15 text-amber-700 dark:text-amber-400'
+                        );
+                        if (isSelected && !isAnswer) return 'border-2 border-red-400 bg-red-500/10 text-red-600 dark:text-red-400 line-through opacity-70';
+                        return 'border border-(--border) text-(--text-muted) opacity-40';
+                      }
+                      if (isSelected) return 'border-2 font-semibold ' + (
+                        option === 'True' ? 'border-green-400 bg-green-500/10 text-green-700 dark:text-green-400' :
+                        option === 'False' ? 'border-red-400 bg-red-500/10 text-red-700 dark:text-red-400' :
+                        'border-amber-400 bg-amber-500/10 text-amber-700 dark:text-amber-400'
+                      );
+                      return 'border border-(--border) hover:border-primary/50 text-(--text-secondary) cursor-pointer';
+                    };
+
+                    return (
+                      <div className="space-y-3">
+                        {/* TRUE / FALSE / NOT GIVEN buttons */}
+                        <div className="flex gap-2 flex-wrap">
+                          {exercise.options.map((option) => (
+                            <button
+                              key={option}
+                              disabled={hasAnswered}
+                              onClick={() => { if (!hasAnswered) setSelectedOptions((prev) => ({ ...prev, [exercise.id]: option })); }}
+                              className={cn('px-4 py-2 rounded-lg text-sm transition-all', btnStyle(option))}
+                            >
+                              {option === 'True' && <CheckCircle2 className="w-3.5 h-3.5 inline mr-1.5" />}
+                              {option === 'False' && <XCircle className="w-3.5 h-3.5 inline mr-1.5" />}
+                              {option === 'Not Given' && <span className="mr-1.5 font-bold">?</span>}
+                              {option}
+                            </button>
+                          ))}
+                        </div>
+
+                        {hasAnswered && exercise.correctAnswer && (
+                          <div className={cn(
+                            'rounded-lg px-4 py-3 text-sm flex items-start gap-2',
+                            isCorrect ? 'bg-green-500/10 border border-green-500/30' : 'bg-red-500/10 border border-red-500/30'
+                          )}>
+                            {isCorrect
+                              ? <CheckCircle2 className="w-4 h-4 mt-0.5 shrink-0 text-green-500" />
+                              : <XCircle className="w-4 h-4 mt-0.5 shrink-0 text-red-500" />}
+                            <div>
+                              <p className={cn('font-medium', isCorrect ? 'text-green-700 dark:text-green-400' : 'text-red-700 dark:text-red-400')}>
+                                {isCorrect ? 'Benar!' : 'Salah!'}
+                                {!isCorrect && (
+                                  <span className="font-normal text-(--text-secondary)"> Jawaban yang benar: <span className="font-semibold text-green-700 dark:text-green-400">{exercise.correctAnswer}</span></span>
+                                )}
+                              </p>
+                              {exercise.reason && (
+                                <p className="mt-1 text-(--text-secondary) flex items-start gap-1.5">
+                                  <Lightbulb className="w-3.5 h-3.5 mt-0.5 shrink-0 text-amber-500" />
+                                  {exercise.reason}
+                                </p>
+                              )}
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })()}
+
+                  {exercise.type !== 'multiple-choice' && exercise.type !== 'fill-the-gap' && exercise.type !== 'true-false-not-given' && (() => {
                     // Fill-in-the-blank / Translate: short-answer with correctAnswer
                     if (exercise.type === 'short-answer' && exercise.correctAnswer) {
                       const isTranslate = exercise.question.startsWith('Terjemahkan: ');

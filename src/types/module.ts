@@ -1,6 +1,6 @@
 export type ModuleTrack = 'reading' | 'speaking' | 'grammar' | 'listening';
 
-export type ModuleExerciseType = 'multiple-choice' | 'short-answer' | 'task';
+export type ModuleExerciseType = 'multiple-choice' | 'fill-the-gap' | 'true-false-not-given' | 'short-answer' | 'task';
 
 export interface ModuleExercise {
   id: string;
