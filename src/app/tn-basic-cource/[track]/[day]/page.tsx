@@ -39,5 +39,11 @@ export default async function ModuleLessonPage({ params }: PageProps) {
   const lesson = getLesson(track, Number(day));
   if (!lesson) notFound();
 
-  return <ModuleLessonClient lesson={lesson} />;
+  return (
+    <ModuleLessonClient
+      lesson={lesson}
+      backHref={`/tn-basic-cource/class/${track}`}
+      backLabel={`Back to ${track.charAt(0).toUpperCase() + track.slice(1)}`}
+    />
+  );
 }

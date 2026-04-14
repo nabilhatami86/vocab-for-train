@@ -42,8 +42,8 @@ export default async function TnIntermediateLessonPage({ params }: PageProps) {
   return (
     <ModuleLessonClient
       lesson={lesson}
-      backHref="/tn-intermediate"
-      backLabel="Back to TN Intermediate"
+      backHref={`/tn-intermediate/class/${track}`}
+      backLabel={`Back to ${track.charAt(0).toUpperCase() + track.slice(1)}`}
     />
   );
 }
