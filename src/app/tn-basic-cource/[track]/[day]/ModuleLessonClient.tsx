@@ -2,7 +2,7 @@
 
 import { useCallback, useMemo, useState } from 'react';
 import Link from 'next/link';
-import { ArrowLeft, CheckCircle2, Circle, BookText, Languages, X, XCircle, Lightbulb, Volume2, MessageCircle, Headphones, Eye, EyeOff } from 'lucide-react';
+import { ArrowLeft, CheckCircle2, Circle, BookText, Languages, X, XCircle, Lightbulb, Volume2, MessageCircle, Headphones, Eye, EyeOff, Braces } from 'lucide-react';
 import type { ModuleLesson } from '@/types/module';
 import { cn } from '@/lib/utils';
 import TTSPlayer from '@/components/tts/TTSPlayer';
@@ -37,6 +37,8 @@ export default function ModuleLessonClient({ lesson, backHref = '/tn-basic-courc
   const [blankChecked, setBlankChecked] = useState<Record<string, boolean>>({});
   const [showTranslation, setShowTranslation] = useState(false);
   const [submittedAnswers, setSubmittedAnswers] = useState<Record<string, boolean>>({});
+  const [showGrammarMode, setShowGrammarMode] = useState(false);
+  const [grammarPopup, setGrammarPopup] = useState<{ word: string; label: string; reason: string; color: string; bg: string } | null>(null);
 
   const completedCount = useMemo(
     () =>
@@ -240,6 +242,174 @@ export default function ModuleLessonClient({ lesson, backHref = '/tn-basic-courc
       );
     });
   }, [renderClickableText]);
+
+  // ── Grammar Mode: Part-of-Speech detection ────────────────────────────────────
+  type POSInfo = { label: string; reason: string; color: string; bg: string };
+
+  const analyzePOS = useCallback((word: string, prevWord: string, nextWord: string): POSInfo => {
+    const w = word.toLowerCase();
+    const prev = prevWord.toLowerCase();
+    const next = nextWord.toLowerCase();
+
+    const DETS = new Set(['the','a','an','this','that','these','those','my','your','his','her','its','our','their','some','any','each','every','no','both','all','many','much','few','little','several','another','other','what','which','whose']);
+    const PREPS = new Set(['in','on','at','by','for','with','about','of','from','into','through','during','before','after','above','below','between','among','without','within','under','over','against','along','around','behind','beside','beyond','despite','except','inside','near','off','outside','past','since','than','toward','towards','up','upon','via','throughout','including','following','across','regarding','unlike']);
+    const COORDS = new Set(['and','or','but','so','yet','nor']);
+    const SUBS = new Set(['although','because','since','while','when','if','though','unless','until','as','whereas','whether','wherever','whenever','once']);
+    const ADVCONJS = new Set(['however','therefore','furthermore','moreover','nevertheless','consequently','otherwise','meanwhile','instead','besides','thus','hence']);
+    const PRONOUNS = new Set(['i','me','we','us','you','he','him','she','her','they','them','it','who','whom','whose','which','what','myself','yourself','himself','herself','itself','ourselves','yourselves','themselves','one','someone','anyone','everyone','nobody','somebody','anybody','everybody','nothing','something','anything','everything']);
+    const BES = new Set(['is','am','are','was','were','be','been','being']);
+    const HAVES = new Set(['have','has','had']);
+    const MODALS = new Set(['will','would','can','could','shall','should','may','might','must']);
+    const DOAUX = new Set(['do','does','did']);
+    const ALLAUX = new Set([...BES,...HAVES,...MODALS,...DOAUX]);
+
+    // Warna kalem: 3 kelompok utama saja
+    // Verb (aksi)  → primary site
+    // Noun/Pronoun → slate netral
+    // Adj/Adv      → indigo muted
+    // Function words (Det/Prep/Conj/Aux) → gray sangat muted
+    const C = {
+      verb:  { text: 'text-primary',                                         badge: 'bg-primary/10 text-primary' },
+      noun:  { text: 'text-(--text-secondary)',                               badge: 'bg-slate-500/10 text-slate-500 dark:text-slate-400' },
+      mod:   { text: 'text-indigo-500 dark:text-indigo-400',                  badge: 'bg-indigo-500/10 text-indigo-500 dark:text-indigo-400' },
+      func:  { text: 'text-(--text-muted)',                                   badge: 'bg-(--bg-secondary) text-(--text-muted)' },
+      inf:   { text: 'text-primary/80',                                       badge: 'bg-primary/8 text-primary/80' },
+    };
+
+    const noun  = (reason: string): POSInfo => ({ label: 'Noun',    reason, color: C.noun.text,  bg: C.noun.badge  });
+    const vrb   = (label: string, reason: string): POSInfo => ({ label, reason, color: C.verb.text,  bg: C.verb.badge  });
+    const adj   = (reason: string): POSInfo => ({ label: 'Adj',     reason, color: C.mod.text,   bg: C.mod.badge   });
+    const adv   = (reason: string): POSInfo => ({ label: 'Adv',     reason, color: C.mod.text,   bg: C.mod.badge   });
+    const pron  = (label: string, reason: string): POSInfo => ({ label, reason, color: C.noun.text,  bg: C.noun.badge  });
+    const prep  = (reason: string): POSInfo => ({ label: 'Prep',    reason, color: C.func.text,  bg: C.func.badge  });
+    const det   = (reason: string): POSInfo => ({ label: 'Det',     reason, color: C.func.text,  bg: C.func.badge  });
+    const conj  = (label: string, reason: string): POSInfo => ({ label, reason, color: C.func.text,  bg: C.func.badge  });
+    const aux   = (label: string, reason: string): POSInfo => ({ label, reason, color: C.verb.text,  bg: C.verb.badge  });
+    const toinf = (reason: string): POSInfo => ({ label: 'to-inf',  reason, color: C.inf.text,   bg: C.inf.badge   });
+
+    // Determiners/Articles
+    if (DETS.has(w)) return det(
+      w === 'the' ? `"the" = definite article (kata sandang tertentu). Muncul sebelum noun yang sudah dikenal/spesifik. Contoh: "the brain" — otak yang sudah kita bicarakan.` :
+      w === 'a' || w === 'an' ? `"${word}" = indefinite article (kata sandang tak tentu). Digunakan untuk noun yang belum dikenal/pertama kali disebut. "a" → konsonan, "an" → vokal.` :
+      `"${word}" = determiner (penentu). Mendahului noun untuk menunjukkan kepemilikan (my/your/his/her/its/our/their), jumlah (some/any/many/few), atau referensi (this/that/these/those).`
+    );
+
+    // Modal auxiliaries
+    if (MODALS.has(w)) return aux('Modal', `"${word}" adalah modal auxiliary verb. Aturan penting: Modal SELALU diikuti bare infinitive (V1 tanpa -s/-ed). Menyatakan: kemungkinan (may/might), kemampuan (can/could), keharusan (must/should), kehendak (will/would).`);
+
+    // BE auxiliaries
+    if (BES.has(w)) return aux('BE', `"${word}" adalah BE verb. Fungsi: (1) Kalimat nominal/non-verbal: S + BE + adj/noun/adverb, (2) Passive voice: S + BE + V3, (3) Progressive: S + BE + V-ing. BE menyesuaikan subjek: am→I, is→he/she/it, are→we/you/they.`);
+
+    // HAVE auxiliaries
+    if (HAVES.has(w)) return aux('Have', `"${word}" = auxiliary untuk Perfect Tense (have/has/had + V3). Menyatakan aksi yang sudah selesai tapi masih relevan. Juga bisa main verb berarti "memiliki". Bedanya: "I have a car" (main verb) vs "I have eaten" (auxiliary).`);
+
+    // DO auxiliaries
+    if (DOAUX.has(w)) return aux('Do/Does/Did', `"${word}" = auxiliary do-support untuk: (1) Kalimat negatif: S + do/does + not + V1, (2) Kalimat tanya: Do/Does + S + V1? Tidak bermakna sendiri — hanya "membantu" verb utama. Did = bentuk past dari do/does.`);
+
+    // Pronouns
+    if (PRONOUNS.has(w)) {
+      if (['myself','yourself','himself','herself','itself','ourselves','yourselves','themselves'].includes(w))
+        return pron('Refl. Pron', `"${word}" = reflexive pronoun. Digunakan ketika subjek dan objek merujuk ke orang yang sama. Contoh: "He hurt himself." Juga untuk penekanan: "I did it myself."`);
+      if (['who','whom','which','what'].includes(w))
+        return pron('Rel. Pron', `"${word}" = relative pronoun yang memperkenalkan adjective clause. Adjective clause berfungsi menerangkan noun sebelumnya. Contoh: "the brain [that controls everything]" — "that" menghubungkan ke noun "brain".`);
+      if (['someone','anyone','everyone','nobody','somebody','anybody','everybody','nothing','something','anything','everything'].includes(w))
+        return pron('Indef. Pron', `"${word}" = indefinite pronoun — merujuk orang/benda yang tidak spesifik. Selalu dianggap singular → gunakan is/has, bukan are/have.`);
+      return pron('Pronoun', `"${word}" = pronoun (kata ganti) yang menggantikan noun agar tidak diulang. Perhatikan kasus: subject (I/he/she/they) vs object (me/him/her/them).`);
+    }
+
+    // "to" special case
+    if (w === 'to') {
+      const nextIsLikelyVerb = next && /^[a-z]/.test(next) && !DETS.has(next) && !PRONOUNS.has(next) && !PREPS.has(next) && !ALLAUX.has(next) && !COORDS.has(next);
+      if (nextIsLikelyVerb) return toinf(`"to" diikuti kata kerja dasar (V1) = To Infinitive marker. Jangan anggap ini preposition! To Infinitive berfungsi sebagai: (1) Noun/Objek: "I want to learn", (2) Adjective: "a book to read", (3) Adverb tujuan: "She studies to pass exams". Kata kerja setelah "to" TIDAK boleh -s/-ed/-ing.`);
+      return prep(`"to" sebagai preposition — menyatakan arah atau tujuan, diikuti noun phrase (bukan verb). Contoh: "She goes to school" (to + noun). Bedakan: "to + noun" = preposition, "to + verb" = to infinitive.`);
+    }
+
+    // Prepositions
+    if (PREPS.has(w)) return prep(`"${word}" = preposition (kata depan). PENTING: setelah preposition HARUS noun phrase (bukan verb tunggal, bukan adjective tanpa noun). Posisi ini disebut "object of preposition". Jika ada noun setelahnya, noun itu adalah objek preposisi. Contoh: "in the morning" → morning = objek dari "in".`);
+
+    // Conjunctions
+    if (COORDS.has(w)) return conj('Coord. Conj', `"${word}" = coordinating conjunction (FANBOYS: For, And, Nor, But, Or, Yet, So). Menghubungkan dua elemen SETARA: dua noun, dua verb, dua klausa, atau dua kalimat. Posisi selalu di TENGAH.`);
+    if (SUBS.has(w)) return conj('Sub. Conj', `"${word}" = subordinating conjunction. Memperkenalkan dependent clause (anak kalimat). Pola: [Sub.Conj + S + V], [Main S + V] atau [Main S + V] [Sub.Conj + S + V]. Dependent clause tidak bisa berdiri sendiri.`);
+    if (ADVCONJS.has(w)) return conj('Adv. Conj', `"${word}" = conjunctive adverb. Menghubungkan dua kalimat terpisah dengan nuansa: pertentangan (however), sebab-akibat (therefore/consequently), penambahan (furthermore/moreover). Biasanya diikuti koma.`);
+
+    // Position-based: after preposition → noun
+    if (PREPS.has(prev) && prev !== 'to') return noun(`"${word}" adalah noun karena posisinya SETELAH preposition "${prev}". Aturan: preposition wajib diikuti noun phrase (object of preposition). Jika kamu pikir ini adjective — periksa apakah ada noun sesudahnya; jika tidak, berarti ini memang noun.`);
+
+    // Position-based: after "to" → infinitive verb
+    if (prev === 'to') return { label: 'V1 (inf)', reason: `"${word}" adalah verb bentuk dasar dalam to-infinitive. Setelah "to", verb TIDAK boleh ditambah -s/-ed/-ing. Fungsi dalam kalimat ini tergantung peran to-infinitive: subject, object, atau adverb tujuan.`, color: C.inf.text, bg: C.inf.badge };
+
+    // Position-based: after BE → V-ing (progressive) or V3 (passive) or predicative
+    if (BES.has(prev)) {
+      if (w.endsWith('ing')) return vrb('V-ing (Prog)', `"${word}" berakhiran -ing setelah BE (${prev}) = Progressive/Continuous tense. Menyatakan aksi yang sedang berlangsung pada waktu tertentu. Rumus: S + is/am/are + V-ing.`);
+      if (w.endsWith('ed') || w.endsWith('en') || w.endsWith('n') || true) return vrb('V3 (Passive)', `"${word}" = past participle (V3) setelah BE (${prev}) = Passive Voice. Passive: subjek DIKENAI pekerjaan, bukan melakukan. Rumus: S + is/am/are + V3 + (by + agent).`);
+    }
+
+    // Position-based: after HAVE → V3 perfect
+    if (HAVES.has(prev)) return vrb('V3 (Perfect)', `"${word}" = past participle (V3) setelah "${prev}" = Perfect Tense. Rumus: S + have/has/had + V3. Menyatakan aksi yang sudah selesai tapi relevan dengan waktu kini (present perfect) atau titik waktu tertentu (past perfect).`);
+
+    // Position-based: after DO-aux or modal → V1
+    if (DOAUX.has(prev) || MODALS.has(prev)) return vrb('V1 (bare)', `"${word}" = bare infinitive (V1 tanpa -s/-ed) setelah auxiliary "${prev}". Aturan ketat: setelah modal (will/can/should/must) dan do/does/did, verb SELALU dalam bentuk dasar.`);
+
+    // After determiner
+    if (DETS.has(prev)) {
+      const hasAdjSuffix = ['ful','less','ous','ive','al','ible','able','ic','ish','ent','ant'].some(s => w.endsWith(s)) || w.endsWith('ing') || w.endsWith('ed');
+      if (hasAdjSuffix) return adj(`"${word}" kemungkinan adjective setelah determiner "${prev}". Adjective dalam posisi attributive (sebelum noun) menerangkan noun yang mengikutinya. Suffix adjective: -ful, -less, -ous, -ive, -al, -ible, -able.`);
+      return noun(`"${word}" berada setelah determiner/article "${prev}" = kemungkinan Noun. Article/determiner selalu mendahului noun (atau adj+noun). Ini adalah head noun dari noun phrase.`);
+    }
+
+    // Suffix-based
+    if (w.endsWith('ly') && w.length > 4 && !['early','only','family','likely','lonely','friendly','lovely','holy','lively','daily','weekly','monthly','yearly','manly','orderly','worldly','elderly','timely'].includes(w))
+      return adv(`"${word}" berakhiran "-ly" = Adverb (kata keterangan). Biasanya terbentuk dari adjective + -ly: slow→slowly, gradual→gradually. Adverb menerangkan: (1) verb: "developed slowly", (2) adjective: "very complex", (3) adverb lain: "quite gradually".`);
+
+    if (['tion','sion'].some(s => w.endsWith(s)) || w.endsWith('ment') || w.endsWith('ness') || w.endsWith('ity') || w.endsWith('ance') || w.endsWith('ence') || w.endsWith('ism') || w.endsWith('ship') || w.endsWith('hood') || w.endsWith('ure') || w.endsWith('age'))
+      return noun(`"${word}" berakhiran noun-suffix — mengubah verb/adjective menjadi noun. Contoh suffix: -tion/-sion (information, tension), -ment (development), -ness (happiness), -ity (complexity), -ance/-ence (importance, difference).`);
+
+    if (['ful','less','ous','ive','al','ible','able','ic','ish','ent','ant'].some(s => w.endsWith(s)))
+      return adj(`"${word}" berakhiran adjective-suffix — mengubah noun/verb menjadi adjective. Contoh: power→powerful, danger→dangerous, effect→effective, reason→reasonable.`);
+
+    if (w.endsWith('ing') && w.length > 4)
+      return vrb('V-ing/Gerund', `"${word}" berakhiran "-ing". Tiga kemungkinan: (1) Progressive: setelah BE (is/am/are + V-ing), (2) Gerund = verb yang jadi noun: "Learning is fun", (3) Participial adjective: "an interesting topic". Tentukan berdasarkan posisinya!`);
+
+    if (w.endsWith('ed') && w.length > 4)
+      return vrb('V2/V3/Adj', `"${word}" berakhiran "-ed". Bisa: (1) V2 = Simple Past (tanpa aux), (2) V3 setelah BE = Passive, (3) V3 setelah have/has/had = Perfect, (4) Participial adjective: "a complicated problem". Lihat kata sebelumnya untuk menentukan!`);
+
+    if ((w.endsWith('s') || w.endsWith('es')) && w.length > 2 && ['he','she','it','this','that','one'].includes(prev))
+      return vrb('V1 s/es', `"${word}" berakhiran -s/-es setelah subjek singular "${prev}" = Simple Present Verbal Active. Aturan: He/She/It + V1 s/es (contoh: she reads, it consists, he develops).`);
+
+    return noun(`"${word}" kemungkinan Noun berdasarkan posisi dan bentuknya. Untuk memastikan: (1) Apakah bisa didahului "the"? (2) Apakah bisa jadi subjek/objek kalimat? Jika ya, ini noun.`);
+  }, []);
+
+  const renderGrammarPassage = useCallback((text: string) => {
+    const allTokens = text.split(/(\s+|[^A-Za-z'-]+)/g).filter(t => t !== '');
+    const wordTokens = allTokens.filter(t => /^[A-Za-z][A-Za-z'-]*$/.test(t));
+    let wordIdx = 0;
+
+    return allTokens.map((token, i) => {
+      const isWord = /^[A-Za-z][A-Za-z'-]*$/.test(token);
+      if (!isWord) return <span key={`gp-${i}`}>{token}</span>;
+
+      const currentIdx = wordIdx++;
+      const prevWord = wordTokens[currentIdx - 1] ?? '';
+      const nextWord = wordTokens[currentIdx + 1] ?? '';
+      const posInfo = analyzePOS(token, prevWord, nextWord);
+
+      return (
+        <button
+          key={`gp-${i}`}
+          type="button"
+          onClick={() => setGrammarPopup({ word: token, ...posInfo })}
+          className="inline-flex flex-col items-center mx-0.5 align-bottom cursor-pointer group"
+        >
+          <span className={cn('text-sm font-medium px-0.5 rounded group-hover:underline', posInfo.color)}>
+            {token}
+          </span>
+          <span className={cn('text-[8px] font-bold px-1 rounded leading-tight', posInfo.bg)}>
+            {posInfo.label}
+          </span>
+        </button>
+      );
+    });
+  }, [analyzePOS]);
 
   return (
     <div className="p-4 lg:p-6 max-w-4xl mx-auto space-y-6 animate-fade-in" onMouseUp={handlePassageMouseUp} onTouchEnd={handlePassageMouseUp}>
@@ -690,6 +860,23 @@ export default function ModuleLessonClient({ lesson, backHref = '/tn-basic-courc
               {lesson.track === 'speaking' && <MessageCircle className="w-5 h-5 text-green-500" />}
               {{ reading: 'Full Reading Passage', speaking: 'Sample Script', grammar: 'Grammar Examples', listening: 'Listening Script' }[lesson.track]}
             </h2>
+            {lesson.track === 'reading' && (
+              <div className="flex items-center gap-2">
+                <button
+                  type="button"
+                  onClick={() => { setShowGrammarMode(v => !v); setGrammarPopup(null); }}
+                  className={cn(
+                    'flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium border transition-colors',
+                    showGrammarMode
+                      ? 'bg-violet-500/10 border-violet-500/30 text-violet-600 dark:text-violet-400'
+                      : 'bg-(--bg-secondary) border-(--border) text-(--text-muted) hover:text-(--text-secondary)'
+                  )}
+                >
+                  <Braces className="w-3.5 h-3.5" />
+                  {showGrammarMode ? 'Kelas Kata ON' : 'Kelas Kata'}
+                </button>
+              </div>
+            )}
             {lesson.track === 'reading' && lesson.passage.some(p => p.startsWith('(') && p.endsWith(')')) && (
               <button
                 type="button"
@@ -1007,10 +1194,16 @@ export default function ModuleLessonClient({ lesson, backHref = '/tn-basic-courc
 
                 return (
                   <div key={`${lesson.id}-p-${idx}`} className="flex gap-3">
-                    <span className="text-xs text-primary/40 font-mono mt-1.5 shrink-0 select-none w-4 text-right">{readingParaIdx}</span>
-                    <p className="text-sm leading-7 text-(--text-secondary) text-justify first-letter:text-lg first-letter:font-semibold first-letter:text-(--text)">
-                      {renderClickableText(paragraph)}
-                    </p>
+                    <span className={cn('font-mono shrink-0 select-none w-4 text-right', showGrammarMode ? 'text-xs text-violet-400/60 mt-3' : 'text-xs text-primary/40 mt-1.5')}>{readingParaIdx}</span>
+                    {showGrammarMode ? (
+                      <div className="text-sm leading-10 text-(--text-secondary) text-justify flex flex-wrap items-end gap-x-0">
+                        {renderGrammarPassage(paragraph)}
+                      </div>
+                    ) : (
+                      <p className="text-sm leading-7 text-(--text-secondary) text-justify first-letter:text-lg first-letter:font-semibold first-letter:text-(--text)">
+                        {renderClickableText(paragraph)}
+                      </p>
+                    )}
                   </div>
                 );
               }
@@ -1568,6 +1761,31 @@ export default function ModuleLessonClient({ lesson, backHref = '/tn-basic-courc
           </>
         );
       })()}
+
+      {/* Grammar Mode Popup */}
+      {grammarPopup && (
+        <div className="fixed left-4 right-4 bottom-4 lg:left-auto lg:right-4 lg:w-[min(92vw,420px)] z-50 bg-(--bg-card) border border-violet-500/30 rounded-2xl shadow-2xl overflow-hidden animate-fade-in">
+          <div className="flex items-start justify-between gap-2 px-4 pt-3 pb-2 bg-violet-500/5 border-b border-violet-500/20">
+            <div className="flex items-center gap-2 flex-wrap min-w-0">
+              <Braces className="w-4 h-4 text-violet-500 shrink-0" />
+              <span className="text-base font-bold text-(--text)">{grammarPopup.word}</span>
+              <span className={cn('text-xs font-bold px-2 py-0.5 rounded-full', grammarPopup.bg)}>
+                {grammarPopup.label}
+              </span>
+            </div>
+            <button
+              type="button"
+              onClick={() => setGrammarPopup(null)}
+              className="p-1 rounded hover:bg-(--hover) shrink-0"
+            >
+              <X className="w-4 h-4 text-(--text-muted)" />
+            </button>
+          </div>
+          <div className="px-4 py-3">
+            <p className="text-sm text-(--text-secondary) leading-relaxed">{grammarPopup.reason}</p>
+          </div>
+        </div>
+      )}
 
       {selectedWord && (
         <div className="fixed right-4 bottom-4 z-40 w-[min(92vw,380px)] bg-(--bg-card) border border-(--border) rounded-xl shadow-2xl overflow-hidden">
