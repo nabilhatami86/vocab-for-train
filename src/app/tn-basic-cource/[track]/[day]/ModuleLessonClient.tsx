@@ -7,6 +7,7 @@ import type { ModuleLesson } from '@/types/module';
 import { cn } from '@/lib/utils';
 import TTSPlayer from '@/components/tts/TTSPlayer';
 import AnnotatedText from '@/components/grammar/AnnotatedText';
+import DayNavigation from '@/components/DayNavigation';
 
 interface TranslationResult {
   translated: string;
@@ -22,6 +23,12 @@ interface Props {
   lesson: ModuleLesson;
   backHref?: string;
   backLabel?: string;
+  prevHref?: string;
+  prevLabel?: string;
+  prevTitle?: string;
+  nextHref?: string;
+  nextLabel?: string;
+  nextTitle?: string;
 }
 
 // ── Suffix morphology hint (module-level pure function) ───────────────────────
@@ -83,7 +90,7 @@ function getSuffixHint(token: string): SuffixHint | null {
   return null;
 }
 
-export default function ModuleLessonClient({ lesson, backHref = '/tn-basic-cource', backLabel = 'Back to TN Basic Cource' }: Props) {
+export default function ModuleLessonClient({ lesson, backHref = '/tn-basic-cource', backLabel = 'Back to TN Basic Cource', prevHref, prevLabel, prevTitle, nextHref, nextLabel, nextTitle }: Props) {
   const [selectedOptions, setSelectedOptions] = useState<Record<string, string>>({});
   const [notes, setNotes] = useState<Record<string, string>>({});
   const [revealedAnswers, setRevealedAnswers] = useState<Set<string>>(new Set());
@@ -2155,6 +2162,16 @@ export default function ModuleLessonClient({ lesson, backHref = '/tn-basic-courc
           </div>
         );
       })()}
+
+      {/* Day Navigation */}
+      <DayNavigation
+        prevHref={prevHref}
+        prevLabel={prevLabel}
+        prevTitle={prevTitle}
+        nextHref={nextHref}
+        nextLabel={nextLabel}
+        nextTitle={nextTitle}
+      />
 
       {/* Grammar Mode Popup */}
       {grammarPopup && (

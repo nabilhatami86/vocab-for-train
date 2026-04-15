@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
-import { getLesson, moduleLessons } from '@/data/modules';
+import { getLesson, getLessonsByTrack, moduleLessons } from '@/data/modules';
 import type { ModuleTrack } from '@/types/module';
 import ModuleLessonClient from './ModuleLessonClient';
 
@@ -39,11 +39,23 @@ export default async function ModuleLessonPage({ params }: PageProps) {
   const lesson = getLesson(track, Number(day));
   if (!lesson) notFound();
 
+  const trackLessons = getLessonsByTrack(track);
+  const currentIdx = trackLessons.findIndex((l) => l.day === lesson.day);
+  const prevLesson = currentIdx > 0 ? trackLessons[currentIdx - 1] : null;
+  const nextLesson = currentIdx < trackLessons.length - 1 ? trackLessons[currentIdx + 1] : null;
+  const base = `/tn-basic-cource/${track}`;
+
   return (
     <ModuleLessonClient
       lesson={lesson}
       backHref={`/tn-basic-cource/class/${track}`}
       backLabel={`Back to ${track.charAt(0).toUpperCase() + track.slice(1)}`}
+      prevHref={prevLesson ? `${base}/${prevLesson.day}` : undefined}
+      prevLabel={prevLesson ? `Day ${prevLesson.day}` : undefined}
+      prevTitle={prevLesson?.title}
+      nextHref={nextLesson ? `${base}/${nextLesson.day}` : undefined}
+      nextLabel={nextLesson ? `Day ${nextLesson.day}` : undefined}
+      nextTitle={nextLesson?.title}
     />
   );
 }

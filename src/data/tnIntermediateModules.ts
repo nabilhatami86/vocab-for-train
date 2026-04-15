@@ -232,7 +232,8 @@ const readingLessons: ModuleLesson[] = [
       {
         id: "int-r2-tfng1",
         type: "true-false-not-given",
-        question: "Early creatures detected light, food, and danger through developing nerves.",
+        question:
+          "Early creatures detected light, food, and danger through developing nerves.",
         options: ["True", "False", "Not Given"],
         correctAnswer: "True",
         reason:
@@ -241,7 +242,8 @@ const readingLessons: ModuleLesson[] = [
       {
         id: "int-r2-tfng2",
         type: "true-false-not-given",
-        question: "The spinal cord carries messages from the brain to the rest of the body.",
+        question:
+          "The spinal cord carries messages from the brain to the rest of the body.",
         options: ["True", "False", "Not Given"],
         correctAnswer: "True",
         reason:
@@ -250,7 +252,8 @@ const readingLessons: ModuleLesson[] = [
       {
         id: "int-r2-tfng3",
         type: "true-false-not-given",
-        question: "Fish are becoming humans immediately after they grow arms and legs.",
+        question:
+          "Fish are becoming humans immediately after they grow arms and legs.",
         options: ["True", "False", "Not Given"],
         correctAnswer: "False",
         reason:
@@ -259,7 +262,8 @@ const readingLessons: ModuleLesson[] = [
       {
         id: "int-r2-tfng4",
         type: "true-false-not-given",
-        question: "People in the past believe that the brain is the body's control centre.",
+        question:
+          "People in the past believe that the brain is the body's control centre.",
         options: ["True", "False", "Not Given"],
         correctAnswer: "False",
         reason:
@@ -277,7 +281,8 @@ const readingLessons: ModuleLesson[] = [
       {
         id: "int-r2-tfng6",
         type: "true-false-not-given",
-        question: "Scientists have explained completely why humans sleep and dream.",
+        question:
+          "Scientists have explained completely why humans sleep and dream.",
         options: ["True", "False", "Not Given"],
         correctAnswer: "False",
         reason:
@@ -286,7 +291,8 @@ const readingLessons: ModuleLesson[] = [
       {
         id: "int-r2-tfng7",
         type: "true-false-not-given",
-        question: "The side lobe helps with hearing, speech, and long-term memory.",
+        question:
+          "The side lobe helps with hearing, speech, and long-term memory.",
         options: ["True", "False", "Not Given"],
         correctAnswer: "True",
         reason:
@@ -295,7 +301,8 @@ const readingLessons: ModuleLesson[] = [
       {
         id: "int-r2-tfng8",
         type: "true-false-not-given",
-        question: "Humans will be born with new neurons throughout their adult lives.",
+        question:
+          "Humans will be born with new neurons throughout their adult lives.",
         options: ["True", "False", "Not Given"],
         correctAnswer: "False",
         reason:
@@ -304,20 +311,21 @@ const readingLessons: ModuleLesson[] = [
       {
         id: "int-r2-tfng9",
         type: "true-false-not-given",
-        question: "Repeating an activity strengthens the neural pathways in the brain.",
+        question:
+          "Repeating an activity strengthens the neural pathways in the brain.",
         options: ["True", "False", "Not Given"],
         correctAnswer: "Not Given",
         reason:
-          'Teks menyebutkan bahwa jalur (pathways) terbentuk saat informasi berpindah antar neuron, tetapi tidak menyebutkan secara eksplisit bahwa pengulangan aktivitas memperkuat jalur tersebut.',
+          "Teks menyebutkan bahwa jalur (pathways) terbentuk saat informasi berpindah antar neuron, tetapi tidak menyebutkan secara eksplisit bahwa pengulangan aktivitas memperkuat jalur tersebut.",
       },
       {
         id: "int-r2-tfng10",
         type: "true-false-not-given",
-        question: "The human brain uses electricity as its main source of energy.",
+        question:
+          "The human brain uses electricity as its main source of energy.",
         options: ["True", "False", "Not Given"],
         correctAnswer: "Not Given",
-        reason:
-          'Informasi ini tidak disebutkan sama sekali dalam teks bacaan.',
+        reason: "Informasi ini tidak disebutkan sama sekali dalam teks bacaan.",
       },
       // ── Matching Vocabulary ───────────────────────────────────────────────────
       {
@@ -346,7 +354,8 @@ const readingLessons: ModuleLesson[] = [
           "N. the way parts are arranged or organized",
         ],
         correctAnswer: "N. the way parts are arranged or organized",
-        reason: '"structure" = struktur → N. the way parts are arranged or organized.',
+        reason:
+          '"structure" = struktur → N. the way parts are arranged or organized.',
       },
       {
         id: "int-r2-match3",
@@ -374,7 +383,8 @@ const readingLessons: ModuleLesson[] = [
           "N. the way parts are arranged or organized",
         ],
         correctAnswer: "B. a living being, especially an animal",
-        reason: '"creature" = makhluk → B. a living being, especially an animal.',
+        reason:
+          '"creature" = makhluk → B. a living being, especially an animal.',
       },
       {
         id: "int-r2-match5",
@@ -388,7 +398,8 @@ const readingLessons: ModuleLesson[] = [
           "O. to try to be better than others",
         ],
         correctAnswer: "M. to become aware of something through the senses",
-        reason: '"sense" = merasakan → M. to become aware of something through the senses.',
+        reason:
+          '"sense" = merasakan → M. to become aware of something through the senses.',
       },
       {
         id: "int-r2-match6",
@@ -416,7 +427,8 @@ const readingLessons: ModuleLesson[] = [
           "N. the way parts are arranged or organized",
         ],
         correctAnswer: "L. a thin fiber that carries messages in the body",
-        reason: '"nerve" = saraf → L. a thin fiber that carries messages in the body.',
+        reason:
+          '"nerve" = saraf → L. a thin fiber that carries messages in the body.',
       },
       {
         id: "int-r2-match8",
@@ -444,7 +456,8 @@ const readingLessons: ModuleLesson[] = [
           "M. to become aware of something through the senses",
         ],
         correctAnswer: "K. something difficult to explain or understand",
-        reason: '"mysterious" = misterius → K. something difficult to explain or understand.',
+        reason:
+          '"mysterious" = misterius → K. something difficult to explain or understand.',
       },
       {
         id: "int-r2-match10",
@@ -458,7 +471,8 @@ const readingLessons: ModuleLesson[] = [
           "N. the way parts are arranged or organized",
         ],
         correctAnswer: "D. something that gives orders and controls actions",
-        reason: '"control centre" = pusat kendali → D. something that gives orders and controls actions.',
+        reason:
+          '"control centre" = pusat kendali → D. something that gives orders and controls actions.',
       },
       {
         id: "int-r2-match11",
@@ -472,7 +486,8 @@ const readingLessons: ModuleLesson[] = [
           "O. to try to be better than others",
         ],
         correctAnswer: "F. the outer or top layer of something",
-        reason: '"surface" = permukaan → F. the outer or top layer of something.',
+        reason:
+          '"surface" = permukaan → F. the outer or top layer of something.',
       },
       {
         id: "int-r2-match12",
@@ -486,7 +501,8 @@ const readingLessons: ModuleLesson[] = [
           "K. something difficult to explain or understand",
         ],
         correctAnswer: "I. able to think, learn, and understand well",
-        reason: '"intelligent" = cerdas → I. able to think, learn, and understand well.',
+        reason:
+          '"intelligent" = cerdas → I. able to think, learn, and understand well.',
       },
       {
         id: "int-r2-match13",
@@ -500,7 +516,8 @@ const readingLessons: ModuleLesson[] = [
           "O. to try to be better than others",
         ],
         correctAnswer: "A. to handle or deal with information",
-        reason: '"process" = memproses → A. to handle or deal with information.',
+        reason:
+          '"process" = memproses → A. to handle or deal with information.',
       },
       {
         id: "int-r2-match14",
@@ -538,7 +555,7 @@ const readingLessons: ModuleLesson[] = [
     id: "int-reading-3",
     track: "reading",
     day: 3,
-    tutor: "Ms. Lidya",
+    tutor: "Ms. Siska",
     title: "Video Games Are Good for You!",
     subtitle:
       "Exploring the physical, mental, and psychological benefits of gaming",
@@ -713,121 +730,117 @@ const readingLessons: ModuleLesson[] = [
       {
         id: "int-r3-mc1",
         type: "multiple-choice",
-        question:
-          "Only relatively recently have people started to realise ______.",
+        question: "Only relatively recently have people started to realise ___",
         options: [
           "The harmful effects of video games",
           "The beneficial effects of video games",
           "How much we don't know about video games' effects",
-          "How video games are different from other hobbies",
+          "How much video games affect the people that play them",
         ],
         correctAnswer: "The beneficial effects of video games",
         reason:
-          'Paragraf 1: "researchers are finding that games can actually change us for the better" — menunjukkan manfaat yang baru disadari.',
+          'Paragraf 1 menyatakan "researchers are finding that games can actually change us for the better" — ini menunjukkan bahwa manfaat video game baru-baru ini mulai disadari. Opsi A salah karena fokusnya bukan efek berbahaya. Opsi C dan D tidak didukung teks.',
       },
       {
         id: "int-r3-mc2",
         type: "multiple-choice",
         question:
-          "Very young children show improved ______ after playing video games.",
+          "Very young children show improved ___ after playing video games.",
         options: [
           "Muscle control and co-ordination",
-          "Social interaction skills",
-          "Reading and writing ability",
-          "Ability to tell different colours apart",
+          "Social interaction",
+          "Decision-making",
+          "Ability to differentiate between different colours",
         ],
         correctAnswer: "Muscle control and co-ordination",
         reason:
-          'Paragraf 2: "improved motor skills, for example they can kick, catch and throw a ball better" — motor skills = muscle control and co-ordination.',
+          'Paragraf 2: "improved motor skills, for example they can kick, catch and throw a ball better." Motor skills = kemampuan otot dan koordinasi gerak (muscle control and co-ordination). Opsi B, C, D tidak disebutkan dalam konteks anak kecil di paragraf ini.',
       },
       {
         id: "int-r3-mc3",
         type: "multiple-choice",
-        question: "Playing video games helps doctors ______.",
+        question: "Playing video games helps doctors ___",
         options: [
-          "Do operations faster and read X-rays more accurately",
-          "Make better decisions under pressure",
-          "Operate more safely on young children",
-          "Attend to more than one patient at a time",
+          "Do operations and read X-rays",
+          "Make decisions under pressure",
+          "Operate complex equipment",
+          "Tend to more than one patient at a time",
         ],
-        correctAnswer: "Do operations faster and read X-rays more accurately",
+        correctAnswer: "Do operations and read X-rays",
         reason:
-          "Paragraf 2: surgeons were 27% faster, fewer errors, AND vision improved for reading X-rays.",
+          "Paragraf 2 menyebutkan dua manfaat bagi dokter: (1) surgeons who played games were 27% faster and made fewer errors in operations, dan (2) their visual acuity improved, helping them read X-rays. Opsi B, C, D tidak disebutkan secara eksplisit.",
       },
       {
         id: "int-r3-mc4",
         type: "multiple-choice",
         question:
-          "Video gamers' decision-making speed is significantly improved by ______.",
+          "Video gamers' decision-making speed is significantly improved by ___",
         options: [
           "Years of gaming experience",
-          "Playing different types of games regularly",
-          "Playing action-based games",
-          "Owning a certain type of gaming device",
+          "Long periods of game playing",
+          "Playing video games in short bursts",
+          "Certain types of video game",
         ],
-        correctAnswer: "Playing action-based games",
+        correctAnswer: "Certain types of video game",
         reason:
-          'Paragraf 3: "People who play action-based games make decisions 25 per cent faster than others."',
+          'Paragraf 3: "People who play action-based games make decisions 25 per cent faster than others." Kata kunci: "action-based games" = certain types of video game (jenis tertentu). Bukan durasi atau pengalaman bertahun-tahun yang menjadi faktornya.',
       },
       {
         id: "int-r3-mc5",
         type: "multiple-choice",
-        question: "Women who play video games demonstrate ______.",
+        question: "Women who play video games demonstrate ___",
         options: [
-          "Faster reaction speeds than men",
-          "Reduced stress levels compared to non-gamers",
-          "Better concentration in the workplace",
-          "Better spatial awareness when manipulating 3D objects",
+          "Faster reaction speeds",
+          "Reduced stress levels",
+          "Better multitasking ability",
+          "Better spatial awareness",
         ],
-        correctAnswer: "Better spatial awareness when manipulating 3D objects",
+        correctAnswer: "Better spatial awareness",
         reason:
-          'Paragraf 3: "women who play games are better able to mentally manipulate 3D objects."',
+          'Paragraf 3: "women who play games are better able to mentally manipulate 3D objects" — ini merujuk pada spatial awareness (kesadaran ruang/spasial). Opsi A, B, C tidak disebutkan untuk perempuan di bagian ini.',
       },
       {
         id: "int-r3-mc6",
         type: "multiple-choice",
         question:
-          "In one research study, the video game Tetris helps people to ______.",
+          "In one research study, the video game Tetris helps people to ___",
         options: [
-          "Improve overall concentration and memory",
-          "Overcome symptoms of long-term depression",
-          "Stop disturbing flashbacks after a traumatic experience",
-          "Make faster and more accurate decisions under stress",
+          "Improve their concentration",
+          "Overcome depression",
+          "Forget disturbing experiences",
+          "Make decisions faster",
         ],
-        correctAnswer:
-          "Stop disturbing flashbacks after a traumatic experience",
+        correctAnswer: "Forget disturbing experiences",
         reason:
-          'Paragraf 4: "playing Tetris … can actually prevent people having disturbing flashbacks."',
+          'Paragraf 4: "playing Tetris shortly after a traumatic event can actually prevent people having disturbing flashbacks." Ini berarti membantu melupakan/mencegah kenangan buruk (forget disturbing experiences). Opsi A, B, D tidak sesuai dengan konteks penelitian Tetris.',
       },
       {
         id: "int-r3-mc7",
         type: "multiple-choice",
-        question: "Research shows that violent video games ______.",
+        question: "Research shows that violent video games ___",
         options: [
-          "Have no measurable negative effects on players",
-          "Only affect the brain after many months of play",
-          "May have both positive and negative effects on the brain",
-          "Only impact players who already show aggressive tendencies",
+          "Have no negative effects on players",
+          "Only affect players' brains after extended hours of play",
+          "May have positive and negative effects on the brain",
+          "Only affect players' brains in extreme ways",
         ],
-        correctAnswer:
-          "May have both positive and negative effects on the brain",
+        correctAnswer: "May have positive and negative effects on the brain",
         reason:
-          "Paragraf 5: Indiana Uni found negative effects (aggression), but Bavelier says they may also have the strongest beneficial effects — jadi ada dua sisi.",
+          "Paragraf 5 menunjukkan dua sisi: peneliti di Indiana University menemukan efek negatif (area otak terkait agresi aktif), NAMUN Daphne Bavelier menyatakan bahwa violent games justru mungkin memiliki manfaat terbesar. Jadi jawabannya: dua sisi, positif DAN negatif.",
       },
       {
         id: "int-r3-mc8",
         type: "multiple-choice",
-        question: "In the future, video games may be used for ______.",
+        question: "In the future, computer games may be used for ___",
         options: [
-          "Treating a variety of physical and neurological problems",
-          "Training doctors to manage emotional pressure at work",
-          "Helping parents deal with difficult teenagers at home",
-          "Rehabilitating prisoners with a history of violent behaviour",
+          "Treating a variety of medical problems",
+          "Training doctors to deal with emotional pressure",
+          "Helping parents to deal with difficult teenagers",
+          "Treating prisoners with a history of violent behaviour",
         ],
-        correctAnswer:
-          "Treating a variety of physical and neurological problems",
+        correctAnswer: "Treating a variety of medical problems",
         reason:
-          'Paragraf 5: "many treatments for physical and neurological problems which incorporate the playing of video games."',
+          'Paragraf 5: "we may see many treatments for physical and neurological problems which incorporate the playing of video games." Physical and neurological problems = medical problems (masalah medis). Opsi B, C, D tidak didukung teks.',
       },
       {
         id: "int-r3-mc9",
@@ -835,15 +848,15 @@ const readingLessons: ModuleLesson[] = [
         question:
           "According to the passage, why do scientists continue studying video games despite concerns?",
         options: [
-          "They want to prove that violent games should be completely banned",
-          "They believe video games have absolutely no effect on the brain",
-          "Evidence shows that certain games may provide important benefits",
-          "Most scientists believe current research on games is unscientific",
+          "They want to prove that violent games should be banned",
+          "They believe video games have no effect on the brain",
+          "They see evidence that certain games may provide important benefits",
+          "They think most research on video games is unscientific",
         ],
         correctAnswer:
-          "Evidence shows that certain games may provide important benefits",
+          "They see evidence that certain games may provide important benefits",
         reason:
-          "Keseluruhan artikel menunjukkan bukti manfaat — peneliti terus meneliti karena ada potensi besar yang belum sepenuhnya dipahami.",
+          "Sepanjang teks, para peneliti terus menemukan bukti bahwa game tertentu memberikan manfaat nyata (motor skills, decision-making, trauma therapy, medical treatment). Itulah yang mendorong mereka terus meneliti meski ada kekhawatiran. Opsi A, B, D bertentangan dengan isi teks.",
       },
       {
         id: "int-r3-mc10",
@@ -851,15 +864,15 @@ const readingLessons: ModuleLesson[] = [
         question:
           "What can you infer about the future role of video games in society?",
         options: [
-          "They will completely replace all traditional medical treatments",
+          "They will replace all traditional medical treatments",
           "They will likely be used as tools to support physical and mental health",
-          "They will become less popular as more people learn about their risks",
-          "They will only ever be used for entertainment and leisure purposes",
+          "They will become less popular as people learn about their risks",
+          "They will only be used for entertainment purposes",
         ],
         correctAnswer:
           "They will likely be used as tools to support physical and mental health",
         reason:
-          'Paragraf 5: "we may see many treatments for physical and neurological problems which incorporate the playing of video games" — mengindikasikan peran medis di masa depan.',
+          'Paragraf 5 menyebut "treatments for physical and neurological problems" dan manfaat mental (trauma, stress). Ini mengarah pada inferensi bahwa games akan digunakan sebagai alat kesehatan fisik dan mental. Opsi A terlalu ekstrem ("replace all"). Opsi C dan D bertentangan dengan keseluruhan isi teks.',
       },
       // ── Matching Vocabulary ───────────────────────────────────────────────────
       {
@@ -873,7 +886,8 @@ const readingLessons: ModuleLesson[] = [
           "D. to create or grow something over time",
         ],
         correctAnswer: "C. to express disapproval or point out faults",
-        reason: '"criticise" = mengkritik → C. to express disapproval or point out faults.',
+        reason:
+          '"criticise" = mengkritik → C. to express disapproval or point out faults.',
       },
       {
         id: "int-r3-match2",
@@ -886,7 +900,8 @@ const readingLessons: ModuleLesson[] = [
           "D. to send something through the air using your hand",
         ],
         correctAnswer: "D. to send something through the air using your hand",
-        reason: '"throw" = melempar → D. to send something through the air using your hand.',
+        reason:
+          '"throw" = melempar → D. to send something through the air using your hand.',
       },
       {
         id: "int-r3-match3",
@@ -899,7 +914,8 @@ const readingLessons: ModuleLesson[] = [
           "D. feeling very unhappy or hopeless",
         ],
         correctAnswer: "B. having too much body weight",
-        reason: '"overweight" = kelebihan berat badan → B. having too much body weight.',
+        reason:
+          '"overweight" = kelebihan berat badan → B. having too much body weight.',
       },
       {
         id: "int-r3-match4",
@@ -924,8 +940,10 @@ const readingLessons: ModuleLesson[] = [
           "C. information that proves something is true",
           "D. the process of making choices",
         ],
-        correctAnswer: "B. people who study something carefully to discover facts",
-        reason: '"researchers" = peneliti → B. people who study something carefully to discover facts.',
+        correctAnswer:
+          "B. people who study something carefully to discover facts",
+        reason:
+          '"researchers" = peneliti → B. people who study something carefully to discover facts.',
       },
       {
         id: "int-r3-match6",
@@ -951,7 +969,8 @@ const readingLessons: ModuleLesson[] = [
           "D. to send something through the air",
         ],
         correctAnswer: "B. to create or grow something over time",
-        reason: '"develop" = mengembangkan → B. to create or grow something over time.',
+        reason:
+          '"develop" = mengembangkan → B. to create or grow something over time.',
       },
       {
         id: "int-r3-match8",
@@ -964,7 +983,8 @@ const readingLessons: ModuleLesson[] = [
           "D. very forceful and involving physical harm",
         ],
         correctAnswer: "C. relating to the body rather than the mind",
-        reason: '"physical" = fisik → C. relating to the body rather than the mind.',
+        reason:
+          '"physical" = fisik → C. relating to the body rather than the mind.',
       },
       {
         id: "int-r3-match9",
@@ -990,7 +1010,8 @@ const readingLessons: ModuleLesson[] = [
           "D. to make something better",
         ],
         correctAnswer: "C. to perform or complete a task",
-        reason: '"carry out" = melaksanakan → C. to perform or complete a task.',
+        reason:
+          '"carry out" = melaksanakan → C. to perform or complete a task.',
       },
       {
         id: "int-r3-match11",
@@ -1003,7 +1024,8 @@ const readingLessons: ModuleLesson[] = [
           "D. people who perform medical operations",
         ],
         correctAnswer: "D. people who perform medical operations",
-        reason: '"surgeons" = ahli bedah → D. people who perform medical operations.',
+        reason:
+          '"surgeons" = ahli bedah → D. people who perform medical operations.',
       },
       {
         id: "int-r3-match12",
@@ -1029,7 +1051,8 @@ const readingLessons: ModuleLesson[] = [
           "D. to create or grow something over time",
         ],
         correctAnswer: "B. to gain an advantage or profit",
-        reason: '"benefit" = memberi manfaat → B. to gain an advantage or profit.',
+        reason:
+          '"benefit" = memberi manfaat → B. to gain an advantage or profit.',
       },
       {
         id: "int-r3-match14",
@@ -1042,7 +1065,8 @@ const readingLessons: ModuleLesson[] = [
           "D. the process of making choices",
         ],
         correctAnswer: "D. the process of making choices",
-        reason: '"decision-making" = pengambilan keputusan → D. the process of making choices.',
+        reason:
+          '"decision-making" = pengambilan keputusan → D. the process of making choices.',
       },
       {
         id: "int-r3-match15",
@@ -1068,7 +1092,8 @@ const readingLessons: ModuleLesson[] = [
           "D. the ability to see",
         ],
         correctAnswer: "C. information that proves something is true",
-        reason: '"evidence" = bukti → C. information that proves something is true.',
+        reason:
+          '"evidence" = bukti → C. information that proves something is true.',
       },
       {
         id: "int-r3-match17",
@@ -1081,7 +1106,8 @@ const readingLessons: ModuleLesson[] = [
           "D. relating to the mind or mental processes",
         ],
         correctAnswer: "D. relating to the mind or mental processes",
-        reason: '"psychological" = psikologis → D. relating to the mind or mental processes.',
+        reason:
+          '"psychological" = psikologis → D. relating to the mind or mental processes.',
       },
       {
         id: "int-r3-match18",
@@ -1107,7 +1133,8 @@ const readingLessons: ModuleLesson[] = [
           "D. exact and correct, without mistakes",
         ],
         correctAnswer: "C. very forceful and involving physical harm",
-        reason: '"violent" = penuh kekerasan → C. very forceful and involving physical harm.',
+        reason:
+          '"violent" = penuh kekerasan → C. very forceful and involving physical harm.',
       },
       {
         id: "int-r3-match20",
@@ -1120,7 +1147,8 @@ const readingLessons: ModuleLesson[] = [
           "D. feeling very unhappy or hopeless",
         ],
         correctAnswer: "B. helpful or producing good results",
-        reason: '"beneficial" = bermanfaat → B. helpful or producing good results.',
+        reason:
+          '"beneficial" = bermanfaat → B. helpful or producing good results.',
       },
     ],
   },
@@ -1130,7 +1158,7 @@ const readingLessons: ModuleLesson[] = [
     id: "int-reading-4",
     track: "reading",
     day: 4,
-    tutor: "Ms. Lidya",
+    tutor: "Ms. Siska",
     title: "Culture Shock",
     subtitle:
       "The four stages of adapting to a new culture — and the surprising fifth stage",
@@ -1383,6 +1411,255 @@ const readingLessons: ModuleLesson[] = [
         correctAnswer: "Not Given",
         reason:
           "NOT GIVEN — Paragraf 8 hanya menyebutkan bahwa reverse culture shock terjadi ketika seseorang kembali ke budaya asalnya dan menemukan bahwa semuanya telah berubah. Teks TIDAK menyebutkan berapa lama seseorang harus tinggal di luar negeri agar mengalaminya.",
+      },
+    ],
+  },
+
+  // ── Day 5: Are Celebrities Bad for You? ──────────────────────────────────────
+  {
+    id: "int-reading-5",
+    track: "reading",
+    day: 5,
+    tutor: "Ms. Siska",
+    title: "Are Celebrities Bad for You?",
+    subtitle:
+      "Exploring how celebrity culture affects fans — and the celebrities themselves",
+    overview:
+      "Teks reading tentang dampak budaya selebriti: tiga jenis fans, efek pada kesehatan mental, penelitian tentang narsisme pada selebriti, dan apakah selebriti layak dijadikan role model.",
+    passage: [
+      "Celebrities are everywhere nowadays: on TV, in magazines, online. Is this preoccupation with famous people harmless fun or is it bad for us? How many people are truly obsessed with modern media idols? And on the other side of the coin, can fame be harmful to the celebrities?",
+      "Studies suggest that the vast majority of teenagers do not really worship celebrities. Researchers have identified three kinds of fans. About 15% of young people have an 'entertainment-social' interest. They love chatting about their favourite celebrities with friends and this does not appear to do any harm.",
+      "Another 5% feel that they have an 'intense-personal' relationship with a celebrity. Sometimes they see them as their soulmate and find that they are often thinking about them, even when they don't want to. These people are more at risk from depression and anxiety. If girls in this group idolise a female star with a body they consider to be perfect, they are more likely to be unhappy with their own bodies.",
+      "That leaves 2% of young people with a 'borderline-pathological' interest. They might say, for example, that they would spend several thousand pounds on a paper plate the celebrity had used, or that they would do something illegal if the celebrity asked them to. These people are in most danger of being seriously disturbed.",
+      "What about the celebrities themselves? A study in the USA tried to measure narcissism or extreme self-centredness, when feelings of worthlessness and invisibility are compensated for by turning into the opposite: excessive showing off. Researchers looked at 200 celebrities, 200 young adults with Masters in Business Administration (a group known for being narcissistic) and a nationally representative sample using the same questionnaire. As was expected, the celebrities were significantly more narcissistic than the MBAs and both groups were a lot more narcissistic than the general population.",
+      "Four kinds of celebrity were included in the sample. The most narcissistic were the ones who had become famous through reality TV shows — they scored highest on vanity and willingness to exploit other people. Next came actors, and the least narcissistic were musicians. One interesting result was that there was no connection between narcissism and the length of time the celebrity had been famous. This means that becoming famous probably did not make the celebrities narcissistic — they already were beforehand.",
+      "So, what can we learn from this? People who are very successful or famous tend to be narcissists and are liable to be ruthless, self-seeking workaholics. As we can see from celebrity magazines, they are also often desperate and lonely. They make disastrous role models.",
+    ],
+    materialSections: [
+      {
+        title: "Vocabulary Preview",
+        points: [
+          "preoccupation (n) — sesuatu yang selalu dipikirkan/dikhawatirkan | 'Is this preoccupation with famous people harmless?'",
+          "harmful (adj) — merusak, berbahaya | 'can fame be harmful to the celebrities?'",
+          "worship (v) — memuja, mengagumi secara mendalam | 'teenagers do not really worship celebrities'",
+          "soulmate (n) — belahan jiwa, seseorang yang terasa sangat cocok | 'they see them as their soulmate'",
+          "narcissism (n) — kecintaan berlebihan pada diri sendiri | 'a study tried to measure narcissism'",
+          "showing off (phrasal v) — pamer, berperilaku untuk menarik perhatian | 'excessive showing off'",
+          "vanity (n) — kesombongan berlebih tentang penampilan diri | 'scored highest on vanity'",
+          "role model (n) — panutan, sosok yang ingin ditiru | 'They make disastrous role models'",
+          "narcissistic (adj) — bersifat narsistik/egois berlebih",
+          "exploit (v) — memanfaatkan orang lain untuk keuntungan sendiri",
+          "ruthless (adj) — tidak berperasaan, kejam dalam mengejar tujuan",
+          "liable (adj) — cenderung/berpotensi melakukan sesuatu",
+        ],
+      },
+      {
+        title: "Three Types of Celebrity Fans",
+        points: [
+          "🟢 Entertainment-Social (± 15%) — suka ngobrol tentang selebriti dengan teman. TIDAK berbahaya.",
+          "🟡 Intense-Personal (± 5%) — merasa punya hubungan mendalam dengan selebriti, sering memikirkannya. Risiko: depresi & kecemasan.",
+          "🔴 Borderline-Pathological (± 2%) — bisa melakukan hal ilegal atau ekstrem demi selebriti. PALING berbahaya.",
+          "─────────────────────────────",
+          "💡 Total fans yang 'bermasalah' = sekitar 7%. Mayoritas (85%+) tidak terlalu terobsesi.",
+        ],
+      },
+      {
+        title: "Narcissism Study — Key Findings",
+        points: [
+          "Penelitian membandingkan 200 selebriti vs 200 MBA students vs masyarakat umum.",
+          "Hasil: Selebriti > MBA > masyarakat umum (dalam tingkat narsisme).",
+          "─────────────────────────────",
+          "Peringkat narsisme berdasarkan jenis selebriti:",
+          "1️⃣ Reality TV stars — paling narsis (vanity + exploit others)",
+          "2️⃣ Actors",
+          "3️⃣ Musicians — paling TIDAK narsis",
+          "─────────────────────────────",
+          "🔑 Temuan penting: Lamanya seseorang terkenal TIDAK berpengaruh pada narsisme mereka.",
+          "   → Kesimpulan: Mereka sudah narsis SEBELUM menjadi terkenal, bukan karena ketenaran.",
+        ],
+      },
+    ],
+    exercises: [
+      // ── Vocabulary Check ──────────────────────────────────────────────────────
+      {
+        id: "int-r5-vc1",
+        type: "multiple-choice",
+        question:
+          "VOCABULARY CHECK\nP___________ = something we think or worry about a lot (noun, paragraph 1)",
+        options: ["Preoccupation", "Popularity", "Presentation", "Prediction"],
+        correctAnswer: "Preoccupation",
+        reason:
+          '"Preoccupation" = sesuatu yang terus dipikirkan/dikhawatirkan. Paragraf 1: "Is this preoccupation with famous people harmless fun…"',
+      },
+      {
+        id: "int-r5-vc2",
+        type: "multiple-choice",
+        question:
+          "VOCABULARY CHECK\nH___________ = damaging or injurious (adjective, paragraph 1)",
+        options: ["Harmful", "Helpful", "Hopeful", "Honest"],
+        correctAnswer: "Harmful",
+        reason:
+          '"Harmful" = merusak/berbahaya. Paragraf 1: "can fame be harmful to the celebrities?"',
+      },
+      {
+        id: "int-r5-vc3",
+        type: "multiple-choice",
+        question:
+          "VOCABULARY CHECK\nW___________ = have or show feelings of profound devotion (verb, paragraph 2)",
+        options: ["Worship", "Wonder", "Watch", "Work"],
+        correctAnswer: "Worship",
+        reason:
+          '"Worship" = memuja dengan perasaan sangat mendalam. Paragraf 2: "the vast majority of teenagers do not really worship celebrities."',
+      },
+      {
+        id: "int-r5-vc4",
+        type: "multiple-choice",
+        question:
+          "VOCABULARY CHECK\nS___________ = a person with whom you feel a deep affinity or connection (noun, paragraph 3)",
+        options: ["Soulmate", "Supporter", "Stranger", "Spectator"],
+        correctAnswer: "Soulmate",
+        reason:
+          '"Soulmate" = belahan jiwa, seseorang yang terasa sangat cocok. Paragraf 3: "Sometimes they see them as their soulmate."',
+      },
+      {
+        id: "int-r5-vc5",
+        type: "multiple-choice",
+        question:
+          "VOCABULARY CHECK\nN___________ = excessive interest in or admiration of oneself (noun, paragraph 5)",
+        options: ["Narcissism", "Negativity", "Nervousness", "Nomination"],
+        correctAnswer: "Narcissism",
+        reason:
+          '"Narcissism" = kecintaan/kekaguman berlebihan pada diri sendiri. Paragraf 5: "A study in the USA tried to measure narcissism or extreme self-centredness."',
+      },
+      {
+        id: "int-r5-vc6",
+        type: "multiple-choice",
+        question:
+          "VOCABULARY CHECK\nS___O___ = behaving in a way that is intended to attract attention (phrasal verb, paragraph 5)",
+        options: ["Showing off", "Standing out", "Speaking out", "Setting off"],
+        correctAnswer: "Showing off",
+        reason:
+          '"Showing off" = pamer / berperilaku untuk menarik perhatian orang lain. Paragraf 5: "feelings of worthlessness…compensated for by turning into the opposite: excessive showing off."',
+      },
+      {
+        id: "int-r5-vc7",
+        type: "multiple-choice",
+        question:
+          "VOCABULARY CHECK\nV___________ = excessive pride or interest in your own attractiveness (noun, paragraph 6)",
+        options: ["Vanity", "Validity", "Virtue", "Velocity"],
+        correctAnswer: "Vanity",
+        reason:
+          '"Vanity" = kebanggaan berlebihan atas penampilan/diri sendiri. Paragraf 6: "they scored highest on vanity and willingness to exploit other people."',
+      },
+      {
+        id: "int-r5-vc8",
+        type: "multiple-choice",
+        question:
+          "VOCABULARY CHECK\nR___M___ = a person we look up to and want to be like (noun, paragraph 7)",
+        options: ["Role model", "Real master", "Rising mentor", "Record maker"],
+        correctAnswer: "Role model",
+        reason:
+          '"Role model" = panutan, sosok yang ingin ditiru. Paragraf 7: "They make disastrous role models."',
+      },
+      // ── True / False / Not Given ──────────────────────────────────────────────
+      {
+        id: "int-r5-tfng1",
+        type: "true-false-not-given",
+        question:
+          "The article is about whether celebrity culture is harmful, for either the public or the celebrities themselves.",
+        options: ["True", "False", "Not Given"],
+        correctAnswer: "True",
+        reason:
+          "TRUE — Paragraf 1 langsung mengajukan dua pertanyaan: apakah obsesi terhadap selebriti berbahaya bagi kita (publik), dan apakah ketenaran bisa berbahaya bagi selebriti itu sendiri. Kedua sudut pandang itulah yang menjadi inti artikel.",
+      },
+      {
+        id: "int-r5-tfng2",
+        type: "true-false-not-given",
+        question:
+          "Fifteen per cent of teenagers have an interest in celebrities that probably isn't a cause for concern.",
+        options: ["True", "False", "Not Given"],
+        correctAnswer: "True",
+        reason:
+          "TRUE — Paragraf 2: \"About 15% of young people have an 'entertainment-social' interest…this does not appear to do any harm.\" Artinya ketertarikan mereka tidak berbahaya, sehingga tidak perlu dikhawatirkan.",
+      },
+      {
+        id: "int-r5-tfng3",
+        type: "true-false-not-given",
+        question:
+          "Young people who feel they have an 'intense-personal' relationship with a celebrity do not experience any negative consequences related to it.",
+        options: ["True", "False", "Not Given"],
+        correctAnswer: "False",
+        reason:
+          'FALSE — Paragraf 3 jelas menyatakan: "These people are more at risk from depression and anxiety." Ada konsekuensi negatif, yaitu risiko depresi dan kecemasan. Pernyataan soal bertentangan langsung dengan teks.',
+      },
+      {
+        id: "int-r5-tfng4",
+        type: "true-false-not-given",
+        question:
+          "A study found that celebrities were more self-centred than business administration masters students.",
+        options: ["True", "False", "Not Given"],
+        correctAnswer: "True",
+        reason:
+          'TRUE — Paragraf 5: "the celebrities were significantly more narcissistic than the MBAs." Narcissism/extreme self-centredness = self-centred. Jadi selebriti terbukti lebih self-centred daripada mahasiswa MBA.',
+      },
+      {
+        id: "int-r5-tfng5",
+        type: "true-false-not-given",
+        question:
+          "Some celebrities said they became narcissistic only after becoming famous.",
+        options: ["True", "False", "Not Given"],
+        correctAnswer: "False",
+        reason:
+          'FALSE — Paragraf 6: "becoming famous probably did not make the celebrities narcissistic — they already were beforehand." Teks justru menyatakan kebalikannya: mereka sudah narsis sebelum terkenal. Tidak ada selebriti yang mengklaim hal tersebut dalam teks.',
+      },
+      {
+        id: "int-r5-tfng6",
+        type: "true-false-not-given",
+        question:
+          "Celebrities from reality TV were found to be the most vain and exploitative.",
+        options: ["True", "False", "Not Given"],
+        correctAnswer: "True",
+        reason:
+          'TRUE — Paragraf 6: "The most narcissistic were the ones who had become famous through reality TV shows — they scored highest on vanity and willingness to exploit other people." Ini langsung mendukung pernyataan soal.',
+      },
+      {
+        id: "int-r5-tfng7",
+        type: "true-false-not-given",
+        question: "Actors were the least self-obsessed group of celebrities.",
+        options: ["True", "False", "Not Given"],
+        correctAnswer: "False",
+        reason:
+          'FALSE — Paragraf 6: "the least narcissistic were musicians." Bukan aktor, melainkan musisi yang paling tidak narsis. Aktor berada di urutan kedua (setelah reality TV stars), bukan yang paling rendah.',
+      },
+      {
+        id: "int-r5-tfng8",
+        type: "true-false-not-given",
+        question:
+          "The study included sports players as one of the celebrity types.",
+        options: ["True", "False", "Not Given"],
+        correctAnswer: "Not Given",
+        reason:
+          "NOT GIVEN — Paragraf 6 hanya menyebutkan tiga kelompok selebriti: reality TV stars, actors, dan musicians. Tidak ada informasi tentang atlet/sports players dalam teks, sehingga kita tidak bisa menentukan benar atau salah.",
+      },
+      {
+        id: "int-r5-tfng9",
+        type: "true-false-not-given",
+        question:
+          "The research concluded that the experience of being a celebrity made people more narcissistic than they were previously.",
+        options: ["True", "False", "Not Given"],
+        correctAnswer: "False",
+        reason:
+          'FALSE — Paragraf 6 secara eksplisit menyatakan: "there was no connection between narcissism and the length of time the celebrity had been famous…becoming famous probably did not make the celebrities narcissistic — they already were beforehand." Penelitian menyimpulkan kebalikannya.',
+      },
+      {
+        id: "int-r5-tfng10",
+        type: "true-false-not-given",
+        question:
+          "The author says that celebrities tend to exhibit negative qualities and are therefore not good role models.",
+        options: ["True", "False", "Not Given"],
+        correctAnswer: "True",
+        reason:
+          'TRUE — Paragraf 7 (penutup): "People who are very successful or famous tend to be narcissists and are liable to be ruthless, self-seeking workaholics…they are also often desperate and lonely. They make disastrous role models." Penulis dengan jelas menyatakan bahwa selebriti bukan panutan yang baik.',
       },
     ],
   },
@@ -2364,13 +2641,13 @@ const grammarLessons: ModuleLesson[] = [
         title: "FUNGSI Simple Present Tense",
         points: [
           "1️⃣ Kebiasaan / Routine",
-          '   → She drinks coffee in the morning.',
+          "   → She drinks coffee in the morning.",
           "2️⃣ Jadwal (Scheduled event)",
-          '   → The train leaves at 7.30 pm.',
+          "   → The train leaves at 7.30 pm.",
           "3️⃣ Fakta (General fact)",
-          '   → The weather is sunny.',
+          "   → The weather is sunny.",
           "4️⃣ Arahan / Instruksi (Instruction)",
-          '   → First, you should put the book.',
+          "   → First, you should put the book.",
           "─────────────────────────────",
           "⏱ Time Signal: always, usually, often, sometimes, rarely, seldom, never,",
           "   every day / every week / every month / every year",
@@ -2479,7 +2756,8 @@ const grammarLessons: ModuleLesson[] = [
         id: "int-gr2-rev-q3",
         section: "quiz",
         type: "multiple-choice",
-        question: "English ______ as an international language in many countries.",
+        question:
+          "English ______ as an international language in many countries.",
         options: ["Uses", "Is used", "Used"],
         correctAnswer: "Is used",
         reason:
@@ -2489,7 +2767,8 @@ const grammarLessons: ModuleLesson[] = [
         id: "int-gr2-rev-q4",
         section: "quiz",
         type: "multiple-choice",
-        question: "A new policy ______ by the organization to reduce pollution.",
+        question:
+          "A new policy ______ by the organization to reduce pollution.",
         options: ["Implements", "Is implemented", "Implement"],
         correctAnswer: "Is implemented",
         reason:
@@ -2524,7 +2803,8 @@ const grammarLessons: ModuleLesson[] = [
         id: "int-gr2-rev-q7",
         section: "quiz",
         type: "multiple-choice",
-        question: 'Correct this sentence: "Hmm, your cookies smells really good."',
+        question:
+          'Correct this sentence: "Hmm, your cookies smells really good."',
         options: [
           "Hmm, your cookies smell really good.",
           "Hmm, your cookie smells really good.",
@@ -2539,7 +2819,8 @@ const grammarLessons: ModuleLesson[] = [
         id: "int-gr2-rev-q8",
         section: "quiz",
         type: "multiple-choice",
-        question: 'Correct this sentence: "She be highly interested of studying English."',
+        question:
+          'Correct this sentence: "She be highly interested of studying English."',
         options: [
           "She is highly interested in studying English.",
           "She is highly interested of studying English.",
@@ -2554,7 +2835,8 @@ const grammarLessons: ModuleLesson[] = [
         id: "int-gr2-rev-q9",
         section: "quiz",
         type: "multiple-choice",
-        question: 'Correct this sentence: "The recruitment process is consist of several steps."',
+        question:
+          'Correct this sentence: "The recruitment process is consist of several steps."',
         options: [
           "The recruitment process consists of several steps.",
           "The recruitment process is consisted of several steps.",
@@ -2569,7 +2851,8 @@ const grammarLessons: ModuleLesson[] = [
         id: "int-gr2-rev-q10",
         section: "quiz",
         type: "multiple-choice",
-        question: 'Correct this sentence: "He beliefs that his dream will come true."',
+        question:
+          'Correct this sentence: "He beliefs that his dream will come true."',
         options: [
           "He believes that his dream will come true.",
           "He belief that his dream will come true.",
@@ -2584,10 +2867,12 @@ const grammarLessons: ModuleLesson[] = [
       {
         id: "int-gr2-s1q1",
         type: "multiple-choice",
-        question: "I ......... such a precious opportunity to join this program.",
+        question:
+          "I ......... such a precious opportunity to join this program.",
         options: ["was given", "am given", "do given"],
         correctAnswer: "am given",
-        reason: "Subjek 'I' → gunakan 'am'. Passive Voice Simple Present: S + am/is/are + V3. 'given' = V3 dari 'give'.",
+        reason:
+          "Subjek 'I' → gunakan 'am'. Passive Voice Simple Present: S + am/is/are + V3. 'given' = V3 dari 'give'.",
       },
       {
         id: "int-gr2-s1q2",
@@ -2595,15 +2880,21 @@ const grammarLessons: ModuleLesson[] = [
         question: "The men ......... of stealing money.",
         options: ["is accused", "are accused", "am accused"],
         correctAnswer: "are accused",
-        reason: "'The men' = plural → gunakan 'are'. Simple Present Passive: The men + are + V3 (accused).",
+        reason:
+          "'The men' = plural → gunakan 'are'. Simple Present Passive: The men + are + V3 (accused).",
       },
       {
         id: "int-gr2-s1q3",
         type: "multiple-choice",
         question: "Their scores ......... by the committee.",
-        options: ["do not fairly accumulate", "are not fair accumulated", "are not fairly accumulated"],
+        options: [
+          "do not fairly accumulate",
+          "are not fair accumulated",
+          "are not fairly accumulated",
+        ],
         correctAnswer: "are not fairly accumulated",
-        reason: "Passive negatif: S + are not + V3. 'fairly' = adverb (menerangkan V3), bukan adjective, jadi 'fairly accumulated' bukan 'fair accumulated'.",
+        reason:
+          "Passive negatif: S + are not + V3. 'fairly' = adverb (menerangkan V3), bukan adjective, jadi 'fairly accumulated' bukan 'fair accumulated'.",
       },
       {
         id: "int-gr2-s1q4",
@@ -2611,7 +2902,8 @@ const grammarLessons: ModuleLesson[] = [
         question: "...... data ......... analyzed together with professor.",
         options: ["this, are not", "these, are not", "those, do not"],
         correctAnswer: "these, are not",
-        reason: "'Data' = plural noun → determiner 'these' (plural). Passive negatif: these data + are not + V3.",
+        reason:
+          "'Data' = plural noun → determiner 'these' (plural). Passive negatif: these data + are not + V3.",
       },
       {
         id: "int-gr2-s1q5",
@@ -2619,7 +2911,8 @@ const grammarLessons: ModuleLesson[] = [
         question: "...... all of the questions correctly answered by Radit?",
         options: ["are", "do", "is"],
         correctAnswer: "are",
-        reason: "Passive interrogatif: Are/Is + S + V3? 'all of the questions' = plural → 'Are'.",
+        reason:
+          "Passive interrogatif: Are/Is + S + V3? 'all of the questions' = plural → 'Are'.",
       },
       {
         id: "int-gr2-s1q6",
@@ -2627,7 +2920,8 @@ const grammarLessons: ModuleLesson[] = [
         question: "... my pizza eaten by you?",
         options: ["is", "are", "does"],
         correctAnswer: "is",
-        reason: "'My pizza' = singular → 'Is'. Passive interrogatif: Is + S + V3? 'eaten' = V3 dari 'eat'.",
+        reason:
+          "'My pizza' = singular → 'Is'. Passive interrogatif: Is + S + V3? 'eaten' = V3 dari 'eat'.",
       },
       {
         id: "int-gr2-s1q7",
@@ -2635,7 +2929,8 @@ const grammarLessons: ModuleLesson[] = [
         question: "My statement ......... by opposing team.",
         options: ["are argued", "is argued", "do argued"],
         correctAnswer: "is argued",
-        reason: "'My statement' = singular → 'is'. Passive Simple Present: S + is + V3. 'argued' = V3 dari 'argue'.",
+        reason:
+          "'My statement' = singular → 'is'. Passive Simple Present: S + is + V3. 'argued' = V3 dari 'argue'.",
       },
       {
         id: "int-gr2-s1q8",
@@ -2643,7 +2938,8 @@ const grammarLessons: ModuleLesson[] = [
         question: "... this information directly derived by reliable source?",
         options: ["are", "is", "do"],
         correctAnswer: "is",
-        reason: "'This information' = singular (uncountable) → 'Is'. Passive interrogatif: Is + S + V3?",
+        reason:
+          "'This information' = singular (uncountable) → 'Is'. Passive interrogatif: Is + S + V3?",
       },
       {
         id: "int-gr2-s1q9",
@@ -2651,15 +2947,21 @@ const grammarLessons: ModuleLesson[] = [
         question: "Anna's paper ......... by Professor Mark.",
         options: ["are examined", "be examined", "is examined"],
         correctAnswer: "is examined",
-        reason: "'Anna's paper' = singular → 'is'. Passive Simple Present (+): S + is + V3. 'be examined' salah karena 'be' bukan bentuk finite.",
+        reason:
+          "'Anna's paper' = singular → 'is'. Passive Simple Present (+): S + is + V3. 'be examined' salah karena 'be' bukan bentuk finite.",
       },
       {
         id: "int-gr2-s1q10",
         type: "multiple-choice",
         question: "This meat ......... by Joe.",
-        options: ["is not well grilled", "are not well grilled", "do not well grilled"],
+        options: [
+          "is not well grilled",
+          "are not well grilled",
+          "do not well grilled",
+        ],
         correctAnswer: "is not well grilled",
-        reason: "'This meat' = singular → 'is not'. Passive negatif: S + is not + V3. 'well' = adverb menerangkan 'grilled'.",
+        reason:
+          "'This meat' = singular → 'is not'. Passive negatif: S + is not + V3. 'well' = adverb menerangkan 'grilled'.",
       },
       // ── Set 2: Non-Verbal (BE + ANA) ─────────────────────────────────────────
       {
@@ -2669,7 +2971,8 @@ const grammarLessons: ModuleLesson[] = [
         question: "Elisa and I ... at Risa's house.",
         options: ["are", "be", "is"],
         correctAnswer: "are",
-        reason: "'Elisa and I' = compound subject (plural) → 'are'. Non-Verbal: S + are + adverb of place.",
+        reason:
+          "'Elisa and I' = compound subject (plural) → 'are'. Non-Verbal: S + are + adverb of place.",
       },
       {
         id: "int-gr2-s2q2",
@@ -2678,16 +2981,22 @@ const grammarLessons: ModuleLesson[] = [
         question: "These ...... are very rare.",
         options: ["species", "specieses", "specie"],
         correctAnswer: "species",
-        reason: "'Species' adalah kata yang bentuk singular dan pluralnya sama (irregular). Tidak ada 'specieses' atau 'specie'.",
+        reason:
+          "'Species' adalah kata yang bentuk singular dan pluralnya sama (irregular). Tidak ada 'specieses' atau 'specie'.",
       },
       {
         id: "int-gr2-s2q3",
         section: "middle",
         type: "multiple-choice",
         question: "They are ..........",
-        options: ["the winneres of this competition", "the winners of this competition", "the winner of this competition"],
+        options: [
+          "the winneres of this competition",
+          "the winners of this competition",
+          "the winner of this competition",
+        ],
         correctAnswer: "the winners of this competition",
-        reason: "'They are' → butuh plural noun. 'Winners' = plural yang benar. 'Winneres' salah ejaan.",
+        reason:
+          "'They are' → butuh plural noun. 'Winners' = plural yang benar. 'Winneres' salah ejaan.",
       },
       {
         id: "int-gr2-s2q4",
@@ -2696,7 +3005,8 @@ const grammarLessons: ModuleLesson[] = [
         question: "I ......... eating vegetables day in and day out.",
         options: ["am sick to", "am sick of", "am sick for"],
         correctAnswer: "am sick of",
-        reason: "'Sick of' = idiom yang benar (bosan dengan). 'Sick to' dan 'sick for' bukan idiom baku dalam konteks ini.",
+        reason:
+          "'Sick of' = idiom yang benar (bosan dengan). 'Sick to' dan 'sick for' bukan idiom baku dalam konteks ini.",
       },
       {
         id: "int-gr2-s2q5",
@@ -2705,7 +3015,8 @@ const grammarLessons: ModuleLesson[] = [
         question: "Our score ... the highest in C group.",
         options: ["is", "are", "was"],
         correctAnswer: "is",
-        reason: "'Our score' = singular → 'is'. Non-Verbal Simple Present: S + is + adjective/noun.",
+        reason:
+          "'Our score' = singular → 'is'. Non-Verbal Simple Present: S + is + adjective/noun.",
       },
       {
         id: "int-gr2-s2q6",
@@ -2714,7 +3025,8 @@ const grammarLessons: ModuleLesson[] = [
         question: "The meat ... burning.",
         options: ["are", "is", "be"],
         correctAnswer: "is",
-        reason: "'The meat' = singular (uncountable) → 'is'. Present Continuous: S + is + V-ing. 'burning' = V-ing.",
+        reason:
+          "'The meat' = singular (uncountable) → 'is'. Present Continuous: S + is + V-ing. 'burning' = V-ing.",
       },
       {
         id: "int-gr2-s2q7",
@@ -2723,7 +3035,8 @@ const grammarLessons: ModuleLesson[] = [
         question: "I ... not that hungry.",
         options: ["am", "be", "do"],
         correctAnswer: "am",
-        reason: "'I' → selalu gunakan 'am'. Non-Verbal negatif: I + am + not + adjective.",
+        reason:
+          "'I' → selalu gunakan 'am'. Non-Verbal negatif: I + am + not + adjective.",
       },
       {
         id: "int-gr2-s2q8",
@@ -2732,7 +3045,8 @@ const grammarLessons: ModuleLesson[] = [
         question: "... everyone here?",
         options: ["is", "are", "do"],
         correctAnswer: "is",
-        reason: "'Everyone' = indefinite pronoun → selalu singular → 'Is'. Non-Verbal interrogatif: Is + everyone + adverb?",
+        reason:
+          "'Everyone' = indefinite pronoun → selalu singular → 'Is'. Non-Verbal interrogatif: Is + everyone + adverb?",
       },
       {
         id: "int-gr2-s2q9",
@@ -2741,7 +3055,8 @@ const grammarLessons: ModuleLesson[] = [
         question: ".......... dead.",
         options: ["These cactus are", "Those cactuses are", "Those cacti are"],
         correctAnswer: "Those cacti are",
-        reason: "'Cacti' = bentuk plural irregular dari 'cactus' (Latin). 'Cactuses' kurang tepat secara akademis. Jarak jauh → 'those'.",
+        reason:
+          "'Cacti' = bentuk plural irregular dari 'cactus' (Latin). 'Cactuses' kurang tepat secara akademis. Jarak jauh → 'those'.",
       },
       {
         id: "int-gr2-s2q10",
@@ -2750,7 +3065,8 @@ const grammarLessons: ModuleLesson[] = [
         question: "... somebody inside?",
         options: ["is", "are", "does"],
         correctAnswer: "is",
-        reason: "'Somebody' = indefinite pronoun → selalu singular → 'Is'. Non-Verbal interrogatif: Is + somebody + adverb?",
+        reason:
+          "'Somebody' = indefinite pronoun → selalu singular → 'Is'. Non-Verbal interrogatif: Is + somebody + adverb?",
       },
       // ── Set 3: Verbal Active (Do/Does) ────────────────────────────────────────
       {
@@ -2760,7 +3076,8 @@ const grammarLessons: ModuleLesson[] = [
         question: "......... many siblings?",
         options: ["Do Rachel has", "Does Rachel has", "Does Rachel have"],
         correctAnswer: "Does Rachel have",
-        reason: "'Rachel' = singular → 'Does'. Setelah Does: gunakan V1 bare (tanpa -s/-es). Jadi 'have', bukan 'has'.",
+        reason:
+          "'Rachel' = singular → 'Does'. Setelah Does: gunakan V1 bare (tanpa -s/-es). Jadi 'have', bukan 'has'.",
       },
       {
         id: "int-gr2-s3q2",
@@ -2769,7 +3086,8 @@ const grammarLessons: ModuleLesson[] = [
         question: "My family and I ......... holiday once a year.",
         options: ["go on", "gone on", "goes on"],
         correctAnswer: "go on",
-        reason: "'My family and I' = compound subject (plural, termasuk 'I') → V1 tanpa -s. 'Go on holiday' = idiom.",
+        reason:
+          "'My family and I' = compound subject (plural, termasuk 'I') → V1 tanpa -s. 'Go on holiday' = idiom.",
       },
       {
         id: "int-gr2-s3q3",
@@ -2778,7 +3096,8 @@ const grammarLessons: ModuleLesson[] = [
         question: "The accident ......... on Merdeka street.",
         options: ["happen", "happens", "is happened"],
         correctAnswer: "happens",
-        reason: "'The accident' = singular → V1 + s/es. 'Happen' adalah intransitive verb → tidak bisa passive ('is happened' salah).",
+        reason:
+          "'The accident' = singular → V1 + s/es. 'Happen' adalah intransitive verb → tidak bisa passive ('is happened' salah).",
       },
       {
         id: "int-gr2-s3q4",
@@ -2787,7 +3106,8 @@ const grammarLessons: ModuleLesson[] = [
         question: "My dad ......... love playing badminton.",
         options: ["do not", "is not", "does not"],
         correctAnswer: "does not",
-        reason: "'My dad' = singular (He) → 'does not'. Negatif Verbal Active: S + does not + V1. 'is not' hanya untuk non-verbal.",
+        reason:
+          "'My dad' = singular (He) → 'does not'. Negatif Verbal Active: S + does not + V1. 'is not' hanya untuk non-verbal.",
       },
       {
         id: "int-gr2-s3q5",
@@ -2796,7 +3116,8 @@ const grammarLessons: ModuleLesson[] = [
         question: "...... these plants absorb water well?",
         options: ["are", "do", "does"],
         correctAnswer: "do",
-        reason: "'These plants' = plural → 'Do'. Verbal interrogatif: Do/Does + S + V1? 'are' hanya untuk non-verbal.",
+        reason:
+          "'These plants' = plural → 'Do'. Verbal interrogatif: Do/Does + S + V1? 'are' hanya untuk non-verbal.",
       },
       {
         id: "int-gr2-s3q6",
@@ -2805,16 +3126,22 @@ const grammarLessons: ModuleLesson[] = [
         question: "Your knowledge ...... not guarantee your politeness.",
         options: ["does", "are", "do"],
         correctAnswer: "does",
-        reason: "'Your knowledge' = singular (uncountable) → 'does'. Negatif Verbal: S + does not + V1. 'guarantee' = V1 bare.",
+        reason:
+          "'Your knowledge' = singular (uncountable) → 'does'. Negatif Verbal: S + does not + V1. 'guarantee' = V1 bare.",
       },
       {
         id: "int-gr2-s3q7",
         section: "final",
         type: "multiple-choice",
         question: "......... good?",
-        options: ["does your soup tastes", "is your soup taste", "does your soup taste"],
+        options: [
+          "does your soup tastes",
+          "is your soup taste",
+          "does your soup taste",
+        ],
         correctAnswer: "does your soup taste",
-        reason: "'Your soup' = singular → 'Does'. Setelah Does: V1 bare ('taste', bukan 'tastes'). 'is your soup taste' salah karena 'taste' di sini adalah verb.",
+        reason:
+          "'Your soup' = singular → 'Does'. Setelah Does: V1 bare ('taste', bukan 'tastes'). 'is your soup taste' salah karena 'taste' di sini adalah verb.",
       },
       {
         id: "int-gr2-s3q8",
@@ -2823,7 +3150,8 @@ const grammarLessons: ModuleLesson[] = [
         question: "In fact, many children ...... not receive decent education.",
         options: ["does", "are", "do"],
         correctAnswer: "do",
-        reason: "'Many children' = plural → 'do'. Negatif Verbal: S + do not + V1. 'are' hanya untuk non-verbal.",
+        reason:
+          "'Many children' = plural → 'do'. Negatif Verbal: S + do not + V1. 'are' hanya untuk non-verbal.",
       },
       {
         id: "int-gr2-s3q9",
@@ -2832,7 +3160,8 @@ const grammarLessons: ModuleLesson[] = [
         question: "Sarah and Joe ...... me to go out tonight.",
         options: ["asks", "ask", "asking"],
         correctAnswer: "ask",
-        reason: "'Sarah and Joe' = plural → V1 tanpa -s. 'ask' = V1 bare. 'asks' hanya untuk He/She/It. 'asking' butuh auxiliary.",
+        reason:
+          "'Sarah and Joe' = plural → V1 tanpa -s. 'ask' = V1 bare. 'asks' hanya untuk He/She/It. 'asking' butuh auxiliary.",
       },
       {
         id: "int-gr2-s3q10",
@@ -2841,7 +3170,8 @@ const grammarLessons: ModuleLesson[] = [
         question: "Water ......... the drain.",
         options: ["run down", "runs down", "is run down"],
         correctAnswer: "runs down",
-        reason: "'Water' = singular (uncountable) → V1 + s. 'runs down' = Simple Present Verbal Active. 'is run down' = passive (tidak tepat untuk konteks ini).",
+        reason:
+          "'Water' = singular (uncountable) → V1 + s. 'runs down' = Simple Present Verbal Active. 'is run down' = passive (tidak tepat untuk konteks ini).",
       },
     ],
   },
@@ -2853,7 +3183,8 @@ const grammarLessons: ModuleLesson[] = [
     day: 3,
     tutor: "Ms. Manda",
     title: "Simple Past Tense",
-    subtitle: "Non-Verbal, Verbal Active, Verbal Passive — Simple Past (was/were / V2 / did)",
+    subtitle:
+      "Non-Verbal, Verbal Active, Verbal Passive — Simple Past (was/were / V2 / did)",
     overview:
       "Materi Simple Past Tense lengkap: NON-VERBAL (was/were + ANA), VERBAL ACTIVE (S + V2), dan VERBAL PASSIVE (S + was/were + V3 + by agent) — beserta fungsi, time signal, dan contoh dari kelas.",
     materialSections: [
@@ -2975,7 +3306,11 @@ const grammarLessons: ModuleLesson[] = [
         section: "final",
         type: "multiple-choice",
         question: "My mom ......... by her when we lived there.",
-        options: ["Was always greeting", "Was always greet", "Was always greeted"],
+        options: [
+          "Was always greeting",
+          "Was always greet",
+          "Was always greeted",
+        ],
         correctAnswer: "Was always greeted",
         reason:
           '"by her" = ciri khas Passive + "lived there" = past context → Verbal Passive Simple Past: was + V3. "greeted" = V3 dari "greet". "greeting" = V-ing (bukan V3). "greet" = V1.',
@@ -2984,7 +3319,8 @@ const grammarLessons: ModuleLesson[] = [
         id: "int-gr3-s1q4",
         section: "final",
         type: "multiple-choice",
-        question: "We ....... not reminded at all last week to bring our own stuff.",
+        question:
+          "We ....... not reminded at all last week to bring our own stuff.",
         options: ["are", "were", "did"],
         correctAnswer: "were",
         reason:
@@ -3006,7 +3342,11 @@ const grammarLessons: ModuleLesson[] = [
         type: "multiple-choice",
         question:
           "A: Where ...... you yesterday? I ...... to call you but it didn't work.\nB: Oh, I am sorry. I ...... my grandparents' house yesterday and the connection is not good there.",
-        options: ["are, tried, visit", "were, tried, visited", "were, try, visit"],
+        options: [
+          "are, tried, visit",
+          "were, tried, visited",
+          "were, try, visit",
+        ],
         correctAnswer: "were, tried, visited",
         reason:
           '"yesterday" = past. (1) "Where were you" = Non-Verbal Past, "you" = plural → were. (2) "tried" = V2 dari try (Verbal Active Past). (3) "visited" = V2 dari visit. Semua menggunakan bentuk past.',
@@ -3014,7 +3354,8 @@ const grammarLessons: ModuleLesson[] = [
       {
         id: "int-gr3-s2q2",
         type: "multiple-choice",
-        question: "It ...... such a severe pain that I ...... my lovely cat last month.",
+        question:
+          "It ...... such a severe pain that I ...... my lovely cat last month.",
         options: ["was, lost", "was, loss", "was, lose"],
         correctAnswer: "was, lost",
         reason:
@@ -3033,7 +3374,11 @@ const grammarLessons: ModuleLesson[] = [
         id: "int-gr3-s2q4",
         type: "multiple-choice",
         question: "When I ..............., I won storytelling contest.",
-        options: ["was kinder garten", "was in kinder gartet", "was in kindergarten"],
+        options: [
+          "was kinder garten",
+          "was in kinder gartet",
+          "was in kindergarten",
+        ],
         correctAnswer: "was in kindergarten",
         reason:
           'Non-Verbal Past (lokasi/kondisi): I + was + adverb of place. "in kindergarten" = preposisi yang benar. "kinder garten" salah ejaan. "kinder gartet" salah.',
@@ -3063,7 +3408,8 @@ const grammarLessons: ModuleLesson[] = [
         id: "int-gr3-s3q2",
         section: "middle",
         type: "multiple-choice",
-        question: "My friend ...... me her dream catcher before she departed to New York.",
+        question:
+          "My friend ...... me her dream catcher before she departed to New York.",
         options: ["gives", "gave", "given"],
         correctAnswer: "gave",
         reason:
@@ -3073,7 +3419,8 @@ const grammarLessons: ModuleLesson[] = [
         id: "int-gr3-s3q3",
         section: "middle",
         type: "multiple-choice",
-        question: "I ...... nothing from your last presentation since I ...... very sleepy.",
+        question:
+          "I ...... nothing from your last presentation since I ...... very sleepy.",
         options: ["got, was", "got, am", "get, was"],
         correctAnswer: "got, was",
         reason:
