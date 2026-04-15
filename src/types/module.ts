@@ -10,7 +10,7 @@ export interface ModuleExercise {
   correctAnswer?: string;
   reason?: string;
   sampleAnswer?: string;
-  section?: 'middle' | 'final';
+  section?: 'middle' | 'final' | 'quiz';
 }
 
 export interface ModuleMaterialSection {
