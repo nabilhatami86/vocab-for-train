@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
+import ExamLockGate from '@/components/ExamLockGate';
 import {
   ArrowLeft,
   CheckCircle2,
@@ -33,7 +34,7 @@ function normalize(s: string) {
   return s.toLowerCase().trim().replace(/\.+$/, "").replace(/\s+/g, " ");
 }
 
-export default function LatihanPostTestPage() {
+function LatihanPostTestContent() {
   const [sessionKey, setSessionKey] = useState(0);
   const [results, setResults] = useState<Record<string, QuestionResult>>({});
   const [textInputs, setTextInputs] = useState<Record<string, string>>({});
@@ -343,5 +344,13 @@ export default function LatihanPostTestPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function LatihanPostTestPage() {
+  return (
+    <ExamLockGate examType="post-test" examLabel="Latihan Post Test — Grammar">
+      <LatihanPostTestContent />
+    </ExamLockGate>
   );
 }

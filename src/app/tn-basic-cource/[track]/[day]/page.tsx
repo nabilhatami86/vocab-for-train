@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { getLesson, getLessonsByTrack, moduleLessons } from '@/data/modules';
 import type { ModuleTrack } from '@/types/module';
 import ModuleLessonClient from './ModuleLessonClient';
+import ExamLockGate from '@/components/ExamLockGate';
 
 interface PageProps {
   params: Promise<{ track: string; day: string }>;
@@ -45,7 +46,9 @@ export default async function ModuleLessonPage({ params }: PageProps) {
   const nextLesson = currentIdx < trackLessons.length - 1 ? trackLessons[currentIdx + 1] : null;
   const base = `/tn-basic-cource/${track}`;
 
-  return (
+  const isExam = lesson.day === 10;
+
+  const content = (
     <ModuleLessonClient
       lesson={lesson}
       backHref={`/tn-basic-cource/class/${track}`}
@@ -58,4 +61,14 @@ export default async function ModuleLessonPage({ params }: PageProps) {
       nextTitle={nextLesson?.title}
     />
   );
+
+  if (isExam) {
+    return (
+      <ExamLockGate examType="middle-test" examLabel="Middle Test">
+        {content}
+      </ExamLockGate>
+    );
+  }
+
+  return content;
 }

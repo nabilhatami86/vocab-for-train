@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import ExamLockGate from '@/components/ExamLockGate';
 import {
   ArrowLeft,
   CheckCircle2,
@@ -53,7 +54,7 @@ function normalize(s: string) {
 
 const questions: ReadingQuestion[] = readingPostTestQuestions;
 
-export default function PostTestReadingPage() {
+function PostTestReadingContent() {
   const [results, setResults]       = useState<Record<string, QuestionResult>>({});
   const [textInputs, setTextInputs] = useState<Record<string, string>>({});
   const [passageOpen, setPassageOpen] = useState(true);
@@ -472,5 +473,13 @@ export default function PostTestReadingPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function PostTestReadingPage() {
+  return (
+    <ExamLockGate examType="post-test" examLabel="Post Test — Reading">
+      <PostTestReadingContent />
+    </ExamLockGate>
   );
 }
