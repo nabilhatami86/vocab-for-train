@@ -4550,91 +4550,249 @@ const grammarLessons: ModuleLesson[] = [
           "{{annotation:Are|Vord}} {{annotation:you|S}} being {{annotation:hungry|ANA}}?",
         ],
       },
+      {
+        title: "Review — Tabel Perbandingan 3 Tenses",
+        points: [
+          "📌 Sebelum latihan, mari review rumus dari tenses yang sudah dipelajari.",
+          "─────────────────────────────",
+          "🟦 PRESENT (habit / fact)",
+          "  Active      → S + V1",
+          "  Passive     → S + is/am/are + V3",
+          "  Non-Verbal  → S + is/am/are + ANA",
+          "─────────────────────────────",
+          "🟧 PAST (past event)",
+          "  Active      → S + V2",
+          "  Passive     → S + was/were + V3",
+          "  Non-Verbal  → S + was/were + ANA",
+          "─────────────────────────────",
+          "🟩 PRESENT CONTINUOUS (right now)",
+          "  Active      → S + is/am/are + V1-ing",
+          "  Passive     → S + is/am/are + being + V3",
+          "  Non-Verbal  → S + is/am/are + being + ANA",
+          "─────────────────────────────",
+          "💡 ANA = Adjective / Noun / Adverb (pelengkap non-verbal)",
+          "{{quiz-game:Review Grammar Inter|25 soal · Present · Past · Present Continuous}}",
+        ],
+      },
     ],
     exercises: [
       {
         id: "int-gr4-q1",
         type: "multiple-choice",
-        question: "Which sentence correctly uses Present Continuous Verbal Active (+)?",
-        options: [
-          "She is tackling her problem by herself.",
-          "She tackling her problem by herself.",
-          "She are tackling her problem by herself.",
-          "She was tackling her problem by herself.",
-        ],
-        correctAnswer: "She is tackling her problem by herself.",
-        reason: 'Verbal Active (+) = S + is/am/are + V-ing. "She is tackling" adalah bentuk yang benar untuk subjek orang ketiga tunggal.',
+        question:
+          "Each of the employees …… working on a different task at the moment.",
+        options: ["Am", "Is", "Are", "Were"],
+        correctAnswer: "Is",
+        reason:
+          '"Each of the employees" = singular subject (each = singular). Gunakan "Is" untuk Present Continuous: Each … is working.',
       },
       {
         id: "int-gr4-q2",
         type: "multiple-choice",
-        question: "Which sentence correctly uses Present Continuous Verbal Passive (+)?",
-        options: [
-          "This policy is being limited by the government.",
-          "This policy being limited by the government.",
-          "This policy is limited by the government.",
-          "This policy has been limited by the government.",
-        ],
-        correctAnswer: "This policy is being limited by the government.",
-        reason: 'Verbal Passive (+) = S + is/am/are + being + V3. "is being limited" adalah bentuk yang benar.',
+        question: "The report ___ by the manager every Monday morning.",
+        options: ["Reviews", "Is reviewing", "Is checked", "Was checked"],
+        correctAnswer: "Is checked",
+        reason:
+          '"Every Monday morning" = kebiasaan/rutinitas → Present tense. Subjek = the report (benda, pasif) → Is checked (Present Passive).',
       },
       {
         id: "int-gr4-q3",
         type: "multiple-choice",
-        question: "Fungsi nomor 2 dari Present Continuous adalah untuk...",
-        options: [
-          "Aksi yang sedang berlangsung saat ini",
-          "Rencana yang sudah pasti di masa depan",
-          "Menyatakan kejengkelan",
-          "Aksi sementara",
-        ],
-        correctAnswer: "Rencana yang sudah pasti di masa depan",
-        reason: 'Fungsi ke-2 Present Continuous = rencana yang SUDAH PASTI (future plan). Contoh: "I am appointing with doctor tomorrow."',
+        question:
+          "While the students ___ the test, the teacher walked around the room.",
+        options: ["Take", "Took", "Are taking", "Were taking"],
+        correctAnswer: "Were taking",
+        reason:
+          '"While … walked" = kejadian di masa lalu yang sedang berlangsung → Past Continuous: Were taking.',
       },
       {
         id: "int-gr4-q4",
         type: "multiple-choice",
-        question: 'Kalimat mana yang menunjukkan fungsi "menyatakan kejengkelan" dari Present Continuous?',
-        options: [
-          "He is studying right now.",
-          "I am staying with my friend for this time.",
-          "She is always calling me when I am teaching.",
-          "The government's program is still happening.",
-        ],
-        correctAnswer: "She is always calling me when I am teaching.",
-        reason: 'Fungsi ke-5: menyatakan kejengkelan ditandai dengan kata "always" atau "constantly". "She is always calling me" menunjukkan rasa jengkel terhadap kebiasaan orang lain.',
+        question:
+          "The results of the experiment ___ surprising to the researchers.",
+        options: ["Is", "Are", "Was", "Were"],
+        correctAnswer: "Are",
+        reason:
+          '"The results" = plural subject. Non-verbal present → S + are + ANA. "Are surprising."',
       },
       {
         id: "int-gr4-q5",
         type: "multiple-choice",
-        question: "Rumus Non-Verbal Present Continuous (+) adalah...",
+        question: "The documents ___ currently ___ by the legal team.",
         options: [
-          "S + is/am/are + V-ing",
-          "S + is/am/are + being + V3",
-          "S + is/am/are + being + ANA",
-          "S + is/am/are + not + ANA",
+          "Is / being reviewed",
+          "Are / being reviewed",
+          "Were / reviewed",
+          "Was / reviewing",
         ],
-        correctAnswer: "S + is/am/are + being + ANA",
-        reason: 'Non-Verbal Present Continuous (+) = S + is/am/are + being + ANA (Adjective/Noun/Adverb). Contoh: "The ball is being tremendous."',
+        correctAnswer: "Are / being reviewed",
+        reason:
+          '"The documents" = plural. "Currently" = sekarang → Present Continuous Passive: are + being + V3.',
       },
       {
         id: "int-gr4-q6",
-        type: "fill-the-gap",
-        question: "Fill in the blank — Verbal Active (+):\n'The government _____ (mitigate) the flood right now.'",
-        correctAnswer: "is mitigating",
-        reason: 'Verbal Active (+) Present Continuous: S + is/am/are + V-ing. "The government" = subjek tunggal → pakai "is" + mitigating.',
+        type: "multiple-choice",
+        question: "Look! The children ___ in the rain without umbrellas.",
+        options: ["Played", "Play", "Are playing", "Were playing"],
+        correctAnswer: "Are playing",
+        reason:
+          '"Look!" = sinyal Present Continuous (sedang terjadi sekarang). The children are playing.',
       },
       {
         id: "int-gr4-q7",
-        type: "fill-the-gap",
-        question: "Fill in the blank — Verbal Passive (?):\n'_____ the policy _____ limited by the committee?'",
-        correctAnswer: "Is / being",
-        reason: 'Verbal Passive (?) = Is/Am/Are + S + being + V3. Jawaban: "Is the policy being limited by the committee?"',
+        type: "multiple-choice",
+        question: "The machine ___ properly when it suddenly stopped.",
+        options: ["Works", "Is working", "Worked", "Was working"],
+        correctAnswer: "Was working",
+        reason:
+          '"When it suddenly stopped" = interupsi di masa lalu → aksi yang sedang berlangsung = Past Continuous: Was working.',
       },
       {
         id: "int-gr4-q8",
+        type: "multiple-choice",
+        question: "A new policy ___ by the company last year.",
+        options: [
+          "Introduces",
+          "Is introduced",
+          "Was introduced",
+          "Were introduced",
+        ],
+        correctAnswer: "Was introduced",
+        reason:
+          '"Last year" = masa lalu. Subjek tunggal (a policy), pasif → Was introduced (Past Passive).',
+      },
+      {
+        id: "int-gr4-q9",
+        type: "multiple-choice",
+        question: "The students ___ not allowed to leave early last week.",
+        options: ["Are", "Were", "Is", "Was"],
+        correctAnswer: "Were",
+        reason:
+          '"Last week" = masa lalu. "The students" = plural → Were (Past Non-Verbal: were + ANA).',
+      },
+      {
+        id: "int-gr4-q10",
+        type: "multiple-choice",
+        question: "The proposal ___ by the committee at the moment.",
+        options: [
+          "Reviews",
+          "Was reviewed",
+          "Is being reviewed",
+          "Are being reviewed",
+        ],
+        correctAnswer: "Is being reviewed",
+        reason:
+          '"At the moment" = Present Continuous. Subjek tunggal (the proposal), pasif → Is being reviewed.',
+      },
+      {
+        id: "int-gr4-q11",
+        type: "multiple-choice",
+        question: "The cake ___ by my sister every Sunday.",
+        options: ["Baked", "Was baked", "Is baked", "Are baked"],
+        correctAnswer: "Is baked",
+        reason:
+          '"Every Sunday" = kebiasaan → Present tense. Subjek tunggal, pasif → Is baked (Present Passive).',
+      },
+      {
+        id: "int-gr4-q12",
+        type: "multiple-choice",
+        question: "Everyone ___ excited about the upcoming event.",
+        options: ["Are", "Is", "Was", "Were"],
+        correctAnswer: "Is",
+        reason:
+          '"Everyone" = singular (seperti each, every) → Is. Non-verbal present: Everyone is + ANA.',
+      },
+      {
+        id: "int-gr4-q13",
+        type: "multiple-choice",
+        question: "At this time yesterday, we ___ for the final exam.",
+        options: ["Study", "Studied", "Are studying", "Were studying"],
+        correctAnswer: "Were studying",
+        reason:
+          '"At this time yesterday" = Past Continuous signal. We were studying.',
+      },
+      {
+        id: "int-gr4-q14",
+        type: "multiple-choice",
+        question: "Several new buildings ___ in this area right now.",
+        options: [
+          "Construct",
+          "Is being constructed",
+          "Was constructed",
+          "Are being constructed",
+        ],
+        correctAnswer: "Are being constructed",
+        reason:
+          '"Right now" = Present Continuous. "Several new buildings" = plural, pasif → Are being constructed.',
+      },
+      {
+        id: "int-gr4-q15",
+        type: "multiple-choice",
+        question: "The room ___ cleaned when I arrived.",
+        options: ["Is", "Was", "Were", "Has been"],
+        correctAnswer: "Was",
+        reason:
+          '"When I arrived" = masa lalu. Subjek tunggal (the room), non-verbal/pasif → Was.',
+      },
+      {
+        id: "int-gr4-q16",
         type: "task",
-        question: "Buat 3 kalimat Present Continuous:\n1. Verbal Active (+) tentang aktivitasmu hari ini\n2. Verbal Passive (-) tentang sebuah proyek\n3. Non-Verbal (?) tentang seseorang",
+        question:
+          "Terjemahkan ke bahasa Inggris:\n\"Dia (perempuan) membaca buku setiap pagi.\"",
+      },
+      {
+        id: "int-gr4-q17",
+        type: "task",
+        question:
+          "Terjemahkan ke bahasa Inggris:\n\"Laporan itu dikirim oleh manajer kemarin.\"",
+      },
+      {
+        id: "int-gr4-q18",
+        type: "task",
+        question:
+          "Terjemahkan ke bahasa Inggris:\n\"Para siswa sedang mengerjakan tugas mereka sekarang.\"",
+      },
+      {
+        id: "int-gr4-q19",
+        type: "task",
+        question:
+          "Terjemahkan ke bahasa Inggris:\n\"Jembatan itu dibangun dua tahun yang lalu.\"",
+      },
+      {
+        id: "int-gr4-q20",
+        type: "task",
+        question:
+          "Terjemahkan ke bahasa Inggris:\n\"Rapat sedang berlangsung saat kami tiba.\"",
+      },
+      {
+        id: "int-gr4-q21",
+        type: "task",
+        question:
+          "Terjemahkan ke bahasa Inggris:\n\"Surat kabar itu dibaca oleh banyak orang setiap hari.\"",
+      },
+      {
+        id: "int-gr4-q22",
+        type: "task",
+        question:
+          "Terjemahkan ke bahasa Inggris:\n\"Dia (laki-laki) sedang berbicara dengan klien saat ini.\"",
+      },
+      {
+        id: "int-gr4-q23",
+        type: "task",
+        question:
+          "Terjemahkan ke bahasa Inggris:\n\"Proyek itu sedang ditinjau oleh tim saat ini.\"",
+      },
+      {
+        id: "int-gr4-q24",
+        type: "task",
+        question:
+          "Terjemahkan ke bahasa Inggris:\n\"Mereka tidak hadir di kantor kemarin.\"",
+      },
+      {
+        id: "int-gr4-q25",
+        type: "task",
+        question:
+          "Terjemahkan ke bahasa Inggris:\n\"Kebijakan baru sedang diterapkan oleh perusahaan sekarang.\"",
       },
     ],
   },
@@ -4645,94 +4803,36 @@ const grammarLessons: ModuleLesson[] = [
     track: "grammar",
     day: 5,
     tutor: "M",
-    title: "Gerund — Part 1",
-    subtitle: "Pengertian, bentuk, dan fungsi Gerund dalam kalimat",
+    title: "Review — Present, Past & Present Continuous",
+    subtitle: "Review tiga tenses utama beserta latihan soal acak",
     overview:
-      "Gerund adalah bentuk -ing dari kata kerja yang digunakan sebagai noun. Materi ini mencakup pengertian, jenis, bentuk, dan fungsi gerund sebagai subject, complement, object of preposition, dan object of verb.",
+      "Review perbandingan rumus Present, Past, dan Present Continuous (Active, Passive, Non-Verbal), dilanjutkan dengan 25 soal latihan pilihan ganda dan terjemahan untuk mengukur pemahaman.",
     materialSections: [
       {
-        title: "A. What is Gerund?",
+        title: "Review — Tabel Perbandingan 3 Tenses",
         points: [
-          "Gerund = the -ing form of a verb used as a NOUN.",
-          "Contoh: Swimming is my hobby. (Swimming = gerund sebagai subject)",
+          "📌 Sebelum lanjut, mari review rumus dari tenses yang sudah dipelajari.",
           "─────────────────────────────",
-          "B. Types of Gerund:",
-          "1. Simple gerund: typing, reading, swimming",
-          "2. Gerund phrase: listening to music, speaking English",
-        ],
-      },
-      {
-        title: "C. Gerund Forms",
-        points: [
-          "1. Active (V-ing): I like visiting historical places.",
-          "2. Passive (Being + V3): I like being visited by old friends.",
-          "3. Negative (Not + V-ing): Not being picked up by Selly makes me sad.",
-        ],
-      },
-      {
-        title: "D. Functions of Gerund",
-        points: [
-          "1. As SUBJECT:",
-          "   Learning a foreign language is a necessity for many people in the world.",
-          "2. As COMPLEMENT:",
-          "   My big goals are obtaining the scholarship and studying abroad.",
-          "3. As OBJECT OF PREPOSITION:",
-          "   I was accustomed to speaking English.",
-          "   (preposition: to, in, on, at, of, about, for, by, without, etc.)",
-          "4. As OBJECT of certain verb:",
-          "   a. Certain verb + gerund: You must stop smoking.",
-          "   b. Certain verb + gerund/to inf (SAME meaning): love, like, hate, begin, start, continue, prefer, can't stand, can't bear.",
-          "   I hate meeting my enemy. = I hate to meet my enemy.",
-        ],
-      },
-      {
-        title: "E. Certain Verbs Followed by Gerund (selected)",
-        points: [
-          "avoid, celebrate, complete, delay, detest, dislike, enjoy, escape, finish, forgive",
-          "keep, mind, miss, postpone, risk, stop, suggest, admit, deny, imagine",
-          "consider, continue, recommend, practice, give up, end up, can't help, go on",
-          "Note: Untuk daftar lengkap 100 verbs, lihat modul cetak grammar.",
+          "🟦 PRESENT (habit / fact)",
+          "  Active      → S + V1",
+          "  Passive     → S + is/am/are + V3",
+          "  Non-Verbal  → S + is/am/are + ANA",
+          "─────────────────────────────",
+          "🟧 PAST (past event)",
+          "  Active      → S + V2",
+          "  Passive     → S + was/were + V3",
+          "  Non-Verbal  → S + was/were + ANA",
+          "─────────────────────────────",
+          "🟩 PRESENT CONTINUOUS (right now)",
+          "  Active      → S + is/am/are + V1-ing",
+          "  Passive     → S + is/am/are + being + V3",
+          "  Non-Verbal  → S + is/am/are + being + ANA",
+          "─────────────────────────────",
+          "💡 ANA = Adjective / Noun / Adverb (pelengkap non-verbal)",
         ],
       },
     ],
-    exercises: [
-      {
-        id: "int-gr5-q1",
-        type: "multiple-choice",
-        question:
-          'What is the function of the gerund in: "Learning a foreign language is important."?',
-        options: [
-          "As object of preposition",
-          "As subject",
-          "As complement",
-          "As object of verb",
-        ],
-        correctAnswer: "As subject",
-        reason:
-          '"Learning a foreign language" berfungsi sebagai SUBJECT kalimat — gerund phrase yang menduduki posisi subjek.',
-      },
-      {
-        id: "int-gr5-q2",
-        type: "multiple-choice",
-        question:
-          "Choose the correct sentence using gerund as object of preposition.",
-        options: [
-          "She is interested to learn English.",
-          "She is interested in learning English.",
-          "She is interested learn English.",
-          "She is interested for to learn English.",
-        ],
-        correctAnswer: "She is interested in learning English.",
-        reason:
-          '"interested in" = adjective + preposition. Setelah preposition, gunakan gerund (V-ing): "learning".',
-      },
-      {
-        id: "int-gr5-q3",
-        type: "task",
-        question:
-          "Buat 4 kalimat menggunakan gerund: (1) sebagai subject, (2) sebagai complement, (3) sebagai object of preposition, (4) sebagai object of certain verb. Tandai gerund dalam setiap kalimatmu.",
-      },
-    ],
+    exercises: [],
   },
 
   // ── Day 6: Gerund Part 2 + To Infinitive ─────────────────────────────────────
