@@ -8,6 +8,7 @@ import { cn } from '@/lib/utils';
 import TTSPlayer from '@/components/tts/TTSPlayer';
 import AnnotatedText from '@/components/grammar/AnnotatedText';
 import DayNavigation from '@/components/DayNavigation';
+import ListeningAudioSection from '@/components/listening/ListeningAudioSection';
 
 interface TranslationResult {
   translated: string;
@@ -697,6 +698,70 @@ export default function ModuleLessonClient({ lesson, backHref = '/tn-basic-courc
                   {section.points.map((point, pIdx) => {
                     // Empty string = spacer between groups
                     if (!point.trim()) return <div key={`${section.title}-${pIdx}`} className="h-3" />;
+
+                    // Tenses comparison table
+                    if (point.trim() === '{{tenses-table}}') {
+                      const rows = [
+                        {
+                          label: 'PRESENT',
+                          sub: 'habit / fact',
+                          color: 'blue',
+                          active: 'S + V1',
+                          passive: 'S + is/am/are + V3',
+                          nonVerbal: 'S + is/am/are + ANA',
+                        },
+                        {
+                          label: 'PAST',
+                          sub: 'past event',
+                          color: 'orange',
+                          active: 'S + V2',
+                          passive: 'S + was/were + V3',
+                          nonVerbal: 'S + was/were + ANA',
+                        },
+                        {
+                          label: 'PRESENT CONT.',
+                          sub: 'right now',
+                          color: 'green',
+                          active: 'S + is/am/are + V1-ing',
+                          passive: 'S + is/am/are + being + V3',
+                          nonVerbal: 'S + is/am/are + being + ANA',
+                        },
+                      ] as const;
+                      const colorMap = {
+                        blue:   { badge: 'bg-blue-100 dark:bg-blue-950/40 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800', row: 'bg-blue-50/40 dark:bg-blue-950/20' },
+                        orange: { badge: 'bg-orange-100 dark:bg-orange-950/40 text-orange-700 dark:text-orange-300 border border-orange-200 dark:border-orange-800', row: 'bg-orange-50/40 dark:bg-orange-950/20' },
+                        green:  { badge: 'bg-green-100 dark:bg-green-950/40 text-green-700 dark:text-green-300 border border-green-200 dark:border-green-800', row: 'bg-green-50/40 dark:bg-green-950/20' },
+                      };
+                      return (
+                        <div key={`${section.title}-${pIdx}`} className="mt-3 rounded-xl border border-(--border) overflow-hidden text-xs">
+                          {/* Header */}
+                          <div className="grid grid-cols-4 bg-(--bg-secondary) border-b border-(--border)">
+                            {['Tense', 'Active', 'Passive', 'Non-Verbal'].map((h) => (
+                              <div key={h} className="px-3 py-2 font-bold text-(--text-muted) uppercase tracking-wider text-[10px] text-center">{h}</div>
+                            ))}
+                          </div>
+                          {/* Rows */}
+                          {rows.map((row) => {
+                            const c = colorMap[row.color];
+                            return (
+                              <div key={row.label} className={`grid grid-cols-4 border-b last:border-b-0 border-(--border) ${c.row}`}>
+                                <div className="px-3 py-3 flex flex-col items-center justify-center gap-1 border-r border-(--border)">
+                                  <span className={`inline-block px-2 py-0.5 rounded-md text-[10px] font-bold ${c.badge}`}>{row.label}</span>
+                                  <span className="text-(--text-muted) text-[10px] italic">{row.sub}</span>
+                                </div>
+                                <div className="px-3 py-3 flex items-center justify-center text-center font-mono text-(--text) border-r border-(--border)">{row.active}</div>
+                                <div className="px-3 py-3 flex items-center justify-center text-center font-mono text-(--text) border-r border-(--border)">{row.passive}</div>
+                                <div className="px-3 py-3 flex items-center justify-center text-center font-mono text-(--text)">{row.nonVerbal}</div>
+                              </div>
+                            );
+                          })}
+                          {/* Footer note */}
+                          <div className="px-3 py-2 bg-(--bg-secondary) border-t border-(--border) text-(--text-muted) text-[10px] italic">
+                            💡 ANA = Adjective / Noun / Adverb
+                          </div>
+                        </div>
+                      );
+                    }
 
                     // Quiz game card
                     const quizGameMatch = point.match(/^\{\{quiz-game:([^|]+)\|([^}]+)\}\}$/);
@@ -1997,6 +2062,17 @@ export default function ModuleLessonClient({ lesson, backHref = '/tn-basic-courc
 
         // Apakah ini mode 3-grup (regular + middle + final semua ada)?
         const isThreeGroup = regularExercises.length > 0 && hasTestSections;
+
+        // Listening audios (replaces exercises for listening track lessons)
+        if (lesson.listeningAudios && lesson.listeningAudios.length > 0) {
+          return (
+            <section className="space-y-6">
+              {lesson.listeningAudios.map((audio, idx) => (
+                <ListeningAudioSection key={audio.title} audio={audio} audioIndex={idx + 1} />
+              ))}
+            </section>
+          );
+        }
 
         if (!hasTestSections) {
           return (

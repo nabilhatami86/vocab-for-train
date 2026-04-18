@@ -19,6 +19,23 @@ export interface ModuleMaterialSection {
   imageUrl?: string;
 }
 
+/** A single line in a listening script. Speaker = dialogue, no speaker = narration/note. */
+export interface ListeningLine {
+  speaker?: string;   // "Receptionist", "A", "B" — omit for notes/narration
+  text: string;       // prose with {{b:N}} markers for numbered blanks
+  bold?: boolean;     // section header within notes
+  indent?: boolean;   // indented bullet item in notes
+}
+
+/** One audio section (e.g. Audio 1, Audio 2, Audio 3). */
+export interface ListeningAudio {
+  title: string;        // "Audio 1: Free time."
+  instruction: string;  // "Fill the blank spaces while listening to the recording."
+  type: 'dialogue' | 'notes';
+  lines: ListeningLine[];
+  answers: Record<number, string>; // blank number → correct answer
+}
+
 export interface ModuleLesson {
   id: string;
   track: ModuleTrack;
@@ -35,4 +52,5 @@ export interface ModuleLesson {
   }[];
   materialSections: ModuleMaterialSection[];
   exercises: ModuleExercise[];
+  listeningAudios?: ListeningAudio[];
 }

@@ -1,4 +1,4 @@
-import type { ModuleLesson, ModuleTrack } from "@/types/module";
+import type { ModuleLesson, ModuleTrack, ListeningAudio } from "@/types/module";
 
 // ── Reading Lessons ───────────────────────────────────────────────────────────
 
@@ -1167,16 +1167,16 @@ const readingLessons: ModuleLesson[] = [
     passage: [
       "Psychologists tell us that there are four basic stages that human beings pass through when they enter and live in a new culture. This process, which helps us to deal with culture shock, is the way our brain and our personality react to the strange new things we encounter when we move from one culture to another. If our culture involves bowing when we greet someone, we may feel very uncomfortable in a culture that does not involve bowing. If the language we use when talking to someone in our own culture is influenced by the other person's age and status, it may be difficult for us to feel comfortable communicating with people in the new culture.",
       "(Para psikolog memberi tahu kita bahwa ada empat tahap dasar yang dilalui manusia ketika memasuki dan tinggal di budaya baru. Proses ini, yang membantu kita menghadapi culture shock, adalah cara otak dan kepribadian kita bereaksi terhadap hal-hal asing baru yang kita temui ketika berpindah dari satu budaya ke budaya lain. Jika budaya kita melibatkan membungkuk saat menyapa seseorang, kita mungkin merasa sangat tidak nyaman di budaya yang tidak melibatkan membungkuk. Jika bahasa yang kita gunakan saat berbicara dengan seseorang di budaya kita sendiri dipengaruhi oleh usia dan status orang lain, mungkin sulit bagi kita untuk merasa nyaman berkomunikasi dengan orang-orang di budaya baru.)",
-      "Culture begins with the \"honeymoon stage\". This is the period of time when we first arrive in which everything about the new culture is strange and exciting. We may be suffering from \"jet lag\" but we are thrilled to be in the new environment, seeing new sights, hearing new sounds and language, eating new kinds of food. This honeymoon stage can last for quite a long time because we feel we are involved in some kind of great adventure.",
-      "(Culture shock dimulai dengan \"tahap bulan madu\". Ini adalah periode waktu ketika kita pertama kali tiba di mana segalanya tentang budaya baru terasa asing dan menyenangkan. Kita mungkin menderita jet lag namun kita sangat bersemangat berada di lingkungan baru, melihat pemandangan baru, mendengar suara dan bahasa baru, mencicipi makanan-makanan baru. Tahap bulan madu ini bisa berlangsung cukup lama karena kita merasa terlibat dalam semacam petualangan besar.)",
-      "Unfortunately, the second stage of culture shock can be more difficult. After we have settled down into our new life, working or studying, buying groceries, doing laundry or living with a home-stay family, we can become very tired and begin to miss our homeland and our family, girlfriend/boyfriend, pets. All the little problems that everybody in life has seem to be much bigger and more disturbing when you face them in a foreign culture. This period of cultural adjustment can be very difficult and lead to the new arrival rejecting or pulling away from the new culture. This \"rejection stage\" can be quite dangerous because the visitor may develop unhealthy habits (smoking and drinking too much, being too concerned over food or contact with people from the new culture). This can, unfortunately lead to the person getting sick or developing skin infections or rashes which then makes the person feel even more scared and confused and helpless. This stage is considered a crisis in the process of cultural adjustment and many people choose to go back to their homeland or spend all their time with people from their own culture speaking their native language.",
-      "(Sayangnya, tahap kedua dari culture shock bisa lebih sulit. Setelah kita menetap dalam kehidupan baru — bekerja atau belajar, membeli bahan makanan, mencuci pakaian, atau tinggal bersama keluarga homestay — kita bisa menjadi sangat lelah dan mulai merindukan tanah air, keluarga, pacar, dan hewan peliharaan. Semua masalah kecil yang dihadapi semua orang dalam hidup tampak jauh lebih besar dan lebih mengganggu ketika kamu menghadapinya di budaya asing. Periode penyesuaian budaya ini bisa sangat sulit dan menyebabkan orang yang baru datang menolak atau menjauh dari budaya baru. \"Tahap penolakan\" ini bisa cukup berbahaya karena pengunjung mungkin mengembangkan kebiasaan tidak sehat (merokok dan minum terlalu banyak, terlalu khawatir tentang makanan atau kontak dengan orang dari budaya baru). Ini bisa, sayangnya, menyebabkan orang tersebut sakit atau mengembangkan infeksi kulit atau ruam yang kemudian membuat orang tersebut merasa semakin takut, bingung, dan tidak berdaya. Tahap ini dianggap krisis dalam proses penyesuaian budaya dan banyak orang memilih untuk kembali ke tanah air mereka atau menghabiskan semua waktu mereka bersama orang-orang dari budaya mereka sendiri yang berbicara bahasa asli mereka.)",
-      "The third stage of culture shock is called the \"adjustment stage\". This is when you begin to realize that things are not so bad in the host culture. Your sense of humour usually becomes stronger and you realize that you are becoming stronger by learning to take care of yourself in the new place. Things are still difficult, but you are now a survivor!",
-      "(Tahap ketiga dari culture shock disebut \"tahap penyesuaian\". Inilah saatnya kamu mulai menyadari bahwa segala sesuatu tidak seburuk itu di budaya tuan rumah. Rasa humor kamu biasanya menjadi lebih kuat dan kamu menyadari bahwa kamu semakin kuat dengan belajar mengurus diri sendiri di tempat baru. Hal-hal masih sulit, tetapi kamu kini adalah seorang penyintas!)",
-      "The fourth stage can be called \"at ease at last\". Now you feel quite comfortable in your new surroundings. You can cope with most problems that occur. You may still have problems with the language, but you know you are strong enough to deal with them. If you meet someone from your country who has just arrived, you can be the expert on life in the new culture and help them to deal with their culture shock.",
-      "(Tahap keempat dapat disebut \"akhirnya merasa nyaman\". Kini kamu merasa cukup nyaman di lingkungan barumu. Kamu bisa mengatasi sebagian besar masalah yang terjadi. Kamu mungkin masih mengalami kesulitan dengan bahasa, tetapi kamu tahu kamu cukup kuat untuk menghadapinya. Jika kamu bertemu seseorang dari negaramu yang baru tiba, kamu bisa menjadi ahli dalam kehidupan di budaya baru dan membantu mereka menghadapi culture shock mereka.)",
-      "There is a fifth stage of culture shock which many people don't know about. This is called \"reverse culture shock\". Surprisingly, this occurs when you go back to your native culture and find that you have changed and that things there have changed while you have been away. Now you feel a little uncomfortable back home. Life is a struggle!",
-      "(Ada tahap kelima dari culture shock yang banyak orang tidak ketahui. Ini disebut \"reverse culture shock\". Mengejutkan, ini terjadi ketika kamu kembali ke budaya aslimu dan menemukan bahwa kamu telah berubah dan hal-hal di sana juga telah berubah sementara kamu pergi. Kini kamu merasa sedikit tidak nyaman kembali di rumah. Hidup adalah perjuangan!)",
+      'Culture begins with the "honeymoon stage". This is the period of time when we first arrive in which everything about the new culture is strange and exciting. We may be suffering from "jet lag" but we are thrilled to be in the new environment, seeing new sights, hearing new sounds and language, eating new kinds of food. This honeymoon stage can last for quite a long time because we feel we are involved in some kind of great adventure.',
+      '(Culture shock dimulai dengan "tahap bulan madu". Ini adalah periode waktu ketika kita pertama kali tiba di mana segalanya tentang budaya baru terasa asing dan menyenangkan. Kita mungkin menderita jet lag namun kita sangat bersemangat berada di lingkungan baru, melihat pemandangan baru, mendengar suara dan bahasa baru, mencicipi makanan-makanan baru. Tahap bulan madu ini bisa berlangsung cukup lama karena kita merasa terlibat dalam semacam petualangan besar.)',
+      'Unfortunately, the second stage of culture shock can be more difficult. After we have settled down into our new life, working or studying, buying groceries, doing laundry or living with a home-stay family, we can become very tired and begin to miss our homeland and our family, girlfriend/boyfriend, pets. All the little problems that everybody in life has seem to be much bigger and more disturbing when you face them in a foreign culture. This period of cultural adjustment can be very difficult and lead to the new arrival rejecting or pulling away from the new culture. This "rejection stage" can be quite dangerous because the visitor may develop unhealthy habits (smoking and drinking too much, being too concerned over food or contact with people from the new culture). This can, unfortunately lead to the person getting sick or developing skin infections or rashes which then makes the person feel even more scared and confused and helpless. This stage is considered a crisis in the process of cultural adjustment and many people choose to go back to their homeland or spend all their time with people from their own culture speaking their native language.',
+      '(Sayangnya, tahap kedua dari culture shock bisa lebih sulit. Setelah kita menetap dalam kehidupan baru — bekerja atau belajar, membeli bahan makanan, mencuci pakaian, atau tinggal bersama keluarga homestay — kita bisa menjadi sangat lelah dan mulai merindukan tanah air, keluarga, pacar, dan hewan peliharaan. Semua masalah kecil yang dihadapi semua orang dalam hidup tampak jauh lebih besar dan lebih mengganggu ketika kamu menghadapinya di budaya asing. Periode penyesuaian budaya ini bisa sangat sulit dan menyebabkan orang yang baru datang menolak atau menjauh dari budaya baru. "Tahap penolakan" ini bisa cukup berbahaya karena pengunjung mungkin mengembangkan kebiasaan tidak sehat (merokok dan minum terlalu banyak, terlalu khawatir tentang makanan atau kontak dengan orang dari budaya baru). Ini bisa, sayangnya, menyebabkan orang tersebut sakit atau mengembangkan infeksi kulit atau ruam yang kemudian membuat orang tersebut merasa semakin takut, bingung, dan tidak berdaya. Tahap ini dianggap krisis dalam proses penyesuaian budaya dan banyak orang memilih untuk kembali ke tanah air mereka atau menghabiskan semua waktu mereka bersama orang-orang dari budaya mereka sendiri yang berbicara bahasa asli mereka.)',
+      'The third stage of culture shock is called the "adjustment stage". This is when you begin to realize that things are not so bad in the host culture. Your sense of humour usually becomes stronger and you realize that you are becoming stronger by learning to take care of yourself in the new place. Things are still difficult, but you are now a survivor!',
+      '(Tahap ketiga dari culture shock disebut "tahap penyesuaian". Inilah saatnya kamu mulai menyadari bahwa segala sesuatu tidak seburuk itu di budaya tuan rumah. Rasa humor kamu biasanya menjadi lebih kuat dan kamu menyadari bahwa kamu semakin kuat dengan belajar mengurus diri sendiri di tempat baru. Hal-hal masih sulit, tetapi kamu kini adalah seorang penyintas!)',
+      'The fourth stage can be called "at ease at last". Now you feel quite comfortable in your new surroundings. You can cope with most problems that occur. You may still have problems with the language, but you know you are strong enough to deal with them. If you meet someone from your country who has just arrived, you can be the expert on life in the new culture and help them to deal with their culture shock.',
+      '(Tahap keempat dapat disebut "akhirnya merasa nyaman". Kini kamu merasa cukup nyaman di lingkungan barumu. Kamu bisa mengatasi sebagian besar masalah yang terjadi. Kamu mungkin masih mengalami kesulitan dengan bahasa, tetapi kamu tahu kamu cukup kuat untuk menghadapinya. Jika kamu bertemu seseorang dari negaramu yang baru tiba, kamu bisa menjadi ahli dalam kehidupan di budaya baru dan membantu mereka menghadapi culture shock mereka.)',
+      'There is a fifth stage of culture shock which many people don\'t know about. This is called "reverse culture shock". Surprisingly, this occurs when you go back to your native culture and find that you have changed and that things there have changed while you have been away. Now you feel a little uncomfortable back home. Life is a struggle!',
+      '(Ada tahap kelima dari culture shock yang banyak orang tidak ketahui. Ini disebut "reverse culture shock". Mengejutkan, ini terjadi ketika kamu kembali ke budaya aslimu dan menemukan bahwa kamu telah berubah dan hal-hal di sana juga telah berubah sementara kamu pergi. Kini kamu merasa sedikit tidak nyaman kembali di rumah. Hidup adalah perjuangan!)',
     ],
     materialSections: [
       {
@@ -1667,7 +1667,8 @@ const readingLessons: ModuleLesson[] = [
     day: 6,
     tutor: "Ms. Siska",
     title: "Shopping for Christmas",
-    subtitle: "How Christmas transforms British shopping — from festive frenzy to New Year sales",
+    subtitle:
+      "How Christmas transforms British shopping — from festive frenzy to New Year sales",
     overview:
       "Teks reading tentang suasana belanja Natal di Inggris: bulan tersibuk untuk toko, dampak Covid-19 pada belanja online, cara toko menarik pembeli, suasana kerja para pramuniaga, dan tradisi belanja pasca-Natal.",
     passage: [
@@ -1675,8 +1676,8 @@ const readingLessons: ModuleLesson[] = [
       "(Natal akan segera tiba lagi. Bagi toko-toko di Inggris, khususnya toko-toko di kota, November dan Desember adalah bulan-bulan tersibuk dalam setahun. Bahkan, beberapa toko besar melakukan setengah dari bisnis tahunan mereka dalam dua bulan tersebut.)",
       "Yet in 2020, with Covid-19, Christmas shopping will not be the same! Many people do not want to go into cities, or into big shopping centres. They are afraid of catching Covid. More and more people are now shopping on the internet! Internet shops are safe for shoppers, and they never shut… not even on Christmas Day!",
       "(Namun pada tahun 2020, dengan adanya Covid-19, belanja Natal tidak akan sama! Banyak orang tidak ingin pergi ke kota, atau ke pusat perbelanjaan besar. Mereka takut tertular Covid. Semakin banyak orang yang kini berbelanja di internet! Toko internet aman bagi pembeli, dan tidak pernah tutup… bahkan pada hari Natal!)",
-      "Most people, however, spend their money before Christmas. \"Christmas shopping\" is different from ordinary shopping, and people like to do it differently. They go to different shops, or different online stores, more expensive shops very often. They don't just buy food from their supermarket and clothes from big department stores. They look round, they take time (if they can), they browse and they choose.",
-      "(Namun, sebagian besar orang menghabiskan uang mereka sebelum Natal. \"Belanja Natal\" berbeda dari belanja biasa, dan orang-orang suka melakukannya dengan cara berbeda. Mereka pergi ke toko-toko berbeda, atau toko online yang berbeda, toko yang lebih mahal sering kali. Mereka tidak hanya membeli makanan dari supermarket dan pakaian dari toko serba ada besar. Mereka melihat-lihat, meluangkan waktu (jika bisa), mereka menelusuri dan memilih.)",
+      'Most people, however, spend their money before Christmas. "Christmas shopping" is different from ordinary shopping, and people like to do it differently. They go to different shops, or different online stores, more expensive shops very often. They don\'t just buy food from their supermarket and clothes from big department stores. They look round, they take time (if they can), they browse and they choose.',
+      '(Namun, sebagian besar orang menghabiskan uang mereka sebelum Natal. "Belanja Natal" berbeda dari belanja biasa, dan orang-orang suka melakukannya dengan cara berbeda. Mereka pergi ke toko-toko berbeda, atau toko online yang berbeda, toko yang lebih mahal sering kali. Mereka tidak hanya membeli makanan dari supermarket dan pakaian dari toko serba ada besar. Mereka melihat-lihat, meluangkan waktu (jika bisa), mereka menelusuri dan memilih.)',
       "City shops do their best to attract them with exciting windows, and special offers. In the West End of London, shops spend thousands of pounds on lights, decorations, and special window displays. Some visitors come to London just to see the lights and shop windows, but others come to shop in famous shops like Harrods or Hamleys, Europe's biggest toy shop.",
       "(Toko-toko di kota berusaha semaksimal mungkin untuk menarik mereka dengan etalase yang menarik dan penawaran spesial. Di West End London, toko-toko menghabiskan ribuan pound untuk lampu-lampu, dekorasi, dan tampilan etalase khusus. Beberapa pengunjung datang ke London hanya untuk melihat lampu dan etalase toko, sementara yang lain datang untuk berbelanja di toko-toko terkenal seperti Harrods atau Hamleys, toko mainan terbesar di Eropa.)",
       "For shop assistants, it is a frantic season. There is not much time to rest, just time for a cup of coffee or tea perhaps, then back to work. It's a good season for pay! As Christmas gets nearer, shops stay open longer, sometimes until 10 p.m. This means more pay for the staff. It also means extra staff. Some people find a job, for a few weeks at least. Then, at about 5 p.m. on Christmas Eve, it all stops. The shops are suddenly empty – just a few people running round, looking for last minute presents. In many shops, there is a small party: a bottle of wine and something like that. And then it's all over. The shop doors close, but the lights stay on. Out in the streets, which were so busy a few hours before, there is hardly anyone. Just a few people going home, or singing in the street.",
@@ -1725,21 +1726,25 @@ const readingLessons: ModuleLesson[] = [
         type: "short-answer",
         question: "What are the busiest months of the year for British shops?",
         sampleAnswer: "November and December.",
-        reason: 'Paragraf 1: "November and December are the busiest months of the year."',
+        reason:
+          'Paragraf 1: "November and December are the busiest months of the year."',
       },
       {
         id: "int-r6-sa2",
         type: "short-answer",
         question: "What aspects do the shops do to attract buyers?",
         sampleAnswer: "Exciting window displays and special offers.",
-        reason: 'Paragraf 4: "City shops do their best to attract them with exciting windows, and special offers."',
+        reason:
+          'Paragraf 4: "City shops do their best to attract them with exciting windows, and special offers."',
       },
       {
         id: "int-r6-sa3",
         type: "short-answer",
-        question: "In the West End of London, what things do the shops spend thousands of pounds on?",
+        question:
+          "In the West End of London, what things do the shops spend thousands of pounds on?",
         sampleAnswer: "Lights, decorations, and special window displays.",
-        reason: 'Paragraf 4: "shops spend thousands of pounds on lights, decorations, and special window displays."',
+        reason:
+          'Paragraf 4: "shops spend thousands of pounds on lights, decorations, and special window displays."',
       },
       {
         id: "int-r6-sa4",
@@ -1760,13 +1765,15 @@ const readingLessons: ModuleLesson[] = [
         type: "short-answer",
         question: "Why do people rush back to do New Year shopping?",
         sampleAnswer: "Because lots of things are cheaper after Christmas.",
-        reason: 'Paragraf 6: "the crowds rush back for a few more days. Lots of things are cheaper now."',
+        reason:
+          'Paragraf 6: "the crowds rush back for a few more days. Lots of things are cheaper now."',
       },
       // Matching Heading (6 paragraphs → multiple-choice)
       {
         id: "int-r6-mh1",
         type: "multiple-choice",
-        question: "MATCHING HEADING — Paragraph 1: 'Christmas will soon be here again. For Britain's shops… some big shops do half their year's business in those two months.'",
+        question:
+          "MATCHING HEADING — Paragraph 1: 'Christmas will soon be here again. For Britain's shops… some big shops do half their year's business in those two months.'",
         options: [
           "I. The Calm and Chaos of Christmas for Shop Workers",
           "II. The Rise of Online Shopping",
@@ -1778,12 +1785,14 @@ const readingLessons: ModuleLesson[] = [
           "VIII. After Christmas: The New Year Sales Begin",
         ],
         correctAnswer: "IV. A Busy Time for British Shops",
-        reason: 'Paragraf 1 membahas November & Desember sebagai bulan tersibuk untuk toko-toko Inggris → IV. A Busy Time for British Shops.',
+        reason:
+          "Paragraf 1 membahas November & Desember sebagai bulan tersibuk untuk toko-toko Inggris → IV. A Busy Time for British Shops.",
       },
       {
         id: "int-r6-mh2",
         type: "multiple-choice",
-        question: "MATCHING HEADING — Paragraph 2: 'Yet in 2020, with Covid-19, Christmas shopping will not be the same! … More and more people are now shopping on the internet!'",
+        question:
+          "MATCHING HEADING — Paragraph 2: 'Yet in 2020, with Covid-19, Christmas shopping will not be the same! … More and more people are now shopping on the internet!'",
         options: [
           "I. The Calm and Chaos of Christmas for Shop Workers",
           "II. The Rise of Online Shopping",
@@ -1795,12 +1804,14 @@ const readingLessons: ModuleLesson[] = [
           "VIII. After Christmas: The New Year Sales Begin",
         ],
         correctAnswer: "II. The Rise of Online Shopping",
-        reason: 'Paragraf 2 membahas meningkatnya belanja online akibat Covid-19 → II. The Rise of Online Shopping.',
+        reason:
+          "Paragraf 2 membahas meningkatnya belanja online akibat Covid-19 → II. The Rise of Online Shopping.",
       },
       {
         id: "int-r6-mh3",
         type: "multiple-choice",
-        question: "MATCHING HEADING — Paragraph 3: 'Most people, however, spend their money before Christmas. \"Christmas shopping\" is different from ordinary shopping… they browse and they choose.'",
+        question:
+          "MATCHING HEADING — Paragraph 3: 'Most people, however, spend their money before Christmas. \"Christmas shopping\" is different from ordinary shopping… they browse and they choose.'",
         options: [
           "I. The Calm and Chaos of Christmas for Shop Workers",
           "II. The Rise of Online Shopping",
@@ -1812,12 +1823,14 @@ const readingLessons: ModuleLesson[] = [
           "VIII. After Christmas: The New Year Sales Begin",
         ],
         correctAnswer: "V. The Joy of Christmas Shopping",
-        reason: 'Paragraf 3 menggambarkan kesenangan berbelanja Natal — melihat-lihat, memilih, menelusuri toko berbeda → V. The Joy of Christmas Shopping.',
+        reason:
+          "Paragraf 3 menggambarkan kesenangan berbelanja Natal — melihat-lihat, memilih, menelusuri toko berbeda → V. The Joy of Christmas Shopping.",
       },
       {
         id: "int-r6-mh4",
         type: "multiple-choice",
-        question: "MATCHING HEADING — Paragraph 4: 'City shops do their best to attract them with exciting windows, and special offers… others come to shop in famous shops like Harrods or Hamleys.'",
+        question:
+          "MATCHING HEADING — Paragraph 4: 'City shops do their best to attract them with exciting windows, and special offers… others come to shop in famous shops like Harrods or Hamleys.'",
         options: [
           "I. The Calm and Chaos of Christmas for Shop Workers",
           "II. The Rise of Online Shopping",
@@ -1829,12 +1842,14 @@ const readingLessons: ModuleLesson[] = [
           "VIII. After Christmas: The New Year Sales Begin",
         ],
         correctAnswer: "VII. Shops Compete to Attract Customers",
-        reason: 'Paragraf 4 membahas upaya toko-toko menarik pembeli dengan lampu, dekorasi, etalase mewah, dan toko-toko terkenal → VII. Shops Compete to Attract Customers.',
+        reason:
+          "Paragraf 4 membahas upaya toko-toko menarik pembeli dengan lampu, dekorasi, etalase mewah, dan toko-toko terkenal → VII. Shops Compete to Attract Customers.",
       },
       {
         id: "int-r6-mh5",
         type: "multiple-choice",
-        question: "MATCHING HEADING — Paragraph 5: 'For shop assistants, it is a frantic season… at about 5 p.m. on Christmas Eve, it all stops… Just a few people going home, or singing in the street.'",
+        question:
+          "MATCHING HEADING — Paragraph 5: 'For shop assistants, it is a frantic season… at about 5 p.m. on Christmas Eve, it all stops… Just a few people going home, or singing in the street.'",
         options: [
           "I. The Calm and Chaos of Christmas for Shop Workers",
           "II. The Rise of Online Shopping",
@@ -1846,12 +1861,14 @@ const readingLessons: ModuleLesson[] = [
           "VIII. After Christmas: The New Year Sales Begin",
         ],
         correctAnswer: "I. The Calm and Chaos of Christmas for Shop Workers",
-        reason: 'Paragraf 5 menggambarkan kesibukan pramuniaga (frantic) hingga ketenangan tiba-tiba setelah Malam Natal → I. The Calm and Chaos of Christmas for Shop Workers.',
+        reason:
+          "Paragraf 5 menggambarkan kesibukan pramuniaga (frantic) hingga ketenangan tiba-tiba setelah Malam Natal → I. The Calm and Chaos of Christmas for Shop Workers.",
       },
       {
         id: "int-r6-mh6",
         type: "multiple-choice",
-        question: "MATCHING HEADING — Paragraph 6: 'Christmas shopping is over again until next October or November… the crowds rush back for a few more days. Lots of things are cheaper now.'",
+        question:
+          "MATCHING HEADING — Paragraph 6: 'Christmas shopping is over again until next October or November… the crowds rush back for a few more days. Lots of things are cheaper now.'",
         options: [
           "I. The Calm and Chaos of Christmas for Shop Workers",
           "II. The Rise of Online Shopping",
@@ -1863,7 +1880,8 @@ const readingLessons: ModuleLesson[] = [
           "VIII. After Christmas: The New Year Sales Begin",
         ],
         correctAnswer: "VIII. After Christmas: The New Year Sales Begin",
-        reason: 'Paragraf 6 membahas belanja setelah Natal — New Year sales dimulai bahkan sehari setelah Natal → VIII. After Christmas: The New Year Sales Begin.',
+        reason:
+          "Paragraf 6 membahas belanja setelah Natal — New Year sales dimulai bahkan sehari setelah Natal → VIII. After Christmas: The New Year Sales Begin.",
       },
     ],
   },
@@ -1875,7 +1893,8 @@ const readingLessons: ModuleLesson[] = [
     day: 7,
     tutor: "Ms. Siska",
     title: "The Story of Blue Jeans",
-    subtitle: "From canvas trousers in San Francisco to the world's favourite fashion item",
+    subtitle:
+      "From canvas trousers in San Francisco to the world's favourite fashion item",
     overview:
       "Teks reading tentang sejarah blue jeans: dari Levi Strauss di San Francisco tahun 1853, penemuan denim dari Perancis, penambahan rivet logam, hingga jeans menjadi simbol budaya global.",
     passage: [
@@ -1885,16 +1904,16 @@ const readingLessons: ModuleLesson[] = [
       "(Suatu hari, seorang penambang memberitahu Levi bahwa dia tidak bisa menemukan celana yang cukup kuat untuk bekerja di tambang emas. Levi memutuskan untuk membuat beberapa celana dari kanvas. Tidak lama kemudian, dia telah menjual semua celana kanvas yang dibuatnya. Itulah yang diinginkan para penambang.)",
       "However, the canvas was rather heavy and stiff. Levi therefore began to look for a different textile; soon he found a heavy textile from France: it was called serge de Nîmes. Americans just called this de Nîmes, and this name soon got reduced to denim.",
       "(Namun, kanvas tersebut cukup berat dan kaku. Levi kemudian mulai mencari tekstil yang berbeda; segera dia menemukan tekstil berat dari Perancis: disebut serge de Nîmes. Orang Amerika hanya menyebutnya de Nîmes, dan nama ini segera disingkat menjadi denim.)",
-      "Denim was a bit lighter than canvas, but it was very strong; it was ideal for miners. However, original denim was almost white, and miners did not like the colour! Their denim trousers got dirty as soon as they began working. Levi Strauss therefore decided to use coloured denim, and he chose dark blue. In 1873, he began to make denim trousers with metal rivets to make them stronger. This was a radical new idea: \"Blue jeans\" had arrived!",
-      "(Denim sedikit lebih ringan dari kanvas, tetapi sangat kuat; ideal untuk para penambang. Namun, denim asli hampir berwarna putih, dan para penambang tidak menyukai warnanya! Celana denim mereka kotor segera setelah mereka mulai bekerja. Levi Strauss kemudian memutuskan untuk menggunakan denim berwarna, dan dia memilih biru tua. Pada tahun 1873, dia mulai membuat celana denim dengan paku keling logam untuk membuatnya lebih kuat. Ini adalah ide baru yang revolusioner: \"Blue jeans\" telah lahir!)",
+      'Denim was a bit lighter than canvas, but it was very strong; it was ideal for miners. However, original denim was almost white, and miners did not like the colour! Their denim trousers got dirty as soon as they began working. Levi Strauss therefore decided to use coloured denim, and he chose dark blue. In 1873, he began to make denim trousers with metal rivets to make them stronger. This was a radical new idea: "Blue jeans" had arrived!',
+      '(Denim sedikit lebih ringan dari kanvas, tetapi sangat kuat; ideal untuk para penambang. Namun, denim asli hampir berwarna putih, dan para penambang tidak menyukai warnanya! Celana denim mereka kotor segera setelah mereka mulai bekerja. Levi Strauss kemudian memutuskan untuk menggunakan denim berwarna, dan dia memilih biru tua. Pada tahun 1873, dia mulai membuat celana denim dengan paku keling logam untuk membuatnya lebih kuat. Ini adalah ide baru yang revolusioner: "Blue jeans" telah lahir!)',
       "Levi's jeans were so popular that his company got bigger and bigger; soon, other firms were making blue jeans too. Miners liked them, but so did cowboys and other working men. Blue jeans became classic American working trousers.",
       "(Jeans Levi sangat populer sehingga perusahaannya semakin besar; segera, perusahaan lain juga mulai membuat blue jeans. Para penambang menyukainya, begitu juga dengan para koboi dan pekerja lainnya. Blue jeans menjadi celana kerja klasik Amerika.)",
       "After the Second World War, jeans became popular all over the world. Today, blue jeans are made all over the world – most of them in Asia. Very few jeans are now made in the USA, because of the cost; but it is still possible to buy blue jeans that are made in San Francisco if you have a lot of money to spend.",
       "(Setelah Perang Dunia Kedua, jeans menjadi populer di seluruh dunia. Saat ini, blue jeans dibuat di seluruh dunia – sebagian besar di Asia. Sangat sedikit jeans yang sekarang dibuat di AS, karena biaya; tetapi masih mungkin untuk membeli blue jeans yang dibuat di San Francisco jika Anda memiliki banyak uang untuk dibelanjakan.)",
       "Today there are hundreds of different brands of jeans. Many top fashion brands, like Armani or Benetton, make their own blue jeans. But for real authentic jeans, Levi's are still the most popular brand.",
       "(Saat ini ada ratusan merek jeans yang berbeda. Banyak merek fashion terkemuka, seperti Armani atau Benetton, membuat blue jeans mereka sendiri. Tetapi untuk jeans yang benar-benar autentik, Levi's masih menjadi merek yang paling populer.)",
-      "In America, everyone wears jeans as leisure wear. Some people wear jeans all the time, even for work. But Americans are perhaps less formal than other nations. At the \"G7\" summit in Denver, in 1997, American President Bill Clinton gave all the participants a pair of jeans, for a \"Western evening\". Tony Blair, the British Prime Minister, put them on; but other European leaders, including Chancellor Kohl and Jacques Chirac, the President of France, refused. Some people still think that jeans are not respectable clothes! Not the young! Jeans are now the international uniform worn by young people. Why? That is a good question!",
-      "(Di Amerika, semua orang memakai jeans sebagai pakaian santai. Beberapa orang memakai jeans setiap saat, bahkan untuk bekerja. Tetapi orang Amerika mungkin kurang formal dibandingkan bangsa lain. Pada pertemuan puncak \"G7\" di Denver tahun 1997, Presiden Amerika Bill Clinton memberikan sepasang jeans kepada semua peserta, untuk \"Western evening\". Tony Blair, Perdana Menteri Inggris, memakainya; tetapi pemimpin Eropa lainnya, termasuk Kanselir Kohl dan Jacques Chirac, Presiden Perancis, menolak. Beberapa orang masih berpikir bahwa jeans bukan pakaian yang terhormat! Tidak bagi kaum muda! Jeans kini menjadi seragam internasional yang dikenakan oleh kaum muda. Mengapa? Itu adalah pertanyaan yang bagus!)",
+      'In America, everyone wears jeans as leisure wear. Some people wear jeans all the time, even for work. But Americans are perhaps less formal than other nations. At the "G7" summit in Denver, in 1997, American President Bill Clinton gave all the participants a pair of jeans, for a "Western evening". Tony Blair, the British Prime Minister, put them on; but other European leaders, including Chancellor Kohl and Jacques Chirac, the President of France, refused. Some people still think that jeans are not respectable clothes! Not the young! Jeans are now the international uniform worn by young people. Why? That is a good question!',
+      '(Di Amerika, semua orang memakai jeans sebagai pakaian santai. Beberapa orang memakai jeans setiap saat, bahkan untuk bekerja. Tetapi orang Amerika mungkin kurang formal dibandingkan bangsa lain. Pada pertemuan puncak "G7" di Denver tahun 1997, Presiden Amerika Bill Clinton memberikan sepasang jeans kepada semua peserta, untuk "Western evening". Tony Blair, Perdana Menteri Inggris, memakainya; tetapi pemimpin Eropa lainnya, termasuk Kanselir Kohl dan Jacques Chirac, Presiden Perancis, menolak. Beberapa orang masih berpikir bahwa jeans bukan pakaian yang terhormat! Tidak bagi kaum muda! Jeans kini menjadi seragam internasional yang dikenakan oleh kaum muda. Mengapa? Itu adalah pertanyaan yang bagus!)',
     ],
     materialSections: [
       {
@@ -1938,7 +1957,8 @@ const readingLessons: ModuleLesson[] = [
       {
         id: "int-r7-mh1",
         type: "multiple-choice",
-        question: "MATCHING HEADING — Paragraph 1: 'Jeans were the classic clothes of the American West. In 1853, a young tailor from Germany, called Levi Strauss, began working in San Francisco. Levi sold thick canvas to miners; the miners used the canvas to make tents.'",
+        question:
+          "MATCHING HEADING — Paragraph 1: 'Jeans were the classic clothes of the American West. In 1853, a young tailor from Germany, called Levi Strauss, began working in San Francisco. Levi sold thick canvas to miners; the miners used the canvas to make tents.'",
         options: [
           "I. The birth of denim and its name",
           "II. A problem leads to an invention",
@@ -1950,12 +1970,14 @@ const readingLessons: ModuleLesson[] = [
           "XI. The continuing success of Levi's",
         ],
         correctAnswer: "VII. Levi Strauss's first business in America",
-        reason: 'Paragraf 1 memperkenalkan Levi Strauss dan bisnis pertamanya menjual kanvas di San Francisco → VII. Levi Strauss\'s first business in America.',
+        reason:
+          "Paragraf 1 memperkenalkan Levi Strauss dan bisnis pertamanya menjual kanvas di San Francisco → VII. Levi Strauss's first business in America.",
       },
       {
         id: "int-r7-mh2",
         type: "multiple-choice",
-        question: "MATCHING HEADING — Paragraph 2: 'One day, a miner told Levi that he could not find trousers that were strong enough… Levi decided to make some trousers out of canvas. Very soon, he had sold all the canvas trousers he had made.'",
+        question:
+          "MATCHING HEADING — Paragraph 2: 'One day, a miner told Levi that he could not find trousers that were strong enough… Levi decided to make some trousers out of canvas. Very soon, he had sold all the canvas trousers he had made.'",
         options: [
           "I. The birth of denim and its name",
           "II. A problem leads to an invention",
@@ -1967,12 +1989,14 @@ const readingLessons: ModuleLesson[] = [
           "XI. The continuing success of Levi's",
         ],
         correctAnswer: "II. A problem leads to an invention",
-        reason: 'Paragraf 2: masalah (tidak ada celana kuat) → solusi (Levi membuat celana kanvas) → II. A problem leads to an invention.',
+        reason:
+          "Paragraf 2: masalah (tidak ada celana kuat) → solusi (Levi membuat celana kanvas) → II. A problem leads to an invention.",
       },
       {
         id: "int-r7-mh3",
         type: "multiple-choice",
-        question: "MATCHING HEADING — Paragraph 3: 'However, the canvas was rather heavy and stiff. Levi therefore began to look for a different textile; soon he found a heavy textile from France: it was called serge de Nîmes… this name soon got reduced to denim.'",
+        question:
+          "MATCHING HEADING — Paragraph 3: 'However, the canvas was rather heavy and stiff. Levi therefore began to look for a different textile; soon he found a heavy textile from France: it was called serge de Nîmes… this name soon got reduced to denim.'",
         options: [
           "I. The birth of denim and its name",
           "II. A problem leads to an invention",
@@ -1984,12 +2008,14 @@ const readingLessons: ModuleLesson[] = [
           "XI. The continuing success of Levi's",
         ],
         correctAnswer: "I. The birth of denim and its name",
-        reason: 'Paragraf 3 menjelaskan asal-usul bahan denim dari Perancis (serge de Nîmes → denim) → I. The birth of denim and its name.',
+        reason:
+          "Paragraf 3 menjelaskan asal-usul bahan denim dari Perancis (serge de Nîmes → denim) → I. The birth of denim and its name.",
       },
       {
         id: "int-r7-mh4",
         type: "multiple-choice",
-        question: "MATCHING HEADING — Paragraph 4: 'Denim was a bit lighter than canvas, but it was very strong… he chose dark blue. In 1873, he began to make denim trousers with metal rivets… \"Blue jeans\" had arrived!'",
+        question:
+          "MATCHING HEADING — Paragraph 4: 'Denim was a bit lighter than canvas, but it was very strong… he chose dark blue. In 1873, he began to make denim trousers with metal rivets… \"Blue jeans\" had arrived!'",
         options: [
           "I. The birth of denim and its name",
           "II. A problem leads to an invention",
@@ -2001,12 +2027,14 @@ const readingLessons: ModuleLesson[] = [
           "XI. The continuing success of Levi's",
         ],
         correctAnswer: "V. The introduction of the first blue jeans",
-        reason: 'Paragraf 4 menceritakan lahirnya blue jeans biru tua dengan rivet logam pada 1873 → V. The introduction of the first blue jeans.',
+        reason:
+          "Paragraf 4 menceritakan lahirnya blue jeans biru tua dengan rivet logam pada 1873 → V. The introduction of the first blue jeans.",
       },
       {
         id: "int-r7-mh5",
         type: "multiple-choice",
-        question: "MATCHING HEADING — Paragraph 5: 'Levi's jeans were so popular that his company got bigger and bigger; soon, other firms were making blue jeans too. Miners liked them, but so did cowboys and other working men.'",
+        question:
+          "MATCHING HEADING — Paragraph 5: 'Levi's jeans were so popular that his company got bigger and bigger; soon, other firms were making blue jeans too. Miners liked them, but so did cowboys and other working men.'",
         options: [
           "I. The birth of denim and its name",
           "II. A problem leads to an invention",
@@ -2018,12 +2046,14 @@ const readingLessons: ModuleLesson[] = [
           "XI. The continuing success of Levi's",
         ],
         correctAnswer: "VIII. Jeans as a symbol of American culture",
-        reason: 'Paragraf 5 menggambarkan jeans yang populer di kalangan penambang, koboi, dan pekerja Amerika → VIII. Jeans as a symbol of American culture.',
+        reason:
+          "Paragraf 5 menggambarkan jeans yang populer di kalangan penambang, koboi, dan pekerja Amerika → VIII. Jeans as a symbol of American culture.",
       },
       {
         id: "int-r7-mh6",
         type: "multiple-choice",
-        question: "MATCHING HEADING — Paragraph 6: 'After the Second World War, jeans became popular all over the world. Today, blue jeans are made all over the world – most of them in Asia.'",
+        question:
+          "MATCHING HEADING — Paragraph 6: 'After the Second World War, jeans became popular all over the world. Today, blue jeans are made all over the world – most of them in Asia.'",
         options: [
           "I. The birth of denim and its name",
           "II. A problem leads to an invention",
@@ -2035,12 +2065,14 @@ const readingLessons: ModuleLesson[] = [
           "XI. The continuing success of Levi's",
         ],
         correctAnswer: "III. The world's love for jeans after the war",
-        reason: 'Paragraf 6 membahas popularitas global jeans setelah WWII dan produksinya di Asia → III. The world\'s love for jeans after the war.',
+        reason:
+          "Paragraf 6 membahas popularitas global jeans setelah WWII dan produksinya di Asia → III. The world's love for jeans after the war.",
       },
       {
         id: "int-r7-mh7",
         type: "multiple-choice",
-        question: "MATCHING HEADING — Paragraph 7: 'Today there are hundreds of different brands of jeans. Many top fashion brands, like Armani or Benetton, make their own blue jeans. But for real authentic jeans, Levi's are still the most popular brand.'",
+        question:
+          "MATCHING HEADING — Paragraph 7: 'Today there are hundreds of different brands of jeans. Many top fashion brands, like Armani or Benetton, make their own blue jeans. But for real authentic jeans, Levi's are still the most popular brand.'",
         options: [
           "I. The birth of denim and its name",
           "II. A problem leads to an invention",
@@ -2052,12 +2084,14 @@ const readingLessons: ModuleLesson[] = [
           "XI. The continuing success of Levi's",
         ],
         correctAnswer: "VI. The modern variety of jeans brands",
-        reason: 'Paragraf 7 membahas ratusan merek jeans modern, termasuk Armani dan Benetton → VI. The modern variety of jeans brands.',
+        reason:
+          "Paragraf 7 membahas ratusan merek jeans modern, termasuk Armani dan Benetton → VI. The modern variety of jeans brands.",
       },
       {
         id: "int-r7-mh8",
         type: "multiple-choice",
-        question: "MATCHING HEADING — Paragraph 8: 'In America, everyone wears jeans as leisure wear… At the \"G7\" summit in Denver, in 1997, American President Bill Clinton gave all the participants a pair of jeans… other European leaders… refused.'",
+        question:
+          "MATCHING HEADING — Paragraph 8: 'In America, everyone wears jeans as leisure wear… At the \"G7\" summit in Denver, in 1997, American President Bill Clinton gave all the participants a pair of jeans… other European leaders… refused.'",
         options: [
           "I. The birth of denim and its name",
           "II. A problem leads to an invention",
@@ -2069,48 +2103,59 @@ const readingLessons: ModuleLesson[] = [
           "XI. The continuing success of Levi's",
         ],
         correctAnswer: "X. A disagreement about wearing jeans",
-        reason: 'Paragraf 8 menceritakan KTT G7 di mana beberapa pemimpin Eropa menolak memakai jeans → X. A disagreement about wearing jeans.',
+        reason:
+          "Paragraf 8 menceritakan KTT G7 di mana beberapa pemimpin Eropa menolak memakai jeans → X. A disagreement about wearing jeans.",
       },
       // True / False / Not Given (7 questions)
       {
         id: "int-r7-tfng1",
         type: "true-false-not-given",
-        question: "Levi Strauss originally came to America to look for gold in California.",
+        question:
+          "Levi Strauss originally came to America to look for gold in California.",
         options: ["True", "False", "Not Given"],
         correctAnswer: "Not Given",
-        reason: 'NOT GIVEN — Teks hanya menyebutkan bahwa Levi "began working in San Francisco" menjual kanvas. Teks tidak menyebutkan alasan awalnya datang ke Amerika.',
+        reason:
+          'NOT GIVEN — Teks hanya menyebutkan bahwa Levi "began working in San Francisco" menjual kanvas. Teks tidak menyebutkan alasan awalnya datang ke Amerika.',
       },
       {
         id: "int-r7-tfng2",
         type: "true-false-not-given",
-        question: "The first trousers Levi made were made from a material used for tents.",
+        question:
+          "The first trousers Levi made were made from a material used for tents.",
         options: ["True", "False", "Not Given"],
         correctAnswer: "True",
-        reason: 'TRUE — Paragraf 1: "Levi sold thick canvas to miners; the miners used the canvas to make tents." Paragraf 2: "Levi decided to make some trousers out of canvas." Kanvas yang sama digunakan untuk tenda dan celana pertama.',
+        reason:
+          'TRUE — Paragraf 1: "Levi sold thick canvas to miners; the miners used the canvas to make tents." Paragraf 2: "Levi decided to make some trousers out of canvas." Kanvas yang sama digunakan untuk tenda dan celana pertama.',
       },
       {
         id: "int-r7-tfng3",
         type: "true-false-not-given",
-        question: "Denim was first produced in Italy and exported to the United States.",
+        question:
+          "Denim was first produced in Italy and exported to the United States.",
         options: ["True", "False", "Not Given"],
         correctAnswer: "False",
-        reason: 'FALSE — Paragraf 3: "he found a heavy textile from France: it was called serge de Nîmes." Denim berasal dari Perancis, bukan Italia.',
+        reason:
+          'FALSE — Paragraf 3: "he found a heavy textile from France: it was called serge de Nîmes." Denim berasal dari Perancis, bukan Italia.',
       },
       {
         id: "int-r7-tfng4",
         type: "true-false-not-given",
-        question: "Levi Strauss was the first person to add metal rivets to denim trousers.",
+        question:
+          "Levi Strauss was the first person to add metal rivets to denim trousers.",
         options: ["True", "False", "Not Given"],
         correctAnswer: "True",
-        reason: 'TRUE — Paragraf 4: "In 1873, he began to make denim trousers with metal rivets to make them stronger. This was a radical new idea." Kata "radical new idea" menunjukkan ini adalah hal baru yang dilakukan pertama kali oleh Levi.',
+        reason:
+          'TRUE — Paragraf 4: "In 1873, he began to make denim trousers with metal rivets to make them stronger. This was a radical new idea." Kata "radical new idea" menunjukkan ini adalah hal baru yang dilakukan pertama kali oleh Levi.',
       },
       {
         id: "int-r7-tfng5",
         type: "true-false-not-given",
-        question: "After the Second World War, jeans were mainly produced in America.",
+        question:
+          "After the Second World War, jeans were mainly produced in America.",
         options: ["True", "False", "Not Given"],
         correctAnswer: "False",
-        reason: 'FALSE — Paragraf 6: "Today, blue jeans are made all over the world – most of them in Asia. Very few jeans are now made in the USA, because of the cost." Jeans justru sebagian besar diproduksi di Asia.',
+        reason:
+          'FALSE — Paragraf 6: "Today, blue jeans are made all over the world – most of them in Asia. Very few jeans are now made in the USA, because of the cost." Jeans justru sebagian besar diproduksi di Asia.',
       },
       {
         id: "int-r7-tfng6",
@@ -2118,15 +2163,18 @@ const readingLessons: ModuleLesson[] = [
         question: "Today, Levi's jeans are no longer considered fashionable.",
         options: ["True", "False", "Not Given"],
         correctAnswer: "False",
-        reason: 'FALSE — Paragraf 7: "for real authentic jeans, Levi\'s are still the most popular brand." Levi\'s masih dianggap merek yang paling populer.',
+        reason:
+          "FALSE — Paragraf 7: \"for real authentic jeans, Levi's are still the most popular brand.\" Levi's masih dianggap merek yang paling populer.",
       },
       {
         id: "int-r7-tfng7",
         type: "true-false-not-given",
-        question: "Some world leaders refused to wear jeans because they thought they were too casual.",
+        question:
+          "Some world leaders refused to wear jeans because they thought they were too casual.",
         options: ["True", "False", "Not Given"],
         correctAnswer: "True",
-        reason: 'TRUE — Paragraf 8: "other European leaders…refused. Some people still think that jeans are not respectable clothes!" Pemimpin Eropa menolak karena jeans dianggap tidak terhormat/terlalu santai.',
+        reason:
+          'TRUE — Paragraf 8: "other European leaders…refused. Some people still think that jeans are not respectable clothes!" Pemimpin Eropa menolak karena jeans dianggap tidak terhormat/terlalu santai.',
       },
     ],
   },
@@ -2138,7 +2186,8 @@ const readingLessons: ModuleLesson[] = [
     day: 8,
     tutor: "Ms. Siska",
     title: "The Story of BBC",
-    subtitle: "From the world's first TV service to one of Britain's most famous institutions",
+    subtitle:
+      "From the world's first TV service to one of Britain's most famous institutions",
     overview:
       "Teks reading tentang sejarah BBC: berdiri tahun 1922, menjadi layanan publik yang independen, pelopor televisi dunia tahun 1936, penghentian siaran saat WWII, dan perannya sebagai produser audio-visual terbesar di Eropa.",
     passage: [
@@ -2207,26 +2256,32 @@ const readingLessons: ModuleLesson[] = [
         type: "short-answer",
         question: "When did the British Broadcasting Company change its name?",
         sampleAnswer: "Four years after it was established (in 1926).",
-        reason: 'Paragraf 1: "Four years later, it changed its name to British Broadcasting Corporation."',
+        reason:
+          'Paragraf 1: "Four years later, it changed its name to British Broadcasting Corporation."',
       },
       {
         id: "int-r8-sa2",
         type: "short-answer",
-        question: "Why was the news broadcast only after 7 p.m. in the early days of BBC radio?",
+        question:
+          "Why was the news broadcast only after 7 p.m. in the early days of BBC radio?",
         sampleAnswer: "To avoid competition with the newspapers.",
-        reason: 'Paragraf 4: "news was not broadcast until after 7 p.m., to avoid competition with the newspapers!"',
+        reason:
+          'Paragraf 4: "news was not broadcast until after 7 p.m., to avoid competition with the newspapers!"',
       },
       {
         id: "int-r8-sa3",
         type: "short-answer",
-        question: "When did the BBC begin the world's first television service?",
+        question:
+          "When did the BBC begin the world's first television service?",
         sampleAnswer: "In 1936.",
-        reason: 'Paragraf 5: "In 1936 the BBC began the world\'s first television service."',
+        reason:
+          'Paragraf 5: "In 1936 the BBC began the world\'s first television service."',
       },
       {
         id: "int-r8-sa4",
         type: "short-answer",
-        question: "How many lines were used for broadcasting in the early days (mid-1900s)?",
+        question:
+          "How many lines were used for broadcasting in the early days (mid-1900s)?",
         sampleAnswer: "204 lines.",
         reason: 'Paragraf 5: "broadcast using a system of just 204 lines."',
       },
@@ -2235,88 +2290,109 @@ const readingLessons: ModuleLesson[] = [
         type: "short-answer",
         question: "When was the first time the BBC broadcast a sporting event?",
         sampleAnswer: "In 1937, when tennis was broadcast from Wimbledon.",
-        reason: 'Paragraf 7: "In 1937 tennis was broadcast from Wimbledon for the first time."',
+        reason:
+          'Paragraf 7: "In 1937 tennis was broadcast from Wimbledon for the first time."',
       },
       // True / False / Not Given (10 questions)
       {
         id: "int-r8-tfng1",
         type: "true-false-not-given",
-        question: "The BBC pioneered global radio broadcasting as the first station of its kind.",
+        question:
+          "The BBC pioneered global radio broadcasting as the first station of its kind.",
         options: ["True", "False", "Not Given"],
         correctAnswer: "False",
-        reason: 'FALSE — Paragraf 2: "It was not the world\'s first radio station. There had already been public radio stations in Britain before 1922, and in other countries."',
+        reason:
+          'FALSE — Paragraf 2: "It was not the world\'s first radio station. There had already been public radio stations in Britain before 1922, and in other countries."',
       },
       {
         id: "int-r8-tfng2",
         type: "true-false-not-given",
-        question: "The British Broadcasting Company adopted its current name, the British Broadcasting Corporation, four years after its establishment.",
+        question:
+          "The British Broadcasting Company adopted its current name, the British Broadcasting Corporation, four years after its establishment.",
         options: ["True", "False", "Not Given"],
         correctAnswer: "True",
-        reason: 'TRUE — Paragraf 1: "Four years later, it changed its name to British Broadcasting Corporation." (Berdiri 1922, berganti nama 1926.)',
+        reason:
+          'TRUE — Paragraf 1: "Four years later, it changed its name to British Broadcasting Corporation." (Berdiri 1922, berganti nama 1926.)',
       },
       {
         id: "int-r8-tfng3",
         type: "true-false-not-given",
-        question: "In the Soviet Union, radio broadcasting was entirely privately owned.",
+        question:
+          "In the Soviet Union, radio broadcasting was entirely privately owned.",
         options: ["True", "False", "Not Given"],
         correctAnswer: "False",
-        reason: 'FALSE — Paragraf 2: "In the Soviet Union, radio was owned, operated and tightly controlled by the state." — bukan swasta, melainkan milik negara.',
+        reason:
+          'FALSE — Paragraf 2: "In the Soviet Union, radio was owned, operated and tightly controlled by the state." — bukan swasta, melainkan milik negara.',
       },
       {
         id: "int-r8-tfng4",
         type: "true-false-not-given",
-        question: "The BBC has always functioned as a government-controlled institution.",
+        question:
+          "The BBC has always functioned as a government-controlled institution.",
         options: ["True", "False", "Not Given"],
         correctAnswer: "False",
-        reason: 'FALSE — Paragraf 3: "Except during the war years, it has never been controlled by the government." BBC adalah operator independen.',
+        reason:
+          'FALSE — Paragraf 3: "Except during the war years, it has never been controlled by the government." BBC adalah operator independen.',
       },
       {
         id: "int-r8-tfng5",
         type: "true-false-not-given",
-        question: "During its early years, the BBC avoided daytime news bulletins to prevent rivalry with the press.",
+        question:
+          "During its early years, the BBC avoided daytime news bulletins to prevent rivalry with the press.",
         options: ["True", "False", "Not Given"],
         correctAnswer: "True",
-        reason: 'TRUE — Paragraf 4: "news was not broadcast until after 7 p.m., to avoid competition with the newspapers!" Berita hanya setelah pukul 19.00.',
+        reason:
+          'TRUE — Paragraf 4: "news was not broadcast until after 7 p.m., to avoid competition with the newspapers!" Berita hanya setelah pukul 19.00.',
       },
       {
         id: "int-r8-tfng6",
         type: "true-false-not-given",
-        question: "The BBC's first television transmissions in 1936 could be viewed nationwide.",
+        question:
+          "The BBC's first television transmissions in 1936 could be viewed nationwide.",
         options: ["True", "False", "Not Given"],
         correctAnswer: "False",
-        reason: 'FALSE — Paragraf 5: "Only a few thousand people in the London area could receive those first flickering images." Hanya di area London, bukan seluruh Inggris.',
+        reason:
+          'FALSE — Paragraf 5: "Only a few thousand people in the London area could receive those first flickering images." Hanya di area London, bukan seluruh Inggris.',
       },
       {
         id: "int-r8-tfng7",
         type: "true-false-not-given",
-        question: "Following World War II, all BBC radio and television broadcasts were immediately suspended.",
+        question:
+          "Following World War II, all BBC radio and television broadcasts were immediately suspended.",
         options: ["True", "False", "Not Given"],
         correctAnswer: "False",
-        reason: 'FALSE — Teks hanya menyebutkan BBC TV berhenti (1939), bukan radio. BBC TV kembali mengudara 1946. Tidak ada informasi bahwa radio juga berhenti.',
+        reason:
+          "FALSE — Teks hanya menyebutkan BBC TV berhenti (1939), bukan radio. BBC TV kembali mengudara 1946. Tidak ada informasi bahwa radio juga berhenti.",
       },
       {
         id: "int-r8-tfng8",
         type: "true-false-not-given",
-        question: "BBC television services were resumed in 1946 to mark the Victory Parade.",
+        question:
+          "BBC television services were resumed in 1946 to mark the Victory Parade.",
         options: ["True", "False", "Not Given"],
         correctAnswer: "True",
-        reason: 'TRUE — Paragraf 7: "It was not until June 8th 1946, on the day of the great Victory Parade, that BBC television started again."',
+        reason:
+          'TRUE — Paragraf 7: "It was not until June 8th 1946, on the day of the great Victory Parade, that BBC television started again."',
       },
       {
         id: "int-r8-tfng9",
         type: "true-false-not-given",
-        question: "The BBC is Europe's leading exporter of audio-visual productions.",
+        question:
+          "The BBC is Europe's leading exporter of audio-visual productions.",
         options: ["True", "False", "Not Given"],
         correctAnswer: "Not Given",
-        reason: 'NOT GIVEN — Paragraf 8 menyatakan BBC adalah "Europe\'s biggest producer of audio-visual material", bukan exporter. Teks tidak menyebutkan tentang ekspor.',
+        reason:
+          'NOT GIVEN — Paragraf 8 menyatakan BBC adalah "Europe\'s biggest producer of audio-visual material", bukan exporter. Teks tidak menyebutkan tentang ekspor.',
       },
       {
         id: "int-r8-tfng10",
         type: "true-false-not-given",
-        question: "Due to global competition, the BBC intends to withdraw from international media activity.",
+        question:
+          "Due to global competition, the BBC intends to withdraw from international media activity.",
         options: ["True", "False", "Not Given"],
         correctAnswer: "False",
-        reason: 'FALSE — Paragraf 9 (penutup): "the BBC is determined to remain one of the world\'s major players." BBC justru bertekad untuk TETAP menjadi pemain utama global.',
+        reason:
+          'FALSE — Paragraf 9 (penutup): "the BBC is determined to remain one of the world\'s major players." BBC justru bertekad untuk TETAP menjadi pemain utama global.',
       },
     ],
   },
@@ -2328,7 +2404,8 @@ const readingLessons: ModuleLesson[] = [
     day: 9,
     tutor: "Ms. Siska",
     title: "Causes of Floods",
-    subtitle: "Understanding the natural and human factors that trigger devastating floods",
+    subtitle:
+      "Understanding the natural and human factors that trigger devastating floods",
     overview:
       "Teks reading tentang penyebab banjir: salju yang mencair, sungai yang tertutup es membentuk bendungan alami, serta jebolnya bendungan buatan manusia — dan mengapa ilmuwan sulit memprediksi banjir dengan tepat.",
     passage: [
@@ -2381,18 +2458,27 @@ const readingLessons: ModuleLesson[] = [
       {
         id: "int-r9-mc1",
         type: "multiple-choice",
-        question: "PASSAGE A — Which of the following words is NOT a natural disaster?",
+        question:
+          "PASSAGE A — Which of the following words is NOT a natural disaster?",
         options: ["Flood", "Earthquake", "Epidemic", "Typhoon"],
         correctAnswer: "Epidemic",
-        reason: 'Epidemic (wabah penyakit) bukan termasuk bencana alam (natural disaster) — ini adalah bencana kesehatan. Flood, earthquake, dan typhoon semuanya adalah bencana alam.',
+        reason:
+          "Epidemic (wabah penyakit) bukan termasuk bencana alam (natural disaster) — ini adalah bencana kesehatan. Flood, earthquake, dan typhoon semuanya adalah bencana alam.",
       },
       {
         id: "int-r9-mc2",
         type: "multiple-choice",
-        question: "PASSAGE A — Which of the following is included as a cause of floods in the reading passage?",
-        options: ["Droughts", "Large lakes", "Poorly built roads", "Melting snow"],
+        question:
+          "PASSAGE A — Which of the following is included as a cause of floods in the reading passage?",
+        options: [
+          "Droughts",
+          "Large lakes",
+          "Poorly built roads",
+          "Melting snow",
+        ],
         correctAnswer: "Melting snow",
-        reason: 'Paragraf 2 teks A: "When deep snow melts it creates a large amount of water… it can lead to serious flooding." Melting snow adalah penyebab banjir yang dibahas.',
+        reason:
+          'Paragraf 2 teks A: "When deep snow melts it creates a large amount of water… it can lead to serious flooding." Melting snow adalah penyebab banjir yang dibahas.',
       },
       {
         id: "int-r9-mc3",
@@ -2404,34 +2490,46 @@ const readingLessons: ModuleLesson[] = [
           "Sudden warm temperatures combined with heavy rains causes flooding",
           "Freezing water alone causes flooding",
         ],
-        correctAnswer: "Sudden warm temperatures combined with heavy rains causes flooding",
-        reason: 'Paragraf 2 teks A: "when it occurs together with heavy rain and sudden warmer weather it can lead to serious flooding."',
+        correctAnswer:
+          "Sudden warm temperatures combined with heavy rains causes flooding",
+        reason:
+          'Paragraf 2 teks A: "when it occurs together with heavy rain and sudden warmer weather it can lead to serious flooding."',
       },
       {
         id: "int-r9-mc4",
         type: "multiple-choice",
         question: "PASSAGE A — A broken human-made dam is compared to what?",
-        options: ["A tsunami", "A tidal wave", "A broken ice dam", "Overflowing rivers"],
+        options: [
+          "A tsunami",
+          "A tidal wave",
+          "A broken ice dam",
+          "Overflowing rivers",
+        ],
         correctAnswer: "A broken ice dam",
-        reason: 'Paragraf 4 teks A: "When a large human-made dam breaks… This is similar to the sudden break of an ice dam."',
+        reason:
+          'Paragraf 4 teks A: "When a large human-made dam breaks… This is similar to the sudden break of an ice dam."',
       },
       {
         id: "int-r9-mc5",
         type: "multiple-choice",
-        question: "PASSAGE A — Which best describes how a frozen river can cause a flood?",
+        question:
+          "PASSAGE A — Which best describes how a frozen river can cause a flood?",
         options: [
           "The ice in the river melts too quickly and causes a flood",
           "The ice in the river cracks causing the water to overflow",
           "The ice in the river cracks into pieces that eventually create a dam causing the water to overflow",
           "The water behind the ice dam collects and when the dam breaks, it causes flooding upstream only",
         ],
-        correctAnswer: "The ice in the river cracks into pieces that eventually create a dam causing the water to overflow",
-        reason: 'Paragraf 3 teks A: "the surface of the ice breaks into large pieces… They can form a dam in the river, causing the water behind the dam to rise and flood the land upstream."',
+        correctAnswer:
+          "The ice in the river cracks into pieces that eventually create a dam causing the water to overflow",
+        reason:
+          'Paragraf 3 teks A: "the surface of the ice breaks into large pieces… They can form a dam in the river, causing the water behind the dam to rise and flood the land upstream."',
       },
       {
         id: "int-r9-mc6",
         type: "multiple-choice",
-        question: "PASSAGE A — How far can water travel when it is unleashed from a broken dam?",
+        question:
+          "PASSAGE A — How far can water travel when it is unleashed from a broken dam?",
         options: [
           "Less than 10 kilometres",
           "Tens of kilometres",
@@ -2439,12 +2537,14 @@ const readingLessons: ModuleLesson[] = [
           "Tens of thousands of kilometres",
         ],
         correctAnswer: "Tens of kilometres",
-        reason: 'Paragraf 4 teks A: "Unleashed dam waters can travel tens of kilometres."',
+        reason:
+          'Paragraf 4 teks A: "Unleashed dam waters can travel tens of kilometres."',
       },
       {
         id: "int-r9-mc7",
         type: "multiple-choice",
-        question: "PASSAGE A — Why does saturated ground contribute to flooding problems?",
+        question:
+          "PASSAGE A — Why does saturated ground contribute to flooding problems?",
         options: [
           "The ground cannot absorb more moisture",
           "The ground is too hard, so the water runs off",
@@ -2452,7 +2552,8 @@ const readingLessons: ModuleLesson[] = [
           "It causes ice to form",
         ],
         correctAnswer: "The ground cannot absorb more moisture",
-        reason: 'Paragraf 2 teks A: "Frozen ground or ground that is very wet cannot absorb water quickly." Tanah yang sudah jenuh tidak bisa menyerap air lagi.',
+        reason:
+          'Paragraf 2 teks A: "Frozen ground or ground that is very wet cannot absorb water quickly." Tanah yang sudah jenuh tidak bisa menyerap air lagi.',
       },
       {
         id: "int-r9-mc8",
@@ -2465,20 +2566,24 @@ const readingLessons: ModuleLesson[] = [
           "All of the above",
         ],
         correctAnswer: "All of the above",
-        reason: 'Paragraf 1 teks A: "resulting in widespread damage and even loss of life." Paragraf 4: "drown and crush everything and creature in their path." — semua pilihan termasuk.',
+        reason:
+          'Paragraf 1 teks A: "resulting in widespread damage and even loss of life." Paragraf 4: "drown and crush everything and creature in their path." — semua pilihan termasuk.',
       },
       {
         id: "int-r9-mc9",
         type: "multiple-choice",
-        question: "PASSAGE A — What is the most common natural disaster according to the passage?",
+        question:
+          "PASSAGE A — What is the most common natural disaster according to the passage?",
         options: ["Flood", "Fire", "Wind damage", "Rain"],
         correctAnswer: "Fire",
-        reason: 'Paragraf 1 teks A: "Floods are second only to fire as the most common of all natural disasters." Artinya kebakaran (fire) adalah yang PALING umum, dan banjir ada di posisi kedua.',
+        reason:
+          'Paragraf 1 teks A: "Floods are second only to fire as the most common of all natural disasters." Artinya kebakaran (fire) adalah yang PALING umum, dan banjir ada di posisi kedua.',
       },
       {
         id: "int-r9-mc10",
         type: "multiple-choice",
-        question: "PASSAGE A — How does melting snow cause problems related to flooding?",
+        question:
+          "PASSAGE A — How does melting snow cause problems related to flooding?",
         options: [
           "It makes the rivers run too fast",
           "It makes the water too cold",
@@ -2486,7 +2591,8 @@ const readingLessons: ModuleLesson[] = [
           "It makes the level of the river rise",
         ],
         correctAnswer: "It makes the level of the river rise",
-        reason: 'Paragraf 2 teks A: "Melting snow also contributes to high water levels in rivers and streams." Salju yang mencair meningkatkan level/ketinggian air sungai.',
+        reason:
+          'Paragraf 2 teks A: "Melting snow also contributes to high water levels in rivers and streams." Salju yang mencair meningkatkan level/ketinggian air sungai.',
       },
     ],
   },
@@ -2498,7 +2604,8 @@ const readingLessons: ModuleLesson[] = [
     day: 10,
     tutor: "Ms. Siska",
     title: "The Hardest Language",
-    subtitle: "Why there is no single answer to which language is the most difficult to learn",
+    subtitle:
+      "Why there is no single answer to which language is the most difficult to learn",
     overview:
       "Teks reading tentang faktor-faktor yang memengaruhi kesulitan belajar bahasa asing: kemiripan dengan bahasa pertama, sistem tulisan, motivasi, guru, dan temuan menarik tentang bahasa Hungaria dan Tabassaran.",
     passage: [
@@ -2558,18 +2665,22 @@ const readingLessons: ModuleLesson[] = [
       {
         id: "int-r10-tfng1",
         type: "true-false-not-given",
-        question: "For Japanese learners, Chinese writing is more difficult than for English speakers.",
+        question:
+          "For Japanese learners, Chinese writing is more difficult than for English speakers.",
         options: ["True", "False", "Not Given"],
         correctAnswer: "False",
-        reason: 'FALSE — Paragraf 2: "for Japanese speakers, who already use Chinese characters in their own language, learning writing will be less difficult than for speakers of languages using the Roman alphabet." Bagi penutur Jepang, menulis Mandarin lebih MUDAH, bukan lebih sulit.',
+        reason:
+          'FALSE — Paragraf 2: "for Japanese speakers, who already use Chinese characters in their own language, learning writing will be less difficult than for speakers of languages using the Roman alphabet." Bagi penutur Jepang, menulis Mandarin lebih MUDAH, bukan lebih sulit.',
       },
       {
         id: "int-r10-tfng2",
         type: "true-false-not-given",
-        question: "People learn their first language without much effort or formal study.",
+        question:
+          "People learn their first language without much effort or formal study.",
         options: ["True", "False", "Not Given"],
         correctAnswer: "True",
-        reason: 'TRUE — Paragraf 1: "people learn their mother tongue naturally" — secara alami, tanpa studi formal.',
+        reason:
+          'TRUE — Paragraf 1: "people learn their mother tongue naturally" — secara alami, tanpa studi formal.',
       },
       {
         id: "int-r10-tfng3",
@@ -2577,103 +2688,128 @@ const readingLessons: ModuleLesson[] = [
         question: "Tabassaran has fewer grammar cases than Hungarian.",
         options: ["True", "False", "Not Given"],
         correctAnswer: "False",
-        reason: 'FALSE — Paragraf 4: "Hungarian, which has 35 cases… Tabassaran, a Caucasian language, has 48 cases." Tabassaran memiliki lebih BANYAK kasus (48 > 35).',
+        reason:
+          'FALSE — Paragraf 4: "Hungarian, which has 35 cases… Tabassaran, a Caucasian language, has 48 cases." Tabassaran memiliki lebih BANYAK kasus (48 > 35).',
       },
       {
         id: "int-r10-tfng4",
         type: "true-false-not-given",
-        question: "Some people seem to find learning a foreign language easier than others.",
+        question:
+          "Some people seem to find learning a foreign language easier than others.",
         options: ["True", "False", "Not Given"],
         correctAnswer: "True",
-        reason: 'TRUE — Paragraf 3: "Some people seem to learn languages readily, while others find it very difficult."',
+        reason:
+          'TRUE — Paragraf 3: "Some people seem to learn languages readily, while others find it very difficult."',
       },
       {
         id: "int-r10-tfng5",
         type: "true-false-not-given",
-        question: "British diplomats found Hungarian easier to learn than Japanese.",
+        question:
+          "British diplomats found Hungarian easier to learn than Japanese.",
         options: ["True", "False", "Not Given"],
         correctAnswer: "False",
-        reason: 'FALSE — Paragraf 4: "the second hardest language is Japanese… the most problematic is Hungarian." Hungarian lebih SULIT daripada Japanese bagi diplomat Inggris.',
+        reason:
+          'FALSE — Paragraf 4: "the second hardest language is Japanese… the most problematic is Hungarian." Hungarian lebih SULIT daripada Japanese bagi diplomat Inggris.',
       },
       {
         id: "int-r10-tfng6",
         type: "true-false-not-given",
-        question: "The text suggests that the pronunciation of Chinese is considered difficult for many learners.",
+        question:
+          "The text suggests that the pronunciation of Chinese is considered difficult for many learners.",
         options: ["True", "False", "Not Given"],
         correctAnswer: "True",
-        reason: 'TRUE — Paragraf 2: "the pronunciation of Chinese does appear to be very difficult for many foreign learners."',
+        reason:
+          'TRUE — Paragraf 2: "the pronunciation of Chinese does appear to be very difficult for many foreign learners."',
       },
       {
         id: "int-r10-tfng7",
         type: "true-false-not-given",
-        question: "Hungarian uses an alphabet that is very different from English.",
+        question:
+          "Hungarian uses an alphabet that is very different from English.",
         options: ["True", "False", "Not Given"],
         correctAnswer: "False",
-        reason: 'FALSE — Paragraf 5: "it is not a question of the writing system, which uses a similar alphabet." Alfabet Hungaria mirip dengan Inggris.',
+        reason:
+          'FALSE — Paragraf 5: "it is not a question of the writing system, which uses a similar alphabet." Alfabet Hungaria mirip dengan Inggris.',
       },
       {
         id: "int-r10-tfng8",
         type: "true-false-not-given",
-        question: "According to the text, younger learners always learn languages more quickly than adults.",
+        question:
+          "According to the text, younger learners always learn languages more quickly than adults.",
         options: ["True", "False", "Not Given"],
         correctAnswer: "Not Given",
-        reason: 'NOT GIVEN — Teks tidak menyebutkan perbandingan antara pelajar muda dan dewasa sama sekali.',
+        reason:
+          "NOT GIVEN — Teks tidak menyebutkan perbandingan antara pelajar muda dan dewasa sama sekali.",
       },
       {
         id: "int-r10-tfng9",
         type: "true-false-not-given",
-        question: "People who study a language for professional reasons usually learn it faster.",
+        question:
+          "People who study a language for professional reasons usually learn it faster.",
         options: ["True", "False", "Not Given"],
         correctAnswer: "True",
-        reason: 'TRUE — Paragraf 3: "If people learn a language because they need to use it professionally, they often learn it faster."',
+        reason:
+          'TRUE — Paragraf 3: "If people learn a language because they need to use it professionally, they often learn it faster."',
       },
       {
         id: "int-r10-tfng10",
         type: "true-false-not-given",
-        question: "Chinese is considered the hardest language in the world by everyone.",
+        question:
+          "Chinese is considered the hardest language in the world by everyone.",
         options: ["True", "False", "Not Given"],
         correctAnswer: "False",
-        reason: 'FALSE — Paragraf 2 menyatakan "Many people answer that Chinese is the hardest" tetapi bagi penutur Jepang hal itu tidak berlaku. Paragraf 6 menyatakan tidak mungkin ada SATU bahasa paling sulit bagi semua orang.',
+        reason:
+          'FALSE — Paragraf 2 menyatakan "Many people answer that Chinese is the hardest" tetapi bagi penutur Jepang hal itu tidak berlaku. Paragraf 6 menyatakan tidak mungkin ada SATU bahasa paling sulit bagi semua orang.',
       },
       {
         id: "int-r10-tfng11",
         type: "true-false-not-given",
-        question: "The difficulty of a second language can depend on how similar it is to a learner's first language.",
+        question:
+          "The difficulty of a second language can depend on how similar it is to a learner's first language.",
         options: ["True", "False", "Not Given"],
         correctAnswer: "True",
-        reason: 'TRUE — Paragraf 2: "The greater the differences between the second language and our first, the harder it will be for most people to learn."',
+        reason:
+          'TRUE — Paragraf 2: "The greater the differences between the second language and our first, the harder it will be for most people to learn."',
       },
       {
         id: "int-r10-tfng12",
         type: "true-false-not-given",
-        question: "British diplomats are required to learn Tabassaran before being sent abroad.",
+        question:
+          "British diplomats are required to learn Tabassaran before being sent abroad.",
         options: ["True", "False", "Not Given"],
         correctAnswer: "Not Given",
-        reason: 'NOT GIVEN — Teks hanya menyebut Tabassaran sebagai perbandingan hipotetis ("if British diplomats had to learn it"). Tidak ada kewajiban seperti itu yang disebutkan.',
+        reason:
+          'NOT GIVEN — Teks hanya menyebut Tabassaran sebagai perbandingan hipotetis ("if British diplomats had to learn it"). Tidak ada kewajiban seperti itu yang disebutkan.',
       },
       {
         id: "int-r10-tfng13",
         type: "true-false-not-given",
-        question: "Hungarian is difficult for British people mainly because of its complex grammar.",
+        question:
+          "Hungarian is difficult for British people mainly because of its complex grammar.",
         options: ["True", "False", "Not Given"],
         correctAnswer: "True",
-        reason: 'TRUE — Paragraf 5: "it is not a question of the writing system… but the grammatical complexity." Kesulitan utama bahasa Hungaria bagi orang Inggris adalah kompleksitas tata bahasanya.',
+        reason:
+          'TRUE — Paragraf 5: "it is not a question of the writing system… but the grammatical complexity." Kesulitan utama bahasa Hungaria bagi orang Inggris adalah kompleksitas tata bahasanya.',
       },
       {
         id: "int-r10-tfng14",
         type: "true-false-not-given",
-        question: "The author says that no language can be considered the most difficult for all learners.",
+        question:
+          "The author says that no language can be considered the most difficult for all learners.",
         options: ["True", "False", "Not Given"],
         correctAnswer: "True",
-        reason: 'TRUE — Paragraf 6: "it is impossible to say that there is one language that is the most difficult language in the world."',
+        reason:
+          'TRUE — Paragraf 6: "it is impossible to say that there is one language that is the most difficult language in the world."',
       },
       {
         id: "int-r10-tfng15",
         type: "true-false-not-given",
-        question: "The passage claims that people learn languages better if they are taught by native speakers only.",
+        question:
+          "The passage claims that people learn languages better if they are taught by native speakers only.",
         options: ["True", "False", "Not Given"],
         correctAnswer: "Not Given",
-        reason: 'NOT GIVEN — Teks menyebutkan "teachers" sebagai faktor penting, tetapi tidak menyebutkan apakah guru harus native speakers atau tidak.',
+        reason:
+          'NOT GIVEN — Teks menyebutkan "teachers" sebagai faktor penting, tetapi tidak menyebutkan apakah guru harus native speakers atau tidak.',
       },
     ],
   },
@@ -3542,64 +3678,341 @@ const speakingLessons: ModuleLesson[] = [
 // ── Listening Lessons ─────────────────────────────────────────────────────────
 
 const listeningLessons: ModuleLesson[] = [
+  // ── Day 1: Fill the Blank — Free Time · Amazing Facts · Junior Cycle Camp ─────
+  {
+    id: "int-listening-1",
+    track: "listening",
+    day: 1,
+    tutor: "Mr. Fajri",
+    title: "Fill the Blank — Listening Practice",
+    subtitle:
+      "Audio 1: Free Time · Audio 2: Amazing Facts · Audio 3: Junior Cycle Camp",
+    overview:
+      "Latihan mendengarkan audio dan melengkapi teks rumpang. Tiga audio dengan konteks berbeda: percakapan di kolam renang, fakta ilmiah tentang tubuh manusia, dan informasi kamp bersepeda.",
+    materialSections: [],
+    exercises: [],
+    listeningAudios: [
+      // ── Audio 1: Free Time (dialogue, 16 blanks) ──────────────────────────────
+      {
+        title: "Audio 1: Free time.",
+        instruction: "Fill the blank spaces while listening to the recording.",
+        type: "dialogue",
+        answers: {
+          1:  "Swimming",
+          2:  "Pool",
+          3:  "I'd",
+          4:  "under",
+          5:  "16s",
+          6:  "Club",
+          7:  "adults",
+          8:  "train",
+          9:  "evenings",
+          10: "Tuesdays and Thursdays",
+          11: "6.30–8.00 PM",
+          12: "September",
+          13: "2nd",
+          14: "complete a form",
+          15: "photograph",
+          16: "your name",
+        },
+        lines: [
+          { speaker: "Receptionist", text: "Good morning, Brownton {{b:1}} {{b:2}}." },
+          { speaker: "Tyrone",       text: "Hello, {{b:3}} like some information about the water polo club." },
+          { speaker: "Receptionist", text: "Yes, of course. We have an under 14s club, an {{b:4}} {{b:5}} {{b:6}}, an under 18s club and an {{b:7}} club. How old are you?" },
+          { speaker: "Tyrone",       text: "I'm 15." },
+          { speaker: "Receptionist", text: "OK, so you want the under 16s club." },
+          { speaker: "Tyrone",       text: "Yes." },
+          { speaker: "Receptionist", text: "Just a moment … yes, we have two places in the under 16s club." },
+          { speaker: "Tyrone",       text: "When do they {{b:8}}?" },
+          { speaker: "Receptionist", text: "Let's see, the under 16s train two {{b:9}} a week, on Mondays, no sorry, on {{b:10}} from {{b:11}}. And matches are on Saturday mornings." },
+          { speaker: "Tyrone",       text: "When does the training start?" },
+          { speaker: "Receptionist", text: "Training starts next week, on {{b:12}} {{b:13}}." },
+          { speaker: "Tyrone",       text: "OK. And how much are the classes?" },
+          { speaker: "Receptionist", text: "Classes are free for under 18s." },
+          { speaker: "Tyrone",       text: "Great! What do I have to do to join?" },
+          { speaker: "Receptionist", text: "You have to come to the swimming pool and {{b:14}}. You need to bring a {{b:15}} too." },
+          { speaker: "Tyrone",       text: "OK." },
+          { speaker: "Receptionist", text: "Can I take {{b:16}}, please?" },
+          { speaker: "Tyrone",       text: "Yes, it's Tyrone Williams." },
+          { speaker: "Receptionist", text: "OK, thanks, Tyrone." },
+          { speaker: "Tyrone",       text: "Thanks. Bye." },
+        ],
+      } satisfies ListeningAudio,
+
+      // ── Audio 2: Amazing Facts (dialogue, 35 blanks) ──────────────────────────
+      {
+        title: "Audio 2: Amazing facts",
+        instruction: "Fill the blank spaces while listening to the recording.",
+        type: "dialogue",
+        answers: {
+          1:  "interesting",
+          2:  "article",
+          3:  "Human",
+          4:  "biology",
+          5:  "lessons",
+          6:  "discovering",
+          7:  "bacteria",
+          8:  "millions",
+          9:  "trillions",
+          10: "experiment",
+          11: "special",
+          12: "diet",
+          13: "digest",
+          14: "we",
+          15: "are",
+          16: "better",
+          17: "they're",
+          18: "cells",
+          19: "I'd",
+          20: "say",
+          21: "mathematical",
+          22: "space",
+          23: "tiny",
+          24: "cube",
+          25: "0.002",
+          26: "extract",
+          27: "mites",
+          28: "eyelashes",
+          29: "particular",
+          30: "eyebrows",
+          31: "50%",
+          32: "harmless",
+          33: "dead",
+          34: "skin",
+          35: "preferred",
+        },
+        lines: [
+          { speaker: "A", text: "Hey, I'm reading this really {{b:1}} {{b:2}} about the human body." },
+          { speaker: "B", text: "Yeah? Well, we know all about that from {{b:3}} {{b:4}}." },
+          { speaker: "A", text: "No, we didn't learn much at all at school! They're {{b:5}} {{b:6}} loads more things all the time. Really amazing things! Did you know that only about one tenth of the cells in your body are really you? The rest are {{b:7}}." },
+          { speaker: "B", text: "What? I'm not really me?" },
+          { speaker: "A", text: "No, of course you are you, but you also have {{b:8}}, or {{b:9}}, of bacteria in you." },
+          { speaker: "B", text: "Eeeeuuugh!" },
+          { speaker: "A", text: "No, they're mostly really helpful. Someone did an {{b:10}} to see if animals can live without bacteria, and he found that a lot of them died or had to have a {{b:11}} {{b:12}}. Animals need bacteria to {{b:13}} food, you see. So {{b:14}} {{b:15}} {{b:16}} off with bacteria." },
+          { speaker: "B", text: "Unless the bacteria are bad." },
+          { speaker: "A", text: "Unless they are bad, but {{b:17}} nearly all good. Oh yeah, and going back to {{b:18}}, do you know how many cells you have in your body?" },
+          { speaker: "B", text: "Quite a lot, {{b:19}} {{b:20}}. A good few." },
+          { speaker: "A", text: "Yeah, but how many?" },
+          { speaker: "B", text: "I don't know. I'm not {{b:21}}." },
+          { speaker: "A", text: "7 octillion! That's 7 plus 27 noughts." },
+          { speaker: "B", text: "I knew it was a lot." },
+          { speaker: "A", text: "OK, that's an amazingly huge number, almost impossible to imagine. But the really weird thing is that most of the atoms are empty {{b:22}}. Just air or nothingness. And if you took out the empty space, you could fit your body inside a {{b:23}} {{b:24}} which measures one 500th of a centimetre on either side. That's a box measuring {{b:25}} of a centimetre on each side. You'd be much too small to see." },
+          { speaker: "B", text: "Mmm, I can imagine that. It sounds like something that would happen in a really bad Hollywood movie. You know, a mad scientist goes: (funny voice) 'I'm going to {{b:26}} all the air from your body'. OK, enough facts for one day." },
+          { speaker: "A", text: "Don't go! One last thing, did you know …" },
+          { speaker: "B", text: "No." },
+          { speaker: "A", text: "Did you know that you probably have {{b:27}} in your {{b:28}}?" },
+          { speaker: "B", text: "Mites in my eyelashes? What are mites exactly anyway?" },
+          { speaker: "A", text: "Yeah, they're very small creatures, like insects, only not insects. They're about a third of a millimetre long, so you can't really see them. These {{b:29}} mites live in eyelashes and {{b:30}}." },
+          { speaker: "B", text: "But in mine?" },
+          { speaker: "A", text: "Well, maybe not. Only about {{b:31}} of people have them, and more older people. So you might not have any. Anyway, they're completely {{b:32}}, they just eat {{b:33}} {{b:34}}." },
+          { speaker: "B", text: "Yeah, right, harmless. I really would have {{b:35}} not to know that." },
+          { speaker: "A", text: "Sorry." },
+          { speaker: "B", text: "I mean, really!" },
+        ],
+      } satisfies ListeningAudio,
+
+      // ── Audio 3: Junior Cycle Camp (notes, 10 blanks) ─────────────────────────
+      {
+        title: "Audio 3: Junior Cycle Camp",
+        instruction: "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+        type: "notes",
+        answers: {
+          1:  "park",
+          2:  "blue",
+          3:  "reference",
+          4:  "story",
+          5:  "rain",
+          6:  "snack",
+          7:  "medication",
+          8:  "helmet",
+          9:  "tent",
+          10: "199",
+        },
+        lines: [
+          { text: "The course focuses on skills and safety" },
+          { text: "Charlie would be placed in Level 5.", indent: true },
+          { text: "First of all, children at this level are taken to practise in a 1 {{b:1}}.", indent: true },
+          { text: "Instructors", bold: true },
+          { text: "Instructors wear 2 {{b:2}} shirts." },
+          { text: "A 3 {{b:3}} is required and training is given." },
+          { text: "Classes", bold: true },
+          { text: "The size of the classes is limited." },
+          { text: "There are quiet times during the morning for a 4 {{b:4}} or a game." },
+          { text: "Classes are held even if there is 5 {{b:5}}." },
+          { text: "What to bring", bold: true },
+          { text: "a change of clothing", indent: true },
+          { text: "a 6 {{b:6}}", indent: true },
+          { text: "shoes (not sandals)", indent: true },
+          { text: "Charlie's 7 {{b:7}}", indent: true },
+          { text: "Day 1", bold: true },
+          { text: "Charlie should arrive at 9.20 am on the first day." },
+          { text: "Before the class, his 8 {{b:8}} will be checked." },
+          { text: "He should then go to the 9 {{b:9}} to meet his class instructor." },
+          { text: "Cost", bold: true },
+          { text: "The course costs ${{b:10}} per week." },
+        ],
+      } satisfies ListeningAudio,
+    ],
+  },
+
+  // ── Day 2: Shopping · Celebrations · Holiday Rental ─────────────────────────
   {
     id: "int-listening-2",
     track: "listening",
     day: 2,
-    tutor: "Ms. Siska",
-    title: "Everyday Conversations",
-    subtitle: "Listening for detail and gist in daily dialogues",
+    tutor: "Mr. Fajri",
+    title: "Fill the Blank — Listening Practice Day 2",
+    subtitle: "Audio 4: Shopping for Clothes · Audio 5: Celebrations · Audio 6: Holiday Rental",
     overview:
-      "Materi listening tentang strategi mendengarkan percakapan sehari-hari: memahami gist, detail spesifik, dan nada bicara.",
-    materialSections: [
+      "Tiga audio berbeda: percakapan belanja baju, lima orang berbagi cerita perayaan, dan informasi sewa liburan dalam format catatan.",
+    materialSections: [],
+    exercises: [],
+    listeningAudios: [
+      // ── Audio 4: Shopping for clothes (dialogue, 15 blanks) ───────────────────
       {
-        title: "Listening Strategies",
-        points: [
-          "🎯 Listening for GIST — memahami isi umum/topik utama. Jangan terpaku pada setiap kata.",
-          "🔍 Listening for DETAIL — mencari informasi spesifik (angka, nama, waktu, tempat).",
-          "💡 Listening for ATTITUDE — memahami perasaan atau pendapat pembicara (positive/negative/neutral).",
-          "✏️ Note-taking — tulis kata kunci, bukan kalimat lengkap, saat mendengarkan.",
-          "🔄 Listen twice — pertama untuk gist, kedua untuk detail dan konfirmasi jawaban.",
+        title: "Audio 4: Shopping for clothes.",
+        instruction: "Fill the blank spaces while listening to the recording.",
+        type: "dialogue",
+        answers: {
+          1:  "T-shirt",
+          2:  "white",
+          3:  "black",
+          4:  "red",
+          5:  "purple",
+          6:  "we've",
+          7:  "got",
+          8:  "changing",
+          9:  "rooms",
+          10: "I'll",
+          11: "take",
+          12: "10.95",
+          13: "9",
+          14: "pounds",
+          15: "receipt",
+        },
+        lines: [
+          { speaker: "Shop assistant", text: "Can I help you?" },
+          { speaker: "Customer",       text: "Yes, have you got this {{b:1}} in other colours?" },
+          { speaker: "Shop assistant", text: "We've got it in {{b:2}}, {{b:3}}, {{b:4}} and {{b:5}}. What size do you want?" },
+          { speaker: "Customer",       text: "Medium." },
+          { speaker: "Shop assistant", text: "OK, in medium {{b:6}} {{b:7}} black and red." },
+          { speaker: "Customer",       text: "And in purple?" },
+          { speaker: "Shop assistant", text: "No, just black and red." },
+          { speaker: "Customer",       text: "OK, red. Can I try it on?" },
+          { speaker: "Shop assistant", text: "Yes, of course. The {{b:8}} {{b:9}} are over there." },
+          { speaker: "(pause)",        text: "" },
+          { speaker: "Shop assistant", text: "Is it OK?" },
+          { speaker: "Customer",       text: "Yes, {{b:10}} {{b:11}} it." },
+          { speaker: "Shop assistant", text: "That's £{{b:12}}. Would you like to pay by credit card or with cash?" },
+          { speaker: "Customer",       text: "Cash please. Here's twenty." },
+          { speaker: "Shop assistant", text: "OK, thanks, that's £{{b:13}} {{b:14}}, 5p change and here's your {{b:15}}." },
+          { speaker: "Customer",       text: "Thanks. Bye." },
         ],
-      },
+      } satisfies ListeningAudio,
+
+      // ── Audio 5: Celebrations (monologue A–E, 36 blanks) ─────────────────────
       {
-        title: "Common Traps in Listening Tests",
-        points: [
-          "⚠️ Distractor words — pembicara menyebut kata yang mirip pilihan jawaban, tapi bukan yang benar.",
-          '⚠️ Negation — "He does NOT like coffee" → jangan pilih "coffee" sebagai yang dia suka.',
-          '⚠️ Correction — pembicara bisa mengoreksi dirinya sendiri: "Monday — no wait, Tuesday."',
-          "⚠️ Paraphrasing — jawaban di audio dan soal sering menggunakan kata yang berbeda tapi makna sama.",
+        title: "Audio 5: Celebrations",
+        instruction: "Fill the blank spaces while listening to the recording.",
+        type: "dialogue",
+        answers: {
+          1:  "brilliant",
+          2:  "decorate",
+          3:  "longest",
+          4:  "great",
+          5:  "bass",
+          6:  "player",
+          7:  "carnival",
+          8:  "August",
+          9:  "fantastic",
+          10: "time",
+          11: "costumes",
+          12: "crowded",
+          13: "pickpockets",
+          14: "hire",
+          15: "river",
+          16: "ages",
+          17: "loads",
+          18: "old",
+          19: "records",
+          20: "same",
+          21: "week",
+          22: "surprise",
+          23: "party",
+          24: "luckily",
+          25: "October",
+          26: "excuse",
+          27: "stuff",
+          28: "turn",
+          29: "June",
+          30: "princes",
+          31: "decided",
+          32: "the",
+          33: "middle",
+          34: "dishes",
+          35: "nationalities",
+          36: "neighbours",
+        },
+        lines: [
+          {
+            speaker: "A",
+            text: "It was Nicky's idea, but we all think it's going to be {{b:1}}. As soon as the last exams have finished, we're going to {{b:2}} the main hall at school with paper streamers and Chinese lanterns and things. Steve had this idea of projecting photos of everyone onto a wall, like a slide show. And we've got Jo's brother, who's a professional DJ, coming along. Then there are three different bands lined up to play. Ours is the best, because we've been together {{b:3}} and we've got a {{b:4}} {{b:5}} {{b:6}}, (coughs) although I say so myself, so we're on last. It's going to be cool.",
+          },
+          {
+            speaker: "B",
+            text: "Every year there's a {{b:7}} in {{b:8}} in London. You've probably heard of it, the Notting Hill Carnival? So this year, me and my friends are going again. We went last year and we had such a {{b:9}} {{b:10}}. It's all Afro-Caribbean, with people in amazing {{b:11}} and these brilliant steel bands. We don't go in costume, but we do dance a lot. It does get quite {{b:12}} so you have to make sure you stick together. And you have to watch out for {{b:13}} when there are so many people in the same place. But it's really good fun; it's like London becomes a different country. Even the police dance sometimes.",
+          },
+          {
+            speaker: "C",
+            text: "We're going to {{b:14}} a boat for the day and take it up the {{b:15}}. It's my grandparents' golden wedding anniversary, so the whole family is getting together. I'm really looking forward to seeing my cousins again. I haven't seen them for {{b:16}}. We've got this huge picnic planned, with {{b:17}} of different types of sandwiches and salads and an enormous cake. My dad has borrowed an ancient gramophone player, you know, what they had before CD players, and some {{b:18}} {{b:19}}. So as we go up the river we're going to listen to music from the time my grandparents got married — the swinging sixties!",
+          },
+          {
+            speaker: "D",
+            text: "Two of my best friends have their birthday in the {{b:20}} {{b:21}}, so some of us have decided to have a {{b:22}} {{b:23}} for both of them. One of my friends, Sandra, has a big house, and her parents say we can use it. They're going away, {{b:24}}. It's at the end of {{b:25}} so we're going to decorate the house with Halloween things, you know, spiders' webs and spooky things. We're going to make up an {{b:26}} to get the birthday girls to come round to the house — say we're going to help Sandra move some {{b:27}}, or something. Then, as soon as Sandra lets them in, we're going to {{b:28}} the lights out and jump out at them! We just have to make sure nobody mentions anything on Facebook and gives away the surprise.",
+          },
+          {
+            speaker: "E",
+            text: "There's a Royal wedding in {{b:29}} — one of our {{b:30}} is getting married — so it's a public holiday. Lots of people are having parties in squares and parks and places, and the people in our street {{b:31}} to have one too. Well, it's a good excuse to have a party, isn't it? We're all going to take out tables and chairs and put them together in {{b:32}} {{b:33}} of the road. We're going to stop cars coming through, obviously. We're all going to bring different {{b:34}} and share them round. There are quite a lot of different {{b:35}} living on our street — people from India, China and different African countries — so the food should be really interesting. It'll be good to get to know more of the {{b:36}}.",
+          },
         ],
-      },
+      } satisfies ListeningAudio,
+
+      // ── Audio 6: Holiday rental (notes, 10 blanks) ────────────────────────────
       {
-        title: "Key Phrases to Listen For",
-        points: [
-          "Actually / In fact — pembicara menyampaikan informasi penting atau koreksi",
-          "So / Therefore / As a result — menyatakan kesimpulan atau akibat",
-          "But / However / Although — menyatakan perubahan arah/kontras",
-          "First / Then / Finally / After that — urutan kejadian",
+        title: "Audio 6: Holiday rental",
+        instruction: "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+        type: "notes",
+        answers: {
+          1:  "28th",
+          2:  "550",
+          3:  "Chervil",
+          4:  "garage",
+          5:  "garden",
+          6:  "parking",
+          7:  "wood",
+          8:  "bridge",
+          9:  "monument",
+          10: "March",
+        },
+        lines: [
+          { text: "Owner's names: Jack Fitzgerald and Shirley Fitzgerald" },
+          { text: "Granary Cottage", bold: true },
+          { text: "available for week beginning {{b:1}} May", indent: true },
+          { text: "cost for the week: £{{b:2}}", indent: true },
+          { text: "{{b:3}} Cottage", bold: true },
+          { text: "cost for the week: £480", indent: true },
+          { text: "building was originally a {{b:4}}", indent: true },
+          { text: "walk through doors from living room into a {{b:5}}", indent: true },
+          { text: "several {{b:6}} spaces at the front", indent: true },
+          { text: "bathroom has a shower", indent: true },
+          { text: "central heating and stove that burns {{b:7}}", indent: true },
+          { text: "views of old {{b:8}} from living room", indent: true },
+          { text: "view of hilltop {{b:9}} from the bedroom", indent: true },
+          { text: "Payment", bold: true },
+          { text: "deposit: £144", indent: true },
+          { text: "deadline for final payment: end of {{b:10}}", indent: true },
         ],
-      },
-    ],
-    exercises: [
-      {
-        id: "int-ls2-q1",
-        type: "task",
-        question:
-          "Listen to a short English podcast or YouTube video (2–3 minutes). Write down 5 key ideas you heard. Share with the class.",
-      },
-      {
-        id: "int-ls2-q2",
-        type: "task",
-        question:
-          "Listen to your tutor read the following sentences and identify: is the speaker's tone positive, negative, or neutral? Explain your answer.",
-      },
-      {
-        id: "int-ls2-q3",
-        type: "task",
-        question:
-          "Partner activity: one person describes their weekend plan using only spoken English (no text), the other takes notes. Then summarize what you heard.",
-      },
+      } satisfies ListeningAudio,
     ],
   },
 ];
@@ -4490,19 +4903,19 @@ const grammarLessons: ModuleLesson[] = [
         title: "Fungsi Present Continuous",
         points: [
           "1️⃣ Aksi yang SEDANG berlangsung",
-          '   → He is studying right now.',
+          "   → He is studying right now.",
           "─────────────────────────────",
           "2️⃣ Rencana yang SUDAH PASTI (future plan)",
-          '   → I am appointing with doctor tomorrow.',
+          "   → I am appointing with doctor tomorrow.",
           "─────────────────────────────",
           "3️⃣ Perubahan yang SEDANG berlangsung",
           "   → Government's program is still happening until now.",
           "─────────────────────────────",
           "4️⃣ Aksi SEMENTARA",
-          '   → For this time, I am staying with my friend.',
+          "   → For this time, I am staying with my friend.",
           "─────────────────────────────",
           "5️⃣ Menyatakan KEJENGKELAN (consistently / always)",
-          '   → She is always calling me, when I am teaching my students.',
+          "   → She is always calling me, when I am teaching my students.",
         ],
       },
       {
@@ -4548,30 +4961,6 @@ const grammarLessons: ModuleLesson[] = [
           "─────────────────────────────",
           "(?) Is/Am/Are + S + being + ANA?",
           "{{annotation:Are|Vord}} {{annotation:you|S}} being {{annotation:hungry|ANA}}?",
-        ],
-      },
-      {
-        title: "Review — Tabel Perbandingan 3 Tenses",
-        points: [
-          "📌 Sebelum latihan, mari review rumus dari tenses yang sudah dipelajari.",
-          "─────────────────────────────",
-          "🟦 PRESENT (habit / fact)",
-          "  Active      → S + V1",
-          "  Passive     → S + is/am/are + V3",
-          "  Non-Verbal  → S + is/am/are + ANA",
-          "─────────────────────────────",
-          "🟧 PAST (past event)",
-          "  Active      → S + V2",
-          "  Passive     → S + was/were + V3",
-          "  Non-Verbal  → S + was/were + ANA",
-          "─────────────────────────────",
-          "🟩 PRESENT CONTINUOUS (right now)",
-          "  Active      → S + is/am/are + V1-ing",
-          "  Passive     → S + is/am/are + being + V3",
-          "  Non-Verbal  → S + is/am/are + being + ANA",
-          "─────────────────────────────",
-          "💡 ANA = Adjective / Noun / Adverb (pelengkap non-verbal)",
-          "{{quiz-game:Review Grammar Inter|25 soal · Present · Past · Present Continuous}}",
         ],
       },
     ],
@@ -4738,61 +5127,61 @@ const grammarLessons: ModuleLesson[] = [
         id: "int-gr4-q16",
         type: "task",
         question:
-          "Terjemahkan ke bahasa Inggris:\n\"Dia (perempuan) membaca buku setiap pagi.\"",
+          'Terjemahkan ke bahasa Inggris:\n"Dia (perempuan) membaca buku setiap pagi."',
       },
       {
         id: "int-gr4-q17",
         type: "task",
         question:
-          "Terjemahkan ke bahasa Inggris:\n\"Laporan itu dikirim oleh manajer kemarin.\"",
+          'Terjemahkan ke bahasa Inggris:\n"Laporan itu dikirim oleh manajer kemarin."',
       },
       {
         id: "int-gr4-q18",
         type: "task",
         question:
-          "Terjemahkan ke bahasa Inggris:\n\"Para siswa sedang mengerjakan tugas mereka sekarang.\"",
+          'Terjemahkan ke bahasa Inggris:\n"Para siswa sedang mengerjakan tugas mereka sekarang."',
       },
       {
         id: "int-gr4-q19",
         type: "task",
         question:
-          "Terjemahkan ke bahasa Inggris:\n\"Jembatan itu dibangun dua tahun yang lalu.\"",
+          'Terjemahkan ke bahasa Inggris:\n"Jembatan itu dibangun dua tahun yang lalu."',
       },
       {
         id: "int-gr4-q20",
         type: "task",
         question:
-          "Terjemahkan ke bahasa Inggris:\n\"Rapat sedang berlangsung saat kami tiba.\"",
+          'Terjemahkan ke bahasa Inggris:\n"Rapat sedang berlangsung saat kami tiba."',
       },
       {
         id: "int-gr4-q21",
         type: "task",
         question:
-          "Terjemahkan ke bahasa Inggris:\n\"Surat kabar itu dibaca oleh banyak orang setiap hari.\"",
+          'Terjemahkan ke bahasa Inggris:\n"Surat kabar itu dibaca oleh banyak orang setiap hari."',
       },
       {
         id: "int-gr4-q22",
         type: "task",
         question:
-          "Terjemahkan ke bahasa Inggris:\n\"Dia (laki-laki) sedang berbicara dengan klien saat ini.\"",
+          'Terjemahkan ke bahasa Inggris:\n"Dia (laki-laki) sedang berbicara dengan klien saat ini."',
       },
       {
         id: "int-gr4-q23",
         type: "task",
         question:
-          "Terjemahkan ke bahasa Inggris:\n\"Proyek itu sedang ditinjau oleh tim saat ini.\"",
+          'Terjemahkan ke bahasa Inggris:\n"Proyek itu sedang ditinjau oleh tim saat ini."',
       },
       {
         id: "int-gr4-q24",
         type: "task",
         question:
-          "Terjemahkan ke bahasa Inggris:\n\"Mereka tidak hadir di kantor kemarin.\"",
+          'Terjemahkan ke bahasa Inggris:\n"Mereka tidak hadir di kantor kemarin."',
       },
       {
         id: "int-gr4-q25",
         type: "task",
         question:
-          "Terjemahkan ke bahasa Inggris:\n\"Kebijakan baru sedang diterapkan oleh perusahaan sekarang.\"",
+          'Terjemahkan ke bahasa Inggris:\n"Kebijakan baru sedang diterapkan oleh perusahaan sekarang."',
       },
     ],
   },
@@ -4812,23 +5201,7 @@ const grammarLessons: ModuleLesson[] = [
         title: "Review — Tabel Perbandingan 3 Tenses",
         points: [
           "📌 Sebelum lanjut, mari review rumus dari tenses yang sudah dipelajari.",
-          "─────────────────────────────",
-          "🟦 PRESENT (habit / fact)",
-          "  Active      → S + V1",
-          "  Passive     → S + is/am/are + V3",
-          "  Non-Verbal  → S + is/am/are + ANA",
-          "─────────────────────────────",
-          "🟧 PAST (past event)",
-          "  Active      → S + V2",
-          "  Passive     → S + was/were + V3",
-          "  Non-Verbal  → S + was/were + ANA",
-          "─────────────────────────────",
-          "🟩 PRESENT CONTINUOUS (right now)",
-          "  Active      → S + is/am/are + V1-ing",
-          "  Passive     → S + is/am/are + being + V3",
-          "  Non-Verbal  → S + is/am/are + being + ANA",
-          "─────────────────────────────",
-          "💡 ANA = Adjective / Noun / Adverb (pelengkap non-verbal)",
+          "{{tenses-table}}",
         ],
       },
     ],
