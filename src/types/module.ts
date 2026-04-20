@@ -11,6 +11,7 @@ export interface ModuleExercise {
   reason?: string;
   sampleAnswer?: string;
   section?: 'middle' | 'final' | 'quiz';
+  imageUrl?: string;
 }
 
 export interface ModuleMaterialSection {
@@ -31,8 +32,9 @@ export interface ListeningLine {
 export interface ListeningAudio {
   title: string;        // "Audio 1: Free time."
   instruction: string;  // "Fill the blank spaces while listening to the recording."
-  type: 'dialogue' | 'notes';
+  type: 'dialogue' | 'notes' | 'table';
   lines: ListeningLine[];
+  tableRows?: { label: string; value: string }[]; // for type='table'
   answers: Record<number, string>; // blank number → correct answer
 }
 

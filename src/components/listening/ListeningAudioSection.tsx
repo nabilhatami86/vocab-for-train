@@ -108,7 +108,26 @@ export default function ListeningAudioSection({ audio, audioIndex }: Props) {
 
       {/* Script body */}
       <div className="p-5 space-y-0.5">
-        {audio.type === 'dialogue'
+        {audio.type === 'table' && audio.tableRows
+          ? (
+            <table className="w-full text-sm border-collapse border border-(--border) rounded-lg overflow-hidden">
+              <tbody>
+                {audio.tableRows.map((row, i) => (
+                  <tr key={i} className="border-b border-(--border) last:border-0">
+                    <td className="py-3 px-4 text-(--text) font-medium align-middle border-r border-(--border) bg-(--bg-secondary) w-[45%] leading-snug">
+                      {row.label}
+                    </td>
+                    <td className="py-3 px-4 text-(--text-secondary) align-middle">
+                      <span className="flex flex-wrap items-baseline gap-y-1">
+                        {renderText(row.value, `trow-${i}`)}
+                      </span>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          )
+          : audio.type === 'dialogue'
           ? audio.lines.map((line, i) => (
               <div key={i} className="flex gap-3 py-1 leading-relaxed text-sm">
                 {line.speaker ? (

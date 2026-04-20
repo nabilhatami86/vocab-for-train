@@ -1679,7 +1679,73 @@ export default function ModuleLessonClient({ lesson, backHref = '/tn-basic-courc
                     const selected = selectedOptions[exercise.id];
                     const hasAnswered = Boolean(selected);
                     const isCorrect = hasAnswered && selected === exercise.correctAnswer;
+                    const letters = ['A', 'B', 'C', 'D', 'E'];
 
+                    // Image-grid MCQ (worksheet style: photo grid + A/B/C buttons)
+                    if (exercise.imageUrl) {
+                      const correctLetter = letters[exercise.options.indexOf(exercise.correctAnswer ?? '')];
+                      const selectedLetter = selected ? letters[exercise.options.indexOf(selected)] : null;
+                      return (
+                        <div className="space-y-3">
+                          <img
+                            src={exercise.imageUrl}
+                            alt="Exercise options"
+                            className="w-full rounded-lg border border-(--border) object-contain"
+                          />
+                          <div className={`grid gap-2`} style={{ gridTemplateColumns: `repeat(${exercise.options.length}, 1fr)` }}>
+                            {exercise.options.map((option, oi) => {
+                              const letter = letters[oi];
+                              const isSelected = selected === option;
+                              const isAnswer = option === exercise.correctAnswer;
+                              const showResult = hasAnswered && exercise.correctAnswer;
+                              return (
+                                <button
+                                  key={option}
+                                  onClick={() => setSelectedOptions((prev) => ({ ...prev, [exercise.id]: option }))}
+                                  className={cn(
+                                    'py-2 rounded-lg border text-sm font-bold transition-colors',
+                                    showResult
+                                      ? isAnswer
+                                        ? 'border-green-500 bg-green-500/15 text-green-700 dark:text-green-400'
+                                        : isSelected
+                                          ? 'border-red-500 bg-red-500/10 text-red-600'
+                                          : 'border-(--border) text-(--text-muted)'
+                                      : isSelected
+                                        ? 'border-primary bg-primary/10 text-primary'
+                                        : 'border-(--border) hover:border-primary/50 text-(--text-secondary)'
+                                  )}
+                                >
+                                  {letter}
+                                </button>
+                              );
+                            })}
+                          </div>
+                          {hasAnswered && exercise.correctAnswer && (
+                            <div className={cn(
+                              'rounded-lg px-4 py-3 text-sm flex items-start gap-2',
+                              isCorrect ? 'bg-green-500/10 border border-green-500/30' : 'bg-red-500/10 border border-red-500/30'
+                            )}>
+                              {isCorrect
+                                ? <CheckCircle2 className="w-4 h-4 mt-0.5 shrink-0 text-green-500" />
+                                : <XCircle className="w-4 h-4 mt-0.5 shrink-0 text-red-500" />}
+                              <div>
+                                <p className={cn('font-medium', isCorrect ? 'text-green-700 dark:text-green-400' : 'text-red-700 dark:text-red-400')}>
+                                  {isCorrect ? `Benar! Jawaban: ${correctLetter}` : `Salah! Jawaban yang benar: ${correctLetter} — ${exercise.correctAnswer}`}
+                                </p>
+                                {exercise.reason && (
+                                  <p className="mt-1 text-(--text-secondary) flex items-start gap-1.5">
+                                    <Lightbulb className="w-3.5 h-3.5 mt-0.5 shrink-0 text-amber-500" />
+                                    {exercise.reason}
+                                  </p>
+                                )}
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      );
+                    }
+
+                    // Standard text MCQ
                     return (
                       <div className="space-y-3">
                         <div className="grid sm:grid-cols-2 gap-2">
@@ -2063,13 +2129,22 @@ export default function ModuleLessonClient({ lesson, backHref = '/tn-basic-courc
         // Apakah ini mode 3-grup (regular + middle + final semua ada)?
         const isThreeGroup = regularExercises.length > 0 && hasTestSections;
 
-        // Listening audios (replaces exercises for listening track lessons)
+        // Listening audios: quiz exercises (Section A) first, audios middle, regular exercises (Section E) last
         if (lesson.listeningAudios && lesson.listeningAudios.length > 0) {
+          const preExercises = lesson.exercises.filter((e) => e.section === 'quiz');
+          const postExercises = lesson.exercises.filter((e) => !e.section);
           return (
             <section className="space-y-6">
+              {preExercises.length > 0 && renderExerciseList(preExercises, 1)}
               {lesson.listeningAudios.map((audio, idx) => (
                 <ListeningAudioSection key={audio.title} audio={audio} audioIndex={idx + 1} />
               ))}
+              {postExercises.length > 0 && (
+                <div className="space-y-4">
+                  <h3 className="text-sm font-semibold text-(--text-muted) uppercase tracking-wide px-1">E. Listen to Jack asking Alice about her birthday</h3>
+                  {renderExerciseList(postExercises, preExercises.length + 1)}
+                </div>
+              )}
             </section>
           );
         }
