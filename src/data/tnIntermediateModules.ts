@@ -2193,12 +2193,12 @@ const readingLessons: ModuleLesson[] = [
     passage: [
       "The British Broadcasting Company was established in 1922. Four years later, it changed its name to British Broadcasting Corporation, better known as the BBC, and that is how it has remained ever since.",
       "(British Broadcasting Company didirikan pada tahun 1922. Empat tahun kemudian, namanya diubah menjadi British Broadcasting Corporation, yang lebih dikenal sebagai BBC, dan begitulah nama itu tetap digunakan hingga sekarang.)",
-      "It was not the world's first radio station. There had already been public radio stations in Britain before 1922, and in other countries, like Russia and in America. In the Soviet Union, radio was owned, operated and tightly controlled by the state. In the USA it was a great new adventure for free enterprise. With its new idea of public service broadcasting, the British government chose the middle road.",
+      "It was not the world's first radio station. There had already been public radio stations in Britain before 1920, and by 1922 radio stations were operating in Russia and in America. In the Soviet Union, radio was owned, operated and tightly controlled by the state. In the USA it was a great new adventure for free enterprise. With its new idea of public service broadcasting, the British government chose the middle road.",
       "(BBC bukan stasiun radio pertama di dunia. Sudah ada stasiun radio publik di Inggris sebelum tahun 1922, dan di negara-negara lain, seperti Rusia dan Amerika. Di Uni Soviet, radio dimiliki, dioperasikan, dan dikontrol ketat oleh negara. Di AS, radio merupakan petualangan baru yang luar biasa untuk wirausaha bebas. Dengan ide baru penyiaran layanan publik, pemerintah Inggris memilih jalan tengah.)",
       "From the beginning the BBC was a public service radio, but also an independent operator. Except during the war years, it has never been controlled by the government. On the contrary, several British government ministers have complained, over the years, that the BBC was biased against them!",
       "(Sejak awal, BBC adalah radio layanan publik, tetapi juga operator independen. Kecuali selama tahun-tahun perang, BBC tidak pernah dikendalikan oleh pemerintah. Sebaliknya, beberapa menteri pemerintah Inggris telah mengeluh, selama bertahun-tahun, bahwa BBC berpihak melawan mereka!)",
       "In the early days of BBC radio, there was not a lot of news on the radio. There were music, drama, discussions and children's programmes; but news was not broadcast until after 7 p.m., to avoid competition with the newspapers!",
-      "(Pada masa awal radio BBC, tidak banyak berita di radio. Ada musik, drama, diskusi, dan program anak-anak; tetapi berita tidak disiarkan hingga setelah pukul 19.00, untuk menghindari persaingan dengan surat kabar!)",
+      "(Pada masa awal radio BBC, tidak banyak berita di radio. Ada musik, drama, diskusi, dan program anak-anak; tetapi berita tidak disiarkan hingga setelah pukul 7 malam, untuk menghindari persaingan dengan surat kabar!)",
       "In 1936 the BBC began the world's first television service. Only a few thousand people in the London area could receive those first flickering images, which were broadcast using a system of just 204 lines. Today we have 625 lines on ordinary television, and even more HDTV.",
       "(Pada tahun 1936, BBC memulai layanan televisi pertama di dunia. Hanya beberapa ribu orang di area London yang bisa menerima gambar-gambar berkedip pertama itu, yang disiarkan menggunakan sistem hanya 204 garis. Saat ini kita memiliki 625 garis pada televisi biasa, dan bahkan lebih banyak untuk HDTV.)",
       "Nevertheless, people liked what they saw, and as the number of transmitters increased, more and more people went out to buy new television sets.",
@@ -2268,22 +2268,21 @@ const readingLessons: ModuleLesson[] = [
         reason:
           'Paragraf 4: "news was not broadcast until after 7 p.m., to avoid competition with the newspapers!"',
       },
+
       {
         id: "int-r8-sa3",
         type: "short-answer",
-        question:
-          "When did the BBC begin the world's first television service?",
-        sampleAnswer: "In 1936.",
-        reason:
-          'Paragraf 5: "In 1936 the BBC began the world\'s first television service."',
+        question: "How many lines were used to broadcast BBC in 1936?",
+        sampleAnswer: "204 lines.",
+        reason: 'Paragraf 5: "broadcast using a system of just 204 lines."',
       },
       {
         id: "int-r8-sa4",
         type: "short-answer",
-        question:
-          "How many lines were used for broadcasting in the early days (mid-1900s)?",
-        sampleAnswer: "204 lines.",
-        reason: 'Paragraf 5: "broadcast using a system of just 204 lines."',
+        question: "Why did BBC TV stop broadcasting on September 1st, 1939?",
+        sampleAnswer: "Because World War II had begun.",
+        reason:
+          'Paragraf 7: "on September 1st, 1939, in the middle of a Mickey Mouse cartoon, BBC TV stopped broadcasting. The Second World War had begun."',
       },
       {
         id: "int-r8-sa5",
@@ -2322,7 +2321,7 @@ const readingLessons: ModuleLesson[] = [
         options: ["True", "False", "Not Given"],
         correctAnswer: "False",
         reason:
-          'FALSE — Paragraf 2: "In the Soviet Union, radio was owned, operated and tightly controlled by the state." — bukan swasta, melainkan milik negara.',
+          'FALSE — Paragraf 2: "In the Soviet Union, radio was owned, operated and rigidly controlled by the state." — bukan swasta, melainkan milik negara.',
       },
       {
         id: "int-r8-tfng4",
@@ -2358,7 +2357,7 @@ const readingLessons: ModuleLesson[] = [
         id: "int-r8-tfng7",
         type: "true-false-not-given",
         question:
-          "Following World War II, all BBC radio and television broadcasts were immediately suspended.",
+          "At the outbreak of World War II, all BBC radio and television broadcasts were immediately suspended.",
         options: ["True", "False", "Not Given"],
         correctAnswer: "False",
         reason:
@@ -2368,7 +2367,7 @@ const readingLessons: ModuleLesson[] = [
         id: "int-r8-tfng8",
         type: "true-false-not-given",
         question:
-          "BBC television services were resumed in 1946 to mark the Victory Parade.",
+          "Following World War II, BBC television services were resumed in 1946 to mark the Victory Parade.",
         options: ["True", "False", "Not Given"],
         correctAnswer: "True",
         reason:
@@ -2409,14 +2408,14 @@ const readingLessons: ModuleLesson[] = [
     overview:
       "Teks reading tentang penyebab banjir: salju yang mencair, sungai yang tertutup es membentuk bendungan alami, serta jebolnya bendungan buatan manusia — dan mengapa ilmuwan sulit memprediksi banjir dengan tepat.",
     passage: [
-      "Floods are second only to fire as the most common of all natural disasters. They occur almost everywhere in the world, resulting in widespread damage and even loss of life. Consequently, scientists have long tried to perfect their ability to predict floods. So far, the best that scientists can do is recognize the potential for flooding in certain conditions. There are a number of conditions, from deep snow on the ground to human error, that cause flooding.",
-      "(Banjir hanya kalah dari kebakaran sebagai bencana alam yang paling umum. Banjir terjadi hampir di seluruh dunia, mengakibatkan kerusakan yang meluas bahkan hilangnya nyawa. Akibatnya, para ilmuwan sudah lama berusaha menyempurnakan kemampuan mereka untuk memprediksi banjir. Sejauh ini, yang terbaik yang dapat dilakukan ilmuwan adalah mengenali potensi banjir dalam kondisi tertentu. Ada sejumlah kondisi, dari salju tebal di tanah hingga kesalahan manusia, yang menyebabkan banjir.)",
-      "When deep snow melts it creates a large amount of water. Although deep snow alone rarely causes floods, when it occurs together with heavy rain and sudden warmer weather it can lead to serious flooding. If there is a fast snow melt, the soil cannot absorb the water, especially if the ground is still frozen. Frozen ground or ground that is very wet cannot absorb water quickly. Melting snow also contributes to high water levels in rivers and streams. Whenever rivers are already at their full capacity of water, heavy rains will result in the rivers overflowing and flooding the surrounding land.",
-      "(Ketika salju tebal mencair, ia menciptakan sejumlah besar air. Meskipun salju tebal sendiri jarang menyebabkan banjir, ketika terjadi bersamaan dengan hujan lebat dan cuaca yang tiba-tiba menghangat, hal itu dapat menyebabkan banjir yang serius. Jika salju mencair dengan cepat, tanah tidak dapat menyerap air, terutama jika tanah masih membeku. Tanah yang membeku atau tanah yang sangat basah tidak dapat menyerap air dengan cepat. Salju yang mencair juga berkontribusi pada tingginya permukaan air di sungai dan anak sungai. Setiap kali sungai sudah pada kapasitas penuh air, hujan lebat akan mengakibatkan sungai meluap dan membanjiri tanah sekitarnya.)",
+      "Floods are second only to fire as the most common of all natural disasters. They occur almost everywhere in the world, resulting in widespread damage and even death. Consequently, scientists have long tried to perfect their ability to predict floods. So far, the best that scientists can do is recognize the potential for flooding in certain conditions. There are a number of conditions, from deep snow on the ground to human error, that cause flooding.",
+      "(Banjir hanya kalah dari kebakaran sebagai bencana alam yang paling umum. Banjir terjadi hampir di seluruh dunia, mengakibatkan kerusakan yang meluas bahkan kematian. Akibatnya, para ilmuwan sudah lama berusaha menyempurnakan kemampuan mereka untuk memprediksi banjir. Sejauh ini, yang terbaik yang dapat dilakukan ilmuwan adalah mengenali potensi banjir dalam kondisi tertentu. Ada sejumlah kondisi, dari salju tebal di tanah hingga kesalahan manusia, yang menyebabkan banjir.)",
+      "When deep snow melts it creates a large amount of water. Although deep snow alone rarely causes floods, when it occurs together with heavy rain and sudden warmer weather it can lead to serious flooding. If there is a fast snow melt on top of frozen or very wet ground, flooding is more likely to occur than when the ground is not frozen. Frozen ground or ground that is very wet and already saturated with water cannot absorb the additional water created by the melting snow. Melting snow also contributes to high water levels in rivers and streams. Whenever rivers are already at their full capacity of water, heavy rains will result in the rivers overflowing and flooding the surrounding land.",
+      "(Ketika salju tebal mencair, ia menciptakan sejumlah besar air. Meskipun salju tebal sendiri jarang menyebabkan banjir, ketika terjadi bersamaan dengan hujan lebat dan cuaca yang tiba-tiba menghangat, hal itu dapat menyebabkan banjir yang serius. Jika salju mencair dengan cepat di atas tanah yang beku atau sangat basah, banjir lebih mungkin terjadi dibandingkan ketika tanah tidak membeku. Tanah yang membeku atau tanah yang sangat basah dan sudah jenuh dengan air tidak dapat menyerap air tambahan yang dihasilkan oleh salju yang mencair. Salju yang mencair juga berkontribusi pada tingginya permukaan air di sungai dan anak sungai. Setiap kali sungai sudah pada kapasitas penuh air, hujan lebat akan mengakibatkan sungai meluap dan membanjiri tanah sekitarnya.)",
       "Rivers that are covered in ice can also lead to flooding. When ice begins to melt, the surface of the ice breaks into large pieces. These pieces of ice move and float down the river. They can form a dam in the river, causing the water behind the dam to rise and flood the land upstream. If the dam breaks suddenly, then the large amount of water held behind the dam can flood the areas downstream too.",
       "(Sungai yang tertutup es juga dapat menyebabkan banjir. Ketika es mulai mencair, permukaan es pecah menjadi potongan-potongan besar. Potongan-potongan es ini bergerak dan mengapung di sungai. Mereka dapat membentuk bendungan di sungai, menyebabkan air di belakang bendungan naik dan membanjiri tanah di bagian hulu. Jika bendungan itu tiba-tiba pecah, maka sejumlah besar air yang tertahan di belakang bendungan dapat membanjiri daerah di hilir juga.)",
-      "Broken ice dams are not the only dam problems that can cause flooding. When a large human-made dam breaks or fails to hold the water behind it, the results can be devastating. This is similar to the sudden break of an ice dam. Unleashed dam waters can travel tens of kilometres, cover the ground in metres of mud and debris, and drown and crush everything and creature in their path.",
-      "(Bendungan es yang pecah bukan satu-satunya masalah bendungan yang dapat menyebabkan banjir. Ketika bendungan besar buatan manusia jebol atau gagal menahan air di belakangnya, hasilnya bisa menghancurkan. Ini mirip dengan pecahnya bendungan es secara tiba-tiba. Air bendungan yang lepas dapat menempuh puluhan kilometer, menutupi tanah dengan lumpur dan puing-puing setebal beberapa meter, serta menenggelamkan dan menghancurkan segalanya di jalannya.)",
+      "Broken ice dams are not the only dam problems that can cause flooding. When a large human-made dam breaks or fails to hold the water collected behind it, the results can be devastating. Dams contain such huge amounts of water behind them that when sudden breaks occur, the destructive force of the water is like a great tidal wave. Unleashed dam waters can travel tens of kilometres, cover the ground in metres of mud and debris, and drown and crush everything and creature in their path.",
+      "(Bendungan es yang pecah bukan satu-satunya masalah bendungan yang dapat menyebabkan banjir. Ketika bendungan besar buatan manusia jebol atau gagal menahan air yang terkumpul di belakangnya, hasilnya bisa menghancurkan. Bendungan menampung air dalam jumlah yang sangat besar sehingga ketika terjadi keretakan mendadak, kekuatan destruktif air tersebut bagaikan gelombang pasang yang dahsyat. Air bendungan yang lepas dapat menempuh puluhan kilometer, menutupi tanah dengan lumpur dan puing-puing setebal beberapa meter, serta menenggelamkan dan menghancurkan segalanya di jalannya.)",
       "Although scientists cannot always predict exactly when floods will occur, they do know a great deal about when floods are likely or possible. Deep snow, ice-covered rivers, and weak dams are all strong conditions for potential flooding. Hopefully, this knowledge of why floods happen can help us reduce the damage they cause.",
       "(Meskipun para ilmuwan tidak selalu dapat memprediksi dengan tepat kapan banjir akan terjadi, mereka memang mengetahui banyak tentang kapan banjir kemungkinan akan terjadi. Salju tebal, sungai yang tertutup es, dan bendungan yang lemah semuanya merupakan kondisi kuat untuk potensi banjir. Semoga, pengetahuan tentang mengapa banjir terjadi ini dapat membantu kita mengurangi kerusakan yang ditimbulkannya.)",
     ],
@@ -2458,8 +2457,7 @@ const readingLessons: ModuleLesson[] = [
       {
         id: "int-r9-mc1",
         type: "multiple-choice",
-        question:
-          "PASSAGE A — Which of the following words is NOT a natural disaster?",
+        question: "Which of the following words is not a natural disaster?",
         options: ["Flood", "Earthquake", "Epidemic", "Typhoon"],
         correctAnswer: "Epidemic",
         reason:
@@ -2469,7 +2467,7 @@ const readingLessons: ModuleLesson[] = [
         id: "int-r9-mc2",
         type: "multiple-choice",
         question:
-          "PASSAGE A — Which of the following is included as a cause of floods in the reading passage?",
+          "Which of the following are included as causes for floods in the reading passage?",
         options: [
           "Droughts",
           "Large lakes",
@@ -2478,87 +2476,87 @@ const readingLessons: ModuleLesson[] = [
         ],
         correctAnswer: "Melting snow",
         reason:
-          'Paragraf 2 teks A: "When deep snow melts it creates a large amount of water… it can lead to serious flooding." Melting snow adalah penyebab banjir yang dibahas.',
+          'Paragraf 2: "When deep snow melts it creates a large amount of water… it can lead to serious flooding." Melting snow adalah penyebab banjir yang dibahas.',
       },
       {
         id: "int-r9-mc3",
         type: "multiple-choice",
-        question: "PASSAGE A — How does deep snow cause flooding?",
+        question: "How does deep snow cause flooding?",
         options: [
-          "Melting snow alone causes flooding",
-          "Too much rain alone causes flooding",
+          "Melting snow causes flooding",
+          "Too much rain causes flooding",
           "Sudden warm temperatures combined with heavy rains causes flooding",
-          "Freezing water alone causes flooding",
+          "Freezing water causes flooding",
         ],
         correctAnswer:
           "Sudden warm temperatures combined with heavy rains causes flooding",
         reason:
-          'Paragraf 2 teks A: "when it occurs together with heavy rain and sudden warmer weather it can lead to serious flooding."',
+          'Paragraf 2: "when it occurs together with heavy rain and sudden warmer weather it can lead to serious flooding."',
       },
       {
         id: "int-r9-mc4",
         type: "multiple-choice",
-        question: "PASSAGE A — A broken human-made dam is compared to what?",
+        question: "A broken human-made dam is compared to what?",
         options: [
           "A tsunami",
           "A tidal wave",
           "A broken ice dam",
-          "Overflowing rivers",
+          "Overflowing",
         ],
         correctAnswer: "A broken ice dam",
         reason:
-          'Paragraf 4 teks A: "When a large human-made dam breaks… This is similar to the sudden break of an ice dam."',
+          'Paragraf 4: "When a large human-made dam breaks… This is similar to the sudden break of an ice dam."',
       },
       {
         id: "int-r9-mc5",
         type: "multiple-choice",
         question:
-          "PASSAGE A — Which best describes how a frozen river can cause a flood?",
+          "Which of the following best describes how a frozen river can cause a flood?",
         options: [
-          "The ice in the river melts too quickly and causes a flood",
-          "The ice in the river cracks causing the water to overflow",
-          "The ice in the river cracks into pieces that eventually create a dam causing the water to overflow",
-          "The water behind the ice dam collects and when the dam breaks, it causes flooding upstream only",
+          "The ice in the river melts too quickly and causes a flood.",
+          "The ice in the river cracks causing the water to overflow.",
+          "The ice in the river cracks into pieces that eventually create a dam causing the water to overflow.",
+          "The water behind the ice dam collects and when the dam breaks, it causes flooding upstream.",
         ],
         correctAnswer:
-          "The ice in the river cracks into pieces that eventually create a dam causing the water to overflow",
+          "The ice in the river cracks into pieces that eventually create a dam causing the water to overflow.",
         reason:
-          'Paragraf 3 teks A: "the surface of the ice breaks into large pieces… They can form a dam in the river, causing the water behind the dam to rise and flood the land upstream."',
+          'Paragraf 3: "the surface of the ice breaks into large pieces… They can form a dam in the river, causing the water behind the dam to rise and flood the land upstream."',
       },
       {
         id: "int-r9-mc6",
         type: "multiple-choice",
         question:
-          "PASSAGE A — How far can water travel when it is unleashed from a broken dam?",
+          "How far can dam water travel when it is unleashed from a broken dam?",
         options: [
           "Less than 10 kilometres",
           "Tens of kilometres",
           "Thousands of kilometres",
-          "Tens of thousands of kilometres",
+          "Tens of thousands of kilometres downstream",
         ],
         correctAnswer: "Tens of kilometres",
         reason:
-          'Paragraf 4 teks A: "Unleashed dam waters can travel tens of kilometres."',
+          'Paragraf 4: "Unleashed dam waters can travel tens of kilometres."',
       },
       {
         id: "int-r9-mc7",
         type: "multiple-choice",
         question:
-          "PASSAGE A — Why does saturated ground contribute to flooding problems?",
+          "Why does saturated ground contribute to flooding problems?",
         options: [
           "The ground cannot absorb more moisture",
           "The ground is too hard, so the water runs off",
-          "The ground is always frozen",
-          "It causes ice to form",
+          "The ground forms a kind of dam",
+          "It remains frozen",
         ],
         correctAnswer: "The ground cannot absorb more moisture",
         reason:
-          'Paragraf 2 teks A: "Frozen ground or ground that is very wet cannot absorb water quickly." Tanah yang sudah jenuh tidak bisa menyerap air lagi.',
+          'Paragraf 2: "Frozen ground or ground that is very wet cannot absorb water quickly." Tanah yang sudah jenuh tidak bisa menyerap air lagi.',
       },
       {
         id: "int-r9-mc8",
         type: "multiple-choice",
-        question: "PASSAGE A — What kinds of problems can floods cause?",
+        question: "What kinds of problems can flood cause?",
         options: [
           "Death",
           "Widespread damage",
@@ -2567,23 +2565,22 @@ const readingLessons: ModuleLesson[] = [
         ],
         correctAnswer: "All of the above",
         reason:
-          'Paragraf 1 teks A: "resulting in widespread damage and even loss of life." Paragraf 4: "drown and crush everything and creature in their path." — semua pilihan termasuk.',
+          'Paragraf 1: "resulting in widespread damage and even loss of life." Paragraf 4: "drown and crush everything and creature in their path." — semua pilihan termasuk.',
       },
       {
         id: "int-r9-mc9",
         type: "multiple-choice",
-        question:
-          "PASSAGE A — What is the most common natural disaster according to the passage?",
+        question: "What is the most common natural disaster?",
         options: ["Flood", "Fire", "Wind damage", "Rain"],
         correctAnswer: "Fire",
         reason:
-          'Paragraf 1 teks A: "Floods are second only to fire as the most common of all natural disasters." Artinya kebakaran (fire) adalah yang PALING umum, dan banjir ada di posisi kedua.',
+          'Paragraf 1: "Floods are second only to fire as the most common of all natural disasters." Kebakaran (fire) adalah yang PALING umum, banjir posisi kedua.',
       },
       {
         id: "int-r9-mc10",
         type: "multiple-choice",
         question:
-          "PASSAGE A — How does melting snow cause problems related to flooding?",
+          "How does melting snow cause problems related to flooding?",
         options: [
           "It makes the rivers run too fast",
           "It makes the water too cold",
@@ -2592,7 +2589,7 @@ const readingLessons: ModuleLesson[] = [
         ],
         correctAnswer: "It makes the level of the river rise",
         reason:
-          'Paragraf 2 teks A: "Melting snow also contributes to high water levels in rivers and streams." Salju yang mencair meningkatkan level/ketinggian air sungai.',
+          'Paragraf 2: "Melting snow also contributes to high water levels in rivers and streams." Salju yang mencair meningkatkan level/ketinggian air sungai.',
       },
     ],
   },
@@ -4438,7 +4435,8 @@ const listeningLessons: ModuleLesson[] = [
     day: 4,
     tutor: "Mr. Fajri",
     title: "Fill the Blank & Multiple Choice — Listening Practice Day 4",
-    subtitle: "Audio 10: University Library · Audio 11: Star Language School · Audio 12: Community Centre",
+    subtitle:
+      "Audio 10: University Library · Audio 11: Star Language School · Audio 12: Community Centre",
     overview:
       "Empat bagian: pilihan gambar (A), melengkapi tabel perpustakaan (B), informasi sekolah bahasa (C), jadwal kelas komunitas (D), dan pilihan ganda tentang ulang tahun Alice (E).",
     materialSections: [],
@@ -4450,7 +4448,8 @@ const listeningLessons: ModuleLesson[] = [
         question: "A-1. What will James do after dinner?",
         options: ["Play computer games", "Go cycling", "Talk on the phone"],
         correctAnswer: "Go cycling",
-        reason: "Dalam audio, James menyebutkan ia akan bersepeda setelah makan malam.",
+        reason:
+          "Dalam audio, James menyebutkan ia akan bersepeda setelah makan malam.",
         section: "quiz",
         imageUrl: "/listening-day4.png",
       },
@@ -4460,7 +4459,8 @@ const listeningLessons: ModuleLesson[] = [
         question: "A-2. Which room has the woman cleaned?",
         options: ["Kitchen", "Living room", "Bedroom"],
         correctAnswer: "Bedroom",
-        reason: "Wanita dalam percakapan menyebutkan ia baru saja membersihkan kamar tidur.",
+        reason:
+          "Wanita dalam percakapan menyebutkan ia baru saja membersihkan kamar tidur.",
         section: "quiz",
         imageUrl: "/listening-day4-b.png",
       },
@@ -4471,23 +4471,34 @@ const listeningLessons: ModuleLesson[] = [
         question: "E-1. What date is Alice's birthday?",
         options: ["12th July", "14th July", "16th July"],
         correctAnswer: "12th July",
-        reason: "Jack menanyakan tanggal ulang tahun Alice, dan Alice menjawab 12 Juli.",
+        reason:
+          "Jack menanyakan tanggal ulang tahun Alice, dan Alice menjawab 12 Juli.",
       },
       {
         id: "int-lis4-e19",
         type: "multiple-choice",
         question: "E-2. What was the problem at Alice's party last year?",
-        options: ["Nobody had fun.", "It was hard work.", "Hardly any people came."],
+        options: [
+          "Nobody had fun.",
+          "It was hard work.",
+          "Hardly any people came.",
+        ],
         correctAnswer: "It was hard work.",
-        reason: "Alice menyatakan bahwa mengadakan pesta tahun lalu sangat melelahkan.",
+        reason:
+          "Alice menyatakan bahwa mengadakan pesta tahun lalu sangat melelahkan.",
       },
       {
         id: "int-lis4-e20",
         type: "multiple-choice",
         question: "E-3. What is the problem with Freddie's Pizza House?",
-        options: ["The service was terrible.", "The food is bad.", "The pizzas are expensive."],
+        options: [
+          "The service was terrible.",
+          "The food is bad.",
+          "The pizzas are expensive.",
+        ],
         correctAnswer: "The food is bad.",
-        reason: "Dalam percakapan, disebutkan bahwa makanan di Freddie's Pizza House tidak enak.",
+        reason:
+          "Dalam percakapan, disebutkan bahwa makanan di Freddie's Pizza House tidak enak.",
       },
       {
         id: "int-lis4-e21",
@@ -4510,7 +4521,8 @@ const listeningLessons: ModuleLesson[] = [
       // ── Audio 10: University Library conversation (table, 5 blanks) ────────────
       {
         title: "Audio 10: University Library.",
-        instruction: "Listen to a conversation between a student and a university librarian. Complete the table.",
+        instruction:
+          "Listen to a conversation between a student and a university librarian. Complete the table.",
         type: "table",
         answers: {
           1: "natural history",
@@ -4521,19 +4533,23 @@ const listeningLessons: ModuleLesson[] = [
         },
         lines: [],
         tableRows: [
-          { label: "Name of Book:",                          value: "{{b:1}}" },
-          { label: "Writer:",                                value: "George {{b:2}}" },
-          { label: "Shelf number:",                          value: "{{b:3}}" },
-          { label: "Students can borrow short loan books for:", value: "{{b:4}} hours" },
-          { label: "Must return a book by:",                 value: "{{b:5}}" },
-          { label: "Library closing time:",                  value: "11.30 pm" },
+          { label: "Name of Book:", value: "{{b:1}}" },
+          { label: "Writer:", value: "George {{b:2}}" },
+          { label: "Shelf number:", value: "{{b:3}}" },
+          {
+            label: "Students can borrow short loan books for:",
+            value: "{{b:4}} hours",
+          },
+          { label: "Must return a book by:", value: "{{b:5}}" },
+          { label: "Library closing time:", value: "11.30 pm" },
         ],
       } satisfies ListeningAudio,
 
       // ── Audio 11: Star Language School (notes, 5 blanks) ────────────────────
       {
         title: "Audio 11: Star Language School.",
-        instruction: "You will hear some information about a language school. Listen and complete questions.",
+        instruction:
+          "You will hear some information about a language school. Listen and complete questions.",
         type: "notes",
         answers: {
           1: "DVDs",
@@ -4545,7 +4561,10 @@ const listeningLessons: ModuleLesson[] = [
         lines: [
           { text: "Star Language School", bold: true },
           { text: "First Floor: Library", bold: true },
-          { text: "You can borrow reading books and {{b:1}} for 2 weeks.", indent: true },
+          {
+            text: "You can borrow reading books and {{b:1}} for 2 weeks.",
+            indent: true,
+          },
           { text: "You cannot borrow {{b:2}}.", indent: true },
           { text: "Second Floor: Computer Room", bold: true },
           { text: "The booking form is on the {{b:3}}.", indent: true },
@@ -4557,7 +4576,8 @@ const listeningLessons: ModuleLesson[] = [
       // ── Audio 12: Community Centre evening classes (notes, 5 blanks) ─────────
       {
         title: "Audio 12: Community Centre — Evening Classes.",
-        instruction: "Listen to Dan and Jess talking about evening classes at the community centre. What club is on each day?",
+        instruction:
+          "Listen to Dan and Jess talking about evening classes at the community centre. What club is on each day?",
         type: "notes",
         answers: {
           1: "Art Club",
@@ -5861,133 +5881,70 @@ const grammarLessons: ModuleLesson[] = [
       },
     ],
     exercises: [
-      {
-        id: "int-gr6-q1",
-        type: "multiple-choice",
-        question: "Kalimat mana yang menggunakan Simple Future dengan benar?",
-        options: [
-          "She will going to the market tomorrow.",
-          "They shall goes to the beach next week.",
-          "I will call you tonight.",
-          "We wills study together.",
-        ],
-        correctAnswer: "I will call you tonight.",
-        reason:
-          "Formula (+) Verbal Active: S + will + V1. 'call' adalah V1 yang benar. Pilihan lain salah: 'going' bukan V1, 'goes' bukan V1, 'wills' tidak ada.",
-      },
-      {
-        id: "int-gr6-q2",
-        type: "multiple-choice",
-        question:
-          '"______ we play football after school?" — Kata yang tepat:',
-        options: ["Will", "Shall", "Would", "Should"],
-        correctAnswer: "Shall",
-        reason:
-          "Shall digunakan khusus untuk subjek I dan We. Formula: Shall + We + V1? 'Will' juga bisa secara teknis, tapi 'Shall' adalah pilihan yang lebih tepat untuk We.",
-      },
-      {
-        id: "int-gr6-q3",
-        type: "multiple-choice",
-        question:
-          'Bentuk NEGATIF dari "She will attend the meeting." adalah:',
-        options: [
-          "She will not attend the meeting.",
-          "She shall not attend the meeting.",
-          "She won\'t attending the meeting.",
-          "She will not attended the meeting.",
-        ],
-        correctAnswer: "She will not attend the meeting.",
-        reason:
-          "Formula (-) Verbal Active: S + will + not + V1. V1 tidak berubah bentuk setelah 'not'. 'won't attending' dan 'will not attended' salah karena V1-nya berubah.",
-      },
-      {
-        id: "int-gr6-q4",
-        type: "multiple-choice",
-        question: "Manakah kalimat Verbal PASSIVE Simple Future yang benar?",
-        options: [
-          "The project will be finished by the team.",
-          "The project will finish by the team.",
-          "The project shall finished by the team.",
-          "The project will being finished by the team.",
-        ],
-        correctAnswer: "The project will be finished by the team.",
-        reason:
-          "Formula Verbal Passive (+): S + will/shall + be + V3. 'be finished' (be + V3) adalah bentuk yang benar. 'finish' saja bukan passive, 'shall finished' hilang 'be', 'will being' salah.",
-      },
-      {
-        id: "int-gr6-q5",
-        type: "multiple-choice",
-        question:
-          '"She will be happy tomorrow." termasuk jenis kalimat:',
-        options: [
-          "Verbal Active Simple Future",
-          "Verbal Passive Simple Future",
-          "Non Verbal Simple Future",
-          "Simple Present Tense",
-        ],
-        correctAnswer: "Non Verbal Simple Future",
-        reason:
-          "Non Verbal Simple Future: S + will/shall + be + ANA. 'happy' adalah adjective (ANA), bukan V3, sehingga bukan Verbal Passive.",
-      },
-      {
-        id: "int-gr6-q6",
-        type: "task",
-        question:
-          "Buat 6 kalimat Simple Future Tense — masing-masing 1 untuk: (+) Verbal Active, (-) Verbal Active, (?) Verbal Active, (+) Verbal Passive, (-) Verbal Passive, (+) Non Verbal.",
-        sampleAnswer:
-          "(+) I will study English every day. | (-) We shall not miss the deadline. | (?) Will you help me? | (+) The report will be submitted by the team. | (-) The plan will not be cancelled. | (+) She will be confident.",
-      },
-
-      // ── MCQ Set 1 — "Verbally" ───────────────────────────────────────────────
+      // ── MCQ Set 1 — Verbally ─────────────────────────────────────────────────
       {
         id: "int-gr6-v1",
         type: "multiple-choice",
         question:
-          "1. The new regulation .............. effective starting next month.\na. will be  b. will  c. be  d. is",
-        options: ["will be", "will", "be", "is"],
+          "It ......... good for you to finish your project earlier.\na. is will  b. will be  c. will",
+        options: ["is will", "will be", "will"],
         correctAnswer: "will be",
-        reason: "Non Verbal Simple Future: S + will + be + Adjective. 'effective' is an adjective, so 'will be' is correct.",
+        reason:
+          "Non Verbal Simple Future: S + will + be + Adjective. 'good' adalah adjective, sehingga 'will be' adalah bentuk yang benar.",
       },
       {
         id: "int-gr6-v2",
         type: "multiple-choice",
         question:
-          "2. I hope you .............. at the party tonight.\na. be there  b. will be there  c. are there  d. were there",
-        options: ["be there", "will be there", "are there", "were there"],
-        correctAnswer: "will be there",
-        reason: "Future prediction: will + be + adverb (there). 'will be there' is the correct Simple Future Non Verbal form.",
+          "I will ......... as soon as possible.\na. be there  b. been there  c. there",
+        options: ["be there", "been there", "there"],
+        correctAnswer: "be there",
+        reason:
+          "Setelah 'will' digunakan V1. 'be there' = will + be + adverb (there). 'been' adalah V3, tidak dipakai setelah will.",
       },
       {
         id: "int-gr6-v3",
         type: "multiple-choice",
         question:
-          "3. She .............. at home tomorrow because she has a flight to catch.\na. will not be here  b. will be here  c. is not here  d. was not here",
-        options: ["will not be here", "will be here", "is not here", "was not here"],
+          "She .............. in 5 minutes.\na. will not be here  b. will not here  c. is will not here",
+        options: ["will not be here", "will not here", "is will not here"],
         correctAnswer: "will not be here",
-        reason: "Negative Non Verbal Simple Future: S + will + not + be + adverb. Context says she has a flight, so she won't be home.",
+        reason:
+          "Non Verbal negative: S + will + not + be + ANA. 'here' adalah adverb, perlu 'be' sebelumnya. 'will not here' hilang 'be'.",
       },
       {
         id: "int-gr6-v4",
         type: "multiple-choice",
         question:
-          "4. The weather forecast says it .............. sunny this afternoon.\na. will be  b. will  c. is  d. be",
-        options: ["will be", "will", "is", "be"],
+          "This ......... the most memorable school trip ever.\na. will  b. is will be  c. will be",
+        options: ["will", "is will be", "will be"],
         correctAnswer: "will be",
-        reason: "Non Verbal Simple Future for prediction: S + will + be + Adjective ('sunny'). 'will be' is correct.",
+        reason:
+          "Non Verbal Simple Future: S + will + be + Noun/Adjective. 'will' saja tidak lengkap; 'is will be' salah struktur.",
       },
       {
         id: "int-gr6-v5",
         type: "multiple-choice",
         question:
-          "5. Meeting results .............. on the next meeting.\na. will further discuss  b. will be further discussing  c. will be further discussed  d. will further discussed",
+          "They .................. tomorrow.\na. will better  b. will be better  c. are will be better",
+        options: ["will better", "will be better", "are will be better"],
+        correctAnswer: "will be better",
+        reason:
+          "Non Verbal Simple Future: S + will + be + Adjective (better). 'will better' hilang 'be'; 'are will be' salah — tidak boleh ada 'are' sebelum 'will'.",
+      },
+      {
+        id: "int-gr6-v6",
+        type: "multiple-choice",
+        question:
+          "Meeting results .................. on the next meeting.\na. Will further discuss  b. Will further discussed  c. Will be further discussed",
         options: [
-          "will further discuss",
-          "will be further discussing",
-          "will be further discussed",
-          "will further discussed",
+          "Will further discuss",
+          "Will further discussed",
+          "Will be further discussed",
         ],
-        correctAnswer: "will be further discussed",
-        reason: "Verbal Passive Simple Future: S + will + be + V3. 'discussed' (V3) with 'be' makes it passive. 'further' is an adverb modifier.",
+        correctAnswer: "Will be further discussed",
+        reason:
+          "Verbal Passive: S + will + be + V3. 'discussed' adalah V3; 'be' diperlukan untuk passive. 'further' adalah adverb modifier.",
       },
 
       // ── MCQ Set 2 ────────────────────────────────────────────────────────────
@@ -5995,37 +5952,41 @@ const grammarLessons: ModuleLesson[] = [
         id: "int-gr6-m1",
         type: "multiple-choice",
         question:
-          "1. The school host .............. by the committee after the selection process.\na. will choose  b. will be chosen  c. will chose  d. will choosing",
-        options: ["will choose", "will be chosen", "will chose", "will choosing"],
+          "Our school ........... as the host of High School's Science Competition.\na. will be choose  b. will be chose  c. will be chosen",
+        options: ["will be choose", "will be chose", "will be chosen"],
         correctAnswer: "will be chosen",
-        reason: "Verbal Passive: S + will + be + V3 ('chosen'). The host is chosen by the committee, so passive form is needed.",
+        reason:
+          "Verbal Passive: S + will + be + V3. V3 dari 'choose' adalah 'chosen'. 'choose' dan 'chose' bukan V3.",
       },
       {
         id: "int-gr6-m2",
         type: "multiple-choice",
         question:
-          "2. .............. the new classes before the curriculum is finalized?\na. Will not be started  b. Will not start  c. Will started  d. Will be start",
-        options: ["Will not be started", "Will not start", "Will started", "Will be start"],
+          "Our classes ........... on August 10th.\na. Will not be started  b. Will not start  c. Will not be start",
+        options: ["Will not be started", "Will not start", "Will not be start"],
         correctAnswer: "Will not be started",
-        reason: "Verbal Passive negative question: Will + S + not + be + V3. 'started' is V3; 'be' is required for passive.",
+        reason:
+          "Verbal Passive negative: S + will + not + be + V3. 'started' adalah V3. 'Will not be start' salah karena 'start' bukan V3.",
       },
       {
         id: "int-gr6-m3",
         type: "multiple-choice",
         question:
-          "3. The challenge .............. before the deadline next week.\na. will complete  b. be completed  c. will be complete  d. will completing",
-        options: ["will complete", "be completed", "will be complete", "will completing"],
+          "Will the challenge .............. well?\na. be completed  b. completed  c. complete",
+        options: ["be completed", "completed", "complete"],
         correctAnswer: "be completed",
-        reason: "In context of 'must/should/will' already present, the passive infinitive is 'be + V3' → 'be completed'.",
+        reason:
+          "Verbal Passive question: Will + S + be + V3? → 'be completed'. 'completed' saja tanpa 'be' tidak membentuk passive yang benar.",
       },
       {
         id: "int-gr6-m4",
         type: "multiple-choice",
         question:
-          "4. All efforts .............. on the most important tasks to meet the target.\na. will concentrate  b. be concentrated  c. will be concentrate  d. will concentrating",
-        options: ["will concentrate", "be concentrated", "will be concentrate", "will concentrating"],
+          "All administrative matter will not ........... in main building.\na. concentrate  b. concentrated  c. be concentrated",
+        options: ["concentrate", "concentrated", "be concentrated"],
         correctAnswer: "be concentrated",
-        reason: "Passive infinitive after modal auxiliary already in context: 'be + V3' → 'be concentrated'. Efforts are concentrated (passive).",
+        reason:
+          "Setelah 'will not' untuk passive: be + V3 → 'be concentrated'. 'concentrate' (V1) dan 'concentrated' (V3) saja tidak lengkap.",
       },
 
       // ── MCQ Set 3 ────────────────────────────────────────────────────────────
@@ -6033,46 +5994,55 @@ const grammarLessons: ModuleLesson[] = [
         id: "int-gr6-s1",
         type: "multiple-choice",
         question:
-          "1. Will she .............. the competition next year? — Yes, .............. .\na. join / she will  b. joins / she does  c. joining / she is  d. joined / she did",
-        options: ["join / she will", "joins / she does", "joining / she is", "joined / she did"],
-        correctAnswer: "join / she will",
-        reason: "Verbal Active question: Will + S + V1? → 'join' (V1). Short answer: 'Yes, she will.'",
+          "A: Will she ...... us?\nB: Yes, .......\na. be joined, she will  b. join, she will  c. joins, she will",
+        options: ["be joined, she will", "join, she will", "joins, she will"],
+        correctAnswer: "join, she will",
+        reason:
+          "Verbal Active question: Will + S + V1? → 'join' (V1, bukan V3). Jawaban pendek: 'Yes, she will.' Bukan 'be joined' (passive) atau 'joins' (-s form).",
       },
       {
         id: "int-gr6-s2",
         type: "multiple-choice",
         question:
-          "2. He .............. the event due to an urgent meeting.\na. will not cancel  b. will cancel  c. will be cancel  d. will cancels",
-        options: ["will not cancel", "will cancel", "will be cancel", "will cancels"],
+          "He .......... your appointment.\na. will not cancels  b. will be not canceled  c. will not cancel",
+        options: [
+          "will not cancels",
+          "will be not canceled",
+          "will not cancel",
+        ],
         correctAnswer: "will not cancel",
-        reason: "Verbal Active negative: S + will + not + V1. 'cancel' is V1. 'will not cancel' is correct.",
+        reason:
+          "Verbal Active negative: S + will + not + V1. 'cancel' adalah V1. 'cancels' salah; 'will be not canceled' salah urutan.",
       },
       {
         id: "int-gr6-s3",
         type: "multiple-choice",
         question:
-          "3. The athlete .............. in the international tournament next month.\na. will compete  b. will competes  c. will competed  d. will competing",
-        options: ["will compete", "will competes", "will competed", "will competing"],
+          "They .......... at National Math Olympiad after winning this competition.\na. will be competed  b. will not compete  c. will compete",
+        options: ["will be competed", "will not compete", "will compete"],
         correctAnswer: "will compete",
-        reason: "Verbal Active positive: S + will + V1. 'compete' is the correct V1 form.",
+        reason:
+          "Verbal Active positive: S + will + V1. 'compete' adalah V1 yang benar. 'will be competed' salah (passive); konteks kalimat aktif.",
       },
       {
         id: "int-gr6-s4",
         type: "multiple-choice",
         question:
-          "4. Don't worry. My father .............. after school.\na. will pick me up  b. will picks me up  c. will picked me up  d. will picking me up",
-        options: ["will pick me up", "will picks me up", "will picked me up", "will picking me up"],
+          "My father .......... at the airport tomorrow morning.\na. will picks me up  b. will pick me up  c. would picks me up",
+        options: ["will picks me up", "will pick me up", "would picks me up"],
         correctAnswer: "will pick me up",
-        reason: "Verbal Active positive: S + will + V1 (phrasal verb 'pick up'). V1 never changes form after 'will'.",
+        reason:
+          "Verbal Active: S + will + V1 (phrasal verb 'pick up'). V1 tidak berubah bentuk setelah 'will'. 'picks' salah karena ada -s.",
       },
       {
         id: "int-gr6-s5",
         type: "multiple-choice",
         question:
-          "5. I hope the committee .............. our proposal seriously.\na. will considers  b. will considered  c. will consider  d. will considering",
-        options: ["will considers", "will considered", "will consider", "will considering"],
-        correctAnswer: "will consider",
-        reason: "Verbal Active positive: S + will + V1. 'consider' is V1 — no -s, -ed, or -ing after 'will'.",
+          "Will you ......... their offer?\na. consider  b. be considered  c. not considered",
+        options: ["consider", "be considered", "not considered"],
+        correctAnswer: "consider",
+        reason:
+          "Verbal Active question: Will + S + V1? → 'consider' (V1). 'be considered' adalah passive; 'not considered' salah struktur.",
       },
 
       // ── Error Correction ─────────────────────────────────────────────────────
@@ -6080,7 +6050,7 @@ const grammarLessons: ModuleLesson[] = [
         id: "int-gr6-ec1",
         type: "short-answer",
         question:
-          "Error Correction 1 — Find and correct the mistake:\n\"This rule will criticize by our society.\"",
+          'Error Correction 1 — Find and correct the mistake:\n"This rule will criticize by our society."',
         sampleAnswer:
           "This rule will be criticized by our society. (Verbal Passive: will + be + V3 → 'be' was missing before 'criticized')",
       },
@@ -6088,7 +6058,7 @@ const grammarLessons: ModuleLesson[] = [
         id: "int-gr6-ec2",
         type: "short-answer",
         question:
-          "Error Correction 2 — Find and correct the mistake:\n\"This area will dig up for archeological purposes.\"",
+          'Error Correction 2 — Find and correct the mistake:\n"This area will dig up for archeological purposes."',
         sampleAnswer:
           "This area will be dug up for archeological purposes. (Verbal Passive needs 'be' + V3 → 'dug up', not bare 'dig up')",
       },
@@ -6096,7 +6066,7 @@ const grammarLessons: ModuleLesson[] = [
         id: "int-gr6-ec3",
         type: "short-answer",
         question:
-          "Error Correction 3 — Find and correct the mistake:\n\"You will earn many money if you work hard.\"",
+          'Error Correction 3 — Find and correct the mistake:\n"You will earn many money if you work hard."',
         sampleAnswer:
           "You will earn much money if you work hard. ('money' is uncountable → use 'much', not 'many')",
       },
@@ -6104,7 +6074,7 @@ const grammarLessons: ModuleLesson[] = [
         id: "int-gr6-ec4",
         type: "short-answer",
         question:
-          "Error Correction 4 — Find and correct the mistake:\n\"Will the mail attach with the invoice?\"",
+          'Error Correction 4 — Find and correct the mistake:\n"Will the mail attach with the invoice?"',
         sampleAnswer:
           "Will the mail be attached with the invoice? (Verbal Passive question: Will + S + be + V3 → 'be attached')",
       },
@@ -6112,118 +6082,658 @@ const grammarLessons: ModuleLesson[] = [
         id: "int-gr6-ec5",
         type: "short-answer",
         question:
-          "Error Correction 5 — Find and correct the mistake:\n\"Our company will not be extend the cooperation agreement with your company.\"",
+          'Error Correction 5 — Find and correct the mistake:\n"Our company will not be extend the cooperation agreement with your company."',
         sampleAnswer:
-          "Our company will not extend the cooperation agreement with your company. (Verbal Active negative: will + not + V1 → remove 'be'; 'extend' is the main verb, no passive needed here)",
+          "Our company will not be extended the cooperation agreement with your company. (Verbal Passive negative: will + not + be + V3 → 'extend' must be V3 = 'extended'; keep 'be' for passive structure)",
       },
     ],
   },
 
-  // ── Day 7: To Infinitive + Adjective Clause Intro ────────────────────────────
+  // ── Day 7: Simple Present, Simple Past & Present Continuous ─────────────────
   {
     id: "int-grammar-7",
     track: "grammar",
     day: 7,
-    tutor: "M",
-    title: "To Infinitive & Adjective Clause — Part 1",
-    subtitle:
-      "Certain verbs + to inf, dan Relative Pronoun sebagai Subject & Object",
+    tutor: "Ms. Manda",
+    title: "Simple Present, Simple Past & Present Continuous",
+    subtitle: "Verbal Active, Verbal Passive & Non Verbal — 3 Tenses Review",
     overview:
-      "Melengkapi To Infinitive dengan daftar certain verbs, lalu masuk ke Adjective Clause: pengertian, dan Relative Pronoun sebagai Subject (RPS) dan Object (RPO).",
+      "Review tiga tense dasar: Simple Present, Simple Past, dan Present Continuous — masing-masing mencakup Verbal Active, Verbal Passive, dan Non Verbal.",
     materialSections: [
       {
-        title: "Certain Verbs Followed by To Infinitive (selected)",
+        title: "Time Signal",
         points: [
-          "agree, appear, arrange, ask, attempt, beg, afford, wait, care, decide",
-          "expect, fail, hope, manage, mean, need, plan, prepare, pretend, promise",
-          "refuse, seem, want, wish, would like, begin, require, allow, cause, help",
-          "warn, teach, tell, instruct, enable, force, convince, persuade, forbid",
-          "Note: Untuk daftar lengkap 100 verbs, lihat modul cetak grammar.",
+          "Simple Present — always, usually, often, sometimes, never, every day/week",
+          "Simple Past — yesterday, last (week/month/year), ago, in 2020, just now",
+          "Present Continuous — now, at the moment, currently, still, right now, these days",
         ],
       },
       {
-        title: "A. What is Adjective Clause?",
+        title: "Fungsi",
         points: [
-          "Adjective Clause = sub clause yang digunakan untuk mendeskripsikan / menjelaskan NOUN.",
-          "Contoh: The doctor who has two sons stands in front of the office.",
-          '  → "who has two sons" = adjective clause yang menjelaskan "the doctor".',
+          "1️⃣ Simple Present → kebiasaan, fakta umum, jadwal tetap",
+          "{{annotation:I|S}} {{annotation:always eat|Vord}} rice every morning.",
+          "─────────────────────────────",
+          "2️⃣ Simple Past → kejadian selesai di masa lalu (ada waktu spesifik)",
+          "{{annotation:He|S}} {{annotation:bought|Vord}} shoes last week.",
+          "─────────────────────────────",
+          "3️⃣ Present Continuous → aksi yang sedang berlangsung sekarang",
+          "{{annotation:She|S}} {{annotation:is sleeping|Vaux+Vord}} right now.",
         ],
       },
       {
-        title: "B1. Relative Pronoun as Subject (RPS)",
+        title: "1. Simple Present",
         points: [
-          "Conjunction:",
-          "  WHO → untuk orang (a person)",
-          "  WHICH → untuk benda/hewan (no person)",
-          "  THAT → untuk orang/benda (a person/thing)",
+          "Verbal Active — Rumus: S + V1",
           "─────────────────────────────",
-          "Formula: Conj + V + (O) + (Adv)  → INCOMPLETE clause",
+          "(+) S + V1",
+          "{{annotation:I|S}} {{annotation:always eat|Vord}} rice in the morning.",
+          "(-) S + do/does + not + V1",
+          "{{annotation:She|S}} {{annotation:does not|Vaux}} {{annotation:eat|Vord}} meat.",
+          "(?) Do/Does + S + V1?",
+          "{{annotation:Does|Vaux}} {{annotation:he|S}} {{annotation:speak|Vord}} English?",
           "─────────────────────────────",
-          "Contoh 1:",
-          "  The doctor stands in front of office. + He has two sons.",
-          "  → The doctor WHO HAS TWO SONS stands in front of the office.",
-          "Contoh 2:",
-          "  Did you see the letter? + It came this morning.",
-          "  → Did you see the letter WHICH CAME THIS MORNING?",
+          "Verbal Passive — Rumus: S + is/am/are + V3",
+          "─────────────────────────────",
+          "(+) S + is/am/are + V3",
+          "{{annotation:My exam|S}} {{annotation:is|Vaux}} {{annotation:finished|Vord}} by the teacher.",
+          "(-) S + is/am/are + not + V3",
+          "{{annotation:My exam|S}} {{annotation:is not|Vaux}} {{annotation:finished|Vord}} by me.",
+          "─────────────────────────────",
+          "Non Verbal — Rumus: S + is/am/are + ANA",
+          "(+) S + is/am/are + ANA",
+          "{{annotation:She|S}} {{annotation:is|Vaux}} {{annotation:happy|ANA}}.",
+          "(-) S + is/am/are + not + ANA",
+          "{{annotation:She|S}} {{annotation:is not|Vaux}} {{annotation:happy|ANA}}.",
         ],
       },
       {
-        title: "B2. Relative Pronoun as Object (RPO)",
+        title: "2. Simple Past",
         points: [
-          "Conjunction:",
-          "  WHOM (formal) / WHO (informal) → orang",
-          "  WHICH → benda",
-          "  THAT → orang/benda",
+          "Verbal Active — Rumus: S + V2",
           "─────────────────────────────",
-          "Formula: Conj + S + V  → COMPLETE clause",
+          "(+) S + V2",
+          "{{annotation:He|S}} {{annotation:bought|Vord}} a pair of shoes last week.",
+          "(-) S + did + not + V1",
+          "{{annotation:He|S}} {{annotation:did not|Vaux}} {{annotation:buy|Vord}} shoes.",
+          "(?) Did + S + V1?",
+          "{{annotation:Did|Vaux}} {{annotation:he|S}} {{annotation:buy|Vord}} shoes?",
           "─────────────────────────────",
-          "Type 1 — Object of Verb Transitive:",
-          "  A man was standing at the bar. + Neil knew him.",
-          "  → A man WHOM NEIL KNEW was standing at the bar.",
+          "Verbal Passive — Rumus: S + was/were + V3",
           "─────────────────────────────",
-          "Type 2 — Object of Preposition:",
-          "  Formal (Prep + conj): The man TO WHOM we spoke was very nice.",
-          "  Informal (Conj + S + V + Prep): The man WHOM we spoke TO was very nice.",
-          '  Note: "who" dan "that" tidak bisa digunakan dalam pola formal.',
+          "(+) S + was/were + V3",
+          "{{annotation:I|S}} {{annotation:was|Vaux}} {{annotation:graduated|Vord}} from university last year.",
+          "(-) S + was/were + not + V3",
+          "{{annotation:It|S}} {{annotation:was not|Vaux}} {{annotation:built|Vord}} in a day.",
+          "─────────────────────────────",
+          "Non Verbal — Rumus: S + was/were + ANA",
+          "(+) S + was/were + ANA",
+          "{{annotation:They|S}} {{annotation:were|Vaux}} {{annotation:proud|ANA}} of their result.",
+          "(-) S + was/were + not + ANA",
+          "{{annotation:He|S}} {{annotation:was not|Vaux}} {{annotation:ready|ANA}} for the test.",
+        ],
+      },
+      {
+        title: "3. Present Continuous",
+        points: [
+          "Verbal Active — Rumus: S + is/am/are + Ving",
+          "─────────────────────────────",
+          "(+) S + is/am/are + Ving",
+          "{{annotation:She|S}} {{annotation:is|Vaux}} {{annotation:sleeping|Vord}} right now.",
+          "(-) S + is/am/are + not + Ving",
+          "{{annotation:She|S}} {{annotation:is not|Vaux}} {{annotation:sleeping|Vord}} right now.",
+          "(?) Is/Am/Are + S + Ving?",
+          "{{annotation:Is|Vaux}} {{annotation:she|S}} {{annotation:sleeping|Vord}} right now?",
+          "─────────────────────────────",
+          "Verbal Passive — Rumus: S + is/am/are + being + V3",
+          "─────────────────────────────",
+          "(+) S + is/am/are + being + V3",
+          "{{annotation:The problem|S}} {{annotation:is being|Vaux}} {{annotation:solved|Vord}} by Nina.",
+          "(-) S + is/am/are + not + being + V3",
+          "{{annotation:The problem|S}} {{annotation:is not being|Vaux}} {{annotation:solved|Vord}} by Nina.",
+          "─────────────────────────────",
+          "Non Verbal — Rumus: S + is/am/are + being + ANA",
+          "(+) S + is/am/are + being + ANA",
+          "{{annotation:You|S}} {{annotation:are being|Vaux}} {{annotation:brave|ANA}}.",
+          "(?) Is/Am/Are + S + being + ANA?",
+          "{{annotation:Are|Vaux}} {{annotation:you|S}} being {{annotation:happy|ANA}}?",
         ],
       },
     ],
     exercises: [
+      // ══════════════════════════════════════════════════════════════════════════
+      // PART 1 — Mixed Tenses (25 soal)
+      // ══════════════════════════════════════════════════════════════════════════
       {
-        id: "int-gr7-q1",
+        id: "int-gr7-t1",
         type: "multiple-choice",
-        question:
-          'Combine: "The girl is my sister." + "She won the competition." → Which is correct?',
-        options: [
-          "The girl which won the competition is my sister.",
-          "The girl whom won the competition is my sister.",
-          "The girl who won the competition is my sister.",
-          "The girl whose won the competition is my sister.",
-        ],
-        correctAnswer: "The girl who won the competition is my sister.",
+        question: "The report usually ___ by the manager before noon.",
+        options: ["checks", "is checked", "checked", "is checking"],
+        correctAnswer: "is checked",
         reason:
-          'Relative Pronoun as Subject (RPS) untuk orang = WHO. Formula: Conj + V → "who won the competition".',
+          "Simple Present Passive: S + is/am/are + V3. 'the report' singular → 'is checked'.",
       },
       {
-        id: "int-gr7-q2",
+        id: "int-gr7-t2",
         type: "multiple-choice",
-        question:
-          'Combine: "The book is interesting." + "I borrowed it." → Which is correct?',
-        options: [
-          "The book who I borrowed is interesting.",
-          "The book whom I borrowed is interesting.",
-          "The book which I borrowed is interesting.",
-          "The book whose I borrowed is interesting.",
-        ],
-        correctAnswer: "The book which I borrowed is interesting.",
+        question: "Right now, the students ___ a debate about climate change.",
+        options: ["have", "are having", "had", "will have"],
+        correctAnswer: "are having",
         reason:
-          'RPO untuk benda = WHICH. Formula: Conj + S + V → "which I borrowed".',
+          "Present Continuous Active: S + is/am/are + Ving. Kata kunci 'right now' → Present Continuous.",
       },
       {
-        id: "int-gr7-q3",
-        type: "task",
+        id: "int-gr7-t3",
+        type: "multiple-choice",
+        question: "The new policy ___ next month to improve efficiency.",
+        options: [
+          "implements",
+          "implemented",
+          "will be implemented",
+          "is implementing",
+        ],
+        correctAnswer: "will be implemented",
+        reason:
+          "Simple Future Passive: S + will + be + V3. Kata kunci 'next month' → Future.",
+      },
+      {
+        id: "int-gr7-t4",
+        type: "multiple-choice",
+        question: "She ___ very confident during yesterday's presentation.",
+        options: ["is", "was", "has been", "will be"],
+        correctAnswer: "was",
+        reason:
+          "Simple Past Non Verbal: S + was/were + ANA. Kata kunci 'yesterday' → Simple Past.",
+      },
+      {
+        id: "int-gr7-t5",
+        type: "multiple-choice",
+        question: "Every year, this festival ___ by thousands of tourists.",
+        options: ["attends", "is attended", "attended", "is attending"],
+        correctAnswer: "is attended",
+        reason:
+          "Simple Present Passive: S + is/am/are + V3. 'Every year' → habitual → Simple Present Passive.",
+      },
+      {
+        id: "int-gr7-t6",
+        type: "multiple-choice",
+        question: "Look! The dog ___ at the stranger again.",
+        options: ["barks", "barked", "is barking", "will bark"],
+        correctAnswer: "is barking",
+        reason:
+          "Present Continuous: kata kunci 'Look!' menandakan aksi sedang berlangsung sekarang.",
+      },
+      {
+        id: "int-gr7-t7",
+        type: "multiple-choice",
+        question: "The documents ___ already on your desk yesterday morning.",
+        options: ["are", "were", "will be", "being"],
+        correctAnswer: "were",
+        reason:
+          "Simple Past Non Verbal: S + was/were + ANA. Kata kunci 'yesterday morning' → Simple Past.",
+      },
+      {
+        id: "int-gr7-t8",
+        type: "multiple-choice",
+        question: "We ___ the problem when the system suddenly crashed.",
+        options: ["discuss", "discussed", "are discussing", "will discuss"],
+        correctAnswer: "discussed",
+        reason:
+          "Simple Past Active: kedua aksi terjadi di masa lalu. 'discussed' adalah V2 yang tepat.",
+      },
+      {
+        id: "int-gr7-t9",
+        type: "multiple-choice",
+        question: "At the moment, a new bridge ___ across the river.",
+        options: ["builds", "built", "is being built", "will build"],
+        correctAnswer: "is being built",
+        reason:
+          "Present Continuous Passive: S + is/am/are + being + V3. 'At the moment' → sekarang sedang berlangsung.",
+      },
+      {
+        id: "int-gr7-t10",
+        type: "multiple-choice",
+        question: "She usually ___ her emails before starting work.",
+        options: ["checks", "is checking", "checked", "will check"],
+        correctAnswer: "checks",
+        reason:
+          "Simple Present Active: kata kunci 'usually' → kebiasaan. Subjek 'She' + V1(s) → 'checks'.",
+      },
+      {
+        id: "int-gr7-t11",
+        type: "multiple-choice",
+        question: "The meeting ___ at 9 a.m. tomorrow. Don't be late.",
+        options: ["starts", "is starting", "started", "will be started"],
+        correctAnswer: "starts",
+        reason:
+          "Simple Present untuk jadwal tetap di masa depan (timetable future). 'Starts' = jadwal resmi.",
+      },
+      {
+        id: "int-gr7-t12",
+        type: "multiple-choice",
+        question: "Last night, the lights suddenly ___ off during the storm.",
+        options: ["go", "went", "are going", "will go"],
+        correctAnswer: "went",
+        reason:
+          "Simple Past Active: kata kunci 'last night' → V2. V2 dari 'go' = 'went'.",
+      },
+      {
+        id: "int-gr7-t13",
+        type: "multiple-choice",
+        question: "The project ___ by the team right now, so please wait.",
+        options: ["reviews", "reviewed", "is being reviewed", "will review"],
+        correctAnswer: "is being reviewed",
+        reason:
+          "Present Continuous Passive: 'right now' + passive → is/am/are + being + V3.",
+      },
+      {
+        id: "int-gr7-t14",
+        type: "multiple-choice",
+        question: "My parents ___ in Jakarta when they were young.",
+        options: ["live", "lived", "are living", "will live"],
+        correctAnswer: "lived",
+        reason:
+          "Simple Past Active: kata kunci 'when they were young' → masa lalu. V2 dari 'live' = 'lived'.",
+      },
+      {
+        id: "int-gr7-t15",
+        type: "multiple-choice",
+        question: "The classroom ___ clean every morning before lessons begin.",
+        options: ["cleans", "cleaned", "is cleaned", "is cleaning"],
+        correctAnswer: "is cleaned",
+        reason:
+          "Simple Present Passive: 'every morning' → habitual. S + is + V3 (passive).",
+      },
+      {
+        id: "int-gr7-t16",
+        type: "multiple-choice",
+        question: "She ___ dinner when I called her last night.",
+        options: ["cooks", "cooked", "is cooking", "was cooking"],
+        correctAnswer: "was cooking",
+        reason:
+          "Past Continuous: aksi sedang berlangsung ketika aksi lain terjadi. 'was cooking' saat 'called'.",
+      },
+      {
+        id: "int-gr7-t17",
+        type: "multiple-choice",
         question:
-          'Gabungkan kalimat berikut menggunakan Adjective Clause (RPS atau RPO): (1) "The teacher is very kind. She teaches mathematics." (2) "The movie was amazing. I watched it last night." (3) "The man is my uncle. I met him at the station."',
+          "The results ___ tomorrow after careful evaluation.\na. announce  b. announced  c. will be announced  d. are announcing",
+        options: [
+          "announce",
+          "announced",
+          "will be announced",
+          "are announcing",
+        ],
+        correctAnswer: "will be announced",
+        reason:
+          "Simple Future Passive: S + will + be + V3. Kata kunci 'tomorrow'.",
+      },
+      {
+        id: "int-gr7-t18",
+        type: "multiple-choice",
+        question:
+          "He ___ always late for meetings, which annoys everyone.\na. is  b. was  c. will be  d. being",
+        options: ["is", "was", "will be", "being"],
+        correctAnswer: "is",
+        reason:
+          "Simple Present Non Verbal: kebiasaan saat ini. S + is + ANA (late).",
+      },
+      {
+        id: "int-gr7-t19",
+        type: "multiple-choice",
+        question:
+          "Right now, the instructions ___ to all participants.\na. send  b. sent  c. are being sent  d. will send",
+        options: ["send", "sent", "are being sent", "will send"],
+        correctAnswer: "are being sent",
+        reason:
+          "Present Continuous Passive: 'right now' + passive → is/am/are + being + V3.",
+      },
+      {
+        id: "int-gr7-t20",
+        type: "multiple-choice",
+        question:
+          "They ___ their final exam next week, so they're studying hard.\na. take  b. took  c. are taking  d. will take",
+        options: ["take", "took", "are taking", "will take"],
+        correctAnswer: "will take",
+        reason:
+          "Simple Future Active: rencana di masa depan. 'next week' → will + V1.",
+      },
+      {
+        id: "int-gr7-t21",
+        type: "multiple-choice",
+        question:
+          "Yesterday, the suspect ___ by the police near the station.\na. arrests  b. arrested  c. was arrested  d. is arrested",
+        options: ["arrests", "arrested", "was arrested", "is arrested"],
+        correctAnswer: "was arrested",
+        reason:
+          "Simple Past Passive: S + was/were + V3. 'Yesterday' → past. Passive karena subjek dikenai tindakan.",
+      },
+      {
+        id: "int-gr7-t22",
+        type: "multiple-choice",
+        question:
+          "Water ___ at 100°C under normal conditions.\na. boils  b. boiled  c. is boiling  d. will boil",
+        options: ["boils", "boiled", "is boiling", "will boil"],
+        correctAnswer: "boils",
+        reason:
+          "Simple Present: fakta ilmiah / kebenaran umum. 'Water boils at 100°C' → V1(s) = boils.",
+      },
+      {
+        id: "int-gr7-t23",
+        type: "multiple-choice",
+        question:
+          "At present, the company ___ its strategy due to market changes.\na. changes  b. changed  c. is changing  d. will change",
+        options: ["changes", "changed", "is changing", "will change"],
+        correctAnswer: "is changing",
+        reason:
+          "Present Continuous: 'at present' → aksi sedang berlangsung sekarang.",
+      },
+      {
+        id: "int-gr7-t24",
+        type: "multiple-choice",
+        question:
+          "The door ___ automatically when someone enters.\na. locks  b. is locked  c. locked  d. is locking",
+        options: ["locks", "is locked", "locked", "is locking"],
+        correctAnswer: "is locked",
+        reason:
+          "Simple Present Passive: pintu dikunci secara otomatis (proses berulang) → S + is + V3.",
+      },
+      {
+        id: "int-gr7-t25",
+        type: "multiple-choice",
+        question:
+          "Next year, a new shopping mall ___ in this area.\na. builds  b. built  c. will be built  d. is building",
+        options: ["builds", "built", "will be built", "is building"],
+        correctAnswer: "will be built",
+        reason:
+          "Simple Future Passive: S + will + be + V3. 'Next year' → future.",
+      },
+
+      // ══════════════════════════════════════════════════════════════════════════
+      // PART 2 — Stative Verb vs Dynamic Verb (30 soal)
+      // ══════════════════════════════════════════════════════════════════════════
+      {
+        id: "int-gr7-sv1",
+        type: "multiple-choice",
+        question: "I ___ this movie is too long.\na. am thinking  b. think",
+        options: ["am thinking", "think"],
+        correctAnswer: "think",
+        reason:
+          "'Think' sebagai stative verb (= berpendapat/believe) → Simple Present, bukan Continuous.",
+      },
+      {
+        id: "int-gr7-sv2",
+        type: "multiple-choice",
+        question:
+          "She ___ about moving abroad at the moment.\na. thinks  b. is thinking",
+        options: ["thinks", "is thinking"],
+        correctAnswer: "is thinking",
+        reason:
+          "'Think' sebagai dynamic verb (= sedang mempertimbangkan) → Present Continuous.",
+      },
+      {
+        id: "int-gr7-sv3",
+        type: "multiple-choice",
+        question:
+          "He ___ a car, so he usually takes the bus.\na. is having  b. has",
+        options: ["is having", "has"],
+        correctAnswer: "has",
+        reason:
+          "'Have' = memiliki (possession) → stative verb → Simple Present.",
+      },
+      {
+        id: "int-gr7-sv4",
+        type: "multiple-choice",
+        question:
+          "We ___ dinner right now, can I call you back?\na. have  b. are having",
+        options: ["have", "are having"],
+        correctAnswer: "are having",
+        reason:
+          "'Have' = makan (activity) → dynamic verb → Present Continuous.",
+      },
+      {
+        id: "int-gr7-sv5",
+        type: "multiple-choice",
+        question: "This soup ___ delicious!\na. is tasting  b. tastes",
+        options: ["is tasting", "tastes"],
+        correctAnswer: "tastes",
+        reason:
+          "'Taste' = terasa (sensory state) → stative verb → Simple Present.",
+      },
+      {
+        id: "int-gr7-sv6",
+        type: "multiple-choice",
+        question:
+          "The chef ___ the sauce to check the flavor.\na. tastes  b. is tasting",
+        options: ["tastes", "is tasting"],
+        correctAnswer: "is tasting",
+        reason:
+          "'Taste' = mencicipi (intentional action) → dynamic verb → Present Continuous.",
+      },
+      {
+        id: "int-gr7-sv7",
+        type: "multiple-choice",
+        question: "I ___ tired after that long walk.\na. am feeling  b. feel",
+        options: ["am feeling", "feel"],
+        correctAnswer: "feel",
+        reason:
+          "'Feel' = merasakan kondisi tubuh (state) → stative verb → Simple Present.",
+      },
+      {
+        id: "int-gr7-sv8",
+        type: "multiple-choice",
+        question:
+          "She ___ the fabric to see if it's soft.\na. feels  b. is feeling",
+        options: ["feels", "is feeling"],
+        correctAnswer: "is feeling",
+        reason:
+          "'Feel' = meraba (physical action) → dynamic verb → Present Continuous.",
+      },
+      {
+        id: "int-gr7-sv9",
+        type: "multiple-choice",
+        question:
+          "Something ___ strange in the kitchen.\na. smells  b. is smelling",
+        options: ["smells", "is smelling"],
+        correctAnswer: "smells",
+        reason:
+          "'Smell' = berbau (sensory state) → stative verb → Simple Present.",
+      },
+      {
+        id: "int-gr7-sv10",
+        type: "multiple-choice",
+        question: "He ___ the flowers carefully.\na. smells  b. is smelling",
+        options: ["smells", "is smelling"],
+        correctAnswer: "is smelling",
+        reason:
+          "'Smell' = mencium/menghirup (intentional action) → dynamic verb → Present Continuous.",
+      },
+      {
+        id: "int-gr7-sv11",
+        type: "multiple-choice",
+        question: "I ___ what you mean.\na. am seeing  b. see",
+        options: ["am seeing", "see"],
+        correctAnswer: "see",
+        reason:
+          "'See' = mengerti/memahami (mental state) → stative verb → Simple Present.",
+      },
+      {
+        id: "int-gr7-sv12",
+        type: "multiple-choice",
+        question:
+          "They ___ a doctor about the problem tomorrow.\na. see  b. are seeing",
+        options: ["see", "are seeing"],
+        correctAnswer: "are seeing",
+        reason:
+          "'See' = bertemu/mengunjungi (planned action) → dynamic verb → Present Continuous.",
+      },
+      {
+        id: "int-gr7-sv13",
+        type: "multiple-choice",
+        question: "She ___ very calm today.\na. appears  b. is appearing",
+        options: ["appears", "is appearing"],
+        correctAnswer: "appears",
+        reason:
+          "'Appear' = tampak/terlihat (state) → stative verb → Simple Present.",
+      },
+      {
+        id: "int-gr7-sv14",
+        type: "multiple-choice",
+        question:
+          "The actor ___ in a new movie this month.\na. appears  b. is appearing",
+        options: ["appears", "is appearing"],
+        correctAnswer: "is appearing",
+        reason:
+          "'Appear' = tampil/muncul (scheduled performance) → dynamic verb → Present Continuous.",
+      },
+      {
+        id: "int-gr7-sv15",
+        type: "multiple-choice",
+        question: "You ___ tired. Are you okay?\na. look  b. are looking",
+        options: ["look", "are looking"],
+        correctAnswer: "look",
+        reason:
+          "'Look' = kelihatan/tampak (state) → stative verb → Simple Present.",
+      },
+      {
+        id: "int-gr7-sv16",
+        type: "multiple-choice",
+        question: "He ___ at the painting in silence.\na. looks  b. is looking",
+        options: ["looks", "is looking"],
+        correctAnswer: "is looking",
+        reason:
+          "'Look' = melihat/menatap (intentional action) → dynamic verb → Present Continuous.",
+      },
+      {
+        id: "int-gr7-sv17",
+        type: "multiple-choice",
+        question: "This bag ___ a lot.\na. weighs  b. is weighing",
+        options: ["weighs", "is weighing"],
+        correctAnswer: "weighs",
+        reason:
+          "'Weigh' = memiliki berat (state) → stative verb → Simple Present.",
+      },
+      {
+        id: "int-gr7-sv18",
+        type: "multiple-choice",
+        question:
+          "The butcher ___ the meat right now.\na. weighs  b. is weighing",
+        options: ["weighs", "is weighing"],
+        correctAnswer: "is weighing",
+        reason:
+          "'Weigh' = menimbang (action) → dynamic verb → Present Continuous.",
+      },
+      {
+        id: "int-gr7-sv19",
+        type: "multiple-choice",
+        question:
+          "They ___ in Jakarta now. (permanent residence)\na. live  b. are living",
+        options: ["live", "are living"],
+        correctAnswer: "live",
+        reason: "'Live' = tinggal secara permanen → Simple Present.",
+      },
+      {
+        id: "int-gr7-sv20",
+        type: "multiple-choice",
+        question:
+          "He ___ with his parents temporarily.\na. lives  b. is living",
+        options: ["lives", "is living"],
+        correctAnswer: "is living",
+        reason: "'Live' sementara/tidak permanen → Present Continuous.",
+      },
+      {
+        id: "int-gr7-sv21",
+        type: "multiple-choice",
+        question: "She ___ very kind. (karakter/sifat)\na. is being  b. is",
+        options: ["is being", "is"],
+        correctAnswer: "is",
+        reason: "'Kind' adalah sifat tetap → stative → Simple Present 'is'.",
+      },
+      {
+        id: "int-gr7-sv22",
+        type: "multiple-choice",
+        question: "He ___ rude today, which is unusual.\na. is  b. is being",
+        options: ["is", "is being"],
+        correctAnswer: "is being",
+        reason:
+          "'Rude' hari ini = perilaku sementara → 'is being' (Present Continuous) menunjukkan perilaku abnormal.",
+      },
+      {
+        id: "int-gr7-sv23",
+        type: "multiple-choice",
+        question:
+          "\"I ___ you're making a mistake, but I'll stay quiet for now.\"\na. am thinking  b. think",
+        options: ["am thinking", "think"],
+        correctAnswer: "think",
+        reason: "'Think' = berpendapat/believe → stative → Simple Present.",
+      },
+      {
+        id: "int-gr7-sv24",
+        type: "multiple-choice",
+        question:
+          '"Don\'t disturb her. She ___ the problem very carefully."\na. thinks about  b. is thinking about',
+        options: ["thinks about", "is thinking about"],
+        correctAnswer: "is thinking about",
+        reason:
+          "'Think about' = sedang mempertimbangkan → dynamic → Present Continuous.",
+      },
+      {
+        id: "int-gr7-sv25",
+        type: "multiple-choice",
+        question:
+          '"This perfume ___ amazing, but I can\'t afford it."\na. is smelling  b. smells',
+        options: ["is smelling", "smells"],
+        correctAnswer: "smells",
+        reason: "'Smell' = berbau (sensory state) → stative → Simple Present.",
+      },
+      {
+        id: "int-gr7-sv26",
+        type: "multiple-choice",
+        question:
+          '"Wait a second, I ___ something strange here…"\na. smell  b. am smelling',
+        options: ["smell", "am smelling"],
+        correctAnswer: "am smelling",
+        reason:
+          "'Smell' = mencium sesuatu secara aktif → dynamic → Present Continuous.",
+      },
+      {
+        id: "int-gr7-sv27",
+        type: "multiple-choice",
+        question:
+          '"He ___ very difficult lately, so the team is frustrated."\na. is  b. is being',
+        options: ["is", "is being"],
+        correctAnswer: "is being",
+        reason:
+          "Perilaku sementara yang tidak biasa → 'is being' (Present Continuous).",
+      },
+      {
+        id: "int-gr7-sv28",
+        type: "multiple-choice",
+        question:
+          '"The manager ___ two assistants at the moment due to the heavy workload."\na. has  b. is having',
+        options: ["has", "is having"],
+        correctAnswer: "has",
+        reason: "'Have' = memiliki (possession) → stative → Simple Present.",
+      },
+      {
+        id: "int-gr7-sv29",
+        type: "multiple-choice",
+        question:
+          '"I ___ why she reacted that way yesterday."\na. see  b. am seeing',
+        options: ["see", "am seeing"],
+        correctAnswer: "see",
+        reason:
+          "'See' = mengerti/memahami (mental state) → stative → Simple Present.",
+      },
+      {
+        id: "int-gr7-sv30",
+        type: "multiple-choice",
+        question:
+          '"Currently, they ___ a new approach to solve the issue."\na. try  b. are trying',
+        options: ["try", "are trying"],
+        correctAnswer: "are trying",
+        reason:
+          "'Try' = mencoba (action in progress) → dynamic → Present Continuous. 'Currently' → sekarang.",
       },
     ],
   },
@@ -6234,59 +6744,107 @@ const grammarLessons: ModuleLesson[] = [
     track: "grammar",
     day: 8,
     tutor: "M",
-    title: "Adjective Clause — Part 2",
-    subtitle: "Relative Pronoun Possession (RPP) dan Relative Adverb (RA)",
+    title: "Present Perfect",
+    subtitle: "Verbal Active, Verbal Passive, Non Verbal — Fungsi & Time Signal",
     overview:
-      "Melanjutkan Adjective Clause dengan Relative Pronoun sebagai Possession (WHOSE) dan Relative Adverb (where, when, why), serta konsep Complete vs Incomplete AC.",
+      "Present Perfect digunakan untuk menyatakan aksi yang dimulai di masa lalu dan berhubungan dengan sekarang. Mencakup bentuk Verbal Active, Verbal Passive (be + V3), dan Non Verbal (be + ANA), serta 6 fungsi utama dengan time signal: yet, already, since, for, just, ever, so far.",
     materialSections: [
       {
-        title: "B3. Relative Pronoun as Possession (RPP)",
+        title: "Time Signal",
         points: [
-          "Conjunction: WHOSE → possessive (orang/benda)",
-          "─────────────────────────────",
-          "Formula: Whose + Noun + V + (O) + (Adv)",
-          "  OR: Whose + Noun + S + V + (O) + (Adv)",
-          "─────────────────────────────",
-          "Contoh:",
-          "  The boy is in Australia. + I am looking after his dog.",
-          "  → The boy WHOSE DOG I AM LOOKING AFTER is in Australia.",
+          "yet — belum/sudah (kalimat tanya/negatif)",
+          "already — sudah (kalimat positif)",
+          "since — sejak (+ waktu mulai: since 2020, since I was a child)",
+          "for — selama (+ durasi: for 3 months, for a long time)",
+          "just — baru saja",
+          "ever — pernah (dalam pertanyaan)",
+          "so far / up to now — sejauh ini / sampai sekarang",
         ],
       },
       {
-        title: "B4. Relative Adverb (RA)",
+        title: "6 Fungsi Present Perfect",
         points: [
-          "Formula: Conj + S + V + (O)  → COMPLETE clause",
+          "1️⃣ Menyatakan pengalaman",
+          "{{annotation:I|S}} {{annotation:have already finished|Vaux+Vord}} my study program.",
           "─────────────────────────────",
-          "1. Relative Adverb of PLACE:",
-          "   Conjunction: where, that, in/on/at + which",
-          "   The factory WHERE I WORK is going to close down.",
-          "   = The factory AT WHICH I WORK is going to close down.",
+          "2️⃣ Aksi yang baru selesai",
+          "{{annotation:We|S}} {{annotation:have just finished|Vaux+Vord}} speaking class.",
           "─────────────────────────────",
-          "2. Relative Adverb of TIME:",
-          "   Conjunction: when, that, in/on/at + which",
-          "   Do you remember the time WHEN WE WENT TO Ani's party?",
-          "   = Do you remember the time AT WHICH WE WENT TO Ani's party?",
+          "3️⃣ Aksi di masa lampau yang masih berlangsung",
+          "{{annotation:I|S}} {{annotation:have lived|Vaux+Vord}} here for 3 months.",
           "─────────────────────────────",
-          "3. Relative Adverb of REASON:",
-          "   Conjunction: why",
-          "   You should give me a reason WHY YOU DID NOT COME to my house.",
+          "4️⃣ Mempengaruhi kondisi saat ini",
+          "I'm sad because {{annotation:I|S}} {{annotation:have lost|Vaux+Vord}} my wallet.",
+          "─────────────────────────────",
+          "5️⃣ Aksi berulang (bukan habit)",
+          "{{annotation:I|S}} {{annotation:have watched|Vaux+Vord}} 'Insidious' movie many times.",
+          "─────────────────────────────",
+          "6️⃣ Perubahan di masa lalu & sekarang",
+          "{{annotation:Your English skills|S}} {{annotation:have improved|Vaux+Vord}}.",
         ],
       },
       {
-        title: "Complete vs Incomplete AC",
+        title: "Verbal Active",
         points: [
-          "RPS → Conj + Verb + (O) + (Adv) = INCOMPLETE (subject sudah ada di main clause)",
-          "RPO → Conj + Subject + Verb transitive + (Adv) = COMPLETE",
-          "RPP → Conj + Subject + Verb + (Object) + (Adv) = COMPLETE",
-          "RA  → Conj + Subject + Verb + (Object) + (Adv) = COMPLETE",
+          "Rumus: S + have/has + V3",
           "─────────────────────────────",
-          "Conjunction Summary:",
-          "  WHO → V + O (RPS/RPO orang)",
-          "  WHOM → S + Vt (RPO orang formal)",
-          "  WHICH → V + O / S + V (benda)",
-          "  THAT → orang/benda",
-          "  WHOSE + noun → S + V(O) / V + (O)",
-          "  WHERE / WHEN / WHY → S + V + (O)",
+          "(+) S + have/has + V3",
+          "{{annotation:I|S}} {{annotation:have|Vaux}} {{annotation:done|Vord}} my homework.",
+          "{{annotation:I|S}} {{annotation:have|Vaux}} {{annotation:justified|Vord}} her statement.",
+          "─────────────────────────────",
+          "(-) S + have/has + not + V3",
+          "{{annotation:He|S}} {{annotation:has not|Vaux}} {{annotation:tackled|Vord}} with his striker.  (= hasn't)",
+          "{{annotation:I|S}} {{annotation:have not|Vaux}} {{annotation:discovered|Vord}} the problem.  (= haven't)",
+          "─────────────────────────────",
+          "(?) Have/Has + S + V3 ?",
+          "{{annotation:Have|Vaux}} {{annotation:the products of quality|S}} {{annotation:declined|Vord}}?",
+          "{{annotation:Has|Vaux}} {{annotation:she|S}} {{annotation:maintained|Vord}} this car?",
+        ],
+      },
+      {
+        title: "Verbal Passive (be + V3)",
+        points: [
+          "Rumus: S + have/has + been + V3",
+          "─────────────────────────────",
+          "(+) S + have/has + been + V3",
+          "{{annotation:The class|S}} {{annotation:has been|Vaux}} {{annotation:started|Vord}} at 9 p.m.",
+          "{{annotation:The target|S}} {{annotation:has been|Vaux}} {{annotation:achieved|Vord}} by my team.",
+          "─────────────────────────────",
+          "(-) S + have/has + not + been + V3",
+          "{{annotation:The food|S}} {{annotation:has not been|Vaux}} {{annotation:cooked|Vord}} by my mom.",
+          "{{annotation:The flood|S}} {{annotation:has not been|Vaux}} {{annotation:led|Vord}} to by global warming.",
+          "─────────────────────────────",
+          "(?) Have/Has + S + been + V3 ?",
+          "{{annotation:Has|Vaux}} {{annotation:the yogurt|S}} {{annotation:been resulted in|Vord}} by milk's goat?",
+          "{{annotation:Has|Vaux}} {{annotation:the paper|S}} {{annotation:been made|Vord}} by elephant poops?",
+        ],
+      },
+      {
+        title: "Non Verbal (be + ANA)",
+        points: [
+          "Rumus: S + have/has + been + ANA",
+          "─────────────────────────────",
+          "(+) S + have/has + been + ANA",
+          "{{annotation:I|S}} {{annotation:have been|Vaux}} {{annotation:tired|ANA}} all day.",
+          "{{annotation:She|S}} {{annotation:has been|Vaux}} {{annotation:stronger|ANA}} after GYM.",
+          "─────────────────────────────",
+          "(-) S + have/has + not + been + ANA",
+          "{{annotation:We|S}} {{annotation:have not been|Vaux}} {{annotation:happy|ANA}} since I live in Pare.  (= haven't been)",
+          "{{annotation:My life|S}} {{annotation:hasn't been|Vaux}} {{annotation:perfect|ANA}} by my imagination.",
+          "─────────────────────────────",
+          "(?) Have/Has + S + been + ANA ?",
+          "{{annotation:Has|Vaux}} {{annotation:he|S}} been {{annotation:busy|ANA}} lately?",
+          "{{annotation:Has|Vaux}} {{annotation:he|S}} been {{annotation:a student|ANA}} for his life?",
+        ],
+      },
+      {
+        title: "Present Perfect vs Simple Past",
+        points: [
+          "Present Perfect → tidak ada waktu spesifik, masih relevan sekarang",
+          "{{annotation:I|S}} {{annotation:have studied|Vaux+Vord}}.",
+          "─────────────────────────────",
+          "Simple Past → ada waktu spesifik, sudah selesai",
+          "{{annotation:I|S}} {{annotation:studied|Vord}} English yesterday.",
         ],
       },
     ],
@@ -6295,33 +6853,87 @@ const grammarLessons: ModuleLesson[] = [
         id: "int-gr8-q1",
         type: "multiple-choice",
         question:
-          'Combine: "The student is very talented." + "Her painting won the contest." → Which is correct?',
+          "She _____ her homework yet.",
         options: [
-          "The student who painting won the contest is very talented.",
-          "The student which painting won the contest is very talented.",
-          "The student whose painting won the contest is very talented.",
-          "The student whom painting won the contest is very talented.",
+          "hasn't finished",
+          "didn't finish",
+          "doesn't finish",
+          "isn't finishing",
         ],
-        correctAnswer:
-          "The student whose painting won the contest is very talented.",
+        correctAnswer: "hasn't finished",
         reason:
-          'RPP = WHOSE untuk kepemilikan. "her painting" → "whose painting". Formula: Whose + Noun + V.',
+          'Present Perfect negatif dengan "yet" → S + have/has + not + V3. "yet" di akhir kalimat negatif = belum.',
       },
       {
         id: "int-gr8-q2",
         type: "multiple-choice",
-        question:
-          '"That is the city ______ I was born." — Which conjunction is correct?',
-        options: ["which", "who", "where", "whose"],
-        correctAnswer: "where",
+        question: "I _____ to Japan before. It was an amazing experience.",
+        options: [
+          "have been",
+          "was",
+          "am",
+          "had been",
+        ],
+        correctAnswer: "have been",
         reason:
-          'Relative Adverb of Place = WHERE (menggantikan "there/in that place"). "the city where I was born."',
+          'Present Perfect fungsi pengalaman: S + have/has + V3. "have been to" = pernah pergi ke.',
       },
       {
         id: "int-gr8-q3",
+        type: "multiple-choice",
+        question: "The report _____ by the manager since this morning.",
+        options: [
+          "has been written",
+          "was written",
+          "is written",
+          "has written",
+        ],
+        correctAnswer: "has been written",
+        reason:
+          'Present Perfect Verbal Passive: S + have/has + been + V3. "since this morning" = time signal Present Perfect.',
+      },
+      {
+        id: "int-gr8-q4",
+        type: "multiple-choice",
+        question: "_____ you ever eaten durian?",
+        options: ["Have", "Has", "Did", "Do"],
+        correctAnswer: "Have",
+        reason:
+          'Present Perfect Verbal Active kalimat tanya dengan "ever": Have/Has + S + V3? Subject "you" → Have.',
+      },
+      {
+        id: "int-gr8-q5",
+        type: "multiple-choice",
+        question: "She _____ tired all day because of the long meeting.",
+        options: [
+          "has been",
+          "is been",
+          "was been",
+          "have been",
+        ],
+        correctAnswer: "has been",
+        reason:
+          'Present Perfect Non Verbal (be + ANA): S + have/has + been + ANA. Subject "she" → has.',
+      },
+      {
+        id: "int-gr8-q6",
+        type: "multiple-choice",
+        question: "We _____ speaking class yet — we're still practicing.",
+        options: [
+          "haven't finished",
+          "didn't finish",
+          "don't finish",
+          "aren't finishing",
+        ],
+        correctAnswer: "haven't finished",
+        reason:
+          'Present Perfect negatif: S + have/has + not + V3. "yet" di kalimat negatif = belum. Subject "we" → haven\'t.',
+      },
+      {
+        id: "int-gr8-q7",
         type: "task",
         question:
-          'Gabungkan kalimat-kalimat berikut menggunakan RPP (whose) atau Relative Adverb (where/when/why): (1) "The man is famous. His book became a bestseller." (2) "I love the restaurant. We had dinner there last month." (3) "She explained the reason. She was late for that reason."',
+          "Buatlah 3 kalimat Present Perfect: (1) satu kalimat Verbal Active positif dengan 'already', (2) satu kalimat Verbal Passive negatif dengan 'yet', (3) satu kalimat Non Verbal (be + ANA) tanya dengan 'ever'.",
       },
     ],
   },
@@ -6332,112 +6944,220 @@ const grammarLessons: ModuleLesson[] = [
     track: "grammar",
     day: 9,
     tutor: "M",
-    title: "Adjective Clause — Part 3",
-    subtitle:
-      "Reducing, Omitting, Restrictive vs Non-Restrictive, dan Appositive",
+    title: "Review All Tenses",
+    subtitle: "Simple Present, Simple Past, Simple Future, Present Continuous & Present Perfect",
     overview:
-      'Materi lanjutan Adjective Clause: cara mereduksi (reducing) dan menghilangkan (omitting) AC, perbedaan Restrictive vs Non-Restrictive clause, Appositive, serta reducing untuk "the first/second/only".',
+      "Review lengkap 5 tense yang sudah dipelajari: rumus, time signal, dan contoh kalimat Verbal Active, Verbal Passive, dan Non Verbal masing-masing tense, dilengkapi latihan soal campuran.",
     materialSections: [
       {
-        title: "C1. Reducing Adjective Clause",
+        title: "Ringkasan Rumus 5 Tenses",
         points: [
-          "a. RPS Verbal Active (Simple Present/Past, Continuous):",
-          "   Conj + V → VING",
-          "   The doctor who stands has two sons. → The doctor STANDING has two sons.",
+          "{{tenses-table}}",
           "─────────────────────────────",
-          "b. RPS Verbal Passive (Simple Present/Past):",
-          "   Conj + be + V3 → V3",
-          "   Cake which was bought by Alan is delicious. → Cake BOUGHT by Alan is delicious.",
-          "─────────────────────────────",
-          "c. RPS Verbal Passive Continuous:",
-          "   Conj + be + being + V3 → BEING + V3",
-          "   The novel which was being written by Andi... → The novel BEING WRITTEN by Andi...",
-          "─────────────────────────────",
-          "d. RPS (Perfect Tenses):",
-          "   Verbal Active: Conj + have/has + V3 → HAVING V3",
-          "   I like the boy who has taught English. → I like the boy HAVING TAUGHT English.",
-          "   Verbal Passive: Conj + have/has + been + V3 → HAVING BEEN V3",
-          "   Non-Verbal: Conj + have/has + been + ANA → ANA only",
-          "   The girls who are angry... → The ANGRY girls...",
-          "─────────────────────────────",
-          "⚠️ NOTE: Semua RPS yang mengandung MODAL (verb) TIDAK BISA direduksi.",
+          "Present Perfect — S + have/has + V3  |  S + have/has + been + V3  |  S + have/has + been + ANA",
         ],
       },
       {
-        title: "C2. Omitting Adjective Clause",
+        title: "Time Signal — 5 Tenses",
         points: [
-          "a. RPS Non-Verbal: Omit Conj (who/which/that) + be + ANA",
-          "   The student who was so ugly... → The SO UGLY student...",
-          "─────────────────────────────",
-          "b. RPO: Omit Conj + S + V",
-          "   The man whom I like is a smart boy. → The man I like is a smart boy.",
-          "─────────────────────────────",
-          "c. RA: Omit Conj + S + V + (O)",
-          "   I will not forget the day when I met you. → I will not forget the day I met you.",
-          "   ⚠️ RA disarankan TIDAK dihilangkan karena dapat mengubah makna kalimat.",
+          "Simple Present — always, usually, often, sometimes, never, every day/week",
+          "Simple Past — yesterday, last (week/month/year), ago, in 2020, just now",
+          "Simple Future — tomorrow, next (week/month), soon, in the future, will",
+          "Present Continuous — now, at the moment, currently, still, right now, these days",
+          "Present Perfect — just, already, yet, ever, never, since, for, so far, up to now",
         ],
       },
       {
-        title: "Additional — Restrictive vs Non-Restrictive Clause",
+        title: "Simple Present",
         points: [
-          "1. RESTRICTIVE CLAUSE — TANPA koma:",
-          "   Menjelaskan noun yang dianggap penting/perlu dijelaskan.",
-          "   The professor who teaches chemistry is an excellent lecturer.",
-          "   (hanya professor yang mengajar kimia — bukan semua professor)",
+          "Rumus Active: S + V1  |  Passive: S + is/am/are + V3  |  Non-Verbal: S + is/am/are + ANA",
           "─────────────────────────────",
-          "2. NON-RESTRICTIVE CLAUSE — DENGAN koma:",
-          "   Menjelaskan noun sebagai informasi tambahan.",
-          "   Professor Wilson, who teaches chemistry, is an excellent lecturer.",
-          "   (informasi tambahan — Wilson sudah dikenal)",
+          "(+) Active",
+          "{{annotation:She|S}} {{annotation:drinks|Vord}} coffee every morning.",
+          "(+) Passive",
+          "{{annotation:The report|S}} {{annotation:is checked|Vaux+Vord}} every Monday.",
+          "(+) Non-Verbal",
+          "{{annotation:He|S}} {{annotation:is|Vaux}} {{annotation:smart|ANA}}.",
+        ],
+      },
+      {
+        title: "Simple Past",
+        points: [
+          "Rumus Active: S + V2  |  Passive: S + was/were + V3  |  Non-Verbal: S + was/were + ANA",
           "─────────────────────────────",
-          "The children who play football wear red t-shirt. (= SOME children)",
-          "The children, who play football, wear red t-shirt. (= ALL children)",
+          "(+) Active",
+          "{{annotation:He|S}} {{annotation:bought|Vord}} a pair of shoes last week.",
+          "(+) Passive",
+          "{{annotation:The letter|S}} {{annotation:was sent|Vaux+Vord}} by her yesterday.",
+          "(+) Non-Verbal",
+          "{{annotation:They|S}} {{annotation:were|Vaux}} {{annotation:proud|ANA}} of their result.",
+        ],
+      },
+      {
+        title: "Simple Future",
+        points: [
+          "Rumus Active: S + will + V1  |  Passive: S + will + be + V3  |  Non-Verbal: S + will + be + ANA",
           "─────────────────────────────",
-          "APPOSITIVE — Non-Restrictive yang disederhanakan:",
-          "   Paris, which is the capital of France, is an exciting city.",
-          "   → Paris, THE CAPITAL OF FRANCE, is an exciting city.",
+          "(+) Active",
+          "{{annotation:I|S}} {{annotation:will finish|Vaux+Vord}} the project tomorrow.",
+          "(+) Passive",
+          "{{annotation:The building|S}} {{annotation:will be constructed|Vaux+Vord}} next year.",
+          "(+) Non-Verbal",
+          "{{annotation:She|S}} {{annotation:will be|Vaux}} {{annotation:ready|ANA}} soon.",
+        ],
+      },
+      {
+        title: "Present Continuous",
+        points: [
+          "Rumus Active: S + is/am/are + Ving  |  Passive: S + is/am/are + being + V3  |  Non-Verbal: S + is/am/are + being + ANA",
           "─────────────────────────────",
-          'REDUCING for "the first / the second / the only" → To Infinitive:',
-          "   She was the only one who survived. → She was the only one TO SURVIVE.",
-          "   The first man who is killed... → The first man TO BE KILLED...",
+          "(+) Active",
+          "{{annotation:She|S}} {{annotation:is sleeping|Vaux+Vord}} right now.",
+          "(+) Passive",
+          "{{annotation:The problem|S}} {{annotation:is being solved|Vaux+Vord}} by Nina.",
+          "(+) Non-Verbal",
+          "{{annotation:You|S}} {{annotation:are being|Vaux}} {{annotation:brave|ANA}}.",
+        ],
+      },
+      {
+        title: "Present Perfect",
+        points: [
+          "Rumus Active: S + have/has + V3  |  Passive: S + have/has + been + V3  |  Non-Verbal: S + have/has + been + ANA",
+          "─────────────────────────────",
+          "(+) Active",
+          "{{annotation:I|S}} {{annotation:have done|Vaux+Vord}} my homework.",
+          "(+) Passive",
+          "{{annotation:The target|S}} {{annotation:has been achieved|Vaux+Vord}} by my team.",
+          "(+) Non-Verbal",
+          "{{annotation:She|S}} {{annotation:has been|Vaux}} {{annotation:tired|ANA}} all day.",
         ],
       },
     ],
     exercises: [
       {
-        id: "int-gr9-q1",
+        id: "int-gr9-r1",
         type: "multiple-choice",
-        question:
-          'Reduce: "The book which was written by Tolkien is famous." → Which is correct?',
-        options: [
-          "The book writing by Tolkien is famous.",
-          "The book written by Tolkien is famous.",
-          "The book having written by Tolkien is famous.",
-          "The book being written by Tolkien is famous.",
-        ],
-        correctAnswer: "The book written by Tolkien is famous.",
-        reason:
-          'RPS Verbal Passive (Simple Past): Conj + be + V3 → V3. "which was written" → "written". Hasilnya: "The book written by Tolkien..."',
+        question: "The report usually ___ by the manager before noon.",
+        options: ["checks", "is checked", "was checked", "has checked"],
+        correctAnswer: "is checked",
+        reason: "Simple Present Passive: S + is/am/are + V3. 'usually' = time signal Simple Present.",
       },
       {
-        id: "int-gr9-q2",
+        id: "int-gr9-r2",
         type: "multiple-choice",
-        question: "Which sentence uses a NON-RESTRICTIVE clause correctly?",
-        options: [
-          "The students who passed the exam were rewarded.",
-          "My mother, who is a doctor, works at the hospital.",
-          "The car that I bought was expensive.",
-          "The man who called you is waiting outside.",
-        ],
-        correctAnswer: "My mother, who is a doctor, works at the hospital.",
-        reason:
-          'Non-Restrictive clause menggunakan KOMA di kedua sisi. "My mother, who is a doctor," — informasi tambahan tentang ibu yang sudah dikenal.',
+        question: "Right now, the students ___ a debate about climate change.",
+        options: ["have", "are having", "had", "will have"],
+        correctAnswer: "are having",
+        reason: "Present Continuous Active: S + is/am/are + Ving. 'right now' = time signal.",
       },
       {
-        id: "int-gr9-q3",
-        type: "task",
-        question:
-          'Lakukan reducing atau omitting pada kalimat berikut dan jelaskan caranya: (1) "The girl who is singing on the stage is my friend." (2) "The report which was submitted by him was excellent." (3) "She was the first person who discovered this formula." (4) "I remember the moment when we first met."',
+        id: "int-gr9-r3",
+        type: "multiple-choice",
+        question: "She ___ very confident during yesterday's presentation.",
+        options: ["is", "was", "has been", "will be"],
+        correctAnswer: "was",
+        reason: "Simple Past Non Verbal: S + was/were + ANA. 'yesterday' = time signal Simple Past.",
+      },
+      {
+        id: "int-gr9-r4",
+        type: "multiple-choice",
+        question: "The new policy ___ next month to improve efficiency.",
+        options: ["implements", "implemented", "will be implemented", "is implementing"],
+        correctAnswer: "will be implemented",
+        reason: "Simple Future Passive: S + will + be + V3. 'next month' = time signal Future.",
+      },
+      {
+        id: "int-gr9-r5",
+        type: "multiple-choice",
+        question: "I ___ lived here for three years and I love this city.",
+        options: ["am", "was", "have", "will"],
+        correctAnswer: "have",
+        reason: "Present Perfect Active: S + have/has + V3. 'for three years' = time signal Present Perfect.",
+      },
+      {
+        id: "int-gr9-r6",
+        type: "multiple-choice",
+        question: "The documents ___ currently ___ by the legal team.",
+        options: ["is / being reviewed", "are / being reviewed", "were / reviewed", "was / reviewing"],
+        correctAnswer: "are / being reviewed",
+        reason: "Present Continuous Passive: S + is/am/are + being + V3. 'currently' = signal. 'documents' = plural → are.",
+      },
+      {
+        id: "int-gr9-r7",
+        type: "multiple-choice",
+        question: "Water ___ at 100 degrees Celsius.",
+        options: ["boiled", "is boiling", "boils", "has boiled"],
+        correctAnswer: "boils",
+        reason: "Fakta ilmiah/kebenaran umum → Simple Present. 'Water' singular → boils.",
+      },
+      {
+        id: "int-gr9-r8",
+        type: "multiple-choice",
+        question: "___ you ever ___ sushi before?",
+        options: ["Have / eaten", "Did / eat", "Do / eat", "Are / eating"],
+        correctAnswer: "Have / eaten",
+        reason: "Present Perfect pengalaman dengan 'ever': Have/Has + S + V3? 'you' → Have. eat → eaten.",
+      },
+      {
+        id: "int-gr9-r9",
+        type: "multiple-choice",
+        question: "The letter ___ by her to the principal last Monday.",
+        options: ["is sent", "was sent", "has been sent", "will be sent"],
+        correctAnswer: "was sent",
+        reason: "Simple Past Passive: S + was/were + V3. 'last Monday' = time signal Simple Past.",
+      },
+      {
+        id: "int-gr9-r10",
+        type: "multiple-choice",
+        question: "She ___ already ___ the assignment before the deadline.",
+        options: ["has / submitted", "have / submitted", "did / submit", "is / submitting"],
+        correctAnswer: "has / submitted",
+        reason: "Present Perfect Active dengan 'already': S + have/has + V3. 'she' → has.",
+      },
+      {
+        id: "int-gr9-r11",
+        type: "multiple-choice",
+        question: "Look! The children ___ in the rain without umbrellas.",
+        options: ["played", "play", "are playing", "have played"],
+        correctAnswer: "are playing",
+        reason: "'Look!' = sinyal Present Continuous. The children are playing right now.",
+      },
+      {
+        id: "int-gr9-r12",
+        type: "multiple-choice",
+        question: "The project ___ by the team next week.",
+        options: ["is completed", "was completed", "will be completed", "has been completed"],
+        correctAnswer: "will be completed",
+        reason: "Simple Future Passive: S + will + be + V3. 'next week' = time signal Future.",
+      },
+      {
+        id: "int-gr9-r13",
+        type: "multiple-choice",
+        question: "She ___ tired all day because of the long meeting.",
+        options: ["has been", "is been", "was been", "have been"],
+        correctAnswer: "has been",
+        reason: "Present Perfect Non Verbal: S + have/has + been + ANA. 'all day' (belum selesai) → Present Perfect. 'she' → has.",
+      },
+      {
+        id: "int-gr9-r14",
+        type: "multiple-choice",
+        question: "Choose the CORRECT sentence:",
+        options: [
+          "I have seen that movie yesterday.",
+          "I saw that movie yesterday.",
+          "I am seeing that movie yesterday.",
+          "I see that movie yesterday.",
+        ],
+        correctAnswer: "I saw that movie yesterday.",
+        reason: "'yesterday' = waktu spesifik → Simple Past (saw). Present Perfect tidak digunakan dengan waktu spesifik.",
+      },
+      {
+        id: "int-gr9-r15",
+        type: "multiple-choice",
+        question: "The government ___ a new regulation on pollution last year.",
+        options: ["introduces", "is introducing", "introduced", "has introduced"],
+        correctAnswer: "introduced",
+        reason: "Simple Past Active: S + V2. 'last year' = time signal Simple Past. introduce → introduced.",
       },
     ],
   },

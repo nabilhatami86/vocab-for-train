@@ -11,6 +11,8 @@ export type TenseExample = {
   sentence: string;
   translation: string;
   note?: string;
+  /** Show alternate contracted/uncontracted form below the sentence */
+  altForm?: string;
 };
 
 export type TenseFormula = {
@@ -484,88 +486,191 @@ const presentPerfectTopic: TenseTopic = {
   id: 'present-perfect',
   title: 'Present Perfect Tense',
   icon: BadgeCheck,
-  shortDefinition: 'Menyatakan aksi yang sudah selesai tetapi masih relevan dengan kondisi saat ini, atau pengalaman hidup.',
+  shortDefinition: 'Menyatakan aksi di masa lalu yang masih relevan sekarang. Ada 3 bentuk: Verbal Active, Verbal Passive (be + V3), dan Non Verbal (be + ANA).',
   formula: {
-    positive: 'S + have/has + V3 + O',
-    negative: 'S + have/has + not + V3 + O',
-    question: 'Have/Has + S + V3 + O?',
+    positive: 'S + have/has + V3  |  S + have/has + been + V3  |  S + have/has + been + ANA',
+    negative: 'S + have/has + not + V3  |  S + have/has + not + been + V3  |  S + have/has + not + been + ANA',
+    question: 'Have/Has + S + V3?  |  Have/Has + S + been + V3?  |  Have/Has + S + been + ANA?',
   },
   usage: [
-    { title: 'Pengalaman hidup (tanpa waktu spesifik)', example: 'I have visited Japan.' },
-    { title: 'Aksi yang baru saja selesai', example: 'She has just finished her homework.' },
-    { title: 'Hasil yang masih relevan sekarang', example: 'He has broken his leg. (jadi masih sakit sekarang)' },
-    { title: 'Periode waktu yang belum selesai', example: 'I haven\'t eaten today.' },
-    { title: 'Perubahan seiring waktu', example: 'Technology has changed a lot over the years.' },
+    {
+      title: '1) Menyatakan pengalaman',
+      example: '{{annotation:I|S}} {{annotation:have already finished|Vaux+Vord}} my study program.',
+    },
+    {
+      title: '2) Aksi yang baru selesai',
+      example: '{{annotation:We|S}} {{annotation:have just finished|Vaux+Vord}} speaking class.',
+    },
+    {
+      title: '3) Aksi di masa lampau yang masih berlangsung',
+      example: '{{annotation:I|S}} {{annotation:have lived|Vaux+Vord}} here {{annotation:for|signal}} 3 months.',
+    },
+    {
+      title: '4) Mempengaruhi kondisi saat ini',
+      example: "I'm sad because {{annotation:I|S}} {{annotation:have lost|Vaux+Vord}} my wallet.",
+    },
+    {
+      title: "5) Aksi berulang (bukan habit)",
+      example: "{{annotation:I|S}} {{annotation:have watched|Vaux+Vord}} 'Insidious' movie many times.",
+    },
+    {
+      title: '6) Perubahan di masa lalu & sekarang',
+      example: '{{annotation:Your English skills|S}} {{annotation:have improved|Vaux+Vord}}.',
+    },
   ],
   examples: [
-    { sentence: 'I have never eaten sushi.', translation: 'Saya tidak pernah makan sushi.', note: 'Pengalaman hidup' },
-    { sentence: 'She has just arrived.', translation: 'Dia baru saja tiba.', note: '"just" = baru saja' },
-    { sentence: 'Have you ever been to Europe?', translation: 'Pernahkah kamu ke Eropa?' },
-    { sentence: 'They have lived here for 10 years.', translation: 'Mereka sudah tinggal di sini selama 10 tahun.', note: '"for" = durasi' },
-    { sentence: 'I haven\'t seen him since Monday.', translation: 'Saya tidak melihatnya sejak Senin.', note: '"since" = sejak kapan' },
-    { sentence: 'She has already submitted the form.', translation: 'Dia sudah menyerahkan formulirnya.', note: '"already" = sudah' },
+    // ── Verbal Active ────────────────────────────────────────────
+    {
+      sentence: '{{annotation:I|S}} {{annotation:have|Vaux}} {{annotation:done|Vord}} my homework.',
+      translation: 'Saya sudah mengerjakan PR saya.',
+      note: 'Verbal Active (+)',
+    },
+    {
+      sentence: '{{annotation:I|S}} {{annotation:have|Vaux}} {{annotation:justified|Vord}} her statement.',
+      translation: 'Saya telah membenarkan pernyataannya.',
+      note: 'Verbal Active (+)',
+    },
+    {
+      sentence: '{{annotation:He|S}} {{annotation:has not|Vaux}} {{annotation:tackled|Vord}} with his striker.',
+      translation: 'Dia belum bertakling dengan strikernya.',
+      note: 'Verbal Active (−)',
+      altForm: "He hasn't tackled with his striker.",
+    },
+    {
+      sentence: "{{annotation:I|S}} {{annotation:have not|Vaux}} {{annotation:discovered|Vord}} the problem.",
+      translation: 'Saya belum menemukan masalahnya.',
+      note: "Verbal Active (−)  |  I've not = I have not",
+      altForm: "I haven't discovered the problem.",
+    },
+    {
+      sentence: '{{annotation:Have|Vaux}} {{annotation:the products of quality|S}} {{annotation:declined|Vord}}?',
+      translation: 'Apakah kualitas produk telah menurun?',
+      note: 'Verbal Active (?)',
+    },
+    {
+      sentence: '{{annotation:Has|Vaux}} {{annotation:she|S}} {{annotation:maintained|Vord}} this car?',
+      translation: 'Apakah dia sudah merawat mobil ini?',
+      note: 'Verbal Active (?)',
+    },
+    // ── Verbal Passive ───────────────────────────────────────────
+    {
+      sentence: '{{annotation:The class|S}} {{annotation:has been|Vaux}} {{annotation:started|Vord}} at 9 p.m.',
+      translation: 'Kelas telah dimulai pukul 9 malam.',
+      note: 'Verbal Passive (+)',
+    },
+    {
+      sentence: '{{annotation:The target|S}} {{annotation:has been|Vaux}} {{annotation:achieved|Vord}} by my team.',
+      translation: 'Target telah dicapai oleh tim saya.',
+      note: 'Verbal Passive (+)',
+    },
+    {
+      sentence: '{{annotation:The food|S}} {{annotation:has not been|Vaux}} {{annotation:cooked|Vord}} by my mom.',
+      translation: 'Makanan belum dimasak oleh ibu saya.',
+      note: 'Verbal Passive (−)',
+      altForm: "The food hasn't been cooked by my mom.",
+    },
+    {
+      sentence: '{{annotation:The flood|S}} {{annotation:has not been|Vaux}} {{annotation:led|Vord}} to by global warming.',
+      translation: 'Banjir itu belum disebabkan oleh pemanasan global.',
+      note: 'Verbal Passive (−)',
+      altForm: "The flood hasn't been led to by global warming.",
+    },
+    // ── Non Verbal ───────────────────────────────────────────────
+    {
+      sentence: '{{annotation:I|S}} {{annotation:have been|Vaux}} {{annotation:tired|ANA}} all day.',
+      translation: 'Saya sudah merasa lelah sepanjang hari.',
+      note: 'Non Verbal (+)',
+    },
+    {
+      sentence: '{{annotation:She|S}} {{annotation:has been|Vaux}} {{annotation:stronger|ANA}} after GYM.',
+      translation: 'Dia menjadi lebih kuat setelah gym.',
+      note: 'Non Verbal (+)',
+    },
+    {
+      sentence: '{{annotation:We|S}} {{annotation:have not been|Vaux}} {{annotation:happy|ANA}} since I live in Pare.',
+      translation: 'Kami tidak bahagia sejak tinggal di Pare.',
+      note: 'Non Verbal (−)',
+      altForm: "We haven't been happy since I live in Pare.",
+    },
+    {
+      sentence: "{{annotation:My life|S}} {{annotation:hasn't been|Vaux}} {{annotation:perfect|ANA}} by my imagination.",
+      translation: 'Hidupku belum sempurna sesuai imajinasi.',
+      note: 'Non Verbal (−)',
+      altForm: 'My life has not been perfect by my imagination.',
+    },
+    {
+      sentence: '{{annotation:Has|Vaux}} {{annotation:he|S}} been {{annotation:busy|ANA}} lately?',
+      translation: 'Apakah dia sibuk belakangan ini?',
+      note: 'Non Verbal (?)',
+    },
+    {
+      sentence: '{{annotation:Has|Vaux}} {{annotation:he|S}} been {{annotation:a student|ANA}} for his life?',
+      translation: 'Apakah dia sudah menjadi pelajar seumur hidupnya?',
+      note: 'Non Verbal (?)',
+    },
   ],
-  signalWords: ['just', 'already', 'yet', 'ever', 'never', 'recently', 'lately', 'for', 'since', 'so far', 'up to now'],
+  signalWords: ['just', 'already', 'yet', 'ever', 'never', 'since (+ waktu mulai)', 'for (+ durasi)', 'so far', 'up to now', 'lately', 'recently'],
   wrongRight: [
     { wrong: 'I have went there.', right: 'I have gone there.', note: 'go → gone (V3, bukan "went")' },
     { wrong: 'She has see that film.', right: 'She has seen that film.', note: 'see → seen (V3)' },
-    { wrong: 'Have you been there yesterday?', right: 'Did you go there yesterday?', note: 'Waktu spesifik (yesterday) → gunakan Simple Past, bukan Present Perfect' },
-    { wrong: 'He has finished it last night.', right: 'He finished it last night.', note: '"last night" = waktu spesifik → Simple Past' },
+    { wrong: 'Have you been there yesterday?', right: 'Did you go there yesterday?', note: 'Waktu spesifik (yesterday) → Simple Past, bukan Present Perfect' },
+    { wrong: 'The food has not cook by mom.', right: 'The food has not been cooked by mom.', note: 'Verbal Passive → have/has + been + V3' },
+    { wrong: 'She has been tire all day.', right: 'She has been tired all day.', note: 'Non Verbal → have/has + been + ANA (adjective/adverb)' },
   ],
   exercises: [
     {
-      question: 'I ___ never ___ (eat) sushi before.',
-      options: ['have / eaten', 'has / eaten', 'have / ate', 'did / eat'],
-      answer: 'have / eaten',
-      explanation: '"Never" + pengalaman = Present Perfect. I → have. eat → eaten (V3).',
+      question: 'She ___ her homework yet.',
+      options: ["hasn't finished", 'didn\'t finish', 'doesn\'t finish', 'isn\'t finishing'],
+      answer: "hasn't finished",
+      explanation: 'Present Perfect negatif dengan "yet" → S + have/has + not + V3.',
     },
     {
-      question: 'She ___ just ___ (arrive) at the airport.',
-      options: ['has / arrived', 'have / arrived', 'is / arriving', 'did / arrive'],
-      answer: 'has / arrived',
-      explanation: '"Just" = signal word Present Perfect. She → has. arrive → arrived (V3).',
+      question: 'I ___ to Japan before. It was amazing.',
+      options: ['have been', 'was', 'am', 'had been'],
+      answer: 'have been',
+      explanation: 'Pengalaman hidup → Present Perfect. "have been to" = pernah pergi ke.',
     },
     {
-      question: '___ you ever ___ (be) to New York?',
-      options: ['Have / been', 'Has / been', 'Did / be', 'Do / been'],
-      answer: 'Have / been',
-      explanation: 'Pengalaman hidup + "ever" = Present Perfect. You → Have. be → been (V3).',
+      question: 'The report ___ by the manager since this morning.',
+      options: ['has been written', 'was written', 'is written', 'has written'],
+      answer: 'has been written',
+      explanation: 'Verbal Passive Present Perfect: S + have/has + been + V3. "since" = time signal.',
     },
     {
-      question: 'They ___ (live) here for five years.',
-      options: ['live', 'lives', 'have lived', 'has lived'],
-      answer: 'have lived',
-      explanation: '"For" + durasi yang terus berlangsung = Present Perfect. They → have lived.',
+      question: '___ you ever eaten durian?',
+      options: ['Have', 'Has', 'Did', 'Do'],
+      answer: 'Have',
+      explanation: 'Present Perfect tanya dengan "ever": Have/Has + S + V3? Subject "you" → Have.',
     },
     {
-      question: 'I ___ (not / see) him since Monday.',
-      options: ['haven\'t seen', 'hasn\'t seen', 'didn\'t see', 'don\'t see'],
-      answer: 'haven\'t seen',
-      explanation: '"Since" = signal word Present Perfect. I → haven\'t (have not). see → seen (V3).',
+      question: 'She ___ tired all day because of the long meeting.',
+      options: ['has been', 'is been', 'was been', 'have been'],
+      answer: 'has been',
+      explanation: 'Non Verbal (be + ANA): S + have/has + been + ANA. Subject "she" → has.',
     },
     {
-      question: 'She ___ already ___ (submit) the assignment.',
-      options: ['has / submitted', 'have / submitted', 'did / submit', 'is / submitting'],
-      answer: 'has / submitted',
-      explanation: '"Already" = signal word Present Perfect. She → has. submit → submitted (V3).',
+      question: 'The target ___ by my team this week.',
+      options: ['has been achieved', 'was achieved', 'is achieved', 'have achieved'],
+      answer: 'has been achieved',
+      explanation: 'Verbal Passive Present Perfect: S + have/has + been + V3.',
     },
     {
-      question: 'Have you ___ (finish) your homework yet?',
-      options: ['finish', 'finished', 'finishing', 'finishes'],
-      answer: 'finished',
-      explanation: 'Setelah have/has → V3 (Past Participle). "Yet" = signal word Present Perfect.',
+      question: 'We ___ just ___ speaking class.',
+      options: ['have / finished', 'has / finished', 'did / finish', 'are / finishing'],
+      answer: 'have / finished',
+      explanation: '"Just" = time signal Present Perfect. We → have. finish → finished (V3).',
     },
     {
-      question: 'He ___ (break) his leg, so he can\'t play.',
-      options: ['break', 'broke', 'has broken', 'have broken'],
-      answer: 'has broken',
-      explanation: 'Hasil yang masih relevan sekarang → Present Perfect. He → has. break → broken (V3).',
+      question: 'I ___ lived here for 3 months.',
+      options: ['have', 'has', 'did', 'am'],
+      answer: 'have',
+      explanation: '"For" + durasi yang masih berlangsung → Present Perfect. I → have.',
     },
     {
-      question: 'We ___ (not / eat) anything today.',
-      options: ['haven\'t eaten', 'hasn\'t eaten', 'didn\'t eat', 'don\'t eat'],
-      answer: 'haven\'t eaten',
-      explanation: '"Today" (periode belum selesai) = Present Perfect. We → haven\'t. eat → eaten (V3).',
+      question: 'He ___ not been happy since he moved here.',
+      options: ['has', 'have', 'did', 'is'],
+      answer: 'has',
+      explanation: 'Non Verbal negatif: S + have/has + not + been + ANA. Subject "he" → has.',
     },
     {
       question: 'Choose the CORRECT sentence:',
@@ -576,7 +681,7 @@ const presentPerfectTopic: TenseTopic = {
         'I have see that movie.',
       ],
       answer: 'I saw that movie yesterday.',
-      explanation: '"Yesterday" = waktu spesifik → gunakan Simple Past (saw). Present Perfect tidak digunakan dengan waktu spesifik.',
+      explanation: '"Yesterday" = waktu spesifik → Simple Past (saw). Present Perfect tidak dipakai dengan waktu spesifik.',
     },
   ],
 };

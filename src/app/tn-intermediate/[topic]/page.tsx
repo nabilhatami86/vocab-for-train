@@ -1,9 +1,11 @@
+import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ArrowLeft, CheckCircle, XCircle, Lightbulb, Table2 } from 'lucide-react';
 import { allGrammarTopics, type TenseTopic, type GrammarTopic, type WrongRight } from '@/data/tnIntermediateGrammar';
 import ExerciseSection from '@/components/grammar/ExerciseSection';
+import AnnotatedText from '@/components/grammar/AnnotatedText';
 
 type Props = { params: Promise<{ topic: string }> };
 
@@ -82,79 +84,91 @@ function DataTable({ headers, rows, caption }: { headers: string[]; rows: string
 
 // ─── Tense Detail ─────────────────────────────────────────────────────────────
 
+function GrammarCard({ title, children }: { title: string; children: React.ReactNode }) {
+  return (
+    <div className="bg-(--bg-card) border border-(--border) rounded-xl overflow-hidden">
+      <div className="px-5 py-3 bg-primary/5 border-b border-(--border)">
+        <h3 className="font-semibold text-(--text)">{title}</h3>
+      </div>
+      <div className="p-5 space-y-1.5">{children}</div>
+    </div>
+  );
+}
+
+function BulletRow({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="flex items-start gap-2 py-0.5">
+      <span className="text-primary mt-1.5 shrink-0 text-xs">●</span>
+      <div className="flex-1">{children}</div>
+    </div>
+  );
+}
+
 function TenseDetail({ tense }: { tense: TenseTopic }) {
   return (
-    <div className="space-y-6">
+    <div className="space-y-5">
       {/* Formula */}
-      <section className="bg-(--bg-card) border border-(--border) rounded-xl p-5 space-y-3">
-        <h2 className="text-sm font-bold text-(--text) uppercase tracking-wider">Rumus</h2>
-        <div className="space-y-2">
-          {(
-            [
-              { label: '(+)', value: tense.formula.positive, color: 'text-green-600 bg-green-50 dark:bg-green-950/30 border-green-200/60' },
-              { label: '(−)', value: tense.formula.negative, color: 'text-red-600   bg-red-50   dark:bg-red-950/30   border-red-200/60' },
-              { label: '(?)', value: tense.formula.question, color: 'text-blue-600  bg-blue-50  dark:bg-blue-950/30  border-blue-200/60' },
-            ] as const
-          ).map(({ label, value, color }) => (
-            <div key={label} className={`flex items-center gap-3 rounded-lg border px-4 py-2.5 ${color}`}>
-              <span className="font-bold text-sm w-6 shrink-0">{label}</span>
-              <code className="text-sm font-mono">{value}</code>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Usage */}
-      <section className="space-y-3">
-        <h2 className="text-sm font-bold text-(--text) uppercase tracking-wider flex items-center gap-2">
-          <Lightbulb className="w-4 h-4 text-yellow-500" /> Kapan Dipakai?
-        </h2>
-        <div className="space-y-2">
-          {tense.usage.map((u, i) => (
-            <div key={i} className="bg-(--bg-card) border border-(--border) rounded-xl px-4 py-3">
-              <p className="text-sm font-semibold text-(--text)">{u.title}</p>
-              <p className="text-xs text-primary font-mono mt-1">{u.example}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+      <GrammarCard title="Rumus">
+        {(
+          [
+            { label: '(+)', value: tense.formula.positive, color: 'text-green-600 bg-green-50 dark:bg-green-950/30 border-green-200/60' },
+            { label: '(−)', value: tense.formula.negative, color: 'text-red-600 bg-red-50 dark:bg-red-950/30 border-red-200/60' },
+            { label: '(?)', value: tense.formula.question, color: 'text-blue-600 bg-blue-50 dark:bg-blue-950/30 border-blue-200/60' },
+          ] as const
+        ).map(({ label, value, color }) => (
+          <div key={label} className={`flex items-start gap-3 rounded-lg border px-4 py-2.5 ${color}`}>
+            <span className="font-bold text-sm w-6 shrink-0 mt-0.5">{label}</span>
+            <code className="text-sm font-mono break-all">{value}</code>
+          </div>
+        ))}
+      </GrammarCard>
 
       {/* Signal Words */}
-      <section className="space-y-2">
-        <h2 className="text-sm font-bold text-(--text) uppercase tracking-wider">Kata Kunci (Signal Words)</h2>
-        <div className="flex flex-wrap gap-2">
+      <GrammarCard title="Time Signal">
+        <div className="flex flex-wrap gap-2 pt-1">
           {tense.signalWords.map((w) => (
-            <span key={w} className="text-xs font-mono px-2.5 py-1 rounded-lg bg-(--bg-secondary) border border-(--border) text-(--text-secondary)">
+            <span key={w} className="text-xs font-mono px-2.5 py-1 rounded-lg bg-(--bg-secondary) border border-(--border) text-primary font-semibold">
               {w}
             </span>
           ))}
         </div>
-      </section>
+      </GrammarCard>
+
+      {/* Usage / Fungsi */}
+      <GrammarCard title="Fungsi">
+        {tense.usage.map((u, i) => (
+          <BulletRow key={i}>
+            <p className="text-sm font-semibold text-(--text)">{u.title}</p>
+            <AnnotatedText text={u.example} className="text-xs text-primary font-mono mt-0.5 flex flex-wrap items-end gap-x-1 gap-y-1" />
+          </BulletRow>
+        ))}
+      </GrammarCard>
 
       {/* Examples */}
-      <section className="space-y-3">
-        <h2 className="text-sm font-bold text-(--text) uppercase tracking-wider">Contoh Kalimat</h2>
-        <div className="space-y-3">
-          {tense.examples.map((ex, i) => (
-            <div key={i} className="bg-(--bg-card) border border-(--border) rounded-xl px-4 py-3 space-y-1">
-              <p className="text-base font-semibold text-(--text)">{ex.sentence}</p>
-              <p className="text-sm text-(--text-secondary)">{ex.translation}</p>
-              {ex.note && (
-                <p className="text-xs text-primary/80 bg-primary/5 rounded-md px-2 py-1 mt-1 inline-block">
-                  💡 {ex.note}
-                </p>
+      <GrammarCard title="Contoh Kalimat">
+        {tense.examples.map((ex, i) => (
+          <div key={i} className="py-1.5 border-b border-(--border)/50 last:border-0">
+            <BulletRow>
+              <AnnotatedText text={ex.sentence} className="text-sm font-semibold text-(--text) flex flex-wrap items-end gap-x-1 gap-y-1" />
+              {ex.altForm && (
+                <p className="text-xs font-mono text-(--text-muted) italic mt-0.5">= {ex.altForm}</p>
               )}
-            </div>
-          ))}
-        </div>
-      </section>
+              <p className="text-xs text-(--text-secondary) mt-0.5">{ex.translation}</p>
+              {ex.note && (
+                <span className="text-[10px] text-primary/80 bg-primary/5 rounded-md px-2 py-0.5 mt-0.5 inline-block">
+                  💡 {ex.note}
+                </span>
+              )}
+            </BulletRow>
+          </div>
+        ))}
+      </GrammarCard>
 
       {/* Wrong vs Right */}
       {tense.wrongRight.length > 0 && (
-        <section className="space-y-3">
-          <h2 className="text-sm font-bold text-(--text) uppercase tracking-wider">Kesalahan Umum</h2>
+        <GrammarCard title="Kesalahan Umum">
           <WrongRightList items={tense.wrongRight} />
-        </section>
+        </GrammarCard>
       )}
     </div>
   );
@@ -198,11 +212,14 @@ function GrammarDetail({ topic }: { topic: GrammarTopic }) {
           {sec.examples && sec.examples.length > 0 && (
             <div className="space-y-2">
               {sec.examples.map((ex, ei) => (
-                <div key={ei} className="bg-(--bg-card) border border-(--border) rounded-xl px-4 py-3 space-y-1">
-                  <p className="text-sm font-semibold text-(--text)">{ex.sentence}</p>
+                <div key={ei} className="bg-(--bg-card) border border-(--border) rounded-xl px-4 py-3 space-y-1.5">
+                  <AnnotatedText text={ex.sentence} className="text-sm font-semibold text-(--text)" />
+                  {ex.altForm && (
+                    <p className="text-xs font-mono text-(--text-muted) italic">= {ex.altForm}</p>
+                  )}
                   <p className="text-xs text-(--text-secondary)">{ex.translation}</p>
                   {ex.note && (
-                    <p className="text-xs text-primary/80 bg-primary/5 rounded-md px-2 py-1 mt-1 inline-block">
+                    <p className="text-xs text-primary/80 bg-primary/5 rounded-md px-2 py-1 mt-0.5 inline-block">
                       💡 {ex.note}
                     </p>
                   )}

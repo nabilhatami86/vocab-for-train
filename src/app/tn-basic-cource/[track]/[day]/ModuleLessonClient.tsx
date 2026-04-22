@@ -2158,6 +2158,34 @@ export default function ModuleLessonClient({ lesson, backHref = '/tn-basic-courc
           );
         }
 
+        // Part A / Part B — when only final + middle exist (no regular exercises)
+        if (regularExercises.length === 0 && finalExercises.length > 0 && middleExercises.length > 0) {
+          return (
+            <div className="space-y-8">
+              <section className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <div className="h-px flex-1 bg-(--border)" />
+                  <h2 className="text-sm font-semibold text-(--text-secondary) uppercase tracking-wider whitespace-nowrap px-2">
+                    Part A
+                  </h2>
+                  <div className="h-px flex-1 bg-(--border)" />
+                </div>
+                {renderExerciseList(finalExercises, 1)}
+              </section>
+              <section className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <div className="h-px flex-1 bg-primary/30" />
+                  <h2 className="text-sm font-semibold text-primary uppercase tracking-wider whitespace-nowrap px-2">
+                    Part B
+                  </h2>
+                  <div className="h-px flex-1 bg-primary/30" />
+                </div>
+                {renderExerciseList(middleExercises, 1)}
+              </section>
+            </div>
+          );
+        }
+
         return (
           <div className="space-y-8">
             {/* Set 1 = finalExercises (section:'final') — tampil pertama di 3-grup */}
