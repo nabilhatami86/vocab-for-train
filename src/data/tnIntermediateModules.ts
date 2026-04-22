@@ -4609,6 +4609,600 @@ const listeningLessons: ModuleLesson[] = [
       } satisfies ListeningAudio,
     ],
   },
+
+  // ── Day 6: TOEFL Dialogues — Topics & Details ────────────────────────────────
+  {
+    id: "int-listening-6",
+    track: "listening",
+    day: 6,
+    tutor: "Mr. Fajri",
+    title: "TOEFL Listening — Dialogues (Topics & Details)",
+    subtitle: "Audio T-1: Dialogues – Topics · Audio T-2: Dialogues – Details",
+    overview:
+      "Latihan TOEFL listening: Audio T-1 mengidentifikasi topik utama percakapan dari beberapa subjek sekunder, Audio T-2 mengingat detail yang disebutkan langsung dalam percakapan.",
+    materialSections: [],
+    exercises: [],
+    listeningAudios: [
+      // ── Audio T-1: Dialogues – Topics ─────────────────────────────────────────
+      {
+        title: "Audio T-1: Dialogues – Topics",
+        instruction:
+          "In some dialogues in the listening section on the Paper-Based TOEFL or the Computer-Based TOEFL, you will be asked to identify the main topic from among several secondary subjects in the conversations. Choose the best answer.",
+        type: "mcq",
+        lines: [],
+        answers: { 1: "A", 2: "C", 3: "A", 4: "B", 5: "A", 6: "A", 7: "A", 8: "C", 9: "D", 10: "D" },
+        questions: [
+          {
+            question: "What are the man and woman talking about?",
+            options: ["A. A health club", "B. A class", "C. A game", "D. A dentist"],
+            correctAnswer: "A",
+          },
+          {
+            question: "What are these two people most probably discussing?",
+            options: ["A. Food and grocery items", "B. Gasoline prices", "C. Weights and measures", "D. Money"],
+            correctAnswer: "C",
+          },
+          {
+            question: "What are the two people talking about?",
+            options: ["A. A vacation", "B. The mall", "C. The newspaper", "D. The office"],
+            correctAnswer: "A",
+          },
+          {
+            question: "What are the two people discussing?",
+            options: ["A. A new doctor", "B. A party they attended", "C. The man's work", "D. A restaurant"],
+            correctAnswer: "B",
+          },
+          {
+            question: "What are the man and the woman discussing?",
+            options: ["A. An exchange program", "B. The man's trip to England", "C. The man's illness", "D. Their friend Nancy"],
+            correctAnswer: "A",
+          },
+          {
+            question: "What are the man and the woman talking about?",
+            options: ["A. The professor's lecture", "B. The women's children", "C. The chairs they are sitting in", "D. The size of the lecture room"],
+            correctAnswer: "A",
+          },
+          {
+            question: "What are the two people discussing?",
+            options: ["A. The women's computer", "B. The man's computer", "C. The man's hometown", "D. The man's job"],
+            correctAnswer: "A",
+          },
+          {
+            question: "What are the two people talking about?",
+            options: ["A. The campus", "B. Registration week", "C. The parking situation", "D. The women's class"],
+            correctAnswer: "C",
+          },
+          {
+            question: "What are the man and women discussing?",
+            options: ["A. The professor, Dr. Smith", "B. The lab reports", "C. The attendance policy", "D. The teaching assistant"],
+            correctAnswer: "D",
+          },
+          {
+            question: "What are the man and the women talking about?",
+            options: ["A. The chemistry department", "B. The man's employer", "C. The man's house", "D. Having lunch on campus"],
+            correctAnswer: "D",
+          },
+        ],
+      } satisfies ListeningAudio,
+
+      // ── Audio T-2: Dialogues – Details ────────────────────────────────────────
+      {
+        title: "Audio T-2: Dialogues – Details",
+        instruction:
+          "In some dialogues in the listening on the Paper-Based TOEFL or the Computer-Based TOEFL, you will be asked to remember details that are directly stated. Choose the best answer.",
+        type: "mcq",
+        lines: [],
+        answers: { 1: "A", 2: "B", 3: "A", 4: "C", 5: "D", 6: "A", 7: "A", 8: "C", 9: "A", 10: "B" },
+        questions: [
+          {
+            question: "What is the man's problem?",
+            options: ["A. He is tired", "B. He is drunk", "C. He is thirsty", "D. He is busy"],
+            correctAnswer: "A",
+          },
+          {
+            question: "How does the woman want to pay?",
+            options: ["A. She wants to pay by check", "B. She prefers to use a credit card", "C. She has cash", "D. She will need a loan"],
+            correctAnswer: "B",
+          },
+          {
+            question: "Why did Sharon stop seeing the man?",
+            options: ["A. He was too short", "B. She didn't know him very well", "C. The expensive gift made her uncomfortable", "D. The man never gave her gifts"],
+            correctAnswer: "A",
+          },
+          {
+            question: "What does the woman want the man to do?",
+            options: ["A. Study with her", "B. High her on the test", "C. Take a break", "D. Lend her his notebook"],
+            correctAnswer: "C",
+          },
+          {
+            question: "What does the woman want the man to do?",
+            options: ["A. Study with her", "B. High her on the test", "C. Take a break", "D. Lend her his notebook"],
+            correctAnswer: "D",
+          },
+          {
+            question: "Who is driving Steve's car?",
+            options: ["A. Steve", "B. Steve's girlfriend", "C. Steve's sister", "D. Mary Anne"],
+            correctAnswer: "A",
+          },
+          {
+            question: "Why don't the door open?",
+            options: ["A. The door is locked", "B. The woman doesn't have the right key", "C. The dog knob is broken", "D. The door is stuck"],
+            correctAnswer: "A",
+          },
+          {
+            question: "What does the man want to do?",
+            options: ["A. Check the calculators", "B. Use a calculator to do his test", "C. Borrow a calculator", "D. Lend a calculator to do his test"],
+            correctAnswer: "C",
+          },
+          {
+            question: "What is the woman's advice?",
+            options: ["A. She thinks the man should pay the bills", "B. She thinks the man should ask his family for help", "C. She thinks the man should contact his roommate's family", "D. She thinks the man should leave"],
+            correctAnswer: "A",
+          },
+          {
+            question: "How will the woman help the man?",
+            options: ["A. By filling out forms", "B. By filing his taxes", "C. By advising him about student loans", "D. By completing his application"],
+            correctAnswer: "D",
+          },
+        ],
+      } satisfies ListeningAudio,
+    ],
+  },
+
+  // ── Day 7: TOEFL Dialogues — Selections, Reversals, Idioms, Emotions, Suggestions
+  {
+    id: "int-listening-7",
+    track: "listening",
+    day: 7,
+    tutor: "Mr. Fajri",
+    title: "TOEFL Listening — Dialogues (Selections, Reversals, Idioms, Emotions & Suggestions)",
+    subtitle: "Audio T-3 · T-4 · T-5 · T-6 · T-7",
+    overview:
+      "Latihan TOEFL listening lanjutan: mengidentifikasi pilihan pembicara, perubahan pendapat, idiom, emosi, dan saran yang disampaikan dalam percakapan.",
+    materialSections: [],
+    exercises: [],
+    listeningAudios: [
+      // ── Audio T-3: Dialogues – Selections ────────────────────────────────────
+      {
+        title: "Audio T-3: Dialogues – Selections",
+        instruction:
+          "In some dialogues in the listening Section on the Computer-Based TOEFL, you will be asked to select the correct detail from among several similar alternatives, all of which have been mentioned in different contexts in the conversation. Choose the best answer.",
+        type: "mcq",
+        lines: [],
+        answers: { 1: "B", 2: "A", 3: "C", 4: "B", 5: "A", 6: "C", 7: "A", 8: "A", 9: "C", 10: "B" },
+        questions: [
+          {
+            question: "What is the relationship between Jack and the man?",
+            options: ["A. They are brothers", "B. They are good friends", "C. They are cousins", "D. They are classmates"],
+            correctAnswer: "B",
+          },
+          {
+            question: "What does the woman suggest?",
+            options: ["A. That the man and Steve be roommates", "B. That the man ask Geoff to be his roommate", "C. That the man live with Frank and Geoff", "D. That the man share a room with Frank"],
+            correctAnswer: "A",
+          },
+          {
+            question: "What grade did the woman receive?",
+            options: ["A. She earned an A", "B. She received a B", "C. Her grade was C", "D. She got a D or F"],
+            correctAnswer: "C",
+          },
+          {
+            question: "What advice does the woman give the man?",
+            options: ["A. Buy the computer at a discount store", "B. Put an ad in the newspaper for a computer", "C. Go to a computer store to buy a computer", "D. Buy the computer at the university as part of a special offer"],
+            correctAnswer: "D",
+          },
+          {
+            question: "Why didn't the woman receive a grade for the course?",
+            options: ["A. She didn't pay her fees", "B. She didn't register for the class", "C. She didn't attend the class", "D. She didn't have her name on the roster"],
+            correctAnswer: "B",
+          },
+          {
+            question: "On what do the speakers agree?",
+            options: ["A. The sign has Mickey Mouse on it", "B. They do not believe the sign", "C. The course is very easy", "D. They did not register for the course"],
+            correctAnswer: "C",
+          },
+          {
+            question: "What size will the man probably bring her?",
+            options: ["A. He will probably bring her a size 5", "B. He will probably bring her a size 6", "C. He will probably bring her a size 7", "D. He will probably bring her a size 7½"],
+            correctAnswer: "A",
+          },
+          {
+            question: "For which class must the woman begin to prepare?",
+            options: ["A. She must begin writing a paper for her history class", "B. She must start writing up her laboratory assignments for her chemistry class", "C. She must begin studying for her English examination", "D. She must begin studying for her French examination"],
+            correctAnswer: "A",
+          },
+          {
+            question: "Where does the man live?",
+            options: ["A. In New York", "B. In Boston", "C. In Michigan", "D. In Washington"],
+            correctAnswer: "C",
+          },
+          {
+            question: "Which gear needs to be fixed?",
+            options: ["A. First gear", "B. Second gear", "C. Reverse", "D. Drive"],
+            correctAnswer: "B",
+          },
+        ],
+      } satisfies ListeningAudio,
+
+      // ── Audio T-4: Dialogues – Reversals ─────────────────────────────────────
+      {
+        title: "Audio T-4: Dialogues – Reversals",
+        instruction:
+          "In some dialogues in the listening on the Paper-Based TOEFL, you will be asked to identify the speaker's final choice or decision after a change of opinion. Choose the best answer.",
+        type: "mcq",
+        lines: [],
+        answers: { 1: "A", 2: "B", 3: "B", 4: "B", 5: "B", 6: "D", 7: "B", 8: "C", 9: "B", 10: "C" },
+        questions: [
+          {
+            question: "How will the woman get to the airport?",
+            options: ["A. She will drive her car", "B. She will ride the airport shuttle", "C. She will get a ride with the man", "D. She will rent a car"],
+            correctAnswer: "A",
+          },
+          {
+            question: "What does the woman want to eat?",
+            options: ["A. She would like eggs and potatoes", "B. She wants eggs and pancakes", "C. She wants to eat potato pancakes", "D. Pancakes are what she would like to eat"],
+            correctAnswer: "B",
+          },
+          {
+            question: "How many boxes of cookies did the man order?",
+            options: ["A. The man bought one box of cookies", "B. The man ordered four boxes of cookies", "C. He purchased five boxes of cookies this year", "D. He did not order any cookies"],
+            correctAnswer: "B",
+          },
+          {
+            question: "What is the correct area code for the woman?",
+            options: ["A. The area code is 1-9-6", "B. 9-1-6 is the area code", "C. 6-1-9 is the correct number", "D. 6-1-9 is the correct number"],
+            correctAnswer: "D",
+          },
+          {
+            question: "How much per copy will the woman pay?",
+            options: ["A. She will pay five cents per page", "B. The price is ten cents a copy", "C. She owes fifteen cents per copy", "D. Twenty cents per page is the price"],
+            correctAnswer: "B",
+          },
+          {
+            question: "How much will the woman pay?",
+            options: ["A. One dollar a minute", "B. One dollar a page", "C. Two dollars and fifty cents a minute", "D. Two dollars and fifty cents a page"],
+            correctAnswer: "D",
+          },
+          {
+            question: "What does the woman want to do?",
+            options: ["A. See a documentary", "B. Change the channel", "C. Watch the television", "D. Go to a movie"],
+            correctAnswer: "B",
+          },
+          {
+            question: "What does the man want the woman to do?",
+            options: ["A. Buy a larger wallet", "B. Keep the cards in his book bag", "C. Carry fewer cards", "D. Organize the cards"],
+            correctAnswer: "C",
+          },
+          {
+            question: "What does the woman mean?",
+            options: ["A. She is glad Joan is moving", "B. She does not believe that Joan will move", "C. She saw Joan move", "D. She believes Joan is moving because she saw her"],
+            correctAnswer: "B",
+          },
+          {
+            question: "What does the mean mean?",
+            options: ["A. He is angry with the woman", "B. He wants to talk with the woman", "C. It was a bad day for the woman", "D. He does not know what day it is"],
+            correctAnswer: "C",
+          },
+        ],
+      } satisfies ListeningAudio,
+
+      // ── Audio T-5: Dialogues – Idioms ─────────────────────────────────────────
+      {
+        title: "Audio T-5: Dialogues – Idioms",
+        instruction:
+          "In some dialogues in the listening on the Paper-Based TOEFL, you will be asked to identify the speaker's final choice or decision after a change of opinion. Words or phrases such as \"you should\", \"or why don't you\" or \"why not\" introduce a suggestion. Choose the best answer.",
+        type: "mcq",
+        lines: [],
+        answers: { 1: "A", 2: "B", 3: "A", 4: "B", 5: "A", 6: "D", 7: "D", 8: "B", 9: "B", 10: "A" },
+        questions: [
+          {
+            question: "What does the woman mean?",
+            options: ["A. She does not think that the man is serious", "B. She thinks the man is going to take her to Florida", "C. She thinks the man has a good idea", "D. She thinks the man does not have any money"],
+            correctAnswer: "A",
+          },
+          {
+            question: "What does the woman mean?",
+            options: ["A. She needs one more semester", "B. She needs a hundred dollars", "C. The increase will be difficult for her", "D. The increase will be difficult for her"],
+            correctAnswer: "C",
+          },
+          {
+            question: "What did the man do?",
+            options: ["A. He has used his last piece of paper", "B. He has left the lecture", "C. He has said good-bye to the woman", "D. He has finished giving the lecture"],
+            correctAnswer: "B",
+          },
+          {
+            question: "How does the man feel about the test?",
+            options: ["A. He agrees with the woman that the test was fair", "B. He does not agree with the woman", "C. He does not want the woman to tease him about the test", "D. He is not worried about the test"],
+            correctAnswer: "B",
+          },
+          {
+            question: "What does the woman mean?",
+            options: ["A. The man does not pay attention", "B. The man is very honest", "C. The man has gone away", "D. The man needs to repeat"],
+            correctAnswer: "A",
+          },
+          {
+            question: "On what do the speakers agree?",
+            options: ["A. The sign has Mickey Mouse on it", "B. They do not believe the sign", "C. The course is very easy", "D. They did not register for the course"],
+            correctAnswer: "C",
+          },
+          {
+            question: "On what does the woman mean?",
+            options: ["A. She does not want the man to come for her", "B. She will come for the man", "C. She thinks the man is a brother", "D. She does not want the man to come for her"],
+            correctAnswer: "A",
+          },
+          {
+            question: "What does the man mean?",
+            options: ["A. The man likes ice cream", "B. The man will tell the woman later whether he likes ice cream", "C. The man does not want to say whether he wants ice cream", "D. The man will get some ice cream for the woman"],
+            correctAnswer: "A",
+          },
+          {
+            question: "What does the woman mean?",
+            options: ["A. She is glad Joan is moving", "B. She does not believe that Joan will move", "C. She saw Joan move", "D. She believes Joan is moving because she saw her"],
+            correctAnswer: "B",
+          },
+          {
+            question: "What does the mean mean?",
+            options: ["A. He is angry with the woman", "B. He wants to talk with the woman", "C. It was a bad day for the woman", "D. He does not know what day it is"],
+            correctAnswer: "C",
+          },
+        ],
+      } satisfies ListeningAudio,
+
+      // ── Audio T-6: Dialogues – Emotions ──────────────────────────────────────
+      {
+        title: "Audio T-6: Dialogues – Emotions",
+        instruction:
+          "In some dialogues in the listening on the Paper-Based TOEFL, you will be asked to draw conclusions about the feelings or emotions expressed by the speakers. Words or phrases as well as the tone of voice of speakers in the conversation will provide information for your conclusions. Choose the best answer.",
+        type: "mcq",
+        lines: [],
+        answers: { 1: "B", 2: "A", 3: "B", 4: "A", 5: "C", 6: "A", 7: "B", 8: "A", 9: "B", 10: "A" },
+        questions: [
+          {
+            question: "How does the man feel?",
+            options: ["A. He is worried", "B. He is happy", "C. He feels confident", "D. He feels tired"],
+            correctAnswer: "B",
+          },
+          {
+            question: "How did the man feel about the movie?",
+            options: ["A. He thought it was very unrealistic", "B. He was impressed with the movie", "C. He agreed with the woman about the movie", "D. He liked the movie because it was a fairy tale"],
+            correctAnswer: "A",
+          },
+          {
+            question: "How does the woman feel about the TOEFL?",
+            options: ["A. She does not know whether she did well", "B. She thinks that she improved her score", "C. She believes that she scored about 490", "D. He is confused"],
+            correctAnswer: "B",
+          },
+          {
+            question: "How does the woman feel about the man?",
+            options: ["A. She believes that he is having a bad day", "B. She does not like the man", "C. She likes to help the man every day", "D. She likes to help the man every day"],
+            correctAnswer: "A",
+          },
+          {
+            question: "How does the man feel about Rick?",
+            options: ["A. He forgot who he was", "B. He thinks that Rick and Lucy will forget to come", "C. He likes Rick, but not Lucy", "D. He does not want to invite them"],
+            correctAnswer: "C",
+          },
+          {
+            question: "What is the man's reaction to the news?",
+            options: ["A. He is surprised", "B. He is confused", "C. He is supportive", "D. He is hostile toward Terry"],
+            correctAnswer: "A",
+          },
+          {
+            question: "How does the man feel about the assignments?",
+            options: ["A. He does not care", "B. He does not agree", "C. He does not want to know", "D. He does not agree"],
+            correctAnswer: "B",
+          },
+          {
+            question: "What best describes the man's opinion of Terry?",
+            options: ["A. He feels protective of Terry", "B. He has his doubts about Terry", "C. The man is supportive", "D. He feels hostile toward Terry"],
+            correctAnswer: "B",
+          },
+          {
+            question: "How does the man first feel about the review session?",
+            options: ["A. He wants to go, and he will", "B. He does not want to go, but he won't", "C. He wants to go, but he won't", "D. He does not want to go, and he will"],
+            correctAnswer: "A",
+          },
+          {
+            question: "What does the man feel about Janine?",
+            options: ["A. He thinks Janine would be difficult to live with", "B. He thinks Janine and the woman will like living together", "C. He thinks it would be better to live with Carol than with Janine", "D. He thinks that Janine and Carol should live together"],
+            correctAnswer: "A",
+          },
+        ],
+      } satisfies ListeningAudio,
+
+      // ── Audio T-7: Dialogues – Suggestions ───────────────────────────────────
+      {
+        title: "Audio T-7: Dialogues – Suggestions",
+        instruction:
+          "In some dialogues in the listening on the Paper-Based TOEFL, you will be asked to recognize a suggestion. Words or phrases such as \"you should\", \"or why don't you\" or \"why not\" introduce a suggestion. Choose the best answer.",
+        type: "mcq",
+        lines: [],
+        answers: { 1: "B", 2: "A", 3: "A", 4: "A", 5: "A", 6: "A", 7: "A", 8: "C", 9: "D", 10: "B" },
+        questions: [
+          {
+            question: "What does the man suggest that the woman do?",
+            options: ["A. Tip the waiter after dinner", "B. Pay for the part of the dinner", "C. Buy dinner", "D. Prepare the dinner"],
+            correctAnswer: "B",
+          },
+          {
+            question: "What does the man suggest that the woman do?",
+            options: ["A. Telephone the security guard", "B. Return later", "C. Stay at the dorm", "D. Look for the key"],
+            correctAnswer: "A",
+          },
+          {
+            question: "What does the woman suggest that the man do?",
+            options: ["A. Ask the custodian to unlock the lobby", "B. Use the bathroom in the main bathroom", "C. Find another bathroom", "D. Go to another building to locate a bathroom"],
+            correctAnswer: "A",
+          },
+          {
+            question: "What does the man suggest that the woman do?",
+            options: ["A. Get in line behind him", "B. Take a number", "C. Come back later", "D. Go to the end of the line"],
+            correctAnswer: "A",
+          },
+          {
+            question: "What does the woman suggest that the man do?",
+            options: ["A. Go to another bank", "B. Open an account with the bank", "C. Cash his check", "D. Make out the check for twenty dollars"],
+            correctAnswer: "A",
+          },
+          {
+            question: "What does the woman suggest that the man do?",
+            options: ["A. Pick her up at 11:35 A.M.", "B. Wait for her at the airport", "C. Wait for her to call him", "D. Call the airport for the schedule"],
+            correctAnswer: "A",
+          },
+          {
+            question: "What does the man suggest that the woman do?",
+            options: ["A. Refer to the syllabus", "B. Go to Dr. Watson's office", "C. See Dr. Watson at 2:00 P.M.", "D. Ask someone else"],
+            correctAnswer: "A",
+          },
+          {
+            question: "What does the man suggest that they do?",
+            options: ["A. Stay home", "B. Go out after dinner", "C. Find a baby sitter", "D. Take the children out to dinner"],
+            correctAnswer: "C",
+          },
+          {
+            question: "What does the woman suggest that the man do?",
+            options: ["A. Ask for an extension", "B. Use the interlibrary loan", "C. Look for references in the library", "D. Try the internet"],
+            correctAnswer: "D",
+          },
+          {
+            question: "What does the woman suggest that the man do?",
+            options: ["A. Buy a larger wallet", "B. Keep the cards in his book bag", "C. Carry fewer cards", "D. Organize the cards"],
+            correctAnswer: "B",
+          },
+        ],
+      } satisfies ListeningAudio,
+    ],
+  },
+
+  // ── Day 8: IELTS Listening — Hotel Booking & Company Information ──────────────
+  {
+    id: "int-listening-8",
+    track: "listening",
+    day: 8,
+    tutor: "Mr. Fajri",
+    title: "IELTS Listening — Form & Table Completion",
+    subtitle: "Audio I-1A: Hotel Booking · Audio I-1B: Company Information",
+    overview:
+      "Latihan IELTS listening: Audio I-1A mengisi formulir pemesanan hotel (form completion), Audio I-1B melengkapi tabel transportasi dan menjawab pertanyaan pilihan ganda tentang perusahaan dan program sukarela.",
+    materialSections: [],
+    exercises: [],
+    listeningAudios: [
+      // ── Audio I-1A: Hotel Booking form ────────────────────────────────────────
+      {
+        title: "Audio I-1A: Hotel Booking",
+        instruction:
+          "You are going to hear a conversation between a hotel receptionist and a customer who has come to make a booking. Complete the form below. Write NO MORE THAN THREE WORDS AND OR/NUMBERS for each answer.",
+        type: "table",
+        lines: [],
+        answers: {
+          1: "4 & 12",
+          2: "bed",
+          3: "Fairly Virnsky",
+          4: "15 October",
+          5: "SW2 4S6",
+          6: "874456",
+        },
+        tableRows: [
+          { label: "Name of accommodation (Example)", value: "Carlton Hotel" },
+          { label: "Length of stay", value: "3 nights" },
+          { label: "Ages of children", value: "{{b:1}}" },
+          { label: "Rooms available", value: "Two en-suites at £270" },
+          { label: "Price inclusive of", value: "{{b:2}} + Tax" },
+          { label: "Payment method", value: "credit card" },
+          { label: "Name", value: "Michael (3) {{b:3}}" },
+          { label: "Date of birth", value: "{{b:4}} 1968" },
+          { label: "Address", value: "273, Stanton Court, London" },
+          { label: "Post code", value: "{{b:5}}" },
+          { label: "Telephone", value: "08773 (6) {{b:6}}" },
+        ],
+      } satisfies ListeningAudio,
+
+      // ── Audio I-1B: Transport Options (table, Q7-10) ──────────────────────────
+      {
+        title: "Audio I-1B: Transport & Company Information",
+        instruction:
+          "Complete the table below. Write NO MORE THAN THREE WORDS AND OR/A NUMBER for each answer.",
+        type: "table",
+        lines: [],
+        answers: {
+          7: "£15",
+          8: "Avenue",
+          9: "the park",
+          10: "30 min",
+        },
+        tableRows: [
+          { label: "Mode of Transport", value: "Cost | Arrangements | Travel time to town" },
+          { label: "Taxi", value: "Approximately {{b:7}} | Pick up from the hotel | 10 minutes" },
+          { label: "Bus", value: "£2 per person | Walk down Oak Tree {{b:8}} | 15 minutes" },
+          { label: "Walking", value: "-------- | Walk through {{b:9}} | {{b:10}}" },
+        ],
+      } satisfies ListeningAudio,
+
+      // ── Audio I-1B: Multiple choice (Q11-14) ──────────────────────────────────
+      {
+        title: "Audio I-1B: Company & Volunteering Questions",
+        instruction:
+          "Choose the correct letter, A, B, or C for each answer.",
+        type: "mcq",
+        lines: [],
+        answers: { 11: "B", 12: "C", 13: "C", 14: "B" },
+        questions: [
+          {
+            question: "The company expanded in",
+            options: ["A. 2000", "B. 2007", "C. 2014"],
+            correctAnswer: "B",
+          },
+          {
+            question: "The number of permanent staff is",
+            options: ["A. 75", "B. 90", "C. 150"],
+            correctAnswer: "C",
+          },
+          {
+            question: "Most volunteers join the program",
+            options: ["A. in Winter", "B. in July", "C. when it is best for them"],
+            correctAnswer: "C",
+          },
+          {
+            question: "Time Abroad receives all its income from",
+            options: ["A. partner organisations", "B. volunteers", "C. the government"],
+            correctAnswer: "B",
+          },
+        ],
+      } satisfies ListeningAudio,
+
+      // ── Audio I-1B: Volunteering table (Q15-20) ───────────────────────────────
+      {
+        title: "Audio I-1B: Volunteering Opportunities",
+        instruction:
+          "Complete the table. Write NO MORE THAN TWO WORDS for each answer.",
+        type: "table",
+        lines: [],
+        answers: {
+          15: "conversation",
+          16: "experiences",
+          17: "responsible",
+          18: "organic",
+          19: "promotion",
+          20: "understanding",
+        },
+        tableRows: [
+          { label: "Volunteering Opportunity | Activity | Benefits", value: "" },
+          {
+            label: "English Teaching",
+            value: "Helping with English (15) {{b:15}} | Significantly improve the learning {{b:16}} of many children and adults",
+          },
+          {
+            label: "Agriculture and Farming",
+            value: "Promoting sustainable and (17) {{b:17}} farming | Promote (18) {{b:18}} farming methods · educate local communities",
+          },
+          {
+            label: "Veterinary Medicine",
+            value: "Helping the vet with sick animals · (19) {{b:19}} · Joining the vet on home visits | Amazing insights into the country · See a lot of fascinating animals · Gain a greater (20) {{b:20}} of the difficulties in the country",
+          },
+        ],
+      } satisfies ListeningAudio,
+    ],
+  },
 ];
 
 // ── Grammar Lessons (link to tnIntermediateGrammar topics) ───────────────────

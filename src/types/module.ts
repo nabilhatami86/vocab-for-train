@@ -28,14 +28,21 @@ export interface ListeningLine {
   indent?: boolean;   // indented bullet item in notes
 }
 
+export interface ListeningMCQQuestion {
+  question: string;
+  options: string[];      // e.g. ['A. A health club', 'B. A class', 'C. A game', 'D. A dentist']
+  correctAnswer: string;  // 'A' | 'B' | 'C' | 'D'
+}
+
 /** One audio section (e.g. Audio 1, Audio 2, Audio 3). */
 export interface ListeningAudio {
   title: string;        // "Audio 1: Free time."
   instruction: string;  // "Fill the blank spaces while listening to the recording."
-  type: 'dialogue' | 'notes' | 'table';
+  type: 'dialogue' | 'notes' | 'table' | 'mcq';
   lines: ListeningLine[];
   tableRows?: { label: string; value: string }[]; // for type='table'
-  answers: Record<number, string>; // blank number → correct answer
+  answers: Record<number, string>; // blank number → correct answer (or Q number → 'A'/'B'/'C'/'D' for mcq)
+  questions?: ListeningMCQQuestion[]; // for type='mcq'
 }
 
 export interface ModuleLesson {
