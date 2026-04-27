@@ -1084,38 +1084,42 @@ export default function ModuleLessonClient({ lesson, backHref = '/tn-basic-courc
                     }
 
                     // Template patterns (contains "→" with Q&A) — click to reveal answer
-                    if (point.includes('→') && !point.startsWith('  ')) {
+                    // Only match lines that don't start with emoji/special indicators
+                    if (point.includes('→') && !point.startsWith('  ') && !/^[⚡❌✅❓🔵🔴🟡🟢🔶🔷💡⚠️📍📅🍽️👥🗓️👨🌽🔥🎯💬🧠📖]/.test(point)) {
                       const arrowIdx = point.indexOf('→');
                       const question = point.slice(0, arrowIdx).trim();
                       const answer = point.slice(arrowIdx + 1).trim();
                       const revealKey = `${section.title}-${pIdx}`;
                       const isRevealed = revealedAnswers.has(revealKey);
+                      const toggleReveal = () =>
+                        setRevealedAnswers((prev) => {
+                          const next = new Set(prev);
+                          if (next.has(revealKey)) next.delete(revealKey);
+                          else next.add(revealKey);
+                          return next;
+                        });
                       return (
-                        <div key={revealKey} className="py-1.5">
+                        <div key={revealKey} className="py-1.5 flex items-start gap-2 w-full">
                           <button
-                            className="flex items-start gap-2 text-left w-full group"
-                            onClick={() =>
-                              setRevealedAnswers((prev) => {
-                                const next = new Set(prev);
-                                if (next.has(revealKey)) next.delete(revealKey);
-                                else next.add(revealKey);
-                                return next;
-                              })
-                            }
-                          >
-                            <span className="text-primary mt-1 shrink-0">▸</span>
-                            <div className="text-sm">
-                              <span className="font-medium text-(--text)">{renderClickableText(question)}</span>
-                              {isRevealed ? (
-                                <>
-                                  <span className="text-primary mx-1">→</span>
-                                  <span className="text-green-600 dark:text-green-400 italic font-medium">{renderClickableText(answer)}</span>
-                                </>
-                              ) : (
-                                <span className="ml-2 text-xs text-(--text-muted) group-hover:text-primary transition-colors">(klik untuk lihat jawaban)</span>
-                              )}
-                            </div>
-                          </button>
+                            type="button"
+                            className="text-primary mt-1 shrink-0 hover:text-primary/70 transition-colors"
+                            onClick={toggleReveal}
+                          >▸</button>
+                          <div className="text-sm">
+                            <span className="font-medium text-(--text)">{renderClickableText(question)}</span>
+                            {isRevealed ? (
+                              <>
+                                <span className="text-primary mx-1">→</span>
+                                <span className="text-green-600 dark:text-green-400 italic font-medium">{renderClickableText(answer)}</span>
+                              </>
+                            ) : (
+                              <button
+                                type="button"
+                                className="ml-2 text-xs text-(--text-muted) hover:text-primary transition-colors"
+                                onClick={toggleReveal}
+                              >(klik untuk lihat jawaban)</button>
+                            )}
+                          </div>
                         </div>
                       );
                     }
@@ -1161,6 +1165,60 @@ export default function ModuleLessonClient({ lesson, backHref = '/tn-basic-courc
                           <p className="text-sm text-(--text-secondary) italic">{renderClickableText(point.replace('Ex: ', ''))}</p>
                         </div>
                       );
+                    }
+
+                    // Vocabulary card — section title contains "vocabulary" and point matches "word (pos) — meaning [| example]"
+                    if (/vocabulary/i.test(section.title)) {
+                      const vocabMatch = point.match(/^(.+?)\s*\(([^)]+)\)\s*[—–-]\s*(.+?)(?:\s*\|\s*(.+))?$/);
+                      if (vocabMatch) {
+                        const [, vocabWord, pos, meaning, example] = vocabMatch;
+                        const vocabKey = `vocab-${section.title}-${pIdx}`;
+                        const isVocabOpen = revealedAnswers.has(vocabKey);
+                        const exampleClean = example?.replace(/^['"]|['"]$/g, '');
+                        return (
+                          <div key={vocabKey} className={cn(
+                            'rounded-lg border transition-all overflow-hidden',
+                            isVocabOpen
+                              ? 'border-blue-300 dark:border-blue-700 bg-blue-50/50 dark:bg-blue-950/20'
+                              : 'border-(--border) bg-(--bg-secondary)',
+                          )}>
+                            <div className="flex items-center gap-3 px-3 py-2">
+                              <button
+                                type="button"
+                                onClick={() => translateWord(vocabWord.trim())}
+                                className="shrink-0 w-6 h-6 rounded-md flex items-center justify-center text-(--text-muted) hover:text-primary hover:bg-primary/10 transition-colors"
+                                title="Terjemahkan"
+                              >
+                                <Volume2 className="w-3 h-3" />
+                              </button>
+                              <div className="flex-1 min-w-0 flex items-baseline gap-2 flex-wrap">
+                                <span className="font-bold text-sm text-primary">{vocabWord.trim()}</span>
+                                <span className="text-[10px] font-semibold px-1.5 py-0.5 rounded-full bg-primary/10 text-primary uppercase tracking-wide">{pos}</span>
+                                <span className="text-sm text-(--text) font-medium">— {meaning.trim()}</span>
+                              </div>
+                              {exampleClean && (
+                                <button
+                                  type="button"
+                                  onClick={() => setRevealedAnswers((prev) => {
+                                    const next = new Set(prev);
+                                    if (next.has(vocabKey)) next.delete(vocabKey);
+                                    else next.add(vocabKey);
+                                    return next;
+                                  })}
+                                  className="shrink-0 text-[10px] text-(--text-muted) hover:text-primary transition-colors"
+                                >
+                                  {isVocabOpen ? '▲' : '▼'}
+                                </button>
+                              )}
+                            </div>
+                            {isVocabOpen && exampleClean && (
+                              <div className="px-3 pb-2.5 border-t border-(--border)/50 pt-2">
+                                <p className="text-xs text-(--text-secondary) italic leading-relaxed">"{exampleClean}"</p>
+                              </div>
+                            )}
+                          </div>
+                        );
+                      }
                     }
 
                     // Default bullet

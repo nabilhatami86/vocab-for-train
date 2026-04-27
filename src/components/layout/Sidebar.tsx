@@ -22,6 +22,7 @@ import {
   Languages,
   Volume2,
   Mic,
+  Library,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useVocabStore } from "@/store/useVocabStore";
@@ -65,6 +66,7 @@ const navSections: { title: string; items: NavItem[] }[] = [
       { href: "/practice/speaking", label: "Speaking Test", icon: Mic },
       { href: "/tn-basic-cource", label: "TN Basic Course", icon: BookText },
       { href: "/tn-intermediate", label: "TN Intermediate", icon: GraduationCap },
+      { href: "/tn-intermediate/vocab", label: "Vocab Bank (Int.)", icon: Library },
     ],
   },
   {
