@@ -15,7 +15,7 @@ export default function LessonDayCard({ lesson, href, isMidTest: midTestProp }: 
     return (
       <Link
         href={href}
-        className="group col-span-full sm:col-span-2 lg:col-span-3 flex items-center gap-3 border border-primary/40 bg-primary/5 hover:bg-primary/10 rounded-xl p-4 transition-colors"
+        className="group flex items-center gap-3 border border-primary/40 bg-primary/5 hover:bg-primary/10 rounded-xl p-4 transition-colors"
       >
         <div className="w-10 h-10 rounded-full bg-primary/15 flex items-center justify-center shrink-0">
           <GraduationCap className="w-5 h-5 text-primary" />
