@@ -13,6 +13,7 @@ const trackIcons = {
   speaking:  Mic2,
   grammar:   PenLine,
   listening: Headphones,
+  writing:   PenLine,
 } as const;
 
 const trackColors = {
@@ -20,6 +21,7 @@ const trackColors = {
   speaking:  'from-green-500/10 to-green-500/5  border-green-400/40  text-green-600',
   grammar:   'from-violet-500/10 to-violet-500/5 border-violet-400/40 text-violet-600',
   listening: 'from-amber-500/10 to-amber-500/5  border-amber-400/40  text-amber-600',
+  writing:   'from-rose-500/10  to-rose-500/5   border-rose-400/40   text-rose-600',
 } as const;
 
 export default function ModuleLearningPage() {

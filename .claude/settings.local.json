@@ -23,10 +23,15 @@
       "Bash(/Users/mm/Desktop/vocab/node_modules/.bin/tsc:*)",
       "Bash(node_modules/.bin/tsc:*)",
       "Bash(/usr/local/bin/node node_modules/.bin/tsc:*)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Read(//c/Users/muham/.claude/projects/c--Users-muham-Desktop-vocab-for-train/memory/**)"
     ],
     "additionalDirectories": [
-      "c:\\Users\\muham\\Desktop\\vocab-for-train\\src\\app\\tn-advance"
+      "c:\\Users\\muham\\Desktop\\vocab-for-train\\src\\app\\tn-advance",
+      "c:\\Users\\muham\\.claude\\projects\\c--Users-muham-Desktop-vocab-for-train\\memory",
+      "c:\\Users\\muham\\Desktop\\vocab-for-train\\src\\app\\tn-advance\\speaking",
+      "c:\\Users\\muham\\Desktop\\vocab-for-train\\src\\app\\tn-advance\\class\\[track]",
+      "c:\\Users\\muham\\Desktop\\vocab-for-train\\src\\app\\tn-advance\\[day]"
     ]
   }
 }

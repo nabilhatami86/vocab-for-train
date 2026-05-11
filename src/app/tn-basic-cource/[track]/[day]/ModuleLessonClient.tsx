@@ -1255,7 +1255,7 @@ export default function ModuleLessonClient({ lesson, backHref = '/tn-basic-courc
               {lesson.track === 'reading' && <BookText className="w-5 h-5 text-blue-500" />}
               {lesson.track === 'listening' && <Volume2 className="w-5 h-5 text-primary" />}
               {lesson.track === 'speaking' && <MessageCircle className="w-5 h-5 text-green-500" />}
-              {{ reading: 'Full Reading Passage', speaking: 'Sample Script', grammar: 'Grammar Examples', listening: 'Listening Script' }[lesson.track]}
+              {{ reading: 'Full Reading Passage', speaking: 'Sample Script', grammar: 'Grammar Examples', listening: 'Listening Script', writing: 'Writing Examples' }[lesson.track]}
             </h2>
             {lesson.track === 'reading' && (
               <div className="flex items-center gap-2">

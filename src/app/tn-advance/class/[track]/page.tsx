@@ -1,59 +1,58 @@
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { BookOpenText, Mic2, PenLine, Headphones, ArrowLeft } from 'lucide-react';
-import { getTnIntermediateLessonsByTrack, tnIntermediateTracks } from '@/data/tnIntermediateModules';
-import type { ModuleTrack } from '@/types/module';
+import { BookOpenText, Mic2, PenLine, FileEdit, ArrowLeft } from 'lucide-react';
+import { getTnAdvanceLessonsByTrack, tnAdvanceTracks } from '@/data/tnAdvanceModules';
 import LessonDayCard from '@/components/LessonDayCard';
 
 interface PageProps {
   params: Promise<{ track: string }>;
 }
 
-const isTrack = (value: string): value is ModuleTrack =>
-  ['reading', 'speaking', 'grammar', 'listening'].includes(value);
+const ADVANCE_TRACKS = ['reading', 'speaking', 'grammar', 'writing'] as const;
+type AdvanceTrack = typeof ADVANCE_TRACKS[number];
+const isAdvanceTrack = (v: string): v is AdvanceTrack => (ADVANCE_TRACKS as readonly string[]).includes(v);
 
 const trackIcons = {
   reading: BookOpenText,
   speaking: Mic2,
   grammar: PenLine,
-  listening: Headphones,
-  writing: PenLine,
+  writing: FileEdit,
 } as const;
 
 export async function generateStaticParams() {
-  return tnIntermediateTracks.map((t) => ({ track: t.track }));
+  return tnAdvanceTracks.map((t) => ({ track: t.track }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { track } = await params;
-  if (!isTrack(track)) return { title: 'TN Intermediate' };
-  const info = tnIntermediateTracks.find((t) => t.track === track);
+  if (!isAdvanceTrack(track)) return { title: 'TN Advance' };
+  const info = tnAdvanceTracks.find((t) => t.track === track);
   return {
-    title: `${info?.title ?? track} | TN Intermediate`,
+    title: `${info?.title ?? track} | TN Advance`,
     description: info?.description,
   };
 }
 
-export default async function TrackPage({ params }: PageProps) {
+export default async function TnAdvanceTrackPage({ params }: PageProps) {
   const { track } = await params;
-  if (!isTrack(track)) notFound();
+  if (!isAdvanceTrack(track)) notFound();
 
-  const trackInfo = tnIntermediateTracks.find((t) => t.track === track);
+  const trackInfo = tnAdvanceTracks.find((t) => t.track === track);
   if (!trackInfo) notFound();
 
-  const lessons = getTnIntermediateLessonsByTrack(track);
+  const lessons = getTnAdvanceLessonsByTrack(track);
   const Icon = trackIcons[track];
 
   return (
     <div className="p-4 lg:p-6 space-y-6 animate-fade-in">
       {/* Back */}
       <Link
-        href="/tn-intermediate"
+        href="/tn-advance"
         className="inline-flex items-center gap-1.5 text-sm text-(--text-secondary) hover:text-(--text) transition-colors"
       >
         <ArrowLeft className="w-4 h-4" />
-        TN Intermediate
+        TN Advance
       </Link>
 
       {/* Header */}
@@ -67,14 +66,16 @@ export default async function TrackPage({ params }: PageProps) {
 
       {/* Day Cards */}
       {lessons.length === 0 ? (
-        <p className="text-sm text-(--text-muted)">Belum ada materi untuk track ini.</p>
+        <div className="text-center py-16 text-(--text-muted)">
+          <p className="text-sm">Materi segera hadir.</p>
+        </div>
       ) : (
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
           {lessons.map((lesson) => (
             <LessonDayCard
               key={lesson.id}
               lesson={lesson}
-              href={`/tn-intermediate/class/${lesson.track}/${lesson.day}`}
+              href={`/tn-advance/class/${lesson.track}/${lesson.day}`}
             />
           ))}
         </div>

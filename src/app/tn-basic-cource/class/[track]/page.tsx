@@ -21,6 +21,7 @@ const trackIcons = {
   speaking:  Mic2,
   grammar:   PenLine,
   listening: Headphones,
+  writing:   PenLine,
 } as const;
 
 export async function generateStaticParams() {

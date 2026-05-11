@@ -1,4 +1,4 @@
-export type ModuleTrack = 'reading' | 'speaking' | 'grammar' | 'listening';
+export type ModuleTrack = 'reading' | 'speaking' | 'grammar' | 'listening' | 'writing';
 
 export type ModuleExerciseType = 'multiple-choice' | 'fill-the-gap' | 'true-false-not-given' | 'short-answer' | 'task';
 
