@@ -235,21 +235,18 @@ export const advanceReadingLessons: ModuleLesson[] = [
       {
         id: "adv-r1-task1",
         type: "task",
-        section: "final",
         question:
           "SUMMARIZE the passage in 5–7 sentences using your own words. Include the main idea of each paragraph.",
       },
       {
         id: "adv-r1-task2",
         type: "task",
-        section: "final",
         question:
           "VOCABULARY TASK:\nChoose 15 vocabulary words from the lesson and make one original sentence for each word.",
       },
       {
         id: "adv-r1-task3",
         type: "task",
-        section: "final",
         question:
           "REFLECTION:\nDo you think brand loyalty is good or bad for consumers? Write 4–6 sentences and include at least 2 cause-effect connectors (because, therefore, consequently, as a result).",
       },
@@ -415,85 +412,6 @@ export const advanceReadingLessons: ModuleLesson[] = [
       },
     ],
     exercises: [
-      {
-        id: "adv-r2-mc1",
-        type: "multiple-choice",
-        question: "What is the main idea of the second paragraph?",
-        options: [
-          "Mime is only performed in ancient Greece and Rome",
-          "There are two types of mime: abstract and literal",
-          "Literal mime is more popular than abstract mime",
-        ],
-        correctAnswer: "There are two types of mime: abstract and literal",
-        reason:
-          'Para. 2: "Miming can be abstract, literal, or a combination of the two."',
-      },
-      {
-        id: "adv-r2-mc2",
-        type: "multiple-choice",
-        question:
-          "What does abstract miming typically focus on, according to the passage?",
-        options: [
-          "Telling a story with a clear plot",
-          "Expressing a feeling such as sorrow or desire without a plot",
-          "Using props and costumes to entertain the audience",
-        ],
-        correctAnswer:
-          "Expressing a feeling such as sorrow or desire without a plot",
-        reason:
-          'Para. 2: "Abstract miming usually has no plot or central character but simply expresses a feeling."',
-      },
-      {
-        id: "adv-r2-mc3",
-        type: "multiple-choice",
-        question:
-          "How did silent films influence twentieth-century miming style?",
-        options: [
-          "They introduced the use of props and costumes",
-          "They encouraged actors to rely on facial expressions and exaggerated gestures",
-          "They replaced live mime performances completely",
-        ],
-        correctAnswer:
-          "They encouraged actors to rely on facial expressions and exaggerated gestures",
-        reason:
-          'Para. 3: "actors relied on their ability to communicate thoughts and stories through facial expressions and exaggerated gestures."',
-      },
-      {
-        id: "adv-r2-mc4",
-        type: "multiple-choice",
-        question:
-          "What was Etienne Decroux's most significant contribution to modern mime?",
-        options: [
-          "He created the character Bip the clown",
-          "He founded a mime school based on corporeal mime in Paris",
-          "He invented the silent film industry",
-        ],
-        correctAnswer:
-          "He founded a mime school based on corporeal mime in Paris",
-        reason:
-          'Para. 4: "Decroux founded a mime school in Paris based on corporeal mime... This became the prominent form of the modern mime era."',
-      },
-      {
-        id: "adv-r2-mc5",
-        type: "multiple-choice",
-        question:
-          "The word 'renowned' in paragraph 4 is closest in meaning to...",
-        options: ["unknown", "famous and celebrated", "new and modern"],
-        correctAnswer: "famous and celebrated",
-        reason: "'Renowned' = terkenal/terkemuka. Sinonim: famous, celebrated.",
-      },
-      {
-        id: "adv-r2-sa1",
-        type: "short-answer",
-        question:
-          "In your own words, explain the difference between abstract miming and literal miming.",
-      },
-      {
-        id: "adv-r2-sa2",
-        type: "short-answer",
-        question:
-          "How did Buster Keaton and Charlie Chaplin contribute to the development of modern mime?",
-      },
       // ── Summary Completion (word bank exercise) ──────────────────
       {
         id: "adv-r2-ftg1",
@@ -548,20 +466,6 @@ export const advanceReadingLessons: ModuleLesson[] = [
         correctAnswer: "merged",
         reason:
           'Para. 6: "Pilobolus, which merges modern dance, acrobatics, gymnastics, and mime." = menggabungkan berbagai skill.',
-      },
-      {
-        id: "adv-r2-task1",
-        type: "task",
-        section: "final",
-        question:
-          "SUMMARIZE the passage in 5–7 sentences. Include: the origin of mime, two types of mime, key figures (Chaplin, Decroux, Marceau), and how mime has evolved today.",
-      },
-      {
-        id: "adv-r2-task2",
-        type: "task",
-        section: "final",
-        question:
-          "VOCABULARY TASK: Pick 15 words from the vocabulary list. Write one sentence for each word that shows you understand its meaning in context.",
       },
     ],
   },
