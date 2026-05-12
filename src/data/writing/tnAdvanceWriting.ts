@@ -64,6 +64,57 @@ export const advanceWritingLessons: ModuleLesson[] = [
           "'Together with her friends' adalah interrupting phrase — diabaikan.",
         ],
       },
+      {
+        title: "D. Hierarki Bahasa",
+        points: [
+          "Alphabet → Word → Phrase → Clause → Sentence → Paragraph → Essay → Book/Article → Library/Journal",
+          "",
+          "📌 Perbedaan Clause dan Sentence:",
+          "   Clause   = S + V  (tanpa meaning / bisa jadi bagian kalimat)",
+          "   Sentence = S + V  (ada meaning, diakhiri titik)",
+        ],
+      },
+      {
+        title: "E. Pola Kalimat dengan Conjunction",
+        points: [
+          "Rumus:",
+          "   2S + (2V) → 1 Conj",
+          "   4S + (4V) → 3 Conj",
+          "",
+          "Pola penulisan:",
+          "   ▸ SV, Conj, SV",
+          "   ▸ Conj, SV, SV",
+          "",
+          "Contoh:",
+          "   ▸ Ms Rosa AND Ms Aya eat dessert together.  → [2S + 1V + 1Conj]",
+          "   ▸ She opens the door AND enters the room.   → [1S + 2V + 1Conj]",
+        ],
+      },
+      {
+        title: "F. Cara Identifikasi Kalimat",
+        points: [
+          "Langkah-langkah mengidentifikasi kalimat:",
+          "   1️⃣  Cek verb",
+          "   2️⃣  Cari conj (kalau verb > 1)",
+          "   3️⃣  Singular / plural",
+          "   4️⃣  Meaning → passive",
+        ],
+      },
+      {
+        title: "G. Contoh Analisis Kalimat",
+        points: [
+          "▸ Mr Panji eats rice.",
+          "   S = Mr Panji  |  V = eats  |  Simple Sentence",
+          "",
+          "▸ Mr Rafa, together with Mr Aryoo, plays football.",
+          "   S = Mr Rafa  |  'together with Mr Aryoo' = interrupting phrase (koma apositif)",
+          "   V = plays (singular, mengikuti Mr Rafa)",
+          "",
+          "▸ (Cardiovascular) study is currently becoming headline.",
+          "   'Cardiovascular' = adjective yang menerangkan 'study'",
+          "   S = study  |  V = is becoming  |  Meaning: studi tentang kesehatan jantung",
+        ],
+      },
     ],
     exercises: [
       {
