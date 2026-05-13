@@ -112,148 +112,9 @@ export const advanceReadingLessons: ModuleLesson[] = [
     ],
     exercises: [
       {
-        id: "adv-r1-mc1",
-        type: "multiple-choice",
-        question:
-          "What is the main purpose of businesses mentioned in the first paragraph?",
-        options: [
-          "To reduce prices",
-          "To attract luxury consumers",
-          "To gain repeat customers",
-        ],
-        correctAnswer: "To gain repeat customers",
-        reason:
-          'Paragraph 1: "most businesses have a common goal: repeat customers."',
-      },
-      {
-        id: "adv-r1-mc2",
-        type: "multiple-choice",
-        question:
-          "What is the difference between true brand loyalty and spurious loyalty?",
-        options: [
-          "True loyalty is emotional, while spurious loyalty is based on convenience and habit",
-          "True loyalty only happens with luxury brands",
-          "Spurious loyalty is stronger than true loyalty",
-        ],
-        correctAnswer:
-          "True loyalty is emotional, while spurious loyalty is based on convenience and habit",
-        reason:
-          "Paragraph 2 explains that spurious loyalty is motivated by habit, convenience, price, and availability.",
-      },
-      {
-        id: "adv-r1-mc3",
-        type: "multiple-choice",
-        question: "Which products tend to create stronger brand loyalty?",
-        options: [
-          "Household staples such as sugar and eggs",
-          "Luxury items and nonessential products",
-          "All products equally",
-        ],
-        correctAnswer: "Luxury items and nonessential products",
-        reason:
-          "Paragraph 3 states that true consumer loyalty tends to occur with nonessential and luxury items.",
-      },
-      {
-        id: "adv-r1-mc4",
-        type: "multiple-choice",
-        question:
-          "Why do consumers buy expensive products according to the passage?",
-        options: [
-          "Because they are always higher quality",
-          "Because of the perceived status they provide",
-          "Because cheaper brands are unavailable",
-        ],
-        correctAnswer: "Because of the perceived status they provide",
-        reason:
-          'Paragraph 4: "people consistently purchase pricey items because of the perceived status..."',
-      },
-      {
-        id: "adv-r1-mc5",
-        type: "multiple-choice",
-        question: "What can celebrity endorsement do?",
-        options: [
-          "Reduce product prices",
-          "Create stronger brand identity and loyalty",
-          "Decrease competition",
-        ],
-        correctAnswer: "Create stronger brand identity and loyalty",
-        reason:
-          "Paragraph 4 mentions celebrity endorsement as a factor influencing consumer loyalty.",
-      },
-      {
-        id: "adv-r1-mc6",
-        type: "multiple-choice",
-        question:
-          "According to the passage, where does brand loyalty prevail the most?",
-        options: [
-          "In poorer countries",
-          "In places where people have more disposable income",
-          "In countries with fewer products",
-        ],
-        correctAnswer: "In places where people have more disposable income",
-        reason:
-          "Paragraph 5–6 explain that brand loyalty prevails where people have more money to spend.",
-      },
-      {
-        id: "adv-r1-mc7",
-        type: "multiple-choice",
-        question:
-          "What usually happens to consumer behavior during economic downturns?",
-        options: [
-          "Consumers become more selective",
-          "Consumers focus more on cheaper brands",
-          "Consumers only buy luxury products",
-        ],
-        correctAnswer: "Consumers focus more on cheaper brands",
-        reason:
-          "Paragraph 6: consumers turned to brands that cost less during recession periods.",
-      },
-      {
-        id: "adv-r1-sa1",
-        type: "short-answer",
-        question:
-          "Why is developing committed customers more valuable than attracting new customers?",
-      },
-      {
-        id: "adv-r1-sa2",
-        type: "short-answer",
-        question:
-          "Why are household staples less likely to create strong brand loyalty?",
-      },
-      {
-        id: "adv-r1-sa3",
-        type: "short-answer",
-        question:
-          "How do emotional and symbolic reasons influence consumers’ buying decisions?",
-      },
-      {
-        id: "adv-r1-sa4",
-        type: "short-answer",
-        question:
-          "What does the passage suggest about the relationship between income and brand loyalty?",
-      },
-      {
-        id: "adv-r1-task1",
-        type: "task",
-        question:
-          "SUMMARIZE the passage in 5–7 sentences using your own words. Include the main idea of each paragraph.",
-      },
-      {
-        id: "adv-r1-task2",
-        type: "task",
-        question:
-          "VOCABULARY TASK:\nChoose 15 vocabulary words from the lesson and make one original sentence for each word.",
-      },
-      {
-        id: "adv-r1-task3",
-        type: "task",
-        question:
-          "REFLECTION:\nDo you think brand loyalty is good or bad for consumers? Write 4–6 sentences and include at least 2 cause-effect connectors (because, therefore, consequently, as a result).",
-      },
-      // ── True / False / Not Given ──────────────────
-      {
         id: "adv-r1-tfng1",
         type: "true-false-not-given",
+        options: ["TRUE", "FALSE", "NOT GIVEN"],
         question:
           "International conglomerates are more successful at creating brand loyalty than small businesses are.",
         correctAnswer: "NOT GIVEN",
@@ -263,6 +124,7 @@ export const advanceReadingLessons: ModuleLesson[] = [
       {
         id: "adv-r1-tfng2",
         type: "true-false-not-given",
+        options: ["TRUE", "FALSE", "NOT GIVEN"],
         question:
           "New customers may have only a fleeting interest in a particular brand.",
         correctAnswer: "TRUE",
@@ -272,6 +134,7 @@ export const advanceReadingLessons: ModuleLesson[] = [
       {
         id: "adv-r1-tfng3",
         type: "true-false-not-given",
+        options: ["TRUE", "FALSE", "NOT GIVEN"],
         question:
           "Brand loyalty occurs more often with household staples than with luxury items.",
         correctAnswer: "FALSE",
@@ -281,6 +144,7 @@ export const advanceReadingLessons: ModuleLesson[] = [
       {
         id: "adv-r1-tfng4",
         type: "true-false-not-given",
+        options: ["TRUE", "FALSE", "NOT GIVEN"],
         question:
           "Brand loyalty includes the belief that one brand outperforms other brands.",
         correctAnswer: "TRUE",
@@ -290,6 +154,7 @@ export const advanceReadingLessons: ModuleLesson[] = [
       {
         id: "adv-r1-tfng5",
         type: "true-false-not-given",
+        options: ["TRUE", "FALSE", "NOT GIVEN"],
         question:
           "Endorsement of a product by a famous person can help create brand loyalty.",
         correctAnswer: "TRUE",
@@ -299,6 +164,7 @@ export const advanceReadingLessons: ModuleLesson[] = [
       {
         id: "adv-r1-tfng6",
         type: "true-false-not-given",
+        options: ["TRUE", "FALSE", "NOT GIVEN"],
         question:
           "Companies can convince consumers to change their brand loyalty by lowering prices.",
         correctAnswer: "NOT GIVEN",
@@ -308,6 +174,7 @@ export const advanceReadingLessons: ModuleLesson[] = [
       {
         id: "adv-r1-tfng7",
         type: "true-false-not-given",
+        options: ["TRUE", "FALSE", "NOT GIVEN"],
         question:
           "The phenomenon of brand loyalty is seen in countries around the world.",
         correctAnswer: "TRUE",
@@ -316,6 +183,7 @@ export const advanceReadingLessons: ModuleLesson[] = [
       {
         id: "adv-r1-tfng8",
         type: "true-false-not-given",
+        options: ["TRUE", "FALSE", "NOT GIVEN"],
         question:
           "Consumers are drawn to certain brands because they believe these brands give them status.",
         correctAnswer: "TRUE",
@@ -466,6 +334,225 @@ export const advanceReadingLessons: ModuleLesson[] = [
         correctAnswer: "merged",
         reason:
           'Para. 6: "Pilobolus, which merges modern dance, acrobatics, gymnastics, and mime." = menggabungkan berbagai skill.',
+      },
+    ],
+  },
+
+  // ── Day 3 · Learning Styles ───────────────────────────────────────────────
+  {
+    id: "adv-reading-3",
+    track: "reading",
+    day: 3,
+    tutor: "Mrs. Aji",
+    title: "Learning Styles",
+    subtitle: "Visual · Auditory · Kinesthetic — Types of Classroom Learners",
+    overview:
+      "Bacaan tentang tiga gaya belajar utama di kelas: visual, auditory, dan kinesthetic — karakteristik masing-masing, cara belajar yang efektif, dan strategi memaksimalkan pemahaman berdasarkan gaya belajar.",
+    passage: [
+      "There are three basic types of classroom learning styles: visual, auditory, and kinesthetic. Understanding these styles can help both teachers and students find the most effective ways to present and absorb information. Most people have a dominant learning style, although many individuals use a combination of styles depending on the subject or situation.",
+
+      "(Ada tiga jenis gaya belajar dasar di kelas: visual, auditori, dan kinestetik. Memahami gaya-gaya ini dapat membantu guru maupun siswa menemukan cara paling efektif untuk menyampaikan dan menyerap informasi. Kebanyakan orang memiliki satu gaya belajar dominan, meskipun banyak individu menggunakan kombinasi gaya tergantung pada mata pelajaran atau situasi.)",
+
+      "Visual learners prefer to sit somewhere in the classroom where no obstructions hinder their view of the board or the teacher. They think in pictures and learn best from visual displays, including diagrams, illustrations, charts, and handouts. Visual learners tend to prefer sitting near the front of the class, and they often take detailed notes to absorb information. They may also use colour-coded highlighting to help them retain key facts.",
+
+      "(Pelajar visual lebih suka duduk di tempat di dalam kelas di mana tidak ada halangan yang menghalangi pandangan mereka ke papan tulis atau guru. Mereka berpikir dalam gambar dan belajar paling baik dari tampilan visual, termasuk diagram, ilustrasi, bagan, dan lembaran kerja. Pelajar visual cenderung lebih suka duduk di bagian depan kelas, dan mereka sering membuat catatan terperinci untuk menyerap informasi. Mereka juga dapat menggunakan penandaan berkode warna untuk membantu mereka mengingat fakta-fakta penting.)",
+
+      "Auditory learners sit where they can hear well and often do not need to take notes. They learn best through verbal instructions and benefit from listening to lectures, participating in discussions, and talking things through with others. Auditory learners are often described as good with words; they may read aloud to themselves when studying, and they tend to remember what they have heard more easily than what they have seen or done.",
+
+      "(Pelajar auditori duduk di tempat mereka dapat mendengar dengan baik dan sering kali tidak perlu membuat catatan. Mereka belajar paling baik melalui instruksi verbal dan mendapat manfaat dari mendengarkan ceramah, berpartisipasi dalam diskusi, dan membicarakan sesuatu dengan orang lain. Pelajar auditori sering digambarkan sebagai orang yang pandai dengan kata-kata; mereka mungkin membaca keras-keras untuk diri sendiri saat belajar, dan mereka cenderung lebih mudah mengingat apa yang telah mereka dengar daripada apa yang telah mereka lihat atau lakukan.)",
+
+      "Kinesthetic learners may find it difficult to sit still in a conventional classroom setting. They learn best when they are doing something physical and tend to prefer a hands-on approach. Rather than listening to a lecture or watching a demonstration, kinesthetic learners want to jump right in and try things for themselves. They are easily distracted by other people around them and may struggle to concentrate during long periods of passive learning.",
+
+      "(Pelajar kinestetik mungkin merasa sulit untuk duduk diam dalam pengaturan kelas konvensional. Mereka belajar paling baik ketika mereka melakukan sesuatu yang bersifat fisik dan cenderung lebih menyukai pendekatan langsung. Daripada mendengarkan ceramah atau menonton demonstrasi, pelajar kinestetik ingin langsung terjun dan mencoba hal-hal sendiri. Mereka mudah terganggu oleh orang-orang di sekitar mereka dan mungkin kesulitan berkonsentrasi selama periode belajar pasif yang panjang.)",
+
+      "In addition to these traditional ways of describing learning styles, some researchers have proposed broader frameworks that include reading/writing learners, who prefer to interact with text-based information. When teachers adapt their instruction to cater for a variety of learning styles — using visual aids, encouraging discussion, and incorporating practical activities — students are generally able to learn more and retain information more effectively.",
+
+      "(Selain cara-cara tradisional dalam menggambarkan gaya belajar ini, beberapa peneliti telah mengusulkan kerangka kerja yang lebih luas yang mencakup pelajar membaca/menulis, yang lebih suka berinteraksi dengan informasi berbasis teks. Ketika guru menyesuaikan pengajaran mereka untuk memenuhi berbagai gaya belajar — menggunakan alat bantu visual, mendorong diskusi, dan memasukkan kegiatan praktis — siswa umumnya mampu belajar lebih banyak dan mengingat informasi dengan lebih efektif.)",
+    ],
+    materialSections: [
+      {
+        title: "Main Passage Focus",
+        points: [
+          "Para. 1 — Tiga gaya belajar utama: visual, auditory, kinesthetic. Kebanyakan orang punya satu gaya dominan.",
+          "Para. 2 — Visual learners: berpikir dalam gambar, suka duduk di depan, pakai diagram/catatan/colour coding.",
+          "Para. 3 — Auditory learners: belajar lewat mendengar & diskusi, pandai dengan kata-kata, tidak perlu catatan.",
+          "Para. 4 — Kinesthetic learners: perlu bergerak/praktik, mudah terdistraksi oleh orang sekitar, sulit duduk diam.",
+          "Para. 5 — Kombinasi gaya belajar membantu siswa belajar lebih banyak dan lebih efektif.",
+        ],
+      },
+      {
+        title: "Reading Strategy: Matching Information",
+        points: [
+          "📌 Matching information = mencocokkan pernyataan dengan paragraf atau kategori.",
+          "",
+          "⚡ Langkah-langkah:",
+          "   1. Baca pertanyaan/pernyataan dulu.",
+          "   2. Identifikasi kata kunci di setiap pernyataan.",
+          "   3. Scan teks untuk menemukan bagian yang relevan.",
+          "   4. Cocokkan — perhatikan parafrase, bukan kata yang sama persis.",
+          "",
+          "⚡ Tip: Jawaban bisa tidak berurutan dan satu kategori bisa dipakai lebih dari sekali.",
+        ],
+      },
+      {
+        title: "Vocabulary: Learning Styles",
+        points: [
+          "approach, auditory, conventional, distraction, dominant",
+          "effectively, engage, environment, hinder, identify",
+          "instruction, interaction, kinesthetic, obstruction, pace",
+          "preference, recognize, retention, strategy, visual",
+        ],
+      },
+      {
+        title: "Vocabulary List",
+        points: [
+          "1.  approach (n) — metode/cara | Sinonim: method, way | Antonim: avoidance",
+          "2.  auditory (adj) — berkaitan dengan pendengaran | Sinonim: aural, hearing-related",
+          "3.  conventional (adj) — konvensional/tradisional | Sinonim: traditional, standard | Antonim: unconventional",
+          "4.  distraction (n) — gangguan/pengalihan perhatian | Sinonim: interruption | Antonim: focus",
+          "5.  dominant (adj) — dominan/paling kuat | Sinonim: primary, main | Antonim: minor, secondary",
+          "6.  effectively (adv) — secara efektif | Sinonim: successfully, efficiently | Antonim: ineffectively",
+          "7.  engage (v) — melibatkan/terlibat | Sinonim: involve, participate | Antonim: disengage",
+          "8.  environment (n) — lingkungan | Sinonim: setting, surroundings",
+          "9.  hinder (v) — menghalangi/menghambat | Sinonim: obstruct, block | Antonim: help, assist",
+          "10. identify (v) — mengidentifikasi/mengenali | Sinonim: recognize, determine | Antonim: ignore",
+          "11. instruction (n) — instruksi/petunjuk | Sinonim: direction, guidance",
+          "12. interaction (n) — interaksi | Sinonim: communication, exchange | Antonim: isolation",
+          "13. kinesthetic (adj) — berkaitan dengan gerakan/sentuhan | Sinonim: hands-on, tactile",
+          "14. obstruction (n) — halangan/rintangan | Sinonim: barrier, hindrance | Antonim: opening",
+          "15. pace (n) — kecepatan/laju | Sinonim: speed, rate",
+          "16. preference (n) — preferensi/pilihan | Sinonim: liking, inclination | Antonim: dislike",
+          "17. recognize (v) — mengenali/mengakui | Sinonim: identify, acknowledge | Antonim: overlook",
+          "18. retention (n) — kemampuan mengingat/retensi | Sinonim: memory, recall | Antonim: forgetfulness",
+          "19. strategy (n) — strategi | Sinonim: plan, approach",
+          "20. visual (adj) — berkaitan dengan penglihatan | Sinonim: optical, sight-related",
+        ],
+      },
+    ],
+    exercises: [
+      // ── Part 1: Matching (Q1–Q6) ─────────────────────────────────
+      {
+        id: "adv-r3-q1",
+        type: "multiple-choice",
+        section: "part1",
+        question:
+          "Q1 — Which type of learner is described?\n\n\"These learners prefer verbal instructions and often benefit from listening to lectures and participating in discussions.\"",
+        options: ["A. Visual", "B. Auditory", "C. Kinesthetic"],
+        correctAnswer: "B. Auditory",
+        reason:
+          'Para. 3: "Auditory learners... learn best through verbal instructions and benefit from listening to lectures, participating in discussions."',
+      },
+      {
+        id: "adv-r3-q2",
+        type: "multiple-choice",
+        section: "part1",
+        question:
+          "Q2 — Which type of learner is described?\n\n\"These learners prefer sitting near the front of the class to get a clear view of the board and teacher.\"",
+        options: ["A. Visual", "B. Auditory", "C. Kinesthetic"],
+        correctAnswer: "A. Visual",
+        reason:
+          'Para. 2: "Visual learners prefer to sit somewhere in the classroom where no obstructions hinder their view... near the front of the class."',
+      },
+      {
+        id: "adv-r3-q3",
+        type: "multiple-choice",
+        section: "part1",
+        question:
+          "Q3 — Which type of learner is described?\n\n\"These learners find it difficult to remain seated for a long time and prefer a hands-on approach to learning.\"",
+        options: ["A. Visual", "B. Auditory", "C. Kinesthetic"],
+        correctAnswer: "C. Kinesthetic",
+        reason:
+          'Para. 4: "Kinesthetic learners may find it difficult to sit still... they learn best when they are doing something physical and tend to prefer a hands-on approach."',
+      },
+      {
+        id: "adv-r3-q4",
+        type: "multiple-choice",
+        section: "part1",
+        question:
+          "Q4 — Which type of learner is described?\n\n\"These learners often use colour-coded notes, diagrams, and charts to help them remember important information.\"",
+        options: ["A. Visual", "B. Auditory", "C. Kinesthetic"],
+        correctAnswer: "A. Visual",
+        reason:
+          'Para. 2: "Visual learners... learn best from visual displays, including diagrams, illustrations, charts... they often take detailed notes... use colour-coded highlighting."',
+      },
+      {
+        id: "adv-r3-q5",
+        type: "multiple-choice",
+        section: "part1",
+        question:
+          "Q5 — Which type of learner is described?\n\n\"These learners prefer to try things themselves rather than simply watching or listening to an explanation.\"",
+        options: ["A. Visual", "B. Auditory", "C. Kinesthetic"],
+        correctAnswer: "C. Kinesthetic",
+        reason:
+          'Para. 4: "kinesthetic learners want to jump right in and try things for themselves."',
+      },
+      {
+        id: "adv-r3-q6",
+        type: "multiple-choice",
+        section: "part1",
+        question:
+          "Q6 — Which type of learner is described?\n\n\"These learners may read study material aloud and tend to remember things they have heard more easily.\"",
+        options: ["A. Visual", "B. Auditory", "C. Kinesthetic"],
+        correctAnswer: "B. Auditory",
+        reason:
+          'Para. 3: "they may read aloud to themselves when studying, and they tend to remember what they have heard more easily."',
+      },
+      // ── Part 2: Multiple Choice (Q7–Q9) ──────────────────────────
+      {
+        id: "adv-r3-q7",
+        type: "multiple-choice",
+        section: "part1",
+        question: "Q7 — According to the passage, auditory learners are often described as ___.",
+        options: [
+          "A. good at drawing and sketching",
+          "B. good with words",
+          "C. good at physical activities",
+          "D. good at memorising numbers",
+        ],
+        correctAnswer: "B. good with words",
+        reason:
+          'Para. 3: "Auditory learners are often described as good with words."',
+      },
+      {
+        id: "adv-r3-q8",
+        type: "multiple-choice",
+        section: "part1",
+        question: "Q8 — What can easily distract kinesthetic learners during class?",
+        options: [
+          "A. other people around them",
+          "B. background music or noise",
+          "C. charts and diagrams on the board",
+          "D. long written instructions",
+        ],
+        correctAnswer: "A. other people around them",
+        reason:
+          'Para. 4: "They are easily distracted by other people around them."',
+      },
+      {
+        id: "adv-r3-q9",
+        type: "multiple-choice",
+        section: "part1",
+        question:
+          "Q9 — What happens when teachers adapt their instruction to cater for a variety of learning styles?",
+        options: [
+          "A. Students become more competitive",
+          "B. Teachers find their work more difficult",
+          "C. Students prefer one specific style",
+          "D. Students are generally able to learn more",
+        ],
+        correctAnswer: "D. Students are generally able to learn more",
+        reason:
+          'Para. 5: "students are generally able to learn more and retain information more effectively."',
+      },
+      // ── Vocabulary Matching ───────────────────────────────────────
+      {
+        id: "adv-r3-vocab",
+        type: "task",
+        section: "final",
+        question:
+          "Vocabulary Matching — Cocokkan 20 kata berikut dengan definisinya:\n\napproach · auditory · conventional · distraction · dominant · effectively · engage · environment · hinder · identify · instruction · interaction · kinesthetic · obstruction · pace · preference · recognize · retention · strategy · visual",
+        sampleAnswer:
+          "1. approach — method/cara\n2. auditory — related to hearing/berkaitan dengan pendengaran\n3. conventional — traditional/konvensional\n4. distraction — something that takes attention away/gangguan\n5. dominant — most important/paling dominan\n6. effectively — in a way that produces good results/secara efektif\n7. engage — to involve or participate/melibatkan\n8. environment — surroundings/lingkungan\n9. hinder — to obstruct or block/menghalangi\n10. identify — to recognize or determine/mengidentifikasi\n11. instruction — directions or guidance/instruksi\n12. interaction — communication between people/interaksi\n13. kinesthetic — related to body movement/berkaitan dengan gerakan tubuh\n14. obstruction — something blocking the way/halangan\n15. pace — speed or rate/kecepatan\n16. preference — a greater liking for something/preferensi\n17. recognize — to identify from memory/mengenali\n18. retention — the ability to remember/kemampuan mengingat\n19. strategy — a plan or approach/strategi\n20. visual — related to sight/berkaitan dengan penglihatan",
       },
     ],
   },

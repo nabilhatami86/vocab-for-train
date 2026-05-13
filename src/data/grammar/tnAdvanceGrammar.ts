@@ -249,9 +249,85 @@ const advanceGrammarLessons: ModuleLesson[] = [
     ],
     exercises: [
       {
+        id: "adv-g1-mc1",
+        type: "multiple-choice",
+        question:
+          "My decision depends on ______ he will accept the offer or not.",
+        options: ["A. if", "B. whether", "C. that", "D. what"],
+        correctAnswer: "B. whether",
+        reason:
+          "'Whether' bisa menjadi objek preposisi ('on'), sedangkan 'if' tidak bisa. Pola: depends on + WHETHER + S + V.",
+      },
+      {
+        id: "adv-g1-mc2",
+        type: "multiple-choice",
+        question: "______ or not she passes the exam is not my concern.",
+        options: ["A. If", "B. That", "C. Whether", "D. What"],
+        correctAnswer: "C. Whether",
+        reason:
+          "'Whether' bisa berada di awal kalimat sebagai subject NC, sedangkan 'if' tidak bisa. 'Whether or not she passes' = NC sebagai subject.",
+      },
+      {
+        id: "adv-g1-mc3",
+        type: "multiple-choice",
+        question:
+          "The doctor recommended that the patient ______ a complete rest.",
+        options: ["A. takes", "B. took", "C. take", "D. to take"],
+        correctAnswer: "C. take",
+        reason:
+          "NC of Request: setelah 'recommended that', gunakan V1 (present subjunctive). Meskipun subject 'the patient' singular, subjunctive tetap 'take' (tanpa -s).",
+      },
+      {
+        id: "adv-g1-mc4",
+        type: "multiple-choice",
+        question:
+          "He was surprised by ______ his employees had quit without notice.",
+        options: ["A. that", "B. if", "C. whether", "D. the fact that"],
+        correctAnswer: "D. the fact that",
+        reason:
+          "'The fact that' bisa menjadi objek preposisi ('by'), sedangkan 'that' tidak bisa. Pola: surprised by + THE FACT THAT + S + V.",
+      },
+      {
+        id: "adv-g1-mc5",
+        type: "multiple-choice",
+        question:
+          "I don't know what I should wear to the party. → Abridgement yang benar?",
+        options: [
+          "A. I don't know what wearing to the party.",
+          "B. I don't know what to wear to the party.",
+          "C. I don't know to wear to the party.",
+          "D. I don't know what I wear to the party.",
+        ],
+        correctAnswer: "B. I don't know what to wear to the party.",
+        reason:
+          "Abridgement NC: conjunction dari wh-word (what) + sama subject + ada modal (should) → hapus S + modal, tambah 'to'. 'what I should wear' → 'what to wear'.",
+      },
+      {
+        id: "adv-g1-mc6",
+        type: "multiple-choice",
+        question: "He will hire ______ is the most qualified for the position.",
+        options: ["A. who", "B. whoever", "C. whom", "D. whomever"],
+        correctAnswer: "B. whoever",
+        reason:
+          "'Whoever' = siapa pun yang (subject position dalam NC as object). NC 'whoever is the most qualified' = objek dari 'hire'. 'Who' bisa tetapi 'whoever' lebih tepat untuk menyatakan 'anyone who'.",
+      },
+      {
+        id: "adv-g1-task",
+        type: "task",
+        section: "final",
+        question:
+          "A. Tentukan jenis NC (Question/Statement/Exclamation/Request) dan fungsinya (S/O/Complement/Obj.Prep):\n1. That she survived the accident is a miracle.\n2. The committee suggested that all members attend the meeting.\n3. I wonder whether they have arrived safely.\n4. She is amazed at how quickly he learned the language.\n5. Nobody knows whose car was parked in the director's spot.\n\nB. Buat abridgement dari kalimat berikut:\n6. She doesn't know how she should respond to the offer.\n7. He asked me where he could find a good restaurant.",
+        sampleAnswer:
+          "A.\n1. NC of Statement ('that') — Subject\n2. NC of Request ('that' + V1 subjunctive) — Object\n3. NC of Question (whether) — Object\n4. NC of Exclamation (how) — Object of Preposition\n5. NC of Question (whose + noun as modifier) — Object\n\nB.\n6. She doesn't know how to respond to the offer.\n   (how + she + should respond → how + to respond)\n7. He asked me where to find a good restaurant.\n   (where + he + could find → where + to find)",
+      },
+
+      // ── Exercise 9 — Correct / Incorrect ────────────────────────────────────
+      {
         id: "adv-g1-ex9-1",
         type: "multiple-choice",
-        question: "When the season starts is determined by the weather.",
+        section: "final",
+        question:
+          "Exercise 9 — Correct (C) or Incorrect (I)?\n\n\"When the season starts is determined by the weather.\"",
         options: ["C — Correct", "I — Incorrect"],
         correctAnswer: "C — Correct",
         reason:
@@ -260,7 +336,9 @@ const advanceGrammarLessons: ModuleLesson[] = [
       {
         id: "adv-g1-ex9-2",
         type: "multiple-choice",
-        question: "The manual how the device should be built.",
+        section: "final",
+        question:
+          "Exercise 9 — Correct (C) or Incorrect (I)?\n\n\"The manual how the device should be built.\"",
         options: ["C — Correct", "I — Incorrect"],
         correctAnswer: "I — Incorrect",
         reason:
@@ -269,7 +347,9 @@ const advanceGrammarLessons: ModuleLesson[] = [
       {
         id: "adv-g1-ex9-3",
         type: "multiple-choice",
-        question: "The schedule indicated if the teams would be playing in the final game.",
+        section: "final",
+        question:
+          "Exercise 9 — Correct (C) or Incorrect (I)?\n\n\"The schedule indicated if the teams would be playing in the final game.\"",
         options: ["C — Correct", "I — Incorrect"],
         correctAnswer: "C — Correct",
         reason:
@@ -278,7 +358,9 @@ const advanceGrammarLessons: ModuleLesson[] = [
       {
         id: "adv-g1-ex9-4",
         type: "multiple-choice",
-        question: "He refused to enter a plea could not be determined by the lawyer.",
+        section: "final",
+        question:
+          "Exercise 9 — Correct (C) or Incorrect (I)?\n\n\"He refused to enter a plea could not be determined by the lawyer.\"",
         options: ["C — Correct", "I — Incorrect"],
         correctAnswer: "I — Incorrect",
         reason:
@@ -287,7 +369,9 @@ const advanceGrammarLessons: ModuleLesson[] = [
       {
         id: "adv-g1-ex9-5",
         type: "multiple-choice",
-        question: "Talked about where we should go for lunch.",
+        section: "final",
+        question:
+          "Exercise 9 — Correct (C) or Incorrect (I)?\n\n\"Talked about where we should go for lunch.\"",
         options: ["C — Correct", "I — Incorrect"],
         correctAnswer: "I — Incorrect",
         reason:
@@ -296,7 +380,9 @@ const advanceGrammarLessons: ModuleLesson[] = [
       {
         id: "adv-g1-ex9-6",
         type: "multiple-choice",
-        question: "Why the condition of the patient deteriorated so rapidly it was not explained.",
+        section: "final",
+        question:
+          "Exercise 9 — Correct (C) or Incorrect (I)?\n\n\"Why the condition of the patient deteriorated so rapidly it was not explained.\"",
         options: ["C — Correct", "I — Incorrect"],
         correctAnswer: "I — Incorrect",
         reason:
@@ -305,7 +391,9 @@ const advanceGrammarLessons: ModuleLesson[] = [
       {
         id: "adv-g1-ex9-7",
         type: "multiple-choice",
-        question: "Whether or not the new office would be built was to be determined at the meeting.",
+        section: "final",
+        question:
+          "Exercise 9 — Correct (C) or Incorrect (I)?\n\n\"Whether or not the new office would be built was to be determined at the meeting.\"",
         options: ["C — Correct", "I — Incorrect"],
         correctAnswer: "C — Correct",
         reason:
@@ -314,7 +402,9 @@ const advanceGrammarLessons: ModuleLesson[] = [
       {
         id: "adv-g1-ex9-8",
         type: "multiple-choice",
-        question: "That the professor has not yet decided when the paper is due.",
+        section: "final",
+        question:
+          "Exercise 9 — Correct (C) or Incorrect (I)?\n\n\"That the professor has not yet decided when the paper is due.\"",
         options: ["C — Correct", "I — Incorrect"],
         correctAnswer: "I — Incorrect",
         reason:
@@ -323,7 +413,9 @@ const advanceGrammarLessons: ModuleLesson[] = [
       {
         id: "adv-g1-ex9-9",
         type: "multiple-choice",
-        question: "The contract will be awarded is the question to be answered at the meeting.",
+        section: "final",
+        question:
+          "Exercise 9 — Correct (C) or Incorrect (I)?\n\n\"The contract will be awarded is the question to be answered at the meeting.\"",
         options: ["C — Correct", "I — Incorrect"],
         correctAnswer: "I — Incorrect",
         reason:
@@ -332,192 +424,106 @@ const advanceGrammarLessons: ModuleLesson[] = [
       {
         id: "adv-g1-ex9-10",
         type: "multiple-choice",
-        question: "He always talked with whomever he pleased and did whatever he wanted.",
+        section: "final",
+        question:
+          "Exercise 9 — Correct (C) or Incorrect (I)?\n\n\"He always talked with whomever he pleased and did whatever he wanted.\"",
         options: ["C — Correct", "I — Incorrect"],
         correctAnswer: "C — Correct",
         reason:
           "S: He. V1: talked with + NC (whomever he pleased = obj. of prep). Conjunction: and. V2: did + NC (whatever he wanted = object). Compound sentence dengan dua NC. Kalimat benar.",
       },
+
+      // ── Part 1 Translation — NC (Pronoun) ───────────────────────────────────
       {
-        id: "adv-g1-tr1-1",
-        type: "short-answer",
-        section: "part1",
-        question: "Translate to English: Yang sudah berumur 17 tahun wajib memiliki KTP.",
-        sampleAnswer: "Whoever is already 17 years old must have an ID card.",
+        id: "adv-g1-trans1",
+        type: "task",
+        section: "final",
+        question:
+          "PART 1 — Terjemahkan kalimat berikut ke dalam bahasa Inggris menggunakan Noun Clause yang tepat!\n\n1. Yang sudah berumur 17 tahun wajib memiliki KTP.\n2. Kita tidak tahu siapa lagi yang bisa kita percaya di negara ini.\n3. Rakyat sedang melihat apakah semua program yang disampaikan oleh kandidat terpilih akan benar-benar direalisasikan dengan baik.\n4. Beberapa mahasiswa telah mengetahui mana yang harus mereka kerjakan terlebih dulu.\n5. Apa yang kita lakukan hari ini menentukan masa depan kita nanti.",
+        sampleAnswer:
+          "1. Whoever has reached the age of 17 is required to have an ID card.\n   → NC: 'Whoever has reached 17' = subject (whoever = siapa pun yang)\n\n2. We don't know who else we can trust in this country.\n   → NC: 'who else we can trust' = object of 'know'\n\n3. The people are watching whether all programs proposed by the elected candidate will truly be realized properly.\n   → NC: 'whether all programs...realized' = object of 'watching'\n\n4. Some students have already known which one they should do first.\n   → NC: 'which one they should do first' = object of 'known'\n\n5. What we do today determines our future.\n   → NC: 'What we do today' = subject (bersifat singular → 'determines')",
       },
+
+      // ── Part 2 Translation — NC (Adverb) ────────────────────────────────────
       {
-        id: "adv-g1-tr1-2",
-        type: "short-answer",
-        section: "part1",
-        question: "Translate to English: Kita tidak tahu siapa lagi yang bisa kita percaya di negara ini.",
-        sampleAnswer: "We don't know who else we can trust in this country.",
-      },
-      {
-        id: "adv-g1-tr1-3",
-        type: "short-answer",
-        section: "part1",
-        question: "Translate to English: Rakyat sedang melihat apakah semua program yang disampaikan oleh kandidat terpilih akan benar-benar direalisasikan dengan baik.",
-        sampleAnswer: "The people are watching whether all the programs presented by the elected candidate will truly be realized well.",
-      },
-      {
-        id: "adv-g1-tr1-4",
-        type: "short-answer",
-        section: "part1",
-        question: "Translate to English: Beberapa mahasiswa telah mengetahui mana yang harus mereka kerjakan terlebih dulu.",
-        sampleAnswer: "Some students have already known which one they should work on first.",
-      },
-      {
-        id: "adv-g1-tr1-5",
-        type: "short-answer",
-        section: "part1",
-        question: "Translate to English: Apa yang kita lakukan hari ini menentukan masa depan kita nanti.",
-        sampleAnswer: "What we do today determines our future.",
-      },
-      {
-        id: "adv-g1-tr2-1",
-        type: "short-answer",
-        section: "part2",
-        question: "Translate to English: Kita harus paham kapan kita harus diam.",
-        sampleAnswer: "We must understand when we should keep silent.",
-      },
-      {
-        id: "adv-g1-tr2-2",
-        type: "short-answer",
-        section: "part2",
-        question: "Translate to English: Kepribadian kita ditentukan oleh bagaimana kita dulu dididik.",
-        sampleAnswer: "Our personality is determined by how we were raised.",
-      },
-      {
-        id: "adv-g1-tr2-3",
-        type: "short-answer",
-        section: "part2",
-        question: "Translate to English: Menjadi bahagia tidak dijamin oleh berapa banyak uang yang kita miliki.",
-        sampleAnswer: "Being happy is not guaranteed by how much money we have.",
-      },
-      {
-        id: "adv-g1-tr2-4",
-        type: "short-answer",
-        section: "part2",
-        question: "Translate to English: Kapan dan di mana kita akan pergi masih direncanakan.",
-        sampleAnswer: "When and where we will go is still being planned.",
-      },
-      {
-        id: "adv-g1-tr2-5",
-        type: "short-answer",
-        section: "part2",
-        question: "Translate to English: Para pendaki dapat dengan cepat menentukan mana langkah yang harus mereka ambil ketika tersesat.",
-        sampleAnswer: "The hikers can quickly determine which step they should take when lost.",
+        id: "adv-g1-trans2",
+        type: "task",
+        section: "final",
+        question:
+          "PART 2 — Terjemahkan kalimat berikut ke dalam bahasa Inggris menggunakan Noun Clause yang tepat!\n\n1. Kita harus paham kapan kita harus diam.\n2. Kepribadian kita ditentukan oleh bagaimana kita dulu dididik.\n3. Menjadi bahagia tidak dijamin oleh berapa banyak uang yang kita miliki.\n4. Kapan dan di mana kita akan pergi masih direncanakan.\n5. Para pendaki dapat dengan cepat menentukan mana langkah yang harus mereka ambil ketika tersesat.",
+        sampleAnswer:
+          "1. We must understand when we should be silent.\n   → NC: 'when we should be silent' = object of 'understand'\n   (Abridgement: We must understand when to be silent.)\n\n2. Our personality is determined by how we were raised/educated.\n   → NC: 'how we were raised' = object of preposition 'by'\n\n3. Being happy is not guaranteed by how much money we have.\n   → NC: 'how much money we have' = object of preposition 'by'\n   Alt: How much money we have does not guarantee happiness.\n\n4. When and where we will go is still being planned.\n   → Two NC joined: 'When and where we will go' = compound NC as subject\n   (singular → 'is still being planned')\n\n5. Hikers can quickly determine which steps they should take when they get lost.\n   → NC: 'which steps they should take when they get lost' = object of 'determine'",
       },
     ],
   },
 
-  // ── Day 3 · The Difference between AC and NC ────────────────────────────────
+  // ── Day 3 · NC of Statement, Request & Exclamation ──────────────────────────
   {
     id: "adv-grammar-2",
     track: "grammar",
     day: 3,
     tutor: "Ms. Vita",
-    title: "The Difference between AC and NC",
-    subtitle: "Cara Sistematis Membedakan Adjective Clause dan Noun Clause",
+    title: "Noun Clause — Statement, Request & Exclamation",
+    subtitle: "NC of Statement · NC of Request · NC of Exclamation",
     overview:
-      "AC (Adjective Clause) dan NC (Noun Clause) sering menggunakan conjunction yang sama sehingga mudah tertukar. Pelajari 3 cara membedakannya: posisi conjunction, posisi 'that', dan sifat NC sebagai singular noun.",
+      "Melanjutkan Noun Clause Day 2. NC of Statement (that/the fact that) memberikan sebuah pernyataan atau fakta. NC of Request (that + bare infinitive) menyatakan permintaan dengan subjunctive verb. NC of Exclamation (how/what) mengekspresikan kekaguman atau seruan.",
     materialSections: [
       {
-        title: "3 Cara Membedakan AC dan NC",
+        title: "A. NC of Statement",
         points: [
-          "CARA 1 — Posisi Conjunction:",
-          "  AC : conjunction 'who, whom, which, when, where, why' SELALU setelah NOUN.",
-          "  NC : conjunction bisa di posisi mana pun (tidak harus setelah noun).",
+          "Berfungsi memberikan sebuah PERNYATAAN.",
           "",
-          "  AC : The girl [WHO is singing the new song] is my friend.",
-          "       ↑ 'the girl' = antecedent/noun sebelum conjunction",
-          "  NC : [WHO is singing the new song] is my friend.",
-          "       ↑ NC langsung berfungsi sebagai subject, tidak ada antecedent",
+          "Conjunction:",
+          "  that          = Bahwa      → C + S + V",
+          "  the fact that = Fakta bahwa → C + S + V",
           "",
-          "CARA 2 — Posisi 'That':",
-          "  AC : 'that' SELALU tepat setelah noun.",
-          "  NC : 'that' bisa setelah noun, bisa tidak.",
+          "📌 NB:",
+          "  'The fact that' bisa menempati SEMUA posisi (subject, object, objek preposisi).",
+          "  'That' hanya bisa sebagai SUBJECT dan OBJECT of verb.",
           "",
-          "  AC : I borrow your book THAT is red.",
-          "       (book = noun, langsung diikuti 'that')",
-          "  NC : It is an evidence THAT he is a thief.",
-          "       (evidence = noun, 'that' menjelaskan ISI evidence — NC appositive)",
-          "  NC : I know THAT you are smart.",
-          "       ('that' tidak setelah noun — langsung NC as object)",
-          "",
-          "CARA 3 — NC sebagai Subject bersifat SINGULAR:",
-          "  NC : WHAT YOU DID hurts me.",
-          "       ↑ 'hurts' (singular), meski 'what you did' terdengar jamak",
+          "Contoh:",
+          "→ The fact that the four-clove leaf can bring luck was once just common beliefs.",
+          "→ She admits that the infrastructure is wrongly developed.",
+          "→ That Indonesia is still a developing country is widely believed.",
+          "→ They are concerned about the fact that the ministry will allocate the budget mistakenly.",
+          "→ The government states that the deforestation is illegal.",
+          "→ The architect insists that the workers follow her design.",
         ],
       },
       {
-        title: "Tabel Perbandingan AC vs NC",
+        title: "B. NC of Request",
         points: [
-          "╔══════════════╦═══════════════════════════╦═══════════════════════════╗",
-          "║ Aspek        ║ Adjective Clause (AC)     ║ Noun Clause (NC)          ║",
-          "╠══════════════╬═══════════════════════════╬═══════════════════════════╣",
-          "║ Fungsi       ║ Menerangkan noun          ║ Menggantikan noun         ║",
-          "║ Antecedent   ║ Selalu ada noun sebelumnya║ Tidak ada / berdiri sendiri║",
-          "║ Pertanyaan   ║ 'Which one?' (yang mana?) ║ 'What?' / 'Who?' (apa/siapa)║",
-          "║ 'That'       ║ Selalu setelah noun       ║ Boleh dimana saja         ║",
-          "║ Sifat gramatikal║ Modifier (keterangan)  ║ Noun (singular)           ║",
-          "╚══════════════╩═══════════════════════════╩═══════════════════════════╝",
+          "Berfungsi sebagai PERMINTAAN.",
+          "",
+          "Conjunction: that = Agar",
+          "",
+          "📌 NB:",
+          "  Berlaku subjunctive verb yang bermakna meminta:",
+          "  insist, beg, force, urge, ask, require, dll.",
+          "  Hanya sebagai OBJECT of verb.",
+          "  Verb di sub-clause → 'bare infinitive' (apapun subjeknya).",
+          "",
+          "Contoh:",
+          "→ I ask that my sister follow the rules.",
+          "→ Secretary urged that the document be submitted.",
+          "→ She begs that her friends pick her up tonight.",
         ],
       },
       {
-        title: "Contoh Perbandingan Berdampingan",
+        title: "C. NC of Exclamation",
         points: [
-          "🔵 WHO:",
-          "   AC : The man [who called you] is my uncle.",
-          "         ↑ 'the man' = antecedent → AC menerangkan 'man mana?'",
-          "   NC : [Who called you] is still a mystery.",
-          "         ↑ NC berdiri sendiri sebagai subject",
+          "Berfungsi sebagai SERUAN.",
           "",
-          "🟢 WHERE:",
-          "   AC : The city [where she was born] is beautiful.",
-          "         ↑ 'the city' = antecedent → menerangkan 'kota mana?'",
-          "   NC : I know [where she was born].",
-          "         ↑ NC sebagai objek dari 'know'",
+          "Conjunction:",
+          "  → How + Adj/Adv + S+V / +V    (Betapa...)",
+          "  → What + noun phrase + S+V / +V",
           "",
-          "🟠 WHEN:",
-          "   AC : The day [when we met] was rainy.",
-          "         ↑ 'the day' = antecedent → menerangkan 'hari yang mana?'",
-          "   NC : I don't know [when he will arrive].",
-          "         ↑ NC sebagai objek dari 'know'",
-          "",
-          "🔴 THAT:",
-          "   AC : I borrow your book [that is red].",
-          "         ↑ 'book' = antecedent",
-          "   NC : It is an evidence [that he is a thief].",
-          "         ↑ NC appositive — menjelaskan ISI 'evidence'",
-          "   NC : I know [that you are smart].",
-          "         ↑ NC sebagai object, tidak ada antecedent sebelum 'that'",
-          "",
-          "⚠ WHAT — HANYA NC, tidak pernah AC:",
-          "   ✅ NC : [What she said] made me happy. (subject NC)",
-          "   ❌ AC : tidak ada 'what' dalam AC",
-        ],
-      },
-      {
-        title: "Cara Cepat Identifikasi",
-        points: [
-          "Langkah identifikasi AC vs NC:",
-          "",
-          "  STEP 1: Temukan conjunction",
-          "          (who, whom, which, what, when, where, why, that, dll.)",
-          "",
-          "  STEP 2: Cek — apakah ada NOUN tepat sebelum conjunction?",
-          "          → Ada noun sebelumnya? = AC (Adjective Clause)",
-          "          → Tidak ada / NC berdiri mandiri? = NC (Noun Clause)",
-          "",
-          "  STEP 3: Tanya — apa fungsi klausa ini?",
-          "          → Menerangkan noun ('yang mana?')? = AC",
-          "          → Berfungsi sebagai noun (S/O/Complement)? = NC",
-          "",
-          "⚠ INGAT:",
-          "  • 'WHAT' tidak pernah digunakan sebagai conjunction AC.",
-          "  • NC sebagai subject → V singular.",
-          "  • 'THE FACT THAT' = NC appositive, bukan AC.",
+          "Contoh:",
+          "→ I'm amazed by how wonderful the scenery is.",
+          "→ What a beautiful weather today makes us happy.",
+          "→ She thinks how complicated Indonesian rules are.",
+          "→ I'm surprised by how handsome he is.",
+          "→ How beautiful you are inspires me.",
         ],
       },
     ],
@@ -525,95 +531,340 @@ const advanceGrammarLessons: ModuleLesson[] = [
       {
         id: "adv-g2-mc1",
         type: "multiple-choice",
+        section: "part1",
         question:
-          '"The man who built this house was an architect." — Klausa yang dicetak miring adalah...',
-        options: [
-          "A. Noun Clause — sebagai subject",
-          "B. Adjective Clause — menerangkan 'the man'",
-          "C. Noun Clause — sebagai object",
-          "D. Adjective Clause — menerangkan 'an architect'",
-        ],
-        correctAnswer: "B. Adjective Clause — menerangkan 'the man'",
+          "The board hasn't decided ___ the new branch will be established in Jakarta or Surabaya next year.",
+        options: ["a. whether", "b. who", "c. whom", "d. which"],
+        correctAnswer: "a. whether",
         reason:
-          "Ada antecedent 'the man' tepat sebelum 'who'. Klausa menjawab 'man yang mana?' → AC.",
+          "'Whether' untuk yes/no NC dengan dua pilihan (Jakarta OR Surabaya). Pola: haven't decided WHETHER...or...",
       },
       {
         id: "adv-g2-mc2",
         type: "multiple-choice",
+        section: "part1",
         question:
-          "\"Who built this house is still unknown.\" — Klausa 'Who built this house' adalah...",
-        options: [
-          "A. Adjective Clause — menerangkan 'this house'",
-          "B. Noun Clause — sebagai object",
-          "C. Noun Clause — sebagai subject",
-          "D. Adjective Clause — karena dimulai 'who'",
-        ],
-        correctAnswer: "C. Noun Clause — sebagai subject",
+          "The supervisor asked me ___ I had completed all the revisions before the deadline yesterday.",
+        options: ["a. if", "b. who", "c. whom", "d. which"],
+        correctAnswer: "a. if",
         reason:
-          "Tidak ada antecedent sebelum 'who'. 'Who built this house' berdiri sendiri sebagai subject kalimat ('is still unknown') → NC.",
+          "'If' untuk indirect yes/no question sebagai object of verb 'asked'. Pola: asked me IF + S + V.",
       },
       {
         id: "adv-g2-mc3",
         type: "multiple-choice",
+        section: "part1",
         question:
-          "\"It is an evidence that he committed the crime.\" — 'that he committed the crime' adalah...",
-        options: [
-          "A. AC — menerangkan 'an evidence'",
-          "B. NC — appositive yang menjelaskan isi 'an evidence'",
-          "C. AC — karena 'that' setelah noun",
-          "D. NC — sebagai subject",
-        ],
-        correctAnswer: "B. NC — appositive yang menjelaskan isi 'an evidence'",
+          "Nobody knows ___ will be appointed as the new ambassador to Japan by the president.",
+        options: ["a. who", "b. whom", "c. what", "d. which"],
+        correctAnswer: "a. who",
         reason:
-          "'That' setelah abstract noun seperti 'evidence' = NC appositive (menjelaskan ISI/konten, bukan menerangkan 'evidence yang mana?'). Berbeda dari AC yang menjawab 'which one?'.",
+          "'Who' sebagai SUBJECT dalam NC (posisi subject: ___ will be appointed). Refers to a person. 'Whom' untuk object position.",
       },
       {
         id: "adv-g2-mc4",
         type: "multiple-choice",
+        section: "part1",
         question:
-          '"What you did yesterday was unacceptable." — Kata kerja yang tepat untuk kalimat ini adalah...',
-        options: ["A. were", "B. was", "C. are", "D. have been"],
-        correctAnswer: "B. was",
+          "It remains unclear ___ the annual meeting will be held at the headquarters or at a different location.",
+        options: ["a. whether", "b. who", "c. what", "d. which"],
+        correctAnswer: "a. whether",
         reason:
-          "NC sebagai subject bersifat SINGULAR → V singular 'was'. 'What you did yesterday' = NC (singular), meskipun isinya menggambarkan kejadian. Pola: NC + V singular.",
+          "'Whether' untuk dua alternatif: headquarters OR different location. Pola: unclear WHETHER...or...",
       },
       {
         id: "adv-g2-mc5",
         type: "multiple-choice",
-        question: "Mana kalimat yang mengandung NOUN CLAUSE?",
-        options: [
-          "A. The reason why she left is unclear.",
-          "B. The book that she recommended is excellent.",
-          "C. Whatever you decide will be supported by us.",
-          "D. The place where they met is a café.",
-        ],
-        correctAnswer: "C. Whatever you decide will be supported by us.",
+        section: "part1",
+        question:
+          "The principal wants to find out ___ of the students in the science club won the national competition.",
+        options: ["a. which", "b. who", "c. whom", "d. what"],
+        correctAnswer: "a. which",
         reason:
-          "'Whatever you decide' = NC sebagai subject (tidak ada antecedent). A, B, D semuanya punya antecedent (reason, book, place) → AC.",
+          "'Which' sebagai modifier + noun: 'which OF the students' = memilih dari kelompok spesifik. Conjunction + noun (modifier) untuk pilihan terbatas.",
       },
       {
         id: "adv-g2-mc6",
         type: "multiple-choice",
+        section: "part1",
         question:
-          '"I borrow your pen that is blue." vs "I think that your pen is blue." — Perbedaannya?',
-        options: [
-          "A. Keduanya AC",
-          "B. Keduanya NC",
-          "C. Pertama AC, Kedua NC",
-          "D. Pertama NC, Kedua AC",
-        ],
-        correctAnswer: "C. Pertama AC, Kedua NC",
+          "We are not sure ___ the financial report was reviewed by the auditing team last week.",
+        options: ["a. if", "b. who", "c. whom", "d. which"],
+        correctAnswer: "a. if",
         reason:
-          "Kalimat 1: 'that is blue' setelah noun 'pen' → AC (menerangkan 'pen yang mana?'). Kalimat 2: 'that your pen is blue' setelah verb 'think' → NC sebagai object.",
+          "'If' untuk yes/no indirect question sebagai complement. Tidak ada 'or not' dan tidak di posisi subject/obj.prep → pakai 'if'.",
       },
       {
-        id: "adv-g2-task",
-        type: "task",
-        section: "final",
+        id: "adv-g2-mc7",
+        type: "multiple-choice",
+        section: "part1",
         question:
-          "Tentukan apakah klausa dalam kurung adalah AC atau NC, dan jelaskan alasannya:\n\n1. The scientist [who discovered penicillin] changed medicine forever.\n2. [Who discovered penicillin] is a well-known fact.\n3. I couldn't understand [why he refused the offer].\n4. The reason [why he refused the offer] surprised everyone.\n5. She is aware of [the fact that she made a mistake].\n6. The fact [that she stated in the report] was incorrect.\n7. [What the manager decided] affects all employees.\n8. The decision [that the manager made] affects all employees.",
+          "The question is ___ should be responsible for coordinating the international conference this year.",
+        options: ["a. who", "b. whom", "c. what", "d. which"],
+        correctAnswer: "a. who",
+        reason:
+          "'Who' sebagai SUBJECT NC (posisi subject: ___ should be responsible). NC sebagai complement. 'Whom' untuk object position.",
+      },
+      {
+        id: "adv-g2-mc8",
+        type: "multiple-choice",
+        section: "part1",
+        question:
+          "They haven't decided ___ will cancel the outdoor event because of the severe weather forecast or not.",
+        options: ["a. whether", "b. who", "c. whom", "d. which"],
+        correctAnswer: "a. whether",
+        reason:
+          "Ada 'or not' di akhir → 'whether'. Pola: WHETHER...or not = apakah...atau tidak.",
+      },
+      {
+        id: "adv-g2-mc9",
+        type: "multiple-choice",
+        section: "part1",
+        question:
+          "It has not been confirmed ___ the guest speaker will be able to attend the business summit in Singapore.",
+        options: ["a. whether or not", "b. who", "c. what", "d. which"],
+        correctAnswer: "a. whether or not",
+        reason:
+          "'Whether or not' sebagai kesatuan conjunction untuk yes/no question. NC sebagai subject dengan anticipatory 'It'. Pola: It has not been confirmed WHETHER OR NOT + S + V.",
+      },
+      {
+        id: "adv-g2-mc10",
+        type: "multiple-choice",
+        section: "part1",
+        question:
+          "We couldn't decide ___ of the two proposed designs would be more effective for the marketing campaign.",
+        options: ["a. which", "b. who", "c. whom", "d. what"],
+        correctAnswer: "a. which",
+        reason:
+          "'Which' + 'of the two' = memilih dari dua pilihan spesifik. 'Which + of + noun' untuk pilihan terbatas.",
+      },
+      {
+        id: "adv-g2-mc11",
+        type: "multiple-choice",
+        section: "part1",
+        question:
+          "The committee is discussing ___ should represent the university at the upcoming global youth forum.",
+        options: ["a. who", "b. whom", "c. what", "d. which"],
+        correctAnswer: "a. who",
+        reason:
+          "'Who' sebagai SUBJECT NC (posisi subject: ___ should represent). NC sebagai object of 'discussing'. Refers to a person.",
+      },
+      {
+        id: "adv-g2-mc12",
+        type: "multiple-choice",
+        section: "part1",
+        question:
+          "I'm not certain ___ she submitted the final version of her research paper on time or not.",
+        options: ["a. whether", "b. who", "c. what", "d. which"],
+        correctAnswer: "a. whether",
+        reason:
+          "Ada 'or not' di akhir → 'whether'. Pola: not certain WHETHER + S + V + or not. NC sebagai complement.",
+      },
+      {
+        id: "adv-g2-mc13",
+        type: "multiple-choice",
+        section: "part1",
+        question:
+          "They are still debating ___ will approve the new budget proposal after the unexpected increase in costs.",
+        options: ["a. whether or not", "b. what", "c. whom", "d. which"],
+        correctAnswer: "a. whether or not",
+        reason:
+          "'Whether or not' = apakah...atau tidak. NC menjadi object of 'debating'. Menyatakan ketidakpastian apakah proposal akan disetujui.",
+      },
+      {
+        id: "adv-g2-mc14",
+        type: "multiple-choice",
+        section: "part1",
+        question:
+          "The manager asked ___ could handle the investor presentation during his absence next Friday.",
+        options: ["a. who", "b. whom", "c. what", "d. which"],
+        correctAnswer: "a. who",
+        reason:
+          "'Who' sebagai SUBJECT NC (posisi subject: ___ could handle). NC sebagai object of 'asked'. Refers to a person.",
+      },
+      {
+        id: "adv-g2-mc15",
+        type: "multiple-choice",
+        section: "part1",
+        question:
+          "It is still unknown ___ caused the sudden breakdown of the main computer system during the conference.",
+        options: ["a. what", "b. which", "c. who", "d. whom"],
+        correctAnswer: "a. what",
+        reason:
+          "'What' sebagai SUBJECT NC (posisi subject: ___ caused the breakdown). Refers to a thing/cause (bukan orang). NC sebagai subject dengan anticipatory 'It'.",
+      },
+      {
+        id: "adv-g2-tr1",
+        type: "short-answer",
+        section: "part2",
+        question:
+          "Translate to English: Tidak jelas siapa yang mengirim paket itu ke kantor kami.",
+        sampleAnswer: "It is not clear who sent that package to our office.",
+      },
+      {
+        id: "adv-g2-tr2",
+        type: "short-answer",
+        section: "part2",
+        question:
+          "Translate to English: Tolong beritahu saya buku mana yang harus saya baca terlebih dahulu.",
+        sampleAnswer: "Please tell me which book I should read first.",
+      },
+      {
+        id: "adv-g2-tr3",
+        type: "short-answer",
+        section: "part2",
+        question:
+          "Translate to English: Kami masih mempertimbangkan apakah akan membuka cabang baru atau tidak.",
         sampleAnswer:
-          "1. AC — ada antecedent 'the scientist' sebelum 'who'\n2. NC — tidak ada antecedent, berfungsi sebagai subject\n3. NC — tidak ada antecedent, berfungsi sebagai object dari 'understand'\n4. AC — ada antecedent 'the reason' sebelum 'why'\n5. NC appositive — 'the fact that' menjelaskan isi/konten, objek preposisi 'of'\n6. AC — ada antecedent 'the fact', menerangkan 'fact yang mana?'\n7. NC — 'what' tidak pernah jadi conjunction AC, berfungsi sebagai subject\n8. AC — ada antecedent 'the decision' sebelum 'that'",
+          "We are still considering whether or not to open a new branch.",
+      },
+      {
+        id: "adv-g2-tr4",
+        type: "short-answer",
+        section: "part2",
+        question:
+          "Translate to English: Dia bertanya apakah kita bisa menunda rapat sampai minggu depan.",
+        sampleAnswer:
+          "She asked whether we could postpone the meeting until next week.",
+      },
+      {
+        id: "adv-g2-tr5",
+        type: "short-answer",
+        section: "part2",
+        question:
+          "Translate to English: Tidak seorang pun tahu siapa yang menemukan ide itu pertama kali.",
+        sampleAnswer: "Nobody knows who came up with that idea first.",
+      },
+      {
+        id: "adv-g2-tr6",
+        type: "short-answer",
+        section: "part2",
+        question:
+          "Translate to English: Masalahnya adalah apakah anggaran itu cukup untuk membiayai proyek ini.",
+        sampleAnswer:
+          "The problem is whether the budget is sufficient to fund this project.",
+      },
+      {
+        id: "adv-g2-tr7",
+        type: "short-answer",
+        section: "part2",
+        question:
+          "Translate to English: Saya tidak ingat apa yang dia katakan tentang peraturan baru itu.",
+        sampleAnswer: "I don't remember what she said about the new regulation.",
+      },
+      {
+        id: "adv-g2-tr8",
+        type: "short-answer",
+        section: "part2",
+        question:
+          "Translate to English: Tolong tanyakan siapa yang akan menjadi pembicara utama di acara tersebut.",
+        sampleAnswer: "Please ask who will be the main speaker at that event.",
+      },
+      {
+        id: "adv-g2-tr9",
+        type: "short-answer",
+        section: "part2",
+        question:
+          "Translate to English: Kami belum memutuskan apakah akan menerima tawaran tersebut atau tidak.",
+        sampleAnswer:
+          "We haven't decided whether or not to accept that offer.",
+      },
+      {
+        id: "adv-g2-tr10",
+        type: "short-answer",
+        section: "part2",
+        question:
+          "Translate to English: Polisi ingin tahu apa yang membuat tersangka melarikan diri.",
+        sampleAnswer: "The police want to know what made the suspect flee.",
+      },
+      {
+        id: "adv-g2-tr11",
+        type: "short-answer",
+        section: "part2",
+        question:
+          "Translate to English: Saya penasaran apakah perusahaan itu akan mempekerjakan karyawan baru tahun ini.",
+        sampleAnswer:
+          "I am curious whether that company will hire new employees this year.",
+      },
+      {
+        id: "adv-g2-tr12",
+        type: "short-answer",
+        section: "part2",
+        question:
+          "Translate to English: Mereka sedang mendiskusikan siapa yang akan menjadi duta merek.",
+        sampleAnswer: "They are discussing who will become the brand ambassador.",
+      },
+      {
+        id: "adv-g2-tr13",
+        type: "short-answer",
+        section: "part2",
+        question:
+          "Translate to English: Tidak ada yang tahu barang mana yang akan dijual dengan diskon terbesar.",
+        sampleAnswer:
+          "Nobody knows which item will be sold with the biggest discount.",
+      },
+      {
+        id: "adv-g2-tr14",
+        type: "short-answer",
+        section: "part2",
+        question:
+          "Translate to English: Belum dipastikan apakah pertandingan itu akan tetap dilaksanakan meskipun hujan.",
+        sampleAnswer:
+          "It has not been confirmed whether the match will still be held despite the rain.",
+      },
+      {
+        id: "adv-g2-tr15",
+        type: "short-answer",
+        section: "part2",
+        question:
+          "Translate to English: Terlihat sangat jelas bahwa bahagia tidak hanya soal uang.",
+        sampleAnswer:
+          "It is very clear that happiness is not just about money.",
+      },
+      {
+        id: "adv-g2-tr16",
+        type: "short-answer",
+        section: "part2",
+        question:
+          "Translate to English: Kita tidak bisa menolak fakta bahwa pendidikan berperan penting dalam bagaimana kita bersosialisasi.",
+        sampleAnswer:
+          "We cannot deny the fact that education plays an important role in how we socialize.",
+      },
+      {
+        id: "adv-g2-tr17",
+        type: "short-answer",
+        section: "part2",
+        question:
+          "Translate to English: Pecinta CGI kagum dengan betapa detailnya gambar dalam film Avatar karya James Cameron.",
+        sampleAnswer:
+          "CGI enthusiasts are amazed by how detailed the images are in James Cameron's Avatar.",
+      },
+      {
+        id: "adv-g2-tr18",
+        type: "short-answer",
+        section: "part2",
+        question:
+          "Translate to English: dr. Tirta menyarankan agar anak muda mengurangi konsumsi gula untuk menghindarkan mereka dari diabetes pada usia dini.",
+        sampleAnswer:
+          "Dr. Tirta suggested that young people reduce their sugar intake to prevent them from getting diabetes at an early age.",
+      },
+      {
+        id: "adv-g2-tr19",
+        type: "short-answer",
+        section: "part2",
+        question:
+          "Translate to English: Bahwa melakukan olahraga yang cukup dapat meningkatkan kualitas tidur telah dibuktikan oleh beberapa penelitian.",
+        sampleAnswer:
+          "That getting enough exercise can improve sleep quality has been proven by several studies.",
+      },
+      {
+        id: "adv-g2-tr20",
+        type: "short-answer",
+        section: "part2",
+        question:
+          "Translate to English: Jake Sully belum menemukan apa alasan yang dia harus jelaskan pada Tonowari, ketua klan Metkayina.",
+        sampleAnswer:
+          "Jake Sully hasn't found out what reason he should explain to Tonowari, the leader of the Metkayina clan.",
       },
     ],
   },
