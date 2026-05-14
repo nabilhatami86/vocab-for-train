@@ -327,7 +327,7 @@ const advanceGrammarLessons: ModuleLesson[] = [
         type: "multiple-choice",
         section: "final",
         question:
-          "Exercise 9 — Correct (C) or Incorrect (I)?\n\n\"When the season starts is determined by the weather.\"",
+          'Exercise 9 — Correct (C) or Incorrect (I)?\n\n"When the season starts is determined by the weather."',
         options: ["C — Correct", "I — Incorrect"],
         correctAnswer: "C — Correct",
         reason:
@@ -338,7 +338,7 @@ const advanceGrammarLessons: ModuleLesson[] = [
         type: "multiple-choice",
         section: "final",
         question:
-          "Exercise 9 — Correct (C) or Incorrect (I)?\n\n\"The manual how the device should be built.\"",
+          'Exercise 9 — Correct (C) or Incorrect (I)?\n\n"The manual how the device should be built."',
         options: ["C — Correct", "I — Incorrect"],
         correctAnswer: "I — Incorrect",
         reason:
@@ -349,7 +349,7 @@ const advanceGrammarLessons: ModuleLesson[] = [
         type: "multiple-choice",
         section: "final",
         question:
-          "Exercise 9 — Correct (C) or Incorrect (I)?\n\n\"The schedule indicated if the teams would be playing in the final game.\"",
+          'Exercise 9 — Correct (C) or Incorrect (I)?\n\n"The schedule indicated if the teams would be playing in the final game."',
         options: ["C — Correct", "I — Incorrect"],
         correctAnswer: "C — Correct",
         reason:
@@ -360,7 +360,7 @@ const advanceGrammarLessons: ModuleLesson[] = [
         type: "multiple-choice",
         section: "final",
         question:
-          "Exercise 9 — Correct (C) or Incorrect (I)?\n\n\"He refused to enter a plea could not be determined by the lawyer.\"",
+          'Exercise 9 — Correct (C) or Incorrect (I)?\n\n"He refused to enter a plea could not be determined by the lawyer."',
         options: ["C — Correct", "I — Incorrect"],
         correctAnswer: "I — Incorrect",
         reason:
@@ -371,7 +371,7 @@ const advanceGrammarLessons: ModuleLesson[] = [
         type: "multiple-choice",
         section: "final",
         question:
-          "Exercise 9 — Correct (C) or Incorrect (I)?\n\n\"Talked about where we should go for lunch.\"",
+          'Exercise 9 — Correct (C) or Incorrect (I)?\n\n"Talked about where we should go for lunch."',
         options: ["C — Correct", "I — Incorrect"],
         correctAnswer: "I — Incorrect",
         reason:
@@ -382,7 +382,7 @@ const advanceGrammarLessons: ModuleLesson[] = [
         type: "multiple-choice",
         section: "final",
         question:
-          "Exercise 9 — Correct (C) or Incorrect (I)?\n\n\"Why the condition of the patient deteriorated so rapidly it was not explained.\"",
+          'Exercise 9 — Correct (C) or Incorrect (I)?\n\n"Why the condition of the patient deteriorated so rapidly it was not explained."',
         options: ["C — Correct", "I — Incorrect"],
         correctAnswer: "I — Incorrect",
         reason:
@@ -393,7 +393,7 @@ const advanceGrammarLessons: ModuleLesson[] = [
         type: "multiple-choice",
         section: "final",
         question:
-          "Exercise 9 — Correct (C) or Incorrect (I)?\n\n\"Whether or not the new office would be built was to be determined at the meeting.\"",
+          'Exercise 9 — Correct (C) or Incorrect (I)?\n\n"Whether or not the new office would be built was to be determined at the meeting."',
         options: ["C — Correct", "I — Incorrect"],
         correctAnswer: "C — Correct",
         reason:
@@ -404,7 +404,7 @@ const advanceGrammarLessons: ModuleLesson[] = [
         type: "multiple-choice",
         section: "final",
         question:
-          "Exercise 9 — Correct (C) or Incorrect (I)?\n\n\"That the professor has not yet decided when the paper is due.\"",
+          'Exercise 9 — Correct (C) or Incorrect (I)?\n\n"That the professor has not yet decided when the paper is due."',
         options: ["C — Correct", "I — Incorrect"],
         correctAnswer: "I — Incorrect",
         reason:
@@ -415,7 +415,7 @@ const advanceGrammarLessons: ModuleLesson[] = [
         type: "multiple-choice",
         section: "final",
         question:
-          "Exercise 9 — Correct (C) or Incorrect (I)?\n\n\"The contract will be awarded is the question to be answered at the meeting.\"",
+          'Exercise 9 — Correct (C) or Incorrect (I)?\n\n"The contract will be awarded is the question to be answered at the meeting."',
         options: ["C — Correct", "I — Incorrect"],
         correctAnswer: "I — Incorrect",
         reason:
@@ -426,7 +426,7 @@ const advanceGrammarLessons: ModuleLesson[] = [
         type: "multiple-choice",
         section: "final",
         question:
-          "Exercise 9 — Correct (C) or Incorrect (I)?\n\n\"He always talked with whomever he pleased and did whatever he wanted.\"",
+          'Exercise 9 — Correct (C) or Incorrect (I)?\n\n"He always talked with whomever he pleased and did whatever he wanted."',
         options: ["C — Correct", "I — Incorrect"],
         correctAnswer: "C — Correct",
         reason:
@@ -526,8 +526,128 @@ const advanceGrammarLessons: ModuleLesson[] = [
           "→ How beautiful you are inspires me.",
         ],
       },
+      {
+        title: "5. Noun Clause Connector/Subjects",
+        points: [
+          "NC Connector/Subject berfungsi sebagai SUBJECT dalam noun clause sekaligus penghubung.",
+          "Connector ini: who · whoever · what · whatever · which · whichever",
+          "",
+          "📌 NC as OBJECT of verb:",
+          "   Pola: S  V  [NC Connector/Subject  V]",
+          "   Contoh: I know  [what  happened].",
+          "",
+          "📌 NC as SUBJECT:",
+          "   Pola: [NC Connector/Subject  V]  V",
+          "   Contoh: [What  happened]  was great.",
+          "",
+          "⚠️  Ingat: setelah NC Connector/Subject HARUS ada VERB di dalam noun clause.",
+          "   ❌ You should find out which the best physics department.",
+          "   ✅ You should find out which IS the best physics department.",
+        ],
+      },
     ],
     exercises: [
+      // ── Exercise 10: NC Connector/Subject — Correct (C) or Incorrect (I) ──────
+      {
+        id: "adv-g2-ex10-1",
+        type: "multiple-choice",
+        question:
+          'Exercise 10 — Correct (C) or Incorrect (I)?\n\n"The game show contestant was able to respond to whatever was asked."',
+        options: ["C — Correct", "I — Incorrect"],
+        correctAnswer: "C — Correct",
+        reason:
+          "NC Connector/Subject 'whatever' diikuti verb 'was asked' → NC sebagai object of preposition 'to'. Struktur benar.",
+      },
+      {
+        id: "adv-g2-ex10-2",
+        type: "multiple-choice",
+        question:
+          'Exercise 10 — Correct (C) or Incorrect (I)?\n\n"You should find out which the best physics department."',
+        options: ["C — Correct", "I — Incorrect"],
+        correctAnswer: "I — Incorrect",
+        reason:
+          "NC Connector/Subject 'which' harus diikuti verb dalam noun clause. Tidak ada verb setelah 'which'. Koreksi: '...find out which IS the best physics department.'",
+      },
+      {
+        id: "adv-g2-ex10-3",
+        type: "multiple-choice",
+        question:
+          'Exercise 10 — Correct (C) or Incorrect (I)?\n\n"The employee was unhappy about what was added to his job description."',
+        options: ["C — Correct", "I — Incorrect"],
+        correctAnswer: "C — Correct",
+        reason:
+          "NC Connector/Subject 'what' diikuti verb 'was added' → NC sebagai object of preposition 'about'. Struktur benar.",
+      },
+      {
+        id: "adv-g2-ex10-4",
+        type: "multiple-choice",
+        question:
+          'Exercise 10 — Correct (C) or Incorrect (I)?\n\n"Whoever wants to take the desert tour during spring break signing up at the office."',
+        options: ["C — Correct", "I — Incorrect"],
+        correctAnswer: "I — Incorrect",
+        reason:
+          "'Signing up' adalah Ving tanpa auxiliary — bukan main verb. NC Subject 'Whoever wants...' tidak memiliki main verb. Koreksi: '...should sign up at the office.'",
+      },
+      {
+        id: "adv-g2-ex10-5",
+        type: "multiple-choice",
+        question:
+          'Exercise 10 — Correct (C) or Incorrect (I)?\n\n"The motorist was unable to discover who he had struck his car."',
+        options: ["C — Correct", "I — Incorrect"],
+        correctAnswer: "I — Incorrect",
+        reason:
+          "Struktur NC salah: 'who he had struck his car' ambigu/janggal. Koreksi: '...discover whose car he had struck.' (jika NC sebagai object dari 'struck')",
+      },
+      {
+        id: "adv-g2-ex10-6",
+        type: "multiple-choice",
+        question:
+          'Exercise 10 — Correct (C) or Incorrect (I)?\n\n"The voters should elect whichever of the candidates seems best to them."',
+        options: ["C — Correct", "I — Incorrect"],
+        correctAnswer: "C — Correct",
+        reason:
+          "NC Connector/Subject 'whichever' diikuti prepositional phrase 'of the candidates' lalu verb 'seems' → NC sebagai object of 'elect'. Struktur benar.",
+      },
+      {
+        id: "adv-g2-ex10-7",
+        type: "multiple-choice",
+        question:
+          'Exercise 10 — Correct (C) or Incorrect (I)?\n\n"It was difficult to distinguish what was on sale and what was merely on display."',
+        options: ["C — Correct", "I — Incorrect"],
+        correctAnswer: "C — Correct",
+        reason:
+          "Dua NC Connector/Subject: 'what was on sale' dan 'what was merely on display', keduanya sebagai object of 'distinguish'. Struktur benar.",
+      },
+      {
+        id: "adv-g2-ex10-8",
+        type: "multiple-choice",
+        question:
+          'Exercise 10 — Correct (C) or Incorrect (I)?\n\n"You should buy whatever the cheapest and most durable."',
+        options: ["C — Correct", "I — Incorrect"],
+        correctAnswer: "I — Incorrect",
+        reason:
+          "NC 'whatever the cheapest and most durable' tidak memiliki verb. Koreksi: '...whatever IS the cheapest and most durable.'",
+      },
+      {
+        id: "adv-g2-ex10-9",
+        type: "multiple-choice",
+        question:
+          'Exercise 10 — Correct (C) or Incorrect (I)?\n\n"What was written in the letter angered him beyond belief."',
+        options: ["C — Correct", "I — Incorrect"],
+        correctAnswer: "C — Correct",
+        reason:
+          "NC Connector/Subject 'What was written in the letter' berfungsi sebagai SUBJECT kalimat, diikuti main verb 'angered'. Struktur benar.",
+      },
+      {
+        id: "adv-g2-ex10-10",
+        type: "multiple-choice",
+        question:
+          'Exercise 10 — Correct (C) or Incorrect (I)?\n\n"You can spend your time with whoever important to you."',
+        options: ["C — Correct", "I — Incorrect"],
+        correctAnswer: "I — Incorrect",
+        reason:
+          "NC 'whoever important to you' tidak memiliki verb. Koreksi: '...with whoever IS important to you.'",
+      },
       {
         id: "adv-g2-mc1",
         type: "multiple-choice",
@@ -750,7 +870,8 @@ const advanceGrammarLessons: ModuleLesson[] = [
         section: "part2",
         question:
           "Translate to English: Saya tidak ingat apa yang dia katakan tentang peraturan baru itu.",
-        sampleAnswer: "I don't remember what she said about the new regulation.",
+        sampleAnswer:
+          "I don't remember what she said about the new regulation.",
       },
       {
         id: "adv-g2-tr8",
@@ -766,8 +887,7 @@ const advanceGrammarLessons: ModuleLesson[] = [
         section: "part2",
         question:
           "Translate to English: Kami belum memutuskan apakah akan menerima tawaran tersebut atau tidak.",
-        sampleAnswer:
-          "We haven't decided whether or not to accept that offer.",
+        sampleAnswer: "We haven't decided whether or not to accept that offer.",
       },
       {
         id: "adv-g2-tr10",
@@ -792,7 +912,8 @@ const advanceGrammarLessons: ModuleLesson[] = [
         section: "part2",
         question:
           "Translate to English: Mereka sedang mendiskusikan siapa yang akan menjadi duta merek.",
-        sampleAnswer: "They are discussing who will become the brand ambassador.",
+        sampleAnswer:
+          "They are discussing who will become the brand ambassador.",
       },
       {
         id: "adv-g2-tr13",
@@ -869,11 +990,496 @@ const advanceGrammarLessons: ModuleLesson[] = [
     ],
   },
 
-  // ── Day 3 · Adverbial Clause ─────────────────────────────────────────────────
+  // ── Day 4 · Peringkasan NC & Adjective Clause ───────────────────────────────
   {
     id: "adv-grammar-3",
     track: "grammar",
-    day: 3,
+    day: 4,
+    tutor: "Ms. Vita",
+    title: "Peringkasan NC · Adjective Clause",
+    subtitle: "NC Omitting & Abridgement · AC Kinds · AC Reducing & Omitting",
+    overview:
+      "Peringkasan Noun Clause adalah proses perubahan struktur kalimat tanpa merubah makna, melalui Omitting (penghapusan 'that') dan Abridgement (penyingkatan menjadi to-infinitive). Adjective Clause (AC) adalah clause yang berfungsi memodifikasi noun, menggunakan relative pronoun who/whom/which/that/whose atau relative adverb when/where/why. AC dapat dipersingkat melalui Reducing (mengubah verb menjadi participle) atau Omitting.",
+    materialSections: [
+      {
+        title: "A. Peringkasan NC — 1. Omitting",
+        points: [
+          "Penghapusan Conjunction 'that' yang bermakna 'bahwa' di posisi object of verb.",
+          "",
+          "e.g.:",
+          "→ They admit that they are guilty.         → They admit they are guilty.",
+          "→ She states that the ruler are complicated. → She states the ruler are complicated.",
+          "→ The pilot said that the passengers should be calming down during turbulency.",
+          "   → The pilot said the passengers should be calming down during turbulency.",
+        ],
+      },
+      {
+        title: "A. Peringkasan NC — 2. Abridgement",
+        points: [
+          "Penghapusan subject di Sub-Clause (SC) dan mengubah verb SC menjadi 'to-Infinitive'.",
+          "",
+          "Form  : Conj + to + V₁ (Bare)",
+          "",
+          "Syarat:",
+          "  1. NC yang berposisi object of verb + preposition",
+          "  2. Seluruh NC yang memakai Conjunction WH",
+          "  3. Subject antara SC dan MC harus sama",
+          "  4. Ada modal di SC (tidak bisa untuk NC of Exclamation)",
+          "",
+          "Contoh:",
+          "→ She wonders whether she can finish the task (or not).",
+          "   A: She wonders whether to finish the task (or not).",
+          "",
+          "→ I know what I should do next.",
+          "   A: I know what to do next.",
+          "",
+          "→ She asked which book she should read first.",
+          "   A: She asked which book to read first.",
+          "",
+          "→ They don't understand where they must go.",
+          "   A: They don't understand where to go.",
+          "",
+          "→ I will tell you how I can make this cake.",
+          "   A: I will tell you how to make this cake.",
+          "",
+          "→ I'm concerned how much money I will save.",
+          "   A: I'm concerned how much money to save.",
+          "",
+          "→ We're interested in how we can solve the problem.",
+          "→ The scientist explains about how to discover the new formula.",
+          "→ The evidence shows how to be found.",
+        ],
+      },
+      {
+        title: "B. Adjective Clause — Pengertian & Jenis",
+        points: [
+          "Clause yang berfungsi memodifikasi noun.",
+          "Letak: di belakang noun yang dijelaskan.",
+          "",
+          "Contoh sederhana:",
+          "  I have 2 flowers. + They are roses.",
+          "  → I have 2 flowers which are roses.",
+          "",
+          "  I talk to a man. + I deal with him.",
+          "  → I talk to a man whom I deal with.",
+          "  → A man with whom I deal.",
+          "",
+          "Kinds of Adjective Clause:",
+          "",
+          "who   : C+V → untuk orang → yang",
+          "  e.g. A leader who gives us an advice looks so great.",
+          "",
+          "whom  : C+S+V → untuk orang → yang (posisi object)",
+          "  e.g. I call a girl whom my brother likes.",
+          "",
+          "which : C+S+V / C+V → untuk benda/hal",
+          "  e.g. I carry a box which is heavy.",
+          "",
+          "that  : C+S+V / C+V → untuk semua (orang & benda)",
+          "  e.g. Many students that join the competition are so smart.",
+          "",
+          "whose : C+noun+S+V / +V → Kepemilikan",
+          "  e.g. A girl whose car is red is angry.",
+          "",
+          "when  : C+S+V → Keterangan waktu → ketika",
+          "  e.g. I remember a time when I met you.",
+          "",
+          "where : C+S+V → Keterangan tempat → di mana",
+          "  e.g. A hotel where my mom works is huge.",
+          "",
+          "why   : C+S+V → Alasan → mengapa",
+          "  e.g. I know the reason why she looks so sad.",
+        ],
+      },
+      {
+        title: "C. Peringkasan AC — 1. Reducing (C+V)",
+        points: [
+          "Perubahan verb dalam AC menjadi bentuk yang lebih singkat.",
+          "",
+          "Jenis perubahan verb:",
+          "  Active  : V-ing (Present Participle)",
+          "  Passive : V3 (Past Participle), adj, noun, dll.",
+          "  Non-verb: ANA / Being + ANA",
+          "",
+          "Contoh:",
+          "→ A man who stands is my friend.",
+          "   → A man standing is my friend.   [Active → V-ing]",
+          "",
+          "→ I work at the company which is built too quickly.",
+          "   → I work at the company built too quickly.   [Passive → V3]",
+          "",
+          "→ Elon Musk who is the founder of Tesla is so smart.",
+          "   → Elon Musk, the founder of Tesla, is so smart.   [Non-verb → Appositive]",
+        ],
+      },
+      {
+        title: "C. Peringkasan AC — 2. Omitting (C+S+V)",
+        points: [
+          "Penghapusan conjunction + subject dalam AC.",
+          "",
+          "Contoh:",
+          "→ I call a girl whom he likes.",
+          "→ A time when I saw you every yesterday.",
+        ],
+      },
+    ],
+    exercises: [
+      // ── TOEFL Exercise (Skills 9–12) ─ regular / no section ──────────────────
+      {
+        id: "adv-g3-toefl-1",
+        type: "multiple-choice",
+        question:
+          "TOEFL Exercise (Skills 9–12)\n\nDolphins form extremely complicated allegiances and ____ continually changing.",
+        options: [
+          "A. enmities that",
+          "B. that are enmities",
+          "C. enmities that are",
+          "D. that enmities",
+        ],
+        correctAnswer: "C. enmities that are",
+        reason:
+          "'Enmities that are continually changing' = noun + adjective clause (AC). 'that are' = relative pronoun + BE sebagai verb dalam AC. Option A ('enmities that') tidak perlu karena 'change' membutuhkan BE untuk membentuk progressive.",
+      },
+      {
+        id: "adv-g3-toefl-2",
+        type: "multiple-choice",
+        question:
+          "Scientists are now beginning to conduct experiments on ____ trigger different sorts of health risks.",
+        options: [
+          "A. noise pollution can",
+          "B. that noise pollution",
+          "C. how noise pollution",
+          "D. how noise pollution can",
+        ],
+        correctAnswer: "D. how noise pollution can",
+        reason:
+          "Preposisi 'on' membutuhkan noun sebagai objeknya → NC. 'How noise pollution can trigger' = NC of Question (how) sebagai object of preposition. 'Can' diperlukan sebagai modal verb dalam NC.",
+      },
+      {
+        id: "adv-g3-toefl-3",
+        type: "multiple-choice",
+        question:
+          "The Apollo 11 astronauts ____ of the Earth's inhabitants witnessed on the famous first moonwalk on July 20, 1969, were Neil Armstrong and Buzz Aldrin.",
+        options: [
+          "A. whom",
+          "B. whom millions",
+          "C. were some",
+          "D. whom some were",
+        ],
+        correctAnswer: "B. whom millions",
+        reason:
+          "'Whom millions of the Earth's inhabitants witnessed' = AC modifying 'astronauts'. 'Whom' = relative pronoun (object position), 'millions of the Earth's inhabitants' = subject dari AC. Option A tidak ada subject AC-nya.",
+      },
+      {
+        id: "adv-g3-toefl-4",
+        type: "multiple-choice",
+        question:
+          "At the end of the nineteenth century, Alfred Binet developed a test for measuring intelligence ____ served as the basis of modern IQ tests.",
+        options: ["A. has", "B. it has", "C. and", "D. which has"],
+        correctAnswer: "D. which has",
+        reason:
+          "'Which has served as the basis of modern IQ tests' = AC modifying 'test'. 'Which' = relative pronoun untuk benda (test). 'Has served' = present perfect sebagai verb dalam AC.",
+      },
+      {
+        id: "adv-g3-toefl-5",
+        type: "multiple-choice",
+        question:
+          "____ have at least four hours of hazardous materials response training is mandated by federal law.",
+        options: [
+          "A. All police officers",
+          "B. All police officers must",
+          "C. That all police officers",
+          "D. For all police officers",
+        ],
+        correctAnswer: "C. That all police officers",
+        reason:
+          "Kalimat ini membutuhkan NC sebagai SUBJECT ('is mandated' = main verb). 'That all police officers have at least four hours...' = NC of Statement sebagai subject. 'That' = conjunction NC.",
+      },
+      {
+        id: "adv-g3-toefl-6",
+        type: "multiple-choice",
+        question:
+          "A cloud's reservoir of negative charge extends upward from the altitude at ____ the freezing point.",
+        options: [
+          "A. temperatures hit",
+          "B. hit temperatures",
+          "C. which temperatures hit",
+          "D. which hit temperatures",
+        ],
+        correctAnswer: "C. which temperatures hit",
+        reason:
+          "'at which temperatures hit the freezing point' = AC modifying 'altitude'. 'at which' = preposition + relative pronoun untuk benda. 'temperatures' = subject AC, 'hit' = verb AC.",
+      },
+      {
+        id: "adv-g3-toefl-7",
+        type: "multiple-choice",
+        question:
+          "In a 1988 advanced officers' training program, Sampson developed a plan to incorporate police in enforcing environmental protection laws whenever ____ feasible.",
+        options: ["A. it is", "B. is", "C. has", "D. it has"],
+        correctAnswer: "A. it is",
+        reason:
+          "'whenever it is feasible' = Adverbial Clause of Time. 'it' = dummy subject (expletive), 'is' = verb, 'feasible' = adjective complement. Pola lengkap: whenever + S + V + Adj.",
+      },
+      {
+        id: "adv-g3-toefl-8",
+        type: "multiple-choice",
+        question:
+          "____ will be carried in the next space shuttle payload has not yet been announced to the public.",
+        options: ["A. It", "B. What", "C. When", "D. That"],
+        correctAnswer: "B. What",
+        reason:
+          "'What will be carried in the next space shuttle payload' = NC sebagai SUBJECT kalimat. 'What' = NC connector/subject untuk benda yang tidak diketahui. 'has not yet been announced' = main verb.",
+      },
+      {
+        id: "adv-g3-toefl-9",
+        type: "multiple-choice",
+        question:
+          "During free fall, ____ up to a full minute, a skydiver will fall at a constant speed of 120 m.p.h.",
+        options: ["A. it is", "B. which is", "C. being", "D. is"],
+        correctAnswer: "B. which is",
+        reason:
+          "'which is up to a full minute' = AC non-restrictive modifying 'free fall'. 'which' = relative pronoun untuk benda (free fall), 'is' = verb, 'up to a full minute' = complement.",
+      },
+      {
+        id: "adv-g3-toefl-10",
+        type: "multiple-choice",
+        question:
+          "The fact ____ the most important ratings period is about to begin has caused all the networks to shore up their schedules.",
+        options: ["A. is that", "B. of", "C. that", "D. what"],
+        correctAnswer: "C. that",
+        reason:
+          "'The fact that...' = NC of Statement. 'that' = conjunction NC yang mengikuti noun 'fact'. Pola: the fact + that + S + V.",
+      },
+      // ── Exercise 4 — Present Participles ─ Part 1 ────────────────────────────
+      {
+        id: "adv-g3-ex4-1",
+        type: "multiple-choice",
+        section: "part1",
+        question:
+          "Exercise 4 — Present Participles: Correct (C) or Incorrect (I)?\n\n\"The companies offering the lowest prices will have the most customers.\"",
+        options: ["C — Correct", "I — Incorrect"],
+        correctAnswer: "C — Correct",
+        reason:
+          "'offering' = present participle (ADJ modifier untuk 'companies'), 'will have' = main verb. Satu verb utama, satu participle modifier. Correct.",
+      },
+      {
+        id: "adv-g3-ex4-2",
+        type: "multiple-choice",
+        section: "part1",
+        question:
+          "Exercise 4 — Present Participles: Correct (C) or Incorrect (I)?\n\n\"Those travelers are completing their trip on Delta should report to Gate Three.\"",
+        options: ["C — Correct", "I — Incorrect"],
+        correctAnswer: "I — Incorrect",
+        reason:
+          "'are completing' = verb1, 'should report' = verb2. Tidak ada conjunction yang menghubungkan. Double verb → Incorrect. Harusnya: 'Those travelers completing their trip on Delta should report...'",
+      },
+      {
+        id: "adv-g3-ex4-3",
+        type: "multiple-choice",
+        section: "part1",
+        question:
+          "Exercise 4 — Present Participles: Correct (C) or Incorrect (I)?\n\n\"The artisans were demonstrating various handicrafts at booths throughout the fair.\"",
+        options: ["C — Correct", "I — Incorrect"],
+        correctAnswer: "C — Correct",
+        reason:
+          "'were demonstrating' = verb (progressive tense) — hanya satu verb dalam kalimat. Kalimat benar secara struktural. Correct.",
+      },
+      {
+        id: "adv-g3-ex4-4",
+        type: "multiple-choice",
+        section: "part1",
+        question:
+          "Exercise 4 — Present Participles: Correct (C) or Incorrect (I)?\n\n\"The fraternities are giving the wildest parties attract the most new pledges.\"",
+        options: ["C — Correct", "I — Incorrect"],
+        correctAnswer: "I — Incorrect",
+        reason:
+          "'are giving' = verb1, 'attract' = verb2. Tidak ada conjunction. Double verb → Incorrect. Harusnya: 'The fraternities giving the wildest parties attract the most new pledges.'",
+      },
+      {
+        id: "adv-g3-ex4-5",
+        type: "multiple-choice",
+        section: "part1",
+        question:
+          "Exercise 4 — Present Participles: Correct (C) or Incorrect (I)?\n\n\"The first team winning four games is awarded the championship.\"",
+        options: ["C — Correct", "I — Incorrect"],
+        correctAnswer: "C — Correct",
+        reason:
+          "'winning' = present participle (ADJ modifier untuk 'team'), 'is awarded' = main verb. Correct.",
+      },
+      {
+        id: "adv-g3-ex4-6",
+        type: "multiple-choice",
+        section: "part1",
+        question:
+          "Exercise 4 — Present Participles: Correct (C) or Incorrect (I)?\n\n\"The speaker was trying to make his point was often interrupted vociferously.\"",
+        options: ["C — Correct", "I — Incorrect"],
+        correctAnswer: "I — Incorrect",
+        reason:
+          "'was trying' = verb1, 'was interrupted' = verb2. Tidak ada conjunction. Double verb → Incorrect. Harusnya: 'The speaker trying to make his point was often interrupted vociferously.'",
+      },
+      {
+        id: "adv-g3-ex4-7",
+        type: "multiple-choice",
+        section: "part1",
+        question:
+          "Exercise 4 — Present Participles: Correct (C) or Incorrect (I)?\n\n\"The fruits were rotting because of the moisture in the crates carrying them to market.\"",
+        options: ["C — Correct", "I — Incorrect"],
+        correctAnswer: "C — Correct",
+        reason:
+          "'were rotting' = main verb (progressive), 'carrying' = present participle (ADJ modifier untuk 'crates'). Correct.",
+      },
+      {
+        id: "adv-g3-ex4-8",
+        type: "multiple-choice",
+        section: "part1",
+        question:
+          "Exercise 4 — Present Participles: Correct (C) or Incorrect (I)?\n\n\"Any students desiring official transcripts should complete the appropriate form.\"",
+        options: ["C — Correct", "I — Incorrect"],
+        correctAnswer: "C — Correct",
+        reason:
+          "'desiring' = present participle (ADJ modifier untuk 'students'), 'should complete' = main verb. Correct.",
+      },
+      {
+        id: "adv-g3-ex4-9",
+        type: "multiple-choice",
+        section: "part1",
+        question:
+          "Exercise 4 — Present Participles: Correct (C) or Incorrect (I)?\n\n\"The advertisements were announcing the half-day sale received a lot of attention.\"",
+        options: ["C — Correct", "I — Incorrect"],
+        correctAnswer: "I — Incorrect",
+        reason:
+          "'were announcing' = verb1, 'received' = verb2. Tidak ada conjunction. Double verb → Incorrect. Harusnya: 'The advertisements announcing the half-day sale received a lot of attention.'",
+      },
+      {
+        id: "adv-g3-ex4-10",
+        type: "multiple-choice",
+        section: "part1",
+        question:
+          "Exercise 4 — Present Participles: Correct (C) or Incorrect (I)?\n\n\"The spices flavoring the meal were quite distinctive.\"",
+        options: ["C — Correct", "I — Incorrect"],
+        correctAnswer: "C — Correct",
+        reason:
+          "'flavoring' = present participle (ADJ modifier untuk 'spices'), 'were' = main verb. Correct.",
+      },
+      // ── Exercise 5 — Past Participles ─ Part 2 ───────────────────────────────
+      {
+        id: "adv-g3-ex5-1",
+        type: "multiple-choice",
+        section: "part2",
+        question:
+          "Exercise 5 — Past Participles: Correct (C) or Incorrect (I)?\n\n\"The money was offered by the client was not accepted.\"",
+        options: ["C — Correct", "I — Incorrect"],
+        correctAnswer: "I — Incorrect",
+        reason:
+          "'was offered' = verb1, 'was not accepted' = verb2. Double passive tanpa conjunction → Incorrect. Harusnya: 'The money offered by the client was not accepted.'",
+      },
+      {
+        id: "adv-g3-ex5-2",
+        type: "multiple-choice",
+        section: "part2",
+        question:
+          "Exercise 5 — Past Participles: Correct (C) or Incorrect (I)?\n\n\"The car listed in the advertisement had already stalled.\"",
+        options: ["C — Correct", "I — Incorrect"],
+        correctAnswer: "C — Correct",
+        reason:
+          "'listed' = past participle (ADJ modifier untuk 'car'), 'had stalled' = main verb (past perfect). Correct.",
+      },
+      {
+        id: "adv-g3-ex5-3",
+        type: "multiple-choice",
+        section: "part2",
+        question:
+          "Exercise 5 — Past Participles: Correct (C) or Incorrect (I)?\n\n\"The chapters were taught by the professor this morning will be on next week's exam.\"",
+        options: ["C — Correct", "I — Incorrect"],
+        correctAnswer: "I — Incorrect",
+        reason:
+          "'were taught' = verb1, 'will be' = verb2. Double verb tanpa conjunction → Incorrect. Harusnya: 'The chapters taught by the professor this morning will be on next week's exam.'",
+      },
+      {
+        id: "adv-g3-ex5-4",
+        type: "multiple-choice",
+        section: "part2",
+        question:
+          "Exercise 5 — Past Participles: Correct (C) or Incorrect (I)?\n\n\"The loaves of bread were baked in a brick oven at a low temperature for many hours.\"",
+        options: ["C — Correct", "I — Incorrect"],
+        correctAnswer: "C — Correct",
+        reason:
+          "'were baked' = passive main verb (satu verb utama). Kalimat pasif sederhana yang benar. Correct.",
+      },
+      {
+        id: "adv-g3-ex5-5",
+        type: "multiple-choice",
+        section: "part2",
+        question:
+          "Exercise 5 — Past Participles: Correct (C) or Incorrect (I)?\n\n\"The ports were reached by the sailors were under the control of a foreign nation.\"",
+        options: ["C — Correct", "I — Incorrect"],
+        correctAnswer: "I — Incorrect",
+        reason:
+          "'were reached' = verb1, 'were under' = verb2. Double verb tanpa conjunction → Incorrect. Harusnya: 'The ports reached by the sailors were under the control of a foreign nation.'",
+      },
+      {
+        id: "adv-g3-ex5-6",
+        type: "multiple-choice",
+        section: "part2",
+        question:
+          "Exercise 5 — Past Participles: Correct (C) or Incorrect (I)?\n\n\"Those suspected in the string of robberies were arrested by the police.\"",
+        options: ["C — Correct", "I — Incorrect"],
+        correctAnswer: "C — Correct",
+        reason:
+          "'suspected' = past participle (ADJ modifier untuk 'those'), 'were arrested' = main verb. Correct.",
+      },
+      {
+        id: "adv-g3-ex5-7",
+        type: "multiple-choice",
+        section: "part2",
+        question:
+          "Exercise 5 — Past Participles: Correct (C) or Incorrect (I)?\n\n\"The pizza is served in this restaurant is the tastiest in the county.\"",
+        options: ["C — Correct", "I — Incorrect"],
+        correctAnswer: "I — Incorrect",
+        reason:
+          "'is served' = verb1, 'is' = verb2. Double verb tanpa conjunction → Incorrect. Harusnya: 'The pizza served in this restaurant is the tastiest in the county.'",
+      },
+      {
+        id: "adv-g3-ex5-8",
+        type: "multiple-choice",
+        section: "part2",
+        question:
+          "Exercise 5 — Past Participles: Correct (C) or Incorrect (I)?\n\n\"The courses are listed on the second page of the brochure have several prerequisites.\"",
+        options: ["C — Correct", "I — Incorrect"],
+        correctAnswer: "I — Incorrect",
+        reason:
+          "'are listed' = verb1, 'have' = verb2. Double verb tanpa conjunction → Incorrect. Harusnya: 'The courses listed on the second page of the brochure have several prerequisites.'",
+      },
+      {
+        id: "adv-g3-ex5-9",
+        type: "multiple-choice",
+        section: "part2",
+        question:
+          "Exercise 5 — Past Participles: Correct (C) or Incorrect (I)?\n\n\"All the tenants were invited to the Independence Day barbecue at the apartment complex.\"",
+        options: ["C — Correct", "I — Incorrect"],
+        correctAnswer: "C — Correct",
+        reason:
+          "'were invited' = passive main verb (satu verb utama). Kalimat pasif sederhana yang benar. Correct.",
+      },
+      {
+        id: "adv-g3-ex5-10",
+        type: "multiple-choice",
+        section: "part2",
+        question:
+          "Exercise 5 — Past Participles: Correct (C) or Incorrect (I)?\n\n\"Any bills paid by the first of the month will be credited to your account by the next day.\"",
+        options: ["C — Correct", "I — Incorrect"],
+        correctAnswer: "C — Correct",
+        reason:
+          "'paid' = past participle (ADJ modifier untuk 'bills'), 'will be credited' = main verb (passive future). Correct.",
+      },
+    ],
+  },
+
+  // ── Day 5 · Adverbial Clause ─────────────────────────────────────────────────
+  {
+    id: "adv-grammar-4",
+    track: "grammar",
+    day: 5,
     tutor: "Ms. Vita",
     title: "Adverbial Clause",
     subtitle:
@@ -1142,11 +1748,11 @@ const advanceGrammarLessons: ModuleLesson[] = [
     ],
   },
 
-  // ── Day 4 · Causative Verb ───────────────────────────────────────────────────
+  // ── Day 6 · Causative Verb ───────────────────────────────────────────────────
   {
-    id: "adv-grammar-4",
+    id: "adv-grammar-4b",
     track: "grammar",
-    day: 4,
+    day: 6,
     tutor: "Ms. Vita",
     title: "Causative Verb",
     subtitle: "MAKE · HAVE · GET · LET — Active & Passive Causative",
@@ -1321,11 +1927,11 @@ const advanceGrammarLessons: ModuleLesson[] = [
     ],
   },
 
-  // ── Day 5 · Comparative Degree ───────────────────────────────────────────────
+  // ── Day 7 · Comparative Degree ───────────────────────────────────────────────
   {
     id: "adv-grammar-5",
     track: "grammar",
-    day: 5,
+    day: 7,
     tutor: "Ms. Vita",
     title: "Comparative Degree",
     subtitle:
@@ -1532,11 +2138,11 @@ const advanceGrammarLessons: ModuleLesson[] = [
     ],
   },
 
-  // ── Day 6 · Inversion ────────────────────────────────────────────────────────
+  // ── Day 8 · Inversion ────────────────────────────────────────────────────────
   {
     id: "adv-grammar-6",
     track: "grammar",
-    day: 6,
+    day: 8,
     tutor: "Ms. Vita",
     title: "Inversion",
     subtitle:
@@ -1724,11 +2330,11 @@ const advanceGrammarLessons: ModuleLesson[] = [
     ],
   },
 
-  // ── Day 7 · Conditional Sentence ─────────────────────────────────────────────
+  // ── Day 9 · Conditional Sentence ─────────────────────────────────────────────
   {
     id: "adv-grammar-7",
     track: "grammar",
-    day: 7,
+    day: 9,
     tutor: "Ms. Vita",
     title: "Conditional Sentence",
     subtitle:

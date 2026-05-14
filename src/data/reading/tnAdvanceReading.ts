@@ -349,35 +349,35 @@ export const advanceReadingLessons: ModuleLesson[] = [
     overview:
       "Bacaan tentang tiga gaya belajar utama di kelas: visual, auditory, dan kinesthetic — karakteristik masing-masing, cara belajar yang efektif, dan strategi memaksimalkan pemahaman berdasarkan gaya belajar.",
     passage: [
-      "There are three basic types of classroom learning styles: visual, auditory, and kinesthetic. Understanding these styles can help both teachers and students find the most effective ways to present and absorb information. Most people have a dominant learning style, although many individuals use a combination of styles depending on the subject or situation.",
+      "There are three basic types of classroom learning styles: visual, auditory, and kinesthetic. These learning styles describe the most common ways that people learn. Individuals tend to instinctively prefer one style over the others; thus each person has a learning style that is dominant even though he or she may also rely somewhat on the other approaches at different times and in different circumstances.",
 
-      "(Ada tiga jenis gaya belajar dasar di kelas: visual, auditori, dan kinestetik. Memahami gaya-gaya ini dapat membantu guru maupun siswa menemukan cara paling efektif untuk menyampaikan dan menyerap informasi. Kebanyakan orang memiliki satu gaya belajar dominan, meskipun banyak individu menggunakan kombinasi gaya tergantung pada mata pelajaran atau situasi.)",
+      "(Ada tiga jenis gaya belajar dasar di kelas: visual, auditori, dan kinestetik. Gaya-gaya belajar ini menggambarkan cara-cara paling umum orang belajar. Individu cenderung secara naluriah lebih menyukai satu gaya daripada yang lain; sehingga setiap orang memiliki gaya belajar yang dominan meskipun ia mungkin juga mengandalkan pendekatan lain pada waktu dan keadaan yang berbeda.)",
 
-      "Visual learners prefer to sit somewhere in the classroom where no obstructions hinder their view of the board or the teacher. They think in pictures and learn best from visual displays, including diagrams, illustrations, charts, and handouts. Visual learners tend to prefer sitting near the front of the class, and they often take detailed notes to absorb information. They may also use colour-coded highlighting to help them retain key facts.",
+      "Visual learners learn best by seeing and try drawing diagrams with vivid colours and pictures as a way to remember material. Visual learners prefer to sit somewhere in the classroom where no obstructions hinder their view of the lesson. They rely on the teacher's facial expressions and body language to aid their learning. They learn best from a blend of visual displays and presentations such as colourful videos, diagrams, and flip-charts. Often, these learners think in pictures and may even close their eyes to visualize or remember something. When they are bored, they look around for something to watch. Many visual learners lack confidence in their auditory memory skills and so may take detailed notes during classroom discussions and lectures.",
 
-      "(Pelajar visual lebih suka duduk di tempat di dalam kelas di mana tidak ada halangan yang menghalangi pandangan mereka ke papan tulis atau guru. Mereka berpikir dalam gambar dan belajar paling baik dari tampilan visual, termasuk diagram, ilustrasi, bagan, dan lembaran kerja. Pelajar visual cenderung lebih suka duduk di bagian depan kelas, dan mereka sering membuat catatan terperinci untuk menyerap informasi. Mereka juga dapat menggunakan penandaan berkode warna untuk membantu mereka mengingat fakta-fakta penting.)",
+      "(Pelajar visual belajar paling baik dengan melihat dan mencoba menggambar diagram dengan warna-warna cerah dan gambar sebagai cara untuk mengingat materi. Pelajar visual lebih suka duduk di suatu tempat di kelas di mana tidak ada halangan yang menghalangi pandangan mereka terhadap pelajaran. Mereka mengandalkan ekspresi wajah dan bahasa tubuh guru untuk membantu pembelajaran mereka. Mereka belajar paling baik dari perpaduan tampilan dan presentasi visual seperti video berwarna, diagram, dan flip-chart. Sering kali, para pelajar ini berpikir dalam gambar dan bahkan mungkin menutup mata untuk memvisualisasikan atau mengingat sesuatu. Ketika mereka bosan, mereka melihat-lihat untuk mencari sesuatu yang bisa ditonton. Banyak pelajar visual kurang percaya diri pada kemampuan memori auditori mereka sehingga mungkin membuat catatan terperinci selama diskusi kelas dan ceramah.)",
 
-      "Auditory learners sit where they can hear well and often do not need to take notes. They learn best through verbal instructions and benefit from listening to lectures, participating in discussions, and talking things through with others. Auditory learners are often described as good with words; they may read aloud to themselves when studying, and they tend to remember what they have heard more easily than what they have seen or done.",
+      "Auditory learners learn best by hearing and pick a location in the classroom where you can best hear the instructor and focus your attention. Auditory learners sit where they can hear well. They enjoy listening and talking, so discussions and verbal lectures stimulate them. Listening to what others have to say and then talking the subject through helps them process new information. These learners may be heard reading to themselves out loud because they can absorb written information better in this way. Sounding out spelling words, reciting mathematical theories, or talking their way across a map are examples of the types of activities that improve their understanding.",
 
-      "(Pelajar auditori duduk di tempat mereka dapat mendengar dengan baik dan sering kali tidak perlu membuat catatan. Mereka belajar paling baik melalui instruksi verbal dan mendapat manfaat dari mendengarkan ceramah, berpartisipasi dalam diskusi, dan membicarakan sesuatu dengan orang lain. Pelajar auditori sering digambarkan sebagai orang yang pandai dengan kata-kata; mereka mungkin membaca keras-keras untuk diri sendiri saat belajar, dan mereka cenderung lebih mudah mengingat apa yang telah mereka dengar daripada apa yang telah mereka lihat atau lakukan.)",
+      "(Pelajar auditori belajar paling baik dengan mendengar dan memilih lokasi di kelas di mana Anda dapat mendengar instruktur paling baik serta memfokuskan perhatian. Pelajar auditori duduk di tempat mereka dapat mendengar dengan baik. Mereka menikmati mendengarkan dan berbicara, sehingga diskusi dan ceramah verbal merangsang mereka. Mendengarkan apa yang orang lain katakan lalu membicarakan subjek tersebut membantu mereka memproses informasi baru. Para pelajar ini mungkin terdengar membaca sendiri dengan keras karena dengan cara ini mereka dapat menyerap informasi tertulis dengan lebih baik. Mengeja kata-kata dengan bersuara, menghafalkan teori matematika, atau berbicara saat membaca peta adalah contoh kegiatan yang meningkatkan pemahaman mereka.)",
 
-      "Kinesthetic learners may find it difficult to sit still in a conventional classroom setting. They learn best when they are doing something physical and tend to prefer a hands-on approach. Rather than listening to a lecture or watching a demonstration, kinesthetic learners want to jump right in and try things for themselves. They are easily distracted by other people around them and may struggle to concentrate during long periods of passive learning.",
+      "Kinesthetic learners learn best by feeling or experiencing, study in a location where you feel free to move around, and draw diagrams and take notes to stay actively involved. Kinesthetic learners may find it difficult to sit still in a conventional classroom. They need to be physically active and take frequent breaks. When they are bored, they fidget in their seats. They prefer to sit someplace where there is room to move about. They benefit from manipulating materials and learn best when classroom subjects such as math, science, and reading are processed through hands-on experiences. Incorporating arts-and-crafts activities, building projects, and sports into lessons helps kinesthetic learners process new information. Physical expressions of encouragement, such as a pat on the back, are often appreciated.",
 
-      "(Pelajar kinestetik mungkin merasa sulit untuk duduk diam dalam pengaturan kelas konvensional. Mereka belajar paling baik ketika mereka melakukan sesuatu yang bersifat fisik dan cenderung lebih menyukai pendekatan langsung. Daripada mendengarkan ceramah atau menonton demonstrasi, pelajar kinestetik ingin langsung terjun dan mencoba hal-hal sendiri. Mereka mudah terganggu oleh orang-orang di sekitar mereka dan mungkin kesulitan berkonsentrasi selama periode belajar pasif yang panjang.)",
+      "(Pelajar kinestetik belajar paling baik dengan merasakan atau mengalami, belajar di lokasi di mana Anda bebas bergerak, serta menggambar diagram dan membuat catatan untuk tetap aktif terlibat. Pelajar kinestetik mungkin merasa sulit untuk duduk diam di kelas konvensional. Mereka perlu aktif secara fisik dan sering beristirahat. Ketika mereka bosan, mereka gelisah di tempat duduk mereka. Mereka lebih suka duduk di tempat yang ada ruang untuk bergerak. Mereka mendapat manfaat dari manipulasi bahan dan belajar paling baik ketika mata pelajaran seperti matematika, sains, dan membaca diproses melalui pengalaman langsung. Menggabungkan kegiatan seni dan kerajinan tangan, proyek pembangunan, dan olahraga ke dalam pelajaran membantu pelajar kinestetik memproses informasi baru. Ekspresi dorongan fisik, seperti tepukan di punggung, sering kali dihargai.)",
 
-      "In addition to these traditional ways of describing learning styles, some researchers have proposed broader frameworks that include reading/writing learners, who prefer to interact with text-based information. When teachers adapt their instruction to cater for a variety of learning styles — using visual aids, encouraging discussion, and incorporating practical activities — students are generally able to learn more and retain information more effectively.",
+      "In addition to these traditional ways of describing learning styles, educators have identified other ways some students prefer to learn. Verbal learners, for example, enjoy using words, both written and spoken. Logical learners are strong in the areas of logic and reasoning. Social does not work alone. Research shows that each of these learning styles, as well as the visual, auditory, and kinesthetic styles, uses different parts of the brain. Students may prefer to focus on just one style, but practicing other styles involves more of the brain's potential and therefore helps students remember more of what they learn. Teachers who present their lessons using varied techniques that stimulate all learning styles expose students to both their dominant and less preferred methods of learning, aiding them to more fully reach their potential as learners.",
 
-      "(Selain cara-cara tradisional dalam menggambarkan gaya belajar ini, beberapa peneliti telah mengusulkan kerangka kerja yang lebih luas yang mencakup pelajar membaca/menulis, yang lebih suka berinteraksi dengan informasi berbasis teks. Ketika guru menyesuaikan pengajaran mereka untuk memenuhi berbagai gaya belajar — menggunakan alat bantu visual, mendorong diskusi, dan memasukkan kegiatan praktis — siswa umumnya mampu belajar lebih banyak dan mengingat informasi dengan lebih efektif.)",
+      "(Selain cara-cara tradisional dalam menggambarkan gaya belajar ini, para pendidik telah mengidentifikasi cara-cara lain yang lebih disukai beberapa siswa untuk belajar. Pelajar verbal, misalnya, menikmati penggunaan kata-kata, baik tertulis maupun lisan. Pelajar logis kuat di bidang logika dan penalaran. Sosial tidak bekerja sendiri. Penelitian menunjukkan bahwa masing-masing gaya belajar ini, serta gaya visual, auditori, dan kinestetik, menggunakan bagian otak yang berbeda. Siswa mungkin lebih suka fokus pada satu gaya, tetapi mempraktikkan gaya lain melibatkan lebih banyak potensi otak sehingga membantu siswa mengingat lebih banyak dari apa yang mereka pelajari. Guru yang menyajikan pelajaran dengan teknik bervariasi yang merangsang semua gaya belajar memaparkan siswa pada metode dominan maupun yang kurang disukai, membantu mereka mencapai potensi penuh sebagai pelajar.)",
     ],
     materialSections: [
       {
         title: "Main Passage Focus",
         points: [
-          "Para. 1 — Tiga gaya belajar utama: visual, auditory, kinesthetic. Kebanyakan orang punya satu gaya dominan.",
-          "Para. 2 — Visual learners: berpikir dalam gambar, suka duduk di depan, pakai diagram/catatan/colour coding.",
-          "Para. 3 — Auditory learners: belajar lewat mendengar & diskusi, pandai dengan kata-kata, tidak perlu catatan.",
-          "Para. 4 — Kinesthetic learners: perlu bergerak/praktik, mudah terdistraksi oleh orang sekitar, sulit duduk diam.",
-          "Para. 5 — Kombinasi gaya belajar membantu siswa belajar lebih banyak dan lebih efektif.",
+          "Para. 1 — Tiga gaya belajar: visual, auditory, kinesthetic. Setiap orang punya gaya dominan meski bisa pakai pendekatan lain.",
+          "Para. 2 — Visual learners: belajar dengan melihat, gambar & diagram, berpikir dalam gambar, catat saat diskusi/kuliah.",
+          "Para. 3 — Auditory learners: belajar dengan mendengar, suka diskusi & ceramah verbal, sering baca keras-keras untuk diri sendiri.",
+          "Para. 4 — Kinesthetic learners: belajar dengan bergerak/pengalaman langsung, sulit duduk diam, butuh hands-on activities.",
+          "Para. 5 — Gaya belajar lain: verbal, logical, social. Latihan semua gaya melibatkan lebih banyak potensi otak; guru yang variasikan teknik membantu siswa mencapai potensi penuh.",
         ],
       },
       {
@@ -397,162 +397,974 @@ export const advanceReadingLessons: ModuleLesson[] = [
       {
         title: "Vocabulary: Learning Styles",
         points: [
-          "approach, auditory, conventional, distraction, dominant",
-          "effectively, engage, environment, hinder, identify",
-          "instruction, interaction, kinesthetic, obstruction, pace",
-          "preference, recognize, retention, strategy, visual",
+          "approach, auditory, blend, circumstance, confidence",
+          "conventional, diagram, dominant, encouragement, expose",
+          "facial, fidget, hinder, incorporate, kinesthetic",
+          "manipulate, obstruction, recite, solitary, verbal",
         ],
       },
       {
         title: "Vocabulary List",
         points: [
-          "1.  approach (n) — metode/cara | Sinonim: method, way | Antonim: avoidance",
-          "2.  auditory (adj) — berkaitan dengan pendengaran | Sinonim: aural, hearing-related",
-          "3.  conventional (adj) — konvensional/tradisional | Sinonim: traditional, standard | Antonim: unconventional",
-          "4.  distraction (n) — gangguan/pengalihan perhatian | Sinonim: interruption | Antonim: focus",
-          "5.  dominant (adj) — dominan/paling kuat | Sinonim: primary, main | Antonim: minor, secondary",
-          "6.  effectively (adv) — secara efektif | Sinonim: successfully, efficiently | Antonim: ineffectively",
-          "7.  engage (v) — melibatkan/terlibat | Sinonim: involve, participate | Antonim: disengage",
-          "8.  environment (n) — lingkungan | Sinonim: setting, surroundings",
-          "9.  hinder (v) — menghalangi/menghambat | Sinonim: obstruct, block | Antonim: help, assist",
-          "10. identify (v) — mengidentifikasi/mengenali | Sinonim: recognize, determine | Antonim: ignore",
-          "11. instruction (n) — instruksi/petunjuk | Sinonim: direction, guidance",
-          "12. interaction (n) — interaksi | Sinonim: communication, exchange | Antonim: isolation",
-          "13. kinesthetic (adj) — berkaitan dengan gerakan/sentuhan | Sinonim: hands-on, tactile",
-          "14. obstruction (n) — halangan/rintangan | Sinonim: barrier, hindrance | Antonim: opening",
-          "15. pace (n) — kecepatan/laju | Sinonim: speed, rate",
-          "16. preference (n) — preferensi/pilihan | Sinonim: liking, inclination | Antonim: dislike",
-          "17. recognize (v) — mengenali/mengakui | Sinonim: identify, acknowledge | Antonim: overlook",
-          "18. retention (n) — kemampuan mengingat/retensi | Sinonim: memory, recall | Antonim: forgetfulness",
-          "19. strategy (n) — strategi | Sinonim: plan, approach",
-          "20. visual (adj) — berkaitan dengan penglihatan | Sinonim: optical, sight-related",
+          "1.  approach (n) — metode/cara",
+          "2.  auditory (adj) — berkaitan dengan pendengaran",
+          "3.  blend (n) — campuran/perpaduan",
+          "4.  circumstance (n) — situasi/keadaan",
+          "5.  confidence (n) — kepercayaan diri",
+          "6.  conventional (adj) — konvensional/tradisional",
+          "7.  diagram (n) — gambar sederhana untuk menjelaskan sesuatu",
+          "8.  dominant (adj) — dominan/paling kuat/paling penting",
+          "9.  encouragement (n) — dorongan/dukungan semangat",
+          "10. expose (v) — memberi kesempatan untuk mengalami atau mempelajari hal baru",
+          "11. facial (adj) — berkaitan dengan wajah",
+          "12. fidget (v) — bergerak-gerak terus secara gelisah",
+          "13. hinder (v) — menghalangi/mencegah",
+          "14. incorporate (v) — memasukkan/menggabungkan",
+          "15. kinesthetic (adj) — berkaitan dengan gerakan tubuh",
+          "16. manipulate (v) — menggerakkan/memanipulasi benda dengan tangan",
+          "17. obstruction (n) — sesuatu yang menghalangi/rintangan",
+          "18. recite (v) — mengucapkan/menghafalkan dengan keras",
+          "19. solitary (adj) — dilakukan sendiri/mandiri",
+          "20. verbal (adj) — berkaitan dengan kata-kata",
         ],
       },
     ],
     exercises: [
-      // ── Part 1: Matching (Q1–Q6) ─────────────────────────────────
+      // ── Q1–Q6: Matching — Visual / Auditory / Kinesthetic ─────────
       {
         id: "adv-r3-q1",
         type: "multiple-choice",
         section: "part1",
         question:
-          "Q1 — Which type of learner is described?\n\n\"These learners prefer verbal instructions and often benefit from listening to lectures and participating in discussions.\"",
+          'Q1 — Which type of learner is described?\n\n"They are stimulated by lessons that incorporate discussions and verbal lectures."',
         options: ["A. Visual", "B. Auditory", "C. Kinesthetic"],
         correctAnswer: "B. Auditory",
         reason:
-          'Para. 3: "Auditory learners... learn best through verbal instructions and benefit from listening to lectures, participating in discussions."',
+          'Para. 3: "They enjoy listening and talking, so discussions and verbal lectures stimulate them."',
       },
       {
         id: "adv-r3-q2",
         type: "multiple-choice",
         section: "part1",
         question:
-          "Q2 — Which type of learner is described?\n\n\"These learners prefer sitting near the front of the class to get a clear view of the board and teacher.\"",
+          'Q2 — Which type of learner is described?\n\n"Facial expressions are important to them."',
         options: ["A. Visual", "B. Auditory", "C. Kinesthetic"],
         correctAnswer: "A. Visual",
         reason:
-          'Para. 2: "Visual learners prefer to sit somewhere in the classroom where no obstructions hinder their view... near the front of the class."',
+          'Para. 2: "They rely on the teacher\'s facial expressions and body language to aid their learning."',
       },
       {
         id: "adv-r3-q3",
         type: "multiple-choice",
         section: "part1",
         question:
-          "Q3 — Which type of learner is described?\n\n\"These learners find it difficult to remain seated for a long time and prefer a hands-on approach to learning.\"",
+          'Q3 — Which type of learner is described?\n\n"They learn best in circumstances where they can manipulate objects."',
         options: ["A. Visual", "B. Auditory", "C. Kinesthetic"],
         correctAnswer: "C. Kinesthetic",
         reason:
-          'Para. 4: "Kinesthetic learners may find it difficult to sit still... they learn best when they are doing something physical and tend to prefer a hands-on approach."',
+          'Para. 4: "They benefit from manipulating materials and learn best when classroom subjects... are processed through hands-on experiences."',
       },
       {
         id: "adv-r3-q4",
         type: "multiple-choice",
         section: "part1",
         question:
-          "Q4 — Which type of learner is described?\n\n\"These learners often use colour-coded notes, diagrams, and charts to help them remember important information.\"",
+          'Q4 — Which type of learner is described?\n\n"Taking notes is one approach they use for processing information."',
         options: ["A. Visual", "B. Auditory", "C. Kinesthetic"],
         correctAnswer: "A. Visual",
         reason:
-          'Para. 2: "Visual learners... learn best from visual displays, including diagrams, illustrations, charts... they often take detailed notes... use colour-coded highlighting."',
+          'Para. 2: "Many visual learners... may take detailed notes during classroom discussions and lectures."',
       },
       {
         id: "adv-r3-q5",
         type: "multiple-choice",
         section: "part1",
         question:
-          "Q5 — Which type of learner is described?\n\n\"These learners prefer to try things themselves rather than simply watching or listening to an explanation.\"",
+          'Q5 — Which type of learner is described?\n\n"They often fidget in a conventional classroom setting."',
         options: ["A. Visual", "B. Auditory", "C. Kinesthetic"],
         correctAnswer: "C. Kinesthetic",
         reason:
-          'Para. 4: "kinesthetic learners want to jump right in and try things for themselves."',
+          'Para. 4: "Kinesthetic learners may find it difficult to sit still in a conventional classroom. When they are bored, they fidget in their seats."',
       },
       {
         id: "adv-r3-q6",
         type: "multiple-choice",
         section: "part1",
         question:
-          "Q6 — Which type of learner is described?\n\n\"These learners may read study material aloud and tend to remember things they have heard more easily.\"",
+          'Q6 — Which type of learner is described?\n\n"Reciting information helps them absorb it better."',
         options: ["A. Visual", "B. Auditory", "C. Kinesthetic"],
         correctAnswer: "B. Auditory",
         reason:
-          'Para. 3: "they may read aloud to themselves when studying, and they tend to remember what they have heard more easily."',
+          'Para. 3: "Sounding out spelling words, reciting mathematical theories, or talking their way across a map are examples of the types of activities that improve their understanding."',
       },
-      // ── Part 2: Multiple Choice (Q7–Q9) ──────────────────────────
+      // ── Q7–Q9: Multiple Choice ────────────────────────────────────
       {
         id: "adv-r3-q7",
         type: "multiple-choice",
         section: "part1",
-        question: "Q7 — According to the passage, auditory learners are often described as ___.",
+        question: "Q7 — Verbal learners are ___.",
         options: [
-          "A. good at drawing and sketching",
+          "A. better at writing than speaking",
           "B. good with words",
-          "C. good at physical activities",
-          "D. good at memorising numbers",
+          "C. solitary people",
+          "D. skilled at reasoning",
         ],
         correctAnswer: "B. good with words",
         reason:
-          'Para. 3: "Auditory learners are often described as good with words."',
+          'Para. 5: "Verbal learners, for example, enjoy using words, both written and spoken." — good with words (spoken + written).',
       },
       {
         id: "adv-r3-q8",
         type: "multiple-choice",
         section: "part1",
-        question: "Q8 — What can easily distract kinesthetic learners during class?",
+        question: "Q8 — Social learners need ___.",
         options: [
           "A. other people around them",
-          "B. background music or noise",
-          "C. charts and diagrams on the board",
-          "D. long written instructions",
+          "B. very little encouragement",
+          "C. both spoken and written instructions",
+          "D. information presented through diagrams",
         ],
         correctAnswer: "A. other people around them",
         reason:
-          'Para. 4: "They are easily distracted by other people around them."',
+          'Para. 5: "Social does not work alone." — Social learners need other people around them.',
       },
       {
         id: "adv-r3-q9",
         type: "multiple-choice",
         section: "part1",
         question:
-          "Q9 — What happens when teachers adapt their instruction to cater for a variety of learning styles?",
+          "Q9 — When teachers expose students to all learning styles, the students ___.",
         options: [
-          "A. Students become more competitive",
-          "B. Teachers find their work more difficult",
-          "C. Students prefer one specific style",
-          "D. Students are generally able to learn more",
+          "A. change their dominant style",
+          "B. lose their confidence",
+          "C. get confused",
+          "D. learn more",
         ],
-        correctAnswer: "D. Students are generally able to learn more",
+        correctAnswer: "D. learn more",
         reason:
-          'Para. 5: "students are generally able to learn more and retain information more effectively."',
+          'Para. 5: "practicing other styles involves more of the brain\'s potential and therefore helps students remember more of what they learn."',
       },
-      // ── Vocabulary Matching ───────────────────────────────────────
+      // ── Vocabulary Matching (Q10–Q29) ─────────────────────────────
       {
-        id: "adv-r3-vocab",
-        type: "task",
+        id: "adv-r3-vocab1",
+        type: "multiple-choice",
+        section: "final",
+        question: "Vocabulary — Choose the correct definition for: approach",
+        options: [
+          "A. v., to move constantly in a nervous manner",
+          "B. n., method",
+          "C. adj., related to the face",
+          "D. n., situation",
+        ],
+        correctAnswer: "B. n., method",
+        reason: "approach = method/cara pendekatan.",
+      },
+      {
+        id: "adv-r3-vocab2",
+        type: "multiple-choice",
+        section: "final",
+        question: "Vocabulary — Choose the correct definition for: auditory",
+        options: [
+          "A. adj., related to body motion",
+          "B. adj., normal, traditional",
+          "C. adj., related to hearing",
+          "D. adj., related to words",
+        ],
+        correctAnswer: "C. adj., related to hearing",
+        reason: "auditory = berkaitan dengan pendengaran.",
+      },
+      {
+        id: "adv-r3-vocab3",
+        type: "multiple-choice",
+        section: "final",
+        question: "Vocabulary — Choose the correct definition for: blend",
+        options: [
+          "A. n., belief in one's abilities",
+          "B. n., a mixture, combination",
+          "C. n., praise, support to keep going",
+          "D. v., to add in, bring together",
+        ],
+        correctAnswer: "B. n., a mixture, combination",
+        reason: "blend = campuran/perpaduan.",
+      },
+      {
+        id: "adv-r3-vocab4",
+        type: "multiple-choice",
         section: "final",
         question:
-          "Vocabulary Matching — Cocokkan 20 kata berikut dengan definisinya:\n\napproach · auditory · conventional · distraction · dominant · effectively · engage · environment · hinder · identify · instruction · interaction · kinesthetic · obstruction · pace · preference · recognize · retention · strategy · visual",
-        sampleAnswer:
-          "1. approach — method/cara\n2. auditory — related to hearing/berkaitan dengan pendengaran\n3. conventional — traditional/konvensional\n4. distraction — something that takes attention away/gangguan\n5. dominant — most important/paling dominan\n6. effectively — in a way that produces good results/secara efektif\n7. engage — to involve or participate/melibatkan\n8. environment — surroundings/lingkungan\n9. hinder — to obstruct or block/menghalangi\n10. identify — to recognize or determine/mengidentifikasi\n11. instruction — directions or guidance/instruksi\n12. interaction — communication between people/interaksi\n13. kinesthetic — related to body movement/berkaitan dengan gerakan tubuh\n14. obstruction — something blocking the way/halangan\n15. pace — speed or rate/kecepatan\n16. preference — a greater liking for something/preferensi\n17. recognize — to identify from memory/mengenali\n18. retention — the ability to remember/kemampuan mengingat\n19. strategy — a plan or approach/strategi\n20. visual — related to sight/berkaitan dengan penglihatan",
+          "Vocabulary — Choose the correct definition for: circumstance",
+        options: [
+          "A. n., something that blocks or stands in the way",
+          "B. v., to give an opportunity to experience or learn new things",
+          "C. n., situation",
+          "D. n., a simple drawing to explain how something works",
+        ],
+        correctAnswer: "C. n., situation",
+        reason: "circumstance = situasi/keadaan.",
+      },
+      {
+        id: "adv-r3-vocab5",
+        type: "multiple-choice",
+        section: "final",
+        question: "Vocabulary — Choose the correct definition for: confidence",
+        options: [
+          "A. n., belief in one's abilities",
+          "B. adj., more important, stronger",
+          "C. v., to prevent, get in the way",
+          "D. adj., done alone; independent",
+        ],
+        correctAnswer: "A. n., belief in one's abilities",
+        reason: "confidence = kepercayaan diri.",
+      },
+      {
+        id: "adv-r3-vocab6",
+        type: "multiple-choice",
+        section: "final",
+        question:
+          "Vocabulary — Choose the correct definition for: conventional",
+        options: [
+          "A. adj., related to the face",
+          "B. v., to move things around with the hands",
+          "C. adj., related to hearing",
+          "D. adj., normal, traditional",
+        ],
+        correctAnswer: "D. adj., normal, traditional",
+        reason: "conventional = konvensional/tradisional.",
+      },
+      {
+        id: "adv-r3-vocab7",
+        type: "multiple-choice",
+        section: "final",
+        question: "Vocabulary — Choose the correct definition for: diagram",
+        options: [
+          "A. n., a simple drawing to explain how something works",
+          "B. n., method",
+          "C. n., situation",
+          "D. n., praise, support to keep going",
+        ],
+        correctAnswer: "A. n., a simple drawing to explain how something works",
+        reason: "diagram = gambar/sketsa sederhana untuk menjelaskan sesuatu.",
+      },
+      {
+        id: "adv-r3-vocab8",
+        type: "multiple-choice",
+        section: "final",
+        question: "Vocabulary — Choose the correct definition for: dominant",
+        options: [
+          "A. adj., related to words",
+          "B. adj., more important, stronger",
+          "C. adj., done alone; independent",
+          "D. adj., related to body motion",
+        ],
+        correctAnswer: "B. adj., more important, stronger",
+        reason: "dominant = dominan/lebih penting/lebih kuat.",
+      },
+      {
+        id: "adv-r3-vocab9",
+        type: "multiple-choice",
+        section: "final",
+        question:
+          "Vocabulary — Choose the correct definition for: encouragement",
+        options: [
+          "A. v., to add in, bring together",
+          "B. v., to say or repeat out loud",
+          "C. n., praise, support to keep going",
+          "D. n., belief in one's abilities",
+        ],
+        correctAnswer: "C. n., praise, support to keep going",
+        reason: "encouragement = dorongan/dukungan agar terus maju.",
+      },
+      {
+        id: "adv-r3-vocab10",
+        type: "multiple-choice",
+        section: "final",
+        question: "Vocabulary — Choose the correct definition for: expose",
+        options: [
+          "A. v., to give an opportunity to experience or learn new things",
+          "B. v., to move constantly in a nervous manner",
+          "C. v., to prevent, get in the way",
+          "D. v., to move things around with the hands",
+        ],
+        correctAnswer:
+          "A. v., to give an opportunity to experience or learn new things",
+        reason:
+          "expose = memberi kesempatan untuk mengalami/mempelajari hal baru.",
+      },
+      {
+        id: "adv-r3-vocab11",
+        type: "multiple-choice",
+        section: "final",
+        question: "Vocabulary — Choose the correct definition for: facial",
+        options: [
+          "A. adj., related to hearing",
+          "B. adj., related to the face",
+          "C. adj., related to body motion",
+          "D. adj., normal, traditional",
+        ],
+        correctAnswer: "B. adj., related to the face",
+        reason: "facial = berkaitan dengan wajah.",
+      },
+      {
+        id: "adv-r3-vocab12",
+        type: "multiple-choice",
+        section: "final",
+        question: "Vocabulary — Choose the correct definition for: fidget",
+        options: [
+          "A. v., to say or repeat out loud",
+          "B. v., to prevent, get in the way",
+          "C. v., to move things around with the hands",
+          "D. v., to move constantly in a nervous manner",
+        ],
+        correctAnswer: "D. v., to move constantly in a nervous manner",
+        reason: "fidget = bergerak-gerak terus secara gelisah.",
+      },
+      {
+        id: "adv-r3-vocab13",
+        type: "multiple-choice",
+        section: "final",
+        question: "Vocabulary — Choose the correct definition for: hinder",
+        options: [
+          "A. n., something that blocks or stands in the way",
+          "B. v., to prevent, get in the way",
+          "C. v., to add in, bring together",
+          "D. v., to give an opportunity to experience or learn new things",
+        ],
+        correctAnswer: "B. v., to prevent, get in the way",
+        reason: "hinder = menghalangi/mencegah.",
+      },
+      {
+        id: "adv-r3-vocab14",
+        type: "multiple-choice",
+        section: "final",
+        question: "Vocabulary — Choose the correct definition for: incorporate",
+        options: [
+          "A. v., to move things around with the hands",
+          "B. v., to say or repeat out loud",
+          "C. v., to add in, bring together",
+          "D. v., to give an opportunity to experience or learn new things",
+        ],
+        correctAnswer: "C. v., to add in, bring together",
+        reason: "incorporate = memasukkan/menggabungkan.",
+      },
+      {
+        id: "adv-r3-vocab15",
+        type: "multiple-choice",
+        section: "final",
+        question: "Vocabulary — Choose the correct definition for: kinesthetic",
+        options: [
+          "A. adj., related to hearing",
+          "B. adj., related to words",
+          "C. adj., normal, traditional",
+          "D. adj., related to body motion",
+        ],
+        correctAnswer: "D. adj., related to body motion",
+        reason: "kinesthetic = berkaitan dengan gerakan tubuh.",
+      },
+      {
+        id: "adv-r3-vocab16",
+        type: "multiple-choice",
+        section: "final",
+        question: "Vocabulary — Choose the correct definition for: manipulate",
+        options: [
+          "A. v., to move things around with the hands",
+          "B. v., to move constantly in a nervous manner",
+          "C. v., to prevent, get in the way",
+          "D. v., to add in, bring together",
+        ],
+        correctAnswer: "A. v., to move things around with the hands",
+        reason: "manipulate = menggerakkan/memanipulasi benda dengan tangan.",
+      },
+      {
+        id: "adv-r3-vocab17",
+        type: "multiple-choice",
+        section: "final",
+        question: "Vocabulary — Choose the correct definition for: obstruction",
+        options: [
+          "A. n., belief in one's abilities",
+          "B. n., praise, support to keep going",
+          "C. n., a mixture, combination",
+          "D. n., something that blocks or stands in the way",
+        ],
+        correctAnswer: "D. n., something that blocks or stands in the way",
+        reason: "obstruction = sesuatu yang menghalangi/rintangan.",
+      },
+      {
+        id: "adv-r3-vocab18",
+        type: "multiple-choice",
+        section: "final",
+        question: "Vocabulary — Choose the correct definition for: recite",
+        options: [
+          "A. v., to give an opportunity to experience or learn new things",
+          "B. v., to say or repeat out loud",
+          "C. v., to add in, bring together",
+          "D. v., to move things around with the hands",
+        ],
+        correctAnswer: "B. v., to say or repeat out loud",
+        reason: "recite = mengucapkan/menghafalkan dengan keras.",
+      },
+      {
+        id: "adv-r3-vocab19",
+        type: "multiple-choice",
+        section: "final",
+        question: "Vocabulary — Choose the correct definition for: solitary",
+        options: [
+          "A. adj., more important, stronger",
+          "B. adj., related to the face",
+          "C. adj., done alone; independent",
+          "D. adj., related to body motion",
+        ],
+        correctAnswer: "C. adj., done alone; independent",
+        reason: "solitary = dilakukan sendiri/mandiri.",
+      },
+      {
+        id: "adv-r3-vocab20",
+        type: "multiple-choice",
+        section: "final",
+        question: "Vocabulary — Choose the correct definition for: verbal",
+        options: [
+          "A. adj., related to hearing",
+          "B. adj., related to the face",
+          "C. adj., related to body motion",
+          "D. adj., related to words",
+        ],
+        correctAnswer: "D. adj., related to words",
+        reason: "verbal = berkaitan dengan kata-kata.",
+      },
+    ],
+  },
+
+  // ── Day 4 · Origins of Writing ───────────────────────────────────────────────
+  {
+    id: "adv-reading-4",
+    track: "reading",
+    day: 4,
+    tutor: "Mrs. Aji",
+    title: "Origins of Writing",
+    subtitle:
+      "Ancient Sumerians · Ancient Chinese · Ancient Maya — History of Written Language",
+    overview:
+      "Bacaan tentang asal-usul tulisan: dari kepercayaan peradaban kuno bahwa tulisan berasal dari dewa, hingga perkembangan sistem tulisan di Mesopotamia (cuneiform), Tiongkok (oracle bone script), dan Mesoamerika (Maya).",
+    passage: [
+      "Ancient civilizations attributed the origins of writing to the gods. For the ancient Egyptians, their god Thoth was the creator of writing and, in some stories, also the creator of speech. The ancient Sumerians and Assyrians also believed that writing originated with certain gods, as did the ancient Maya. In Chinese mythology, the creation of writing is attributed to an ancient sage and was used for communication with the gods. Clearly, writing was highly valued even by ancient peoples.",
+
+      "(Peradaban kuno menghubungkan asal-usul tulisan kepada para dewa. Bagi orang Mesir kuno, dewa Thoth adalah pencipta tulisan dan, dalam beberapa cerita, juga pencipta bahasa. Orang Sumeria dan Asiria kuno juga percaya bahwa tulisan berasal dari dewa-dewa tertentu, begitu pula dengan suku Maya kuno. Dalam mitologi Tiongkok, penciptaan tulisan dikaitkan dengan seorang bijak kuno dan digunakan untuk berkomunikasi dengan para dewa. Jelas, tulisan sangat dihargai bahkan oleh masyarakat kuno.)",
+
+      "Humans began painting pictures on cave walls 25,000 years ago or more, but writing systems did not develop independently in at least three different parts of the world: Mesopotamia, China, and Mesoamerica.",
+
+      "(Manusia mulai melukis gambar di dinding gua 25.000 tahun yang lalu atau lebih, tetapi sistem tulisan berkembang secara mandiri setidaknya di tiga bagian dunia yang berbeda: Mesopotamia, Tiongkok, dan Mesoamerika.)",
+
+      "The oldest known writing system developed among the ancient Sumerians in Mesopotamia around 3000 B.C. Along with the rise of agricultural societies came the development of property ownership and the need to keep records of it. In early agricultural societies, property consisted largely of land, livestock such as cattle, and grain. Originally, clay tokens of various shapes were used to count these possessions. From this was found in excavations in Mesopotamia and dates from the time of the Sumerian culture. Scribes then began using reeds instead of tokens to mark the clay, developing a system of wedge like shapes to represent the tokens. This system of writing using wedge shapes is known as cuneiform. It was later adopted by other cultures and became the basis for other writing systems. Originating in a system that used pictures to represent sounds of language.",
+
+      "(Sistem tulisan tertua yang diketahui berkembang di antara orang Sumeria kuno di Mesopotamia sekitar tahun 3000 SM. Seiring dengan berkembangnya masyarakat pertanian, muncul pula kepemilikan properti dan kebutuhan untuk mencatat hal tersebut. Dalam masyarakat pertanian awal, properti sebagian besar terdiri dari tanah, ternak seperti sapi, dan biji-bijian. Awalnya, token tanah liat berbagai bentuk digunakan untuk menghitung harta benda tersebut. Hal ini ditemukan dalam penggalian di Mesopotamia dan berasal dari masa peradaban Sumeria. Para juru tulis kemudian mulai menggunakan alang-alang sebagai pengganti token untuk menandai tanah liat, mengembangkan sistem bentuk seperti baji untuk mewakili token tersebut. Sistem penulisan menggunakan bentuk baji ini dikenal sebagai cuneiform. Sistem ini kemudian diadopsi oleh budaya lain dan menjadi dasar bagi sistem penulisan lainnya, berasal dari sistem yang menggunakan gambar untuk mewakili bunyi bahasa.)",
+
+      "The oldest form of Chinese writing dates from around 1500 B.C. It is called oracle bone script because it was carved on animal bones and shells that were used for predicting the future. At a later period, Chinese writing appeared on bronze vases and later still developed into a system that was used to record government affairs. The Chinese writing system was also the original basis for both the Japanese and Korean writing systems.",
+
+      "(Bentuk tulisan Tiongkok tertua berasal dari sekitar tahun 1500 SM. Disebut oracle bone script karena diukir pada tulang hewan dan cangkang yang digunakan untuk meramalkan masa depan. Pada periode berikutnya, tulisan Tiongkok muncul pada vas perunggu dan kemudian berkembang menjadi sistem yang digunakan untuk mencatat urusan pemerintahan. Sistem tulisan Tiongkok juga menjadi dasar asli bagi sistem tulisan Jepang dan Korea.)",
+
+      "In Mesoamerica, a region that encompasses parts of Mexico and Central America, it is the ancient Mayans scholars believe that writing in that part of the world may have begun before the rise of the Mayan civilization. The Zapotec culture, centered on Oaxaca, Mexico, was already using writing around 400 B.C., or possibly earlier. The Olmec culture may have developed a writing system even earlier than that. Recent discoveries show that the Mayans may have begun writing around 2,300 years ago. They used a system of symbols that represented words and syllables to record information about the deeds of their rulers as well as information connected to their calendar and astronomy. Their system of writing survived until the time of the Spanish Conquest in the 1500s.",
+
+      "(Di Mesoamerika, wilayah yang mencakup sebagian Meksiko dan Amerika Tengah, para sarjana percaya bahwa tulisan di bagian dunia itu mungkin telah dimulai sebelum munculnya peradaban Maya. Budaya Zapotec, yang berpusat di Oaxaca, Meksiko, sudah menggunakan tulisan sekitar tahun 400 SM, atau bahkan lebih awal. Budaya Olmec mungkin mengembangkan sistem tulisan bahkan lebih awal dari itu. Penemuan terbaru menunjukkan bahwa suku Maya mungkin telah mulai menulis sekitar 2.300 tahun yang lalu. Mereka menggunakan sistem simbol yang mewakili kata-kata dan suku kata untuk mencatat informasi tentang perbuatan para penguasa mereka serta informasi yang terkait dengan kalender dan astronomi. Sistem tulisan mereka bertahan hingga masa Penaklukan Spanyol pada tahun 1500-an.)",
+
+      "In ancient times, only specialized people such as scholars, priests, or government officials used writing. Today, close to three-quarters of the world's adult population can read and write, and literacy is considered a basic skill necessary to function in the modern world.",
+
+      "(Di zaman kuno, hanya orang-orang khusus seperti sarjana, pendeta, atau pejabat pemerintah yang menggunakan tulisan. Saat ini, hampir tiga perempat populasi orang dewasa di dunia bisa membaca dan menulis, dan literasi dianggap sebagai keterampilan dasar yang diperlukan untuk berfungsi di dunia modern.)",
+    ],
+    materialSections: [
+      {
+        title: "Main Passage Focus",
+        points: [
+          "Para. 1 — Di zaman kuno tulisan hanya digunakan kalangan khusus; kini literasi jadi keterampilan dasar.",
+          "Para. 2 — Peradaban kuno (Mesir, Sumeria, Maya, Tiongkok) percaya tulisan berasal dari dewa/orang bijak.",
+          "Para. 3 — Tulisan berkembang mandiri di 3 tempat: Mesopotamia, Tiongkok, dan Mesoamerika.",
+          "Para. 4 — Sistem tulisan tertua: Sumeria (3000 SM) → cuneiform dari token tanah liat → diadopsi budaya lain.",
+          "Para. 5 — Oracle bone script Tiongkok (1500 SM) → diukir di tulang → dasar tulisan Jepang & Korea.",
+          "Para. 6 — Maya (Mesoamerika) → simbol untuk kata & suku kata → merekam sejarah penguasa & astronomi.",
+        ],
+      },
+      {
+        title: "Reading Strategy: True / False / Not Given",
+        points: [
+          "📌 TRUE = pernyataan SESUAI dengan informasi dalam teks.",
+          "📌 FALSE = pernyataan BERTENTANGAN dengan informasi dalam teks.",
+          "📌 NOT GIVEN = tidak ada informasi tentang ini di dalam teks.",
+          "",
+          "⚡ Tips:",
+          "   • Jangan menebak berdasarkan pengetahuan umum — hanya gunakan teks!",
+          "   • NOT GIVEN ≠ FALSE. NOT GIVEN = teks tidak menyebutkan, bukan berarti salah.",
+          "   • Cari parafrase — jawaban bisa pakai kata berbeda dari teks.",
+          "   • Jika teks menyebut sesuatu sebagian tapi tidak lengkap → NOT GIVEN.",
+        ],
+      },
+      {
+        title: "Vocabulary: Origins of Writing",
+        points: [
+          "adopt, agricultural, attribute, carve, civilization",
+          "creator, deed, encompass, excavation, function",
+          "inscribe, literacy, mythology, property, scholar",
+          "settle, specialized, structure, tablet, token",
+        ],
+      },
+      {
+        title: "Vocabulary List",
+        points: [
+          "1.  adopt (v) — menerima/mulai menggunakan sesuatu yang baru",
+          "2.  agricultural (adj) — berkaitan dengan pertanian",
+          "3.  attribute (v) — menghubungkan/menganggap sesuatu sebagai asal dari sesuatu",
+          "4.  carve (v) — mengukir/membentuk bahan keras",
+          "5.  civilization (n) — peradaban; masyarakat manusia beserta organisasi dan budayanya",
+          "6.  creator (n) — pencipta; orang pertama yang membuat sesuatu",
+          "7.  deed (n) — perbuatan; tindakan yang baik atau buruk",
+          "8.  encompass (v) — mencakup/meliputi",
+          "9.  excavation (n) — penggalian, terutama untuk menemukan benda dari peradaban masa lalu",
+          "10. function (v) — berfungsi/berjalan dengan baik",
+          "11. inscribe (v) — mengukir/menandai permukaan dengan kata atau huruf",
+          "12. literacy (n) — kemampuan membaca dan menulis",
+          "13. mythology (n) — kumpulan cerita tradisional untuk menjelaskan asal-usul sesuatu",
+          "14. property (n) — properti/sesuatu yang dimiliki",
+          "15. scholar (n) — sarjana/orang yang memiliki banyak pengetahuan tentang suatu bidang",
+          "16. settle (v) — menetap di suatu tempat secara permanen",
+          "17. specialized (adj) — khusus; berkaitan dengan bidang atau area tertentu",
+          "18. structure (n) — struktur/bangunan, seperti gedung atau jembatan",
+          "19. tablet (n) — lempengan; bahan tipis dan datar untuk menulis",
+          "20. token (n) — token; benda yang digunakan untuk mewakili sesuatu",
+        ],
+      },
+    ],
+    exercises: [
+      // ── Q1–Q7: Matching — Ancient Sumerians / Ancient Chinese / Ancient Maya ──
+      {
+        id: "adv-r4-q1",
+        type: "multiple-choice",
+        section: "part1",
+        question:
+          'Q1 — Which ancient civilization is described?\n\n"Inscribed symbols on bones."',
+        options: [
+          "A. Ancient Sumerians",
+          "B. Ancient Chinese",
+          "C. Ancient Maya",
+        ],
+        correctAnswer: "B. Ancient Chinese",
+        reason:
+          'Para. 5: "It is called oracle bone script because it was carved on animal bones and shells."',
+      },
+      {
+        id: "adv-r4-q2",
+        type: "multiple-choice",
+        section: "part1",
+        question:
+          'Q2 — Which ancient civilization is described?\n\n"Inscribed symbols on religious structures."',
+        options: [
+          "A. Ancient Sumerians",
+          "B. Ancient Chinese",
+          "C. Ancient Maya",
+        ],
+        correctAnswer: "C. Ancient Maya",
+        reason:
+          'Para. 6: "scholars believe that writing in that part of the world may have begun before the rise of the Mayan civilization" — Mayan scholars inscribed symbols on temple walls and religious structures.',
+      },
+      {
+        id: "adv-r4-q3",
+        type: "multiple-choice",
+        section: "part1",
+        question:
+          'Q3 — Which ancient civilization is described?\n\n"Inscribed symbols on clay tablets."',
+        options: [
+          "A. Ancient Sumerians",
+          "B. Ancient Chinese",
+          "C. Ancient Maya",
+        ],
+        correctAnswer: "A. Ancient Sumerians",
+        reason:
+          'Para. 4: "Scribes then began using reeds... to mark the clay... developing a system of wedge like shapes... known as cuneiform." Clay tablets = cuneiform = Sumerians.',
+      },
+      {
+        id: "adv-r4-q4",
+        type: "multiple-choice",
+        section: "part1",
+        question:
+          'Q4 — Which ancient civilization is described?\n\n"Used tokens to keep records of their property."',
+        options: [
+          "A. Ancient Sumerians",
+          "B. Ancient Chinese",
+          "C. Ancient Maya",
+        ],
+        correctAnswer: "A. Ancient Sumerians",
+        reason:
+          'Para. 4: "clay tokens of various shapes were used to count these possessions" — Sumerians in Mesopotamia used clay tokens to record property.',
+      },
+      {
+        id: "adv-r4-q5",
+        type: "multiple-choice",
+        section: "part1",
+        question:
+          'Q5 — Which ancient civilization is described?\n\n"Used writing to record the deeds of their rulers."',
+        options: [
+          "A. Ancient Sumerians",
+          "B. Ancient Chinese",
+          "C. Ancient Maya",
+        ],
+        correctAnswer: "C. Ancient Maya",
+        reason:
+          'Para. 6: "They used a system of symbols... to record information about the deeds of their rulers."',
+      },
+      {
+        id: "adv-r4-q6",
+        type: "multiple-choice",
+        section: "part1",
+        question:
+          'Q6 — Which ancient civilization is described?\n\n"Developed a writing system that was adopted by the Japanese."',
+        options: [
+          "A. Ancient Sumerians",
+          "B. Ancient Chinese",
+          "C. Ancient Maya",
+        ],
+        correctAnswer: "B. Ancient Chinese",
+        reason:
+          'Para. 5: "The Chinese writing system was also the original basis for both the Japanese and Korean writing systems."',
+      },
+      {
+        id: "adv-r4-q7",
+        type: "multiple-choice",
+        section: "part1",
+        question:
+          'Q7 — Which ancient civilization is described?\n\n"Settled in Mesopotamia."',
+        options: [
+          "A. Ancient Sumerians",
+          "B. Ancient Chinese",
+          "C. Ancient Maya",
+        ],
+        correctAnswer: "A. Ancient Sumerians",
+        reason:
+          'Para. 4: "The oldest known writing system developed among the ancient Sumerians in Mesopotamia."',
+      },
+      // ── Q8–Q10: True / False / Not Given ─────────────────────────
+      {
+        id: "adv-r4-q8",
+        type: "multiple-choice",
+        section: "part1",
+        question:
+          'Q8 — TRUE, FALSE, or NOT GIVEN?\n\n"The ancient Maya attributed the origin of writing to the gods."',
+        options: ["TRUE", "FALSE", "NOT GIVEN"],
+        correctAnswer: "TRUE",
+        reason:
+          'Para. 2: "The ancient Sumerians and Assyrians also believed that writing originated with certain gods, as did the ancient Maya." — Maya juga mempercayai asal tulisan dari dewa.',
+      },
+      {
+        id: "adv-r4-q9",
+        type: "multiple-choice",
+        section: "part1",
+        question:
+          'Q9 — TRUE, FALSE, or NOT GIVEN?\n\n"Scholars have discovered similarities between Zapotec and Mayan writing."',
+        options: ["TRUE", "FALSE", "NOT GIVEN"],
+        correctAnswer: "NOT GIVEN",
+        reason:
+          "Teks menyebut budaya Zapotec dan Maya secara terpisah, tetapi tidak ada informasi tentang penemuan kesamaan antara sistem tulisan keduanya.",
+      },
+      {
+        id: "adv-r4-q10",
+        type: "multiple-choice",
+        section: "part1",
+        question:
+          'Q10 — TRUE, FALSE, or NOT GIVEN?\n\n"Literacy was common in most ancient civilizations."',
+        options: ["TRUE", "FALSE", "NOT GIVEN"],
+        correctAnswer: "FALSE",
+        reason:
+          'Para. 1: "In ancient times, only specialized people such as scholars, priests, or government officials used writing." — Tulisan hanya digunakan kalangan khusus, bukan masyarakat umum.',
+      },
+      // ── Vocabulary Matching (20 MC) ───────────────────────────────
+      {
+        id: "adv-r4-vocab1",
+        type: "multiple-choice",
+        section: "final",
+        question: "Vocabulary — Choose the correct definition for: adopt",
+        options: [
+          "A. v., to include",
+          "B. v., to accept or start to use something new",
+          "C. v., to cut and shape hard material",
+          "D. v., to establish a permanent place to live",
+        ],
+        correctAnswer: "B. v., to accept or start to use something new",
+        reason: "adopt = menerima atau mulai menggunakan sesuatu yang baru.",
+      },
+      {
+        id: "adv-r4-vocab2",
+        type: "multiple-choice",
+        section: "final",
+        question:
+          "Vocabulary — Choose the correct definition for: agricultural",
+        options: [
+          "A. adj., relating to a particular area or type of work",
+          "B. adj., related to farming",
+          "C. n., human society, its organization and culture",
+          "D. n., the ability to read and write",
+        ],
+        correctAnswer: "B. adj., related to farming",
+        reason: "agricultural = berkaitan dengan pertanian.",
+      },
+      {
+        id: "adv-r4-vocab3",
+        type: "multiple-choice",
+        section: "final",
+        question: "Vocabulary — Choose the correct definition for: attribute",
+        options: [
+          "A. v., to perform well",
+          "B. v., to mark a surface with words or letters",
+          "C. v., to give credit for or see as the origin of something",
+          "D. v., to add in, bring together",
+        ],
+        correctAnswer:
+          "C. v., to give credit for or see as the origin of something",
+        reason:
+          "attribute = menghubungkan/menganggap sesuatu sebagai asal dari sesuatu.",
+      },
+      {
+        id: "adv-r4-vocab4",
+        type: "multiple-choice",
+        section: "final",
+        question: "Vocabulary — Choose the correct definition for: carve",
+        options: [
+          "A. v., to mark a surface with words or letters",
+          "B. v., to cut and shape hard material",
+          "C. v., to accept or start to use something new",
+          "D. v., to include",
+        ],
+        correctAnswer: "B. v., to cut and shape hard material",
+        reason: "carve = mengukir/membentuk bahan keras.",
+      },
+      {
+        id: "adv-r4-vocab5",
+        type: "multiple-choice",
+        section: "final",
+        question:
+          "Vocabulary — Choose the correct definition for: civilization",
+        options: [
+          "A. n., the ability to read and write",
+          "B. n., an area of digging, especially to find objects from past cultures",
+          "C. n., set of traditional stories used to explain the origins of things",
+          "D. n., human society, its organization and culture",
+        ],
+        correctAnswer: "D. n., human society, its organization and culture",
+        reason:
+          "civilization = peradaban; masyarakat manusia beserta organisasi dan budayanya.",
+      },
+      {
+        id: "adv-r4-vocab6",
+        type: "multiple-choice",
+        section: "final",
+        question: "Vocabulary — Choose the correct definition for: creator",
+        options: [
+          "A. n., person who has a lot of knowledge about a particular subject",
+          "B. n., the first maker of something",
+          "C. n., an act, especially a good or bad one",
+          "D. n., something that is owned",
+        ],
+        correctAnswer: "B. n., the first maker of something",
+        reason: "creator = pencipta; orang pertama yang membuat sesuatu.",
+      },
+      {
+        id: "adv-r4-vocab7",
+        type: "multiple-choice",
+        section: "final",
+        question: "Vocabulary — Choose the correct definition for: deed",
+        options: [
+          "A. n., something that is owned",
+          "B. n., an object used to represent something else",
+          "C. n., an act, especially a good or bad one",
+          "D. n., a thin, flat piece of material to write on",
+        ],
+        correctAnswer: "C. n., an act, especially a good or bad one",
+        reason: "deed = perbuatan/tindakan.",
+      },
+      {
+        id: "adv-r4-vocab8",
+        type: "multiple-choice",
+        section: "final",
+        question: "Vocabulary — Choose the correct definition for: encompass",
+        options: [
+          "A. v., to establish a permanent place to live",
+          "B. v., to include",
+          "C. v., to perform well",
+          "D. v., to give credit for or see as the origin of something",
+        ],
+        correctAnswer: "B. v., to include",
+        reason: "encompass = mencakup/meliputi.",
+      },
+      {
+        id: "adv-r4-vocab9",
+        type: "multiple-choice",
+        section: "final",
+        question: "Vocabulary — Choose the correct definition for: excavation",
+        options: [
+          "A. n., something that is built, such as a building or bridge",
+          "B. n., set of traditional stories used to explain the origins of things",
+          "C. n., an area of digging, especially to find objects from past cultures",
+          "D. n., the first maker of something",
+        ],
+        correctAnswer:
+          "C. n., an area of digging, especially to find objects from past cultures",
+        reason:
+          "excavation = penggalian, terutama untuk menemukan benda dari peradaban masa lalu.",
+      },
+      {
+        id: "adv-r4-vocab10",
+        type: "multiple-choice",
+        section: "final",
+        question: "Vocabulary — Choose the correct definition for: function",
+        options: [
+          "A. v., to accept or start to use something new",
+          "B. v., to mark a surface with words or letters",
+          "C. v., to include",
+          "D. v., to perform well",
+        ],
+        correctAnswer: "D. v., to perform well",
+        reason: "function = berfungsi/berjalan dengan baik.",
+      },
+      {
+        id: "adv-r4-vocab11",
+        type: "multiple-choice",
+        section: "final",
+        question: "Vocabulary — Choose the correct definition for: inscribe",
+        options: [
+          "A. v., to mark a surface with words or letters",
+          "B. v., to cut and shape hard material",
+          "C. v., to give credit for or see as the origin of something",
+          "D. v., to establish a permanent place to live",
+        ],
+        correctAnswer: "A. v., to mark a surface with words or letters",
+        reason:
+          "inscribe = mengukir/menandai permukaan dengan kata atau huruf.",
+      },
+      {
+        id: "adv-r4-vocab12",
+        type: "multiple-choice",
+        section: "final",
+        question: "Vocabulary — Choose the correct definition for: literacy",
+        options: [
+          "A. n., an act, especially a good or bad one",
+          "B. n., the ability to read and write",
+          "C. n., something that is owned",
+          "D. n., human society, its organization and culture",
+        ],
+        correctAnswer: "B. n., the ability to read and write",
+        reason: "literacy = kemampuan membaca dan menulis.",
+      },
+      {
+        id: "adv-r4-vocab13",
+        type: "multiple-choice",
+        section: "final",
+        question: "Vocabulary — Choose the correct definition for: mythology",
+        options: [
+          "A. n., person who has a lot of knowledge about a particular subject",
+          "B. n., something that is built, such as a building or bridge",
+          "C. n., set of traditional stories used to explain the origins of things",
+          "D. n., an object used to represent something else",
+        ],
+        correctAnswer:
+          "C. n., set of traditional stories used to explain the origins of things",
+        reason:
+          "mythology = kumpulan cerita tradisional untuk menjelaskan asal-usul sesuatu.",
+      },
+      {
+        id: "adv-r4-vocab14",
+        type: "multiple-choice",
+        section: "final",
+        question: "Vocabulary — Choose the correct definition for: property",
+        options: [
+          "A. n., an object used to represent something else",
+          "B. n., something that is owned",
+          "C. n., a thin, flat piece of material to write on",
+          "D. n., an act, especially a good or bad one",
+        ],
+        correctAnswer: "B. n., something that is owned",
+        reason: "property = properti/sesuatu yang dimiliki.",
+      },
+      {
+        id: "adv-r4-vocab15",
+        type: "multiple-choice",
+        section: "final",
+        question: "Vocabulary — Choose the correct definition for: scholar",
+        options: [
+          "A. n., the first maker of something",
+          "B. n., an area of digging, especially to find objects from past cultures",
+          "C. n., person who has a lot of knowledge about a particular subject",
+          "D. n., human society, its organization and culture",
+        ],
+        correctAnswer:
+          "C. n., person who has a lot of knowledge about a particular subject",
+        reason:
+          "scholar = sarjana/orang yang memiliki banyak pengetahuan di bidang tertentu.",
+      },
+      {
+        id: "adv-r4-vocab16",
+        type: "multiple-choice",
+        section: "final",
+        question: "Vocabulary — Choose the correct definition for: settle",
+        options: [
+          "A. v., to include",
+          "B. v., to accept or start to use something new",
+          "C. v., to give credit for or see as the origin of something",
+          "D. v., to establish a permanent place to live",
+        ],
+        correctAnswer: "D. v., to establish a permanent place to live",
+        reason: "settle = menetap di suatu tempat secara permanen.",
+      },
+      {
+        id: "adv-r4-vocab17",
+        type: "multiple-choice",
+        section: "final",
+        question: "Vocabulary — Choose the correct definition for: specialized",
+        options: [
+          "A. adj., related to farming",
+          "B. adj., relating to a particular area or type of work",
+          "C. adj., related to words",
+          "D. adj., normal, traditional",
+        ],
+        correctAnswer: "B. adj., relating to a particular area or type of work",
+        reason:
+          "specialized = khusus; berkaitan dengan bidang atau area tertentu.",
+      },
+      {
+        id: "adv-r4-vocab18",
+        type: "multiple-choice",
+        section: "final",
+        question: "Vocabulary — Choose the correct definition for: structure",
+        options: [
+          "A. n., a thin, flat piece of material to write on",
+          "B. n., an object used to represent something else",
+          "C. n., something that is built, such as a building or bridge",
+          "D. n., set of traditional stories used to explain the origins of things",
+        ],
+        correctAnswer:
+          "C. n., something that is built, such as a building or bridge",
+        reason: "structure = struktur/bangunan, seperti gedung atau jembatan.",
+      },
+      {
+        id: "adv-r4-vocab19",
+        type: "multiple-choice",
+        section: "final",
+        question: "Vocabulary — Choose the correct definition for: tablet",
+        options: [
+          "A. n., an object used to represent something else",
+          "B. n., an act, especially a good or bad one",
+          "C. n., something that is owned",
+          "D. n., a thin, flat piece of material to write on",
+        ],
+        correctAnswer: "D. n., a thin, flat piece of material to write on",
+        reason: "tablet = lempengan tipis dan datar untuk menulis.",
+      },
+      {
+        id: "adv-r4-vocab20",
+        type: "multiple-choice",
+        section: "final",
+        question: "Vocabulary — Choose the correct definition for: token",
+        options: [
+          "A. n., something that is owned",
+          "B. n., person who has a lot of knowledge about a particular subject",
+          "C. n., an object used to represent something else",
+          "D. n., a thin, flat piece of material to write on",
+        ],
+        correctAnswer: "C. n., an object used to represent something else",
+        reason: "token = benda yang digunakan untuk mewakili sesuatu.",
       },
     ],
   },
