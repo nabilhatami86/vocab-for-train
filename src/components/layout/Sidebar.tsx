@@ -21,8 +21,8 @@ import {
   ScrollText,
   Languages,
   Volume2,
-  Mic,
   Library,
+  PenLine,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useVocabStore } from "@/store/useVocabStore";
@@ -63,7 +63,7 @@ const navSections: { title: string; items: NavItem[] }[] = [
     items: [
       { href: "/practice", label: "Practice", icon: GraduationCap },
       { href: "/practice/conversations", label: "Daily Conversations", icon: MessageCircle },
-      { href: "/practice/speaking", label: "Speaking Test", icon: Mic },
+      { href: "/practice/speaking", label: "AI Writing Practice", icon: PenLine },
       { href: "/tn-basic-cource", label: "TN Basic Course", icon: BookText },
       { href: "/tn-intermediate", label: "TN Intermediate", icon: GraduationCap },
       { href: "/tn-intermediate/vocab", label: "Vocab Bank (Int.)", icon: Library },

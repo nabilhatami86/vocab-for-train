@@ -1,561 +1,654 @@
 'use client';
 
-import { useState, useEffect, useRef, useCallback } from 'react';
+import { useState, useRef } from 'react';
 import Link from 'next/link';
 import {
-  ArrowLeft, Mic, MicOff, Volume2, RotateCcw,
-  ChevronRight, ChevronLeft, CheckCircle2, XCircle,
-  Lightbulb, Trophy, Shuffle,
+  ArrowLeft, PenLine, Sparkles, Loader2, AlertCircle,
+  Trophy, History, X, Star, Target, Layers, BookOpen,
+  CheckCircle2, Lightbulb, Clock, ChevronDown, ChevronUp,
+  GitBranch, CircleDot,
 } from 'lucide-react';
-import { speakingSentences, speakingCategories, type SpeakingSentence } from '@/data/speakingData';
 
-// ─── Helpers ─────────────────────────────────────────────────────────────────
+// ─── Types ────────────────────────────────────────────────────────────────────
 
-function normalize(s: string) {
-  return s
-    .toLowerCase()
-    .replace(/[^a-z0-9\s']/g, '')
-    .trim()
-    .replace(/\s+/g, ' ');
+interface Correction {
+  original: string;
+  corrected: string;
+  explanation: string;
 }
 
-type WordResult = { target: string; spoken: string; correct: boolean };
-type CompareResult = { words: WordResult[]; accuracy: number; correct: number; total: number };
-
-function compareSentences(target: string, spoken: string): CompareResult {
-  const targetWords = normalize(target).split(' ');
-  const spokenWords = normalize(spoken).split(' ');
-
-  // Levenshtein-style alignment: match greedily from left
-  const aligned: WordResult[] = targetWords.map((tw, i) => ({
-    target: tw,
-    spoken: spokenWords[i] ?? '',
-    correct: (spokenWords[i] ?? '').toLowerCase() === tw.toLowerCase(),
-  }));
-
-  const correct = aligned.filter((w) => w.correct).length;
-  return {
-    words: aligned,
-    correct,
-    total: targetWords.length,
-    accuracy: Math.round((correct / targetWords.length) * 100),
-  };
+interface TenseSentence {
+  sentence: string;
+  tenseUsed: string;
+  isCorrect: boolean;
+  shouldBe: string;
+  explanation: string;
+  structureType: string;
+  structureNote: string;
 }
 
-// ─── SpeechRecognition shim ──────────────────────────────────────────────────
+interface WordEnhancement {
+  wordUsed: string;
+  synonyms: string[];
+  bestAlternative: string;
+  example: string;
+  note: string;
+}
 
-type SRInstance = {
-  lang: string;
-  interimResults: boolean;
-  continuous: boolean;
-  onresult: ((e: { results: { transcript: string; isFinal: boolean }[][] }) => void) | null;
-  onerror: ((e: { error: string }) => void) | null;
-  onend: (() => void) | null;
-  start: () => void;
-  stop: () => void;
+interface WritingFeedback {
+  grammar:    { score: number; feedback: string; corrections: Correction[] };
+  tenses:     { summary: string; sentences: TenseSentence[] };
+  vocabulary: { score: number; feedback: string; suggestions: string[]; wordEnhancements: WordEnhancement[] };
+  coherence:  { score: number; feedback: string };
+  style:      { score: number; feedback: string };
+  level:      { estimated: string; feedback: string };
+  overallScore: number;
+  correctedVersion: string;
+  rewriteSuggestion: string;
+}
+
+interface HistoryEntry {
+  id: string;
+  date: string;
+  text: string;
+  feedback: WritingFeedback;
+}
+
+// ─── Helpers ──────────────────────────────────────────────────────────────────
+
+function scoreColor(s: number) {
+  if (s >= 80) return 'text-emerald-600 dark:text-emerald-400';
+  if (s >= 60) return 'text-yellow-600 dark:text-yellow-400';
+  return 'text-red-500 dark:text-red-400';
+}
+
+function scoreBg(s: number) {
+  if (s >= 80) return 'bg-emerald-500';
+  if (s >= 60) return 'bg-yellow-500';
+  return 'bg-red-500';
+}
+
+const levelColors: Record<string, string> = {
+  A1: 'bg-gray-100 text-gray-600 dark:bg-gray-800 dark:text-gray-400',
+  A2: 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400',
+  B1: 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400',
+  B2: 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400',
+  C1: 'bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400',
+  C2: 'bg-rose-100 text-rose-700 dark:bg-rose-900/30 dark:text-rose-400',
 };
 
-function createSR(): SRInstance | null {
-  if (typeof window === 'undefined') return null;
-  const SR =
-    (window as unknown as Record<string, unknown>)['SpeechRecognition'] as
-    (new () => SRInstance) | undefined ??
-    (window as unknown as Record<string, unknown>)['webkitSpeechRecognition'] as
-    (new () => SRInstance) | undefined;
-  if (!SR) return null;
-  return new SR();
+const STORAGE_KEY = 'ai_writing_history';
+
+function loadHistory(): HistoryEntry[] {
+  if (typeof window === 'undefined') return [];
+  try { return JSON.parse(localStorage.getItem(STORAGE_KEY) ?? '[]'); }
+  catch { return []; }
 }
 
-// ─── Level Badge ─────────────────────────────────────────────────────────────
+function saveEntry(entry: HistoryEntry) {
+  const list = [entry, ...loadHistory()].slice(0, 20);
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(list));
+}
 
-const levelColors = {
-  beginner:     'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300',
-  intermediate: 'bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300',
-  advanced:     'bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300',
-} as const;
+// ─── Sub-components ───────────────────────────────────────────────────────────
+
+function ScoreBar({ score }: { score: number }) {
+  return (
+    <div className="flex items-center gap-3 flex-1">
+      <span className={`text-sm font-bold min-w-[2.5rem] text-right ${scoreColor(score)}`}>{score}</span>
+      <div className="flex-1 h-2 bg-(--bg-secondary) rounded-full overflow-hidden">
+        <div className={`h-full rounded-full transition-all duration-700 ${scoreBg(score)}`} style={{ width: `${score}%` }} />
+      </div>
+    </div>
+  );
+}
+
+function Section({
+  title, icon: Icon, score, feedback, children,
+}: {
+  title: string;
+  icon: React.ElementType;
+  score?: number;
+  feedback: string;
+  children?: React.ReactNode;
+}) {
+  const [open, setOpen] = useState(true);
+  return (
+    <div className="border border-(--border) rounded-xl overflow-hidden">
+      <button
+        onClick={() => setOpen(v => !v)}
+        className="w-full flex items-center justify-between px-4 py-3 hover:bg-(--hover) transition-colors"
+      >
+        <div className="flex items-center gap-2.5">
+          <div className="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+            <Icon className="w-3.5 h-3.5 text-primary" />
+          </div>
+          <span className="font-semibold text-(--text) text-sm">{title}</span>
+        </div>
+        <div className="flex items-center gap-2 ml-2 shrink-0">
+          {score !== undefined && (
+            <span className={`text-xs font-bold ${scoreColor(score)}`}>{score}/100</span>
+          )}
+          {open
+            ? <ChevronUp className="w-3.5 h-3.5 text-(--text-muted)" />
+            : <ChevronDown className="w-3.5 h-3.5 text-(--text-muted)" />}
+        </div>
+      </button>
+      {open && (
+        <div className="px-4 pb-4 pt-2 space-y-3 border-t border-(--border) bg-(--bg-secondary)/20">
+          <p className="text-sm text-(--text-secondary) leading-relaxed">{feedback}</p>
+          {children}
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ─── Writing Topics ───────────────────────────────────────────────────────────
+
+const WRITING_TYPES = ['Journal', 'Essay', 'Story', 'Opinion', 'Description', 'Letter', 'Email'];
+
+const PROMPT_IDEAS = [
+  'Describe your daily routine in detail.',
+  'Write about your favorite place and why you love it.',
+  'Tell a story about an unexpected friendship.',
+  'Explain why learning English is important to you.',
+  'Describe a challenge you recently overcame.',
+  'Write about your dream job and how you plan to achieve it.',
+  'Tell a story about your most memorable trip.',
+  'Write your opinion about social media\'s effect on students.',
+];
 
 // ─── Main Page ────────────────────────────────────────────────────────────────
 
-type Status = 'idle' | 'recording' | 'done';
+type Tab = 'feedback' | 'corrected' | 'rewrite';
 
-export default function SpeakingPage() {
-  const [selectedCat, setSelectedCat] = useState<string>('All');
-  const [queue, setQueue] = useState<SpeakingSentence[]>([]);
-  const [index, setIndex] = useState(0);
-  const [status, setStatus] = useState<Status>('idle');
-  const [transcript, setTranscript] = useState('');
-  const [interimText, setInterimText] = useState('');
-  const [result, setResult] = useState<CompareResult | null>(null);
-  const [sessionScores, setSessionScores] = useState<number[]>([]);
-  const [showHint, setShowHint] = useState(false);
+export default function WritingPage() {
+  const [text, setText] = useState('');
+  const [feedback, setFeedback] = useState<WritingFeedback | null>(null);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
-  const [supported, setSupported] = useState(true);
+  const [activeTab, setActiveTab] = useState<Tab>('feedback');
+  const [showHistory, setShowHistory] = useState(false);
+  const [history, setHistory] = useState<HistoryEntry[]>([]);
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
 
-  const srRef = useRef<SRInstance | null>(null);
+  const wordCount = text.trim() ? text.trim().split(/\s+/).length : 0;
+  const promptIdea = useRef(PROMPT_IDEAS[Math.floor(Math.random() * PROMPT_IDEAS.length)]).current;
 
-  // Build queue whenever category changes
-  useEffect(() => {
-    const filtered =
-      selectedCat === 'All'
-        ? speakingSentences
-        : speakingSentences.filter((s) => s.category === selectedCat);
-    // Shuffle
-    const shuffled = [...filtered].sort(() => Math.random() - 0.5);
-    setQueue(shuffled);
-    setIndex(0);
-    setResult(null);
-    setTranscript('');
-    setStatus('idle');
-    setShowHint(false);
-    setSessionScores([]);
-  }, [selectedCat]);
-
-  const current = queue[index];
-
-  // Check browser support on mount
-  useEffect(() => {
-    const sr = createSR();
-    if (!sr) setSupported(false);
-  }, []);
-
-  const stopRecording = useCallback(() => {
-    srRef.current?.stop();
-    srRef.current = null;
-    setStatus('idle');
-    setInterimText('');
-  }, []);
-
-  const startRecording = useCallback(() => {
-    if (!current) return;
+  async function checkWriting() {
+    if (wordCount < 5) { setError('Please write at least 5 words.'); return; }
     setError('');
-    setResult(null);
-    setTranscript('');
-    setInterimText('');
+    setLoading(true);
+    setFeedback(null);
 
-    const sr = createSR();
-    if (!sr) {
-      setSupported(false);
-      return;
+    try {
+      const res = await fetch('/api/writing-check', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ text: text.trim() }),
+      });
+      const data = await res.json();
+
+      if (!res.ok) {
+        if (data.error === 'no_api_key') {
+          setError('AI service not configured. Add GEMINI_API_KEY to your .env.local file to enable this feature.');
+        } else if (data.error === 'quota_exceeded' || res.status === 429) {
+          setError('AI quota exceeded. Please wait a moment and try again.');
+        } else {
+          setError(data.message ?? 'Something went wrong. Please try again.');
+        }
+        return;
+      }
+
+      setFeedback(data);
+      setActiveTab('feedback');
+      saveEntry({
+        id: Date.now().toString(),
+        date: new Date().toLocaleString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit' }),
+        text: text.trim(),
+        feedback: data,
+      });
+    } catch {
+      setError('Network error. Check your connection and try again.');
+    } finally {
+      setLoading(false);
     }
-
-    sr.lang = 'en-US';
-    sr.interimResults = true;
-    sr.continuous = false;
-
-    sr.onresult = (e) => {
-      let interim = '';
-      let final = '';
-      for (const r of e.results) {
-        const t = r[0].transcript;
-        if (r[0].isFinal) final += t;
-        else interim += t;
-      }
-      if (interim) setInterimText(interim);
-      if (final) {
-        const cmp = compareSentences(current.text, final.trim());
-        setTranscript(final.trim());
-        setResult(cmp);
-        setSessionScores((prev) => [...prev, cmp.accuracy]);
-        setStatus('done');
-        setInterimText('');
-      }
-    };
-
-    sr.onerror = (e) => {
-      setError(
-        e.error === 'not-allowed'
-          ? 'Izin mikrofon ditolak. Aktifkan mikrofon di browser.'
-          : e.error === 'no-speech'
-          ? 'Tidak ada suara terdeteksi. Coba lagi.'
-          : `Error: ${e.error}`,
-      );
-      setStatus('idle');
-      setInterimText('');
-    };
-
-    sr.onend = () => {
-      if (status === 'recording') setStatus('idle');
-      setInterimText('');
-    };
-
-    srRef.current = sr;
-    sr.start();
-    setStatus('recording');
-  }, [current, status]);
-
-  function toggleMic() {
-    if (status === 'recording') stopRecording();
-    else startRecording();
   }
 
-  function speak() {
-    if (!current || typeof window === 'undefined') return;
-    window.speechSynthesis.cancel();
-    const utt = new SpeechSynthesisUtterance(current.text);
-    utt.lang = 'en-US';
-    utt.rate = 0.85;
-    window.speechSynthesis.speak(utt);
+  function openHistory() {
+    setHistory(loadHistory());
+    setShowHistory(true);
   }
 
-  function goNext() {
-    if (index >= queue.length - 1) return;
-    setIndex((i) => i + 1);
-    setResult(null);
-    setTranscript('');
-    setStatus('idle');
-    setShowHint(false);
-    setInterimText('');
-    stopRecording();
+  function loadFromHistory(entry: HistoryEntry) {
+    setText(entry.text);
+    setFeedback(entry.feedback);
+    setActiveTab('feedback');
+    setShowHistory(false);
   }
 
-  function goPrev() {
-    if (index <= 0) return;
-    setIndex((i) => i - 1);
-    setResult(null);
-    setTranscript('');
-    setStatus('idle');
-    setShowHint(false);
-    setInterimText('');
-    stopRecording();
-  }
-
-  function retry() {
-    setResult(null);
-    setTranscript('');
-    setStatus('idle');
-    setInterimText('');
-  }
-
-  function shuffle() {
-    const filtered =
-      selectedCat === 'All'
-        ? speakingSentences
-        : speakingSentences.filter((s) => s.category === selectedCat);
-    setQueue([...filtered].sort(() => Math.random() - 0.5));
-    setIndex(0);
-    setResult(null);
-    setTranscript('');
-    setStatus('idle');
-    setShowHint(false);
-    setSessionScores([]);
-  }
-
-  const avgScore =
-    sessionScores.length > 0
-      ? Math.round(sessionScores.reduce((a, b) => a + b, 0) / sessionScores.length)
-      : null;
-
-  if (!supported) {
-    return (
-      <div className="p-6 max-w-xl mx-auto space-y-4">
-        <Link href="/practice" className="inline-flex items-center gap-1.5 text-sm text-(--text-secondary) hover:text-primary">
-          <ArrowLeft className="w-4 h-4" /> Kembali
-        </Link>
-        <div className="bg-red-50 dark:bg-red-950/30 border border-red-300/60 rounded-xl p-6 text-center space-y-3">
-          <XCircle className="w-10 h-10 text-red-500 mx-auto" />
-          <p className="font-semibold text-(--text)">Browser Tidak Didukung</p>
-          <p className="text-sm text-(--text-secondary)">
-            Fitur Speaking Test membutuhkan <strong>Google Chrome</strong> atau <strong>Microsoft Edge</strong>. Silakan buka halaman ini menggunakan salah satu browser tersebut.
-          </p>
-        </div>
-      </div>
-    );
-  }
-
-  if (!current) {
-    return (
-      <div className="p-6 max-w-xl mx-auto">
-        <p className="text-center text-(--text-secondary)">Tidak ada kalimat ditemukan.</p>
-      </div>
-    );
+  function clearAll() {
+    setText('');
+    setFeedback(null);
+    setError('');
+    textareaRef.current?.focus();
   }
 
   return (
-    <div className="p-4 lg:p-6 space-y-5 max-w-2xl mx-auto animate-fade-in">
-      {/* Header */}
-      <div className="flex items-center justify-between">
+    <div className="min-h-screen p-4 lg:p-6">
+
+      {/* ── Header ── */}
+      <div className="flex items-center justify-between mb-6 max-w-7xl mx-auto">
         <Link
           href="/practice"
           className="inline-flex items-center gap-1.5 text-sm text-(--text-secondary) hover:text-primary transition-colors"
         >
-          <ArrowLeft className="w-4 h-4" /> Kembali
+          <ArrowLeft className="w-4 h-4" /> Back to Practice
         </Link>
-        <div className="flex items-center gap-3">
-          {avgScore !== null && (
-            <div className="flex items-center gap-1.5 text-sm font-semibold text-primary">
-              <Trophy className="w-4 h-4" />
-              Rata-rata: {avgScore}%
-            </div>
-          )}
-          <button
-            onClick={shuffle}
-            className="p-2 rounded-lg hover:bg-(--hover) transition-colors text-(--text-secondary)"
-            title="Acak ulang"
-          >
-            <Shuffle className="w-4 h-4" />
-          </button>
-        </div>
-      </div>
-
-      {/* Title */}
-      <div>
-        <h1 className="text-xl font-bold text-(--text) flex items-center gap-2">
-          <Mic className="w-5 h-5 text-primary" />
-          Speaking Test
-        </h1>
-        <p className="text-xs text-(--text-secondary) mt-0.5">
-          Baca kalimat dengan lantang, lalu lihat seberapa akurat ucapanmu.
-        </p>
-      </div>
-
-      {/* Category Filter */}
-      <div className="flex gap-2 overflow-x-auto pb-1 -mx-1 px-1">
-        {['All', ...speakingCategories].map((cat) => (
-          <button
-            key={cat}
-            onClick={() => setSelectedCat(cat)}
-            className={`shrink-0 text-xs font-medium px-3 py-1.5 rounded-full border transition-all ${
-              selectedCat === cat
-                ? 'bg-primary text-white border-primary'
-                : 'border-(--border) text-(--text-secondary) hover:border-primary/50'
-            }`}
-          >
-            {cat}
-          </button>
-        ))}
-      </div>
-
-      {/* Progress */}
-      <div className="flex items-center gap-3">
-        <span className="text-xs text-(--text-muted)">
-          {index + 1} / {queue.length}
-        </span>
-        <div className="flex-1 h-1.5 bg-(--bg-secondary) rounded-full overflow-hidden">
-          <div
-            className="h-full bg-primary rounded-full transition-all duration-500"
-            style={{ width: `${((index + 1) / queue.length) * 100}%` }}
-          />
-        </div>
-        <span className={`text-[11px] font-semibold px-2 py-0.5 rounded-full ${levelColors[current.level]}`}>
-          {current.level}
-        </span>
-        <span className="text-[11px] text-(--text-muted) hidden sm:inline">
-          {current.category}
-        </span>
-      </div>
-
-      {/* Sentence Card */}
-      <div className="bg-(--bg-card) border border-(--border) rounded-2xl overflow-hidden">
-        {/* Translation hint */}
         <button
-          onClick={() => setShowHint((v) => !v)}
-          className="w-full flex items-center justify-between px-4 py-2.5 border-b border-(--border) hover:bg-(--hover) transition-colors text-left"
+          onClick={openHistory}
+          className="flex items-center gap-1.5 text-xs text-(--text-secondary) hover:text-primary border border-(--border) px-3 py-1.5 rounded-lg transition-colors"
         >
-          <span className="text-xs text-(--text-muted) flex items-center gap-1.5">
-            <Lightbulb className="w-3.5 h-3.5 text-yellow-500" />
-            Terjemahan {showHint ? '(sembunyikan)' : '(klik untuk lihat)'}
-          </span>
+          <History className="w-3.5 h-3.5" /> History
         </button>
-        {showHint && (
-          <p className="px-4 py-2 text-sm text-(--text-secondary) bg-yellow-50/50 dark:bg-yellow-950/20 italic border-b border-(--border)">
-            {current.translation}
-          </p>
-        )}
+      </div>
 
-        {/* Target sentence */}
-        <div className="px-5 py-6 text-center">
-          {/* Result: word-by-word coloring */}
-          {result ? (
-            <div className="flex flex-wrap gap-x-2 gap-y-1 justify-center mb-3">
-              {result.words.map((w, i) => (
-                <div key={i} className="flex flex-col items-center gap-0.5">
-                  <span
-                    className={`text-xl font-bold px-1 rounded ${
-                      w.correct
-                        ? 'text-green-600 dark:text-green-400'
-                        : 'text-red-500 dark:text-red-400'
-                    }`}
-                  >
-                    {w.target}
-                  </span>
-                  {!w.correct && w.spoken && (
-                    <span className="text-[10px] text-red-400 line-through">{w.spoken}</span>
-                  )}
-                </div>
+      {/* ── Title ── */}
+      <div className="max-w-7xl mx-auto mb-6">
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+            <PenLine className="w-5 h-5 text-primary" />
+          </div>
+          <div>
+            <h1 className="text-xl font-bold text-(--text)">AI Writing Practice</h1>
+            <p className="text-xs text-(--text-secondary)">
+              Write in English — get instant AI feedback like a real teacher &amp; IELTS examiner
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* ── Main Grid ── */}
+      <div className="max-w-7xl mx-auto">
+        <div className={`grid gap-6 ${feedback ? 'lg:grid-cols-2' : 'max-w-3xl mx-auto'}`}>
+
+          {/* ╔══ Left: Editor ══╗ */}
+          <div className="space-y-4">
+
+            {/* Writing type chips */}
+            <div className="flex gap-2 overflow-x-auto pb-1 -mx-1 px-1">
+              {WRITING_TYPES.map((t) => (
+                <span
+                  key={t}
+                  className="shrink-0 text-xs font-medium px-3 py-1.5 rounded-full border border-(--border) text-(--text-muted)"
+                >
+                  {t}
+                </span>
               ))}
             </div>
-          ) : (
-            <p className="text-2xl font-bold text-(--text) leading-relaxed">
-              {current.text}
-            </p>
-          )}
 
-          {/* Pronunciation tip */}
-          {current.tip && !result && (
-            <p className="text-xs text-primary/70 mt-2">💡 {current.tip}</p>
-          )}
-        </div>
-
-        {/* TTS Button */}
-        <div className="flex justify-center pb-4">
-          <button
-            onClick={speak}
-            className="flex items-center gap-1.5 text-xs text-(--text-secondary) hover:text-primary border border-(--border) px-3 py-1.5 rounded-lg transition-colors"
-          >
-            <Volume2 className="w-3.5 h-3.5" /> Dengar contoh
-          </button>
-        </div>
-      </div>
-
-      {/* Mic Area */}
-      <div className="flex flex-col items-center gap-4">
-        {/* Interim transcript (live) */}
-        {interimText && (
-          <p className="text-sm text-(--text-muted) italic animate-pulse text-center">
-            &ldquo;{interimText}&rdquo;
-          </p>
-        )}
-
-        {/* Mic Button */}
-        <button
-          onClick={toggleMic}
-          className={`w-20 h-20 rounded-full flex items-center justify-center transition-all shadow-lg ${
-            status === 'recording'
-              ? 'bg-red-500 hover:bg-red-600 shadow-red-500/40 animate-pulse'
-              : status === 'done'
-              ? 'bg-green-500 hover:bg-green-600 shadow-green-500/20'
-              : 'bg-primary hover:bg-primary/90 shadow-primary/30'
-          }`}
-          title={status === 'recording' ? 'Klik untuk stop' : 'Klik untuk mulai bicara'}
-        >
-          {status === 'recording' ? (
-            <MicOff className="w-8 h-8 text-white" />
-          ) : (
-            <Mic className="w-8 h-8 text-white" />
-          )}
-        </button>
-
-        <p className="text-xs text-(--text-muted) text-center">
-          {status === 'recording'
-            ? '🔴 Sedang merekam... klik untuk stop'
-            : status === 'done'
-            ? '✅ Selesai direkam'
-            : 'Klik mic untuk mulai berbicara'}
-        </p>
-
-        {/* Error */}
-        {error && (
-          <p className="text-xs text-red-500 text-center">{error}</p>
-        )}
-      </div>
-
-      {/* Result Panel */}
-      {result && (
-        <div className="bg-(--bg-card) border border-(--border) rounded-2xl p-5 space-y-4">
-          {/* Score */}
-          <div className="flex items-center gap-4">
-            <div
-              className={`text-3xl font-bold ${
-                result.accuracy >= 80
-                  ? 'text-green-600'
-                  : result.accuracy >= 50
-                  ? 'text-yellow-600'
-                  : 'text-red-500'
-              }`}
-            >
-              {result.accuracy}%
-            </div>
-            <div className="flex-1">
-              <div className="h-3 bg-(--bg-secondary) rounded-full overflow-hidden">
-                <div
-                  className={`h-full rounded-full transition-all duration-700 ${
-                    result.accuracy >= 80
-                      ? 'bg-green-500'
-                      : result.accuracy >= 50
-                      ? 'bg-yellow-500'
-                      : 'bg-red-500'
-                  }`}
-                  style={{ width: `${result.accuracy}%` }}
-                />
+            {/* Textarea card */}
+            <div className="bg-(--bg-card) border border-(--border) rounded-2xl overflow-hidden shadow-sm">
+              {/* Toolbar */}
+              <div className="flex items-center justify-between px-4 py-2.5 border-b border-(--border) bg-(--bg-secondary)/30">
+                <span className="text-xs font-medium text-(--text-secondary) flex items-center gap-1.5">
+                  <PenLine className="w-3.5 h-3.5" /> Your Writing
+                </span>
+                {text && (
+                  <button
+                    onClick={clearAll}
+                    className="text-xs text-(--text-muted) hover:text-red-500 flex items-center gap-1 transition-colors"
+                  >
+                    <X className="w-3 h-3" /> Clear
+                  </button>
+                )}
               </div>
-              <p className="text-xs text-(--text-muted) mt-1">
-                {result.correct}/{result.total} kata benar
-              </p>
+
+              {/* Textarea */}
+              <textarea
+                ref={textareaRef}
+                value={text}
+                onChange={(e) => setText(e.target.value)}
+                placeholder={`Start writing here...\n\nNeed an idea? Try: "${promptIdea}"`}
+                className="w-full min-h-[340px] p-5 text-sm text-(--text) bg-transparent resize-none focus:outline-none leading-relaxed placeholder:text-(--text-muted) placeholder:italic"
+                spellCheck
+              />
+
+              {/* Footer */}
+              <div className="flex items-center justify-between px-4 py-2.5 border-t border-(--border) bg-(--bg-secondary)/30">
+                <div className="flex items-center gap-3 text-xs text-(--text-muted)">
+                  <span>{wordCount} words</span>
+                  <span>·</span>
+                  <span>{text.length} chars</span>
+                  {wordCount > 0 && wordCount < 5 && (
+                    <span className="text-yellow-500 ml-1">— write at least 5 words</span>
+                  )}
+                </div>
+              </div>
             </div>
-            {result.accuracy === 100 && (
-              <CheckCircle2 className="w-8 h-8 text-green-500 shrink-0" />
+
+            {/* Error banner */}
+            {error && (
+              <div className="flex items-start gap-2.5 bg-red-50 dark:bg-red-950/30 border border-red-300/50 rounded-xl px-4 py-3">
+                <AlertCircle className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
+                <p className="text-sm text-red-600 dark:text-red-400">{error}</p>
+              </div>
             )}
+
+            {/* Check button */}
+            <button
+              onClick={checkWriting}
+              disabled={loading || wordCount < 5}
+              className="w-full flex items-center justify-center gap-2 bg-primary text-white rounded-xl py-3.5 px-6 font-semibold text-sm hover:bg-primary/90 transition-all disabled:opacity-40 disabled:cursor-not-allowed shadow-sm"
+            >
+              {loading ? (
+                <>
+                  <Loader2 className="w-4 h-4 animate-spin" />
+                  AI is reviewing your writing...
+                </>
+              ) : (
+                <>
+                  <Sparkles className="w-4 h-4" />
+                  Check My Writing
+                </>
+              )}
+            </button>
+
+            <p className="text-center text-xs text-(--text-muted)">
+              Powered by Google Gemini AI ·
+              add <code className="bg-(--bg-secondary) px-1 rounded text-[11px]">GEMINI_API_KEY</code> to{' '}
+              <code className="bg-(--bg-secondary) px-1 rounded text-[11px]">.env.local</code> to enable
+            </p>
           </div>
 
-          {/* What you said */}
-          {transcript && (
-            <div className="bg-(--bg-secondary) rounded-xl px-4 py-2.5">
-              <p className="text-[11px] text-(--text-muted) mb-1">Yang kamu ucapkan:</p>
-              <p className="text-sm text-(--text-secondary) italic">&ldquo;{transcript}&rdquo;</p>
-            </div>
-          )}
+          {/* ╔══ Right: Feedback ══╗ */}
+          {feedback && (
+            <div className="space-y-4 animate-fade-in">
 
-          {/* Feedback message */}
-          <p className="text-sm font-medium text-center text-(--text)">
-            {result.accuracy === 100
-              ? '🎉 Sempurna! Ucapanmu tepat sekali!'
-              : result.accuracy >= 80
-              ? '👍 Bagus! Hampir sempurna.'
-              : result.accuracy >= 50
-              ? '📚 Lumayan, terus berlatih!'
-              : '💪 Jangan menyerah, coba lagi!'}
-          </p>
-
-          {/* Word details - show wrong words */}
-          {result.words.some((w) => !w.correct) && (
-            <div className="space-y-1">
-              <p className="text-[11px] text-(--text-muted) font-semibold uppercase">Kata yang perlu diperbaiki:</p>
-              {result.words.filter((w) => !w.correct).map((w, i) => (
-                <div key={i} className="flex items-center gap-3 text-sm">
-                  <XCircle className="w-3.5 h-3.5 text-red-500 shrink-0" />
-                  <span className="text-primary font-mono font-semibold">{w.target}</span>
-                  {w.spoken && (
-                    <span className="text-(--text-muted)">
-                      → kamu ucapkan: <span className="line-through text-red-400">{w.spoken}</span>
-                    </span>
-                  )}
-                  {!w.spoken && (
-                    <span className="text-(--text-muted) text-xs">(tidak terucap)</span>
-                  )}
+              {/* Overall score card */}
+              <div className="bg-(--bg-card) border border-(--border) rounded-2xl p-5 shadow-sm">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center gap-2">
+                    <Trophy className="w-5 h-5 text-primary" />
+                    <span className="font-bold text-(--text)">Overall Score</span>
+                  </div>
+                  <span className={`text-4xl font-black ${scoreColor(feedback.overallScore)}`}>
+                    {feedback.overallScore}
+                    <span className="text-sm font-normal text-(--text-muted)">/100</span>
+                  </span>
                 </div>
-              ))}
+                <div className="h-3 bg-(--bg-secondary) rounded-full overflow-hidden">
+                  <div
+                    className={`h-full rounded-full transition-all duration-1000 ${scoreBg(feedback.overallScore)}`}
+                    style={{ width: `${feedback.overallScore}%` }}
+                  />
+                </div>
+                <div className="flex items-center justify-between mt-3">
+                  <span className={`inline-flex items-center gap-1.5 text-sm font-semibold px-3 py-1 rounded-full ${levelColors[feedback.level.estimated] ?? levelColors.A1}`}>
+                    <Target className="w-3.5 h-3.5" />
+                    {feedback.level.estimated} Level
+                  </span>
+                  <span className="text-xs text-(--text-muted)">
+                    {feedback.overallScore >= 85 ? '🎉 Excellent!' : feedback.overallScore >= 65 ? '👍 Good work' : '📚 Keep practicing'}
+                  </span>
+                </div>
+              </div>
+
+              {/* Score breakdown */}
+              <div className="bg-(--bg-card) border border-(--border) rounded-xl p-4 space-y-2.5">
+                <p className="text-xs font-semibold text-(--text-muted) uppercase tracking-wider mb-3">Score Breakdown</p>
+                {[
+                  { label: 'Grammar',    score: feedback.grammar.score },
+                  { label: 'Vocabulary', score: feedback.vocabulary.score },
+                  { label: 'Coherence',  score: feedback.coherence.score },
+                  { label: 'Style',      score: feedback.style.score },
+                ].map((item) => (
+                  <div key={item.label} className="flex items-center gap-3 text-xs">
+                    <span className="w-20 text-(--text-secondary) shrink-0">{item.label}</span>
+                    <ScoreBar score={item.score} />
+                  </div>
+                ))}
+              </div>
+
+              {/* Tab switcher */}
+              <div className="flex gap-1 bg-(--bg-secondary) rounded-xl p-1">
+                {(['feedback', 'corrected', 'rewrite'] as Tab[]).map((tab) => (
+                  <button
+                    key={tab}
+                    onClick={() => setActiveTab(tab)}
+                    className={`flex-1 text-xs font-semibold py-2 rounded-lg transition-all ${
+                      activeTab === tab
+                        ? 'bg-(--bg-card) text-primary shadow-sm'
+                        : 'text-(--text-muted) hover:text-(--text)'
+                    }`}
+                  >
+                    {tab === 'feedback' ? 'Feedback' : tab === 'corrected' ? 'Corrected' : 'Rewrite'}
+                  </button>
+                ))}
+              </div>
+
+              {/* ── Feedback tab ── */}
+              {activeTab === 'feedback' && (
+                <div className="space-y-3">
+
+                  <Section title="Grammar" icon={BookOpen} score={feedback.grammar.score} feedback={feedback.grammar.feedback}>
+                    {feedback.grammar.corrections.length > 0 && (
+                      <div className="space-y-2 mt-1">
+                        {feedback.grammar.corrections.map((c, i) => (
+                          <div key={i} className="bg-(--bg-card) border border-(--border) rounded-lg p-3 text-xs space-y-1">
+                            <div className="flex flex-wrap items-center gap-1.5">
+                              <span className="text-red-500 line-through">{c.original}</span>
+                              <span className="text-(--text-muted)">→</span>
+                              <span className="text-emerald-600 dark:text-emerald-400 font-semibold">{c.corrected}</span>
+                            </div>
+                            <p className="text-(--text-muted) leading-snug">{c.explanation}</p>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </Section>
+
+                  {/* Tenses & Clause Analysis */}
+                  {feedback.tenses && (
+                    <Section title="Tenses & Sentence Structure" icon={GitBranch} feedback={feedback.tenses.summary}>
+                      <div className="space-y-3 mt-1">
+                        {feedback.tenses.sentences.map((s, i) => (
+                          <div
+                            key={i}
+                            className={`rounded-xl border p-3 text-xs space-y-2 ${
+                              s.isCorrect
+                                ? 'border-emerald-200 dark:border-emerald-800/50 bg-emerald-50/50 dark:bg-emerald-950/20'
+                                : 'border-red-200 dark:border-red-800/50 bg-red-50/50 dark:bg-red-950/20'
+                            }`}
+                          >
+                            {/* Sentence */}
+                            <p className="text-(--text) font-medium leading-snug italic">&ldquo;{s.sentence}&rdquo;</p>
+
+                            {/* Tense row */}
+                            <div className="flex flex-wrap items-center gap-2">
+                              <span className="flex items-center gap-1 bg-(--bg-card) border border-(--border) px-2 py-0.5 rounded-full font-semibold text-(--text)">
+                                <CircleDot className="w-2.5 h-2.5 text-primary" />
+                                {s.tenseUsed}
+                              </span>
+                              {!s.isCorrect && (
+                                <>
+                                  <span className="text-(--text-muted)">→ seharusnya</span>
+                                  <span className="bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300 px-2 py-0.5 rounded-full font-semibold">
+                                    {s.shouldBe}
+                                  </span>
+                                </>
+                              )}
+                              {s.isCorrect && (
+                                <span className="text-emerald-600 dark:text-emerald-400 font-semibold flex items-center gap-1">
+                                  <CheckCircle2 className="w-3 h-3" /> Benar
+                                </span>
+                              )}
+                            </div>
+
+                            {/* Explanation */}
+                            <p className="text-(--text-secondary) leading-snug">{s.explanation}</p>
+
+                            {/* Clause type */}
+                            <div className="pt-1 border-t border-(--border)/50 flex flex-wrap items-start gap-2">
+                              <span className="shrink-0 bg-primary/10 text-primary px-2 py-0.5 rounded-full font-semibold">
+                                {s.structureType}
+                              </span>
+                              <span className="text-(--text-muted) leading-snug">{s.structureNote}</span>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </Section>
+                  )}
+
+                  <Section title="Vocabulary" icon={Layers} score={feedback.vocabulary.score} feedback={feedback.vocabulary.feedback}>
+                    {/* Suggestion chips */}
+                    {feedback.vocabulary.suggestions.length > 0 && (
+                      <div className="flex flex-wrap gap-1.5 mt-1">
+                        {feedback.vocabulary.suggestions.map((s, i) => (
+                          <span key={i} className="text-xs bg-primary/10 text-primary px-2.5 py-1 rounded-full">{s}</span>
+                        ))}
+                      </div>
+                    )}
+
+                    {/* Word enhancements */}
+                    {feedback.vocabulary.wordEnhancements?.length > 0 && (
+                      <div className="mt-3 space-y-2">
+                        <p className="text-xs font-semibold text-(--text-muted) uppercase tracking-wider">Upgrade Vocabulary Kamu</p>
+                        {feedback.vocabulary.wordEnhancements.map((w, i) => (
+                          <div key={i} className="bg-(--bg-card) border border-(--border) rounded-xl p-3 text-xs space-y-2">
+                            {/* Word used → best alternative */}
+                            <div className="flex flex-wrap items-center gap-2">
+                              <span className="bg-(--bg-secondary) text-(--text) px-2.5 py-1 rounded-full font-mono font-semibold">
+                                {w.wordUsed}
+                              </span>
+                              <span className="text-(--text-muted)">→ coba pakai</span>
+                              <span className="bg-primary text-white px-2.5 py-1 rounded-full font-semibold">
+                                {w.bestAlternative}
+                              </span>
+                            </div>
+
+                            {/* Synonyms */}
+                            <div className="flex flex-wrap gap-1.5">
+                              {w.synonyms.map((s, j) => (
+                                <span key={j} className="bg-primary/10 text-primary px-2 py-0.5 rounded-full">
+                                  {s}
+                                </span>
+                              ))}
+                            </div>
+
+                            {/* Example */}
+                            <p className="text-(--text-secondary) italic leading-snug">
+                              &ldquo;{w.example}&rdquo;
+                            </p>
+
+                            {/* Note */}
+                            <p className="text-(--text-muted) leading-snug border-t border-(--border)/50 pt-1.5">
+                              💡 {w.note}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </Section>
+
+                  <Section title="Coherence & Clarity" icon={Target} score={feedback.coherence.score} feedback={feedback.coherence.feedback} />
+
+                  <Section title="Writing Style" icon={Sparkles} score={feedback.style.score} feedback={feedback.style.feedback} />
+
+                  <div className="border border-(--border) rounded-xl p-4 bg-(--bg-card) flex items-start gap-3">
+                    <Star className="w-4 h-4 text-yellow-500 shrink-0 mt-0.5" />
+                    <div>
+                      <p className="text-sm font-semibold text-(--text) mb-1">
+                        Estimated Level: {feedback.level.estimated}
+                      </p>
+                      <p className="text-sm text-(--text-secondary) leading-relaxed">{feedback.level.feedback}</p>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {/* ── Corrected tab ── */}
+              {activeTab === 'corrected' && (
+                <div className="bg-(--bg-card) border border-(--border) rounded-2xl overflow-hidden">
+                  <div className="flex items-center gap-2 px-4 py-3 border-b border-(--border) bg-(--bg-secondary)/30">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-500" />
+                    <span className="text-sm font-semibold text-(--text)">Grammar-Corrected Version</span>
+                  </div>
+                  <div className="p-5">
+                    <p className="text-sm text-(--text) leading-relaxed whitespace-pre-wrap">{feedback.correctedVersion}</p>
+                  </div>
+                </div>
+              )}
+
+              {/* ── Rewrite tab ── */}
+              {activeTab === 'rewrite' && (
+                <div className="bg-(--bg-card) border border-(--border) rounded-2xl overflow-hidden">
+                  <div className="flex items-center gap-2 px-4 py-3 border-b border-(--border) bg-(--bg-secondary)/30">
+                    <Lightbulb className="w-4 h-4 text-yellow-500" />
+                    <span className="text-sm font-semibold text-(--text)">Native-Level Rewrite</span>
+                  </div>
+                  <div className="p-5">
+                    <p className="text-xs text-(--text-muted) italic mb-3">How a native English speaker might write this:</p>
+                    <p className="text-sm text-(--text) leading-relaxed whitespace-pre-wrap">{feedback.rewriteSuggestion}</p>
+                  </div>
+                </div>
+              )}
             </div>
           )}
         </div>
-      )}
-
-      {/* Nav Buttons */}
-      <div className="flex gap-3">
-        <button
-          onClick={goPrev}
-          disabled={index === 0}
-          className="flex items-center gap-2 border border-(--border) rounded-xl px-4 py-3 hover:bg-(--hover) transition-colors disabled:opacity-30 disabled:cursor-not-allowed text-sm text-(--text-secondary)"
-        >
-          <ChevronLeft className="w-4 h-4" /> Sebelumnya
-        </button>
-
-        {result && (
-          <button
-            onClick={retry}
-            className="flex items-center gap-2 border border-(--border) rounded-xl px-4 py-3 hover:bg-(--hover) transition-colors text-sm text-(--text-secondary)"
-          >
-            <RotateCcw className="w-4 h-4" /> Coba Lagi
-          </button>
-        )}
-
-        <button
-          onClick={goNext}
-          disabled={index >= queue.length - 1}
-          className="flex-1 flex items-center justify-center gap-2 bg-primary text-white rounded-xl px-4 py-3 hover:bg-primary/90 transition-colors disabled:opacity-30 disabled:cursor-not-allowed text-sm font-semibold"
-        >
-          Berikutnya <ChevronRight className="w-4 h-4" />
-        </button>
       </div>
+
+      {/* ── History Modal ── */}
+      {showHistory && (
+        <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-4">
+          <div className="absolute inset-0 bg-black/50" onClick={() => setShowHistory(false)} />
+          <div className="relative bg-(--bg-card) rounded-2xl w-full max-w-lg max-h-[80vh] flex flex-col shadow-2xl border border-(--border)">
+            <div className="flex items-center justify-between p-4 border-b border-(--border) shrink-0">
+              <div className="flex items-center gap-2">
+                <History className="w-4 h-4 text-primary" />
+                <span className="font-bold text-(--text)">Writing History</span>
+              </div>
+              <button onClick={() => setShowHistory(false)} className="p-1.5 hover:bg-(--hover) rounded-lg transition-colors">
+                <X className="w-4 h-4 text-(--text-muted)" />
+              </button>
+            </div>
+            <div className="overflow-y-auto flex-1 p-4 space-y-3">
+              {history.length === 0 ? (
+                <div className="text-center py-14 text-(--text-muted)">
+                  <Clock className="w-10 h-10 mx-auto mb-3 opacity-25" />
+                  <p className="text-sm font-medium">No history yet</p>
+                  <p className="text-xs mt-1">Checked writings will be saved here automatically.</p>
+                </div>
+              ) : (
+                history.map((entry) => (
+                  <button
+                    key={entry.id}
+                    onClick={() => loadFromHistory(entry)}
+                    className="w-full text-left p-4 rounded-xl border border-(--border) hover:bg-(--hover) transition-colors space-y-2"
+                  >
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs text-(--text-muted) flex items-center gap-1.5">
+                        <Clock className="w-3 h-3" /> {entry.date}
+                      </span>
+                      <span className={`text-sm font-bold ${scoreColor(entry.feedback.overallScore)}`}>
+                        {entry.feedback.overallScore}/100
+                      </span>
+                    </div>
+                    <p className="text-sm text-(--text-secondary) line-clamp-2">{entry.text}</p>
+                    <div className="flex items-center gap-2">
+                      <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${levelColors[entry.feedback.level.estimated] ?? levelColors.A1}`}>
+                        {entry.feedback.level.estimated}
+                      </span>
+                    </div>
+                  </button>
+                ))
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
