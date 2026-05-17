@@ -17,27 +17,73 @@ interface Correction {
   explanation: string;
 }
 
-interface TenseSentence {
+interface SentenceItem {
   sentence: string;
-  tenseUsed: string;
-  isCorrect: boolean;
-  shouldBe: string;
-  explanation: string;
-  structureType: string;
-  structureNote: string;
+  tense: {
+    used: string;
+    isCorrect: boolean;
+    shouldBe: string;
+    explanation: string;
+  };
+  voice: {
+    type: string;
+    isAppropriate: boolean;
+    suggestion: string;
+    converted: string | null;
+  };
+  structure: {
+    sentenceType: string;
+    clauses: {
+      text: string;
+      type: string;
+      connector: string | null;
+      subject: string;
+      predicate: string;
+      object: string | null;
+      note: string;
+    }[];
+    phrases: {
+      text: string;
+      type: string;
+      function: string;
+    }[];
+  };
+  reduction: {
+    possible: boolean;
+    type: string;
+    original: string;
+    reduced: string;
+    explanation: string;
+  };
+  wordClasses: {
+    word: string;
+    class: string;
+    subclass: string;
+    function: string;
+  }[];
+}
+
+interface SynonymEntry {
+  word: string;
+  meaning: string;
+  formality: string;
+  typicalUsage: string;
+  example: string;
 }
 
 interface WordEnhancement {
   wordUsed: string;
-  synonyms: string[];
+  wordClass: string;
+  meaning: string;
+  typicalUsage: string;
+  synonyms: SynonymEntry[];
   bestAlternative: string;
-  example: string;
-  note: string;
+  bestAlternativeReason: string;
 }
 
 interface WritingFeedback {
   grammar:    { score: number; feedback: string; corrections: Correction[] };
-  tenses:     { summary: string; sentences: TenseSentence[] };
+  sentenceAnalysis: { summary: string; sentences: SentenceItem[] };
   vocabulary: { score: number; feedback: string; suggestions: string[]; wordEnhancements: WordEnhancement[] };
   coherence:  { score: number; feedback: string };
   style:      { score: number; feedback: string };
@@ -161,7 +207,7 @@ const PROMPT_IDEAS = [
 
 // ─── Main Page ────────────────────────────────────────────────────────────────
 
-type Tab = 'feedback' | 'corrected' | 'rewrite';
+type Tab = 'feedback' | 'analysis' | 'corrected' | 'rewrite';
 
 export default function WritingPage() {
   const [text, setText] = useState('');
@@ -413,17 +459,17 @@ export default function WritingPage() {
 
               {/* Tab switcher */}
               <div className="flex gap-1 bg-(--bg-secondary) rounded-xl p-1">
-                {(['feedback', 'corrected', 'rewrite'] as Tab[]).map((tab) => (
+                {(['feedback', 'analysis', 'corrected', 'rewrite'] as Tab[]).map((tab) => (
                   <button
                     key={tab}
                     onClick={() => setActiveTab(tab)}
-                    className={`flex-1 text-xs font-semibold py-2 rounded-lg transition-all ${
+                    className={`flex-1 text-xs font-semibold py-1.5 rounded-lg transition-all ${
                       activeTab === tab
                         ? 'bg-(--bg-card) text-primary shadow-sm'
                         : 'text-(--text-muted) hover:text-(--text)'
                     }`}
                   >
-                    {tab === 'feedback' ? 'Feedback' : tab === 'corrected' ? 'Corrected' : 'Rewrite'}
+                    {tab === 'feedback' ? 'Feedback' : tab === 'analysis' ? 'Analysis' : tab === 'corrected' ? 'Corrected' : 'Rewrite'}
                   </button>
                 ))}
               </div>
@@ -449,59 +495,6 @@ export default function WritingPage() {
                     )}
                   </Section>
 
-                  {/* Tenses & Clause Analysis */}
-                  {feedback.tenses && (
-                    <Section title="Tenses & Sentence Structure" icon={GitBranch} feedback={feedback.tenses.summary}>
-                      <div className="space-y-3 mt-1">
-                        {feedback.tenses.sentences.map((s, i) => (
-                          <div
-                            key={i}
-                            className={`rounded-xl border p-3 text-xs space-y-2 ${
-                              s.isCorrect
-                                ? 'border-emerald-200 dark:border-emerald-800/50 bg-emerald-50/50 dark:bg-emerald-950/20'
-                                : 'border-red-200 dark:border-red-800/50 bg-red-50/50 dark:bg-red-950/20'
-                            }`}
-                          >
-                            {/* Sentence */}
-                            <p className="text-(--text) font-medium leading-snug italic">&ldquo;{s.sentence}&rdquo;</p>
-
-                            {/* Tense row */}
-                            <div className="flex flex-wrap items-center gap-2">
-                              <span className="flex items-center gap-1 bg-(--bg-card) border border-(--border) px-2 py-0.5 rounded-full font-semibold text-(--text)">
-                                <CircleDot className="w-2.5 h-2.5 text-primary" />
-                                {s.tenseUsed}
-                              </span>
-                              {!s.isCorrect && (
-                                <>
-                                  <span className="text-(--text-muted)">→ seharusnya</span>
-                                  <span className="bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300 px-2 py-0.5 rounded-full font-semibold">
-                                    {s.shouldBe}
-                                  </span>
-                                </>
-                              )}
-                              {s.isCorrect && (
-                                <span className="text-emerald-600 dark:text-emerald-400 font-semibold flex items-center gap-1">
-                                  <CheckCircle2 className="w-3 h-3" /> Benar
-                                </span>
-                              )}
-                            </div>
-
-                            {/* Explanation */}
-                            <p className="text-(--text-secondary) leading-snug">{s.explanation}</p>
-
-                            {/* Clause type */}
-                            <div className="pt-1 border-t border-(--border)/50 flex flex-wrap items-start gap-2">
-                              <span className="shrink-0 bg-primary/10 text-primary px-2 py-0.5 rounded-full font-semibold">
-                                {s.structureType}
-                              </span>
-                              <span className="text-(--text-muted) leading-snug">{s.structureNote}</span>
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    </Section>
-                  )}
-
                   <Section title="Vocabulary" icon={Layers} score={feedback.vocabulary.score} feedback={feedback.vocabulary.feedback}>
                     {/* Suggestion chips */}
                     {feedback.vocabulary.suggestions.length > 0 && (
@@ -514,39 +507,70 @@ export default function WritingPage() {
 
                     {/* Word enhancements */}
                     {feedback.vocabulary.wordEnhancements?.length > 0 && (
-                      <div className="mt-3 space-y-2">
+                      <div className="mt-3 space-y-3">
                         <p className="text-xs font-semibold text-(--text-muted) uppercase tracking-wider">Upgrade Vocabulary Kamu</p>
                         {feedback.vocabulary.wordEnhancements.map((w, i) => (
-                          <div key={i} className="bg-(--bg-card) border border-(--border) rounded-xl p-3 text-xs space-y-2">
-                            {/* Word used → best alternative */}
-                            <div className="flex flex-wrap items-center gap-2">
-                              <span className="bg-(--bg-secondary) text-(--text) px-2.5 py-1 rounded-full font-mono font-semibold">
-                                {w.wordUsed}
-                              </span>
-                              <span className="text-(--text-muted)">→ coba pakai</span>
-                              <span className="bg-primary text-white px-2.5 py-1 rounded-full font-semibold">
-                                {w.bestAlternative}
-                              </span>
+                          <div key={i} className="border border-(--border) rounded-2xl overflow-hidden bg-(--bg-card)">
+
+                            {/* Header: word used */}
+                            <div className="px-4 py-3 bg-(--bg-secondary)/40 border-b border-(--border) space-y-1">
+                              <div className="flex flex-wrap items-center gap-2">
+                                <span className="font-mono font-bold text-(--text) text-sm">{w.wordUsed}</span>
+                                <span className="text-[11px] bg-(--bg-secondary) border border-(--border) text-(--text-muted) px-2 py-0.5 rounded-full">
+                                  {w.wordClass}
+                                </span>
+                                <span className="text-xs text-(--text-muted)">— {w.meaning}</span>
+                              </div>
+                              <p className="text-[11px] text-(--text-muted) italic">
+                                Biasa dipakai: {w.typicalUsage}
+                              </p>
+                              {/* Best alternative highlight */}
+                              <div className="flex flex-wrap items-center gap-1.5 pt-1">
+                                <span className="text-[11px] text-(--text-muted)">Terbaik untuk konteks ini:</span>
+                                <span className="bg-primary text-white text-xs font-bold px-2.5 py-0.5 rounded-full">
+                                  {w.bestAlternative}
+                                </span>
+                                <span className="text-[11px] text-(--text-muted)">— {w.bestAlternativeReason}</span>
+                              </div>
                             </div>
 
-                            {/* Synonyms */}
-                            <div className="flex flex-wrap gap-1.5">
+                            {/* Synonym list */}
+                            <div className="divide-y divide-(--border)">
                               {w.synonyms.map((s, j) => (
-                                <span key={j} className="bg-primary/10 text-primary px-2 py-0.5 rounded-full">
-                                  {s}
-                                </span>
+                                <div key={j} className={`px-4 py-3 text-xs space-y-1.5 ${s.word === w.bestAlternative ? 'bg-primary/5' : ''}`}>
+                                  <div className="flex flex-wrap items-center gap-2">
+                                    <span className={`font-bold text-sm ${s.word === w.bestAlternative ? 'text-primary' : 'text-(--text)'}`}>
+                                      {s.word}
+                                      {s.word === w.bestAlternative && (
+                                        <span className="ml-1.5 text-[10px] bg-primary text-white px-1.5 py-0.5 rounded-full font-semibold">Best</span>
+                                      )}
+                                    </span>
+                                    {/* Formality badge */}
+                                    <span className={`text-[11px] px-2 py-0.5 rounded-full font-semibold ${
+                                      s.formality === 'Formal'
+                                        ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300'
+                                        : s.formality === 'Informal'
+                                        ? 'bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300'
+                                        : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400'
+                                    }`}>
+                                      {s.formality}
+                                    </span>
+                                  </div>
+                                  {/* Meaning */}
+                                  <p className="text-(--text-secondary) leading-snug">{s.meaning}</p>
+                                  {/* Typical usage */}
+                                  <p className="text-[11px] text-(--text-muted) flex items-start gap-1">
+                                    <span className="shrink-0 mt-0.5">📌</span>
+                                    <span>Dipakai untuk: <span className="text-(--text-secondary)">{s.typicalUsage}</span></span>
+                                  </p>
+                                  {/* Example */}
+                                  <p className="text-(--text-secondary) italic bg-(--bg-secondary) rounded-lg px-3 py-1.5 leading-snug">
+                                    &ldquo;{s.example}&rdquo;
+                                  </p>
+                                </div>
                               ))}
                             </div>
 
-                            {/* Example */}
-                            <p className="text-(--text-secondary) italic leading-snug">
-                              &ldquo;{w.example}&rdquo;
-                            </p>
-
-                            {/* Note */}
-                            <p className="text-(--text-muted) leading-snug border-t border-(--border)/50 pt-1.5">
-                              💡 {w.note}
-                            </p>
                           </div>
                         ))}
                       </div>
@@ -566,6 +590,186 @@ export default function WritingPage() {
                       <p className="text-sm text-(--text-secondary) leading-relaxed">{feedback.level.feedback}</p>
                     </div>
                   </div>
+                </div>
+              )}
+
+              {/* ── Analysis tab ── */}
+              {activeTab === 'analysis' && (
+                <div className="space-y-4">
+                  {feedback.sentenceAnalysis ? (
+                    <>
+                      {/* Summary */}
+                      <div className="bg-(--bg-card) border border-(--border) rounded-xl p-4 flex items-start gap-3">
+                        <GitBranch className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                        <p className="text-sm text-(--text-secondary) leading-relaxed">{feedback.sentenceAnalysis.summary}</p>
+                      </div>
+
+                      {/* Per-sentence cards */}
+                      {feedback.sentenceAnalysis.sentences.map((s, idx) => (
+                        <div key={idx} className="border border-(--border) rounded-2xl overflow-hidden bg-(--bg-card)">
+
+                          {/* Sentence header */}
+                          <div className="px-4 py-3 bg-(--bg-secondary)/40 border-b border-(--border)">
+                            <span className="text-xs font-bold text-primary mr-2">#{idx + 1}</span>
+                            <span className="text-sm text-(--text) italic">&ldquo;{s.sentence}&rdquo;</span>
+                          </div>
+
+                          <div className="divide-y divide-(--border)">
+
+                            {/* ① Tense */}
+                            <div className="px-4 py-3 space-y-2">
+                              <p className="text-xs font-bold text-(--text-muted) uppercase tracking-wider flex items-center gap-1.5">
+                                <CircleDot className="w-3 h-3 text-blue-500" /> Tense
+                              </p>
+                              <div className="flex flex-wrap items-center gap-2 text-xs">
+                                <span className="bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 px-2.5 py-1 rounded-full font-semibold">
+                                  {s.tense.used}
+                                </span>
+                                {s.tense.isCorrect ? (
+                                  <span className="text-emerald-600 dark:text-emerald-400 flex items-center gap-1 font-semibold">
+                                    <CheckCircle2 className="w-3.5 h-3.5" /> Benar
+                                  </span>
+                                ) : (
+                                  <>
+                                    <span className="text-(--text-muted)">→ seharusnya</span>
+                                    <span className="bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 px-2.5 py-1 rounded-full font-semibold">
+                                      {s.tense.shouldBe}
+                                    </span>
+                                  </>
+                                )}
+                              </div>
+                              <p className="text-xs text-(--text-secondary) leading-snug">{s.tense.explanation}</p>
+                            </div>
+
+                            {/* ② Voice */}
+                            <div className="px-4 py-3 space-y-2">
+                              <p className="text-xs font-bold text-(--text-muted) uppercase tracking-wider flex items-center gap-1.5">
+                                <Sparkles className="w-3 h-3 text-purple-500" /> Voice (Aktif / Pasif)
+                              </p>
+                              <div className="flex flex-wrap items-center gap-2 text-xs">
+                                <span className={`px-2.5 py-1 rounded-full font-semibold ${
+                                  s.voice.type === 'Passive'
+                                    ? 'bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300'
+                                    : 'bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300'
+                                }`}>
+                                  {s.voice.type === 'Active' ? 'Kalimat Aktif' : s.voice.type === 'Passive' ? 'Kalimat Pasif' : 'Non-verbal'}
+                                </span>
+                                {!s.voice.isAppropriate && (
+                                  <span className="text-red-500 text-xs font-medium">— kurang tepat</span>
+                                )}
+                              </div>
+                              <p className="text-xs text-(--text-secondary) leading-snug">{s.voice.suggestion}</p>
+                              {s.voice.converted && (
+                                <div className="bg-(--bg-secondary) rounded-lg px-3 py-2 text-xs">
+                                  <span className="text-(--text-muted) mr-1">Bentuk lain:</span>
+                                  <span className="text-(--text) italic">&ldquo;{s.voice.converted}&rdquo;</span>
+                                </div>
+                              )}
+                            </div>
+
+                            {/* ③ Structure */}
+                            <div className="px-4 py-3 space-y-2">
+                              <p className="text-xs font-bold text-(--text-muted) uppercase tracking-wider flex items-center gap-1.5">
+                                <GitBranch className="w-3 h-3 text-emerald-500" /> Struktur Kalimat
+                              </p>
+                              <span className="inline-block text-xs bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 px-2.5 py-1 rounded-full font-semibold">
+                                {s.structure.sentenceType}
+                              </span>
+
+                              {/* Clauses */}
+                              {s.structure.clauses.length > 0 && (
+                                <div className="space-y-2 mt-1">
+                                  {s.structure.clauses.map((cl, ci) => (
+                                    <div key={ci} className="border-l-2 border-primary/40 pl-3 space-y-1 text-xs">
+                                      <div className="flex flex-wrap items-center gap-1.5">
+                                        <span className="bg-primary/10 text-primary px-2 py-0.5 rounded-full font-semibold text-[11px]">{cl.type}</span>
+                                        {cl.connector && (
+                                          <span className="bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300 px-2 py-0.5 rounded-full text-[11px] font-mono">
+                                            &ldquo;{cl.connector}&rdquo;
+                                          </span>
+                                        )}
+                                      </div>
+                                      <p className="text-(--text) italic text-[11px]">&ldquo;{cl.text}&rdquo;</p>
+                                      <div className="grid grid-cols-2 gap-x-3 gap-y-0.5 text-[11px] text-(--text-muted)">
+                                        {cl.subject && <span><b className="text-(--text-secondary)">S:</b> {cl.subject}</span>}
+                                        {cl.predicate && <span><b className="text-(--text-secondary)">P:</b> {cl.predicate}</span>}
+                                        {cl.object && <span><b className="text-(--text-secondary)">O:</b> {cl.object}</span>}
+                                      </div>
+                                      <p className="text-(--text-muted) leading-snug">{cl.note}</p>
+                                    </div>
+                                  ))}
+                                </div>
+                              )}
+
+                              {/* Phrases */}
+                              {s.structure.phrases.length > 0 && (
+                                <div className="flex flex-wrap gap-1.5 mt-2">
+                                  {s.structure.phrases.map((ph, pi) => (
+                                    <div key={pi} className="bg-(--bg-secondary) border border-(--border) rounded-lg px-2.5 py-1.5 text-[11px]">
+                                      <span className="font-semibold text-(--text)">{ph.text}</span>
+                                      <span className="text-(--text-muted) mx-1">·</span>
+                                      <span className="text-primary">{ph.type}</span>
+                                      <span className="text-(--text-muted) ml-1">({ph.function})</span>
+                                    </div>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+
+                            {/* ④ Reduction */}
+                            <div className="px-4 py-3 space-y-2">
+                              <p className="text-xs font-bold text-(--text-muted) uppercase tracking-wider flex items-center gap-1.5">
+                                <Lightbulb className="w-3 h-3 text-yellow-500" /> Reduction / Omitting
+                              </p>
+                              {s.reduction.possible ? (
+                                <div className="space-y-1.5 text-xs">
+                                  <span className="inline-block bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300 px-2.5 py-1 rounded-full font-semibold text-[11px]">
+                                    {s.reduction.type}
+                                  </span>
+                                  <div className="space-y-1 bg-(--bg-secondary) rounded-lg p-2.5">
+                                    <div className="flex flex-wrap items-start gap-1.5">
+                                      <span className="text-red-400 line-through text-(--text-muted)">{s.reduction.original}</span>
+                                      <span className="text-(--text-muted)">→</span>
+                                      <span className="text-emerald-600 dark:text-emerald-400 font-semibold">{s.reduction.reduced}</span>
+                                    </div>
+                                  </div>
+                                  <p className="text-(--text-secondary) leading-snug">{s.reduction.explanation}</p>
+                                </div>
+                              ) : (
+                                <p className="text-xs text-(--text-muted) italic">Tidak ada reduction yang natural untuk kalimat ini.</p>
+                              )}
+                            </div>
+
+                            {/* ⑤ Word Classes */}
+                            {s.wordClasses.length > 0 && (
+                              <div className="px-4 py-3 space-y-2">
+                                <p className="text-xs font-bold text-(--text-muted) uppercase tracking-wider flex items-center gap-1.5">
+                                  <BookOpen className="w-3 h-3 text-rose-500" /> Kelas Kata (Word Classes)
+                                </p>
+                                <div className="space-y-1.5">
+                                  {s.wordClasses.map((wc, wi) => (
+                                    <div key={wi} className="flex flex-wrap items-baseline gap-1.5 text-xs">
+                                      <span className="font-mono font-bold text-(--text) bg-(--bg-secondary) px-2 py-0.5 rounded">{wc.word}</span>
+                                      <span className="text-(--text-muted)">→</span>
+                                      <span className="text-rose-600 dark:text-rose-400 font-semibold">{wc.class}</span>
+                                      {wc.subclass && (
+                                        <span className="text-(--text-muted) text-[11px]">({wc.subclass})</span>
+                                      )}
+                                      <span className="text-(--text-muted)">·</span>
+                                      <span className="text-(--text-secondary) text-[11px]">{wc.function}</span>
+                                    </div>
+                                  ))}
+                                </div>
+                              </div>
+                            )}
+
+                          </div>
+                        </div>
+                      ))}
+                    </>
+                  ) : (
+                    <p className="text-center text-sm text-(--text-muted) py-8">No analysis available.</p>
+                  )}
                 </div>
               )}
 

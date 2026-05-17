@@ -16,17 +16,59 @@ JSON structure (fill every field carefully):
       { "original": "<incorrect phrase from text>", "corrected": "<corrected phrase>", "explanation": "<brief why>" }
     ]
   },
-  "tenses": {
-    "summary": "<2-3 sentences about overall tense usage — is it consistent? any mistakes?>",
+  "sentenceAnalysis": {
+    "summary": "<2-3 sentences about overall grammar patterns: tense consistency, voice usage, sentence variety>",
     "sentences": [
       {
-        "sentence": "<the original sentence>",
-        "tenseUsed": "<e.g. Simple Past, Present Perfect, Simple Present, Past Continuous, etc.>",
-        "isCorrect": <true|false>,
-        "shouldBe": "<correct tense name if isCorrect is false, otherwise same as tenseUsed>",
-        "explanation": "<1 sentence: why this tense is correct or incorrect in this context>",
-        "structureType": "<'Independent Clause' | 'Dependent Clause' | 'Phrase (no verb)' | 'Compound Sentence' | 'Complex Sentence'>",
-        "structureNote": "<1 sentence explaining the clause/phrase structure of this sentence>"
+        "sentence": "<the original sentence from the text>",
+        "tense": {
+          "used": "<tense name, e.g. Simple Past>",
+          "isCorrect": <true|false>,
+          "shouldBe": "<correct tense if wrong, same as used if correct>",
+          "explanation": "<1 sentence why correct or wrong>"
+        },
+        "voice": {
+          "type": "<'Active' | 'Passive' | 'Non-verbal'>",
+          "isAppropriate": <true|false>,
+          "suggestion": "<1 sentence: is the voice choice good here?>",
+          "converted": "<show the other form if conversion is natural, e.g. active→passive or passive→active; null if not applicable>"
+        },
+        "structure": {
+          "sentenceType": "<'Simple Sentence' | 'Compound Sentence' | 'Complex Sentence' | 'Compound-Complex' | 'Non-clause / Fragment' | 'Verbless Clause'>",
+          "clauses": [
+            {
+              "text": "<the clause text>",
+              "type": "<'Main Clause (Independent)' | 'Subordinate Clause (Adverbial)' | 'Subordinate Clause (Nominal)' | 'Subordinate Clause (Relative/Adjective)' | 'Coordinated Clause'>",
+              "connector": "<conjunction or relative pronoun used, or null>",
+              "subject": "<subject of clause>",
+              "predicate": "<predicate/verb phrase>",
+              "object": "<object if any, or null>",
+              "note": "<1 sentence about this clause>"
+            }
+          ],
+          "phrases": [
+            {
+              "text": "<phrase text>",
+              "type": "<'Noun Phrase' | 'Verb Phrase' | 'Adjective Phrase' | 'Adverb Phrase' | 'Prepositional Phrase' | 'Participial Phrase' | 'Infinitive Phrase' | 'Gerund Phrase'>",
+              "function": "<grammatical function, e.g. Subject, Object, Adverbial of place, Modifier>"
+            }
+          ]
+        },
+        "reduction": {
+          "possible": <true|false>,
+          "type": "<'Participial Phrase Reduction' | 'Gerund Phrase Reduction' | 'Infinitive Phrase Reduction' | 'Adjective Phrase Reduction' | 'Appositive Reduction' | 'N/A'>",
+          "original": "<the clause that can be reduced>",
+          "reduced": "<reduced form>",
+          "explanation": "<how and why this reduction works>"
+        },
+        "wordClasses": [
+          {
+            "word": "<key word from the sentence>",
+            "class": "<'Noun' | 'Pronoun' | 'Verb' | 'Auxiliary Verb' | 'Adjective' | 'Adverb' | 'Preposition' | 'Conjunction' | 'Article' | 'Interjection'>",
+            "subclass": "<e.g. 'Common Noun', 'Transitive Verb', 'Coordinating Conjunction', 'Subordinating Conjunction', etc.>",
+            "function": "<role in the sentence, e.g. Subject, Object, Modifier of X>"
+          }
+        ]
       }
     ]
   },
@@ -37,10 +79,20 @@ JSON structure (fill every field carefully):
     "wordEnhancements": [
       {
         "wordUsed": "<word from the student's text>",
-        "synonyms": ["<synonym 1>", "<synonym 2>", "<synonym 3>"],
-        "bestAlternative": "<the most natural upgrade for this context>",
-        "example": "<short example sentence using bestAlternative>",
-        "note": "<1 short sentence: when to use this alternative vs the original>"
+        "wordClass": "<Noun | Verb | Adjective | Adverb | etc.>",
+        "meaning": "<short definition of the word>",
+        "typicalUsage": "<describe when/where this word is typically used, e.g. 'everyday informal speech, casual writing'>",
+        "synonyms": [
+          {
+            "word": "<synonym>",
+            "meaning": "<what this synonym means, slightly different nuance>",
+            "formality": "<Formal | Neutral | Informal>",
+            "typicalUsage": "<when/where to use: e.g. 'IELTS essays, academic writing', 'business emails', 'literary/creative writing', 'everyday conversation'>",
+            "example": "<one natural sentence using this synonym>"
+          }
+        ],
+        "bestAlternative": "<which synonym fits best in the context of the student's sentence>",
+        "bestAlternativeReason": "<1 sentence why this is the best upgrade for this specific context>"
       }
     ]
   },
