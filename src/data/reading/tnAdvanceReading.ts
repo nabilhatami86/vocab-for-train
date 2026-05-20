@@ -2314,4 +2314,231 @@ export const advanceReadingLessons: ModuleLesson[] = [
       // ── Vocabulary Matching (20 items) ────────────────────────────────────────
     ],
   },
+
+  // ── Day 8 · NASA Finds 219 Possible Planets ──────────────────────────────
+  {
+    id: "adv-reading-8",
+    track: "reading",
+    day: 8,
+    tutor: "Mrs. Aji",
+    title: "NASA Finds 219 Possible Planets, Including 10 'Earths'",
+    subtitle: "Space Science · Kepler Telescope · Exoplanets · Astrobiology",
+    overview:
+      "Bacaan tentang temuan terbaru teleskop Kepler NASA: 219 kandidat planet baru termasuk 10 planet seukuran Bumi yang berada di zona layak huni bintangnya. Teks ini membahas cara kerja Kepler, demografis eksoplanet, dan implikasinya bagi pencarian kehidupan di luar Bumi.",
+    passage: [
+      "NASA has unveiled its latest and final catalogue of planet candidates discovered by the Kepler Space Telescope during its primary mission. The new catalogue includes 219 new planet candidates, 10 of which are roughly Earth-size and orbit within the habitable zones of their host stars — those regions where liquid water could exist on the surface of a rocky world.",
+
+      "(NASA telah mengungkap katalog terbaru dan terakhir dari kandidat planet yang ditemukan oleh Teleskop Luar Angkasa Kepler selama misi utamanya. Katalog baru ini mencakup 219 kandidat planet baru, 10 di antaranya berukuran kira-kira seukuran Bumi dan mengorbit di dalam zona layak huni bintang induknya — wilayah di mana air cair bisa ada di permukaan dunia berbatu.)",
+
+      "Scientists are ecstatic about the results. 'This is the most exoplanet candidates ever announced at one time,' said Mario Perez, Kepler program scientist in NASA's Astrophysics Division. The announcement marks a major milestone in humanity's search for worlds beyond our solar system and raises a tantalizing possibility: that Earth-like planets may be far more common than we once imagined.",
+
+      "(Para ilmuwan sangat gembira dengan hasil ini. 'Ini adalah kandidat eksoplanet terbanyak yang pernah diumumkan sekaligus,' kata Mario Perez, ilmuwan program Kepler di Divisi Astrofisika NASA. Pengumuman ini menandai tonggak penting dalam pencarian manusia terhadap dunia di luar tata surya kita dan memunculkan kemungkinan menggoda: bahwa planet-planet mirip Bumi mungkin jauh lebih umum dari yang pernah kita bayangkan.)",
+
+      "In total, the Kepler mission has now spied 4,034 planet candidates, of which 2,335 have been confirmed and verified as genuine exoplanets. Among the near-Earth-size habitable zone candidates identified by Kepler, more than 30 have been verified — each one a potential world orbiting another star, studding the darkness of deep space.",
+
+      "(Secara keseluruhan, misi Kepler kini telah menemukan 4.034 kandidat planet, di antaranya 2.335 telah dikonfirmasi dan diverifikasi sebagai eksoplanet sejati. Di antara kandidat zona layak huni berukuran dekat-Bumi yang diidentifikasi Kepler, lebih dari 30 telah diverifikasi — masing-masing merupakan dunia potensial yang mengorbit bintang lain, menghiasi kegelapan ruang angkasa yang dalam.)",
+
+      "Our own planet is, by all measures, a fragile oasis — a small, rocky, water-covered world circling an ordinary star in a galaxy of hundreds of billions of stars. Kepler's mission was built around one fundamental question: Is Earth special, or are worlds like ours common throughout the Milky Way? The answer, the data now suggests, is that we are far from alone.",
+
+      "(Planet kita sendiri, dalam segala ukuran, adalah oasis yang rapuh — dunia kecil berbatu berselimut air yang mengelilingi bintang biasa di galaksi yang mengandung ratusan miliar bintang. Misi Kepler dibangun di sekitar satu pertanyaan mendasar: Apakah Bumi itu istimewa, atau apakah dunia seperti milik kita umum di seluruh Bima Sakti? Jawabannya, seperti yang kini disarankan data, adalah bahwa kita jauh dari sendirian.)",
+
+      "The 10 newly identified potentially habitable planets are classified as terrestrial-size — meaning they are roughly Earth-size or slightly larger, with the potential for solid, rocky surfaces. Unlike the gas and ice giants of our outer solar system, terrestrial-size planets are the kind most likely to support liquid water and, by extension, the conditions needed for life as we know it.",
+
+      "(Sepuluh planet yang berpotensi layak huni yang baru diidentifikasi diklasifikasikan sebagai berukuran terestrial — artinya berukuran sekitar seukuran Bumi atau sedikit lebih besar, dengan potensi permukaan padat berbatu. Tidak seperti raksasa gas dan es di tata surya luar kita, planet-planet berukuran terestrial adalah jenis yang paling mungkin mendukung air cair dan, dengan demikian, kondisi yang dibutuhkan untuk kehidupan seperti yang kita kenal.)",
+
+      "The Kepler Space Telescope blasted off in March 2009 on a mission that would forever change our understanding of the cosmos. For four years, it stared relentlessly at a small patch of sky in the direction of the constellations Cygnus and Lyra, monitoring approximately 150,000 stars simultaneously for the telltale signs of orbiting planets.",
+
+      "(Teleskop Luar Angkasa Kepler diluncurkan pada Maret 2009 dalam misi yang akan selamanya mengubah pemahaman kita tentang kosmos. Selama empat tahun, ia menatap tanpa henti pada area kecil langit ke arah rasi bintang Cygnus dan Lyra, memantau sekitar 150.000 bintang secara bersamaan untuk mencari tanda-tanda planet yang mengorbit.)",
+
+      "Kepler's technique for finding planets relies on detecting the tiny blips of light that occur when a planet passes in front of its host star. As a planet transits, it blocks a fraction of the star's light, causing the star to dim ever so slightly. These blips are almost imperceptibly small — an Earth-size planet transiting a sun-like star dims the star's light by only about 0.008 percent — yet Kepler's sensitive instruments were designed to detect precisely these faint signals.",
+
+      "(Teknik Kepler untuk menemukan planet bergantung pada mendeteksi kedipan kecil cahaya yang terjadi ketika sebuah planet melintas di depan bintang induknya. Saat planet transit, ia menghalangi sebagian cahaya bintang, menyebabkan bintang meredup sedikit sekali. Kedipan-kedipan ini hampir tak terdeteksi — planet seukuran Bumi yang melintasi bintang seperti Matahari meredupkan cahaya bintang hanya sekitar 0,008 persen — namun instrumen sensitif Kepler dirancang untuk mendeteksi sinyal-sinyal samar ini dengan tepat.)",
+
+      "Among the most significant scientific contributions of the Kepler mission is its insight into exoplanetary demographics — the study of planet populations as a whole. Rather than focusing on individual worlds, this approach treats planets statistically, asking questions like: What fraction of stars have planets? How many planets does each star typically host? What types of planets are most common?",
+
+      "(Di antara kontribusi ilmiah terpenting dari misi Kepler adalah wawasannya tentang demografi eksoplanet — studi tentang populasi planet secara keseluruhan. Alih-alih berfokus pada dunia individual, pendekatan ini memperlakukan planet secara statistik, mengajukan pertanyaan seperti: Berapa fraksi bintang yang memiliki planet? Berapa banyak planet yang biasanya dimiliki setiap bintang? Jenis planet apa yang paling umum?)",
+
+      "Kepler's data has revealed something intriguing and unexpected: planets do not come in all sizes with equal frequency. Analysing the full dataset, researchers found two distinct populations — small rocky worlds about the size of Earth to 1.5 Earth radii, and larger sub-Neptune planets ranging from about 2 to 3.5 Earth radii. Strikingly, very few planets exist in the size range between 1.5 and 2 Earth radii.",
+
+      "(Data Kepler telah mengungkapkan sesuatu yang menarik dan tak terduga: planet-planet tidak hadir dalam semua ukuran dengan frekuensi yang sama. Menganalisis kumpulan data lengkap, para peneliti menemukan dua populasi berbeda — dunia berbatu kecil berukuran sekitar Bumi hingga 1,5 jari-jari Bumi, dan planet sub-Neptunus yang lebih besar berkisar dari sekitar 2 hingga 3,5 jari-jari Bumi. Yang mencolok, sangat sedikit planet yang ada dalam rentang ukuran antara 1,5 dan 2 jari-jari Bumi.)",
+
+      "This missing band of planet sizes — dubbed the 'Fulton gap' after astronomer Benjamin Fulton, who led the analysis — suggests a sharp divide between rocky super-Earths and mini-Neptunes with thick gaseous envelopes. Scientists believe that planets in this intermediate range are intrinsically unstable; over time, intense radiation from their host stars strips away their hydrogen-helium atmospheres, leaving behind bare rocky cores.",
+
+      "(Pita ukuran planet yang hilang ini — dijuluki 'celah Fulton' setelah astronom Benjamin Fulton yang memimpin analisis — menunjukkan pemisahan tajam antara super-Bumi berbatu dan mini-Neptunus dengan selubung gas tebal. Para ilmuwan percaya bahwa planet-planet dalam rentang menengah ini secara intrinsik tidak stabil; seiring waktu, radiasi intens dari bintang induknya melepas atmosfer hidrogen-helium mereka, meninggalkan inti berbatu telanjang.)",
+
+      "The demographics also raise concerns about habitability. In some solar systems, marauding gas giants — massive planets that formed in the outer reaches and then migrated inward — can destabilize or even destroy smaller rocky worlds in their path. Astronomers study whether systems with such giants are likely to retain the terrestrial-size planets needed to host life.",
+
+      "(Demografis tersebut juga menimbulkan kekhawatiran tentang kemampuan dihuni. Di beberapa tata surya, raksasa gas yang mengancam — planet-planet masif yang terbentuk di wilayah terluar kemudian bermigrasi ke dalam — dapat mengganggu atau bahkan menghancurkan dunia-dunia berbatu kecil yang berada di jalurnya. Para astronom mempelajari apakah sistem dengan raksasa seperti itu mungkin tetap mempertahankan planet-planet berukuran terestrial yang diperlukan untuk menampung kehidupan.)",
+
+      "Of the 10 new potentially habitable planet candidates, many are snuggled up in the so-called Goldilocks zone — not too hot, not too cold for liquid water to exist on their surfaces. They orbit stars similar to or slightly cooler than our own sun. Whether these worlds possess atmospheres, oceans, or any form of life remains unknown, but their existence alone is a profound discovery.",
+
+      "(Dari 10 kandidat planet yang berpotensi layak huni baru, banyak yang berdekatan di zona 'Goldilocks' yang disebut — tidak terlalu panas, tidak terlalu dingin agar air cair dapat ada di permukaannya. Mereka mengorbit bintang yang mirip atau sedikit lebih dingin dari Matahari kita. Apakah dunia-dunia ini memiliki atmosfer, lautan, atau bentuk kehidupan apa pun masih belum diketahui, tetapi keberadaan mereka saja sudah merupakan penemuan yang mendalam.)",
+
+      "The Kepler dataset is stuffed with signals still waiting to be analysed. Scientists estimate that tens of thousands more potential planet signatures remain buried in the data, awaiting extraction by advanced machine-learning algorithms. Each signal, if confirmed, adds another data point to the growing map of our galaxy's planetary architecture.",
+
+      "(Dataset Kepler penuh sesak dengan sinyal yang masih menunggu untuk dianalisis. Para ilmuwan memperkirakan bahwa puluhan ribu tanda tangan planet potensial lainnya masih tersembunyi dalam data, menunggu untuk diekstrak oleh algoritma pembelajaran mesin yang canggih. Setiap sinyal, jika dikonfirmasi, menambahkan titik data lain ke peta yang terus berkembang dari arsitektur planet galaksi kita.)",
+
+      "As the primary Kepler mission concludes, successor missions are already underway. TESS — the Transiting Exoplanet Survey Satellite — orbits Earth and surveys the entire sky, focusing on nearby bright stars whose planets will be easier to study in detail. The James Webb Space Telescope will then examine the atmospheres of the most promising candidates, searching for the chemical signatures of habitability or even life.",
+
+      "(Seiring misi utama Kepler berakhir, misi-misi penerus sudah berjalan. TESS — Satelit Survei Eksoplanet Transit — mengorbit Bumi dan mensurvei seluruh langit, berfokus pada bintang-bintang cerah terdekat yang planetnya akan lebih mudah dipelajari secara rinci. Teleskop Luar Angkasa James Webb kemudian akan memeriksa atmosfer kandidat-kandidat paling menjanjikan, mencari tanda tangan kimia dari kemampuan dihuni atau bahkan kehidupan.)",
+
+      "Kepler's legacy is transformative. Before it launched, astronomers had confirmed only a few hundred exoplanets. Today, thousands are known, and the demographics of our galaxy have been reshaped. We now know that most stars in the Milky Way host at least one planet, and that Earth-size worlds are common. The universe, it turns out, is far richer in worlds than anyone dared to hope.",
+
+      "(Warisan Kepler bersifat transformatif. Sebelum diluncurkan, para astronom hanya telah mengkonfirmasi beberapa ratus eksoplanet. Hari ini, ribuan diketahui, dan demografis galaksi kita telah dibentuk ulang. Kita sekarang tahu bahwa sebagian besar bintang di Bima Sakti menampung setidaknya satu planet, dan bahwa dunia-dunia seukuran Bumi adalah hal yang umum. Ternyata, alam semesta jauh lebih kaya akan dunia-dunia daripada yang pernah berani diharapkan siapa pun.)",
+    ],
+    materialSections: [
+      {
+        title: "Main Passage Focus",
+        points: [
+          "Para. A — NASA mengungkap katalog terakhir Kepler: 219 kandidat planet baru, 10 di antaranya berukuran Bumi di zona layak huni.",
+          "Para. B — Para ilmuwan sangat gembira; pengumuman ini menjadi tonggak penting dalam pencarian dunia mirip Bumi.",
+          "Para. C — Total Kepler menemukan 4.034 kandidat planet; 2.335 dikonfirmasi sebagai eksoplanet asli.",
+          "Para. D — Bumi adalah 'fragile oasis' di galaksi yang besar; pertanyaan utama Kepler: apakah Bumi itu istimewa?",
+          "Para. E — 10 planet layak huni baru diklasifikasikan sebagai 'terrestrial-size' — berbatu, padat, berpotensi mendukung air cair.",
+          "Para. F — Kepler diluncurkan Maret 2009; selama 4 tahun memantau 150.000 bintang di arah rasi Cygnus dan Lyra.",
+          "Para. G — Cara Kepler menemukan planet: mendeteksi 'blips' kecil saat planet melintas di depan bintangnya.",
+          "Para. H — Kontribusi besar Kepler: wawasan tentang demografi eksoplanet — studi populasi planet secara statistik.",
+          "Para. I — Temuan mengejutkan: planet tidak merata dalam ukuran; ada dua populasi berbeda dengan celah di tengah.",
+          "Para. J — 'Fulton gap': celah ukuran planet antara 1,5–2 jari-jari Bumi; diduga karena radiasi melucuti atmosfer.",
+          "Para. K — Kekhawatiran tentang 'marauding gas giants' yang bisa menghancurkan planet berbatu kecil di jalurnya.",
+          "Para. L — 10 kandidat planet layak huni 'snuggled up' di zona Goldilocks; kemungkinan adanya air cair.",
+          "Para. M — Dataset Kepler penuh dengan sinyal yang belum dianalisis; algoritma machine-learning digunakan untuk mencarinya.",
+          "Para. N — Misi penerus: TESS (survei langit penuh) dan James Webb (analisis atmosfer planet).",
+          "Para. O — Warisan Kepler: ribuan eksoplanet dikonfirmasi; sebagian besar bintang memiliki planet; Bumi-ukuran planet adalah umum.",
+        ],
+      },
+      {
+        title: "Reading Strategy: True / False / Not Given",
+        points: [
+          "📌 True/False/Not Given = tentukan apakah pernyataan sesuai teks (True), bertentangan (False), atau tidak dibahas sama sekali (Not Given).",
+          "",
+          "⚡ Langkah-langkah:",
+          "   1. Baca pernyataan dan cari kata kunci.",
+          "   2. Temukan bagian teks yang membahas topik yang sama.",
+          "   3. Bandingkan makna pernyataan dengan teks:",
+          "      → TRUE: teks mendukung pernyataan secara langsung atau melalui parafrase.",
+          "      → FALSE: teks secara eksplisit bertentangan dengan pernyataan.",
+          "      → NOT GIVEN: teks tidak membahas informasi ini sama sekali.",
+          "",
+          "⚡ Tips:",
+          "   → Jangan gunakan pengetahuan luar — hanya berdasarkan teks.",
+          "   → Hati-hati dengan 'almost true' — jika ada satu detail yang salah, jawabannya FALSE.",
+          "   → NOT GIVEN ≠ False; jika teks diam tentang topik itu, jawab NOT GIVEN.",
+        ],
+      },
+      {
+        title: "Vocabulary: NASA Finds 219 Possible Planets",
+        points: [
+          "catalogue, solar system, rocky, spied, fragile oasis",
+          "orbits, unveiled, intriguing, a small patch, terrestrial-size",
+          "exoplanetary, demographics, blasted off, studding, constellations",
+          "blips, marauding, ecstatic, snuggled up, stuffed",
+        ],
+      },
+      {
+        title: "Grammar in the Passage",
+        points: [
+          "── TENSES & VOICE ──",
+          "",
+          "Simple Present → menyatakan fakta ilmiah dan temuan umum (general truth):",
+          "   'NASA has unveiled its latest catalogue of planet candidates.'",
+          "   'Kepler's technique relies on detecting the tiny blips of light.'",
+          "   'Most stars in the Milky Way host at least one planet.'",
+          "",
+          "Past Simple → peristiwa historis yang sudah selesai:",
+          "   'The Kepler Space Telescope blasted off in March 2009.'",
+          "   'For four years, it stared relentlessly at a small patch of sky.'",
+          "   'Scientists found two distinct populations.'",
+          "",
+          "Present Perfect → hasil yang masih relevan hingga sekarang:",
+          "   'NASA has unveiled its latest catalogue…'",
+          "   'The Kepler mission has now identified 4,034 planet candidates.'",
+          "   'Thousands are known, and the demographics of our galaxy have been reshaped.'",
+          "",
+          "Passive Voice (is/are/has been + V3) → fokus pada objek yang dikenai aksi:",
+          "   'planet candidates discovered by the Kepler Space Telescope'",
+          "   '2,335 have been confirmed and verified as genuine exoplanets'",
+          "   'more than 30 have been verified'",
+          "   'the so-called Goldilocks zone'",
+          "",
+          "── NOUN CLAUSES ──",
+          "",
+          "that + S + V → melaporkan fakta atau klaim:",
+          "   'The answer, the data now suggests, is that we are far from alone.'",
+          "   'Scientists believe that planets in this intermediate range are intrinsically unstable.'",
+          "   'We now know that most stars in the Milky Way host at least one planet.'",
+          "",
+          "WH-clause (indirect question):",
+          "   'Whether these worlds possess atmospheres, oceans, or any form of life remains unknown.'",
+          "   'asking questions like: What fraction of stars have planets?'",
+          "",
+          "── ADJECTIVE CLAUSES ──",
+          "",
+          "Full — that-clause (defining):",
+          "   'those regions where liquid water could exist on the surface of a rocky world'",
+          "   'a planet that passes in front of its host star'",
+          "   'signals still waiting to be analysed'",
+          "",
+          "Reduced → Past Participle (V3):",
+          "   'planet candidates discovered by Kepler' ← 'that were discovered by Kepler'",
+          "   'confirmed and verified as genuine exoplanets' ← 'that have been confirmed and verified'",
+          "   'the most promising candidates' ← no reduction, superlative adjective",
+          "",
+          "Reduced → Prepositional Phrase:",
+          "   'planets in this intermediate range' ← 'planets that are in this intermediate range'",
+          "   'stars similar to or slightly cooler than our own sun' ← 'stars that are similar to...'",
+          "",
+          "── ADVERB CLAUSES ──",
+          "",
+          "Concession — although / while:",
+          "   'Although confirmed, many signals await further analysis.'",
+          "",
+          "Time — as / when / once:",
+          "   'As a planet transits, it blocks a fraction of the star's light.'",
+          "   'As the primary Kepler mission concludes, successor missions are already underway.'",
+          "   'Once confirmed, each signal adds another data point.'",
+          "",
+          "Purpose — to (infinitive):",
+          "   '…on a mission to find out how common Earth-size planets are in our galaxy.'",
+          "   'Kepler was designed to detect precisely these faint signals.'",
+          "",
+          "── REDUCED ADVERB CLAUSES ──",
+          "",
+          "V-ing phrase (active, simultaneous action):",
+          "   'monitoring approximately 150,000 stars simultaneously for…signs of orbiting planets'",
+          "   '← while it monitored approximately 150,000 stars simultaneously'",
+          "",
+          "Past Participle phrase (passive condition):",
+          "   'If confirmed, each signal adds another data point.'",
+          "   '← If it is confirmed, each signal adds another data point.'",
+        ],
+      },
+      {
+        title: "Vocabulary List",
+        points: [
+          "1.  catalogue (n./v.) | catalogues · catalogued · cataloguing — a complete list or detailed record | katalog\n    Clause: 'NASA published a catalogue of all known exoplanet candidates.' / 'NASA has unveiled its latest catalogue of planet candidates discovered by the Kepler telescope.'",
+          "2.  solar system (n.) — the sun together with all the planets and bodies that orbit it | tata surya\n    Clause: 'Our solar system has eight confirmed planets.' / 'Unlike the gas giants in our solar system, these newly found planets are much smaller.'",
+          "3.  rocky (adj.) | rockier · rockiest — made of rock; hard and solid | berbatu, padat\n    Clause: 'The astronauts trained on rocky terrain to prepare for the mission.' / 'The 10 candidates are rocky, Earth-size planets that orbit within their star's habitable zone.'",
+          "4.  spied (v.) | spies · spied · spying — to catch sight of; to discover | menemukan, melihat\n    Clause: 'The telescope spied a faint signal that turned out to be a new planet.' / 'In total, the Kepler mission has now spied 4,034 planet candidates orbiting distant stars.'",
+          "5.  fragile oasis (n. phr.) — a delicate place of life and safety surrounded by a dangerous environment | oasis rapuh\n    Clause: 'Scientists describe Earth as a fragile oasis because it alone supports complex life.' / 'Our planet is, by all measures, a fragile oasis — a small rocky world circling an ordinary star.'",
+          "6.  orbits (v.) | orbit · orbited · orbiting — moves in a circular or elliptical path around a central body | mengorbit\n    Clause: 'The International Space Station orbits Earth once every 90 minutes.' / 'Ten of the new candidates orbit within the habitable zones of their host stars.'",
+          "7.  unveiled (v.) | unveils · unveiled · unveiling — to reveal or make known to the public for the first time | mengungkap, meluncurkan\n    Clause: 'The company unveiled its latest smartphone at the annual technology conference.' / 'NASA has unveiled its latest and final catalogue of planet candidates from the Kepler mission.'",
+          "8.  intriguing (adj.) | more intriguing · most intriguing — fascinating and arousing curiosity | menarik, penuh teka-teki\n    Clause: 'The scientist found the unexpected results intriguing and decided to investigate further.' / 'Kepler's data has revealed something intriguing: planets do not appear in all sizes with equal frequency.'",
+          "9.  a small patch (n. phr.) — a small, limited area of space or land | area kecil\n    Clause: 'The farmer cleared only a small patch of the field to plant vegetables.' / 'Kepler stared at a small patch of sky in the direction of the constellations Cygnus and Lyra.'",
+          "10. terrestrial-size (adj.) — approximately the same size as Earth; Earth-sized | berukuran seperti Bumi\n    Clause: 'Scientists focus on terrestrial-size planets when searching for signs of life.' / 'The 10 newly identified planets are classified as terrestrial-size, with the potential for solid rocky surfaces.'",
+          "11. exoplanetary (adj.) — relating to planets that orbit stars outside our solar system | berkaitan dengan eksoplanet\n    Clause: 'The new telescope is designed for exoplanetary research and atmospheric analysis.' / 'Kepler's most significant contribution is its insight into exoplanetary demographics across the galaxy.'",
+          "12. demographics (n.) — statistical data relating to the characteristics of a population | data demografis\n    Clause: 'Market researchers study consumer demographics to understand buying habits.' / 'By studying the demographics of exoplanets, scientists can determine what kinds of worlds are most common.'",
+          "13. blasted off (v. phr.) | blasts off · blasted off · blasting off — launched from the ground into space | diluncurkan ke luar angkasa\n    Clause: 'The rocket blasted off at dawn, disappearing into the clouds within seconds.' / 'The Kepler Space Telescope blasted off in March 2009 on a mission to find Earth-like planets.'",
+          "14. studding (v.) | studs · studded · studding — dotting or decorating something throughout | menghiasi, tersebar di\n    Clause: 'The night sky was beautiful, with thousands of stars studding the darkness.' / 'Confirmed exoplanets are now studding the growing map of the Milky Way galaxy.'",
+          "15. constellations (n.) — patterns of stars in the night sky that form recognisable shapes | rasi bintang\n    Clause: 'Ancient sailors used constellations like Orion and the Big Dipper to navigate.' / 'Kepler monitored stars in the direction of the constellations Cygnus and Lyra.'",
+          "16. blips (n.) — small, brief dips or flashes of a signal on a detector or screen | sinyal kecil, kedipan\n    Clause: 'Doctors watched the monitor, looking for irregular blips in the patient's heartbeat.' / 'Kepler detects planets by spotting the tiny blips that occur when a planet transits its host star.'",
+          "17. marauding (adj.) — moving around in a threatening or destructive way; predatory | mengancam, merusak\n    Clause: 'The villagers feared the marauding wolves that had been attacking their livestock.' / 'Marauding gas giants that migrate inward can destroy smaller rocky planets in their path.'",
+          "18. ecstatic (adj.) — feeling or expressing overwhelming happiness or excitement | sangat gembira\n    Clause: 'The fans were ecstatic when their team scored the winning goal in the final minute.' / 'Scientists are ecstatic about the results, calling it the largest single announcement of exoplanet candidates ever.'",
+          "19. snuggled up (v. phr.) | snuggles up · snuggled up · snuggling up — positioned close to or nestled against something | berdekatan, mendekat\n    Clause: 'The puppy snuggled up against its owner on the cold evening.' / 'Many of the 10 new candidates are snuggled up in the Goldilocks zone, just the right distance from their stars.'",
+          "20. stuffed (adj.) — completely full; packed with content | penuh sesak\n    Clause: 'The storage room was stuffed with old equipment from previous experiments.' / 'The Kepler dataset is stuffed with planet signals still waiting to be analysed by scientists.'",
+        ],
+      },
+    ],
+    exercises: [],
+  },
 ];

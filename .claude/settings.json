@@ -4,7 +4,14 @@
       "Bash(head -2022 \"c:/Users/muham/Desktop/vocab-for-train/src/data/reading/tnAdvanceReading.ts\")",
       "Bash(cp /tmp/tnAdvanceReading_fixed.ts \"c:/Users/muham/Desktop/vocab-for-train/src/data/reading/tnAdvanceReading.ts\")",
       "Bash(git remote *)",
-      "Bash(git fetch *)"
+      "Bash(git fetch *)",
+      "Bash(awk 'NR>=115 && NR<=135')",
+      "PowerShell(python --version 2>&1)",
+      "PowerShell(python -c \"import pdfplumber; print\\('pdfplumber ok'\\)\" 2>&1)",
+      "PowerShell(pip install pdfplumber -q 2>&1)",
+      "PowerShell(tail -3)",
+      "PowerShell(pip install pdfplumber -q)",
+      "PowerShell(python -c \"import pdfplumber; print\\('ok'\\)\")"
     ],
     "additionalDirectories": [
       "c:\\Users\\muham\\Desktop\\vocab-for-train"

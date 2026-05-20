@@ -9,6 +9,10 @@ import TTSPlayer from '@/components/tts/TTSPlayer';
 import AnnotatedText from '@/components/grammar/AnnotatedText';
 import DayNavigation from '@/components/DayNavigation';
 import ListeningAudioSection from '@/components/listening/ListeningAudioSection';
+import { LessonVocabCard } from '@/components/LessonVocabCard';
+import { GrammarPassageCard } from '@/components/GrammarPassageCard';
+import { GrammarIntroCard } from '@/components/GrammarIntroCard';
+import { ComparisonAltsCard } from '@/components/ComparisonAltsCard';
 
 interface TranslationResult {
   translated: string;
@@ -694,10 +698,22 @@ export default function ModuleLessonClient({ lesson, backHref = '/tn-basic-courc
                   </h3>
                 </div>
                 {/* Section content */}
-                <div className="p-5 space-y-1">
-                  {section.points.map((point, pIdx) => {
+                <div className="p-5">
+                  {/grammar in the passage/i.test(section.title) || section.points.some(p => /^──.*──$/.test(p.trim())) ? (
+                    <GrammarPassageCard points={section.points} />
+                  ) : /pengertian|ketentuan|jenis/i.test(section.title) && lesson.track === 'grammar' ? (
+                    <GrammarIntroCard points={section.points} />
+                  ) : section.points.map((point, pIdx) => {
                     // Empty string = spacer between groups
                     if (!point.trim()) return <div key={`${section.title}-${pIdx}`} className="h-3" />;
+
+                    // Comparison alternatives card  {{alts: main | alt1 | alt2 | alt3}}
+                    const altsMatch = point.match(/^\{\{alts:\s*([\s\S]+?)\}\}$/);
+                    if (altsMatch) {
+                      const parts = altsMatch[1].split(/\s*\|\s*/);
+                      const [main, ...alts] = parts;
+                      return <ComparisonAltsCard key={`${section.title}-${pIdx}`} main={main} alts={alts} />;
+                    }
 
                     // Tenses comparison table
                     if (point.trim() === '{{tenses-table}}') {
@@ -1032,9 +1048,20 @@ export default function ModuleLessonClient({ lesson, backHref = '/tn-basic-courc
                 )}>
                   <h3 className="font-semibold text-(--text)">{section.title}</h3>
                 </div>
-                <div className="p-5 space-y-1">
-                  {section.points.map((point, pIdx) => {
+                <div className="p-5">
+                  {/grammar in the passage/i.test(section.title) || section.points.some(p => /^──.*──$/.test(p.trim())) ? (
+                    <GrammarPassageCard points={section.points} />
+                  ) : /pengertian|ketentuan|jenis/i.test(section.title) && lesson.track === 'grammar' ? (
+                    <GrammarIntroCard points={section.points} />
+                  ) : section.points.map((point, pIdx) => {
                     if (!point.trim()) return <div key={`${section.title}-${pIdx}`} className="h-3" />;
+
+                    // Comparison alternatives card  {{alts: main | alt1 | alt2}}
+                    const altsMatch2 = point.match(/^\{\{alts:\s*([\s\S]+?)\}\}$/);
+                    if (altsMatch2) {
+                      const [main2, ...alts2] = altsMatch2[1].split(/\s*\|\s*/);
+                      return <ComparisonAltsCard key={`${section.title}-${pIdx}`} main={main2} alts={alts2} />;
+                    }
 
                     // Annotation lines
                     if (point.includes('{{annotation:')) {
@@ -1169,101 +1196,16 @@ export default function ModuleLessonClient({ lesson, backHref = '/tn-basic-courc
 
                     // Vocabulary card — section title contains "vocabulary"
                     if (/vocabulary/i.test(section.title)) {
-                      const vocabKey = `vocab-${section.title}-${pIdx}`;
-                      const isVocabOpen = revealedAnswers.has(vocabKey);
-                      const toggleVocab = () => setRevealedAnswers((prev) => {
-                        const next = new Set(prev);
-                        if (next.has(vocabKey)) next.delete(vocabKey); else next.add(vocabKey);
-                        return next;
-                      });
-
-                      // New format: "N. word (pos) | tenses — meaning | translation\n    Clause: '...' / '...'"
-                      const newFmt = point.match(/^(?:\d+\.\s+)?(.+?)\s*\(([^)]+)\)\s*\|\s*([^—\n]+)\s*[—–-]\s*([^\n]+)(?:\n\s*Clause:\s*([\s\S]+))?$/);
-                      if (newFmt) {
-                        const [, vocabWord, pos, tenses, meaningFull, clauseText] = newFmt;
-                        const [meaning, translation] = meaningFull.split(/\s*\|\s*/);
-                        const clauses = clauseText?.match(/'([^']+)'/g)?.map(c => c.replace(/^'|'$/g, ''));
+                      const parsed = point.match(
+                        /^(?:\d+\.\s+)?(.+?)\s*\(([^)]+)\)\s*[\|—–-]/,
+                      );
+                      if (parsed) {
                         return (
-                          <div key={vocabKey} className={cn(
-                            'rounded-lg border transition-all overflow-hidden',
-                            isVocabOpen
-                              ? 'border-blue-300 dark:border-blue-700 bg-blue-50/50 dark:bg-blue-950/20'
-                              : 'border-(--border) bg-(--bg-secondary)',
-                          )}>
-                            <div className="flex items-start gap-3 px-3 py-2">
-                              <button
-                                type="button"
-                                onClick={() => translateWord(vocabWord.trim())}
-                                className="shrink-0 w-6 h-6 mt-0.5 rounded-md flex items-center justify-center text-(--text-muted) hover:text-primary hover:bg-primary/10 transition-colors"
-                                title="Terjemahkan"
-                              >
-                                <Volume2 className="w-3 h-3" />
-                              </button>
-                              <div className="flex-1 min-w-0">
-                                <div className="flex items-baseline gap-2 flex-wrap">
-                                  <span className="font-bold text-sm text-primary">{vocabWord.trim()}</span>
-                                  <span className="text-[10px] font-semibold px-1.5 py-0.5 rounded-full bg-primary/10 text-primary uppercase tracking-wide">{pos}</span>
-                                  <span className="text-[10px] text-(--text-muted)">{tenses.trim()}</span>
-                                </div>
-                                <div className="text-sm text-(--text) font-medium mt-0.5">
-                                  — {meaning.trim()}{translation && <span className="text-(--text-muted) font-normal"> | {translation.trim()}</span>}
-                                </div>
-                              </div>
-                              {clauses && clauses.length > 0 && (
-                                <button type="button" onClick={toggleVocab} className="shrink-0 text-[10px] text-(--text-muted) hover:text-primary transition-colors mt-1">
-                                  {isVocabOpen ? '▲' : '▼'}
-                                </button>
-                              )}
-                            </div>
-                            {isVocabOpen && clauses && (
-                              <div className="px-3 pb-2.5 border-t border-(--border)/50 pt-2 space-y-1.5">
-                                {clauses.map((clause, cIdx) => (
-                                  <p key={cIdx} className="text-xs text-(--text-secondary) italic leading-relaxed">"{clause}"</p>
-                                ))}
-                              </div>
-                            )}
-                          </div>
-                        );
-                      }
-
-                      // Old format: "word (pos) — meaning [| example]"
-                      const oldFmt = point.match(/^(?:\d+\.\s+)?(.+?)\s*\(([^)]+)\)\s*[—–-]\s*(.+?)(?:\s*\|\s*(.+))?$/);
-                      if (oldFmt) {
-                        const [, vocabWord, pos, meaning, example] = oldFmt;
-                        const exampleClean = example?.replace(/^['"]|['"]$/g, '');
-                        return (
-                          <div key={vocabKey} className={cn(
-                            'rounded-lg border transition-all overflow-hidden',
-                            isVocabOpen
-                              ? 'border-blue-300 dark:border-blue-700 bg-blue-50/50 dark:bg-blue-950/20'
-                              : 'border-(--border) bg-(--bg-secondary)',
-                          )}>
-                            <div className="flex items-center gap-3 px-3 py-2">
-                              <button
-                                type="button"
-                                onClick={() => translateWord(vocabWord.trim())}
-                                className="shrink-0 w-6 h-6 rounded-md flex items-center justify-center text-(--text-muted) hover:text-primary hover:bg-primary/10 transition-colors"
-                                title="Terjemahkan"
-                              >
-                                <Volume2 className="w-3 h-3" />
-                              </button>
-                              <div className="flex-1 min-w-0 flex items-baseline gap-2 flex-wrap">
-                                <span className="font-bold text-sm text-primary">{vocabWord.trim()}</span>
-                                <span className="text-[10px] font-semibold px-1.5 py-0.5 rounded-full bg-primary/10 text-primary uppercase tracking-wide">{pos}</span>
-                                <span className="text-sm text-(--text) font-medium">— {meaning.trim()}</span>
-                              </div>
-                              {exampleClean && (
-                                <button type="button" onClick={toggleVocab} className="shrink-0 text-[10px] text-(--text-muted) hover:text-primary transition-colors">
-                                  {isVocabOpen ? '▲' : '▼'}
-                                </button>
-                              )}
-                            </div>
-                            {isVocabOpen && exampleClean && (
-                              <div className="px-3 pb-2.5 border-t border-(--border)/50 pt-2">
-                                <p className="text-xs text-(--text-secondary) italic leading-relaxed">"{exampleClean}"</p>
-                              </div>
-                            )}
-                          </div>
+                          <LessonVocabCard
+                            key={`vocab-${section.title}-${pIdx}`}
+                            point={point}
+                            onSpeak={translateWord}
+                          />
                         );
                       }
                     }
@@ -1278,6 +1220,7 @@ export default function ModuleLessonClient({ lesson, backHref = '/tn-basic-courc
                   })}
                 </div>
                 {section.imageUrl && (
+
                   <div className="px-5 pb-5">
                     <img src={section.imageUrl} alt={section.title} className="w-full rounded-lg border border-(--border)" />
                   </div>
@@ -1742,45 +1685,40 @@ export default function ModuleLessonClient({ lesson, backHref = '/tn-basic-courc
                   : Boolean(notes[exercise.id]?.trim());
 
               return (
-                <div key={exercise.id} className={cn(
-                  'border rounded-xl p-5 space-y-3',
-                  exercise.type === 'fill-the-gap'
-                    ? 'bg-violet-500/5 border-violet-500/20'
-                    : exercise.type === 'true-false-not-given'
-                      ? 'bg-amber-500/5 border-amber-500/20'
-                      : 'bg-(--bg-card) border-(--border)'
-                )}>
-                  <div className="flex items-start justify-between gap-3">
-                    <p className="text-sm text-(--text) font-medium">
-                      {startNum + index}.{' '}
-                      {exercise.type === 'fill-the-gap' ? (
-                        <>
-                          <span className="inline-flex items-center px-1.5 py-0.5 rounded text-xs font-semibold bg-violet-500/15 text-violet-600 dark:text-violet-400 border border-violet-500/20 mr-1.5 align-middle">
+                <div key={exercise.id} className="bg-(--bg-card) border border-(--border) rounded-xl p-5 space-y-3">
+                  <div className="space-y-1.5">
+                    <div className="flex items-center justify-between gap-3">
+                      <div className="flex items-center gap-2">
+                        <span className="text-xs font-bold text-(--text-muted)">{startNum + index}.</span>
+                        {exercise.type === 'fill-the-gap' && (
+                          <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold bg-violet-500/15 text-violet-600 dark:text-violet-400 border border-violet-500/25">
                             Fill the Gap
                           </span>
-                          {renderClickableText(exercise.question.replace('Fill the gap — ', ''))}
-                        </>
-                      ) : exercise.type === 'true-false-not-given' ? (
-                        <>
-                          <span className="inline-flex items-center px-1.5 py-0.5 rounded text-xs font-semibold bg-amber-500/15 text-amber-600 dark:text-amber-400 border border-amber-500/20 mr-1.5 align-middle">
+                        )}
+                        {exercise.type === 'true-false-not-given' && (
+                          <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold bg-amber-500/15 text-amber-600 dark:text-amber-400 border border-amber-500/25">
                             T / F / NG
                           </span>
-                          {renderClickableText(exercise.question)}
-                        </>
-                      ) : exercise.question.startsWith('Terjemahkan: ') ? (
-                        <>
-                          <span className="inline-flex items-center px-1.5 py-0.5 rounded text-xs font-semibold bg-blue-500/15 text-blue-600 dark:text-blue-400 border border-blue-500/20 mr-1.5 align-middle">
+                        )}
+                        {exercise.question.startsWith('Terjemahkan: ') && (
+                          <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold bg-blue-500/15 text-blue-600 dark:text-blue-400 border border-blue-500/25">
                             Terjemahkan
                           </span>
-                          {renderClickableText(exercise.question.replace('Terjemahkan: ', ''))}
-                        </>
-                      ) : renderClickableText(exercise.question)}
+                        )}
+                      </div>
+                      {isDone ? (
+                        <CheckCircle2 className="w-4 h-4 text-success shrink-0" />
+                      ) : (
+                        <Circle className="w-4 h-4 text-(--text-muted) shrink-0" />
+                      )}
+                    </div>
+                    <p className="text-sm text-(--text) font-medium leading-relaxed">
+                      {exercise.type === 'fill-the-gap'
+                        ? renderClickableText(exercise.question.replace('Fill the gap — ', ''))
+                        : exercise.question.startsWith('Terjemahkan: ')
+                          ? renderClickableText(exercise.question.replace('Terjemahkan: ', ''))
+                          : renderClickableText(exercise.question)}
                     </p>
-                    {isDone ? (
-                      <CheckCircle2 className="w-4 h-4 text-success mt-0.5 shrink-0" />
-                    ) : (
-                      <Circle className="w-4 h-4 text-(--text-muted) mt-0.5 shrink-0" />
-                    )}
                   </div>
 
                   {exercise.type === 'multiple-choice' && exercise.options && (() => {
@@ -1857,7 +1795,8 @@ export default function ModuleLessonClient({ lesson, backHref = '/tn-basic-courc
                     return (
                       <div className="space-y-3">
                         <div className="grid sm:grid-cols-2 gap-2">
-                          {exercise.options.map((option) => {
+                          {exercise.options.map((option, oi) => {
+                            const letter = letters[oi];
                             const isSelected = selected === option;
                             const isAnswer = option === exercise.correctAnswer;
                             const showResult = hasAnswered && exercise.correctAnswer;
@@ -1867,7 +1806,7 @@ export default function ModuleLessonClient({ lesson, backHref = '/tn-basic-courc
                                 key={option}
                                 onClick={() => setSelectedOptions((prev) => ({ ...prev, [exercise.id]: option }))}
                                 className={cn(
-                                  'text-left text-sm px-3 py-2 rounded-lg border transition-colors',
+                                  'text-left text-sm px-3 py-2.5 rounded-lg border transition-colors',
                                   showResult
                                     ? isAnswer
                                       ? 'border-green-500 bg-green-500/10 text-green-700 dark:text-green-400 font-medium'
@@ -1880,8 +1819,20 @@ export default function ModuleLessonClient({ lesson, backHref = '/tn-basic-courc
                                 )}
                               >
                                 <span className="flex items-center gap-2">
-                                  {showResult && isAnswer && <CheckCircle2 className="w-4 h-4 shrink-0 text-green-500" />}
-                                  {showResult && isSelected && !isAnswer && <XCircle className="w-4 h-4 shrink-0 text-red-500" />}
+                                  <span className={cn(
+                                    'shrink-0 w-5 h-5 rounded-full border text-[10px] font-bold flex items-center justify-center',
+                                    showResult
+                                      ? isAnswer
+                                        ? 'border-green-500 text-green-600'
+                                        : isSelected
+                                          ? 'border-red-500 text-red-600'
+                                          : 'border-(--border) text-(--text-muted)'
+                                      : isSelected
+                                        ? 'border-primary text-primary'
+                                        : 'border-(--border) text-(--text-muted)'
+                                  )}>{letter}</span>
+                                  {showResult && isAnswer && <CheckCircle2 className="w-3.5 h-3.5 shrink-0 text-green-500" />}
+                                  {showResult && isSelected && !isAnswer && <XCircle className="w-3.5 h-3.5 shrink-0 text-red-500" />}
                                   {option}
                                 </span>
                               </button>

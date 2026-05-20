@@ -5,6 +5,9 @@ import Link from 'next/link';
 import { ArrowLeft, CheckCircle2, Circle, BookText } from 'lucide-react';
 import type { ModuleLesson } from '@/types/module';
 import { cn } from '@/lib/utils';
+import { LessonVocabCard } from '@/components/LessonVocabCard';
+import { GrammarPassageCard } from '@/components/GrammarPassageCard';
+import { GrammarIntroCard } from '@/components/GrammarIntroCard';
 
 interface Props {
   lesson: ModuleLesson;
@@ -52,18 +55,29 @@ export default function ModuleLessonClient({ lesson }: Props) {
             <div key={section.title} className="bg-(--bg-card) border border-(--border) rounded-xl p-5">
               <h3 className="font-semibold text-(--text) mb-3">{section.title}</h3>
               <ul className="space-y-2 text-sm text-(--text-secondary)">
-                {section.points.map((point) => {
+                {/grammar in the passage/i.test(section.title) || section.points.some(p => /^──.*──$/.test(p.trim())) ? (
+                  <GrammarPassageCard points={section.points} />
+                ) : /pengertian|ketentuan|jenis/i.test(section.title) && lesson.track === 'grammar' ? (
+                  <GrammarIntroCard points={section.points} />
+                ) : section.points.map((point, pIdx) => {
+                  // Vocab card for vocabulary sections
+                  if (/vocabulary/i.test(section.title)) {
+                    const parsed = point.match(/^(?:\d+\.\s+)?(.+?)\s*\(([^)]+)\)\s*[\|—–-]/);
+                    if (parsed) {
+                      return <LessonVocabCard key={pIdx} point={point} />;
+                    }
+                  }
                   if (point.includes('→') && !point.startsWith('  ')) {
                     const question = point.slice(0, point.indexOf('→')).trim();
                     return (
-                      <li key={point} className="flex gap-2">
+                      <li key={pIdx} className="flex gap-2">
                         <span className="text-primary">•</span>
                         <span>{question}</span>
                       </li>
                     );
                   }
                   return (
-                    <li key={point} className="flex gap-2">
+                    <li key={pIdx} className="flex gap-2">
                       <span className="text-primary">•</span>
                       <span>{point}</span>
                     </li>
@@ -99,20 +113,27 @@ export default function ModuleLessonClient({ lesson }: Props) {
 
                 {exercise.type === 'multiple-choice' && exercise.options && (
                   <div className="grid sm:grid-cols-2 gap-2">
-                    {exercise.options.map((option) => {
+                    {exercise.options.map((option, oi) => {
+                      const letter = ['A', 'B', 'C', 'D', 'E'][oi];
                       const isSelected = selectedOptions[exercise.id] === option;
                       return (
                         <button
                           key={option}
                           onClick={() => setSelectedOptions((prev) => ({ ...prev, [exercise.id]: option }))}
                           className={cn(
-                            'text-left text-sm px-3 py-2 rounded-lg border transition-colors',
+                            'text-left text-sm px-3 py-2.5 rounded-lg border transition-colors',
                             isSelected
                               ? 'border-primary bg-primary/10 text-primary'
                               : 'border-(--border) hover:border-primary/50 text-(--text-secondary)'
                           )}
                         >
-                          {option}
+                          <span className="flex items-center gap-2">
+                            <span className={cn(
+                              'shrink-0 w-5 h-5 rounded-full border text-[10px] font-bold flex items-center justify-center',
+                              isSelected ? 'border-primary text-primary' : 'border-(--border) text-(--text-muted)'
+                            )}>{letter}</span>
+                            {option}
+                          </span>
                         </button>
                       );
                     })}
