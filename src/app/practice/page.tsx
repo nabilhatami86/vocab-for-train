@@ -89,6 +89,17 @@ const grammarItems: PracticeItem[] = [
   },
 ];
 
+const writingItems: PracticeItem[] = [
+  {
+    href: '/practice/latihan-surat',
+    title: 'Latihan Menulis Surat',
+    description: 'Tulis surat formal atau informal berdasarkan skenario, lalu AI koreksi struktur, grammar, tone, dan kosakata.',
+    icon: FileText,
+    color: 'bg-blue-500/10 text-blue-600',
+    badge: 'AI Review',
+  },
+];
+
 const tnItems: PracticeItem[] = [
   {
     href: '/practice/grammar-latihan',
@@ -193,6 +204,18 @@ export default function PracticePage() {
         />
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
           {vocabItems.map(item => <PracticeCard key={item.href} item={item} />)}
+        </div>
+      </section>
+
+      {/* ── Writing ── */}
+      <section className="space-y-4">
+        <SectionHeader
+          title="Latihan Writing"
+          subtitle="Latihan menulis teks dengan koreksi AI"
+          accent="border-blue-400 dark:border-blue-600"
+        />
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
+          {writingItems.map(item => <PracticeCard key={item.href} item={item} />)}
         </div>
       </section>
 
