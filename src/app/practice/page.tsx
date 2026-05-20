@@ -1,73 +1,115 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { GraduationCap, Brain, PenLine, RotateCcw, BookCheck, FileText, ClipboardList, BookOpen, Shuffle, MessageCircle, Sparkles } from 'lucide-react';
+import {
+  GraduationCap, Brain, PenLine, RotateCcw, BookCheck,
+  FileText, ClipboardList, BookOpen, Shuffle, MessageCircle,
+  Sparkles, ChevronRight,
+} from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Practice',
-  description: 'Practice your English vocabulary with quizzes, fill-in-the-blanks, and review modes.',
+  description: 'Practice your English vocabulary and grammar skills.',
 };
 
-const modes = [
+// ── Types ──────────────────────────────────────────────────────────
+interface PracticeItem {
+  href: string;
+  title: string;
+  description: string;
+  icon: React.ElementType;
+  color: string;
+  badge?: string | null;
+}
+
+// ── Sections ───────────────────────────────────────────────────────
+
+const vocabItems: PracticeItem[] = [
+  {
+    href: '/practice/vocab-sinonim',
+    title: 'Sinonim & Makna',
+    description: 'Kenali sinonim & makna kata dari level A1 → C2. Progress tersimpan, harus selesaikan tiap stage untuk lanjut.',
+    icon: BookOpen,
+    color: 'bg-emerald-500/10 text-emerald-600',
+    badge: 'A1 → C2',
+  },
   {
     href: '/practice/quiz',
     title: 'Multiple Choice Quiz',
-    description: 'Test your vocabulary knowledge with multiple choice questions. Choose the correct meaning for each word.',
+    description: 'Tes pengetahuan vocab dengan pilihan ganda. Pilih arti yang benar dari setiap kata.',
     icon: Brain,
     color: 'bg-primary/10 text-primary',
-    badge: null,
+  },
+  {
+    href: '/practice/fill-blanks',
+    title: 'Fill in the Blanks',
+    description: 'Lengkapi kalimat dengan mengetik kata yang hilang. Cocok untuk latihan ejaan dan konteks.',
+    icon: PenLine,
+    color: 'bg-accent/10 text-accent',
+  },
+  {
+    href: '/practice/review',
+    title: 'Vocabulary Review',
+    description: 'Flip kartu vocab untuk mengulang kata yang sudah dipelajari atau perlu latihan lebih.',
+    icon: RotateCcw,
+    color: 'bg-success/10 text-success',
+  },
+];
+
+const grammarItems: PracticeItem[] = [
+  {
+    href: '/practice/grammar-contoh',
+    title: 'Buat Contoh + AI Review',
+    description: 'Pilih topik grammar → tulis kalimat contoh → AI review: benar/salah, koreksi, breakdown, dan tips.',
+    icon: Sparkles,
+    color: 'bg-rose-500/10 text-rose-600',
+    badge: 'AI',
   },
   {
     href: '/practice/latihan-acak',
     title: 'Latihan Acak Grammar',
-    description: '20 soal dipilih acak dari 88 bank soal setiap sesi — tidak bisa dihapal! Cakupan: Parts of Speech, Verb Agreement, Adj vs Adv, Another/Other, Quantifier, Pronoun.',
+    description: '20 soal acak dari 88 bank soal — Parts of Speech, Verb Agreement, Adj vs Adv, Quantifier, Pronoun.',
     icon: Shuffle,
     color: 'bg-primary/10 text-primary',
     badge: '88 bank soal',
   },
   {
-    href: '/practice/grammar-contoh',
-    title: 'Buat Contoh Kalimat + AI Review',
-    description: 'Pilih topik grammar → tulis kalimat contoh → AI langsung review: benar/salah, koreksi, breakdown grammar, dan tips perbaikan.',
-    icon: Sparkles,
-    color: 'bg-rose-500/10 text-rose-600',
-    badge: 'AI Feedback',
-  },
-  {
-    href: '/practice/grammar-latihan',
-    title: 'Practice Grammar — Basic · Inter · Advance',
-    description: 'Latihan soal langsung dari materi grammar tiap level: Basic, Intermediate, dan Advance. Pilih level → pilih lesson → kerjakan soal.',
-    icon: GraduationCap,
-    color: 'bg-purple-500/10 text-purple-600',
-    badge: '3 level',
-  },
-  {
     href: '/practice/grammar-quiz',
     title: 'Grammar Quiz',
-    description: '25 soal pilihan ganda (ABCD) dari semua part of speech: Nouns, Verbs, Adjectives, Adverbs, Pronouns, Prepositions, Conjunctions, Articles.',
+    description: '25 soal pilihan ganda dari semua parts of speech: Nouns, Verbs, Adjectives, Adverbs, Pronouns, dll.',
     icon: BookCheck,
     color: 'bg-amber-500/10 text-amber-600',
-    badge: null,
   },
   {
     href: '/practice/grammar-evaluator',
-    title: 'Grammar Evaluator (30Q)',
-    description: 'Tes grammar 30 soal (A-D) dengan koreksi detail per nomor: rule, error type, corrected sentence, dan extra practice.',
+    title: 'Grammar Evaluator',
+    description: '30 soal (A-D) dengan koreksi detail: rule, error type, corrected sentence, dan extra practice.',
     icon: FileText,
     color: 'bg-fuchsia-500/10 text-fuchsia-600',
-    badge: null,
+    badge: '30Q',
+  },
+];
+
+const tnItems: PracticeItem[] = [
+  {
+    href: '/practice/grammar-latihan',
+    title: 'Practice Grammar TN',
+    description: 'Latihan soal langsung dari materi grammar Basic, Intermediate, dan Advance TitikNolJourney.',
+    icon: GraduationCap,
+    color: 'bg-purple-500/10 text-purple-600',
+    badge: 'Basic · Inter · Adv',
   },
   {
     href: '/practice/tugas-grammar',
     title: 'Tugas Grammar',
-    description: 'Kumpulan tugas dan kisi-kisi grammar dari tutor: Articles, Nouns, Pronouns, Review Basic Grammar, Mid Test, Reading, dan Speaking.',
+    description: 'Kumpulan tugas & kisi-kisi dari tutor: Articles, Nouns, Pronouns, Mid Test, Reading, dan Speaking.',
     icon: ClipboardList,
     color: 'bg-violet-500/10 text-violet-600',
     badge: '6 paket',
   },
   {
     href: '/practice/kisi-kisi',
-    title: 'Kisi-Kisi Reading & Speaking',
-    description: 'Persiapan Mid Test untuk Reading (comprehension Hobby & Interest) dan Speaking (greeting, identity, family, hobby, dll).',
+    title: 'Kisi-Kisi Mid Test',
+    description: 'Persiapan Mid Test: Reading (comprehension) dan Speaking (greeting, identity, family, hobby, dll).',
     icon: BookOpen,
     color: 'bg-cyan-500/10 text-cyan-700',
     badge: '2 paket',
@@ -75,71 +117,109 @@ const modes = [
   {
     href: '/practice/conversations',
     title: 'Daily Conversations',
-    description: 'Pelajari percakapan sehari-hari di berbagai situasi: restoran, sekolah, belanja, dan rumah sakit. Dilengkapi terjemahan & key expressions.',
+    description: 'Percakapan sehari-hari di berbagai situasi: restoran, sekolah, belanja, rumah sakit + terjemahan.',
     icon: MessageCircle,
     color: 'bg-teal-500/10 text-teal-600',
     badge: '12 dialog',
   },
-  {
-    href: '/practice/fill-blanks',
-    title: 'Fill in the Blanks',
-    description: 'Complete sentences by typing the missing word. Great for spelling and context practice.',
-    icon: PenLine,
-    color: 'bg-accent/10 text-accent',
-    badge: null,
-  },
-  {
-    href: '/practice/review',
-    title: 'Vocabulary Review',
-    description: 'Flip through vocabulary cards to review words you have learned or need to practice.',
-    icon: RotateCcw,
-    color: 'bg-success/10 text-success',
-    badge: null,
-  },
 ];
+
+// ── Section component ──────────────────────────────────────────────
+
+function SectionHeader({
+  title, subtitle, accent,
+}: { title: string; subtitle: string; accent: string }) {
+  return (
+    <div className={`flex items-center gap-3 pb-3 border-b-2 ${accent}`}>
+      <div>
+        <h2 className="text-base font-bold text-(--text)">{title}</h2>
+        <p className="text-xs text-(--text-muted) mt-0.5">{subtitle}</p>
+      </div>
+    </div>
+  );
+}
+
+function PracticeCard({ item }: { item: PracticeItem }) {
+  const Icon = item.icon;
+  return (
+    <Link
+      href={item.href}
+      className="bg-(--bg-card) border border-(--border) rounded-xl p-5 hover:shadow-md hover:border-primary/30 transition-all group flex flex-col gap-3"
+    >
+      <div className="flex items-start justify-between">
+        <div className={`w-10 h-10 rounded-xl ${item.color} flex items-center justify-center shrink-0`}>
+          <Icon className="w-5 h-5" />
+        </div>
+        {item.badge && (
+          <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-(--bg-secondary) text-(--text-muted) border border-(--border)">
+            {item.badge}
+          </span>
+        )}
+      </div>
+      <div className="flex-1">
+        <h3 className="text-sm font-semibold text-(--text) group-hover:text-primary transition-colors leading-snug">
+          {item.title}
+        </h3>
+        <p className="text-xs text-(--text-secondary) leading-relaxed mt-1">
+          {item.description}
+        </p>
+      </div>
+      <div className="flex items-center justify-end">
+        <ChevronRight className="w-4 h-4 text-(--text-muted) group-hover:text-primary transition-colors" />
+      </div>
+    </Link>
+  );
+}
+
+// ── Page ───────────────────────────────────────────────────────────
 
 export default function PracticePage() {
   return (
-    <div className="p-4 lg:p-6 space-y-6 animate-fade-in">
+    <div className="p-4 lg:p-6 max-w-5xl mx-auto space-y-10 animate-fade-in">
+
       <div>
-        <h1 className="text-2xl font-bold text-(--text) flex items-center gap-2">
-          <GraduationCap className="w-6 h-6 text-primary" />
-          Practice
-        </h1>
+        <h1 className="text-2xl font-bold text-(--text)">Practice</h1>
         <p className="text-sm text-(--text-secondary) mt-1">
-          Choose a practice mode to strengthen your vocabulary skills
+          Pilih mode latihan sesuai kebutuhan.
         </p>
       </div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {modes.map((mode) => {
-          const Icon = mode.icon;
-          return (
-            <Link
-              key={mode.href}
-              href={mode.href}
-              className="bg-(--bg-card) border border-(--border) rounded-xl p-6 hover:shadow-lg hover:border-primary/30 transition-all group"
-            >
-              <div className="flex items-start justify-between mb-4">
-                <div className={`w-12 h-12 rounded-xl ${mode.color} flex items-center justify-center`}>
-                  <Icon className="w-6 h-6" />
-                </div>
-                {mode.badge && (
-                  <span className="text-xs font-medium px-2 py-0.5 rounded-full bg-(--bg-secondary) text-(--text-secondary) border border-(--border)">
-                    {mode.badge}
-                  </span>
-                )}
-              </div>
-              <h2 className="text-lg font-semibold text-(--text) group-hover:text-primary transition-colors mb-2">
-                {mode.title}
-              </h2>
-              <p className="text-sm text-(--text-secondary) leading-relaxed">
-                {mode.description}
-              </p>
-            </Link>
-          );
-        })}
-      </div>
+      {/* ── Vocab ── */}
+      <section className="space-y-4">
+        <SectionHeader
+          title="Latihan Vocabulary"
+          subtitle="Latihan mandiri kosakata Bahasa Inggris"
+          accent="border-emerald-400 dark:border-emerald-600"
+        />
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
+          {vocabItems.map(item => <PracticeCard key={item.href} item={item} />)}
+        </div>
+      </section>
+
+      {/* ── Grammar ── */}
+      <section className="space-y-4">
+        <SectionHeader
+          title="Latihan Grammar"
+          subtitle="Latihan tata bahasa Inggris umum"
+          accent="border-amber-400 dark:border-amber-600"
+        />
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
+          {grammarItems.map(item => <PracticeCard key={item.href} item={item} />)}
+        </div>
+      </section>
+
+      {/* ── TN ── */}
+      <section className="space-y-4">
+        <SectionHeader
+          title="TitikNolJourney (TN)"
+          subtitle="Materi & latihan dari kelas TitikNolJourney"
+          accent="border-purple-400 dark:border-purple-600"
+        />
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
+          {tnItems.map(item => <PracticeCard key={item.href} item={item} />)}
+        </div>
+      </section>
+
     </div>
   );
 }
