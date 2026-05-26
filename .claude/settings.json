@@ -17,7 +17,13 @@
       "PowerShell($env:PYTHONIOENCODING = \"utf-8\"; python \"C:\\\\Users\\\\muham\\\\Desktop\\\\parse_answers.py\" 2>&1)",
       "PowerShell($env:PYTHONIOENCODING = \"utf-8\"; python \"C:\\\\Users\\\\muham\\\\Desktop\\\\generate_ts.py\" 2>&1)",
       "PowerShell($env:PYTHONIOENCODING = \"utf-8\"; python \"C:\\\\Users\\\\muham\\\\Desktop\\\\generate_ts_v2.py\" 2>&1)",
-      "PowerShell($env:PYTHONIOENCODING = \"utf-8\"; python \"C:\\\\Users\\\\muham\\\\Desktop\\\\generate_ts_v3.py\" 2>&1)"
+      "PowerShell($env:PYTHONIOENCODING = \"utf-8\"; python \"C:\\\\Users\\\\muham\\\\Desktop\\\\generate_ts_v3.py\" 2>&1)",
+      "WebFetch(domain:podcasts.files.bbci.co.uk)",
+      "WebFetch(domain:toefl-api.vercel.app)",
+      "WebFetch(domain:mini-ielts.com)",
+      "WebFetch(domain:practicepteonline.com)",
+      "Bash(curl -s \"http://mini-ielts.com/listening\")",
+      "Bash(curl -s \"http://mini-ielts.com/1509/listening/water-hyacinth\")"
     ],
     "additionalDirectories": [
       "c:\\Users\\muham\\Desktop\\vocab-for-train",

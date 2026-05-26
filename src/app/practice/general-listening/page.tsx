@@ -239,7 +239,7 @@ function EpisodeCard({
 
 const SOURCES = [
   { label: 'BBC 6 Min English', idx: 0 },
-  { label: 'BBC English We Speak', idx: 1 },
+  { label: 'BBC LE Stories', idx: 1 },
 ];
 
 export default function GeneralListeningPage() {

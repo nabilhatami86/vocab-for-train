@@ -18,10 +18,10 @@ const RSS_SOURCES = [
     level: 'B1–B2',
   },
   {
-    name: 'BBC The English We Speak',
-    url: 'https://podcasts.files.bbci.co.uk/p02pc9lt.rss',
+    name: 'BBC Learning English Stories',
+    url: 'https://podcasts.files.bbci.co.uk/p02pc9s1.rss',
     accent: 'British',
-    level: 'B2–C1',
+    level: 'B1–C1',
   },
 ];
 

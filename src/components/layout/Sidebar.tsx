@@ -29,6 +29,7 @@ import {
   ChevronRight,
   Youtube,
   Radio,
+  Globe,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useVocabStore } from "@/store/useVocabStore";
@@ -107,10 +108,13 @@ const navSections: { title: string; items: NavItem[] }[] = [
         label: "Listening Practice",
         icon: Volume2,
         children: [
-          { href: "/practice/ielts-listening", label: "IELTS / TOEFL (YouTube)", icon: Youtube },
+          { href: "/practice/ielts-listening", label: "IELTS Listening Test", icon: Youtube },
+          { href: "/practice/ielts-tests", label: "Mini-IELTS Tests", icon: BookMarked },
           { href: "/practice/general-listening", label: "General Listening (BBC)", icon: Radio },
         ],
       },
+      { href: "/practice/ielts-resources", label: "IELTS Resources", icon: Globe },
+      { href: "/practice/toefl", label: "TOEFL Practice", icon: GraduationCap },
     ],
   },
   {
@@ -126,7 +130,7 @@ const GROUP_PATHS: Record<string, string[]> = {
   writing: ["/practice/speaking", "/practice/latihan-surat", "/practice/ielts-writing"],
   vocab: ["/practice/vocab-trainer", "/tn-intermediate/vocab"],
   tn: ["/tn-basic-cource", "/tn-intermediate", "/tn-advance"],
-  listening: ["/practice/ielts-listening", "/practice/general-listening"],
+  listening: ["/practice/ielts-listening", "/practice/ielts-tests", "/practice/general-listening"],
 };
 
 export function Sidebar() {
